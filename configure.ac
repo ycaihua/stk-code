@@ -232,7 +232,7 @@ fi
 
 case "${host}" in
 *-*-linux* )
-  irrlicht_LIBS="-L/$with_irrlicht/lib/Linux -L/$with_irrlicht/lib -lIrrlicht -lX11"
+  irrlicht_LIBS="-L/$with_irrlicht/lib/Linux -L/$with_irrlicht/lib -lIrrlicht -lX11 -lpthread"
   ;;
 *darwin*|*macosx*)
   irrlicht_LIBS="-L/$with_irrlicht/lib/ -lIrrlicht -framework Cocoa"
@@ -318,7 +318,7 @@ AC_TRY_RUN(
 if test x$irrlicht_min_version_met = xfalse; then
     AC_MSG_ERROR([Your irrLicht is too old, please update irrLicht. 
 You need irrlicht 1.8.
-While irrlicht 1.8 is not released, we recommend using version 3843 from irrlicht SVN trunk.])
+While irrlicht 1.8 is not released, we recommend using version 3995 from irrlicht SVN trunk.])
 else
     echo "yes"
 fi

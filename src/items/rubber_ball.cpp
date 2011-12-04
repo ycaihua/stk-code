@@ -411,13 +411,8 @@ bool RubberBall::updateAndDelete(float dt)
 
     // Ball squashing:
     // ===============
-    // If we start squashing the ball as soon as the height is smaller than
-    // then height of the ball, it looks to extreme. So a ratio r of the 
-    // height of the ball and the current height of the object is used to 
-    // tweak the look a bit.
-    float r = 2.0f;
-    if(r*height<m_extend.getY())
-        m_node->setScale(core::vector3df(1.0f, r*height/m_extend.getY(),1.0f));
+    if(height<1.5f*m_extend.getY())
+        m_node->setScale(core::vector3df(1.0f, height/m_extend.getY(),1.0f));
     else
         m_node->setScale(core::vector3df(1.0f, 1.0f, 1.0f));
 
@@ -570,6 +565,12 @@ float RubberBall::updateHeight()
         {
             // Some experimental formulas
             m_current_max_height = 0.5f*sqrt(m_distance_to_target);
+            // If the ball just missed the target, m_distance_to_target 
+            // can be huge (close to track length) due to the order in
+            // which a lost target is detected. Avoid this by clamping
+            // m_current_max_height.
+            if(m_current_max_height>m_max_height)
+                m_current_max_height = m_max_height;
             m_interval           = m_current_max_height / 10.0f;
 	        // Avoid too small hops and esp. a division by zero
             if(m_interval<0.01f)

@@ -16,6 +16,8 @@ supertuxkart_SOURCES = \
  addons/addon.hpp \
  addons/addons_manager.cpp \
  addons/addons_manager.hpp \
+ addons/dummy_network_http.hpp \
+ addons/inetwork_http.hpp \
  addons/network_http.cpp \
  addons/network_http.hpp \
  addons/news_manager.cpp \
@@ -32,7 +34,9 @@ supertuxkart_SOURCES = \
  animations/ipo.hpp \
  animations/three_d_animation.cpp \
  animations/three_d_animation.hpp \
+ audio/dummy_sfx.hpp \
  audio/music.hpp \
+ audio/music_dummy.hpp \
  audio/music_information.cpp \
  audio/music_information.hpp \
  audio/music_manager.cpp \
@@ -289,6 +293,7 @@ supertuxkart_SOURCES = \
  physics/physical_object.hpp \
  physics/physics.cpp \
  physics/physics.hpp \
+ phsyics/stk_dynamics_world.hpp \
  physics/triangle_mesh.cpp \
  physics/triangle_mesh.hpp \
  physics/user_pointer.hpp \
@@ -425,6 +430,8 @@ supertuxkart_SOURCES = \
  tracks/check_structure.hpp \
  tracks/graph_node.cpp\
  tracks/graph_node.hpp\
+ tracks/lod_node_loader.cpp\
+ tracks/lod_node_loader.hpp\
  tracks/quad.cpp \
  tracks/quad.hpp \
  tracks/quad_graph.cpp \

@@ -29,6 +29,7 @@
 #include "graphics/mesh_tools.hpp"
 #include "io/xml_node.hpp"
 #include "karts/kart.hpp"
+#include "physics/btKart.hpp"
 #include "utils/constants.hpp"
 
 #define SKELETON_DEBUG 0
@@ -63,6 +64,7 @@ KartModel::KartModel(bool is_master)
 {
     m_is_master = is_master;
     m_kart = NULL;
+    m_mesh = NULL;
     
     for(unsigned int i=0; i<4; i++)
     {
@@ -146,11 +148,13 @@ KartModel::~KartModel()
             m_wheel_node[i]->drop();
         }
         if(m_is_master && m_wheel_model[i])
+        {
             irr_driver->dropAllTextures(m_wheel_model[i]);
-        
+            irr_driver->removeMeshFromCache(m_wheel_model[i]); 
+        }
     }
 
-    if(m_is_master)
+    if(m_is_master && m_mesh != NULL)
     {
         irr_driver->dropAllTextures(m_mesh);
         irr_driver->removeMeshFromCache(m_mesh);
@@ -218,9 +222,9 @@ scene::ISceneNode* KartModel::attachModel(bool animated_models)
     
     if (animated_models)
     {
-        LODNode* lod_node = new LODNode(
-                            irr_driver->getSceneManager()->getRootSceneNode(),
-                            irr_driver->getSceneManager()                    );
+        LODNode* lod_node = new LODNode("kart",
+                                        irr_driver->getSceneManager()->getRootSceneNode(),
+                                        irr_driver->getSceneManager()                    );
 
 
         node = irr_driver->addAnimatedMesh(m_mesh);
@@ -281,13 +285,13 @@ bool KartModel::loadModels(const KartProperties &kart_properties)
     assert(m_is_master);
     std::string  full_path = kart_properties.getKartDir()+"/"+m_model_filename;
     m_mesh                 = irr_driver->getAnimatedMesh(full_path);
-    irr_driver->grabAllTextures(m_mesh);
     if(!m_mesh)
     {
         printf("Problems loading mesh '%s' - kart '%s' will not be available\n",
-            full_path.c_str(), kart_properties.getIdent().c_str());
+               full_path.c_str(), kart_properties.getIdent().c_str());
         return false;
     }
+    irr_driver->grabAllTextures(m_mesh);
 
     Vec3 min, max;
     MeshTools::minMax3D(m_mesh->getMesh(m_animation_frame[AF_STRAIGHT]), &min, &max);
@@ -508,7 +512,9 @@ void KartModel::update(float rotation, float steer, const float suspension[4])
                                                   m_max_suspension[i]);
         float ratio = clamped_suspension[i] / suspension_length;
         const int sign = ratio < 0 ? -1 : 1;
-        ratio = sign * fabsf(ratio*(2-ratio)); // expanded form of 1 - (1 - x)^2, i.e. making suspension display quadratic and not linear
+        // expanded form of 1 - (1 - x)^2, i.e. making suspension display 
+        // quadratic and not linear
+        ratio = sign * fabsf(ratio*(2-ratio));
         clamped_suspension[i] = ratio*suspension_length;
     }   // for i<4
 
@@ -519,6 +525,16 @@ void KartModel::update(float rotation, float steer, const float suspension[4])
     for(unsigned int i=0; i<4; i++)
     {
         if(!m_wheel_node[i]) continue;
+#ifdef DEBUG
+        if(UserConfigParams::m_physics_debug)
+        {
+            // Make wheels that are not touching the ground invisible
+            bool wheel_has_contact = 
+                m_kart->getVehicle()->getWheelInfo(i).m_raycastInfo
+                                                     .m_isInContact;
+            m_wheel_node[i]->setVisible(wheel_has_contact);
+        }
+#endif
         core::vector3df pos =  m_wheel_graphics_position[i].toIrrVector();
         pos.Y += clamped_suspension[i];
         m_wheel_node[i]->setPosition(pos);

@@ -276,10 +276,7 @@ void Kart::createPhysics()
     // -------------------------
     m_vehicle_raycaster =
         new btKartRaycaster(World::getWorld()->getPhysics()->getPhysicsWorld());
-    m_tuning  = new btKart::btVehicleTuning();
-    m_tuning->m_maxSuspensionTravelCm = m_kart_properties->getSuspensionTravelCM();
-    m_vehicle = new btKart(*m_tuning, m_body, m_vehicle_raycaster,
-                           m_kart_properties->getTrackConnectionAccel());
+    m_vehicle = new btKart(m_body, m_vehicle_raycaster, this);
 
     // never deactivate the vehicle
     m_body->setActivationState(DISABLE_DEACTIVATION);
@@ -293,13 +290,19 @@ void Kart::createPhysics()
     btVector3 wheel_direction(0.0f, -1.0f, 0.0f);
     btVector3 wheel_axle(-1.0f, 0.0f, 0.0f);
 
+    btKart::btVehicleTuning tuning;
+    tuning.m_maxSuspensionTravelCm = 
+        m_kart_properties->getSuspensionTravelCM();
+    tuning.m_maxSuspensionForce    = 
+        m_kart_properties->getMaxSuspensionForce();
+
     for(unsigned int i=0; i<4; i++)
     {
         bool is_front_wheel = i<2;
         btWheelInfo& wheel = m_vehicle->addWheel(
                             m_kart_model->getWheelPhysicsPosition(i),
                             wheel_direction, wheel_axle, suspension_rest,
-                            wheel_radius, *m_tuning, is_front_wheel);
+                            wheel_radius, tuning, is_front_wheel);
         wheel.m_suspensionStiffness      = m_kart_properties->getSuspensionStiffness();
         wheel.m_wheelsDampingRelaxation  = m_kart_properties->getWheelDampingRelaxation();
         wheel.m_wheelsDampingCompression = m_kart_properties->getWheelDampingCompression();
@@ -416,7 +419,6 @@ Kart::~Kart()
 
     World::getWorld()->getPhysics()->removeKart(this);
     delete m_vehicle;
-    delete m_tuning;
     delete m_vehicle_raycaster;
     delete m_uprightConstraint;
 
@@ -537,6 +539,7 @@ void Kart::reset()
     m_bounce_back_time     = 0.0f;
     m_skidding             = 1.0f;
     m_time_last_crash      = 0.0f;
+    m_speed                = 0.0f;
     m_view_blocked_by_plunger = 0.0f;
     
     if(m_terrain_sound)
@@ -575,9 +578,12 @@ void Kart::reset()
     if (m_skidmarks)
     {
         m_skidmarks->reset();
-        m_skidmarks->adjustFog( track_manager->getTrack( race_manager->getTrackName() )->isFogEnabled() );
+        const Track *track = 
+            track_manager->getTrack( race_manager->getTrackName() );
+        m_skidmarks->adjustFog(track->isFogEnabled() );
     }
     
+    m_vehicle->reset();
     for(int j=0; j<m_vehicle->getNumWheels(); j++)
     {
         m_vehicle->updateWheelTransform(j, true);
@@ -751,12 +757,12 @@ float Kart::getActualWheelForce()
  */
 bool Kart::isOnGround() const
 {
-    return (m_vehicle->getNumWheelsOnGround() == m_vehicle->getNumWheels()
+    return ((int)m_vehicle->getNumWheelsOnGround() == m_vehicle->getNumWheels()
           && !playingEmergencyAnimation());
 }   // isOnGround
 
 //-----------------------------------------------------------------------------
-/** The kart is near the ground, but not necesarily on it (small jumps). This
+/** The kart is near the ground, but not necessarily on it (small jumps). This
  *  is used to determine when to switch off the upright constraint, so that
  *  explosions can be more violent, while still
 */
@@ -1401,6 +1407,20 @@ void Kart::resetBrakes()
  */
 void Kart::crashed(Kart *k, const Material *m)
 {
+#ifdef DEBUG
+    // Simple debug output for people playing without sound.
+    // This makes it easier to see if a kart hit the track (esp.
+    // after a jump).
+    // FIXME: This should be removed once the physics are fixed.
+    if(!k && UserConfigParams::m_physics_debug)
+    {
+        // Add a counter to make it easier to see if a new line of
+        // output was added.
+        static int counter=0;
+        printf("Kart %s hit track: %d.\n", getIdent().c_str(), counter++);
+    }
+#endif
+
     m_controller->crashed();
     /** If a kart is crashing against the track, the collision is often
      *  reported more than once, resulting in a machine gun effect, and too
@@ -1541,7 +1561,8 @@ void Kart::updatePhysics(float dt)
     {
         m_has_started = true;
         float f       = m_kart_properties->getStartupBoost();
-        m_vehicle->activateZipper(f);
+        if(f>0)
+            m_vehicle->activateZipper(f);
         MaxSpeed::increaseMaxSpeed(MS_INCREASE_ZIPPER, 0.9f*f,
                                    5.0f, 5.0f);
 
@@ -1677,18 +1698,6 @@ void Kart::updatePhysics(float dt)
             }
         }   // !m_brake
     }   // not accelerating
-#ifdef ENABLE_JUMP
-    if(m_controls.jump && isOnGround())
-    {
-      //Vector3 impulse(0.0f, 0.0f, 10.0f);
-      //        getVehicle()->getRigidBody()->applyCentralImpulse(impulse);
-        btVector3 velocity         = m_body->getLinearVelocity();
-        velocity.setZ( m_kart_properties->getJumpVelocity() );
-
-        getBody()->setLinearVelocity( velocity );
-
-    }
-#endif
     if (isOnGround())
     {
         if((fabs(m_controls.m_steer) > 0.001f) && m_controls.m_drift)
@@ -1724,7 +1733,7 @@ void Kart::updatePhysics(float dt)
     // you have full traction; above 0.5 rad angles you have absolutely none; 
     // inbetween  there is a linear change in friction
     float friction = 1.0f;
-    bool enable_skidding = false;
+    bool enable_sliding = false;
     
     // This way the current skidding
     // handling can be disabled for certain material (e.g. the
@@ -1744,7 +1753,7 @@ void Kart::updatePhysics(float dt)
         if (distanceFromUp < 0.85f)
         {
             friction = 0.0f;
-            enable_skidding = true;
+            enable_sliding = true;
         }
         else if (distanceFromUp > 0.9f)
         {
@@ -1753,7 +1762,7 @@ void Kart::updatePhysics(float dt)
         else
         {
             friction = (distanceFromUp - 0.85f) / 0.5f;
-            enable_skidding = true;
+            enable_sliding = true;
         }
     }
     
@@ -1763,7 +1772,7 @@ void Kart::updatePhysics(float dt)
         wheel.m_frictionSlip = friction*m_kart_properties->getFrictionSlip();
     }
     
-    m_vehicle->enableSliding(enable_skidding);
+    m_vehicle->setSliding(enable_sliding);
 
     float steering = getMaxSteerAngle() * m_controls.m_steer*m_skidding;
 

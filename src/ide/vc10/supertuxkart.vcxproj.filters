@@ -807,6 +807,9 @@
     <ClCompile Include="..\..\utils\leak_check.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\tracks\lod_node_loader.cpp">
+      <Filter>Source Files\tracks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\main_loop.hpp">
@@ -1534,6 +1537,9 @@
     </ClInclude>
     <ClInclude Include="..\..\utils\leak_check.hpp">
       <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tracks\lod_node_loader.hpp">
+      <Filter>Header Files\tracks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

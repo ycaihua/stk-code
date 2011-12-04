@@ -20,11 +20,14 @@
 #ifndef HEADER_SFX_BUFFER_HPP
 #define HEADER_SFX_BUFFER_HPP
 
-
-#ifdef __APPLE__
-#  include <OpenAL/al.h>
+#if HAVE_OGGVORBIS
+#  ifdef __APPLE__
+#    include <OpenAL/al.h>
+#  else
+#    include <AL/al.h>
+#  endif
 #else
-#  include <AL/al.h>
+typedef unsigned int ALuint;
 #endif
 
 #include "utils/no_copy.hpp"
@@ -88,7 +91,7 @@ public:
     bool     isLoaded()       const { return m_loaded; }
     
     /** Only returns a valid buffer if isLoaded() returned true */
-    ALuint   getBuffer()      const { return m_buffer; }
+    ALuint   getBufferID()    const { return m_buffer; }
     
     bool     isPositional()   const { return m_positional; }
     float    getRolloff()     const { return m_rolloff; }

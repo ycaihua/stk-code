@@ -164,10 +164,10 @@ if(FONT_TOOL)
 	    find_package(X11)
 	    include_directories(${FREETYPE_INCLUDE_DIRS})
 	    add_executable(font_tool
-		    src/font_tool/CFontTool.cpp
-		    src/font_tool/CFontTool.h
-		    src/font_tool/CVectorFontTool.h
-		    src/font_tool/main.cpp
+		    tools/font_tool/CFontTool.cpp
+		    tools/font_tool/CFontTool.h
+		    tools/font_tool/CVectorFontTool.h
+		    tools/font_tool/main.cpp
 	    )
 	    target_link_libraries(font_tool ${FREETYPE_LIBRARIES})
 	    target_link_libraries(font_tool ${X11_Xft_LIB})
@@ -187,6 +187,8 @@ set( SRCS ${SRCS} src/main.cpp
 	src/addons/addon.hpp
 	src/addons/addons_manager.cpp
 	src/addons/addons_manager.hpp
+    src/addons/dummy_network_http.hpp
+    src/addons/inetwork_http.hpp
 	src/addons/network_http.cpp
 	src/addons/network_http.hpp
 	src/addons/news_manager.cpp
@@ -203,7 +205,9 @@ set( SRCS ${SRCS} src/main.cpp
 	src/animations/ipo.hpp
 	src/animations/three_d_animation.cpp
 	src/animations/three_d_animation.hpp
+    src/audio/dummy_sfx.hpp
 	src/audio/music.hpp
+    src/audio/music_dummy.hpp
 	src/audio/music_information.cpp
 	src/audio/music_information.hpp
 	src/audio/music_manager.cpp
@@ -466,6 +470,7 @@ set( SRCS ${SRCS} src/main.cpp
 	src/physics/physical_object.hpp
 	src/physics/physics.cpp
 	src/physics/physics.hpp
+        src/physics/stk_dynamics_world.hpp
 	src/physics/triangle_mesh.cpp
 	src/physics/triangle_mesh.hpp
 	src/physics/user_pointer.hpp
@@ -598,6 +603,8 @@ set( SRCS ${SRCS} src/main.cpp
 	src/tracks/check_sphere.hpp
 	src/tracks/check_structure.cpp
 	src/tracks/check_structure.hpp
+    src/tracks/lod_node_loader.cpp
+    src/tracks/lod_node_loader.hpp
 	src/tracks/graph_node.cpp
 	src/tracks/graph_node.hpp
 	src/tracks/quad.cpp
@@ -681,6 +688,9 @@ if (APPLE)
     add_definitions(`ln -sf ${PROJECT_SOURCE_DIR}/data ${CMAKE_BINARY_DIR}/bin/supertuxkart.app/Contents/Resources`)
 
 else()
+
+    add_definitions(-DSUPERTUXKART_DATADIR=\"${CMAKE_INSTALL_PREFIX}/share/games/supertuxkart\")
+
     # Build the final executable
     add_executable(supertuxkart ${SRCS})
 
@@ -690,6 +700,7 @@ else()
 	    bulletcollision
 	    bulletmath
 	    enet
+	    pthread
 	    ${CURL_LIBRARIES}
 	    ${OPENGL_LIBRARIES}
 	    ${OPENAL_LIBRARY}

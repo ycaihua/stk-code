@@ -39,6 +39,7 @@ class SFXBase;
 class ParticleKind;
 
 class NormalMapProvider;
+class SplattingProvider;
 
 /**
   * \ingroup graphics
@@ -122,8 +123,11 @@ private:
      *  the intended effect. */
     enum             {ADJ_NONE, ADJ_PREMUL, ADJ_DIV}
                      m_adjust_image;
-    /** True if lightmapping is enabled for this material. */
+    /** True if (blending) lightmapping is enabled for this material. */
     bool             m_lightmap;
+    /** True if (additive) lightmapping is enabled for this material. */
+    bool             m_additive_lightmap;
+    
     bool             m_high_tire_adhesion;
     /** How much the top speed is reduced per second. */
     float            m_slowdown_time;
@@ -158,8 +162,26 @@ private:
 
     std::string      m_mask;
     
+    /** Whether to use splatting */
+    bool             m_splatting;
+    
+    /** If m_splatting is true, indicates the first splatting texture */
+    std::string      m_splatting_texture_1;
+    
+    /** If m_splatting is true, indicates the second splatting texture */
+    std::string      m_splatting_texture_2;
+    
+    /** If m_splatting is true, indicates the third splatting texture */
+    std::string      m_splatting_texture_3;   
+    
+    /** If m_splatting is true, indicates the fourth splatting texture */
+    std::string      m_splatting_texture_4;
+    
     /** Only used if normal maps are used */
     NormalMapProvider* m_normal_map_provider;
+    
+    /** Only used if splatting is used */
+    SplattingProvider*  m_splatting_provider;
     
     void  init    (unsigned int index);
     void  install (bool is_full_path=false);

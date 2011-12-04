@@ -414,6 +414,26 @@
 						>
 					</File>
 				</Filter>
+				<Filter
+					Name="input"
+					>
+					<File
+						RelativePath="..\..\input\binding.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\input\device_manager.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\input\input_device.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\input\input_manager.cpp"
+						>
+					</File>
+				</Filter>
 			</Filter>
 			<Filter
 				Name="challenges"
@@ -855,6 +875,10 @@
 					>
 				</File>
 				<File
+					RelativePath="..\..\tracks\lod_node_loader.cpp"
+					>
+				</File>
+				<File
 					RelativePath="..\..\tracks\quad.cpp"
 					>
 				</File>
@@ -924,26 +948,6 @@
 				</File>
 				<File
 					RelativePath="..\..\io\xml_writer.cpp"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="input"
-				>
-				<File
-					RelativePath="..\..\input\binding.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\input\device_manager.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\input\input_device.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\input\input_manager.cpp"
 					>
 				</File>
 			</Filter>
@@ -1541,7 +1545,15 @@
 				Name="audio"
 				>
 				<File
+					RelativePath="..\..\audio\dummy_sfx.hpp"
+					>
+				</File>
+				<File
 					RelativePath="..\..\audio\music.hpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\audio\music_dummy.hpp"
 					>
 				</File>
 				<File
@@ -1702,6 +1714,10 @@
 				</File>
 				<File
 					RelativePath="..\..\physics\physics.hpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\physics\stk_dynamics_world.hpp"
 					>
 				</File>
 				<File
@@ -1910,6 +1926,10 @@
 				</File>
 				<File
 					RelativePath="..\..\tracks\graph_node.hpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\tracks\lod_node_loader.hpp"
 					>
 				</File>
 				<File
@@ -2250,6 +2270,14 @@
 				</File>
 				<File
 					RelativePath="..\..\addons\addons_manager.hpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\addons\dummy_network_http.hpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\addons\inetwork_http.hpp"
 					>
 				</File>
 				<File

@@ -767,8 +767,29 @@ void RaceResultGUI::enableGPProgress()
         const std::vector<std::string>& tracks = 
             race_manager->getGrandPrix()->getTracks();
         size_t currentTrack = race_manager->getTrackNumber();
+
+        // Assume 5 is the max amount we can render in any given height
+        size_t startTrack = 0;
+        size_t endTrack = tracks.size();
+        if (tracks.size() > 5)
+        {
+            if (currentTrack == 0)
+            {
+                startTrack = 0;
+                endTrack = 5;
+            }
+            else if (currentTrack + 4 > tracks.size())
+            {
+                startTrack = tracks.size() - 5;
+                endTrack = tracks.size();
+            }
+            else {
+                startTrack = currentTrack - 1;
+                endTrack = currentTrack + 4;
+            }
+        }
     
-        for(size_t i=0; i<tracks.size(); i++)
+        for(size_t i=startTrack; i<endTrack; i++)
         {
             Track* track = track_manager->getTrack(tracks[i]);
             GUIEngine::IconButtonWidget* m_screenshot_widget = 
@@ -779,7 +800,8 @@ void RaceResultGUI::enableGPProgress()
             m_screenshot_widget->setCustomAspectRatio(4.0f / 3.0f);
             m_screenshot_widget->m_x = (int)(UserConfigParams::m_width*0.67);
             m_screenshot_widget->m_y = 
-                (int)(UserConfigParams::m_height*(0.10+i*0.135));
+                (int)(UserConfigParams::m_height
+                * (0.10+(i-startTrack)*0.135));
             m_screenshot_widget->m_w = (int)(UserConfigParams::m_width*0.17);
             m_screenshot_widget->m_h = 
                 (int)(UserConfigParams::m_height*0.1275);
@@ -804,9 +826,8 @@ void RaceResultGUI::displayGPProgress()
 {
     video::SColor color = video::SColor(255,255,0,0); 
     core::recti dest_rect(m_gp_progress_x, m_top, 0, 0);
-    core::stringw message("Grand Prix progress:"); 
 
-    m_font->draw(message.c_str(), dest_rect, color, false, false, NULL, true);
+    m_font->draw(_("Grand Prix progress:"), dest_rect, color, false, false, NULL, true);
 }   // displayGPProgress
 
 // ----------------------------------------------------------------------------
