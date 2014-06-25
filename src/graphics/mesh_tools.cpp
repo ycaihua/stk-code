@@ -120,6 +120,27 @@ void calculateTangents(
 }
 
 // Copied from irrlicht
+static inline core::vector3df getAngleWeight(const core::vector3df& v1,
+    const core::vector3df& v2,
+    const core::vector3df& v3)
+{
+    // Calculate this triangle's weight for each of its three vertices
+    // start by calculating the lengths of its sides
+    const f32 a = v2.getDistanceFromSQ(v3);
+    const f32 asqrt = sqrtf(a);
+    const f32 b = v1.getDistanceFromSQ(v3);
+    const f32 bsqrt = sqrtf(b);
+    const f32 c = v1.getDistanceFromSQ(v2);
+    const f32 csqrt = sqrtf(c);
+
+    // use them to find the angle at each vertex
+    return core::vector3df(
+        acosf((b + c - a) / (2.f * bsqrt * csqrt)),
+        acosf((-b + c + a) / (2.f * asqrt * csqrt)),
+        acosf((b - c + a) / (2.f * bsqrt * asqrt)));
+}
+
+// Copied from irrlicht
 template <typename T>
 void recalculateTangentsT(scene::IMeshBuffer* buffer, bool recalculateNormals, bool smooth, bool angleWeighted)
 {
@@ -273,27 +294,6 @@ void recalculateTangentsT(scene::IMeshBuffer* buffer, bool recalculateNormals, b
                 v[idx[i + 2]].Normal = localNormal;
         }
     }
-}
-
-// Copied from irrlicht
-static inline core::vector3df getAngleWeight(const core::vector3df& v1,
-    const core::vector3df& v2,
-    const core::vector3df& v3)
-{
-    // Calculate this triangle's weight for each of its three vertices
-    // start by calculating the lengths of its sides
-    const f32 a = v2.getDistanceFromSQ(v3);
-    const f32 asqrt = sqrtf(a);
-    const f32 b = v1.getDistanceFromSQ(v3);
-    const f32 bsqrt = sqrtf(b);
-    const f32 c = v1.getDistanceFromSQ(v2);
-    const f32 csqrt = sqrtf(c);
-
-    // use them to find the angle at each vertex
-    return core::vector3df(
-        acosf((b + c - a) / (2.f * bsqrt * csqrt)),
-        acosf((-b + c + a) / (2.f * asqrt * csqrt)),
-        acosf((b - c + a) / (2.f * bsqrt * asqrt)));
 }
 
 // Copied from irrlicht
