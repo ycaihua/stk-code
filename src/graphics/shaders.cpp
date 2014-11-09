@@ -1878,7 +1878,7 @@ namespace FullScreenShader
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/fog.frag").c_str());
 
         AssignUniforms("density", "col");
-        AssignSamplerNames(Program, 0, "tex");
+        AssignSamplerNames(Program, 0, "shadowtex", 1, "tex");
     }
 
     MotionBlurShader::MotionBlurShader()

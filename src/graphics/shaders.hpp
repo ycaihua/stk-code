@@ -545,7 +545,7 @@ public:
     SSAOShader();
 };
 
-class FogShader : public ShaderHelperSingleton<FogShader, float, core::vector3df>, public TextureRead<Nearest_Filtered>
+class FogShader : public ShaderHelperSingleton<FogShader, float, core::vector3df>, public TextureRead<Shadow_Sampler, Nearest_Filtered>
 {
 public:
     FogShader();

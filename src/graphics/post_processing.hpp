@@ -79,7 +79,7 @@ public:
     void         renderSunlight();
     void         renderShadowedSunlight(const std::vector<core::matrix4> &sun_ortho_matrix, unsigned depthtex);
 
-    void renderFog();
+    void renderFog(unsigned shadowtex);
     void renderSSAO();
     void renderEnvMap(const float *bSHCoeff, const float *gSHCoeff, const float *rSHCoeff, unsigned skycubemap);
     void renderRHDebug(unsigned SHR, unsigned SHG, unsigned SHB, const core::matrix4 &rh_matrix, const core::vector3df &rh_extend);

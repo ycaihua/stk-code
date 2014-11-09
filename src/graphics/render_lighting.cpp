@@ -191,7 +191,7 @@ void IrrDriver::renderLightsScatter(unsigned pointlightcount)
     getFBO(FBO_HALF1).Bind();
     glClearColor(0., 0., 0., 0.);
     glClear(GL_COLOR_BUFFER_BIT);
-    m_post_processing->renderFog();
+    m_post_processing->renderFog(m_rtts->getShadowFBO().getRTT()[0]);
 
     glEnable(GL_BLEND);
     glBlendEquation(GL_FUNC_ADD);

@@ -454,7 +454,7 @@ void PostProcessing::renderSSAO()
 }
 
 
-void PostProcessing::renderFog()
+void PostProcessing::renderFog(GLuint shadowtex)
 {
     const Track * const track = World::getWorld()->getTrack();
 
@@ -476,7 +476,7 @@ void PostProcessing::renderFog()
     glBlendFunc(GL_ONE, GL_ONE);
 
 
-    FullScreenShader::FogShader::getInstance()->SetTextureUnits(irr_driver->getDepthStencilTexture());
+    FullScreenShader::FogShader::getInstance()->SetTextureUnits(shadowtex, irr_driver->getDepthStencilTexture());
     DrawFullScreenEffect<FullScreenShader::FogShader>(1. / (40. * start), col);
 
     glEnable(GL_DEPTH_TEST);
