@@ -15,13 +15,14 @@
 using namespace irr;
 
 STKTextBillboard::STKTextBillboard(core::stringw text, gui::ScalableFont* font,
+
     const video::SColor& color_top, const video::SColor& color_bottom,
-    irr::scene::ISceneNode* parent,
+    irr::scene::ISceneNode* parent, bool is_static,
     irr::scene::ISceneManager* mgr, irr::s32 id,
     const irr::core::vector3df& position, const irr::core::vector3df& size) :
     STKMeshSceneNode(new scene::SMesh(),
         parent, irr_driver->getSceneManager(), -1, "text_billboard",
-        position, core::vector3df(0.0f, 0.0f, 0.0f), size, false)
+        is_static, position, core::vector3df(0.0f, 0.0f, 0.0f), size, false)
 {
     m_color_top = color_top;
     m_color_bottom = color_bottom;

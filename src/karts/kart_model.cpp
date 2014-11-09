@@ -413,7 +413,7 @@ scene::ISceneNode* KartModel::attachModel(bool animated_models, bool always_anim
        debug_name = m_model_filename + " (kart-model)";
 #endif
 
-        node = irr_driver->addMesh(main_frame, debug_name);
+        node = irr_driver->addMesh(main_frame, debug_name, false);
 
 #ifdef DEBUG
         node->setName(debug_name.c_str());
@@ -424,7 +424,7 @@ scene::ISceneNode* KartModel::attachModel(bool animated_models, bool always_anim
         for(unsigned int i=0; i<4; i++)
         {
             if(!m_wheel_model[i]) continue;
-            m_wheel_node[i] = irr_driver->addMesh(m_wheel_model[i], "wheel", node);
+            m_wheel_node[i] = irr_driver->addMesh(m_wheel_model[i], "wheel", false, node);
             Vec3 wheel_min, wheel_max;
             MeshTools::minMax3D(m_wheel_model[i], &wheel_min, &wheel_max);
             m_wheel_graphics_radius[i] = 0.5f*(wheel_max.getY() - wheel_min.getY());
@@ -899,7 +899,7 @@ void KartModel::attachHat(){
             scene::IMesh *hat_mesh =
                 irr_driver->getAnimatedMesh(
                            file_manager->getAsset(FileManager::MODEL, m_hat_name));
-            m_hat_node = irr_driver->addMesh(hat_mesh, "hat");
+            m_hat_node = irr_driver->addMesh(hat_mesh, "hat", false);
             bone->addChild(m_hat_node);
             m_animated_node->setCurrentFrame((float)m_animation_frame[AF_STRAIGHT]);
             m_animated_node->OnAnimate(0);

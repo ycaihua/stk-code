@@ -590,7 +590,8 @@ void IrrDriver::initDevice()
             mb->getMaterial().setTexture(0, getUnicolorTexture(video::SColor(255, 255, 255, 255)));
             mb->getMaterial().setTexture(1, getUnicolorTexture(video::SColor(0, 0, 0, 0)));
         }
-        m_sun_interposer = new STKMeshSceneNode(sphere, m_scene_manager->getRootSceneNode(), NULL, -1, "sun_interposer");
+        m_sun_interposer = new STKMeshSceneNode(sphere, m_scene_manager->getRootSceneNode(), NULL, -1,
+            "sun_interposer", true);
 
         m_sun_interposer->grab();
         m_sun_interposer->setParent(NULL);
@@ -1097,6 +1098,7 @@ scene::IParticleSystemSceneNode *IrrDriver::addParticleNode(bool default_emitter
  */
 scene::IMeshSceneNode *IrrDriver::addMesh(scene::IMesh *mesh,
                                           const std::string& debug_name,
+                                          bool is_static,
                                           scene::ISceneNode *parent)
 {
     if (!isGLSL())
@@ -1105,7 +1107,8 @@ scene::IMeshSceneNode *IrrDriver::addMesh(scene::IMesh *mesh,
     if (!parent)
       parent = m_scene_manager->getRootSceneNode();
 
-    scene::IMeshSceneNode* node = new STKMeshSceneNode(mesh, parent, m_scene_manager, -1, debug_name);
+    scene::IMeshSceneNode* node = new STKMeshSceneNode(mesh, parent, m_scene_manager, -1,
+        debug_name, is_static);
     node->drop();
 
     return node;

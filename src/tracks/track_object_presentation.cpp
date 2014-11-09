@@ -222,10 +222,10 @@ TrackObjectPresentationLibraryNode::~TrackObjectPresentationLibraryNode()
 // ----------------------------------------------------------------------------
 
 TrackObjectPresentationLOD::TrackObjectPresentationLOD(const XMLNode& xml_node,
-    scene::ISceneNode* parent, ModelDefinitionLoader& model_def_loader) :
+    scene::ISceneNode* parent, ModelDefinitionLoader& model_def_loader, bool is_static) :
     TrackObjectPresentationSceneNode(xml_node)
 {
-    m_node = model_def_loader.instanciateAsLOD(&xml_node, parent);
+    m_node = model_def_loader.instanciateAsLOD(&xml_node, parent, is_static);
     if (m_node == NULL) throw std::runtime_error("Cannot load LOD node");
     m_node->setPosition(m_init_xyz);
     m_node->setRotation(m_init_hpr);
@@ -295,26 +295,28 @@ TrackObjectPresentationMesh::TrackObjectPresentationMesh(const XMLNode& xml_node
 }
 
 TrackObjectPresentationMesh::TrackObjectPresentationMesh(
-    scene::IAnimatedMesh* model, const core::vector3df& xyz,
+    scene::IAnimatedMesh* model, bool is_static, const core::vector3df& xyz,
     const core::vector3df& hpr, const core::vector3df& scale) :
     TrackObjectPresentationSceneNode(xyz, hpr, scale)
 {
     m_is_looped = false;
     m_mesh = NULL;
     m_node = NULL;
+    m_is_static = is_static;
 
     m_mesh = model;
     init(NULL, NULL, true);
 }
 
 TrackObjectPresentationMesh::TrackObjectPresentationMesh(
-        const std::string& model_file, const core::vector3df& xyz,
+        const std::string& model_file, bool is_static, const core::vector3df& xyz,
         const core::vector3df& hpr, const core::vector3df& scale) :
         TrackObjectPresentationSceneNode(xyz, hpr, scale)
 {
     m_is_looped  = false;
     m_mesh       = NULL;
     m_node       = NULL;
+    m_is_static = is_static;
 
     bool animated = (UserConfigParams::m_graphical_effects ||
              World::getWorld()->getIdent() == IDENT_CUTSCENE);
@@ -389,7 +391,7 @@ void TrackObjectPresentationMesh::init(const XMLNode* xml_node, scene::ISceneNod
         if (xml_node)
             xml_node->get("displacing", &displacing);
 
-        m_node = irr_driver->addMesh(m_mesh, m_model_file, parent);
+        m_node = irr_driver->addMesh(m_mesh, m_model_file, m_is_static, parent);
 
         STKMeshSceneNode* stkmesh = dynamic_cast<STKMeshSceneNode*>(m_node);
         if (displacing && stkmesh != NULL)

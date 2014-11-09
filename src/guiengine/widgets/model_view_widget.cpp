@@ -199,7 +199,7 @@ void ModelViewWidget::setupRTTScene(PtrVector<scene::IMesh, REF>& mesh,
     
     if (model_frames[0] == -1)
     {
-        scene::ISceneNode* node = irr_driver->addMesh(mesh.get(0), "rtt_mesh", NULL);
+        scene::ISceneNode* node = irr_driver->addMesh(mesh.get(0), "rtt_mesh", false, NULL);
         node->setPosition(mesh_location[0].toIrrVector());
         node->setScale(mesh_scale[0].toIrrVector());
         node->setMaterialFlag(video::EMF_FOG_ENABLE, false);
@@ -228,7 +228,7 @@ void ModelViewWidget::setupRTTScene(PtrVector<scene::IMesh, REF>& mesh,
         if (model_frames[n] == -1)
         {
             scene::ISceneNode* node =
-            irr_driver->addMesh(mesh.get(n), "rtt_node", m_rtt_main_node);
+            irr_driver->addMesh(mesh.get(n), "rtt_node", false, m_rtt_main_node);
             node->setPosition(mesh_location[n].toIrrVector());
             node->updateAbsolutePosition();
             node->setScale(mesh_scale[n].toIrrVector());

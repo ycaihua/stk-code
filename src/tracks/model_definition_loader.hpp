@@ -84,7 +84,7 @@ public:
          ModelDefinitionLoader(Track* track);
 
     void addModelDefinition(const XMLNode* xml);
-    LODNode* instanciateAsLOD(const XMLNode* xml_node, scene::ISceneNode* parent);
+    LODNode* instanciateAsLOD(const XMLNode* xml_node, scene::ISceneNode* parent, bool is_static);
 
     void clear();
 

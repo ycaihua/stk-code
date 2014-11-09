@@ -112,3 +112,15 @@ void ThreeDAnimation::update(float dt)
         }
     }
 }   // update
+
+// ----------------------------------------------------------------------------
+
+bool ThreeDAnimation::isEmpty()
+{
+    for_var_in(Ipo*, ipo, m_all_ipos)
+    {
+        if (ipo->getPoints().size() > 0)
+            return false;
+    }
+    return true;
+}

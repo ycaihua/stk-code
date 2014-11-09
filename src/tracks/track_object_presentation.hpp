@@ -179,7 +179,8 @@ public:
 
     TrackObjectPresentationLOD(const XMLNode& xml_node,
                                scene::ISceneNode* parent,
-                               ModelDefinitionLoader& model_def_loader);
+                               ModelDefinitionLoader& model_def_loader,
+                               bool is_static);
     virtual ~TrackObjectPresentationLOD();
 };
 
@@ -208,16 +209,18 @@ private:
 
     std::string             m_model_file;
 
+    bool                    m_is_static;
+
     void init(const XMLNode* xml_node, scene::ISceneNode* parent, bool enabled);
 
 public:
     TrackObjectPresentationMesh(const XMLNode& xml_node, bool enabled, scene::ISceneNode* parent);
 
     TrackObjectPresentationMesh(
-        const std::string& model_file, const core::vector3df& xyz,
+        const std::string& model_file, bool is_static, const core::vector3df& xyz,
         const core::vector3df& hpr, const core::vector3df& scale);
     TrackObjectPresentationMesh(
-        scene::IAnimatedMesh* mesh, const core::vector3df& xyz,
+        scene::IAnimatedMesh* mesh, bool is_static, const core::vector3df& xyz,
         const core::vector3df& hpr, const core::vector3df& scale);
 
     void setLoop(int start, int end); //set custom loops, as well as pause by scripts

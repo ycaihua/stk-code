@@ -1001,7 +1001,7 @@ bool Track::loadMainTrack(const XMLNode &root)
 
     // The merged mesh is grabbed by the octtree, so we don't need
     // to keep a reference to it.
-    scene::ISceneNode *scene_node = irr_driver->addMesh(tangent_mesh, "track_main");
+    scene::ISceneNode *scene_node = irr_driver->addMesh(tangent_mesh, "track_main", true);
     //scene::IMeshSceneNode *scene_node = irr_driver->addOctTree(merged_mesh);
     // We should drop the merged mesh (since it's now referred to in the
     // scene node), but then we need to grab it since it's in the
@@ -1134,6 +1134,7 @@ bool Track::loadMainTrack(const XMLNode &root)
                     video::SColor(255, 255, 225, 0),
                     video::SColor(255, 255, 89, 0),
                     irr_driver->getSceneManager()->getRootSceneNode(),
+                    true,
                     irr_driver->getSceneManager(), -1, xyz,
                     core::vector3df(1.5f, 1.5f, 1.5f));
                 m_all_nodes.push_back(tb);
@@ -1247,7 +1248,7 @@ bool Track::loadMainTrack(const XMLNode &root)
         else*/
         if (lod_instance)
         {
-            LODNode* node = lodLoader.instanciateAsLOD(n, NULL);
+            LODNode* node = lodLoader.instanciateAsLOD(n, NULL, true);
             if (node != NULL)
             {
                 node->setPosition(xyz);
@@ -1282,7 +1283,7 @@ bool Track::loadMainTrack(const XMLNode &root)
             m_all_cached_meshes.push_back(a_mesh);
             irr_driver->grabAllTextures(a_mesh);
             a_mesh->grab();
-            scene_node = irr_driver->addMesh(a_mesh, model_name);
+            scene_node = irr_driver->addMesh(a_mesh, model_name, true);
             scene_node->setPosition(xyz);
             scene_node->setRotation(hpr);
             scene_node->setScale(scale);
@@ -1545,7 +1546,7 @@ void Track::createWater(const XMLNode &node)
     }
     else
     {*/
-        scene_node = irr_driver->addMesh(mesh, "water");
+        scene_node = irr_driver->addMesh(mesh, "water", true);
     //}
 
     if(!mesh || !scene_node)

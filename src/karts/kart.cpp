@@ -2681,7 +2681,7 @@ void Kart::setOnScreenText(const wchar_t *text)
         new STKTextBillboard(text, font,
             video::SColor(255, 255, 225, 0),
             video::SColor(255, 255, 89, 0),
-            getNode(), irr_driver->getSceneManager(), -1,
+            getNode(), false, irr_driver->getSceneManager(), -1,
             core::vector3df(0.0f, 1.5f, 0.0f),
             core::vector3df(1.0f, 1.0f, 1.0f));
     }

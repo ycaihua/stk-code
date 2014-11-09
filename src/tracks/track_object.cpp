@@ -124,6 +124,16 @@ void TrackObject::init(const XMLNode &xml_node, scene::ISceneNode* parent,
     m_type = type;
 
 
+    if (type == "animation" || xml_node.hasChildNamed("curve"))
+    {
+        m_animator = new ThreeDAnimation(xml_node, this);
+        if (m_animator->isEmpty())
+        {
+            delete m_animator;
+            m_animator = NULL;
+        }
+    }
+
     if (xml_node.getName() == "particle-emitter")
     {
         m_type = "particle-emitter";
@@ -169,13 +179,24 @@ void TrackObject::init(const XMLNode &xml_node, scene::ISceneNode* parent,
     }
     else
     {
+        std::string render_pass;
+        xml_node.get("renderpass", &render_pass);
+        
+        bool create_physical_object = false;
+        if (m_interaction != "ghost" && m_interaction != "none" &&
+            render_pass != "skybox")
+        {
+            create_physical_object = true;
+        }
+
         scene::ISceneNode *glownode = NULL;
 
         if (lod_instance)
         {
             m_type = "lod";
             TrackObjectPresentationLOD* lod_node =
-                new TrackObjectPresentationLOD(xml_node, parent, model_def_loader);
+                new TrackObjectPresentationLOD(xml_node, parent, model_def_loader,
+                    m_animator == NULL && m_physical_object == NULL);
             m_presentation = lod_node;
 
             glownode = ((LODNode*)lod_node->getNode())->getAllNodes()[0];
@@ -187,17 +208,6 @@ void TrackObject::init(const XMLNode &xml_node, scene::ISceneNode* parent,
                                                              m_enabled,
                                                              parent);
             glownode = ((TrackObjectPresentationMesh *) m_presentation)->getNode();
-        }
-
-        std::string render_pass;
-        xml_node.get("renderpass", &render_pass);
-
-        if (m_interaction != "ghost" && m_interaction != "none" &&
-            render_pass != "skybox"                                     )
-        {
-            m_physical_object = PhysicalObject::fromXML(type == "movable",
-                                                   xml_node,
-                                                   this);
         }
 
         video::SColor glow;
@@ -220,13 +230,15 @@ void TrackObject::init(const XMLNode &xml_node, scene::ISceneNode* parent,
 
             irr_driver->addForcedBloomNode(glownode, power);
         }
+
+        if (create_physical_object)
+        {
+            m_physical_object = PhysicalObject::fromXML(type == "movable",
+                xml_node,
+                this);
+        }
     }
 
-
-    if (type == "animation" || xml_node.hasChildNamed("curve"))
-    {
-        m_animator = new ThreeDAnimation(xml_node, this);
-    }
 
     reset();
 }   // TrackObject

@@ -467,6 +467,7 @@ public:
                  const video::SColor &color=video::SColor(128, 255, 255, 255));
     scene::IMeshSceneNode*addMesh(scene::IMesh *mesh,
                                   const std::string& debug_name,
+                                  bool is_static,
                                   scene::ISceneNode *parent=NULL);
     PerCameraNode        *addPerCameraNode(scene::ISceneNode* node,
                                            scene::ICameraSceneNode* cam,

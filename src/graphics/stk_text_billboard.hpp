@@ -51,7 +51,7 @@ public:
     STKTextBillboard(irr::core::stringw text, irr::gui::ScalableFont* font,
         const irr::video::SColor& color_top,
         const irr::video::SColor& color_bottom,
-        irr::scene::ISceneNode* parent,
+        irr::scene::ISceneNode* parent, bool is_static,
         irr::scene::ISceneManager* mgr, irr::s32 id,
         const irr::core::vector3df& position,
         const irr::core::vector3df& size);

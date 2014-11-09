@@ -25,12 +25,16 @@ protected:
     bool isDisplacement;
     bool isGlow;
     video::SColor glowcolor;
+
+    /** Set to true if this mesh will never move */
+    bool m_is_static;
+
 public:
     virtual void updateNoGL();
     virtual void updateGL();
     void setReloadEachFrame(bool);
     STKMeshSceneNode(irr::scene::IMesh* mesh, ISceneNode* parent, irr::scene::ISceneManager* mgr,
-        irr::s32 id, const std::string& debug_name,
+        irr::s32 id, const std::string& debug_name, bool isStatic,
         const irr::core::vector3df& position = irr::core::vector3df(0, 0, 0),
         const irr::core::vector3df& rotation = irr::core::vector3df(0, 0, 0),
         const irr::core::vector3df& scale = irr::core::vector3df(1.0f, 1.0f, 1.0f),

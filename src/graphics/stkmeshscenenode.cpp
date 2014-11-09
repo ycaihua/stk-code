@@ -15,7 +15,7 @@
 #include "utils/cpp2011.hpp"
 
 STKMeshSceneNode::STKMeshSceneNode(irr::scene::IMesh* mesh, ISceneNode* parent, irr::scene::ISceneManager* mgr,
-    irr::s32 id, const std::string& debug_name,
+    irr::s32 id, const std::string& debug_name, bool isStatic,
     const irr::core::vector3df& position,
     const irr::core::vector3df& rotation,
     const irr::core::vector3df& scale, bool createGLMeshes) :
@@ -25,7 +25,7 @@ STKMeshSceneNode::STKMeshSceneNode(irr::scene::IMesh* mesh, ISceneNode* parent, 
     immediate_draw = false;
     update_each_frame = false;
     isGlow = false;
-
+    m_is_static = isStatic;
     m_debug_name = debug_name;
 
     if (createGLMeshes)
