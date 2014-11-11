@@ -727,7 +727,7 @@ FrameBuffer *PostProcessing::render(scene::ICameraSceneNode * const camnode, boo
             renderGaussian6Blur(irr_driver->getFBO(FBO_BLOOM_256), irr_driver->getFBO(FBO_TMP_256), 1., 1.);
             renderGaussian6Blur(irr_driver->getFBO(FBO_BLOOM_128), irr_driver->getFBO(FBO_TMP_128), 1., 1.);
 			
-			renderGaussian6Blur(irr_driver->getFBO(FBO_LENS_512), irr_driver->getFBO(FBO_TMP_512), 0.01, 10.);
+			renderGaussian6Blur(irr_driver->getFBO(FBO_LENS_512), irr_driver->getFBO(FBO_TMP_512), 1., 100.);
             renderGaussian6Blur(irr_driver->getFBO(FBO_LENS_256), irr_driver->getFBO(FBO_TMP_256), 0.01, 10.);
             renderGaussian6Blur(irr_driver->getFBO(FBO_LENS_128), irr_driver->getFBO(FBO_TMP_128), 0.01, 10.);
 
