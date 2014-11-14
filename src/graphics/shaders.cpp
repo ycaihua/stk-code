@@ -1742,15 +1742,15 @@ namespace FullScreenShader
 		AssignTextureUnit(Program, TexUnit(TU_dest, "dest"));
     }
 
-	ComputeGaussian6HBlurShader::ComputeGaussian6HBlurShader()
-	{
-		Program = LoadProgram(OBJECT,
-			GL_COMPUTE_SHADER, file_manager->getAsset("shaders/gaussian6h.comp").c_str());
-		TU_dest = 1;
-		AssignUniforms("pixel", "sigma");
-		AssignSamplerNames(Program, 0, "source");
-		AssignTextureUnit(Program, TexUnit(TU_dest, "dest"));
-	}
+    ComputeGaussian6HBlurShader::ComputeGaussian6HBlurShader()
+    {
+        Program = LoadProgram(OBJECT,
+            GL_COMPUTE_SHADER, file_manager->getAsset("shaders/gaussian6h.comp").c_str());
+        TU_dest = 1;
+        AssignUniforms("pixel", "sigma");
+        AssignSamplerNames(Program, 0, "source");
+        AssignTextureUnit(Program, TexUnit(TU_dest, "dest"));
+    }
 
     Gaussian6HBlurShader::Gaussian6HBlurShader()
     {
