@@ -1734,13 +1734,23 @@ namespace FullScreenShader
 
     ComputeGaussian17TapHShader::ComputeGaussian17TapHShader()
     {
-        Program = LoadProgram(OBJECT,
-            GL_COMPUTE_SHADER, file_manager->getAsset("shaders/bilateralH.comp").c_str());
-        TU_dest = 2;
-        AssignUniforms("pixel");
-        AssignSamplerNames(Program, 0, "source", 1, "depth");
-        AssignTextureUnit(Program, TexUnit(TU_dest, "dest"));
+		Program = LoadProgram(OBJECT,
+			GL_COMPUTE_SHADER, file_manager->getAsset("shaders/bilateralH.comp").c_str());
+		TU_dest = 2;
+		AssignUniforms("pixel");
+		AssignSamplerNames(Program, 0, "source", 1, "depth");
+		AssignTextureUnit(Program, TexUnit(TU_dest, "dest"));
     }
+
+	ComputeGaussian6HBlurShader::ComputeGaussian6HBlurShader()
+	{
+		Program = LoadProgram(OBJECT,
+			GL_COMPUTE_SHADER, file_manager->getAsset("shaders/gaussian6h.comp").c_str());
+		TU_dest = 1;
+		AssignUniforms("pixel", "sigma");
+		AssignSamplerNames(Program, 0, "source");
+		AssignTextureUnit(Program, TexUnit(TU_dest, "dest"));
+	}
 
     Gaussian6HBlurShader::Gaussian6HBlurShader()
     {

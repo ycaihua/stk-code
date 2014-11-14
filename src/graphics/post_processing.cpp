@@ -346,10 +346,22 @@ void PostProcessing::renderGaussian6Blur(FrameBuffer &in_fbo, FrameBuffer &auxil
         DrawFullScreenEffect<FullScreenShader::Gaussian6VBlurShader>(core::vector2df(inv_width, inv_height), sigmaV);
     }
     {
-        in_fbo.Bind();
+		if (!irr_driver->hasARBComputeShaders())
+		{
+			in_fbo.Bind();
 
-        FullScreenShader::Gaussian6HBlurShader::getInstance()->SetTextureUnits(auxiliary.getRTT()[0]);
-        DrawFullScreenEffect<FullScreenShader::Gaussian6HBlurShader>(core::vector2df(inv_width, inv_height), sigmaH);
+			FullScreenShader::Gaussian6HBlurShader::getInstance()->SetTextureUnits(auxiliary.getRTT()[0]);
+			DrawFullScreenEffect<FullScreenShader::Gaussian6HBlurShader>(core::vector2df(inv_width, inv_height), sigmaH);
+		}
+		else
+		{
+			glUseProgram(FullScreenShader::ComputeGaussian6HBlurShader::getInstance()->Program);
+			glBindSampler(FullScreenShader::ComputeGaussian6HBlurShader::getInstance()->TU_dest, 0);
+			FullScreenShader::ComputeGaussian6HBlurShader::getInstance()->SetTextureUnits(in_fbo.getRTT()[0]);
+			glBindImageTexture(FullScreenShader::ComputeGaussian6HBlurShader::getInstance()->TU_dest, auxiliary.getRTT()[0], 0, false, 0, GL_WRITE_ONLY, GL_RGBA16F);
+			FullScreenShader::ComputeGaussian6HBlurShader::getInstance()->setUniforms(core::vector2df(inv_width, inv_height), sigmaH);
+			glDispatchCompute((int)in_fbo.getWidth() / 8 + 1, (int)in_fbo.getHeight() / 8 + 1, 1);
+		}
     }
 }
 

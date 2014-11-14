@@ -464,6 +464,13 @@ public:
     ComputeGaussian17TapHShader();
 };
 
+class ComputeGaussian6HBlurShader : public ShaderHelperSingleton<ComputeGaussian6HBlurShader, core::vector2df, float>, public TextureRead<Bilinear_Clamped_Filtered>
+{
+public:
+	GLuint TU_dest;
+	ComputeGaussian6HBlurShader();
+};
+
 class Gaussian6HBlurShader : public ShaderHelperSingleton<Gaussian6HBlurShader, core::vector2df, float>, public TextureRead<Bilinear_Clamped_Filtered>
 {
 public:
