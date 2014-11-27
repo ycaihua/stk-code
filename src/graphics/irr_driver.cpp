@@ -107,7 +107,7 @@ const int MIN_SUPPORTED_WIDTH  = 800;
 IrrDriver::IrrDriver()
 {
     m_resolution_changing = RES_CHANGE_NONE;
-    m_phase               = SOLID_NORMAL_AND_DEPTH_PASS;
+    m_phase = GBUFFER_PASS;
     m_device              = createDevice(video::EDT_NULL,
                                          irr::core::dimension2d<u32>(640, 480),
                                          /*bits*/16U, /**fullscreen*/ false, 
@@ -1761,11 +1761,10 @@ void IrrDriver::displayFPS()
     if (UserConfigParams::m_artist_debug_mode)
     {
         fpsString = StringUtils::insertValues(_("FPS: %d/%d/%d  - PolyCount: %d Solid, %d Shadows - LightDist : %d"),
-            min, fps, max, poly_count[SOLID_NORMAL_AND_DEPTH_PASS], poly_count[SHADOW_PASS], m_last_light_bucket_distance);
-        poly_count[SOLID_NORMAL_AND_DEPTH_PASS] = 0;
+            min, fps, max, poly_count[GBUFFER_PASS], poly_count[SHADOW_PASS], m_last_light_bucket_distance);
+        poly_count[GBUFFER_PASS] = 0;
         poly_count[SHADOW_PASS] = 0;
-        object_count[SOLID_NORMAL_AND_DEPTH_PASS] = 0;
-        object_count[SOLID_NORMAL_AND_DEPTH_PASS] = 0;
+        object_count[GBUFFER_PASS] = 0;
         object_count[TRANSPARENT_PASS] = 0;
     }
     else

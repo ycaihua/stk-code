@@ -18,5 +18,5 @@ void main(void)
     vec4 EnvPos = getPosFromUVDepth(vec3(xy, EnvZ), InverseProjectionMatrix);
     float alpha = clamp((EnvPos.z - FragmentPos.z) * 0.3, 0., 1.);
     vec4 color = texture(tex, tc) * vec4(pc, 1.0);
-    FragColor = color * alpha * smoothstep(1., 0.8, lf);
+    FragColor = color * alpha * smoothstep(1., 0.8, lf) / 3.14;
 }

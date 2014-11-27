@@ -25,6 +25,7 @@ in vec3 Orientation;
 in vec3 Scale;
 #endif
 
+out vec4 color;
 out vec3 nor;
 out vec2 uv;
 #ifdef Use_Bindless_Texture
@@ -46,4 +47,5 @@ void main()
     handle = Handle;
     secondhandle = SecondHandle;
 #endif
+    color = vec4(1.);
 }
