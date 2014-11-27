@@ -66,8 +66,7 @@ class ShadowImportance;
 
 enum STKRenderingPass
 {
-    SOLID_NORMAL_AND_DEPTH_PASS,
-    SOLID_LIT_PASS,
+    GBUFFER_PASS,
     TRANSPARENT_PASS,
     GLOW_PASS,
     SHADOW_PASS,
@@ -78,10 +77,8 @@ enum TypeFBO
 {
     FBO_SSAO,
     FBO_NORMAL_AND_DEPTHS,
-    FBO_COMBINED_DIFFUSE_SPECULAR,
+    FBO_GBUFFERS,
     FBO_COLORS,
-    FBO_DIFFUSE,
-    FBO_SPECULAR,
     FBO_MLAA_COLORS,
     FBO_MLAA_BLEND,
     FBO_MLAA_TMP,
@@ -122,9 +119,9 @@ enum TypeRTT
     RTT_TMP4,
     RTT_LINEAR_DEPTH,
     RTT_NORMAL_AND_DEPTH,
+    RTT_BASE_COLOR,
+    RTT_EMIT_VALUE,
     RTT_COLOR,
-    RTT_DIFFUSE,
-    RTT_SPECULAR,
 
 
     RTT_HALF1,
@@ -332,8 +329,8 @@ private:
 
     void renderFixed(float dt);
     void renderGLSL(float dt);
-    void renderSolidFirstPass();
-    void renderSolidSecondPass();
+    void renderGBuffer();
+    void renderPostLightFixups();
     void renderNormalsVisualisation();
     void renderTransparent();
     void renderParticles();

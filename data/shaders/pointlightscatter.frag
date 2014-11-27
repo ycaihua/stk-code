@@ -36,7 +36,7 @@ void main()
         float l = (16 - i) * stepsize;
         float att = energy * 20. / (1. + d * d);
         att *= max((radius - d) / radius, 0.);
-        fog += fog_density * light_col * att * exp(- fog_density * d) * exp(- fog_density * l) * stepsize;
+        fog += fog_density * light_col * att * exp(- fog_density * d) * exp(- fog_density * l) * stepsize / 3.14;
         xpos += stepsize * eyedir;
     }
 

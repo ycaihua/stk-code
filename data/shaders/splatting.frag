@@ -4,19 +4,25 @@ layout(bindless_sampler) uniform sampler2D tex_detail0;
 layout(bindless_sampler) uniform sampler2D tex_detail1;
 layout(bindless_sampler) uniform sampler2D tex_detail2;
 layout(bindless_sampler) uniform sampler2D tex_detail3;
+layout(bindless_sampler) uniform sampler2D glosstex;
 #else
 uniform sampler2D tex_layout;
 uniform sampler2D tex_detail0;
 uniform sampler2D tex_detail1;
 uniform sampler2D tex_detail2;
 uniform sampler2D tex_detail3;
+uniform sampler2D glosstex;
 #endif
 
+in vec3 nor;
 in vec2 uv;
 in vec2 uv_bis;
-out vec4 FragColor;
 
-vec3 getLightFactor(vec3 diffuseMatColor, vec3 specularMatColor, float specMapValue, float emitMapValue);
+layout(location = 0) out vec4 EncodedNormal_Specular_Reflectance;
+layout(location = 1) out vec4 Colors;
+layout(location = 2) out float EmitMap;
+
+vec2 EncodeNormal(vec3 n);
 
 void main() {
     // Splatting part
@@ -40,5 +46,12 @@ void main() {
         splatting.b * detail2 +
         max(0., (1.0 - splatting.r - splatting.g - splatting.b)) * detail3;
 
-    FragColor = vec4(getLightFactor(splatted.xyz, vec3(1.), 0., 0.), 1.);
+    Colors = vec4(splatted.rgb, 1.);
+
+    float glossmap = texture(glosstex, uv).r;
+    float reflectance = texture(glosstex, uv).g;
+    EncodedNormal_Specular_Reflectance.xy = 0.5 * EncodeNormal(normalize(nor)) + 0.5;
+    EncodedNormal_Specular_Reflectance.z = glossmap;
+    EncodedNormal_Specular_Reflectance.w = reflectance;
+    EmitMap = texture(glosstex, uv).b;
 }

@@ -373,10 +373,10 @@ void IrrDriver::renderScene(scene::ICameraSceneNode * const camnode, unsigned po
     glEnable(GL_CULL_FACE);
     if (UserConfigParams::m_dynamic_lights || forceRTT)
     {
-        m_rtts->getFBO(FBO_NORMAL_AND_DEPTHS).Bind();
+        m_rtts->getFBO(FBO_GBUFFERS).Bind();
         glClearColor(0., 0., 0., 0.);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
-        renderSolidFirstPass();
+        renderGBuffer();
     }
     PROFILER_POP_CPU_MARKER();
 
@@ -399,21 +399,12 @@ void IrrDriver::renderScene(scene::ICameraSceneNode * const camnode, unsigned po
         PROFILER_POP_CPU_MARKER();
     }
 
-    PROFILER_PUSH_CPU_MARKER("- Solid Pass 2", 0x00, 0x00, 0xFF);
-    if (UserConfigParams::m_dynamic_lights || forceRTT)
+    // Render PostLightFixups
     {
-        m_rtts->getFBO(FBO_COLORS).Bind();
-        SColor clearColor(0, 150, 150, 150);
-        if (World::getWorld() != NULL)
-            clearColor = World::getWorld()->getClearColor();
-
-        glClearColor(clearColor.getRed() / 255.f, clearColor.getGreen() / 255.f,
-            clearColor.getBlue() / 255.f, clearColor.getAlpha() / 255.f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        glDepthMask(GL_FALSE);
+        PROFILER_PUSH_CPU_MARKER("- Post Light Fixup", 0x00, 0x00, 0xFF);
+        renderPostLightFixups();
+        PROFILER_POP_CPU_MARKER();
     }
-    renderSolidSecondPass();
-    PROFILER_POP_CPU_MARKER();
 
     if (getNormals())
     {

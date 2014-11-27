@@ -18,5 +18,5 @@ void main(void)
 #endif
     col.xyz *= pow(color.xyz, vec3(2.2));
     if (col.a < 0.5) discard;
-    FragColor = vec4(col.xyz, 1.);
+    FragColor = vec4(col.xyz / 3.14, 1.);
 }

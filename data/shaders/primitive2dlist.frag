@@ -18,5 +18,5 @@ void main()
     Color.xyz *= pow(color.xyz, vec3(2.2));
     Color.a *= color.a;
     // Premultiply alpha
-    FragColor = vec4(Color.rgb * Color.a / 3.14, Color.a);
+    FragColor = vec4(Color.rgb * Color.a, Color.a);
 }

@@ -1,8 +1,8 @@
 uniform sampler2D ntex;
+uniform sampler2D ctex;
 uniform sampler2D dtex;
 
-out vec4 Diff;
-out vec4 Spec;
+out vec4 FragColor;
 
 vec3 DecodeNormal(vec2 n);
 vec3 SpecularBRDF(vec3 normal, vec3 eyedir, vec3 lightdir, vec3 color, float roughness);
@@ -16,17 +16,14 @@ void main() {
     vec4 xpos = getPosFromUVDepth(vec3(uv, z), InverseProjectionMatrix);
 
     vec3 norm = normalize(DecodeNormal(2. * texture(ntex, uv).xy - 1.));
+    vec3 color = texture(ctex, uv).xyz;
     float roughness = texture(ntex, uv).z;
     vec3 eyedir = -normalize(xpos.xyz);
 
     vec3 Lightdir = SunMRP(norm, eyedir);
     float NdotL = clamp(dot(norm, Lightdir), 0., 1.);
 
-    vec3 Specular = SpecularBRDF(norm, eyedir, Lightdir, vec3(1.), roughness);
-    vec3 Diffuse = DiffuseBRDF(norm, eyedir, Lightdir, vec3(1.), roughness);
-
-    Diff = vec4(NdotL * Diffuse * sun_col, 1.);
-    Spec = vec4(NdotL * Specular * sun_col, 1.);
+    float reflectance = texture(ntex, uv).a;
 
 /*	if (hasclouds == 1)
 	{
@@ -36,4 +33,7 @@ void main() {
 
 		outcol *= cloud;
 	}*/
+
+
+    FragColor = vec4(NdotL * sun_col * mix(DiffuseBRDF(norm, eyedir, Lightdir, color, roughness), SpecularBRDF(norm, eyedir, Lightdir, color, roughness), reflectance), 0.);
 }

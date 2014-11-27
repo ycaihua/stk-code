@@ -825,7 +825,7 @@ PROFILER_POP_CPU_MARKER();
         }
     }
     PROFILER_POP_CPU_MARKER();
-    poly_count[SOLID_NORMAL_AND_DEPTH_PASS] += SolidPoly;
+    poly_count[GBUFFER_PASS] += SolidPoly;
     poly_count[SHADOW_PASS] += ShadowPoly;
 
     if (CVS->isARBBufferStorageUsable())

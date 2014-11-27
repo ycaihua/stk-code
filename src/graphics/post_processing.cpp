@@ -223,7 +223,7 @@ void PostProcessing::renderEnvMap(const float *bSHCoeff, const float *gSHCoeff, 
     glUseProgram(FullScreenShader::IBLShader::getInstance()->Program);
     glBindVertexArray(SharedObject::FullScreenQuadVAO);
 
-    FullScreenShader::IBLShader::getInstance()->SetTextureUnits(irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), skybox);
+    FullScreenShader::IBLShader::getInstance()->SetTextureUnits(irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), irr_driver->getRenderTargetTexture(RTT_BASE_COLOR), irr_driver->getRenderTargetTexture(RTT_EMIT_VALUE), skybox);
     FullScreenShader::IBLShader::getInstance()->setUniforms();
 
     glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -256,7 +256,7 @@ void PostProcessing::renderGI(const core::matrix4 &RHMatrix, const core::vector3
     RHMatrix.getInverse(InvRHMatrix);
     glDisable(GL_DEPTH_TEST);
     FullScreenShader::GlobalIlluminationReconstructionShader::getInstance()->SetTextureUnits(
-        irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), shr, shg, shb);
+        irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), irr_driver->getRenderTargetTexture(RTT_BASE_COLOR), shr, shg, shb);
     DrawFullScreenEffect<FullScreenShader::GlobalIlluminationReconstructionShader>(RHMatrix, InvRHMatrix, rh_extend);
 }
 
@@ -267,7 +267,7 @@ void PostProcessing::renderSunlight(const core::vector3df &direction, const vide
     glBlendFunc(GL_ONE, GL_ONE);
     glBlendEquation(GL_FUNC_ADD);
 
-    FullScreenShader::SunLightShader::getInstance()->SetTextureUnits(irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture());
+    FullScreenShader::SunLightShader::getInstance()->SetTextureUnits(irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), irr_driver->getRenderTargetTexture(RTT_BASE_COLOR));
     DrawFullScreenEffect<FullScreenShader::SunLightShader>(direction, col);
 }
 
@@ -291,6 +291,15 @@ std::vector<float> getGaussianWeight(float sigma, size_t count)
     for (float &weight : weights)
         weight /= total;
     return weights;
+}
+
+void PostProcessing::renderBacklitShadowedSunlight(const core::vector3df &direction, const video::SColorf &col, const std::vector<core::matrix4> &sun_ortho_matrix, GLuint depthtex)
+{
+    glEnable(GL_BLEND);
+    glDisable(GL_DEPTH_TEST);
+    glBlendFunc(GL_ONE, GL_ONE);
+    glBlendEquation(GL_FUNC_ADD);
+
 }
 
 void PostProcessing::renderGaussian3Blur(FrameBuffer &in_fbo, FrameBuffer &auxiliary)
@@ -466,6 +475,18 @@ void PostProcessing::renderPassThrough(GLuint tex)
     FullScreenShader::PassThroughShader::getInstance()->setUniforms();
 
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+}
+
+void PostProcessing::applySSAO(GLuint tex)
+{
+    glEnable(GL_BLEND);
+    glBlendEquation(GL_FUNC_ADD);
+    glBlendFunc(GL_ZERO, GL_SRC_COLOR);
+    glUseProgram(FullScreenShader::ApplySSAOShader::getInstance()->Program);
+
+    FullScreenShader::ApplySSAOShader::getInstance()->SetTextureUnits(tex);
+    DrawFullScreenEffect<FullScreenShader::ApplySSAOShader>();
+    glDisable(GL_BLEND);
 }
 
 void PostProcessing::renderTextureLayer(unsigned tex, unsigned layer)

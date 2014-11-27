@@ -4,6 +4,7 @@
 
 uniform sampler2D ntex;
 uniform sampler2D dtex;
+uniform sampler2D ctex;
 
 uniform sampler3D SHR;
 uniform sampler3D SHG;
@@ -28,7 +29,7 @@ vec3 SH2RGB (in vec4 sh_r, in vec4 sh_g, in vec4 sh_b, in vec3 dir)
     return vec3 (dot(Y,sh_r), dot(Y,sh_g), dot(Y,sh_b));
 }
 
-out vec4 Diffuse;
+out vec4 FragColor;
 
 vec3 DecodeNormal(vec2 n);
 vec4 getPosFromUVDepth(vec3 uvDepth, mat4 InverseProjectionMatrix);
@@ -84,6 +85,8 @@ void main()
         GI += SH2RGB(IncidentSHR, IncidentSHG, IncidentSHB, -normal);
     }
     GI /= 4;
+    vec3 color = texture(ctex, uv).rgb;
+    float reflectance = texture(ntex, uv).a;
 
-    Diffuse = max(16. * vec4(GI, 1.), vec4(0.));
+    FragColor = max(16. * vec4((1. - reflectance) * color * GI, 0.), vec4(0.));
 }

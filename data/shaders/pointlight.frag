@@ -1,13 +1,13 @@
 uniform sampler2D ntex;
 uniform sampler2D dtex;
+uniform sampler2D ctex;
 
 flat in vec3 center;
 flat in float energy;
 flat in vec3 col;
 flat in float radius;
 
-out vec4 Diff;
-out vec4 Spec;
+out vec4 FragColor;
 
 vec3 DecodeNormal(vec2 n);
 vec3 SpecularBRDF(vec3 normal, vec3 eyedir, vec3 lightdir, vec3 color, float roughness);
@@ -37,9 +37,8 @@ void main()
     vec3 L = -normalize(xpos.xyz - light_pos);
 
     float NdotL = clamp(dot(norm, L), 0., 1.);
-    vec3 Specular = SpecularBRDF(norm, eyedir, L, vec3(1.), roughness);
-    vec3 Diffuse = DiffuseBRDF(norm, eyedir, L, vec3(1.), roughness);
+    vec3 color = texture(ctex, texc).rgb;
+    float reflectance = texture(ntex, texc).a;
 
-    Diff = vec4(Diffuse * NdotL * light_col * att, 1.);
-    Spec = vec4(Specular * NdotL * light_col * att, 1.);
+    FragColor = vec4(NdotL * light_col * att * mix(DiffuseBRDF(norm, eyedir, L, color, roughness), SpecularBRDF(norm, eyedir, L, color, roughness), reflectance), 1.);
 }
