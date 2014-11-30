@@ -38,7 +38,10 @@ void main()
 
     float NdotL = clamp(dot(norm, L), 0., 1.);
     vec3 color = texture(ctex, texc).rgb;
-    float reflectance = texture(ntex, texc).a;
+    float metalness = texture(ntex, texc).a;
 
-    FragColor = vec4(NdotL * light_col * att * mix(DiffuseBRDF(norm, eyedir, L, color, roughness), SpecularBRDF(norm, eyedir, L, color, roughness), reflectance), 1.);
+    vec3 Dielectric = DiffuseBRDF(norm, eyedir, L, color, roughness) + SpecularBRDF(norm, eyedir, L, vec3(.04), roughness);
+    vec3 Metal = SpecularBRDF(norm, eyedir, L, color, roughness);
+
+    FragColor = vec4(NdotL * light_col * att *mix(Dielectric, Metal, metalness), 1.);
 }

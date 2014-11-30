@@ -6,7 +6,7 @@ vec3 SpecularIBL(vec3 normal, vec3 V, float roughness, vec3 F0)
     vec3 sampleDirection = reflect(-V, normal);
     sampleDirection = (InverseViewMatrix * vec4(sampleDirection, 0.)).xyz;
      // Assume 8 level of lod (ie 256x256 texture)
-    float lodval = 8. * (1. - roughness);
+    float lodval = 8. * roughness;
     vec3 LD = max(textureLod(probe, sampleDirection, lodval).rgb, vec3(0.));
 
     float NdotV = clamp(dot(V, normal), 0., 1.);

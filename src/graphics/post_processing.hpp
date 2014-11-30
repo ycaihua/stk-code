@@ -80,7 +80,7 @@ public:
     void renderSSAO();
     void renderEnvMap(const float *bSHCoeff, const float *gSHCoeff, const float *rSHCoeff, unsigned skycubemap, unsigned dfg_lut);
     void renderRHDebug(unsigned SHR, unsigned SHG, unsigned SHB, const core::matrix4 &rh_matrix, const core::vector3df &rh_extend);
-    void renderGI(const core::matrix4 &RHMatrix, const core::vector3df &rh_extend, unsigned shr, unsigned shg, unsigned shb);
+    void renderGI(const core::matrix4 &RHMatrix, const core::vector3df &rh_extend, unsigned shr, unsigned shg, unsigned shb, unsigned dfg_lut);
 
     /** Blur the in texture */
     void renderGaussian3Blur(FrameBuffer &in_fbo, FrameBuffer &auxiliary);

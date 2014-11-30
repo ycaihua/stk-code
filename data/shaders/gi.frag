@@ -5,6 +5,7 @@
 uniform sampler2D ntex;
 uniform sampler2D dtex;
 uniform sampler2D ctex;
+uniform sampler2D dfg;
 
 uniform sampler3D SHR;
 uniform sampler3D SHG;
@@ -88,5 +89,9 @@ void main()
     vec3 color = texture(ctex, uv).rgb;
     float reflectance = texture(ntex, uv).a;
 
-    FragColor = max(16. * vec4((1. - reflectance) * color * GI, 0.), vec4(0.));
+    float roughness = texture(ntex, uv).z;
+    vec3 eyedir = -normalize(pos_screen_space.xyz / pos_screen_space.w);
+    float NdotV = clamp(dot(eyedir, normal_screen_space), 0., 1.);
+
+    FragColor = max(1. * vec4((1. - reflectance) * color * GI * texture(dfg, vec2(NdotV, roughness)).b, 0.), vec4(0.));
 }

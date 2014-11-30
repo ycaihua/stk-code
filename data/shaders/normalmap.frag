@@ -12,7 +12,7 @@ in vec3 tangent;
 in vec3 bitangent;
 in vec2 uv;
 
-layout(location = 0) out vec4 EncodedNormal_Specular_Reflectance;
+layout(location = 0) out vec4 EncodedNormal_Roughness_Metalness;
 layout(location = 1) out vec4 Colors;
 layout(location = 2) out float EmitMap;
 
@@ -30,9 +30,9 @@ void main()
     vec3 Frag_bitangent = cross(Frag_normal, Frag_tangent);
 
     vec3 FragmentNormal = TS_normal.x * Frag_tangent + TS_normal.y * Frag_bitangent - TS_normal.z * Frag_normal;
-    EncodedNormal_Specular_Reflectance.xy = 0.5 * EncodeNormal(normalize(FragmentNormal)) + 0.5;
-    EncodedNormal_Specular_Reflectance.z = gloss;
-    EncodedNormal_Specular_Reflectance.w = reflectance;
+    EncodedNormal_Roughness_Metalness.xy = 0.5 * EncodeNormal(normalize(FragmentNormal)) + 0.5;
+    EncodedNormal_Roughness_Metalness.z = 1. - gloss;
+    EncodedNormal_Roughness_Metalness.w = reflectance;
 
     vec4 col = texture(tex, uv);
 #ifdef Use_Bindless_Texture

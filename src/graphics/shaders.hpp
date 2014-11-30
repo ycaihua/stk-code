@@ -430,7 +430,7 @@ public:
 };
 
 class GlobalIlluminationReconstructionShader : public ShaderHelperSingleton<GlobalIlluminationReconstructionShader, core::matrix4, core::matrix4, core::vector3df>,
-    public TextureRead<Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Volume_Linear_Filtered, Volume_Linear_Filtered, Volume_Linear_Filtered>
+    public TextureRead<Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Volume_Linear_Filtered, Volume_Linear_Filtered, Volume_Linear_Filtered, Bilinear_Clamped_Filtered>
 {
 public:
     GlobalIlluminationReconstructionShader();

@@ -1722,7 +1722,7 @@ namespace FullScreenShader
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/gi.frag").c_str());
 
         AssignUniforms("RHMatrix", "InvRHMatrix", "extents");
-        AssignSamplerNames(Program, 0, "ntex", 1, "dtex", 2, "ctex", 3, "SHR", 4, "SHG", 5, "SHB");
+        AssignSamplerNames(Program, 0, "ntex", 1, "dtex", 2, "ctex", 3, "SHR", 4, "SHG", 5, "SHB", 6, "dfg");
     }
 
     Gaussian17TapHShader::Gaussian17TapHShader()

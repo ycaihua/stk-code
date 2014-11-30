@@ -23,7 +23,9 @@ void main(void)
         float Theta = texelFetch(samples, i).r;
         float Phi = texelFetch(samples, i).g;
 
-        vec3 L = cos(Theta) * RayDir + sin(Theta) * cos(Phi) * Tangent + sin(Theta) * sin(Phi) * Bitangent;
+        vec3 H = cos(Theta) * RayDir + sin(Theta) * cos(Phi) * Tangent + sin(Theta) * sin(Phi) * Bitangent;
+        vec3 L = 2 * dot(RayDir, H) * H - RayDir;
+
         float NdotL = clamp(dot(RayDir, L), 0., 1.);
         FinalColor += textureLod(tex, L, 0.) * NdotL;
         weight += NdotL;
