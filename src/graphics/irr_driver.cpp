@@ -1302,6 +1302,7 @@ scene::ISceneNode *IrrDriver::addSkyBox(const std::vector<video::ITexture*> &tex
     SphericalHarmonicsTextures = sphericalHarmonics;
     SkyboxCubeMap = 0;
     SkyboxSpecularProbe = 0;
+    DFG_LUT = 0;
     m_skybox_ready = false;
     return m_scene_manager->addSkyBoxSceneNode(texture[0], texture[1],
                                                texture[2], texture[3],
@@ -1317,9 +1318,11 @@ void IrrDriver::suppressSkyBox()
     {
         glDeleteTextures(1, &SkyboxCubeMap);
         glDeleteTextures(1, &SkyboxSpecularProbe);
+        glDeleteTextures(1, &DFG_LUT);
     }
     SkyboxCubeMap = 0;
     SkyboxSpecularProbe = 0;
+    DFG_LUT = 0;
 }
 
 // ----------------------------------------------------------------------------

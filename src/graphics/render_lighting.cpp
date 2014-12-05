@@ -206,7 +206,7 @@ void IrrDriver::renderLights(unsigned pointlightcount, bool hasShadow)
 
     {
         ScopedGPUTimer timer(irr_driver->getGPUTimer(Q_ENVMAP));
-        m_post_processing->renderEnvMap(blueSHCoeff, greenSHCoeff, redSHCoeff, SkyboxSpecularProbe);
+        m_post_processing->renderEnvMap(blueSHCoeff, greenSHCoeff, redSHCoeff, SkyboxSpecularProbe, DFG_LUT);
     }
 
     // Render sunlight if and only if track supports shadow

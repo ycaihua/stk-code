@@ -281,6 +281,7 @@ void IrrDriver::prepareSkybox()
     glEnable(GL_TEXTURE_CUBE_MAP_SEAMLESS);
 
     generateDiffuseCoefficients();
+    DFG_LUT = generateSpecularDFGLUT();
     if (!SkyboxTextures.empty())
     {
         SkyboxCubeMap = generateCubeMapFromTextures(SkyboxTextures);

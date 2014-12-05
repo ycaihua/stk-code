@@ -384,7 +384,7 @@ public:
     SunLightShader();
 };
 
-class IBLShader : public ShaderHelperSingleton<IBLShader>, public TextureRead<Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Trilinear_cubemap>
+class IBLShader : public ShaderHelperSingleton<IBLShader>, public TextureRead<Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Trilinear_cubemap, Bilinear_Clamped_Filtered>
 {
 public:
     IBLShader();

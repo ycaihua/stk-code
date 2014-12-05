@@ -8,7 +8,7 @@ out vec4 FragColor;
 vec3 DecodeNormal(vec2 n);
 vec4 getPosFromUVDepth(vec3 uvDepth, mat4 InverseProjectionMatrix);
 vec3 DiffuseIBL(vec3 normal, vec3 color);
-vec3 SpecularIBL(vec3 normal, vec3 V, float roughness);
+vec3 SpecularIBL(vec3 normal, vec3 V, float roughness, vec3 F0);
 
 void main(void)
 {
@@ -18,15 +18,14 @@ void main(void)
 
     vec3 emitcolor = pow(color.rgb, vec3(3.)) * 15 * texture(emittex, uv).r;
 
-    vec3 diffuse = DiffuseIBL(normal, color);
-
     float z = texture(dtex, uv).x;
-
     vec4 xpos = getPosFromUVDepth(vec3(uv, z), InverseProjectionMatrix);
     vec3 eyedir = -normalize(xpos.xyz);
     float specval = texture(ntex, uv).z;
-    vec3 specular = color * SpecularIBL(normal, eyedir, specval);
-    float reflectance = texture(ntex, uv).a;
 
-    FragColor = vec4(.2 * ((1. - reflectance) * diffuse + reflectance * specular) + emitcolor, texture(ctex, uv).a);
+    vec3 dielectric = DiffuseIBL(normal, color) + SpecularIBL(normal, eyedir, specval, vec3(0.04));
+    vec3 metal = SpecularIBL(normal, eyedir, specval, color);
+    float metalness = texture(ntex, uv).a;
+
+    FragColor = vec4(.2 * mix(dielectric, metal, metalness) + emitcolor, texture(ctex, uv).a);
 }

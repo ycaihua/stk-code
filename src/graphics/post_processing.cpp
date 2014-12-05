@@ -213,7 +213,7 @@ void renderBloom(GLuint in)
     DrawFullScreenEffect<FullScreenShader::BloomShader>();
 }
 
-void PostProcessing::renderEnvMap(const float *bSHCoeff, const float *gSHCoeff, const float *rSHCoeff, GLuint skybox)
+void PostProcessing::renderEnvMap(const float *bSHCoeff, const float *gSHCoeff, const float *rSHCoeff, GLuint skybox, GLuint dfglut)
 {
     glDisable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
@@ -223,7 +223,7 @@ void PostProcessing::renderEnvMap(const float *bSHCoeff, const float *gSHCoeff, 
     glUseProgram(FullScreenShader::IBLShader::getInstance()->Program);
     glBindVertexArray(SharedObject::FullScreenQuadVAO);
 
-    FullScreenShader::IBLShader::getInstance()->SetTextureUnits(irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), irr_driver->getRenderTargetTexture(RTT_BASE_COLOR), irr_driver->getRenderTargetTexture(RTT_EMIT_VALUE), skybox);
+    FullScreenShader::IBLShader::getInstance()->SetTextureUnits(irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), irr_driver->getRenderTargetTexture(RTT_BASE_COLOR), irr_driver->getRenderTargetTexture(RTT_EMIT_VALUE), skybox, dfglut);
     FullScreenShader::IBLShader::getInstance()->setUniforms();
 
     glDrawArrays(GL_TRIANGLES, 0, 3);

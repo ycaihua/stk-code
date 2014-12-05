@@ -18,4 +18,5 @@ using the cubemap provided by CubemapFace.
 void SphericalHarmonics(Color *CubemapFace[6], size_t edge_size, float *blueSHCoeff, float *greenSHCoeff, float *redSHCoeff);
 
 GLuint generateSpecularCubemap(GLuint probe);
+GLuint generateSpecularDFGLUT();
 #endif

@@ -1,6 +1,7 @@
 #include "IBL.hpp"
 #include "gl_headers.hpp"
 #include "shaders.hpp"
+#include <S3DVertex.h>
 #include <cmath>
 #include <set>
 
@@ -334,4 +335,63 @@ GLuint generateSpecularCubemap(GLuint probe)
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glDeleteFramebuffers(1, &fbo);
     return cubemap_texture;
+}
+
+// Mostly from "Real Shading in Unreal Engine 4" paper
+static
+std::pair<float, float> getDFG(float roughness, float NdotV)
+{
+    // We assume a local referential where N points in Y direction
+    core::vector3df V(sqrtf(1.f - NdotV * NdotV), NdotV, 0.f);
+
+    float DFG1 = 0., DFG2 = 0.;
+    for (unsigned sample = 0; sample < 1024; sample++)
+    {
+        std::pair<float, float> ThetaPhi = ImportanceSamplingPhong(HammersleySequence(sample, 1024), roughness);
+        float Theta = ThetaPhi.first, Phi = ThetaPhi.second;
+        core::vector3df H(sinf(Theta) * cosf(Phi), cosf(Theta), sinf(Theta) * sinf(Phi));
+        core::vector3df L = 2 * H.dotProduct(V) * H - V;
+        float NdotL = L.Y;
+        if (NdotL > 0.)
+        {
+            float VdotH = V.dotProduct(H);
+            VdotH = VdotH > 0.f ? VdotH : 0.f;
+            VdotH = VdotH < 1.f ? VdotH : 1.f;
+            float Fc = powf(1.f - VdotH, 5.f);
+            DFG1 += (1.f - Fc) * VdotH;
+            DFG2 += Fc * VdotH;
+        }
+    }
+    return std::make_pair(DFG1 / 1024, DFG2 / 1024);
+}
+
+GLuint generateSpecularDFGLUT()
+{
+    size_t DFG_LUT_size = 128;
+    float *texture_content = new float[4 * DFG_LUT_size * DFG_LUT_size];
+
+#pragma omp parallel for
+    for (int i = 0; i < int(DFG_LUT_size); i++)
+    {
+        float roughness = float(i * powf(2.f, 10.f) / (DFG_LUT_size - 1));
+        for (unsigned j = 0; j < DFG_LUT_size; j++)
+        {
+            float NdotV = float(j) / float(DFG_LUT_size - 1);
+            std::pair<float, float> DFG = getDFG(roughness, NdotV);
+            texture_content[4 * (i * DFG_LUT_size + j)] = DFG.first;
+            texture_content[4 * (i * DFG_LUT_size + j) + 1] = DFG.second;
+            texture_content[4 * (i * DFG_LUT_size + j) + 2] = 0.;
+            texture_content[4 * (i * DFG_LUT_size + j) + 3] = 0.;
+        }
+    }
+
+    GLuint DFG_LUT_texture;
+    glGenTextures(1, &DFG_LUT_texture);
+    glBindTexture(GL_TEXTURE_2D, DFG_LUT_texture);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, DFG_LUT_size, DFG_LUT_size, 0, GL_RGBA, GL_FLOAT, texture_content);
+
+    delete[] texture_content;
+    return DFG_LUT_texture;
+
 }
