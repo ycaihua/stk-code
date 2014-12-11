@@ -10,5 +10,5 @@ void main(void)
     tmp /= tmp.w;
     eyedir = (InverseViewMatrix * vec4(tmp.xyz, 0.)).xyz;
     vec4 color = texture(tex, eyedir);
-    FragColor = vec4(color.xyz / 2., 1.);
+    FragColor = vec4(color.xyz / 1.5, 1.);
 }
