@@ -282,10 +282,20 @@ void IrrDriver::prepareSkybox()
 
     generateDiffuseCoefficients();
     DFG_LUT = generateSpecularDFGLUT();
+    if (CVS->isAZDOEnabled())
+    {
+        DFG_LUT_Handle = glGetTextureSamplerHandleARB(DFG_LUT, FullScreenShader::IBLShader::getInstance()->SamplersId[5]);
+        glMakeTextureHandleResidentARB(DFG_LUT_Handle);
+    }
     if (!SkyboxTextures.empty())
     {
         SkyboxCubeMap = generateCubeMapFromTextures(SkyboxTextures);
         SkyboxSpecularProbe = generateSpecularCubemap(SkyboxCubeMap);
+        if (CVS->isAZDOEnabled())
+        {
+            SkyboxSpecularProbeHandle = glGetTextureSamplerHandleARB(SkyboxSpecularProbe, FullScreenShader::IBLShader::getInstance()->SamplersId[4]);
+            glMakeTextureHandleResidentARB(SkyboxSpecularProbeHandle);
+        }
     }
 }
 

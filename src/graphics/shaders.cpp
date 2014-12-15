@@ -1114,7 +1114,7 @@ namespace MeshShader
         Program = LoadProgram(OBJECT,
             GL_VERTEX_SHADER, file_manager->getAsset("shaders/object_pass.vert").c_str(),
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/transparent.frag").c_str());
-        AssignUniforms("ModelMatrix", "TextureMatrix");
+        AssignUniforms("ModelMatrix", "InverseModelMatrix", "TextureMatrix");
         AssignSamplerNames(Program, 0, "tex");
     }
 
@@ -1122,9 +1122,14 @@ namespace MeshShader
     {
         Program = LoadProgram(OBJECT,
             GL_VERTEX_SHADER, file_manager->getAsset("shaders/object_pass.vert").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/DiffuseIBL.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/SpecularIBL.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/SpecularBRDF.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/DiffuseBRDF.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/SunMRP.frag").c_str(),
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/transparentfog.frag").c_str());
-        AssignUniforms("ModelMatrix", "TextureMatrix", "fogmax", "startH", "endH", "start", "end", "col");
-        AssignSamplerNames(Program, 0, "tex");
+        AssignUniforms("ModelMatrix", "InverseModelMatrix", "TextureMatrix");
+        AssignSamplerNames(Program, 0, "tex", 1, "probe", 2, "dfg");
     }
 
     BillboardShader::BillboardShader()

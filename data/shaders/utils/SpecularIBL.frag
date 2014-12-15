@@ -1,5 +1,10 @@
+#ifdef Use_Bindless_Texture
+layout(bindless_sampler) uniform samplerCube probe;
+layout(bindless_sampler) uniform sampler2D dfg;
+#else
 uniform samplerCube probe;
 uniform sampler2D dfg;
+#endif
 
 vec3 SpecularIBL(vec3 normal, vec3 V, float roughness, vec3 F0)
 {

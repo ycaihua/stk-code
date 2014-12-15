@@ -267,36 +267,15 @@ handleSTKCommon(scene::ISceneNode *Node, std::vector<scene::ISceneNode *> *Immed
 
     // Transparent
     GLMesh *mesh;
-    if (World::getWorld() && World::getWorld()->isFogEnabled())
-    {
-        const Track * const track = World::getWorld()->getTrack();
 
-        // Todo : put everything in a ubo
-        const float fogmax = track->getFogMax();
-        const float startH = track->getFogStartHeight();
-        const float endH = track->getFogEndHeight();
-        const float start = track->getFogStart();
-        const float end = track->getFogEnd();
-        const video::SColor tmpcol = track->getFogColor();
+    core::matrix4 ModelMatrix = Node->getAbsoluteTransformation(), InvModelMatrix;
+    ModelMatrix.getInverse(InvModelMatrix);
 
-        video::SColorf col(tmpcol.getRed() / 255.0f,
-            tmpcol.getGreen() / 255.0f,
-            tmpcol.getBlue() / 255.0f);
+    for_in(mesh, node->TransparentMesh[TM_DEFAULT])
+        pushVector(ListBlendTransparentFog::getInstance(), mesh, ModelMatrix, InvModelMatrix, mesh->TextureMatrix);
+    for_in(mesh, node->TransparentMesh[TM_ADDITIVE])
+        pushVector(ListAdditiveTransparentFog::getInstance(), mesh, ModelMatrix, InvModelMatrix, mesh->TextureMatrix);
 
-        for_in(mesh, node->TransparentMesh[TM_DEFAULT])
-            pushVector(ListBlendTransparentFog::getInstance(), mesh, Node->getAbsoluteTransformation(), mesh->TextureMatrix,
-            fogmax, startH, endH, start, end, col);
-        for_in(mesh, node->TransparentMesh[TM_ADDITIVE])
-            pushVector(ListAdditiveTransparentFog::getInstance(), mesh, Node->getAbsoluteTransformation(), mesh->TextureMatrix,
-            fogmax, startH, endH, start, end, col);
-    }
-    else
-    {
-        for_in(mesh, node->TransparentMesh[TM_DEFAULT])
-            pushVector(ListBlendTransparent::getInstance(), mesh, Node->getAbsoluteTransformation(), mesh->TextureMatrix);
-        for_in(mesh, node->TransparentMesh[TM_ADDITIVE])
-            pushVector(ListAdditiveTransparent::getInstance(), mesh, Node->getAbsoluteTransformation(), mesh->TextureMatrix);
-    }
     for_in(mesh, node->TransparentMesh[TM_DISPLACEMENT])
         pushVector(ListDisplacement::getInstance(), mesh, Node->getAbsoluteTransformation());
 

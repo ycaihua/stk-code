@@ -157,16 +157,16 @@ template <typename T, typename ...Args>
 class MiscList : public Singleton<T>, public std::vector<STK::Tuple<Args...> >
 {};
 
-class ListBlendTransparent : public MiscList<ListBlendTransparent, GLMesh *, core::matrix4, core::matrix4>
+class ListBlendTransparent : public MiscList<ListBlendTransparent, GLMesh *, core::matrix4, core::matrix4, core::matrix4>
 {};
 
-class ListAdditiveTransparent : public MiscList<ListAdditiveTransparent, GLMesh *, core::matrix4, core::matrix4>
+class ListAdditiveTransparent : public MiscList<ListAdditiveTransparent, GLMesh *, core::matrix4, core::matrix4, core::matrix4>
 {};
 
-class ListBlendTransparentFog : public MiscList<ListBlendTransparentFog, GLMesh *, core::matrix4, core::matrix4, float, float, float, float, float, video::SColorf>
+class ListBlendTransparentFog : public MiscList<ListBlendTransparentFog, GLMesh *, core::matrix4, core::matrix4, core::matrix4>
 {};
 
-class ListAdditiveTransparentFog : public MiscList<ListAdditiveTransparentFog, GLMesh *, core::matrix4, core::matrix4, float, float, float, float, float, video::SColorf>
+class ListAdditiveTransparentFog : public MiscList<ListAdditiveTransparentFog, GLMesh *, core::matrix4, core::matrix4, core::matrix4>
 {};
 
 class ListDisplacement : public MiscList<ListDisplacement, GLMesh *, core::matrix4>

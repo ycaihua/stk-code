@@ -641,9 +641,9 @@ void renderTransparenPass(const std::vector<TexUnit> &TexUnits, std::vector<STK:
         }
 
         if (CVS->isAZDOEnabled())
-            Shader::getInstance()->SetTextureHandles(mesh.TextureHandles[0]);
+            Shader::getInstance()->SetTextureHandles(mesh.TextureHandles[0], irr_driver->SkyboxSpecularProbeHandle, irr_driver->DFG_LUT_Handle);
         else
-            Shader::getInstance()->SetTextureUnits(getTextureGLuint(mesh.textures[0]));
+            Shader::getInstance()->SetTextureUnits(getTextureGLuint(mesh.textures[0]), irr_driver->SkyboxSpecularProbe, irr_driver->DFG_LUT);
         custom_unroll_args<List...>::template exec(Shader::getInstance(), meshes->at(i));
     }
 }
@@ -666,24 +666,12 @@ void IrrDriver::renderTransparent()
     if (CVS->isARBBaseInstanceUsable())
         glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_STANDARD, false));
 
-    if (World::getWorld() && World::getWorld()->isFogEnabled())
-    {
-        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-        renderTransparenPass<MeshShader::TransparentFogShader, video::EVT_STANDARD, 8, 7, 6, 5, 4, 3, 2, 1>(TexUnits(
-            TexUnit(0, true)), ListBlendTransparentFog::getInstance());
-        glBlendFunc(GL_ONE, GL_ONE);
-        renderTransparenPass<MeshShader::TransparentFogShader, video::EVT_STANDARD, 8, 7, 6, 5, 4, 3, 2, 1>(TexUnits(
-            TexUnit(0, true)), ListAdditiveTransparentFog::getInstance());
-    }
-    else
-    {
-        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-        renderTransparenPass<MeshShader::TransparentShader, video::EVT_STANDARD, 2, 1>(TexUnits(
-            TexUnit(0, true)), ListBlendTransparent::getInstance());
-        glBlendFunc(GL_ONE, GL_ONE);
-        renderTransparenPass<MeshShader::TransparentShader, video::EVT_STANDARD, 2, 1>(TexUnits(
-            TexUnit(0, true)), ListAdditiveTransparent::getInstance());
-    }
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+    renderTransparenPass<MeshShader::TransparentFogShader, video::EVT_STANDARD, 3, 2, 1>(TexUnits(
+        TexUnit(0, true)), ListBlendTransparentFog::getInstance());
+    glBlendFunc(GL_ONE, GL_ONE);
+    renderTransparenPass<MeshShader::TransparentFogShader, video::EVT_STANDARD, 3, 2, 1>(TexUnits(
+        TexUnit(0, true)), ListAdditiveTransparentFog::getInstance());
 
     for (unsigned i = 0; i < BillBoardList::getInstance()->size(); i++)
         BillBoardList::getInstance()->at(i)->render();

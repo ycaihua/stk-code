@@ -2,7 +2,13 @@
 // See http://graphics.stanford.edu/papers/envmap/
 // Coefficients are calculated in IBL.cpp
 
+#ifdef Use_Bindless_Texture
+layout(bindless_sampler) uniform samplerCube probe;
+layout(bindless_sampler) uniform sampler2D dfg;
+#else
+uniform samplerCube probe;
 uniform sampler2D dfg;
+#endif
 
 mat4 getMatrix(float L00, float L1m1, float L10, float L11, float L2m2, float L2m1, float L20, float L21, float L22)
 {

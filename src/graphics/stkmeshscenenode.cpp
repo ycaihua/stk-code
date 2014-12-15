@@ -311,91 +311,41 @@ void STKMeshSceneNode::render()
     if (irr_driver->getPhase() == TRANSPARENT_PASS && isTransparent)
     {
         ModelViewProjectionMatrix = computeMVP(AbsoluteTransformation);
-
-        if (immediate_draw)
-        {
-            if (update_each_frame)
-                updatevbo();
-            if (additive)
-                glBlendFunc(GL_ONE, GL_ONE);
-            else
-                glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-
-            if (World::getWorld() && World::getWorld()->isFogEnabled())
-            {
-                glUseProgram(MeshShader::TransparentFogShader::getInstance()->Program);
-                for (unsigned i = 0; i < GLmeshes.size(); i++)
-                {
-                    GLMesh &mesh = GLmeshes[i];
-                    irr_driver->IncreaseObjectCount();
-                    GLenum ptype = mesh.PrimitiveType;
-                    GLenum itype = mesh.IndexType;
-                    size_t count = mesh.IndexCount;
-
-                    const Track * const track = World::getWorld()->getTrack();
-
-                    // This function is only called once per frame - thus no need for setters.
-                    const float fogmax = track->getFogMax();
-                    const float startH = track->getFogStartHeight();
-                    const float endH = track->getFogEndHeight();
-                    const float start = track->getFogStart();
-                    const float end = track->getFogEnd();
-                    const video::SColor tmpcol = track->getFogColor();
-
-                    video::SColorf col(tmpcol.getRed() / 255.0f,
-                        tmpcol.getGreen() / 255.0f,
-                        tmpcol.getBlue() / 255.0f);
-
-                    compressTexture(mesh.textures[0], true);
-                    if (CVS->isAZDOEnabled())
-                    {
-                        if (!mesh.TextureHandles[0])
-                            mesh.TextureHandles[0] = glGetTextureSamplerHandleARB(getTextureGLuint(mesh.textures[0]), MeshShader::TransparentFogShader::getInstance()->SamplersId[0]);
-                        if (!glIsTextureHandleResidentARB(mesh.TextureHandles[0]))
-                            glMakeTextureHandleResidentARB(mesh.TextureHandles[0]);
-                        MeshShader::TransparentFogShader::getInstance()->SetTextureHandles(mesh.TextureHandles[0]);
-                    }
-                    else
-                        MeshShader::TransparentFogShader::getInstance()->SetTextureUnits(getTextureGLuint(mesh.textures[0]));
-                    MeshShader::TransparentFogShader::getInstance()->setUniforms(AbsoluteTransformation, mesh.TextureMatrix, fogmax, startH, endH, start, end, col);
-
-                    assert(mesh.vao);
-                    glBindVertexArray(mesh.vao);
-                    glDrawElements(ptype, count, itype, 0);
-                    glBindVertexArray(0);
-                }
-            }
-            else
-            {
-                glUseProgram(MeshShader::TransparentShader::getInstance()->Program);
-                for (unsigned i = 0; i < GLmeshes.size(); i++)
-                {
-                    irr_driver->IncreaseObjectCount();
-                    GLMesh &mesh = GLmeshes[i];
-                    GLenum ptype = mesh.PrimitiveType;
-                    GLenum itype = mesh.IndexType;
-                    size_t count = mesh.IndexCount;
-
-                    compressTexture(mesh.textures[0], true);
-                    if (CVS->isAZDOEnabled())
-                    {
-                        if (!mesh.TextureHandles[0])
-                            mesh.TextureHandles[0] = glGetTextureSamplerHandleARB(getTextureGLuint(mesh.textures[0]), MeshShader::TransparentShader::getInstance()->SamplersId[0]);
-                        if (!glIsTextureHandleResidentARB(mesh.TextureHandles[0]))
-                            glMakeTextureHandleResidentARB(mesh.TextureHandles[0]);
-                        MeshShader::TransparentShader::getInstance()->SetTextureHandles(mesh.TextureHandles[0]);
-                    }
-                    else
-                        MeshShader::TransparentShader::getInstance()->SetTextureUnits(getTextureGLuint(mesh.textures[0]));
-
-                    MeshShader::TransparentShader::getInstance()->setUniforms(AbsoluteTransformation, mesh.TextureMatrix);
-                    assert(mesh.vao);
-                    glBindVertexArray(mesh.vao);
-                    glDrawElements(ptype, count, itype, 0);
-                    glBindVertexArray(0);
-                }
-            }
+        if (!immediate_draw)
             return;
+        if (update_each_frame)
+            updatevbo();
+
+        if (additive)
+            glBlendFunc(GL_ONE, GL_ONE);
+        else
+            glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+        glUseProgram(MeshShader::TransparentFogShader::getInstance()->Program);
+        for (unsigned i = 0; i < GLmeshes.size(); i++)
+        {
+            GLMesh &mesh = GLmeshes[i];
+            irr_driver->IncreaseObjectCount();
+            GLenum ptype = mesh.PrimitiveType;
+            GLenum itype = mesh.IndexType;
+            size_t count = mesh.IndexCount;
+
+            compressTexture(mesh.textures[0], true);
+            if (CVS->isAZDOEnabled())
+            {
+                if (!mesh.TextureHandles[0])
+                    mesh.TextureHandles[0] = glGetTextureSamplerHandleARB(getTextureGLuint(mesh.textures[0]), MeshShader::TransparentFogShader::getInstance()->SamplersId[0]);
+                if (!glIsTextureHandleResidentARB(mesh.TextureHandles[0]))
+                    glMakeTextureHandleResidentARB(mesh.TextureHandles[0]);
+                MeshShader::TransparentFogShader::getInstance()->SetTextureHandles(mesh.TextureHandles[0], irr_driver->SkyboxSpecularProbeHandle, irr_driver->DFG_LUT_Handle);
+            }
+            else
+                MeshShader::TransparentFogShader::getInstance()->SetTextureUnits(getTextureGLuint(mesh.textures[0]), irr_driver->SkyboxSpecularProbe, irr_driver->DFG_LUT);
+            MeshShader::TransparentFogShader::getInstance()->setUniforms(AbsoluteTransformation, AbsoluteTransformation, mesh.TextureMatrix);
+
+            assert(mesh.vao);
+            glBindVertexArray(mesh.vao);
+            glDrawElements(ptype, count, itype, 0);
+            glBindVertexArray(0);
         }
     }
 }
