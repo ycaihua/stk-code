@@ -1,6 +1,4 @@
 uniform sampler2D dtex;
-uniform float density;
-uniform vec3 fogcol;
 
 flat in vec3 center;
 flat in float energy;
@@ -38,9 +36,9 @@ void main()
         float l = (16 - i) * stepsize;
         float att = energy * 20. / (1. + d * d);
         att *= max((radius - d) / radius, 0.);
-        fog += density * light_col * att * exp(- density * d) * exp(- density * l) * stepsize;
+        fog += fog_density * light_col * att * exp(- fog_density * d) * exp(- fog_density * l) * stepsize;
         xpos += stepsize * eyedir;
     }
 
-    Fog = vec4(fogcol * fog, 0.);
+    Fog = vec4(fog, 0.);
 }

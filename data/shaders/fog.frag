@@ -1,10 +1,6 @@
 uniform sampler2D tex;
 
-uniform float density;
-uniform vec3 col;
-
 out vec4 FragColor;
-
 
 vec4 getPosFromUVDepth(vec3 uvDepth, mat4 InverseProjectionMatrix);
 
@@ -15,8 +11,8 @@ void main()
     vec4 xpos = getPosFromUVDepth(vec3(uv, z), InverseProjectionMatrix);
 
     float dist = length(xpos.xyz);
-    float factor = (1. - exp(- density * dist));
-    vec3 fog = col * factor;
+    float factor = (1. - exp(- fog_density * dist));
+    vec3 fog = fog_color * factor;
 
     // fog is scattering component, factor is the beer lambert absorption
     FragColor = vec4(fog, factor);

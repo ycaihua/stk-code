@@ -434,7 +434,7 @@ static void initLightingDataUBO()
 {
     glGenBuffers(1, &SharedObject::LightingDataUBO);
     glBindBuffer(GL_UNIFORM_BUFFER, SharedObject::LightingDataUBO);
-    glBufferData(GL_UNIFORM_BUFFER, 36 * sizeof(float), 0, GL_STREAM_DRAW);
+    glBufferData(GL_UNIFORM_BUFFER, 40 * sizeof(float), 0, GL_STREAM_DRAW);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 }
 
@@ -1508,7 +1508,7 @@ namespace LightShader
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/getPosFromUVDepth.frag").c_str(),
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/pointlightscatter.frag").c_str());
 
-        AssignUniforms("density", "fogcol");
+        AssignUniforms();
         AssignSamplerNames(Program, 0, "dtex");
 
         glGenVertexArrays(1, &vao);
@@ -1991,7 +1991,7 @@ namespace FullScreenShader
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/getPosFromUVDepth.frag").c_str(),
             GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/fog.frag").c_str());
 
-        AssignUniforms("density", "col");
+        AssignUniforms();
         AssignSamplerNames(Program, 0, "tex");
     }
 
