@@ -329,7 +329,7 @@ namespace LightShader
         PointLightShader();
     };
 
-    class PointLightScatterShader : public ShaderHelperSingleton<PointLightScatterShader, float, core::vector3df>, public TextureRead<Nearest_Filtered>
+    class PointLightScatterShader : public ShaderHelperSingleton<PointLightScatterShader>, public TextureRead<Nearest_Filtered>
     {
     public:
         GLuint vbo;
@@ -600,7 +600,7 @@ public:
     SSAOShader();
 };
 
-class FogShader : public ShaderHelperSingleton<FogShader, float, core::vector3df>, public TextureRead<Nearest_Filtered>
+class FogShader : public ShaderHelperSingleton<FogShader>, public TextureRead<Nearest_Filtered>
 {
 public:
     FogShader();
