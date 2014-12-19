@@ -1657,6 +1657,23 @@ namespace FullScreenShader
         AssignUniforms("split0", "split1", "split2", "splitmax");
     }
 
+    SubsurfaceShadowedSunLightShader::SubsurfaceShadowedSunLightShader()
+    {
+        Program = LoadProgram(OBJECT,
+            GL_VERTEX_SHADER, file_manager->getAsset("shaders/screenquad.vert").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/decodeNormal.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/SpecularBRDF.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/DiffuseBRDF.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/getPosFromUVDepth.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/SunMRP.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/DiffuseIBL.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/SpecularIBL.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/subsurfaceshadowedsunlight.frag").c_str());
+
+        // Use 8 to circumvent a catalyst bug when binding sampler
+        AssignSamplerNames(Program, 0, "ntex", 1, "dtex", 2, "ctex", 8, "shadowtex", 3, "probe", 4, "dfg");
+        AssignUniforms("split0", "split1", "split2", "splitmax");
+    }
 
     BacklitShadowedSunLightShader::BacklitShadowedSunLightShader()
     {
@@ -1672,6 +1689,37 @@ namespace FullScreenShader
         // Use 8 to circumvent a catalyst bug when binding sampler
         AssignSamplerNames(Program, 0, "ntex", 1, "dtex", 2, "ctex", 8, "shadowtex");
         AssignUniforms("split0", "split1", "split2", "splitmax");
+    }
+
+    SubsurfaceGaussianHShader::SubsurfaceGaussianHShader()
+    {
+        Program = LoadProgram(OBJECT,
+            GL_VERTEX_SHADER, file_manager->getAsset("shaders/screenquad.vert").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/getPosFromUVDepth.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/SubsurfaceConvolutionH.frag").c_str());
+
+        AssignSamplerNames(Program, 0, "ctex", 1, "dtex", 2, "matte");
+        AssignUniforms("strength");
+    }
+
+    SubsurfaceGaussianVShader::SubsurfaceGaussianVShader()
+    {
+        Program = LoadProgram(OBJECT,
+            GL_VERTEX_SHADER, file_manager->getAsset("shaders/screenquad.vert").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/utils/getPosFromUVDepth.frag").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/SubsurfaceConvolutionV.frag").c_str());
+
+        AssignSamplerNames(Program, 0, "ctex", 1, "dtex", 2, "matte");
+        AssignUniforms("strength");
+    }
+
+    SubsurfaceScatteringCompositionShader::SubsurfaceScatteringCompositionShader()
+    {
+        Program = LoadProgram(OBJECT,
+            GL_VERTEX_SHADER, file_manager->getAsset("shaders/screenquad.vert").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/subsurface_composite.frag").c_str());
+        AssignSamplerNames(Program, 0, "subsurface_layer0", 1, "subsurface_layer1", 2, "specular");
+        AssignUniforms();
     }
 
     RadianceHintsConstructionShader::RadianceHintsConstructionShader()
@@ -2021,6 +2069,15 @@ namespace FullScreenShader
 
         AssignSamplerNames(Program, 0, "blendMap", 1, "colorMap");
         vao = createVAO(Program);
+    }
+
+    WhiteScreenShader::WhiteScreenShader()
+    {
+        Program = LoadProgram(OBJECT,
+            GL_VERTEX_SHADER, file_manager->getAsset("shaders/screenquad.vert").c_str(),
+            GL_FRAGMENT_SHADER, file_manager->getAsset("shaders/white.frag").c_str());
+
+        AssignUniforms();
     }
 }
 

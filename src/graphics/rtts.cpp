@@ -106,6 +106,9 @@ RTT::RTT(size_t width, size_t height)
     RenderTargetTextures[RTT_BASE_COLOR] = generateRTT(res, GL_RGBA8, GL_RGBA, GL_UNSIGNED_BYTE);
     RenderTargetTextures[RTT_EMIT_VALUE] = generateRTT(res, GL_R8, GL_RED, GL_UNSIGNED_BYTE);
     RenderTargetTextures[RTT_COLOR] = generateRTT(res, GL_RGBA16F, GL_BGRA, GL_FLOAT);
+    RenderTargetTextures[RTT_SUBSURFACE_LAYER0] = generateRTT(res, GL_RGBA16F, GL_BGRA, GL_FLOAT);
+    RenderTargetTextures[RTT_SUBSURFACE_LAYER1] = generateRTT(res, GL_RGBA16F, GL_BGRA, GL_FLOAT);
+    RenderTargetTextures[RTT_SPECULAR] = generateRTT(res, GL_RGBA16F, GL_BGRA, GL_FLOAT);
     RenderTargetTextures[RTT_MLAA_COLORS] = generateRTT(res, GL_SRGB8_ALPHA8, GL_BGR, GL_UNSIGNED_BYTE);
     RenderTargetTextures[RTT_MLAA_TMP] = generateRTT(res, GL_SRGB8_ALPHA8, GL_BGR, GL_UNSIGNED_BYTE);
     RenderTargetTextures[RTT_MLAA_BLEND] = generateRTT(res, GL_SRGB8_ALPHA8, GL_BGR, GL_UNSIGNED_BYTE);
@@ -150,6 +153,16 @@ RTT::RTT(size_t width, size_t height)
     FrameBuffers.push_back(new FrameBuffer(somevector, DepthStencilTexture, res.Width, res.Height));
     somevector.clear();
     somevector.push_back(RenderTargetTextures[RTT_COLOR]);
+    FrameBuffers.push_back(new FrameBuffer(somevector, DepthStencilTexture, res.Width, res.Height));
+    somevector.clear();
+    somevector.push_back(RenderTargetTextures[RTT_SUBSURFACE_LAYER0]);
+    FrameBuffers.push_back(new FrameBuffer(somevector, res.Width, res.Height));
+    somevector.clear();
+    somevector.push_back(RenderTargetTextures[RTT_SUBSURFACE_LAYER1]);
+    FrameBuffers.push_back(new FrameBuffer(somevector, res.Width, res.Height));
+    somevector.clear();
+    somevector.push_back(RenderTargetTextures[RTT_COLOR]);
+    somevector.push_back(RenderTargetTextures[RTT_SPECULAR]);
     FrameBuffers.push_back(new FrameBuffer(somevector, DepthStencilTexture, res.Width, res.Height));
     somevector.clear();
     somevector.push_back(RenderTargetTextures[RTT_MLAA_COLORS]);

@@ -402,10 +402,34 @@ public:
     ShadowedSunLightShaderESM();
 };
 
+class SubsurfaceShadowedSunLightShader : public ShaderHelperSingleton<SubsurfaceShadowedSunLightShader, float, float, float, float>, public TextureRead<Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Trilinear_Clamped_Array2D, Trilinear_cubemap, Bilinear_Clamped_Filtered>
+{
+public:
+    SubsurfaceShadowedSunLightShader();
+};
+
 class BacklitShadowedSunLightShader : public ShaderHelperSingleton<BacklitShadowedSunLightShader, float, float, float, float>, public TextureRead<Nearest_Filtered, Nearest_Filtered, Nearest_Filtered, Trilinear_Clamped_Array2D>
 {
 public:
     BacklitShadowedSunLightShader();
+};
+
+class SubsurfaceGaussianHShader : public ShaderHelperSingleton<SubsurfaceGaussianHShader, float>, public TextureRead < Bilinear_Clamped_Filtered, Bilinear_Clamped_Filtered, Bilinear_Clamped_Filtered >
+{
+public:
+    SubsurfaceGaussianHShader();
+};
+
+class SubsurfaceGaussianVShader : public ShaderHelperSingleton<SubsurfaceGaussianVShader, float>, public TextureRead < Bilinear_Clamped_Filtered, Bilinear_Clamped_Filtered, Bilinear_Clamped_Filtered >
+{
+public:
+    SubsurfaceGaussianVShader();
+};
+
+class SubsurfaceScatteringCompositionShader : public ShaderHelperSingleton<SubsurfaceScatteringCompositionShader>, public TextureRead < Nearest_Filtered, Nearest_Filtered, Nearest_Filtered >
+{
+public:
+    SubsurfaceScatteringCompositionShader();
 };
 
 class RadianceHintsConstructionShader : public ShaderHelperSingleton<RadianceHintsConstructionShader, core::matrix4, core::matrix4, core::vector3df, video::SColorf>, public TextureRead<Bilinear_Filtered, Bilinear_Filtered, Bilinear_Filtered>
@@ -626,6 +650,12 @@ public:
     GLuint vao;
 
     MLAAGatherSHader();
+};
+
+class WhiteScreenShader : public ShaderHelperSingleton < WhiteScreenShader >
+{
+public:
+    WhiteScreenShader();
 };
 
 }

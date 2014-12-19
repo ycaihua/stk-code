@@ -52,6 +52,7 @@ void main() {
     vec3 color = texture(ctex, uv).rgb;
 
     float metalness = texture(ntex, uv).a;
+    xpos.xyz -= norm * .0005;
 
     // Shadows
     float factor;

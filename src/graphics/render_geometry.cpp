@@ -443,7 +443,7 @@ void IrrDriver::renderGBuffer()
         renderMeshes1stPass<SplattingMat, 2, 1>();
         renderMeshes1stPass<UnlitMat, 3, 2, 1>();
         renderMeshes1stPass<AlphaRef, 3, 2, 1>();
-        renderMeshes1stPass<NormalMat, 2, 1>();
+
         renderMeshes1stPass<DetailMat, 2, 1>();
 
         // Skinned meshes
@@ -500,9 +500,17 @@ void IrrDriver::renderGBuffer()
             renderInstancedMeshes1stPass<NormalMat>();
         }
 
+        // Subsurface
         glEnable(GL_STENCIL_TEST);
-        glStencilFunc(GL_ALWAYS, 1, 0xFF);
         glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
+        glStencilFunc(GL_ALWAYS, 2, 0xFF);
+        renderMeshes1stPass<NormalMat, 2, 1>();
+        if (CVS->isAZDOEnabled())
+            multidraw1stPass<NormalMat>();
+        else if (CVS->supportsIndirectInstancingRendering())
+            renderInstancedMeshes1stPass<NormalMat>();
+
+        glStencilFunc(GL_ALWAYS, 1, 0xFF);
         renderMeshes1stPass<GrassMat, 3, 2, 1>();
         if (CVS->isAZDOEnabled())
             multidraw1stPass<GrassMat>(windDir);

@@ -192,9 +192,10 @@ void IrrDriver::renderLights(unsigned pointlightcount, bool hasShadow)
     for (unsigned i = 0; i < sun_ortho_matrix.size(); i++)
         sun_ortho_matrix[i] *= getInvViewMatrix();
 
-    m_rtts->getFBO(FBO_COLORS).Bind();
+    m_rtts->getFBO(FBO_COLOR_AND_SPECULAR).Bind();
     glClearColor(0., 0., 0., 0.);
     glClear(GL_COLOR_BUFFER_BIT);
+    m_rtts->getFBO(FBO_COLORS).Bind();
     glDepthMask(GL_FALSE);
 
     if (CVS->isGlobalIlluminationEnabled() && hasShadow)
@@ -203,8 +204,55 @@ void IrrDriver::renderLights(unsigned pointlightcount, bool hasShadow)
         m_post_processing->renderGI(rh_matrix, rh_extend, m_rtts->getRH().getRTT()[0], m_rtts->getRH().getRTT()[1], m_rtts->getRH().getRTT()[2], DFG_LUT);
     }
 
+    // Subsurface scattering
+    // Algorithm is the classic Jorge Jimenez http://www.iryoku.com/sssss/
+    {
+        // Note : we use stencil and read from Depth Stencil texture...
+        m_rtts->getFBO(FBO_COLOR_AND_SPECULAR).Bind();
+        glEnable(GL_STENCIL_TEST);
+        glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
+        glStencilFunc(GL_EQUAL, 2, 0xFF);
+        FullScreenShader::SubsurfaceShadowedSunLightShader::getInstance()->SetTextureUnits(
+            irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH),
+            irr_driver->getDepthStencilTexture(),
+            irr_driver->getRenderTargetTexture(RTT_BASE_COLOR),
+            m_rtts->getShadowFBO().getRTT()[0],
+            SkyboxSpecularProbe, DFG_LUT);
+        DrawFullScreenEffect<FullScreenShader::SubsurfaceShadowedSunLightShader>(shadowSplit[1], shadowSplit[2], shadowSplit[3], shadowSplit[4]);
+        renderPointLights(MIN2(pointlightcount, MAXLIGHT));
+
+        glDisable(GL_BLEND);
+        // Matte texture
+        getFBO(FBO_TMP1_WITH_DS).Bind();
+        glClear(GL_COLOR_BUFFER_BIT);
+        DrawFullScreenEffect<FullScreenShader::WhiteScreenShader>();
+        glDisable(GL_STENCIL_TEST);
+
+        // Layer 0
+        FrameBuffer::Blit(getFBO(FBO_COLORS), getFBO(FBO_SUBSURFACE_LAYER0));
+        // Layer 1
+        FrameBuffer::Blit(getFBO(FBO_COLORS), getFBO(FBO_SUBSURFACE_LAYER1));
+        // Blur layer 1
+        {
+
+            getFBO(FBO_TMP2_WITH_DS).Bind();
+
+            FullScreenShader::SubsurfaceGaussianVShader::getInstance()->SetTextureUnits(getFBO(FBO_SUBSURFACE_LAYER1).getRTT()[0], getDepthStencilTexture(), getFBO(FBO_TMP1_WITH_DS).getRTT()[0]);
+            DrawFullScreenEffect<FullScreenShader::SubsurfaceGaussianVShader>(1.f);
+
+            getFBO(FBO_SUBSURFACE_LAYER1).Bind();
+
+            FullScreenShader::SubsurfaceGaussianHShader::getInstance()->SetTextureUnits(getFBO(FBO_TMP2_WITH_DS).getRTT()[0], getDepthStencilTexture(), getFBO(FBO_TMP1_WITH_DS).getRTT()[0]);
+            DrawFullScreenEffect<FullScreenShader::SubsurfaceGaussianHShader>(1.f);
+        }
+        glEnable(GL_STENCIL_TEST);
+        getFBO(FBO_COLORS).Bind();
+        FullScreenShader::SubsurfaceScatteringCompositionShader::getInstance()->SetTextureUnits(getRenderTargetTexture(RTT_SUBSURFACE_LAYER0), getRenderTargetTexture(RTT_SUBSURFACE_LAYER1), getRenderTargetTexture(RTT_SPECULAR));
+        DrawFullScreenEffect<FullScreenShader::SubsurfaceScatteringCompositionShader>();
+    }
 
     {
+        glStencilFunc(GL_NOTEQUAL, 2, 0xFF);
         ScopedGPUTimer timer(irr_driver->getGPUTimer(Q_ENVMAP));
         m_post_processing->renderEnvMap(blueSHCoeff, greenSHCoeff, redSHCoeff, SkyboxSpecularProbe, DFG_LUT);
     }
@@ -238,7 +286,7 @@ void IrrDriver::renderLights(unsigned pointlightcount, bool hasShadow)
 
             FullScreenShader::BacklitShadowedSunLightShader::getInstance()->SetTextureUnits(irr_driver->getRenderTargetTexture(RTT_NORMAL_AND_DEPTH), irr_driver->getDepthStencilTexture(), irr_driver->getRenderTargetTexture(RTT_BASE_COLOR), m_rtts->getShadowFBO().getRTT()[0]);
             DrawFullScreenEffect<FullScreenShader::BacklitShadowedSunLightShader>(shadowSplit[1], shadowSplit[2], shadowSplit[3], shadowSplit[4]);
-
+            m_post_processing->renderBacklitShadowedSunlight(irr_driver->getSunDirection(), irr_driver->getSunColor(), sun_ortho_matrix, m_rtts->getShadowFBO().getRTT()[0]);
             glDisable(GL_STENCIL_TEST);
         }
         else
@@ -246,7 +294,9 @@ void IrrDriver::renderLights(unsigned pointlightcount, bool hasShadow)
     }
     {
         ScopedGPUTimer timer(irr_driver->getGPUTimer(Q_POINTLIGHTS));
+        glStencilFunc(GL_NOTEQUAL, 2, 0xFF);
         renderPointLights(MIN2(pointlightcount, MAXLIGHT));
+        glDisable(GL_STENCIL_TEST);
     }
 }
 
