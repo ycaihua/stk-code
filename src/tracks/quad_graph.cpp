@@ -22,7 +22,7 @@
 
 #include <IMesh.h>
 #include <ICameraSceneNode.h>
-
+#include "graphics/central_settings.hpp"
 #include "config/user_config.hpp"
 #include "graphics/callbacks.hpp"
 #include "graphics/irr_driver.hpp"
@@ -989,7 +989,7 @@ void QuadGraph::makeMiniMap(const core::dimension2du &dimension,
 
     RTT* newRttProvider = NULL;
     IrrDriver::RTTProvider* oldRttProvider = NULL;
-    if (irr_driver->isGLSL())
+    if (CVS->isGLSL())
     {
         newRttProvider = new RTT(dimension.Width, dimension.Height);
     }
@@ -1076,7 +1076,7 @@ void QuadGraph::makeMiniMap(const core::dimension2du &dimension,
     video::ITexture* texture = NULL;
     FrameBuffer* frame_buffer = NULL;
 
-    if (irr_driver->isGLSL())
+    if (CVS->isGLSL())
     {
         frame_buffer = newRttProvider->render(camera, GUIEngine::getLatestDt());
 
