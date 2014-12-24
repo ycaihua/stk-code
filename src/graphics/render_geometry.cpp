@@ -1029,6 +1029,7 @@ void IrrDriver::renderShadows()
     }
 
     glDisable(GL_POLYGON_OFFSET_FILL);
+    return;
 
     if (CVS->isESMEnabled())
     {
