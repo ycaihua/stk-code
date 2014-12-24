@@ -19,8 +19,10 @@ vec3 SunMRP(vec3 normal, vec3 eyedir);
 
 float getShadowFactor(vec3 pos, int index)
 {
-    vec4 shadowcoord = (ShadowViewProjMatrixes[index] * InverseViewMatrix * vec4(pos, 1.0));
-    shadowcoord.xy /= shadowcoord.w;
+    vec4 shadowcoord = (InverseViewMatrix * vec4(pos, 1.0));
+    shadowcoord /= shadowcoord.w;
+    shadowcoord = ShadowViewProjMatrixes[index] * shadowcoord;
+    shadowcoord /= shadowcoord.w;
     vec2 shadowtexcoord = shadowcoord.xy * 0.5 + 0.5;
     float d = .5 * shadowcoord.z + .5;
 

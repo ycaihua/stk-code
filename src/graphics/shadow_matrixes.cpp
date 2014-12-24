@@ -74,7 +74,100 @@ getTighestFitOrthoProj(const core::matrix4 &transform, const std::vector<vector3
     return tmp_matrix;
 }
 
-float shadowSplit[5] = { 1., 5., 20., 50., 150 };
+/** Generate a perspective left handed matrix
+*   \param n near
+*   \param f far
+*/
+// http://msdn.microsoft.com/en-us/library/windows/desktop/bb205353(v=vs.85).aspx
+static core::matrix4
+PerspectiveMatrixLH(float left, float right, float top, float bottom, float n, float f)
+{
+    core::matrix4 projmat;
+    float *M = projmat.pointer();
+    // http://msdn.microsoft.com/en-us/library/windows/desktop/bb205353(v=vs.85).aspx
+    M[0] = 2 * n / (right - left);
+    M[5] = 2 * n / (top - bottom);
+    M[8] = (left + right) / (left - right);
+    M[9] = (top + bottom) / (bottom - top);
+    M[10] = f / (f - n);
+    M[11] = 1.;
+    M[14] = n * f / (n - f);
+    M[15] = 0.;
+    return projmat;
+}
+
+// From http://advancedgraphics.marries.nl/presentationslides/11_light_space_perspective_shadow_maps.pdf
+// With help from http://svn.openscenegraph.org/osg/OpenSceneGraph/trunk/src/osgShadow/LightSpacePerspectiveShadowMap.cpp too
+static core::matrix4
+getLightSpacePerspectiveMatrix(const scene::ICameraSceneNode &B, const core::vector3df &LightVector)
+{
+    const core::vector3df &ViewVector = (B.getTarget() - B.getAbsolutePosition()).normalize();
+    // Light Space base
+    const core::vector3df &axisY = (-LightVector).normalize();
+    const core::vector3df &axisX = ViewVector.crossProduct(axisY).normalize();
+    const core::vector3df &axisZ = axisY.crossProduct(axisX).normalize();
+    const core::vector3df &Borig = B.getAbsolutePosition();
+
+    std::vector<vector3df> vectors;
+    vectors.push_back(B.getViewFrustum()->getFarLeftDown());
+    vectors.push_back(B.getViewFrustum()->getFarLeftUp());
+    vectors.push_back(B.getViewFrustum()->getFarRightDown());
+    vectors.push_back(B.getViewFrustum()->getFarRightUp());
+    vectors.push_back(B.getViewFrustum()->getNearLeftDown());
+    vectors.push_back(B.getViewFrustum()->getNearLeftUp());
+    vectors.push_back(B.getViewFrustum()->getNearRightDown());
+    vectors.push_back(B.getViewFrustum()->getNearRightUp());
+
+    float ymin = std::numeric_limits<float>::infinity(), ymax = -std::numeric_limits<float>::infinity();
+    float zmin = std::numeric_limits<float>::infinity(), zmax = -std::numeric_limits<float>::infinity();
+    for (const core::vector3df &V : vectors)
+    {
+        float Vy = V.dotProduct(axisY);
+        ymin = MIN2(ymin, Vy);
+        ymax = MAX2(ymax, Vy);
+        float Vz = V.dotProduct(axisZ);
+        zmin = MIN2(zmin, Vz);
+        zmax = MAX2(zmax, Vz);
+    }
+    float n = B.getNearValue() + sqrt(B.getNearValue() * B.getFarValue());
+    const core::vector3df PinLightSpace(Borig.dotProduct(axisX), (ymin + ymax) / 2., zmin - n);
+    core::vector3df PinWorldSpace = PinLightSpace.X * axisX + PinLightSpace.Y * axisY + PinLightSpace.Z * axisZ;
+
+    float thetaXleftmax = 0., thetaXrightmax = 0.;
+    float thetaYleftmax = 0., thetaYrightmax = 0.;
+    for (const core::vector3df &V : vectors)
+    {
+        const core::vector3df &TranslatedV = V - PinWorldSpace;
+        float Vy = TranslatedV.dotProduct(axisY);
+        float Vz = TranslatedV.dotProduct(axisZ);
+        float Vx = TranslatedV.dotProduct(axisX);
+        float thetaX = abs(Vx) / abs(Vz);
+        if (Vx > 0.)
+            thetaXrightmax = MAX2(thetaXrightmax, thetaX);
+        else
+            thetaXleftmax = MAX2(thetaXleftmax, thetaX);
+        float thetaY = abs(Vy) / abs(Vz);
+        if (Vy > 0.)
+            thetaYrightmax = MAX2(thetaYrightmax, thetaY);
+        else
+            thetaYleftmax = MAX2(thetaYleftmax, thetaY);
+    }
+
+    core::matrix4 NewLightView;
+    NewLightView.buildCameraLookAtMatrixLH(core::vector3df(0., 0., 0.), axisZ, axisY);
+    NewLightView.transformVect(PinWorldSpace);
+
+    core::matrix4 viewmat;
+    viewmat.setTranslation(-PinWorldSpace);
+    core::matrix4 projmat = PerspectiveMatrixLH(-thetaXleftmax * n, thetaXrightmax * n, thetaYrightmax * n, -thetaYleftmax * n, n, n + zmax - zmin);
+    core::matrix4 swapmatrix;
+    swapmatrix.buildCameraLookAtMatrixLH(core::vector3df(0., 0., 0.), core::vector3df(0., -1., 0.), core::vector3df(0., 0., 1.));
+    core::matrix4 scalemat;
+    scalemat.buildProjectionMatrixOrthoLH(-1., 1., 1., -1., 0., 1000.);
+    return scalemat * swapmatrix * projmat * viewmat * NewLightView;
+}
+
+float shadowSplit[5] = { 1., 8., 32., 128., 256. };
 
 struct CascadeBoundingBox
 {
@@ -256,6 +349,7 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
     memcpy(&tmp[64], irr_driver->getProjViewMatrix().pointer(), 16 * sizeof(float));
 
     m_suncam->render();
+    const core::vector3df &LightVector = (m_suncam->getTarget() - m_suncam->getAbsolutePosition()).normalize();
     for (unsigned i = 0; i < 4; i++)
     {
         if (m_shadow_camnodes[i])
@@ -339,7 +433,10 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
             m_shadow_camnodes[i]->setProjectionMatrix(tmp_matrix, true);
             m_shadow_camnodes[i]->render();
 
-            sun_ortho_matrix.push_back(getVideoDriver()->getTransform(video::ETS_PROJECTION) * getVideoDriver()->getTransform(video::ETS_VIEW));
+            if (CVS->isESMEnabled())
+                sun_ortho_matrix.push_back(getVideoDriver()->getTransform(video::ETS_PROJECTION) * getVideoDriver()->getTransform(video::ETS_VIEW));
+            else
+                sun_ortho_matrix.push_back(getLightSpacePerspectiveMatrix(*camnode, LightVector));
         }
 
         // Rsm Matrix and camera
