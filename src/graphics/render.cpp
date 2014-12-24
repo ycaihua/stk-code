@@ -338,7 +338,6 @@ void IrrDriver::renderGLSL(float dt)
 
     getPostProcessing()->update(dt);
 }
-
 void IrrDriver::renderScene(scene::ICameraSceneNode * const camnode, unsigned pointlightcount, std::vector<GlowData>& glows, float dt, bool hasShadow, bool forceRTT)
 {
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, SharedObject::ViewProjectionMatrixesUBO);
@@ -640,7 +639,78 @@ core::matrix4 getTighestFitOrthoProj(const core::matrix4 &transform, const std::
     return tmp_matrix;
 }
 
-float shadowSplit[5] = {1., 5., 20., 50., 150 };
+static
+core::matrix4 makeFrustrum(float left, float right, float top, float bottom, float n, float f)
+{
+    core::matrix4 projmat;
+    float *M = projmat.pointer();
+    // http://msdn.microsoft.com/en-us/library/windows/desktop/bb205353(v=vs.85).aspx
+    M[0] = 2 * n / (right - left);
+    M[5] = 2 * n / (top - bottom);
+    M[8] = (left + right) / (left - right);
+    M[9] = (top + bottom) / (bottom - top);
+    M[10] = f / (f - n);
+    M[11] = 1.;
+    M[14] = n * f / (n - f);
+    M[15] = 0.;
+    return projmat;
+}
+
+
+// From http://advancedgraphics.marries.nl/presentationslides/11_light_space_perspective_shadow_maps.pdf
+// With help from http://svn.openscenegraph.org/osg/OpenSceneGraph/trunk/src/osgShadow/LightSpacePerspectiveShadowMap.cpp too
+static
+core::matrix4 test(const scene::ICameraSceneNode &B, const core::vector3df &LightVector)
+{
+    const core::vector3df &ViewVector = (B.getTarget() - B.getAbsolutePosition()).normalize();
+    // Light Space base
+    const core::vector3df &axisY = (-LightVector).normalize();
+    const core::vector3df &axisX = ViewVector.crossProduct(axisY).normalize();
+    const core::vector3df &axisZ = axisY.crossProduct(axisX).normalize();
+    const core::vector3df &Borig = B.getAbsolutePosition();
+
+    std::vector<vector3df> vectors;
+    vectors.push_back(B.getViewFrustum()->getFarLeftDown());
+    vectors.push_back(B.getViewFrustum()->getFarLeftUp());
+    vectors.push_back(B.getViewFrustum()->getFarRightDown());
+    vectors.push_back(B.getViewFrustum()->getFarRightUp());
+    vectors.push_back(B.getViewFrustum()->getNearLeftDown());
+    vectors.push_back(B.getViewFrustum()->getNearLeftUp());
+    vectors.push_back(B.getViewFrustum()->getNearRightDown());
+    vectors.push_back(B.getViewFrustum()->getNearRightUp());
+
+    float ymin = std::numeric_limits<float>::infinity(), ymax = -std::numeric_limits<float>::infinity();
+    float zmin = std::numeric_limits<float>::infinity(), zmax = -std::numeric_limits<float>::infinity();
+    for (const core::vector3df &V : vectors)
+    {
+        float Vy = V.dotProduct(axisY);
+        ymin = MIN2(ymin, Vy);
+        ymax = MAX2(ymax, Vy);
+        float Vz = V.dotProduct(axisZ);
+        zmin = MIN2(zmin, Vz);
+        zmax = MAX2(zmax, Vz);
+    }
+    float n = B.getNearValue() + sqrt(B.getNearValue() * B.getFarValue());
+    const core::vector3df PinLightSpace(Borig.dotProduct(axisX), (ymin + ymax) / 2., zmin - n);
+    core::vector3df PinWorldSpace = PinLightSpace.X * axisX + PinLightSpace.Y * axisY + PinLightSpace.Z * axisZ;
+
+    core::matrix4 NewLightView;
+    NewLightView.buildCameraLookAtMatrixLH(core::vector3df(0., 0., 0.), axisZ, axisY);
+    NewLightView.transformVect(PinWorldSpace);
+
+    core::matrix4 viewmat;
+    viewmat.setTranslation(-PinWorldSpace);
+    core::matrix4 projmat = makeFrustrum(-1., 1., 1., -1., n, n + zmax - zmin);
+    core::matrix4 swapmatrix;
+    swapmatrix.buildCameraLookAtMatrixLH(core::vector3df(0., 0., 0.), core::vector3df(0., -1., 0.), core::vector3df(0., 0., 1.));
+    core::matrix4 scalemat;
+    scalemat.buildProjectionMatrixOrthoLH(-5., 5., 2., -2., -10., 1000.);
+//    delete P;
+    return scalemat * swapmatrix * projmat * viewmat * NewLightView;
+}
+
+
+float shadowSplit[5] = {1., 10., 50., 75., 150 };
 
 struct CascadeBoundingBox
 {
@@ -780,6 +850,14 @@ void IrrDriver::UpdateSplitAndLightcoordRangeFromComputeShaders(size_t width, si
 
 }
 
+static void printMatrix(const core::matrix4 &m)
+{
+    const float *M = m.pointer();
+    printf("%f %f %f %f\n", M[0], M[1], M[2], M[3]);
+    printf("%f %f %f %f\n", M[4], M[5], M[6], M[7]);
+    printf("%f %f %f %f\n", M[8], M[9], M[10], M[11]);
+    printf("%f %f %f %f\n", M[12], M[13], M[14], M[15]);
+}
 
 void IrrDriver::computeCameraMatrix(scene::ICameraSceneNode * const camnode, size_t width, size_t height)
 {
@@ -819,6 +897,8 @@ void IrrDriver::computeCameraMatrix(scene::ICameraSceneNode * const camnode, siz
     memcpy(&tmp[64], irr_driver->getProjViewMatrix().pointer(), 16 * sizeof(float));
 
     m_suncam->render();
+    const core::vector3df &LightVector = (m_suncam->getTarget() - m_suncam->getAbsolutePosition()).normalize();
+
     for (unsigned i = 0; i < 4; i++)
     {
         if (m_shadow_camnodes[i])
@@ -913,13 +993,16 @@ void IrrDriver::computeCameraMatrix(scene::ICameraSceneNode * const camnode, siz
                 }
             }
             else
+            {
                 tmp_matrix = getTighestFitOrthoProj(SunCamViewMatrix, vectors, m_shadow_scales[i]);
+            }
 
             m_shadow_camnodes[i]->setProjectionMatrix(tmp_matrix , true);
             m_shadow_camnodes[i]->render();
 
-            sun_ortho_matrix.push_back(getVideoDriver()->getTransform(video::ETS_PROJECTION) * getVideoDriver()->getTransform(video::ETS_VIEW));
+            sun_ortho_matrix.push_back(test(*camnode, LightVector));
         }
+
 
         if (!m_rsm_matrix_initialized)
         {
@@ -937,11 +1020,12 @@ void IrrDriver::computeCameraMatrix(scene::ICameraSceneNode * const camnode, siz
                     30, trackbox.MaxEdge.Z);
                 m_suncam->setProjectionMatrix(tmp_matrix, true);
                 m_suncam->render();
+                rsm_matrix = getVideoDriver()->getTransform(video::ETS_VIEW) * getVideoDriver()->getTransform(video::ETS_PROJECTION);
+                m_rsm_matrix_initialized = true;
+                m_rsm_map_available = false;
             }
-            rsm_matrix = getVideoDriver()->getTransform(video::ETS_PROJECTION) * getVideoDriver()->getTransform(video::ETS_VIEW);
-            m_rsm_matrix_initialized = true;
-            m_rsm_map_available = false;
         }
+
         rh_extend = core::vector3df(128, 64, 128);
         core::vector3df campos = camnode->getAbsolutePosition();
         core::vector3df translation(8 * floor(campos.X / 8), 8 * floor(campos.Y / 8), 8 * floor(campos.Z / 8));
