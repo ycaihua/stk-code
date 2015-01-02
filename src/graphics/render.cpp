@@ -633,7 +633,7 @@ void IrrDriver::renderGlow(std::vector<GlowData>& glows)
     glDisable(GL_BLEND);
 
     if (CVS->isARBBaseInstanceUsable())
-        glBindVertexArray(VAOManager::getInstance()->getVAO(EVT_STANDARD));
+        glBindVertexArray(VAOManager::getInstance()->getVAO(EVT_STANDARD, false));
     for (u32 i = 0; i < glowcount; i++)
     {
         const GlowData &dat = glows[i];
@@ -650,7 +650,7 @@ void IrrDriver::renderGlow(std::vector<GlowData>& glows)
         glBindBuffer(GL_DRAW_INDIRECT_BUFFER, GlowPassCmd::getInstance()->drawindirectcmd);
         glUseProgram(MeshShader::InstancedColorizeShader::getInstance()->Program);
 
-        glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(video::EVT_STANDARD, InstanceTypeGlow));
+        glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(video::EVT_STANDARD, false, InstanceTypeGlow));
         if (CVS->isAZDOEnabled())
         {
             if (GlowPassCmd::getInstance()->Size)

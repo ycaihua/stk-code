@@ -7,6 +7,8 @@
 #ifndef __C_SKINNED_MESH_H_INCLUDED__
 #define __C_SKINNED_MESH_H_INCLUDED__
 
+#include <vector>
+
 #include "ISkinnedMesh.h"
 #include "SMeshBuffer.h"
 #include "S3DVertex.h"
@@ -18,6 +20,11 @@ namespace irr
 {
 namespace scene
 {
+
+    struct JointInfluence {
+        int JointIdx;
+        float weight;
+    };
 
 	class IAnimatedMeshSceneNode;
 	class IBoneSceneNode;
@@ -160,6 +167,14 @@ namespace scene
 				IAnimatedMeshSceneNode* node,
 				ISceneManager* smgr);
         CSkinnedMesh *clone();
+
+        // STK Addition
+        std::vector<std::vector<std::vector<JointInfluence> > > WeightInfluence;
+        std::vector<core::matrix4> JointMatrixes;
+        bool areWeightGenerated;
+        void generateWeightInfluenceData();
+        void computeWeightInfluence(SJoint *joint, size_t &idx);
+
 private:
 		void checkForAnimation();
 
@@ -198,7 +213,9 @@ private:
 		f32 FramesPerSecond;
 
 		f32 LastAnimatedFrame;
+public:
 		bool SkinnedLastFrame;
+private:
 
 		E_INTERPOLATION_MODE InterpolationMode:8;
 

@@ -200,7 +200,7 @@ void STKMeshSceneNode::updateGL()
 
         if (!immediate_draw && CVS->isARBBaseInstanceUsable())
         {
-            std::pair<unsigned, unsigned> p = VAOManager::getInstance()->getBase(mb);
+            std::pair<unsigned, unsigned> p = VAOManager::getInstance()->getBase(mb, nullptr);
             mesh.vaoBaseVertex = p.first;
             mesh.vaoOffset = p.second;
         }
@@ -301,7 +301,7 @@ void STKMeshSceneNode::render()
             if (!mb)
                 continue;
             if (CVS->isARBBaseInstanceUsable())
-                glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_STANDARD));
+                glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_STANDARD, false));
             else
                 glBindVertexArray(GLmeshes[i].vao);
             drawGlow(GLmeshes[i]);
