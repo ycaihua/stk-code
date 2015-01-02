@@ -44,6 +44,27 @@ public:
         glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex), (GLvoid*)28);
     }
 };
+/*    VertexUtils::bindVertexArrayAttrib(getVertexType(tp));
+    if (tp == VTXTYPE_STANDARD_SKINNED)
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, skinning_info_vbo);
+        glEnableVertexAttribArray(7);
+        glVertexAttribIPointer(7, 1, GL_INT, 4 * 2 * sizeof(float), 0);
+        glEnableVertexAttribArray(8);
+        glVertexAttribPointer(8, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*) (sizeof(int)));
+        glEnableVertexAttribArray(9);
+        glVertexAttribIPointer(9, 1, GL_INT, 4 * 2 * sizeof(float), (GLvoid*)(sizeof(float) + sizeof(int)));
+        glEnableVertexAttribArray(10);
+        glVertexAttribPointer(10, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*)(sizeof(float) + 2 * sizeof(int)));
+        glEnableVertexAttribArray(11);
+        glVertexAttribIPointer(11, 1, GL_INT, 4 * 2 * sizeof(float), (GLvoid*)(2 * sizeof(float) + 2 * sizeof(int)));
+        glEnableVertexAttribArray(12);
+        glVertexAttribPointer(12, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*)(2 * sizeof(float) + 3 * sizeof(int)));
+        glEnableVertexAttribArray(13);
+        glVertexAttribIPointer(13, 1, GL_INT, 4 * 2 * sizeof(float), (GLvoid*)(3 * sizeof(float) + 3 * sizeof(int)));
+        glEnableVertexAttribArray(14);
+        glVertexAttribPointer(14, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*)(3 * sizeof(float) + 4 * sizeof(int)));
+*/
 
 template<>
 struct VertexAttribBinder<video::S3DVertex2TCoords>
@@ -96,7 +117,7 @@ public:
     }
 };
 
-std::pair<unsigned, unsigned> VAOManager::getBase(scene::IMeshBuffer *mb)
+std::pair<unsigned, unsigned> VAOManager::getBase(scene::IMeshBuffer *mb, void *extraVertexInfo)
 {
     switch (mb->getVertexType())
     {
@@ -149,8 +170,10 @@ void *VAOManager::getInstanceBufferPtr(InstanceType it)
     }
 }
 
-unsigned VAOManager::getVBO(irr::video::E_VERTEX_TYPE type)
+unsigned VAOManager::getVBO(irr::video::E_VERTEX_TYPE type, bool skinned)
 {
+    if (skinned)
+        return VTXTYPE_STANDARD_SKINNED;
     switch (type)
     {
     default:
@@ -178,6 +201,7 @@ void *VAOManager::getVBOPtr(irr::video::E_VERTEX_TYPE type)
         return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vbo.getPointer();
     }
 }
+
 unsigned VAOManager::getVAO(irr::video::E_VERTEX_TYPE type)
 {
     switch (type)

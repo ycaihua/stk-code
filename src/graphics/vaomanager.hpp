@@ -488,13 +488,13 @@ class VAOManager : public Singleton<VAOManager>
     irr::video::E_VERTEX_TYPE getVertexType(enum VTXTYPE tp);
 public:
     VAOManager();
-    std::pair<unsigned, unsigned> getBase(irr::scene::IMeshBuffer *);
+    std::pair<unsigned, unsigned> getBase(irr::scene::IMeshBuffer *, void * = nullptr);
     GLuint getInstanceBuffer(InstanceType it);
     void *getInstanceBufferPtr(InstanceType it);
-    unsigned getVBO(irr::video::E_VERTEX_TYPE type);
+    unsigned getVBO(irr::video::E_VERTEX_TYPE type, bool skinned);
     void *getVBOPtr(irr::video::E_VERTEX_TYPE type);
-    unsigned getVAO(irr::video::E_VERTEX_TYPE type);
-    unsigned getInstanceVAO(irr::video::E_VERTEX_TYPE vt, enum InstanceType it);
+    unsigned getVAO(irr::video::E_VERTEX_TYPE type, bool skinned);
+    unsigned getInstanceVAO(irr::video::E_VERTEX_TYPE vt, bool skinned, enum InstanceType it);
     ~VAOManager();
 };
 

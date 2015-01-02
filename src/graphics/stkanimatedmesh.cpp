@@ -12,6 +12,7 @@
 #include "graphics/camera.hpp"
 #include "utils/profiler.hpp"
 #include "utils/cpp2011.hpp"
+#include "../lib/irrlicht/source/Irrlicht/CSkinnedMesh.h"
 
 using namespace irr;
 
@@ -124,6 +125,9 @@ void STKAnimatedMesh::updateNoGL()
         if (mb)
             GLmeshes[i].TextureMatrix = getMaterial(i).getTextureMatrix(0);
     }
+
+    scene::CSkinnedMesh *SkinnedMesh = dynamic_cast<scene::CSkinnedMesh *>(Mesh);
+    JointMatrixes = &(SkinnedMesh->JointMatrixes);
 }
 
 void STKAnimatedMesh::updateGL()
@@ -133,7 +137,13 @@ void STKAnimatedMesh::updateGL()
 
     if (!isGLInitialized)
     {
-        for (u32 i = 0; i < m->getMeshBufferCount(); ++i)
+        // Retrieve idle pose
+        scene::CSkinnedMesh *SkinnedMesh = dynamic_cast<scene::CSkinnedMesh *>(Mesh);
+        SkinnedMesh->SkinnedLastFrame = false;
+        SkinnedMesh->areWeightGenerated = false;
+        SkinnedMesh->skinMesh(0.);
+
+        for (u32 i = 0; i < Mesh->getMeshBufferCount(); ++i)
         {
             scene::IMeshBuffer* mb = Mesh->getMeshBuffer(i);
             if (!mb)
@@ -158,9 +168,34 @@ void STKAnimatedMesh::updateGL()
 
             if (CVS->isARBBaseInstanceUsable())
             {
-                std::pair<unsigned, unsigned> p = VAOManager::getInstance()->getBase(mb);
-                mesh.vaoBaseVertex = p.first;
-                mesh.vaoOffset = p.second;
+                std::vector<scene::JointInfluence> reworkedWeightInfluence;
+                // Some empty mesh are sometimes submitted, no idea why
+                if (SkinnedMesh->WeightInfluence.size() > i)
+                {
+                    for (unsigned idx = 0; idx < SkinnedMesh->WeightInfluence[i].size(); idx++)
+                    {
+                        std::vector<scene::JointInfluence> ReportedWeight = SkinnedMesh->WeightInfluence[i][idx];
+                        std::sort(ReportedWeight.begin(), ReportedWeight.end(), [](const scene::JointInfluence &a, const scene::JointInfluence &b) {return a.weight > b .weight; });
+                        float remaining_weight = 1.;
+                        for (unsigned k = 0; k < 4; k++)
+                        {
+                            scene::JointInfluence influence;
+                            if (ReportedWeight.size() > k)
+                               influence = ReportedWeight[k];
+                            else
+                            {
+                                influence.JointIdx = -1;
+                                influence.weight = remaining_weight;
+                            }
+                            remaining_weight -= influence.weight;
+                            reworkedWeightInfluence.push_back(influence);
+                        }
+                    }
+
+                    std::pair<unsigned, unsigned> p = VAOManager::getInstance()->getBase(mb, reworkedWeightInfluence.data());
+                    mesh.vaoBaseVertex = p.first;
+                    mesh.vaoOffset = p.second;
+                }
             }
             else
             {
@@ -171,40 +206,6 @@ void STKAnimatedMesh::updateGL()
         }
         isGLInitialized = true;
     }
-
-    for (u32 i = 0; i<m->getMeshBufferCount(); ++i)
-    {
-        scene::IMeshBuffer* mb = m->getMeshBuffer(i);
-        const video::SMaterial& material = ReadOnlyMaterials ? mb->getMaterial() : Materials[i];
-        if (isObject(material.MaterialType))
-        {
-
-            size_t size = mb->getVertexCount() * GLmeshes[i].Stride, offset = GLmeshes[i].vaoBaseVertex * GLmeshes[i].Stride;
-            void *buf;
-            if (CVS->supportsAsyncInstanceUpload())
-            {
-                buf = VAOManager::getInstance()->getVBOPtr(mb->getVertexType());
-                buf = (char *)buf + offset;
-            }
-            else
-            {
-                glBindVertexArray(0);
-                if (CVS->isARBBaseInstanceUsable())
-                    glBindBuffer(GL_ARRAY_BUFFER, VAOManager::getInstance()->getVBO(mb->getVertexType()));
-                else
-                    glBindBuffer(GL_ARRAY_BUFFER, GLmeshes[i].vertex_buffer);
-                GLbitfield bitfield = GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_RANGE_BIT | GL_MAP_UNSYNCHRONIZED_BIT;
-                buf = glMapBufferRange(GL_ARRAY_BUFFER, offset, size, bitfield);
-            }
-            memcpy(buf, mb->getVertices(), size);
-            if (!CVS->supportsAsyncInstanceUpload())
-            {
-                glUnmapBuffer(GL_ARRAY_BUFFER);
-                glBindBuffer(GL_ARRAY_BUFFER, 0);
-            }
-        }
-    }
-
 }
 
 void STKAnimatedMesh::render()

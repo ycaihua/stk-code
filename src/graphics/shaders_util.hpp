@@ -154,6 +154,20 @@ struct UniformHelper
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
+    template<unsigned N = 0, typename... Args>
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const std::vector<irr::core::matrix4> &v, Args... arg)
+    {
+        std::vector<float> tmp;
+        for (unsigned mat = 0; mat < v.size(); mat++)
+        {
+            for (unsigned i = 0; i < 4; i++)
+                for (unsigned j = 0; j < 4; j++)
+                    tmp.push_back(v[mat].pointer()[4 * i + j]);
+        }
+        glUniformMatrix4fv(uniforms[N], (int)v.size(), GL_FALSE, tmp.data());
+        setUniformsHelper<N + 1>(uniforms, arg...);
+    }
+
 };
 
 void bypassUBO(GLuint Program);

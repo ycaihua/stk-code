@@ -6,6 +6,7 @@
 #include "graphics/post_processing.hpp"
 #include "graphics/rtts.hpp"
 #include "graphics/shaders.hpp"
+#include "graphics/stkanimatedmesh.hpp"
 #include "modes/world.hpp"
 #include "utils/log.hpp"
 #include "utils/profiler.hpp"
@@ -358,7 +359,7 @@ void renderMeshes1stPass()
     auto &meshes = T::List::getInstance()->SolidPass;
     glUseProgram(T::FirstPassShader::getInstance()->Program);
     if (CVS->isARBBaseInstanceUsable())
-        glBindVertexArray(VAOManager::getInstance()->getVAO(T::VertexType));
+        glBindVertexArray(VAOManager::getInstance()->getVAO(T::VertexType, false));
     for (unsigned i = 0; i < meshes.size(); i++)
     {
         std::vector<GLuint> Textures;
@@ -387,7 +388,7 @@ void renderInstancedMeshes1stPass(Args...args)
 {
     std::vector<GLMesh *> &meshes = T::InstancedList::getInstance()->SolidPass;
     glUseProgram(T::InstancedFirstPassShader::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, T::Instance));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, T::Instance));
     for (unsigned i = 0; i < meshes.size(); i++)
     {
         std::vector<GLuint> Textures;
@@ -411,7 +412,7 @@ template<typename T, typename...Args>
 void multidraw1stPass(Args...args)
 {
     glUseProgram(T::InstancedFirstPassShader::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, T::Instance));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, T::Instance));
     if (SolidPassCmd::getInstance()->Size[T::MaterialType])
     {
         T::InstancedFirstPassShader::getInstance()->setUniforms(args...);
@@ -444,6 +445,43 @@ void IrrDriver::renderGBuffer()
         renderMeshes1stPass<AlphaRef, 3, 2, 1>();
         renderMeshes1stPass<NormalMat, 2, 1>();
         renderMeshes1stPass<DetailMat, 2, 1>();
+
+        // Skinned meshes
+        {
+            if (CVS->isARBBaseInstanceUsable())
+                glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_STANDARD, true));
+            for (STKAnimatedMesh *animatedmesh : *(ListSkinned::getInstance()))
+            {
+                core::matrix4 ModelMatrix = animatedmesh->getAbsoluteTransformation(), InvModelMatrix;
+                ModelMatrix.getInverse(InvModelMatrix);
+
+                glUseProgram(MeshShader::SkinnedObjectShader::getInstance()->Program);
+                for (GLMesh *mesh : animatedmesh->MeshSolidMaterial[Material::SHADERTYPE_SOLID])
+                {
+                    if (!CVS->isARBBaseInstanceUsable())
+                        glBindVertexArray(mesh->vao);
+                    if (!CVS->isAZDOEnabled())
+                        MeshShader::SkinnedObjectShader::getInstance()->SetTextureUnits(getTextureGLuint(mesh->textures[0]), getTextureGLuint(mesh->textures[1]));
+                    else
+                        MeshShader::SkinnedObjectShader::getInstance()->SetTextureHandles(mesh->TextureHandles[0], mesh->TextureHandles[1]);
+                    MeshShader::SkinnedObjectShader::getInstance()->setUniforms(ModelMatrix, InvModelMatrix, *(animatedmesh->JointMatrixes));
+                    glDrawElementsBaseVertex(mesh->PrimitiveType, (int)mesh->IndexCount, mesh->IndexType, (GLvoid *)mesh->vaoOffset, (int)mesh->vaoBaseVertex);
+                }
+
+                glUseProgram(MeshShader::SkinnedRefObjectShader::getInstance()->Program);
+                for (GLMesh *mesh : animatedmesh->MeshSolidMaterial[Material::SHADERTYPE_ALPHA_TEST])
+                {
+                    if (!CVS->isARBBaseInstanceUsable())
+                        glBindVertexArray(mesh->vao);
+                    if (!CVS->isAZDOEnabled())
+                        MeshShader::SkinnedRefObjectShader::getInstance()->SetTextureUnits(getTextureGLuint(mesh->textures[0]), getTextureGLuint(mesh->textures[1]));
+                    else
+                        MeshShader::SkinnedRefObjectShader::getInstance()->SetTextureHandles(mesh->TextureHandles[0], mesh->TextureHandles[1]);
+                    MeshShader::SkinnedRefObjectShader::getInstance()->setUniforms(ModelMatrix, InvModelMatrix, *(animatedmesh->JointMatrixes));
+                    glDrawElementsBaseVertex(mesh->PrimitiveType, (int)mesh->IndexCount, mesh->IndexType, (GLvoid *)mesh->vaoOffset, (int)mesh->vaoBaseVertex);
+                }
+            }
+        }
 
         if (CVS->isAZDOEnabled())
         {
@@ -482,7 +520,7 @@ void IrrDriver::renderPostLightFixups()
        auto &meshes = UnlitMat::List::getInstance()->SolidPass;
        glUseProgram(MeshShader::ObjectUnlitShader::getInstance()->Program);
        if (CVS->isARBBaseInstanceUsable())
-           glBindVertexArray(VAOManager::getInstance()->getVAO(UnlitMat::VertexType));
+           glBindVertexArray(VAOManager::getInstance()->getVAO(UnlitMat::VertexType, false));
        for (unsigned i = 0; i < meshes.size(); i++)
        {
            GLMesh &mesh = *(STK::tuple_get<0>(meshes.at(i)));
@@ -508,7 +546,7 @@ void IrrDriver::renderPostLightFixups()
        if (UserConfigParams::m_azdo)
        {
            glUseProgram(MeshShader::InstancedObjectUnlitShader::getInstance()->Program);
-           glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(UnlitMat::VertexType, UnlitMat::Instance));
+           glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(UnlitMat::VertexType, false, UnlitMat::Instance));
            uint64_t nulltex[10] = {};
            if (SolidPassCmd::getInstance()->Size[UnlitMat::MaterialType])
            {
@@ -524,7 +562,7 @@ void IrrDriver::renderPostLightFixups()
        {
            std::vector<GLMesh *> &meshes = UnlitMat::InstancedList::getInstance()->SolidPass;
            glUseProgram(MeshShader::InstancedObjectUnlitShader::getInstance()->Program);
-           glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(UnlitMat::VertexType, UnlitMat::Instance));
+           glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(UnlitMat::VertexType, false, UnlitMat::Instance));
            for (unsigned i = 0; i < meshes.size(); i++)
            {
                GLMesh *mesh = meshes[i];
@@ -541,7 +579,7 @@ static void renderInstancedMeshNormals()
 {
     std::vector<GLMesh *> &meshes = T::InstancedList::getInstance()->SolidPass;
     glUseProgram(MeshShader::NormalVisualizer::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, T::Instance));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, T::Instance));
     for (unsigned i = 0; i < meshes.size(); i++)
     {
         MeshShader::NormalVisualizer::getInstance()->setUniforms(video::SColor(255, 0, 255, 0));
@@ -553,7 +591,7 @@ template<typename T>
 static void renderMultiMeshNormals()
 {
     glUseProgram(MeshShader::NormalVisualizer::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, T::Instance));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, T::Instance));
     if (SolidPassCmd::getInstance()->Size[T::MaterialType])
     {
         MeshShader::NormalVisualizer::getInstance()->setUniforms(video::SColor(255, 0, 255, 0));
@@ -588,7 +626,7 @@ void renderTransparenPass(const std::vector<TexUnit> &TexUnits, std::vector<STK:
 {
     glUseProgram(Shader::getInstance()->Program);
     if (CVS->isARBBaseInstanceUsable())
-        glBindVertexArray(VAOManager::getInstance()->getVAO(VertexType));
+        glBindVertexArray(VAOManager::getInstance()->getVAO(VertexType, false));
     for (unsigned i = 0; i < meshes->size(); i++)
     {
         GLMesh &mesh = *(STK::tuple_get<0>(meshes->at(i)));
@@ -626,7 +664,7 @@ void IrrDriver::renderTransparent()
         ImmediateDrawList::getInstance()->at(i)->render();
 
     if (CVS->isARBBaseInstanceUsable())
-        glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_STANDARD));
+        glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_STANDARD, false));
 
     if (World::getWorld() && World::getWorld()->isFogEnabled())
     {
@@ -671,7 +709,7 @@ void IrrDriver::renderTransparent()
     glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
 
     if (CVS->isARBBaseInstanceUsable())
-        glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_2TCOORDS));
+        glBindVertexArray(VAOManager::getInstance()->getVAO(video::EVT_2TCOORDS, false));
     // Generate displace mask
     // Use RTT_TMP4 as displace mask
     irr_driver->getFBO(FBO_TMP1_WITH_DS).Bind();
@@ -776,7 +814,7 @@ void renderShadow(unsigned cascade)
     auto &t = T::List::getInstance()->Shadows[cascade];
     glUseProgram(T::ShadowPassShader::getInstance()->Program);
     if (CVS->isARBBaseInstanceUsable())
-        glBindVertexArray(VAOManager::getInstance()->getVAO(T::VertexType));
+        glBindVertexArray(VAOManager::getInstance()->getVAO(T::VertexType, false));
     for (unsigned i = 0; i < t.size(); i++)
     {
         GLMesh *mesh = STK::tuple_get<0>(t.at(i));
@@ -794,7 +832,7 @@ template<typename T, typename...Args>
 void renderInstancedShadow(unsigned cascade, const Args &...args)
 {
     glUseProgram(T::InstancedShadowPassShader::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeShadow));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, InstanceTypeShadow));
     std::vector<GLMesh *> &t = T::InstancedList::getInstance()->Shadows[cascade];
     for (unsigned i = 0; i < t.size(); i++)
     {
@@ -812,7 +850,7 @@ template<typename T, typename...Args>
 static void multidrawShadow(unsigned i, const Args &...args)
 {
     glUseProgram(T::InstancedShadowPassShader::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeShadow));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, InstanceTypeShadow));
     if (ShadowPassCmd::getInstance()->Size[i][T::MaterialType])
     {
         T::InstancedShadowPassShader::getInstance()->setUniforms(i, args...);
@@ -927,7 +965,7 @@ void drawRSM(const core::matrix4 & rsm_matrix)
 {
     glUseProgram(T::RSMShader::getInstance()->Program);
     if (CVS->isARBBaseInstanceUsable())
-        glBindVertexArray(VAOManager::getInstance()->getVAO(T::VertexType));
+        glBindVertexArray(VAOManager::getInstance()->getVAO(T::VertexType, false));
     auto t = T::List::getInstance()->RSM;
     for (unsigned i = 0; i < t.size(); i++)
     {
@@ -947,7 +985,7 @@ template<typename T, typename...Args>
 void renderRSMShadow(const Args &...args)
 {
     glUseProgram(T::InstancedRSMShader::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeRSM));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, InstanceTypeRSM));
     auto t = T::InstancedList::getInstance()->RSM;
     for (unsigned i = 0; i < t.size(); i++)
     {
@@ -964,7 +1002,7 @@ template<typename T, typename... Args>
 void multidrawRSM(const Args &...args)
 {
     glUseProgram(T::InstancedRSMShader::getInstance()->Program);
-    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeRSM));
+    glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, false, InstanceTypeRSM));
     if (RSMPassCmd::getInstance()->Size[T::MaterialType])
     {
         T::InstancedRSMShader::getInstance()->setUniforms(args...);
