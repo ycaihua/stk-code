@@ -16,6 +16,8 @@ VAOManager::VAOManager()
         RealVBOSize[i] = 0;
         RealIBOSize[i] = 0;
     }
+    skinning_info_vbo = 0;
+    RealSkinningInfoSize = 0;
 
     for (unsigned i = 0; i < InstanceTypeCount; i++)
     {
@@ -35,7 +37,7 @@ VAOManager::VAOManager()
 
 void VAOManager::cleanInstanceVAOs()
 {
-    std::map<std::pair<video::E_VERTEX_TYPE, InstanceType>, GLuint>::iterator It = InstanceVAO.begin(), E = InstanceVAO.end();
+    std::map<std::pair<VTXTYPE, InstanceType>, GLuint>::iterator It = InstanceVAO.begin(), E = InstanceVAO.end();
     for (; It != E; It++)
         glDeleteVertexArrays(1, &(It->second));
     InstanceVAO.clear();
@@ -53,6 +55,8 @@ VAOManager::~VAOManager()
         if (vao[i])
             glDeleteVertexArrays(1, &vao[i]);
     }
+    if (skinning_info_vbo)
+        glDeleteBuffers(1, &skinning_info_vbo);
     for (unsigned i = 0; i < InstanceTypeCount; i++)
     {
         glDeleteBuffers(1, &instance_vbo[i]);
@@ -61,7 +65,7 @@ VAOManager::~VAOManager()
 }
 
 static void
-resizeBufferIfNecessary(size_t &lastIndex, size_t newLastIndex, size_t bufferSize, size_t stride, GLenum type, GLuint &id, void *&Pointer)
+resizeBufferIfNecessary(size_t &lastIndex, size_t newLastIndex, size_t bufferSize, size_t stride, GLenum type, GLuint &id)
 {
     if (newLastIndex * stride >= bufferSize)
     {
@@ -70,13 +74,7 @@ resizeBufferIfNecessary(size_t &lastIndex, size_t newLastIndex, size_t bufferSiz
         GLuint newVBO;
         glGenBuffers(1, &newVBO);
         glBindBuffer(type, newVBO);
-        if (CVS->isARBBufferStorageUsable())
-        {
-            glBufferStorage(type, bufferSize *stride, 0, GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT);
-            Pointer = glMapBufferRange(type, 0, bufferSize * stride, GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT);
-        }
-        else
-            glBufferData(type, bufferSize * stride, 0, GL_DYNAMIC_DRAW);
+        glBufferData(type, bufferSize * stride, 0, GL_DYNAMIC_DRAW);
 
         if (id)
         {
@@ -95,8 +93,8 @@ resizeBufferIfNecessary(size_t &lastIndex, size_t newLastIndex, size_t bufferSiz
 void VAOManager::regenerateBuffer(enum VTXTYPE tp, size_t newlastvertex, size_t newlastindex)
 {
     glBindVertexArray(0);
-    resizeBufferIfNecessary(last_vertex[tp], newlastvertex, RealVBOSize[tp], getVertexPitch(tp), GL_ARRAY_BUFFER, vbo[tp], VBOPtr[tp]);
-    resizeBufferIfNecessary(last_index[tp], newlastindex, RealIBOSize[tp], sizeof(u16), GL_ELEMENT_ARRAY_BUFFER, ibo[tp], IBOPtr[tp]);
+    resizeBufferIfNecessary(last_vertex[tp], newlastvertex, RealVBOSize[tp], getVertexPitch(tp), GL_ARRAY_BUFFER, vbo[tp]);
+    resizeBufferIfNecessary(last_index[tp], newlastindex, RealIBOSize[tp], sizeof(u16), GL_ELEMENT_ARRAY_BUFFER, ibo[tp]);
 }
 
 void VAOManager::regenerateVAO(enum VTXTYPE tp)
@@ -108,6 +106,26 @@ void VAOManager::regenerateVAO(enum VTXTYPE tp)
     glBindBuffer(GL_ARRAY_BUFFER, vbo[tp]);
 
     VertexUtils::bindVertexArrayAttrib(getVertexType(tp));
+    if (tp == VTXTYPE_STANDARD_SKINNED)
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, skinning_info_vbo);
+        glEnableVertexAttribArray(7);
+        glVertexAttribIPointer(7, 1, GL_INT, 4 * 2 * sizeof(float), 0);
+        glEnableVertexAttribArray(8);
+        glVertexAttribPointer(8, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*) (sizeof(int)));
+        glEnableVertexAttribArray(9);
+        glVertexAttribIPointer(9, 1, GL_INT, 4 * 2 * sizeof(float), (GLvoid*)(sizeof(float) + sizeof(int)));
+        glEnableVertexAttribArray(10);
+        glVertexAttribPointer(10, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*)(sizeof(float) + 2 * sizeof(int)));
+        glEnableVertexAttribArray(11);
+        glVertexAttribIPointer(11, 1, GL_INT, 4 * 2 * sizeof(float), (GLvoid*)(2 * sizeof(float) + 2 * sizeof(int)));
+        glEnableVertexAttribArray(12);
+        glVertexAttribPointer(12, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*)(2 * sizeof(float) + 3 * sizeof(int)));
+        glEnableVertexAttribArray(13);
+        glVertexAttribIPointer(13, 1, GL_INT, 4 * 2 * sizeof(float), (GLvoid*)(3 * sizeof(float) + 3 * sizeof(int)));
+        glEnableVertexAttribArray(14);
+        glVertexAttribPointer(14, 1, GL_FLOAT, GL_FALSE, 4 * 2 * sizeof(float), (GLvoid*)(3 * sizeof(float) + 4 * sizeof(int)));
+    }
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo[tp]);
     glBindVertexArray(0);
@@ -182,42 +200,39 @@ void VAOManager::regenerateInstancedVAO()
 {
     cleanInstanceVAOs();
 
-    enum video::E_VERTEX_TYPE IrrVT[] = { video::EVT_STANDARD, video::EVT_2TCOORDS, video::EVT_TANGENTS };
+    enum video::E_VERTEX_TYPE IrrVT[] = { video::EVT_STANDARD, video::EVT_STANDARD, video::EVT_2TCOORDS, video::EVT_TANGENTS };
     for (unsigned i = 0; i < VTXTYPE_COUNT; i++)
     {
         video::E_VERTEX_TYPE tp = IrrVT[i];
-        if (!vbo[tp] || !ibo[tp])
+        if (!vbo[i] || !ibo[i])
             continue;
-        GLuint vao = createVAO(vbo[tp], ibo[tp], tp);
+        GLuint vao = createVAO(vbo[i], ibo[i], tp);
         glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeDualTex]);
         VAOInstanceUtil<InstanceDataDualTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeDualTex)] = vao;
+        InstanceVAO[std::pair<VTXTYPE, InstanceType>((VTXTYPE)i, InstanceTypeDualTex)] = vao;
 
-        vao = createVAO(vbo[tp], ibo[tp], tp);
+        vao = createVAO(vbo[i], ibo[i], tp);
         glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeThreeTex]);
         VAOInstanceUtil<InstanceDataThreeTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeThreeTex)] = vao;
+        InstanceVAO[std::pair<VTXTYPE, InstanceType>((VTXTYPE)i, InstanceTypeThreeTex)] = vao;
 
-        vao = createVAO(vbo[tp], ibo[tp], tp);
+        vao = createVAO(vbo[i], ibo[i], tp);
         glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeShadow]);
         VAOInstanceUtil<InstanceDataSingleTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeShadow)] = vao;
+        InstanceVAO[std::pair<VTXTYPE, InstanceType>((VTXTYPE)i, InstanceTypeShadow)] = vao;
 
-        vao = createVAO(vbo[tp], ibo[tp], tp);
+        vao = createVAO(vbo[i], ibo[i], tp);
         glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeRSM]);
         VAOInstanceUtil<InstanceDataSingleTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeRSM)] = vao;
+        InstanceVAO[std::pair<VTXTYPE, InstanceType>((VTXTYPE)i, InstanceTypeRSM)] = vao;
 
-        vao = createVAO(vbo[tp], ibo[tp], tp);
+        vao = createVAO(vbo[i], ibo[i], tp);
         glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeGlow]);
         VAOInstanceUtil<GlowInstanceData>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeGlow)] = vao;
+        InstanceVAO[std::pair<VTXTYPE, InstanceType>((VTXTYPE)i, InstanceTypeGlow)] = vao;
 
         glBindVertexArray(0);
     }
-
-
-
 }
 
 size_t VAOManager::getVertexPitch(enum VTXTYPE tp) const
@@ -225,6 +240,7 @@ size_t VAOManager::getVertexPitch(enum VTXTYPE tp) const
     switch (tp)
     {
     case VTXTYPE_STANDARD:
+    case VTXTYPE_STANDARD_SKINNED:
         return getVertexPitchFromType(video::EVT_STANDARD);
     case VTXTYPE_TCOORD:
         return getVertexPitchFromType(video::EVT_2TCOORDS);
@@ -236,8 +252,10 @@ size_t VAOManager::getVertexPitch(enum VTXTYPE tp) const
     }
 }
 
-VAOManager::VTXTYPE VAOManager::getVTXTYPE(video::E_VERTEX_TYPE type)
+VAOManager::VTXTYPE VAOManager::getVTXTYPE(video::E_VERTEX_TYPE type, bool skinned)
 {
+    if (skinned)
+        return VTXTYPE_STANDARD_SKINNED;
     switch (type)
     {
     default:
@@ -265,44 +283,38 @@ irr::video::E_VERTEX_TYPE VAOManager::getVertexType(enum VTXTYPE tp)
     }
 }
 
-void VAOManager::append(scene::IMeshBuffer *mb, VTXTYPE tp)
+void VAOManager::append(scene::IMeshBuffer *mb, void *SkinnedData, VTXTYPE tp)
 {
     size_t old_vtx_cnt = last_vertex[tp];
     size_t old_idx_cnt = last_index[tp];
 
     regenerateBuffer(tp, old_vtx_cnt + mb->getVertexCount(), old_idx_cnt + mb->getIndexCount());
-    if (CVS->isARBBufferStorageUsable())
+
+    glBindBuffer(GL_ARRAY_BUFFER, vbo[tp]);
+    glBufferSubData(GL_ARRAY_BUFFER, old_vtx_cnt * getVertexPitch(tp), mb->getVertexCount() * getVertexPitch(tp), mb->getVertices());
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo[tp]);
+    glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, old_idx_cnt * sizeof(u16), mb->getIndexCount() * sizeof(u16), mb->getIndices());
+
+    if (!!SkinnedData)
     {
-        void *tmp = (char*)VBOPtr[tp] + old_vtx_cnt * getVertexPitch(tp);
-        memcpy(tmp, mb->getVertices(), mb->getVertexCount() * getVertexPitch(tp));
-    }
-    else
-    {
-        glBindBuffer(GL_ARRAY_BUFFER, vbo[tp]);
-        glBufferSubData(GL_ARRAY_BUFFER, old_vtx_cnt * getVertexPitch(tp), mb->getVertexCount() * getVertexPitch(tp), mb->getVertices());
-    }
-    if (CVS->isARBBufferStorageUsable())
-    {
-        void *tmp = (char*)IBOPtr[tp] + old_idx_cnt * sizeof(u16);
-        memcpy(tmp, mb->getIndices(), mb->getIndexCount() * sizeof(u16));
-    }
-    else
-    {
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo[tp]);
-        glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, old_idx_cnt * sizeof(u16), mb->getIndexCount() * sizeof(u16), mb->getIndices());
+        size_t tmp = old_vtx_cnt;
+        resizeBufferIfNecessary(tmp, old_vtx_cnt + mb->getVertexCount(), RealSkinningInfoSize, 4 * 2 * sizeof(float), GL_ARRAY_BUFFER, skinning_info_vbo);
+        glBindBuffer(GL_ARRAY_BUFFER, skinning_info_vbo);
+        glBufferSubData(GL_ARRAY_BUFFER, old_vtx_cnt * 4 * 2 * sizeof(float), mb->getVertexCount() * 4 * 2 * sizeof(float), SkinnedData);
     }
 
     mappedBaseVertex[tp][mb] = old_vtx_cnt;
     mappedBaseIndex[tp][mb] = old_idx_cnt * sizeof(u16);
 }
 
-std::pair<unsigned, unsigned> VAOManager::getBase(scene::IMeshBuffer *mb)
+std::pair<unsigned, unsigned> VAOManager::getBase(scene::IMeshBuffer *mb, void *Weights)
 {
-    VTXTYPE tp = getVTXTYPE(mb->getVertexType());
+    VTXTYPE tp = getVTXTYPE(mb->getVertexType(), (!!Weights));
     if (mappedBaseVertex[tp].find(mb) == mappedBaseVertex[tp].end())
     {
         assert(mappedBaseIndex[tp].find(mb) == mappedBaseIndex[tp].end());
-        append(mb, tp);
+        append(mb, Weights, tp);
         regenerateVAO(tp);
         regenerateInstancedVAO();
     }

@@ -1,81 +1,94 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013 the SuperTuxKart team
-//
-//  This program is free software; you can redistribute it and/or
-//  modify it under the terms of the GNU General Public License
-//  as published by the Free Software Foundation; either version 3
-//  of the License, or (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program; if not, write to the Free Software
-//  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#define MAX_JOINT_NUM 48
 
-// skinning.vert
-#version 330 compatibility
-#define MAX_JOINT_NUM 36
-#define MAX_LIGHT_NUM 8
+uniform mat4 ModelMatrix =
+    mat4(1., 0., 0., 0.,
+         0., 1., 0., 0.,
+         0., 0., 1., 0.,
+         0., 0., 0., 1.);
+uniform mat4 InverseModelMatrix =
+    mat4(1., 0., 0., 0.,
+         0., 1., 0., 0.,
+         0., 0., 1., 0.,
+         0., 0., 0., 1.);
+
+uniform mat4 TextureMatrix =
+    mat4(1., 0., 0., 0.,
+         0., 1., 0., 0.,
+         0., 0., 1., 0.,
+         0., 0., 0., 1.);
+
+#if __VERSION__ >= 330
+layout(location = 0) in vec3 Position;
+layout(location = 1) in vec3 Normal;
+layout(location = 2) in vec4 Color;
+layout(location = 3) in vec2 Texcoord;
+layout(location = 4) in vec2 SecondTexcoord;
+layout(location = 5) in vec3 Tangent;
+layout(location = 6) in vec3 Bitangent;
+
+layout(location = 7) in int index0;
+layout(location = 8) in float weight0;
+layout(location = 9) in int index1;
+layout(location = 10) in float weight1;
+layout(location = 11) in int index2;
+layout(location = 12) in float weight2;
+layout(location = 13) in int index3;
+layout(location = 14) in float weight3;
+#else
+in vec3 Position;
+in vec3 Normal;
+in vec4 Color;
+in vec2 Texcoord;
+in vec2 SecondTexcoord;
+in vec3 Tangent;
+in vec3 Bitangent;
+#endif
+
+out vec3 nor;
+out vec3 tangent;
+out vec3 bitangent;
+out vec2 uv;
+out vec2 uv_bis;
+out vec4 color;
 
 uniform mat4 JointTransform[MAX_JOINT_NUM];
 
 void main()
 {
-	int index;
-	vec4 ecPos;
-	vec3 normal;
-	vec3 light_dir;
-	float n_dot_l;
-	float dist;
+    vec4 IdlePosition = vec4(Position, 1.);
+    vec4 SkinnedPosition = vec4(0.);
 
-	mat4 ModelTransform = gl_ModelViewProjectionMatrix;
+    if (index0 >= 0)
+    {
+        vec4 tmp = JointTransform[index0] * IdlePosition;
+        SkinnedPosition += weight0 * tmp / tmp.w;
+    }
 
-	index = int(gl_Color.r * 255.99);
-	mat4 vertTran = JointTransform[index - 1];
+    if (index1 >= 0)
+    {
+        vec4 tmp = JointTransform[index1] * IdlePosition;
+        SkinnedPosition += weight1 * tmp / tmp.w;
+    }
 
-	index = int(gl_Color.g * 255.99);
-	if(index > 0)
-		vertTran += JointTransform[index - 1];
+    if (index2 >= 0)
+    {
+        vec4 tmp = JointTransform[index2] * IdlePosition;
+        SkinnedPosition += weight2 * tmp / tmp.w;
+    }
 
-	index = int(gl_Color.b * 255.99);
-	if(index > 0)
-		vertTran += JointTransform[index - 1];
+    if (index3 >= 0)
+    {
+        vec4 tmp = JointTransform[index3] * IdlePosition;
+        SkinnedPosition += weight3 * tmp / tmp.w;
+    }
 
-	index = int(gl_Color.a * 255.99);
-	if(index > 0)
-		vertTran += JointTransform[index - 1];
-
-	ecPos = gl_ModelViewMatrix * vertTran * gl_Vertex;
-
-	normal = (vertTran * vec4(gl_Normal, 0.0)).xyz;
-	normal = normalize(gl_NormalMatrix * normal);
-
-	gl_FrontColor = vec4(0,0,0,0);
-	for(int i = 0;i < MAX_LIGHT_NUM;i++)
-	{
-		light_dir = vec3(gl_LightSource[i].position-ecPos);
-		n_dot_l = max(dot(normal, normalize(light_dir)), 0.0);
-		dist = length(light_dir);
-		n_dot_l *= 1.0 / (gl_LightSource[0].constantAttenuation + gl_LightSource[0].linearAttenuation * dist);
-		gl_FrontColor += gl_LightSource[i].diffuse * n_dot_l;
-	}
-	gl_FrontColor = clamp(gl_FrontColor,0.3,1.0);
-
-
-	ModelTransform *= vertTran;
-
-	gl_Position = ModelTransform * gl_Vertex;
-	gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
-	gl_TexCoord[1] = gl_TextureMatrix[1] * gl_MultiTexCoord1;
-
-	/*
-	// Reflections.
-	vec3 r = reflect( ecPos.xyz , normal );
-	float m = 2.0 * sqrt( r.x*r.x + r.y*r.y + (r.z+1.0)*(r.z+1.0) );
-	gl_TexCoord[1].s = r.x/m + 0.5;
-	gl_TexCoord[1].t = r.y/m + 0.5;
-	*/
+    color = Color.zyxw;
+    mat4 ModelViewProjectionMatrix = ProjectionMatrix * ViewMatrix * ModelMatrix;
+    mat4 TransposeInverseModelView = transpose(InverseModelMatrix * InverseViewMatrix);
+    gl_Position = ModelViewProjectionMatrix * vec4(SkinnedPosition.xyz, 1.);
+    nor = (TransposeInverseModelView * vec4(Normal, 0.)).xyz;
+    tangent = (TransposeInverseModelView * vec4(Tangent, 1.)).xyz;
+    bitangent = (TransposeInverseModelView * vec4(Bitangent, 1.)).xyz;
+    uv = (TextureMatrix * vec4(Texcoord, 1., 1.)).xy;
+    uv_bis = SecondTexcoord;
 }

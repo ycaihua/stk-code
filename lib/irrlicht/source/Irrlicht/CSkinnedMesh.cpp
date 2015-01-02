@@ -456,6 +456,22 @@ void CSkinnedMesh::skinMesh(f32 strength)
 	//-----------------
 
 	SkinnedLastFrame=true;
+
+    // Initialize WeightInfluence
+    WeightInfluence.clear();
+    for (unsigned i = 0; i < LocalBuffers.size(); ++i)
+    {
+        WeightInfluence.push_back(std::vector<std::vector<JointInfluence> >());
+        for (unsigned j = 0; j < LocalBuffers[i]->getVertexCount(); j++)
+        {
+            WeightInfluence[i].push_back(std::vector<JointInfluence>());
+        }
+    }
+    size_t idx = 0;
+    for (unsigned i = 0; i < RootJoints.size(); ++i)
+        computeWeightInfluence(RootJoints[i], idx);
+    JointMatrixes.clear();
+
 	if (!HardwareSkinning)
 	{
 		//Software skin....
@@ -486,6 +502,27 @@ void CSkinnedMesh::skinMesh(f32 strength)
 	updateBoundingBox();
 }
 
+// Only used in STK
+void CSkinnedMesh::computeWeightInfluence(SJoint *joint, size_t &index)
+{
+    if (joint->Weights.size())
+    {
+
+        for (u32 i = 0; i < joint->Weights.size(); ++i)
+        {
+            SWeight& weight = joint->Weights[i];
+            JointInfluence tmp;
+            tmp.JointIdx = index;
+            tmp.weight = weight.strength;
+            WeightInfluence[weight.buffer_id][weight.vertex_id].push_back(tmp);
+        }
+        index++;
+    }
+
+    for (unsigned j = 0; j < joint->Children.size(); ++j)
+        computeWeightInfluence(joint->Children[j], index);
+}
+
 void CSkinnedMesh::skinJoint(SJoint *joint, SJoint *parentJoint, f32 strength)
 {
 	if (joint->Weights.size())
@@ -497,6 +534,7 @@ void CSkinnedMesh::skinJoint(SJoint *joint, SJoint *parentJoint, f32 strength)
 		core::vector3df thisVertexMove, thisNormalMove;
 
 		core::array<scene::SSkinMeshBuffer*> &buffersUsed=*SkinningBuffers;
+        JointMatrixes.push_back(jointVertexPull);
 
 		//Skin Vertices Positions and Normals...
 		for (u32 i=0; i<joint->Weights.size(); ++i)
