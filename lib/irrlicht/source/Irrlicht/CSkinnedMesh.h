@@ -171,6 +171,8 @@ namespace scene
         // STK Addition
         std::vector<std::vector<std::vector<JointInfluence> > > WeightInfluence;
         std::vector<core::matrix4> JointMatrixes;
+        bool areWeightGenerated;
+        void generateWeightInfluenceData();
         void computeWeightInfluence(SJoint *joint, size_t &idx);
 
 private:

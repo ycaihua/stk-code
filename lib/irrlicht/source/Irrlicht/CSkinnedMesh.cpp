@@ -444,19 +444,8 @@ void CSkinnedMesh::getFrameData(f32 frame, SJoint *joint,
 //				Software Skinning
 //--------------------------------------------------------------------------
 
-//! Preforms a software skin on this mesh based of joint positions
-void CSkinnedMesh::skinMesh(f32 strength)
+void CSkinnedMesh::generateWeightInfluenceData()
 {
-	if (!HasAnimation || SkinnedLastFrame)
-		return;
-
-	//----------------
-	// This is marked as "Temp!".  A shiny dubloon to whomever can tell me why.
-	buildAllGlobalAnimatedMatrices();
-	//-----------------
-
-	SkinnedLastFrame=true;
-
     // Initialize WeightInfluence
     WeightInfluence.clear();
     for (unsigned i = 0; i < LocalBuffers.size(); ++i)
@@ -470,6 +459,24 @@ void CSkinnedMesh::skinMesh(f32 strength)
     size_t idx = 0;
     for (unsigned i = 0; i < RootJoints.size(); ++i)
         computeWeightInfluence(RootJoints[i], idx);
+}
+
+//! Preforms a software skin on this mesh based of joint positions
+void CSkinnedMesh::skinMesh(f32 strength)
+{
+	if (!HasAnimation || SkinnedLastFrame)
+		return;
+
+	//----------------
+	// This is marked as "Temp!".  A shiny dubloon to whomever can tell me why.
+	buildAllGlobalAnimatedMatrices();
+	//-----------------
+
+	SkinnedLastFrame=true;
+
+    if (!areWeightGenerated)
+        generateWeightInfluenceData();
+    areWeightGenerated = true;
     JointMatrixes.clear();
 
 	if (!HardwareSkinning)

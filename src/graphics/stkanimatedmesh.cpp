@@ -127,7 +127,7 @@ void STKAnimatedMesh::updateNoGL()
     }
 
     scene::CSkinnedMesh *SkinnedMesh = dynamic_cast<scene::CSkinnedMesh *>(Mesh);
-    JointMatrixes = SkinnedMesh->JointMatrixes;
+    JointMatrixes = &(SkinnedMesh->JointMatrixes);
 }
 
 void STKAnimatedMesh::updateGL()
@@ -140,6 +140,7 @@ void STKAnimatedMesh::updateGL()
         // Retrieve idle pose
         scene::CSkinnedMesh *SkinnedMesh = dynamic_cast<scene::CSkinnedMesh *>(Mesh);
         SkinnedMesh->SkinnedLastFrame = false;
+        SkinnedMesh->areWeightGenerated = false;
         SkinnedMesh->skinMesh(0.);
 
         for (u32 i = 0; i < Mesh->getMeshBufferCount(); ++i)
