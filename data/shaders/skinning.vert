@@ -56,58 +56,74 @@ uniform mat4 JointTransform[MAX_JOINT_NUM];
 void main()
 {
     vec4 IdlePosition = vec4(Position, 1.);
+    vec4 IdleNormal = vec4(Normal, 0.);
     vec4 SkinnedPosition = vec4(0.);
+    vec4 SkinnedNormal = vec4(0.);
+    // Note : For normal we assume no scale factor in bone (otherwise we'll have to compute inversematrix for each bones...)
 
     vec4 SingleBoneInfluencedPosition;
+    vec4 SingleBoneInfluencedNormal;
     if (index0 >= 0)
     {
         SingleBoneInfluencedPosition = JointTransform[index0] * IdlePosition;
         SingleBoneInfluencedPosition /= SingleBoneInfluencedPosition.w;
+        SingleBoneInfluencedNormal = JointTransform[index0] * IdleNormal;
     }
     else
     {
         SingleBoneInfluencedPosition = IdlePosition;
+        SingleBoneInfluencedNormal = IdleNormal;
     }
     SkinnedPosition += weight0 * SingleBoneInfluencedPosition;
+    SkinnedNormal += weight0 * SingleBoneInfluencedNormal;
 
     if (index1 >= 0)
     {
         SingleBoneInfluencedPosition= JointTransform[index1] * IdlePosition;
         SingleBoneInfluencedPosition /= SingleBoneInfluencedPosition.w;
+        SingleBoneInfluencedNormal = JointTransform[index1] * IdleNormal;
     }
     else
     {
         SingleBoneInfluencedPosition = IdlePosition;
+        SingleBoneInfluencedNormal = IdleNormal;
     }
     SkinnedPosition += weight1 * SingleBoneInfluencedPosition;
+    SkinnedNormal += weight1 * SingleBoneInfluencedNormal;
 
     if (index2 >= 0)
     {
         SingleBoneInfluencedPosition = JointTransform[index2] * IdlePosition;
         SingleBoneInfluencedPosition /= SingleBoneInfluencedPosition.w;
+        SingleBoneInfluencedNormal = JointTransform[index2] * IdleNormal;
     }
     else
     {
         SingleBoneInfluencedPosition = IdlePosition;
+        SingleBoneInfluencedNormal = IdleNormal;
     }
     SkinnedPosition += weight2 * SingleBoneInfluencedPosition;
+    SkinnedNormal += weight2 * SingleBoneInfluencedNormal;
 
     if (index3 >= 0)
     {
         SingleBoneInfluencedPosition = JointTransform[index3] * IdlePosition;
         SingleBoneInfluencedPosition /= SingleBoneInfluencedPosition.w;
+        SingleBoneInfluencedNormal = JointTransform[index3] * IdleNormal;
     }
     else
     {
         SingleBoneInfluencedPosition = IdlePosition;
+        SingleBoneInfluencedNormal = IdleNormal;
     }
     SkinnedPosition += weight3 * SingleBoneInfluencedPosition;
+    SkinnedNormal += weight3 * SingleBoneInfluencedNormal;
 
     color = Color.zyxw;
     mat4 ModelViewProjectionMatrix = ProjectionMatrix * ViewMatrix * ModelMatrix;
     mat4 TransposeInverseModelView = transpose(InverseModelMatrix * InverseViewMatrix);
     gl_Position = ModelViewProjectionMatrix * vec4(SkinnedPosition.xyz, 1.);
-    nor = (TransposeInverseModelView * vec4(Normal, 0.)).xyz;
+    nor = (TransposeInverseModelView * vec4(SkinnedNormal.xyz, 0.)).xyz;
     tangent = (TransposeInverseModelView * vec4(Tangent, 0.)).xyz;
     bitangent = (TransposeInverseModelView * vec4(Bitangent, 0.)).xyz;
     uv = (TextureMatrix * vec4(Texcoord, 1., 1.)).xy;
