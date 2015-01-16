@@ -149,10 +149,7 @@ void STKMeshSceneNode::updateNoGL()
             else
             {
                 assert(!isDisplacement);
-                Material* material2 = NULL;
-                if (mb->getMaterial().getTexture(1) != NULL)
-                    material2 = material_manager->getMaterialFor(mb->getMaterial().getTexture(1), mb);
-                Material::ShaderType MatType = MaterialTypeToMeshMaterial(type, mb->getVertexType(), material, material2);
+                Material::ShaderType MatType = material->getShaderType();
                 if (!immediate_draw)
                     MeshSolidMaterial[MatType].push_back(&mesh);
             }
@@ -188,10 +185,7 @@ void STKMeshSceneNode::updateGL()
         if (!rnd->isTransparent())
         {
             Material* material = material_manager->getMaterialFor(mb->getMaterial().getTexture(0), mb);
-            Material* material2 = NULL;
-            if (mb->getMaterial().getTexture(1) != NULL)
-                material2 = material_manager->getMaterialFor(mb->getMaterial().getTexture(1), mb);
-            Material::ShaderType MatType = MaterialTypeToMeshMaterial(type, mb->getVertexType(), material, material2);
+            Material::ShaderType MatType = material->getShaderType();
             if (!immediate_draw)
                 InitTextures(mesh, MatType);
         }

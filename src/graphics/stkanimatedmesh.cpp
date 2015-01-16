@@ -109,7 +109,7 @@ void STKAnimatedMesh::updateNoGL()
             }
             else
             {
-                Material::ShaderType MatType = material->getShaderType();// MaterialTypeToMeshMaterial(type, mb->getVertexType(), material);
+                Material::ShaderType MatType = material->getShaderType();
                 MeshSolidMaterial[MatType].push_back(&mesh);
             }
         }
@@ -150,7 +150,7 @@ void STKAnimatedMesh::updateGL()
                 if (mb->getMaterial().getTexture(1) != NULL)
                     material2 = material_manager->getMaterialFor(mb->getMaterial().getTexture(1), mb);
 
-                Material::ShaderType MatType = MaterialTypeToMeshMaterial(type, mb->getVertexType(), material, material2);
+                Material::ShaderType MatType = material->getShaderType();
                 InitTextures(mesh, MatType);
             }
             else
