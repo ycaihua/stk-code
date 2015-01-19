@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="textures">
+      <Component Id="cmpFE5A04E3CECAF458F826CAD20CDD7456" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E4819999-EDF9-484E-816C-9F828816F68F}">
+        <File Id="filCF433F690F0A04657452B2BFADF3DDD6" KeyPath="yes" Source="..\..\..\stk-assets\textures\ants.png" />
+      </Component>
+      <Component Id="cmp4EFF42DB07B0B8D91B5AFC6590FACEE8" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7D602467-853F-407A-9373-B5D1C5D3B5FC}">
+        <File Id="fil18C1994BC398E0C37DF4F1DC9B7F3892" KeyPath="yes" Source="..\..\..\stk-assets\textures\astro_turf.jpg" />
+      </Component>
+      <Component Id="cmp629A1D3C7370DDB381D12A39BA77FCC5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1B42157A-12AF-4DDC-A8D9-1CD0921725A6}">
+        <File Id="fil1199A67FECE56ACBB518FE49EC61744E" KeyPath="yes" Source="..\..\..\stk-assets\textures\beige_bricks.jpg" />
+      </Component>
+      <Component Id="cmpE995FA0CC1224FD82D8860BA1527E671" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FFFDF87E-5BB7-4DAB-B822-6FD126A0FCE9}">
+        <File Id="fil4381E282F7FECAC58519B60F592D305B" KeyPath="yes" Source="..\..\..\stk-assets\textures\blackrock.jpg" />
+      </Component>
+      <Component Id="cmp330A72AEB0CA61135D62737A0DDDE81D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A59E7D4B-3804-45B0-8B66-A7ADCF100710}">
+        <File Id="fil9D231AC8A31991D30E50F7347F045305" KeyPath="yes" Source="..\..\..\stk-assets\textures\black_rockMountain.jpg" />
+      </Component>
+      <Component Id="cmpE866206DB9C57C3A2BA2457D86307CB6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DDC34801-3EDE-4389-BAD9-47AC763B7933}">
+        <File Id="filB47B43D244F2F93EADB5B15B6A1F0A77" KeyPath="yes" Source="..\..\..\stk-assets\textures\bow_tile.jpg" />
+      </Component>
+      <Component Id="cmp24BF93EEAEEB45C01587B7B9AE0EBB4E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C02E3A54-5316-46B1-8DAB-9BF955C6A0DB}">
+        <File Id="fil05D6319D8353B05500AC2B34ACE5133E" KeyPath="yes" Source="..\..\..\stk-assets\textures\canyon.jpg" />
+      </Component>
+      <Component Id="cmp9CB1E43B7D68FE7A2D1C49CDE230CFBF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9E38E232-4212-4470-B7E6-4000005A2B58}">
+        <File Id="fil7D0B7DE55828ED8F43D7B655D62581F1" KeyPath="yes" Source="..\..\..\stk-assets\textures\canyon_boards.png" />
+      </Component>
+      <Component Id="cmp361FA070893950F8E2A6ABB2F9AE4233" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{917AA08E-F4DE-410A-A939-D2523727BC67}">
+        <File Id="fil13C203415D3A67A1E423A86DC06FF7E8" KeyPath="yes" Source="..\..\..\stk-assets\textures\canyon_dirt_road.jpg" />
+      </Component>
+      <Component Id="cmpD6BC4B60635459D1520682DF9EA5E515" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0DCE4FEA-7415-4562-AFFB-FD7EFDDDBDF4}">
+        <File Id="fil9AB7A5E9CFB512B4F5DEA0B8F67C6C0F" KeyPath="yes" Source="..\..\..\stk-assets\textures\canyon_water.png" />
+      </Component>
+      <Component Id="cmp7725CDE1A3E3BC8A74C1E6C349F6F76D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{79056DAF-5B1D-4CFE-BFBA-EB76EC43A7C7}">
+        <File Id="fil4522D7F61101DC1F091E830D7A28D5EE" KeyPath="yes" Source="..\..\..\stk-assets\textures\castelwall.jpg" />
+      </Component>
+      <Component Id="cmpB285E83392AB3B7178C57251FE84B62E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{430B19F1-DD61-4922-880C-52B7955D3C1C}">
+        <File Id="filE9B05715D913BB860102861A77834DEF" KeyPath="yes" Source="..\..\..\stk-assets\textures\caustics.png" />
+      </Component>
+      <Component Id="cmp6843CB737B53E906D9F16DC1225E2219" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6BF5013E-5748-46AD-BBAC-7309F093A50F}">
+        <File Id="fil3B81E985150B5372222CE78C31C566C3" KeyPath="yes" Source="..\..\..\stk-assets\textures\ceramic.jpg" />
+      </Component>
+      <Component Id="cmp2382269EA30DF73EAE4BB5639767D225" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{52D0A55B-9C3C-4671-B582-4A2E3FC98980}">
+        <File Id="filFF90520F0A2E5DB4A03E5B38E56A2CE9" KeyPath="yes" Source="..\..\..\stk-assets\textures\chess.png" />
+      </Component>
+      <Component Id="cmp4BA25D164511DD0206CEBBDDA62B1123" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A63EF048-D5B3-4400-B1A0-EEE3E39256DF}">
+        <File Id="filD98AB658408D76A064047C00599905DD" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_asphalt_1.jpg" />
+      </Component>
+      <Component Id="cmp993056768F831AD3450C97B7725AA77A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0C2563E7-1B44-451F-A862-F47F62089EFD}">
+        <File Id="fil170F575BAA8223F318A2FDC1CCC99CE2" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_asphalt_2.jpg" />
+      </Component>
+      <Component Id="cmp65B0029D0A80896E7FFC835A33FC7A67" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7D7E7221-63A4-46EB-BE80-AD1CF92E3018}">
+        <File Id="fil67EB28FE17EF48B5906C5295ADD5E4EE" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_bricks.png" />
+      </Component>
+      <Component Id="cmpB48120C5BC98D9E43E8F77E85DBBD431" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0DAAE4AC-11EB-482E-9E7D-B5873087F2AB}">
+        <File Id="fil8905103281778B94F79D953122B91714" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_building_3.png" />
+      </Component>
+      <Component Id="cmp78286BF33C8C18B01D2ED299667054CD" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0CF7422E-E1CD-4446-A5A7-74D51A49DD54}">
+        <File Id="fil58CE92BACD723017F76DDA90B721ACA4" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_checker.png" />
+      </Component>
+      <Component Id="cmpF4C80CAF05ACE49F6A04216136DB9C8B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{794B4DC4-5EFD-4101-BC54-3E03D2698DA3}">
+        <File Id="filA87F2A5CB69DADF62B8493C4D9AD04FD" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_concrete.png" />
+      </Component>
+      <Component Id="cmp3CF9589A7856351D6F4E3382A09CCD5D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7F2BE1E9-A565-43EC-B227-B2B403ED5060}">
+        <File Id="fil7562B5753F010627999C6167709C397F" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_fern.png" />
+      </Component>
+      <Component Id="cmp9791DA52F2620443A0AD863BB5EE131C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DE7E8A16-1A20-4BD6-83B5-EDA919646D3B}">
+        <File Id="fil221DE580D0ED185ABE5BDC354635A207" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_grass.png" />
+      </Component>
+      <Component Id="cmp5EF9CFDF834DABB4E16203854BA5CC68" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1A75A21A-F764-4CFB-943E-BEA9D678C6A0}">
+        <File Id="fil566E9A460C72F88C083570398DA4F6A8" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_ground.jpg" />
+      </Component>
+      <Component Id="cmpCC52CF387B97EF0896150308910AFD0A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AC8E1E5F-3962-47B0-BB55-C626C64D91C5}">
+        <File Id="fil9F3ACE21F624E0A4CD210FE4D1BEC0A5" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_metal.png" />
+      </Component>
+      <Component Id="cmp538FD25FE3415B196D3EA335DB412373" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6493141C-02C7-4DC3-97F4-32D2F1D3EF48}">
+        <File Id="filB6320AD43CFD821E2917D39DDF3B4B60" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_rock.jpg" />
+      </Component>
+      <Component Id="cmpD94032EA0AC5F6C57221225D791ECEA4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1B5C0170-FC40-4747-9326-23FC47D6AFD0}">
+        <File Id="filC9216DFAB5BDFB89AE0A15A2ECBDA6C3" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_tree.jpg" />
+      </Component>
+      <Component Id="cmpAE94E76A0E142262B0859A16241E2DC9" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5B8C85F2-893D-4494-849A-828DEF0CE96B}">
+        <File Id="fil8D6615BF90B4E450E55465DD219E2358" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_tree_leaves.jpg" />
+      </Component>
+      <Component Id="cmp0AA0D422576AD79D9BC3082015059846" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B82D2A87-86F1-439B-8924-AA4418330FD4}">
+        <File Id="filAE36BB2EE8B92B3DD5CA86CFA2D8D159" KeyPath="yes" Source="..\..\..\stk-assets\textures\city_tree_leaves_alpha.jpg" />
+      </Component>
+      <Component Id="cmpE80F90217FF88CFDC5C07F3B5A08882D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1255ABB5-7039-4E85-BE2A-798DA773A324}">
+        <File Id="filF72525A682E4CD1932E237E5EBA69182" KeyPath="yes" Source="..\..\..\stk-assets\textures\clouds.png" />
+      </Component>
+      <Component Id="cmp3F67050C3F26F1E0ED57EF2EEB01640D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7FFB6C40-5A6F-48D2-9164-55FE9D0FD721}">
+        <File Id="filB529E6978079E50DAA4AF38E8527FC2B" KeyPath="yes" Source="..\..\..\stk-assets\textures\cloudshadow.png" />
+      </Component>
+      <Component Id="cmp39F3006BAB0107CEDC29021AB5D77657" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1177F82A-620C-4A87-AD91-2CC1088144F6}">
+        <File Id="filDA0A9031264CCFEAB7F901BCE0368734" KeyPath="yes" Source="..\..\..\stk-assets\textures\concrete2.png" />
+      </Component>
+      <Component Id="cmp0101C029936BC254B2D1330CD1B89234" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7680D9C6-131B-4E52-8BE0-45E7ED4E9246}">
+        <File Id="fil961C4509AFFEE4536442966F807BDF6D" KeyPath="yes" Source="..\..\..\stk-assets\textures\concrete_plain.png" />
+      </Component>
+      <Component Id="cmp0438489315182C812F77CC6F3822EB76" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D69CC753-E2BD-40C3-9DF5-E2A769F7C831}">
+        <File Id="filB6C961F0BB61949DEF1D38EDFF3B6BDC" KeyPath="yes" Source="..\..\..\stk-assets\textures\coniferous_tree.jpg" />
+      </Component>
+      <Component Id="cmpEAE9A12C2E4A1140196E5D0ED7839639" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{BC663103-58A6-4EB7-8DE9-E6AF7ECFE524}">
+        <File Id="filAF07AE45475FA7F648384BECF74B8649" KeyPath="yes" Source="..\..\..\stk-assets\textures\cottage_wall1.jpg" />
+      </Component>
+      <Component Id="cmp33B28B0A67B25BB29E6CEDBA5872821C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{67E20922-1A3B-44D0-8A4B-D6017E5A9DD2}">
+        <File Id="filF7905633C1F8BD124B79F7B6A1DF4AE1" KeyPath="yes" Source="..\..\..\stk-assets\textures\cottage_wall2.jpg" />
+      </Component>
+      <Component Id="cmp726C5071F899F5DFB99056167BE4A289" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0B146B1C-6DB2-44C0-94B3-ECCDA4437CA5}">
+        <File Id="filDCDEDBBA1561405650A268B5DEB2CACA" KeyPath="yes" Source="..\..\..\stk-assets\textures\cottage_wall3.jpg" />
+      </Component>
+      <Component Id="cmp02F60C042332408919A1D5D2F2CF7681" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D06E5F49-B639-40B1-B986-909F11BC38FD}">
+        <File Id="filD378D80AD907E32BB728CB443ED55829" KeyPath="yes" Source="..\..\..\stk-assets\textures\cracked-earth-texture.jpg" />
+      </Component>
+      <Component Id="cmp1D469B50605234D661CA750A1E5DABD6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D2D82BB0-8343-4D10-AC7F-2ABDBD5C5CCC}">
+        <File Id="fil9639416A4538D384220D571DAF8E2049" KeyPath="yes" Source="..\..\..\stk-assets\textures\crate1_diffuse.jpg" />
+      </Component>
+      <Component Id="cmp69BAE1A37BE80AFC205980B33A5F48F4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2020CB16-605A-4D9E-BF48-B309B4ECB393}">
+        <File Id="fil3EA09997F501B631E5ECD91E8653CAA6" KeyPath="yes" Source="..\..\..\stk-assets\textures\crate1_diffuseBIS.jpg" />
+      </Component>
+      <Component Id="cmp59F7EE302CA113AD60A702A764126BF3" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9023A042-F3D3-4395-A5A7-383B767A60A7}">
+        <File Id="fil89DB8ED0D2043E9304556E57FB5DA1C4" KeyPath="yes" Source="..\..\..\stk-assets\textures\crate2_diffuse.jpg" />
+      </Component>
+      <Component Id="cmp3CD1B54C1CD50A6F66D4ED527909D829" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{282D97B5-CCB8-4ECB-8055-391D93124ABC}">
+        <File Id="filB0B0476C65129CC852CA6A1ECF258DBD" KeyPath="yes" Source="..\..\..\stk-assets\textures\dirt.jpg" />
+      </Component>
+      <Component Id="cmp4B1F3F7D0D113B21ACAA014DC06B6252" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6EEB7FFB-DA3D-4A39-B006-607B446322CE}">
+        <File Id="fil4523F9ACF8F88AB1E598CC3B30152335" KeyPath="yes" Source="..\..\..\stk-assets\textures\dirt2sand.png" />
+      </Component>
+      <Component Id="cmp1F6987CED2B4FC7747F9732666D67EC3" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{784A51E4-3E38-4D85-8113-CFDBDFE415EB}">
+        <File Id="filAB82C821562BB9B9A20219E08F8DED02" KeyPath="yes" Source="..\..\..\stk-assets\textures\dirtbrick.png" />
+      </Component>
+      <Component Id="cmp1296D808C8780E1EBCF86388678B80F9" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B746C33F-D34A-48AB-9912-DF5DDB35705E}">
+        <File Id="filEB14A40262C60C2F1CA77B6B17A0CFD2" KeyPath="yes" Source="..\..\..\stk-assets\textures\displace.png" />
+      </Component>
+      <Component Id="cmp55C1412E1187A087E03DDACBEB10E618" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{320454F7-9E73-4066-8BC4-D9FB455E0EBB}">
+        <File Id="fil83DA85778CD80715E8BF272C79CBBA20" KeyPath="yes" Source="..\..\..\stk-assets\textures\earth.png" />
+      </Component>
+      <Component Id="cmp63B21E443D99FE5C0C17B9135D1E3C45" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1C24888C-DF9E-46CF-986B-639FCE1BB025}">
+        <File Id="filE091B0CFEE1791DE8F9A49C27AA6A72A" KeyPath="yes" Source="..\..\..\stk-assets\textures\explode.png" />
+      </Component>
+      <Component Id="cmp194AC08173714BC993497F742BD513A9" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{46EA8A8D-B362-42F1-B68B-378B77DBF812}">
+        <File Id="fil89CB5955732EFFCDADE48A41DB7A7283" KeyPath="yes" Source="..\..\..\stk-assets\textures\explode_spark.png" />
+      </Component>
+      <Component Id="cmp1F7E0C2E54CF80CEBE89A612B60B07E1" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CBF7DA6D-C06B-48AB-B812-E71DA7DAE059}">
+        <File Id="filC50DF28016228381D3C907EC3C16A2A6" KeyPath="yes" Source="..\..\..\stk-assets\textures\flaring-star.png" />
+      </Component>
+      <Component Id="cmp443C9B99360B50C5D8AC7353A5350300" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B539B67C-5976-493E-ADB2-0B4A0618D1EA}">
+        <File Id="fil937B0787FD421B9CB71A429B1982929A" KeyPath="yes" Source="..\..\..\stk-assets\textures\garagedoor.jpg" />
+      </Component>
+      <Component Id="cmp77E13FB341451BEC6DB2E73BAE1D6297" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0562B59C-4B12-4E4C-8F15-855A2DA31AF1}">
+        <File Id="fil062E807554CABBC101F2C026D084BBE9" KeyPath="yes" Source="..\..\..\stk-assets\textures\generickartshadow.png" />
+      </Component>
+      <Component Id="cmpB9ED9F9E5F3D9DC14D44D6EA5043AF6C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2A8C0E3D-0244-403D-B1A7-C79B1A701052}">
+        <File Id="fil0F15291B88A46C0D5ED0FB0C933CA835" KeyPath="yes" Source="..\..\..\stk-assets\textures\genericskybox_bottom.jpg" />
+      </Component>
+      <Component Id="cmp5C63D70A85A037475D817B1AC619D05F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B271FE35-C923-47B7-94D8-513214C8BDDC}">
+        <File Id="fil1364C0C7934619A16DC4F171C3019500" KeyPath="yes" Source="..\..\..\stk-assets\textures\genericskybox_east.jpg" />
+      </Component>
+      <Component Id="cmpD6D3A9417C8B08800AB97485C74F0CCB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{BAB77B2F-3EAA-4E01-BAB3-AE0E95C34D50}">
+        <File Id="fil0206F005C0138110939339F694B6FA92" KeyPath="yes" Source="..\..\..\stk-assets\textures\genericskybox_north.jpg" />
+      </Component>
+      <Component Id="cmpBFCCB6FA234C26A59F489F5CE2606156" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F7538CA4-2542-40F3-ABCA-1AF34A1A3513}">
+        <File Id="fil4CE776513BA59658CB92CE6F53C7625E" KeyPath="yes" Source="..\..\..\stk-assets\textures\genericskybox_south.jpg" />
+      </Component>
+      <Component Id="cmp48E3AA6DF3F604BF9A87781058817CFC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E367B6B3-08E0-4913-82FD-6EA8B9EEA422}">
+        <File Id="filE92427DBACD77BCADBCE701C037A5A0A" KeyPath="yes" Source="..\..\..\stk-assets\textures\genericskybox_top.jpg" />
+      </Component>
+      <Component Id="cmp8A055F50966D859D354CDDBEBD8BA41A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CDE87292-79CD-46E0-A0D2-69DFD22790D7}">
+        <File Id="fil87AD248ACCBC94A3E4CB01FF536B7D17" KeyPath="yes" Source="..\..\..\stk-assets\textures\genericskybox_west.jpg" />
+      </Component>
+      <Component Id="cmp4F78B5AB6C84C5252C448F1EA5DD87E6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{066ACD95-76E7-44F1-A05F-51235E426170}">
+        <File Id="filCDFBDDC0B8F9FDECF9F94E329E7DD8BB" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_blueStars_a.png" />
+      </Component>
+      <Component Id="cmp64D654BAA7D61B5269499B245BEF137C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4D444989-77D7-4966-BDEC-0E756832E02E}">
+        <File Id="fil05E0CB335CBE30851CADFBA4CA1C7C59" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_booster_AlphaTest.png" />
+      </Component>
+      <Component Id="cmpB5B8065796622CA0972ABEA725941D9C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3B714C10-AE4F-4235-AF85-C57261E19DE0}">
+        <File Id="fil54522F7155ABE8B0B8A512C4344889B1" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_bubble_a.png" />
+      </Component>
+      <Component Id="cmp79B4957414AF608D33DF9CB9F46B9219" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{90CBD0B7-2AEB-4A5D-A362-C98F1D25F469}">
+        <File Id="fil18047EEC97C9CEC9FCF4F75689B0E8A8" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_distord_AlphaTested.png" />
+      </Component>
+      <Component Id="cmpA7B81734FF5E1003DD75FF6D2A0DA94D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FA207534-C339-4FBE-9D27-43A08151C33C}">
+        <File Id="fil346F912BC3097528DC21ECDD5596E1E1" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_earthJetblast_a.png" />
+      </Component>
+      <Component Id="cmp651CC6E5B3234EF26E16251E42AEDE36" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4F61997F-6550-4DFD-941A-C0A78448AD3F}">
+        <File Id="filC67BE0327AE8C101F4498A1A7681BD51" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_leaf_a.png" />
+      </Component>
+      <Component Id="cmpDCFC9E9B9A7B96A6CDF506E121557AA7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AEFD5411-B5C7-443E-8AE1-C592EB068D12}">
+        <File Id="filD2FAA9639AF62C16D0881258614209CD" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_mud_a.png" />
+      </Component>
+      <Component Id="cmp57BAD8834122A0DC39D7304811D43234" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{91831199-FE72-4017-9461-081AC4366271}">
+        <File Id="fil3AC8B14AF99E6653A26D02B9129CAE4A" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_sandJetblast_a.png" />
+      </Component>
+      <Component Id="cmp395D62C562B1B1E9539509AE461935A4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9730976A-943A-445F-BD5E-8A0F393F568B}">
+        <File Id="fil35E538D523DC4E2382AE0C78357D6A39" KeyPath="yes" Source="..\..\..\stk-assets\textures\gfx_sparkFire_a.png" />
+      </Component>
+      <Component Id="cmpC056B5528058B92B507D5C8C8F31755B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7490BE06-67AE-4F85-A2B9-8CF5EE6C0D9A}">
+        <File Id="fil838C5A3F242E0F1C7F1461077805AB5E" KeyPath="yes" Source="..\..\..\stk-assets\textures\gnu.png" />
+      </Component>
+      <Component Id="cmp55DA6ECA3BD6CA6A87E6D5C285C49852" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{121E8B96-4F88-4274-BC5F-999E5E39F783}">
+        <File Id="fil929468087A4919AD390364297EA3ED6E" KeyPath="yes" Source="..\..\..\stk-assets\textures\grass2.jpg" />
+      </Component>
+      <Component Id="cmpAE46FDB27910930A5D77993933386CCB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B0D357D0-ABB4-45FF-A722-B43121C2B29D}">
+        <File Id="fil5451306887CEED41BEF54D6BE549B50B" KeyPath="yes" Source="..\..\..\stk-assets\textures\grass2dirt.png" />
+      </Component>
+      <Component Id="cmpB1B1E2984B2348056C0DA64A695830C5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{521B310B-D66D-47CE-87A6-17C810FC9862}">
+        <File Id="fil16F7D64C8A1C36349EA3389912B9CE6E" KeyPath="yes" Source="..\..\..\stk-assets\textures\grass3.jpg" />
+      </Component>
+      <Component Id="cmp78F15454104415EC7598DE592FD58414" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{07C04DF7-4720-48AC-94F2-889A975E6FE1}">
+        <File Id="fil7CD44ADAA8CB45D7053DF040B688C851" KeyPath="yes" Source="..\..\..\stk-assets\textures\GrassTall.png" />
+      </Component>
+      <Component Id="cmpD10FCEF9DEA3B454DEC78C96E13F9727" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{524B6B00-725A-46C8-A848-C780D57136CF}">
+        <File Id="fil003773951926A0FC785D5064B0FAF582" KeyPath="yes" Source="..\..\..\stk-assets\textures\grass_dark.jpg" />
+      </Component>
+      <Component Id="cmp261C2576D73DB521F503BE3BD19DA7E4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2CBFF8A5-0F4B-4220-A8B9-8BA92C78C4A3}">
+        <File Id="filD5CC3CA0622A9EA8E6E78425C031E92C" KeyPath="yes" Source="..\..\..\stk-assets\textures\greenice.png" />
+      </Component>
+      <Component Id="cmp50144E591E6FDB56ACCEFB3A17FD2B11" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C879CC6F-FA89-4E22-B1C1-9ECD5CF157EF}">
+        <File Id="fil0C06C6B5BA0E29650CCB0697A3F18931" KeyPath="yes" Source="..\..\..\stk-assets\textures\hacienda_ground.jpg" />
+      </Component>
+      <Component Id="cmp7C4209122C9A1BC0F55FD9202C2AC053" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2561EF97-7A0F-48AC-858F-F8872AF0D15D}">
+        <File Id="filB5A23A482D0AC11455506124C8AA9087" KeyPath="yes" Source="..\..\..\stk-assets\textures\HortonRockWall.jpg" />
+      </Component>
+      <Component Id="cmp74EF6250436B20C74138B1823F2A035F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D76832C3-5A03-482B-B282-C53215ECB41A}">
+        <File Id="fil5CECB4DB4E509AE8EDB2F5DB157DF9A3" KeyPath="yes" Source="..\..\..\stk-assets\textures\HortonRockWall2.jpg" />
+      </Component>
+      <Component Id="cmp3030F6229C48BE5B9BE4E4E87EF5C4BD" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{51EE5FA6-D87A-458A-9908-86D660BC3DCF}">
+        <File Id="filBCEAF3C85A7EA52260A95479C7841B6A" KeyPath="yes" Source="..\..\..\stk-assets\textures\HortonStone6.jpg" />
+      </Component>
+      <Component Id="cmp2C5D68ADC7B790AC3B4A805100590825" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{998149C3-0AB4-4212-943F-AA4A90904A99}">
+        <File Id="filA119239F325CEEC5121CC9CC99F0D308" KeyPath="yes" Source="..\..\..\stk-assets\textures\ice.png" />
+      </Component>
+      <Component Id="cmpD456167651DCDC2501E675890674D34A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2B307D5B-DE77-4936-B434-FAE869877D96}">
+        <File Id="fil3925A580D5B4F401B164744E136E3CC8" KeyPath="yes" Source="..\..\..\stk-assets\textures\japanRedWood.png" />
+      </Component>
+      <Component Id="cmp51FA0E419C80D410F5E3E0188E1CA0B8" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{62DAA0E7-64D4-446E-9F00-374153A17A49}">
+        <File Id="fil8C64A846AC03C98059042067642EC956" KeyPath="yes" Source="..\..\..\stk-assets\textures\JapanwoodBridge.jpg" />
+      </Component>
+      <Component Id="cmp311F6E2D5044B88150C8E3ED4F2D646B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5C206345-A61B-4FC1-A268-E7FA878C854F}">
+        <File Id="fil4F122AAE226CC88B5DCEA1DA595FAD91" KeyPath="yes" Source="..\..\..\stk-assets\textures\lantern.jpg" />
+      </Component>
+      <Component Id="cmp14B58CFD6E7292BACA3C11BB5F86C52F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6D8B29BB-F5C6-4792-A673-22099BB06ED8}">
+        <File Id="filCB5E00E5FD15A65674C42662BC3F3A4F" KeyPath="yes" Source="..\..\..\stk-assets\textures\lava.png" />
+      </Component>
+      <Component Id="cmp97486E4B74AA25A50FE721978A8684EB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5BB289EB-06A7-402D-B67E-ACBE8137E7E5}">
+        <File Id="filF4FC35CF32299BB0DFBA90D9BD95AFAE" KeyPath="yes" Source="..\..\..\stk-assets\textures\lensflare.png" />
+      </Component>
+      <Component Id="cmp824949392D80145A03ED11DD18D6A35F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4E559CBB-64E7-462D-A1C7-49B5929837B3}">
+        <File Id="fil409ABB536A3AED396D8B9924836936BC" KeyPath="yes" Source="..\..\..\stk-assets\textures\License.txt" />
+      </Component>
+      <Component Id="cmp67F108DCFBF7FACF97922EB7270F349D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F6F9EDD3-9A45-408A-BAA6-5C63F5F54061}">
+        <File Id="filDF541BD3B726514425C9040ED12E5785" KeyPath="yes" Source="..\..\..\stk-assets\textures\marble.jpg" />
+      </Component>
+      <Component Id="cmp21088C04D6077D0F81C166B4A5AD7C07" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{274328C7-825E-489B-A568-A78EA28BBF82}">
+        <File Id="fil90C7BF078F0988E2656A15841E246500" KeyPath="yes" Source="..\..\..\stk-assets\textures\materials.xml" />
+      </Component>
+      <Component Id="cmpAD7A048C4C0EB64DD1D53C0AACAA4EA6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0FA0E91E-3FF3-4EB0-AAAB-EEF85CB4AA23}">
+        <File Id="fil1885C786E9EF0C45BCD42777FAB119DE" KeyPath="yes" Source="..\..\..\stk-assets\textures\materials.xml~" />
+      </Component>
+      <Component Id="cmp76AE0D831E09A120239FD8B7420D2C31" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A87A7E94-61B7-4AF9-891E-5D63D9AD23B1}">
+        <File Id="filC8F8484A4712723CB14671085B8A698F" KeyPath="yes" Source="..\..\..\stk-assets\textures\metal_plates.png" />
+      </Component>
+      <Component Id="cmp15DE1B5AD92225D5661D441BF8357631" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A05C5AEC-2546-45D0-9057-113749F63FCB}">
+        <File Id="fil68F3D8327BDFE9DE0940085CD4E5946F" KeyPath="yes" Source="..\..\..\stk-assets\textures\mossy_stone.png" />
+      </Component>
+      <Component Id="cmp4E628E383562F8917CE6EA4987A77881" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{ADCA67C6-314A-492D-88AF-FE7FEA82F9F3}">
+        <File Id="fil0012923CA9B2DBBCD1BA427DAD776AB9" KeyPath="yes" Source="..\..\..\stk-assets\textures\motif.png" />
+      </Component>
+      <Component Id="cmp7B014EB86CA1F4815CC7591D5E6897E8" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A07D55F1-DFF8-4F58-B844-AC52FB64022A}">
+        <File Id="fil159AB2E1EA3204AC271D5688B129AF9D" KeyPath="yes" Source="..\..\..\stk-assets\textures\motif_gloss.png" />
+      </Component>
+      <Component Id="cmp213CDE9CE15D693A5B4BE50E04CA0393" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{268830D0-2A23-49E9-9782-FDB7DC687113}">
+        <File Id="filFB94E0E47187860857339F246DBFF39D" KeyPath="yes" Source="..\..\..\stk-assets\textures\nitro-metal.png" />
+      </Component>
+      <Component Id="cmp8DCB6E9CE85718EB8F62FE52AC210607" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8D4A1EF1-C9A3-4BAF-A17C-C6096C365B0E}">
+        <File Id="filF9D71856F46A22AF658DA7FE1D2182BC" KeyPath="yes" Source="..\..\..\stk-assets\textures\nitro-particle.png" />
+      </Component>
+      <Component Id="cmpAC9748B470AD7A081904289D82E2045C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FE71EA68-7AE1-434A-892A-A47762A4843B}">
+        <File Id="fil706BBD6E6840E9FC1EC002D5926D49F6" KeyPath="yes" Source="..\..\..\stk-assets\textures\noise.png" />
+      </Component>
+      <Component Id="cmp92EF4C7330CC3965B77BC1BFFE27BE2F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5F53EF9F-DF8A-42F4-9061-BE7E2AD1A69A}">
+        <File Id="fil87BC3A8737FA83012C7B2497E4A1ABAD" KeyPath="yes" Source="..\..\..\stk-assets\textures\nolok_character.png" />
+      </Component>
+      <Component Id="cmp828C8D5CBA83F0990621B6F9BF9042D3" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C8638882-C40A-4855-ABBA-B4B6618BBE1E}">
+        <File Id="fil973A281350BDD9272607CAC81AB2CE6E" KeyPath="yes" Source="..\..\..\stk-assets\textures\obelisk.png" />
+      </Component>
+      <Component Id="cmp926B0D1B70C1604BCBB62DF5715207CC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{920E85DC-7364-420F-8AFE-9785491AD8E7}">
+        <File Id="fil4F54923CF3E0160EB29178CBB1196DFF" KeyPath="yes" Source="..\..\..\stk-assets\textures\oldWood.png" />
+      </Component>
+      <Component Id="cmp2315C0C8208BC70510D5DD6169D89991" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{03FB2528-8668-4FD1-B316-2D62688C7CFF}">
+        <File Id="fil571712D3B4A6AA28BACBA2C9C049B4CD" KeyPath="yes" Source="..\..\..\stk-assets\textures\palm.png" />
+      </Component>
+      <Component Id="cmpD65CA0516154B281F7E4AC05D4086601" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B25908C5-8824-495A-BA7C-5DED330EB8DC}">
+        <File Id="fil16666A887A988EF3BF3B947D4DB47FBF" KeyPath="yes" Source="..\..\..\stk-assets\textures\palmBark.jpg" />
+      </Component>
+      <Component Id="cmpBF6E201B4E8759527E16982D29633774" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D01E3036-6C95-443F-B834-087786BD4725}">
+        <File Id="filD9EE286C4DAB4FDF648FE3EED03E7FCB" KeyPath="yes" Source="..\..\..\stk-assets\textures\palmtree.png" />
+      </Component>
+      <Component Id="cmpD3703105475AC9F3DA84E7A6CA885E10" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6D433418-A58B-4943-8BAD-FCA26389F027}">
+        <File Id="fil20F7ED5650F45405FCACB8C4A1033A39" KeyPath="yes" Source="..\..\..\stk-assets\textures\palmtree3.jpg" />
+      </Component>
+      <Component Id="cmpDAB7D1153B10D7E4B702ED81F030EA5F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{631EB10A-EC27-47DD-95C2-0C337B6A9268}">
+        <File Id="fil75B1494989F7A2CFFC5CA99BBA723AC3" KeyPath="yes" Source="..\..\..\stk-assets\textures\palmtree3_alpha.jpg" />
+      </Component>
+      <Component Id="cmpC17387A960F626C92DE353ADA11A7D32" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D6F6C45C-60D4-4E2E-9B72-076663DB0990}">
+        <File Id="fil20A7E8BBA5E941BFC0B30D0E1CAF7AAB" KeyPath="yes" Source="..\..\..\stk-assets\textures\palm_b.png" />
+      </Component>
+      <Component Id="cmp36BBBE3BA9F14671CE349A2F539CBC7D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D53C6B7F-968E-4280-9115-9D50F39011DF}">
+        <File Id="fil65F7D260DCD16C174BB2983C1E8E1ABF" KeyPath="yes" Source="..\..\..\stk-assets\textures\palm_tree_leaf.png" />
+      </Component>
+      <Component Id="cmpA6E62D4F2762EE6DEFBA85FFD6ACA043" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7D02640E-848B-4F75-AEE8-2B25194D096E}">
+        <File Id="fil74C666EAF87577F6A4A3664616156A59" KeyPath="yes" Source="..\..\..\stk-assets\textures\particle_water.png" />
+      </Component>
+      <Component Id="cmpEBA2DD3E12049ABD78CE4C7232FA6136" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6700727B-4A18-4CFE-BCD6-264A07806E64}">
+        <File Id="filEB011BB8EBCD082092F1129D86E8BD6E" KeyPath="yes" Source="..\..\..\stk-assets\textures\Paving_stones_2.jpg" />
+      </Component>
+      <Component Id="cmp183FA832C3D3B90821595B3123C3BF92" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5F0A214D-8BEC-4FC1-B174-EB485E31C8D2}">
+        <File Id="fil34D6C5B775C25D9C2FBEEDEB6AAC7395" KeyPath="yes" Source="..\..\..\stk-assets\textures\pino.png" />
+      </Component>
+      <Component Id="cmpB3358EF1F5C71DC408F182E5C57F2348" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9B84BA88-4F8F-4771-B4B3-F1770E3307B2}">
+        <File Id="fil9543456E08A750ACD517EC6D3F930F75" KeyPath="yes" Source="..\..\..\stk-assets\textures\pino2.png" />
+      </Component>
+      <Component Id="cmp78E46416DE541B60AABEF3FDC7C92D14" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AC4A72D8-DE28-4F08-A2F6-5169B477DC92}">
+        <File Id="fil8FCEBB53FAE8C8C4E1DE3ABB93C61596" KeyPath="yes" Source="..\..\..\stk-assets\textures\plants.jpg" />
+      </Component>
+      <Component Id="cmpA866A2557EEA031D5F3DFB060BBBAB82" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C0833E2B-B65D-431C-A1A0-B76B0A4459E3}">
+        <File Id="fil62D9834624A5BFA996D1FAA9CCBA0238" KeyPath="yes" Source="..\..\..\stk-assets\textures\plants_alpha.jpg" />
+      </Component>
+      <Component Id="cmp2157161779D97E11448CB08D8CC59F6F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{028BF835-32CD-4A68-AE79-57DBCA2F9A34}">
+        <File Id="fil3B9CD6C6CDA983D4DC8D515D204F6CB4" KeyPath="yes" Source="..\..\..\stk-assets\textures\plungerface.png" />
+      </Component>
+      <Component Id="cmpE182EFB10EF7B1C992EAE967E6EA55BA" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9296CEC7-9BFF-47E1-974E-ACF397B3B9B2}">
+        <File Id="fil2DF3201CE876692E4481F385A954307F" KeyPath="yes" Source="..\..\..\stk-assets\textures\pyramidwall.jpg" />
+      </Component>
+      <Component Id="cmp0980BD68A9535E511953EE080415A44C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{85F94CD9-806C-4937-9BD2-DE5D7116E8FA}">
+        <File Id="fil03762FB226A214B9C9AAFB4CB0F23B3A" KeyPath="yes" Source="..\..\..\stk-assets\textures\racetrack_asphalt.jpg" />
+      </Component>
+      <Component Id="cmp82AC165EB4870FE076A41D02E36073F7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4BDDBCCB-FB47-4849-BF08-6E2585626BF9}">
+        <File Id="fil6D458C832AB949D76AFEAA85331BDF58" KeyPath="yes" Source="..\..\..\stk-assets\textures\racetrack_grass.jpg" />
+      </Component>
+      <Component Id="cmpFB231BFABB7FABFE17CA8094B3300453" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{BAD82312-66D4-46F4-9A86-D363BB00C47A}">
+        <File Id="fil4CF77FC463179BBA842C06CF4F6E46AC" KeyPath="yes" Source="..\..\..\stk-assets\textures\racetrack_tire.png" />
+      </Component>
+      <Component Id="cmpCB63E435C357169E32EA10D66E63B073" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8547E803-6C57-439B-BAC1-D0ACC0E2FC39}">
+        <File Id="fil5BA26F7B3F582EA82A45239AAD7D2FEE" KeyPath="yes" Source="..\..\..\stk-assets\textures\racetrack_wall.jpg" />
+      </Component>
+      <Component Id="cmp41E5D23B1523DFBB792B792010AE5212" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3026EAE2-BCE8-406A-8A50-A4440E400416}">
+        <File Id="filDDC8741CCC1423542919453A974CDBB5" KeyPath="yes" Source="..\..\..\stk-assets\textures\rain.png" />
+      </Component>
+      <Component Id="cmp3AB2F337DC63FAEF8523D5A28DD87148" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C98C3AB4-0D5A-4FEB-88A3-CD67A97CFF16}">
+        <File Id="fil3F105C46A17EC998797AE59579C0524E" KeyPath="yes" Source="..\..\..\stk-assets\textures\ribbed_steel.jpg" />
+      </Component>
+      <Component Id="cmpC9FB8D174A130F7655FA79D0BC7A6653" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{18399440-5B49-4E5A-B55E-EC3832771765}">
+        <File Id="filFEFC1DE18FA04DBCC6CB4A96D8BE6B59" KeyPath="yes" Source="..\..\..\stk-assets\textures\roadway.png" />
+      </Component>
+      <Component Id="cmp5D6546DE519E67A22103ECFDA21E5587" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8123A238-18EC-4545-A07E-0B9EDD15047E}">
+        <File Id="filF3C87CCA33B8D99E593C0CC9420360EB" KeyPath="yes" Source="..\..\..\stk-assets\textures\road_dirt.jpg" />
+      </Component>
+      <Component Id="cmp337974B4269F57ADA509FD304AD01CF0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D66E48C8-06D9-4D7C-B5EB-624FE61F9CBA}">
+        <File Id="filF474FAC8C9340B588E9E8787E29287D8" KeyPath="yes" Source="..\..\..\stk-assets\textures\rock.jpg" />
+      </Component>
+      <Component Id="cmp6BD7A86B37F3302723B73D6561C10EDC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{EC53E947-1F2B-46B1-9DD7-443693BBB1D5}">
+        <File Id="fil892E2865246E50ACAC05F1E654612FAD" KeyPath="yes" Source="..\..\..\stk-assets\textures\rock1.jpg" />
+      </Component>
+      <Component Id="cmpA644DC87B070431CEED8B9CE0EA650CF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8AB45B9B-C287-4502-9F76-499F97528A83}">
+        <File Id="fil8869EE272D8E89A87B26F20BC3FB2C3D" KeyPath="yes" Source="..\..\..\stk-assets\textures\rockMountain.jpg" />
+      </Component>
+      <Component Id="cmpCB484434B26155FB7998099A96A31759" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{79E7493A-0700-41FE-944F-6D440EA56F00}">
+        <File Id="fil453E1DD677C91958DFAA5F1C60090125" KeyPath="yes" Source="..\..\..\stk-assets\textures\rockTograss.jpg" />
+      </Component>
+      <Component Id="cmp10A7DABE30DCF184F7F67E0E27E935F4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{EEAA6E23-3117-4129-B2AE-16A9C32FD670}">
+        <File Id="fil32EFA8B9D007A5A884A90986FEDD2B0E" KeyPath="yes" Source="..\..\..\stk-assets\textures\rockwall.jpg" />
+      </Component>
+      <Component Id="cmpE303818064A3A0468946CE42103E9222" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CE660147-2E3D-4760-8F9E-B1E2444D67C5}">
+        <File Id="filFF5C1018AB82D926C6F7038BA0E4A116" KeyPath="yes" Source="..\..\..\stk-assets\textures\rockwaterfall.jpg" />
+      </Component>
+      <Component Id="cmp87752B24786A4FBA4FEEE76722681B0D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{12DF65A2-B15D-43C9-AFC9-21EC081DCC44}">
+        <File Id="fil14BDE7CF392004E12EC531409FFEE041" KeyPath="yes" Source="..\..\..\stk-assets\textures\rock_brown.jpg" />
+      </Component>
+      <Component Id="cmp6D1C450EED9C4FD4EDC86081750A0974" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FEB30F8B-B91B-4F44-AF3A-B1AA898DCEED}">
+        <File Id="filE46A5E6768C2E2BF511803E64430EE61" KeyPath="yes" Source="..\..\..\stk-assets\textures\rock_grey.jpg" />
+      </Component>
+      <Component Id="cmp852C85B02777CD45F43A2FE48BB0DCB6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F27EF45B-0602-4B32-A04B-48A4F6C06BFC}">
+        <File Id="fil745F6370D60C9AAB95436837EAC1E113" KeyPath="yes" Source="..\..\..\stk-assets\textures\rock_mountain.jpg" />
+      </Component>
+      <Component Id="cmp7B87C4F658E949CA71AC8E59DE85A324" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D22014F5-3CA6-4B1A-BBB7-88957F93F03D}">
+        <File Id="fil345762BD1E24D229F58C7170551010B0" KeyPath="yes" Source="..\..\..\stk-assets\textures\roof.png" />
+      </Component>
+      <Component Id="cmpAD10090042AA315996E6CD80DF2BE4F7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{57EC475C-41FC-4A75-9333-3F86D1641076}">
+        <File Id="fil1C131F1BD2D31F3BE5066965BE7DAC4A" KeyPath="yes" Source="..\..\..\stk-assets\textures\round_shadow.png" />
+      </Component>
+      <Component Id="cmpE0FB1AA55606ED7159026835FA81AB44" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0BE8F044-E481-45E6-8614-44BD42D4A1D9}">
+        <File Id="filF1E0B9EC8FAE4CF3CBEEACC983BC5F29" KeyPath="yes" Source="..\..\..\stk-assets\textures\sakura_leaves.jpg" />
+      </Component>
+      <Component Id="cmpAE44C93825FC9CCCEABA4636927EE3C1" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F07C8F87-6673-427E-A011-7587F8E6AA52}">
+        <File Id="fil42AD328322B82EB7F5842AA7F4E95901" KeyPath="yes" Source="..\..\..\stk-assets\textures\sakura_leaves_alpha.jpg" />
+      </Component>
+      <Component Id="cmp61CF412776A0A8C3A73689140DB721C6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{97870B25-CCC9-4C9A-8BA8-A51E396A50F9}">
+        <File Id="filC47660F60C8E9E4F790DE614A57BBB92" KeyPath="yes" Source="..\..\..\stk-assets\textures\sand.png" />
+      </Component>
+      <Component Id="cmpD9D9877AA5D715AB636BCDCE191D7E8E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1E50B150-34F4-439D-8341-86F9DAFAE913}">
+        <File Id="fil16C0FCA423A3642C618C0EF5C0A1B1BD" KeyPath="yes" Source="..\..\..\stk-assets\textures\sand2.jpg" />
+      </Component>
+      <Component Id="cmp8B4C3641E439A4A1358B77E3F337325F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B58082BD-FEC1-4528-AE9B-F103FCA09654}">
+        <File Id="fil1127FA38296FEECEC51483A3CAFEAAD1" KeyPath="yes" Source="..\..\..\stk-assets\textures\sandgrass.png" />
+      </Component>
+      <Component Id="cmp4171EA48C2F61D7AEE5BD62AABD2A94E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5636B8B8-F396-4D4A-B946-2F5BE3404ADF}">
+        <File Id="fil181919CFB74F3DA3327B408430ADF5CB" KeyPath="yes" Source="..\..\..\stk-assets\textures\sea.jpg" />
+      </Component>
+      <Component Id="cmpEED65B48C1D167DA64C1C68B6831733D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FE20A304-0510-4122-A131-017822078C3C}">
+        <File Id="fil5DF29CF3F7ADC0152274198F0AECB6DE" KeyPath="yes" Source="..\..\..\stk-assets\textures\sea2.jpg" />
+      </Component>
+      <Component Id="cmp8BD5DF3FD1E81B4011E094C72B974841" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DFC8E2F2-E3C6-4F31-BC93-1ACC0D5F4330}">
+        <File Id="filE5A3ECFE697EEB9E7EC7575A1D69FBEC" KeyPath="yes" Source="..\..\..\stk-assets\textures\signs.png" />
+      </Component>
+      <Component Id="cmp91723E66773068365433C44DFD49E8AC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{73E5B762-BA0A-4AEB-8E4F-6EF533A04097}">
+        <File Id="fil766E3E43AF2BF47EE290CAD0BEFAC728" KeyPath="yes" Source="..\..\..\stk-assets\textures\skid-particle1.png" />
+      </Component>
+      <Component Id="cmpA6446A0014419D741DB3435DF5F8C40B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{938C55A5-CE82-4ED9-9F93-C890215EFC1D}">
+        <File Id="fil56A665F6D28FC625F3013BC62B2B0B9B" KeyPath="yes" Source="..\..\..\stk-assets\textures\skid-particle2.png" />
+      </Component>
+      <Component Id="cmp373AB567AF1099F69A587D7B919BE043" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{EB648B0A-17C8-42CB-9A0B-43667C9A514E}">
+        <File Id="filA8BD1FD19910B14A0316AD9D4515F2FB" KeyPath="yes" Source="..\..\..\stk-assets\textures\skidmarks.png" />
+      </Component>
+      <Component Id="cmp3DB653871222534F7AD62E4ABB428A6F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{827F39A3-4BB2-4146-AD03-46DF4D571958}">
+        <File Id="filD9AA7FB4EC054CA0ADE3C4234BC6CE04" KeyPath="yes" Source="..\..\..\stk-assets\textures\sky.jpg" />
+      </Component>
+      <Component Id="cmp475590CD3FD7CA6C6845AC20B2A5D98B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9658B4DD-C719-4EB3-919C-0F8712777E82}">
+        <File Id="fil947380E13CA05499ED91C85890FB84A9" KeyPath="yes" Source="..\..\..\stk-assets\textures\sky2.jpg" />
+      </Component>
+      <Component Id="cmp181FC84E81185D1552ECB749E5A9387E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F7A4935C-FC9D-47D3-9CE6-A4D19ACBF23E}">
+        <File Id="fil50283B11C6D04DF18DB5A2A63F1DCA5A" KeyPath="yes" Source="..\..\..\stk-assets\textures\sky3.jpg" />
+      </Component>
+      <Component Id="cmp1F656C659F6F67222342F60B48D3ACBA" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2856033F-4407-433B-97D3-0BDB50E04BBC}">
+        <File Id="fil7284B01D709D00614E20225467C9FF4E" KeyPath="yes" Source="..\..\..\stk-assets\textures\slipstream.png" />
+      </Component>
+      <Component Id="cmp37181A8E9260CF7B94F5E8DD3C329357" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{223DC791-63A3-43A2-BE92-D65201792F4E}">
+        <File Id="fil8BAC25D6E16CDD6023D1678DCFAEE848" KeyPath="yes" Source="..\..\..\stk-assets\textures\smoke.png" />
+      </Component>
+      <Component Id="cmp0788D7EEDD931FDE197C8A0027F080EB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5CC772D0-89B1-466F-A3B4-CF62D25F34A8}">
+        <File Id="fil93F99135F5636B6C2893D7987E273F27" KeyPath="yes" Source="..\..\..\stk-assets\textures\smoke_black.png" />
+      </Component>
+      <Component Id="cmpE789CCD6794C1A0D48368D04FFC7A567" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F64E6005-424B-44C2-8C35-4822E8B94DCD}">
+        <File Id="fil68C523DBAC9BD7472FC0FB0458C96C7A" KeyPath="yes" Source="..\..\..\stk-assets\textures\smoke_brown.png" />
+      </Component>
+      <Component Id="cmp8873F0D4AD15F7EA0BD0DA8F043AA230" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1744F040-F778-4FC6-9F94-B607AB8EAA86}">
+        <File Id="filF8C14806E1D8D5B6FD9A11C4346EEDC4" KeyPath="yes" Source="..\..\..\stk-assets\textures\smoke_nitro.png" />
+      </Component>
+      <Component Id="cmp2F2D5C9CFACD8288E12E0015B09C9388" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FB750821-DBBF-4B8D-A153-47C63F00E119}">
+        <File Id="fil5459C56DBDFC3FC144A03029E8266388" KeyPath="yes" Source="..\..\..\stk-assets\textures\smoke_red.png" />
+      </Component>
+      <Component Id="cmpF02E294F85F581C4B27C3ACA419BFAC6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3B11297F-46F2-4C8E-B600-BF405FA0838B}">
+        <File Id="fil3A2859150A95DBCDFE4AC16B7BF965CA" KeyPath="yes" Source="..\..\..\stk-assets\textures\smoke_yellow.png" />
+      </Component>
+      <Component Id="cmp9150C302268A891A4DB896F87BBBAFC7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FB45D9CE-8CA3-4416-9C98-B90594E72340}">
+        <File Id="fil4C89D1062CF48E79A8C07AA808270D6B" KeyPath="yes" Source="..\..\..\stk-assets\textures\snow.png" />
+      </Component>
+      <Component Id="cmpCE0424853E5B4D2C2BD413D21A730B13" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{79AB2690-EDC1-40CB-A3F9-B43D08343D27}">
+        <File Id="filCA69BBFC56206AEC8ACB7C96B0236813" KeyPath="yes" Source="..\..\..\stk-assets\textures\snowflake.png" />
+      </Component>
+      <Component Id="cmp7BD9D9B2A7C1295E086D6E6B01F2E7BB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{38DF7946-BC40-484F-A37B-9A2161882B1E}">
+        <File Id="fil20C35E4C22E70FD24A6F1190ABDD87DE" KeyPath="yes" Source="..\..\..\stk-assets\textures\snowrock.jpg" />
+      </Component>
+      <Component Id="cmpA65D7C52B9566EBF0FD1FD36031E9C5D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0A5333E4-11EB-42B8-A210-13F9F63262AC}">
+        <File Id="fil49A3CDF164492DED6D0C200583B1A192" KeyPath="yes" Source="..\..\..\stk-assets\textures\snowyroad.png" />
+      </Component>
+      <Component Id="cmpAF7BE55C063329F8E57AC1FB557A60B8" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C7EA93D6-3DA8-49B4-9377-930AFA6C59DA}">
+        <File Id="fil36226ACB46F921438E76E9F962E7A3C8" KeyPath="yes" Source="..\..\..\stk-assets\textures\snowyrock.png" />
+      </Component>
+      <Component Id="cmp028B138E6443DB5FC1B9CD38F6F7A895" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{892CC7F0-BDE2-4BBE-B8A8-E04E95F3477A}">
+        <File Id="filB63CBCEC3C9BFC78E2E224E55DB74CC4" KeyPath="yes" Source="..\..\..\stk-assets\textures\starparticle.png" />
+      </Component>
+      <Component Id="cmp98A0E08690DD68D4B43E8B38EEECD641" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{998BCE54-347C-4240-914A-90808DE99CCE}">
+        <File Id="filF2C77588B2AACF5143F6CE0810B79F8F" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkcrowd_lowPoly_a.png" />
+      </Component>
+      <Component Id="cmp960C6081C65DCEF43589A5BB67C6A5A3" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{65C625AC-BCD4-4488-BBFB-885178F49F68}">
+        <File Id="fil592B421763D3A82B5D2BEA6C4A969D01" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_asianPaperLantern_a.png" />
+      </Component>
+      <Component Id="cmp303F08DE9A2DD42FD86C84B1EA5921D4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9C6385B3-CD1F-415E-91CD-9CFFCD92FC11}">
+        <File Id="fil577B5284774CE719E5AF930A9D39F61E" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_asianPaperLantern_a_gloss.png" />
+      </Component>
+      <Component Id="cmpCF9515DB9AC6D22B40618BC0DFEA49AE" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E5685E6B-87B9-4E9A-9EAD-4585EFCAD840}">
+        <File Id="filAD8ADFF8BE3BE20CF41FA968CE84AB0A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_beachBarMenuLogo_a.png" />
+      </Component>
+      <Component Id="cmp2A3AB20D35C453B602F4A9BCFB7FB831" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F92BC316-A82A-4CC9-BC54-0F90B5F1BFEE}">
+        <File Id="filB60DD197ECD1D371BB9207E8F353D113" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_blueBooster_a.png" />
+      </Component>
+      <Component Id="cmpEFE89027706618AC184C07D55E2C181A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4E4A297C-AAD0-4CE8-A824-6CAE89C07EE1}">
+        <File Id="fil581CA2C97EA3C7A83DD39874309A1084" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_blueCheckBorard_a.png" />
+      </Component>
+      <Component Id="cmp6848F9C5E60C127F5EFD201AEA4E5837" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{83820C35-EB82-43B4-99F1-99E652C61E71}">
+        <File Id="filE3D9C5E86C89A9B2A1A54CFE2D1258E3" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_blueStartingLine_a.png" />
+      </Component>
+      <Component Id="cmp712378F446D82015EA04C6DA97157339" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5A3222C8-F08E-46F3-9F34-D4220619DBCD}">
+        <File Id="fil615842979A538398E465DC33AE99DC78" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_cupcakeAirwayLogo_a.png" />
+      </Component>
+      <Component Id="cmp9319B2CC1982329B8C829EC52ABE7DCF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3F9ED849-54F7-4E78-AB81-DCA4EC75D64D}">
+        <File Id="fil955176A38D7B80E36883076544AC7254" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_goldCupVertical_a.png" />
+      </Component>
+      <Component Id="cmp03A24CCE07249402D462060E35142C6D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7F08FE9C-B599-49EB-8B50-5C3EA0BEDD75}">
+        <File Id="filFED73813296041943DB6D88FD5FBE4D5" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_greenCheckBorard_a.png" />
+      </Component>
+      <Component Id="cmpD904B4AC0FB8899D6C8851367DC6DB99" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4E75781E-38A7-4E9E-9592-3E6CEE163AD3}">
+        <File Id="fil8154A611AA72A5FED3932DDB4E965DFB" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_oceanicAirlinesAD_a.png" />
+      </Component>
+      <Component Id="cmpE188D3B37D6819255706D2CCDE82E1DD" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E98FF9E7-4B00-451C-8CAE-F7A19C27AAEB}">
+        <File Id="filA641AF862D03DE7FE50C6B7696F4FC88" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_orangeBooster_a.png" />
+      </Component>
+      <Component Id="cmpB72B588FBE788DBB20B6509C6DD4611F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E2FACA05-F42E-48E3-810A-F02F796C2946}">
+        <File Id="filC42E1CD5EB209210599242A43FF71DD0" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_orangeStartingLine_a.png" />
+      </Component>
+      <Component Id="cmp68E98B71D445A9B93CA22335989282F9" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C2A73B7E-D2A7-49FC-A546-79659B5E205A}">
+        <File Id="filEBEBAD53D567D52ED7677ADA668A3C65" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_saraAgency_a.png" />
+      </Component>
+      <Component Id="cmp98411A92575F95C8F1A857DA450B3519" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0C2FEC6A-1F83-4CDB-8B49-77C58329C082}">
+        <File Id="fil7292AD82778FF2EBE4A700DC6464D637" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_saraVertical_a.png" />
+      </Component>
+      <Component Id="cmpC17C251CCF8296A2E4780D780B4AD265" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5F03A1F5-4910-4DC2-8F1A-E4CD6B1B6B54}">
+        <File Id="filCC07CFFF3D39923CDE88FD97D99AF95B" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_stkVertical_a.png" />
+      </Component>
+      <Component Id="cmp0324A6A65386EF6FD76CC230A08F622D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{55A5C3BB-04EB-4FA4-A35A-9BFB58CDBFB2}">
+        <File Id="fil32F7DDC9D886B34D73B08D153CCF86BB" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_TCPLogo_a.png" />
+      </Component>
+      <Component Id="cmp66C33E97BA5F2E2F5B1FB2018C030234" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6F6C415F-49BC-4408-A8E4-E2506D4D8BB4}">
+        <File Id="fil954E9C0C3500BEE470AABC73547372DE" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_transContPostAD_a.png" />
+      </Component>
+      <Component Id="cmpA243491C39F30E1EDD60EEEDD285B803" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6C8FD2A2-A7B9-4EA9-B8BE-AA4CD9017C32}">
+        <File Id="filDEB686A51E8B7F802687D5296E3B02A8" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_valverdePresident_a.png" />
+      </Component>
+      <Component Id="cmp752E08A9AC8B8E4F51F37832EDA7645F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DEA9CDF7-79AE-4405-BBDF-B8711C636316}">
+        <File Id="fil1F0EF07FE83F10ABB037719D76608459" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkflag_valverdeVertical_a.png" />
+      </Component>
+      <Component Id="cmp5348FEB1B5A8D3B708C078461AFA785E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{32BF9F87-2C88-490F-B2C2-BE85751543A1}">
+        <File Id="filA44E3ABFBF37EBFA2E8389D3EB8077AF" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkkart_wheel_a.png" />
+      </Component>
+      <Component Id="cmpE0CFB123E99426F0E6BA19B3979F7F72" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{EC8E6691-01F4-4ED5-89DD-B799EEB5E2FB}">
+        <File Id="fil24704A087AF058931CED0F6054F72CE7" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkkart_wheel_b.png" />
+      </Component>
+      <Component Id="cmp027000429DAC6D0185E76580514FCEFE" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7604F391-1E03-4B8A-A94B-7C2664D6AB90}">
+        <File Id="filBAD931496DDD0C6F58BA8DA9B35F9015" KeyPath="yes" Source="..\..\..\stk-assets\textures\stkkart_wheel_c.png" />
+      </Component>
+      <Component Id="cmpDDF1B6A70C34C3B250553E643AA5458A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CE9D9B58-937A-44A3-92B7-A11A4D3A750D}">
+        <File Id="filD318373599F435F76D9B1CA65D6614D1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_animatedFire_a.png" />
+      </Component>
+      <Component Id="cmp1220FBDE3FBFE5148F7C3607E2843CE0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9DD9D935-C5EE-4E78-8DD8-ED8A1934A4BB}">
+        <File Id="fil0146C3DE8142D011FD2E25D85A56650A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_ants_a.png" />
+      </Component>
+      <Component Id="cmpF0630AFA140E4AF91D7D3A85027A5347" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CF1CC723-D1A3-4CEE-9716-1C82C905A8F6}">
+        <File Id="filBAC402D44F2FC86142CFA9D99D64985C" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_aztecRope_a.png" />
+      </Component>
+      <Component Id="cmpECC80CA62322C465256ED760A0EEBB25" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{ABECB13D-A621-4BFB-92CB-1BD174252F92}">
+        <File Id="filDD752D921438F1F0DF608C305C5FEA3B" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_boxGrid_a.png" />
+      </Component>
+      <Component Id="cmp607F0CA854C2494DC0585E6C1EF92E01" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{370E282D-AF6E-40D6-876E-21AFCECFB1BE}">
+        <File Id="filDB82A3D3D0E80A1527D6C32B473654EE" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_branches_diff_a.png" />
+      </Component>
+      <Component Id="cmpFCB9D869DC6E7ED9E41B0270F2BB1EA7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{378BE7CF-B27D-4BD3-A7D8-F74436610009}">
+        <File Id="fil1307DFAFC24D912F6811E2CEB221A301" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_cattail_diff_a.png" />
+      </Component>
+      <Component Id="cmpEEFA8FD984A1CD6A112DB69B4A4687DC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E492594B-9DCA-469F-9701-4AFA8E0CBF89}">
+        <File Id="filF3C9776F585F9FED969993A21D5A71EB" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_cocoaBeam_a.png" />
+      </Component>
+      <Component Id="cmp8103A61068A549B4668412A70F3CCA6A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{29061D84-3AE1-42AC-94DF-8F7C22773A58}">
+        <File Id="fil2DD247AB3C2D7E20322E844676BDEA2F" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_cocoaTreeLeaf_a.png" />
+      </Component>
+      <Component Id="cmpC7128FE4C9BED711585C7475EF2B5CB4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A994B01F-C851-4EAC-99AD-407A6CD361B5}">
+        <File Id="fil78D6F6E82443EC67925FDDECF7F9EE4D" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_coralBump_a.png" />
+      </Component>
+      <Component Id="cmpBF9094BD452CDE6D614C15659E826BFB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9B985DA1-1E19-437D-80E3-17CD6A905DBB}">
+        <File Id="filA7A89D6BDCD74BC2182A72521CA84C6A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_coralDisk_a.png" />
+      </Component>
+      <Component Id="cmp067B9A47F1D39C5D1C579A9ABB1E025B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5DF235AF-309B-4B6F-A7E0-7BFDFAF643CD}">
+        <File Id="filC16D22B4C579E18C5020E32690CFCA40" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_deadTree_a.png" />
+      </Component>
+      <Component Id="cmp9781CE73849A3EF414E5FC520A5450BE" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6E5056DE-2596-4BC2-B7FF-A2E2B5682C38}">
+        <File Id="fil1C056FA0C3928760EA1ECBFAA89C8B86" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_flightList_a.png" />
+      </Component>
+      <Component Id="cmp1228C4DE8E579A915F877A92E841FA5C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{75BEF69B-00FC-4A18-BD83-14EE4FFAD070}">
+        <File Id="filA644A24DDF728913F6FA20F07F6FF2E1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_aztekWall_a.png" />
+      </Component>
+      <Component Id="cmpB6E4C3F1045BB400C8748960B8785800" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{133C5EC4-3C89-4FAE-B780-F35DE86D81E7}">
+        <File Id="filB7E9DB3EBB2EC58E672B65F417D062DE" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_aztekWall_a_nm.png" />
+      </Component>
+      <Component Id="cmp64C0A7C6BD1BC833A6016322C1C858E2" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C8119035-F9C6-48AC-94D8-3FFFD74B9429}">
+        <File Id="filDC423554AF2C8E96BA05373F88AE44DD" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_bambooA.png" />
+      </Component>
+      <Component Id="cmpAC091D8D415528B0D13DB001C58F789F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C7F0A321-5454-4640-B327-50F7A19123AE}">
+        <File Id="fil1C67D09F0E01110BBB7BB6AE6F8C937E" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_bambooB.png" />
+      </Component>
+      <Component Id="cmp03F91D9F19052F3C66ACC30D5124A693" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E179C236-90FE-4F49-ACDA-C87C149DF78B}">
+        <File Id="fil4585C0AA6B7A066B8619C063F9673CD4" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_chocolateChunk_a.png" />
+      </Component>
+      <Component Id="cmp26883397799819B6FF70BC87F64C818E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{84901C45-5854-4BD7-A4E9-DBBDEDBB819D}">
+        <File Id="fil24B71BCB5038F47D2498F444CFF13E78" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_cobbleStoneA.png" />
+      </Component>
+      <Component Id="cmp91E0CE1808057DD5485FD9CB0676313D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{36B97B35-E896-4BB5-B8A7-C125158E61E3}">
+        <File Id="fil483953168EEFF53879443C40C00C2225" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_cobbleStoneA_nm.png" />
+      </Component>
+      <Component Id="cmp2A6BCE64A4B3098D946A6E9AA5ED8394" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{11F1206D-B6DF-42F2-BCEF-F58F0B2F84F6}">
+        <File Id="filBB391EFF97E75669CCA2EB3B20044FBD" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_concreteA.png" />
+      </Component>
+      <Component Id="cmpF38308E0A9BA78007D72E44B7A821CE0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5966727E-1C8E-4704-9B21-C2841B5E6F60}">
+        <File Id="filC2E2AC9086104C992D1C3C70DCAC6BA6" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_earth_a.png" />
+      </Component>
+      <Component Id="cmpA5D89232FF09B0E0F6D2F63F179FFC86" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9E775911-147A-4EB9-AC12-D7C98702A671}">
+        <File Id="filBCC98FF42228FD8BF71540C87CE0EE5B" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_gravelA.png" />
+      </Component>
+      <Component Id="cmp492F9A13FA0CEB4B5B1F1F84B7586AA6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AF492EE0-7D83-4862-82A6-E9A4637B49A0}">
+        <File Id="fil9A561442E78875FEADEB495379D8F46F" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_lavaA.png" />
+      </Component>
+      <Component Id="cmp2787FE6DE3166B2084F5ECD881B979C5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2A4B606F-A193-4FE8-9FAA-206EC5C3058F}">
+        <File Id="fil2F8B201921170AAC9B0FEA002E2535A4" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_marbleA.png" />
+      </Component>
+      <Component Id="cmpAC374AA10745C1CC80ADB4059B132F71" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AE953191-EFD2-4E25-B0ED-168D99DF7F2C}">
+        <File Id="filF3EE30E3ECCAAC8E6DEDBE05C1FA5839" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_roadSnow_a.png" />
+      </Component>
+      <Component Id="cmpC153703E34F48639E4279955E842588A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C93D288B-A779-4BEA-9600-8B6A7FE58B59}">
+        <File Id="fil5627FE652B8846E1756A54B75B94D903" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_roadSnow_a_gloss.png" />
+      </Component>
+      <Component Id="cmpEC970E3BE87245D4F415D5E8A801A991" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A7DC9E18-425A-473F-BF95-B65B1FF728EC}">
+        <File Id="fil3DB634503899DCF13200D49B7A578D7A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_roadSnow_a_nm.png" />
+      </Component>
+      <Component Id="cmp28DBDBF5F35ED7D90AFCAC0D184D5B5F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AB38B9B7-CD0B-414D-AD0F-F4F5F4281135}">
+        <File Id="fil065A45A94C43516329B5FC52AC634F0A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_rockA.png" />
+      </Component>
+      <Component Id="cmp91AD17EDD30DD93BA79BEB9F94A6E044" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{396D44A2-057D-46E8-84D1-D9BFA45DB1F1}">
+        <File Id="filE57CDAEF25642B17262D52EB5BD96171" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_rockA_gloss.png" />
+      </Component>
+      <Component Id="cmpB3B9297C88779F296C5CF53E0D741DA4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8027D1EA-E1DA-41A6-83ED-9C186CBA4E63}">
+        <File Id="fil5057112789C54DB687E60B1B4A51A97F" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_rockA_nm.png" />
+      </Component>
+      <Component Id="cmp55711D4434B84A9DCF3615A45FC1EFF0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{254C6893-BE81-4335-8BA1-F492B9E733AF}">
+        <File Id="filEEA66589D5601BE65A243B0D242AABCA" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_roots_a.png" />
+      </Component>
+      <Component Id="cmpF639F75B4F8C338EC168D630CE421B22" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C4F09D90-D9B7-4BF6-852D-799777EBC608}">
+        <File Id="filE7B60A9A8D61BB0DA39A07D2227BF961" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_stoneWallA.png" />
+      </Component>
+      <Component Id="cmpB28088C069F9547C069E3A890FE6EB30" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2E6A3999-C647-4274-948A-6D486B006F07}">
+        <File Id="fil1F734AA7A4D259ECD491D5CB14BE1629" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_tilesA.png" />
+      </Component>
+      <Component Id="cmp693F3D1C156A2401090FE56277072249" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E1D5F7DB-E654-4102-9094-B7FC396E99E1}">
+        <File Id="filD65236FC0CE734D3BD44B2688ACEACFB" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_tilesB.png" />
+      </Component>
+      <Component Id="cmp028D458AD369F10B477415F4A350FA22" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DFB48A14-B33D-4D6D-ADEB-35F4924725FF}">
+        <File Id="fil4394505C240C1CCA415B9258370BFFEE" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_waterAztekWallA.png" />
+      </Component>
+      <Component Id="cmp02B61C1F8DA80C1401D6F562166AB41A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1291B734-55D6-4814-A311-FCB60DA6920D}">
+        <File Id="fil7BD8B3E7F7BFC253A8347CE1F233ADB9" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_waterConcreteA.png" />
+      </Component>
+      <Component Id="cmp0379D4C6BA02EA85019DF69D9328E4FE" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{BE4DE53E-ECF1-43C5-8C23-1F12D04BD0FF}">
+        <File Id="fil1B619814209BDB76D77A2B4FF477F5F0" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_waterRockA.png" />
+      </Component>
+      <Component Id="cmp42589941156712451096E57AA657FE66" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5B6EE1C1-E375-4B09-95A6-0B7FCC2A6399}">
+        <File Id="filB9463A2E39D2B9E3CD5C305614976C86" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodA.png" />
+      </Component>
+      <Component Id="cmpFBD0385C15A0229DEB0D5879E38BA1C1" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{02BBCCC9-6874-4D8E-888B-B47C07EBA5AD}">
+        <File Id="fil141A3B86BAE5E0CDF14FEFB763B7C03F" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodA_spec.png" />
+      </Component>
+      <Component Id="cmpD395420EC8A2FFF7B65E96EA8FD8D004" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{BF5DDD2D-8CCF-4AF9-8B68-EF58DCBA00F1}">
+        <File Id="filD9ED9D4C138206429A74B22B9E900779" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodB.png" />
+      </Component>
+      <Component Id="cmp1182B6E3C914A74BDEE9B2A9E60E160E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8FDDAB3B-216F-4875-ACD7-0C7EB2C2D9CA}">
+        <File Id="filF9050A90E444B9BAFE2DEE31855BC2AD" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodB_gloss.png" />
+      </Component>
+      <Component Id="cmp86CF057274E3EADD5002E3430A702F18" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{06F2131E-042D-4759-9421-0A19CF68E92E}">
+        <File Id="filF45ACB1585D4B4BC2954089E981B23AD" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodB_nm.png" />
+      </Component>
+      <Component Id="cmp7568BC76289EE8BE5F2BCE6ED3414420" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8B24E11B-14E3-4C40-ACB9-5CAFEADD1FC9}">
+        <File Id="filCF061B68F4F4BEC292F6DDE73C68B0A1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodC.png" />
+      </Component>
+      <Component Id="cmp49F4CAFF7C92DB215E4A0574D1718093" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{654DC947-048F-4C61-8D22-140DDE6557D6}">
+        <File Id="fil91985C686B8494788E011369D1300361" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodD.png" />
+      </Component>
+      <Component Id="cmp47F93EE053C564135FF70AF491600BEA" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{992EDD0C-77F6-49E6-B607-22D72F0722ED}">
+        <File Id="filBD875CE8EC4E1D74D24E7D477758EDB5" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodE.png" />
+      </Component>
+      <Component Id="cmp6B0BEDB01B1961E0BEFF58EC439D0CE7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2712008E-9D86-4F50-9DE6-D6D818ECD756}">
+        <File Id="fil8C91780E5641A900D76BAB6BBC054CCE" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_generic_WoodF.png" />
+      </Component>
+      <Component Id="cmpF5B0A5C7D76AD4D0E6C0AF716909386F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{32B01F64-27E3-4973-9368-C1642FCED320}">
+        <File Id="fil7FAD020EC2A0A4EE7A8E5817D612E058" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_granParadisoLocation_a.png" />
+      </Component>
+      <Component Id="cmpFD1D3FE199DF7D4CB1CC9644D4B2191F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DA8B3D78-4AAE-4DFD-B2F9-649601141326}">
+        <File Id="fil8BA9EFE37C0275D9861C71B640D1456E" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_hayFiber_a.png" />
+      </Component>
+      <Component Id="cmp87F9D79CD11BBD29970D746EC0C5BAE5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B60FF0ED-D3B3-476E-8D6B-F8208A71F1BD}">
+        <File Id="filF81A2C1F06BF78E51F4BE4448E0BD66D" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_hexaJetRCAlivery_a.png" />
+      </Component>
+      <Component Id="cmp57328FAE16D95A1E96E10AD3C607D4DF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{07B79943-627E-45AB-8227-5BC605E51CF3}">
+        <File Id="fil6B47877A7A3A4A8B58C72370B34E6D64" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_itemBannedAirport_a.png" />
+      </Component>
+      <Component Id="cmpDD82859AB98C800A9E50E104D5902BED" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9F0D3272-11BE-4038-99F8-AA42944BDAE3}">
+        <File Id="fil827C225DFB84EEA87130757D62869CC1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_jetBlast_a.png" />
+      </Component>
+      <Component Id="cmp3DF6E9018DD2C4E1D1EF6181A4837ADD" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6E1C55D2-721C-431C-B536-D4FF74DBB443}">
+        <File Id="fil8B322AB2553983A24A44D8E91A5A495B" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_jungleLeaf_a.png" />
+      </Component>
+      <Component Id="cmp5BF09058ABD7EF428E6E54E6603FA56C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{512B5856-D941-40C7-960E-EFAB9AEDB7D0}">
+        <File Id="fil6BC8C5A07821C75739CF483955465E45" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_jungleLeaf_b.png" />
+      </Component>
+      <Component Id="cmp716E3E823A0FC8391DDC1B754D886153" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{77F72C6A-F891-4A80-8F1B-0628F1593184}">
+        <File Id="fil53C222FE213C3CCB2CFF0CEB8FCDF67E" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_jungleLiana_a.png" />
+      </Component>
+      <Component Id="cmp8CF26F046D89B412A3BA829E19E1ACB2" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B5C4E500-CD0A-433B-8032-B284844BF62E}">
+        <File Id="filF584B037DDDCAD05FC1E3E7A0D391212" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_lowPalmLeaf_a.png" />
+      </Component>
+      <Component Id="cmp513AA5D347D2B8B23ED43C3DD9034CF6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DBBB7E3C-4F3B-46FB-BAC7-536312285484}">
+        <File Id="fil0AA3D9BC2687A82E664FBE3526BB960A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_lowPalmTree_a.png" />
+      </Component>
+      <Component Id="cmp0D2848576E2533A89EA9BA636E958677" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{02FBBF21-E6B7-441D-A6B5-31D4ABD4415B}">
+        <File Id="fil6AF6B7559FC73E70496DDB77DC5A86C1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_metroMap_a.png" />
+      </Component>
+      <Component Id="cmp3278AB03F45C0FCF3DA9F7DBACFC5E13" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F04365D5-2B25-466E-BE90-B0C02FA7A503}">
+        <File Id="filA1D429E0C3E810A27008A16CFE0CCB16" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_palmLeafDry_a.png" />
+      </Component>
+      <Component Id="cmpE5429DE71856695E1A6DF63FE1532400" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{90E688BF-D77B-47FD-A5F1-2AB35763654C}">
+        <File Id="fil0ACBEA04FD733972E721DF9F260D4245" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_palmLeaf_a.png" />
+      </Component>
+      <Component Id="cmp2F7428A706246E991CCABE9975AC0FB8" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CA064693-2A40-4C4A-A9AE-2FC4C1390D58}">
+        <File Id="fil04623B97698376002870B2F20EEF6488" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_palmTreeBark_a.png" />
+      </Component>
+      <Component Id="cmpDCFE07E35EB05CBE95EDA651F5AA46F5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AB7F4F04-D407-485C-8863-7A95811CCC01}">
+        <File Id="fil97BD0C03B3A133F71D372EC963CD9859" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_rope_a.png" />
+      </Component>
+      <Component Id="cmpEB0E1E5D7E5022C89D20346835C56188" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{26A90783-C23E-4C9D-98BD-B8C8DDA6DFC0}">
+        <File Id="fil34EE763E91EEE2BE20B28A92DE1A8981" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_screenDepartureBack_a.png" />
+      </Component>
+      <Component Id="cmp12A2FDB8F5030F8666ABEB42512D07E8" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A41BF922-E2D3-4EC4-AA1D-09530EC4C5B9}">
+        <File Id="filA6ED02CD854904B21F7C0FB4D6645C90" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_seaFlower_a.png" />
+      </Component>
+      <Component Id="cmp4644C03AC7134B9942D7CE8FD549F4B6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3AE2D980-C0B9-4DBE-A3E1-B390F8654E51}">
+        <File Id="fil18A57D23639F6DCBEE5A448B89104FD8" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_stonePurple_a.png" />
+      </Component>
+      <Component Id="cmp7176610D5D35E0E7A2CF45AD7D178E85" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CB080FED-C626-4F9B-9021-3F6A319538F2}">
+        <File Id="fil70E2C0390E61580D6668E4975259A154" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_treeBark_a.png" />
+      </Component>
+      <Component Id="cmpBD73F4E01046DFBD0F19F48C6D190030" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B6B19B73-F8DC-4689-923F-F13E26019713}">
+        <File Id="fil224C8F7B0E3F181F80B5303CEDC85258" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_trijetTCPlivery_a.png" />
+      </Component>
+      <Component Id="cmp6FFE8EDB32F816E30D86EEA5CC272C21" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{67F54DDF-22CC-44DE-BBD0-61775CBBB2D2}">
+        <File Id="filF64F640F0A617073767B5E6FE1FADB8E" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_usSignAtlas_a.png" />
+      </Component>
+      <Component Id="cmp465FE64E015722357BF9D56739DCE36D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{07FA5932-2C9F-4EDB-AD10-F61DEA3C9E28}">
+        <File Id="filDB99C8C199C78DA559F4BD51D0421432" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_valVerdeLocationAtlas_a.png" />
+      </Component>
+      <Component Id="cmp134740FA450510975C43A3D39DE65083" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E235B505-4166-492B-9806-A0C3C65A619B}">
+        <File Id="filB7818C8893F71E478EC568BBD8E48913" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_waterfall_a.png" />
+      </Component>
+      <Component Id="cmpE2DA1789A2A2886D880424648FA21343" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{AA900F19-0B6B-4E9C-B1A8-2C4D70247A0E}">
+        <File Id="fil731193FF653D677F9797B80453210220" KeyPath="yes" Source="..\..\..\stk-assets\textures\stktex_waterLily_a.png" />
+      </Component>
+      <Component Id="cmp553C78BBA75BE424610BC5CB19F903D2" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1187D36B-BB73-48A3-BDA5-35425E1B3DE3}">
+        <File Id="fil6627F8C43C486F28D003413337B5F846" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_animated_mudpot_a.png" />
+      </Component>
+      <Component Id="cmp0DC42227C463C0B7C985F63E70F7B0D4" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2F677069-38DB-4C7B-8DC8-FF4DADFDCDEA}">
+        <File Id="filD6601C0E787021031631AEB4B4A54150" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_antennaSign_a.png" />
+      </Component>
+      <Component Id="cmp6BBF70832E5F1D3E7B1C4BBA6E99B3B2" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3BE48CD8-C5AC-4076-8A06-43FB4A64BC82}">
+        <File Id="fil7AC09D85FABEF864B9E1B94FFE52DB0A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_blueFutureSquareLight_a.png" />
+      </Component>
+      <Component Id="cmp813FD1B1CBADCB1C8DFB771C6592ABBC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DB6C6449-BB60-4514-AC6E-97008FE19C6E}">
+        <File Id="fil90C01EEC3AA910D836B9484C73557FD2" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_blueMetal_a.png" />
+      </Component>
+      <Component Id="cmpA8282D3B30A67D17B30A6388C738FCB0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6ED5AD04-D1DC-4A32-A3F0-A3C523F7049F}">
+        <File Id="fil0B1BCF5A7D6B99A2A4943F3F64902E21" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_blueTurbine_a.png" />
+      </Component>
+      <Component Id="cmp43EE0B593E01F64F289F877E95F8AC83" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C026F26F-647C-4484-ACA3-8BBB609B5067}">
+        <File Id="fil3789B94CE89A575CFBBF1BB6DBC23F24" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_brushedbarrel_a.png" />
+      </Component>
+      <Component Id="cmp12F84CEAAF2B064E190FCBBF824FF895" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4B600FCE-9D9E-4699-96BB-2BF04D80329D}">
+        <File Id="fil41A066A6D2B74189AE7A0126334488C1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_corrugMetal_a.png" />
+      </Component>
+      <Component Id="cmp503431A0730264645D698D2914EE5B48" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3A89B858-58B3-4D6A-A0B8-D8D1C2F76A78}">
+        <File Id="fil0EF4F8D8593AD51ABD753731CE43F7EA" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_darkGrayMetal_a.png" />
+      </Component>
+      <Component Id="cmp9240FEC3965A0A8ADD68C3A53CB226C6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{834002DC-96A0-46D1-BE4F-3700C29622A6}">
+        <File Id="fil08197024F6FCB2AB5B07905B21962668" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_emptyPanel_a.png" />
+      </Component>
+      <Component Id="cmp18C2C2FCA401F2F472BFA73D4C83A01F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{84F5C867-5095-4C7C-B17F-4D14680AEE22}">
+        <File Id="fil85DE09DF6F9C7ED1C36B7E70E592C657" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_emptyPanel_b.png" />
+      </Component>
+      <Component Id="cmp6F7ADE7AC59E2E9D88EC891FF4C6335E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FC6D0315-AD1F-4905-AE68-349DE6080BFC}">
+        <File Id="fil046602AE130D7B6E5480BA40D7F50497" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_endLog_a.png" />
+      </Component>
+      <Component Id="cmpABD64693C65846A9FEBEE6BBAB162445" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7DE1126D-9AB0-4D57-BFB9-C2BAACBC6540}">
+        <File Id="filAD8A0FD89597B53FFF380FB096B2A14D" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_futureBox_a.png" />
+      </Component>
+      <Component Id="cmpB7E653FF6F6F49E36DFF06C8BB09CDEF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E73E5398-19E5-453C-98BF-677C8DE00691}">
+        <File Id="filC77A59898A0FB8FF0C1828CE596409D1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_asianRoof_a.png" />
+      </Component>
+      <Component Id="cmpA98EE236D13DC037E88F2B99E1154936" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{6583C286-0B4A-472C-8ED9-CC133D7962BB}">
+        <File Id="filD9A6D7E6A0B5936970B5526D73490F27" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_bedRock_a.png" />
+      </Component>
+      <Component Id="cmpCF9B3EE2D2024BCC54BEFCD49CEA8C16" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{90CCD6C9-C869-483B-AE29-41477C4B9C97}">
+        <File Id="fil159CEEDADAD5CDFD9E8FB2CE89F28F7F" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_bedRock_a_nm.png" />
+      </Component>
+      <Component Id="cmpF9B878DC472AA136819583145696D46F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{679D040E-5B7F-43D7-9626-2204BF90D0F3}">
+        <File Id="fil580E6DF5A9E94A360A029FDB007234C9" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_blackCeramic_a.png" />
+      </Component>
+      <Component Id="cmpF3A00B9601F82B2BEBE0DEE025A20066" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3677893E-C2E8-426F-9E5B-B8EACC4F3C5C}">
+        <File Id="filABD93F8828DB7B2D4D00079B74C446D4" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_borderA.png" />
+      </Component>
+      <Component Id="cmpBEFC0DBC93DCC47FBEA7AADDC6DD216E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DEC8602E-7AE6-4FA3-A528-7B49E3EB373A}">
+        <File Id="fil3D75F884217241F1AC43F8C091094442" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_borderDarkGreenA.png" />
+      </Component>
+      <Component Id="cmp7AEA859EDD5ECD235327EF429EA20D05" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{31D643EB-4EEB-4242-9BB3-5BFB6E11AF5F}">
+        <File Id="fil593A7E6381C12C72375038F966E9978A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_brickA.png" />
+      </Component>
+      <Component Id="cmpD307ACCB77794D19670E80417A3DA993" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F0200254-A5BB-4CB3-82E0-A500BADB92E2}">
+        <File Id="filDC2214F2CDB7040F5B5DAD704BE982EA" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_brownRock_a.png" />
+      </Component>
+      <Component Id="cmp09818BCE0FE64403BB2CFED99BE98174" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B5A0CED5-E887-4290-AC2E-2805D1562BD6}">
+        <File Id="fil8306629663581775448D905BAB6AE40D" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_colorfabricA.png" />
+      </Component>
+      <Component Id="cmp6EAF3FFD1671C3E159A99C5CBE8C26B0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{29DB6747-0AFD-4F1E-B33F-A719068B72FF}">
+        <File Id="fil073393418E4F099D8108AC18E5E707D6" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_dirtA.png" />
+      </Component>
+      <Component Id="cmp5A3F6D9E6E2568679E62E9C124AF986C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{569DDC86-7805-4BEE-AAEA-A4EBC775B09F}">
+        <File Id="fil91B317C24A5F1769FFFC463BA127625C" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_dirtGrassA.png" />
+      </Component>
+      <Component Id="cmpEAD0E843D7B2FCE12DC47B4EA292D855" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E0A37E35-287E-4F3F-91AC-E7A57C308FA8}">
+        <File Id="fil22CE3F0ACF343AD5FFDAB16198B40815" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_dirtRoad_a.png" />
+      </Component>
+      <Component Id="cmp1606976AE77249FF663DED8C3FA2CB60" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B1CEFDB0-184B-48D8-A7C6-1FE2BF7652AB}">
+        <File Id="filFA522A52291941227685DF63F2FF27D4" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_dirtRoad_a_nm.png" />
+      </Component>
+      <Component Id="cmp8150D59470A9557CB2754F504E48DC5F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{80B9A7BE-70C5-484E-9815-85167F56436A}">
+        <File Id="fil7AD90BDB99787916BC45592228BE8762" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_dirtRoad_b.png" />
+      </Component>
+      <Component Id="cmp60569785DB7239F75F34B15C1CD8531E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{88E1F5F5-4AE3-48AB-9862-EC4051FAEC7A}">
+        <File Id="filCC84483D2107F980227B0A8710A51354" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_grassA.png" />
+      </Component>
+      <Component Id="cmpF8FCF1739F293B413D93A2D792DB02DF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7ECCC0F9-7717-4F64-A156-89A37CC9C235}">
+        <File Id="fil48F494A0C81553AFF3EED8B87A340851" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_grassB.png" />
+      </Component>
+      <Component Id="cmp39D7AF85570010312DFB8F8D5C542D8A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E9DF652A-433A-4807-BC4E-4A568640CCA5}">
+        <File Id="fil41F7FEE8B8C74C770B9790F3BD626462" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_grassB_nm.png" />
+      </Component>
+      <Component Id="cmp95E239E224D8A7E227579C6574396D6D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FD1FFF71-9C4F-4668-A4F0-25AA07EDCF75}">
+        <File Id="fil1D0AE920F34B4608AC1C2FF3E1D00290" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_grassC.png" />
+      </Component>
+      <Component Id="cmpBC99EFF0E4ED52623AB0B7BBA96B14A2" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{96C1623F-9407-453C-AA17-2F0E43CA55FE}">
+        <File Id="fil8B9D45A07E474FAB3A62511AB7C308A2" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_greyWall_a.png" />
+      </Component>
+      <Component Id="cmpBAF7371FD1DF501C3BA856D9DCC06EB0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{EA6F0BF7-E957-4895-BCA3-5EFA65E973D0}">
+        <File Id="fil50B5DB30C9F07ABE78DF73DBD3BC6A5A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_gridA.png" />
+      </Component>
+      <Component Id="cmpAFD334E5163D77BDC6E783A8E7FA6A36" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{83E501A2-B7EC-48BF-A8E7-7E0FB04197B0}">
+        <File Id="fil2F4E960E900757AC186D9A1056E2B7FF" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_grid_b.png" />
+      </Component>
+      <Component Id="cmpF2950FBC5B1040FF5F12482FC2D33A82" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{91F61F27-2BF6-4E8E-9C82-B3ECCF2CE9E4}">
+        <File Id="filBA181F03CC8A50E00B1126CA4A089196" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_hexaBasaltRoad_a.png" />
+      </Component>
+      <Component Id="cmp7DD7BA277FA298835393859AE892117D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{08E45039-F180-4363-B80D-76D315A751F3}">
+        <File Id="fil907B8BCACFE1924C88D0ADD7D0F0A940" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_ironA.png" />
+      </Component>
+      <Component Id="cmpD08C45CD1AD62185DB170F25ABC15C8C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{068F2FCF-8ECE-424A-83C6-EFD18EB63AD4}">
+        <File Id="filF5ED019818E0D672C43CDB9FAC231F4B" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_ironA_nm.png" />
+      </Component>
+      <Component Id="cmpB36B8FA214A5F80306F0043DD4B47114" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DFE8C154-276E-4593-885A-603F429D0693}">
+        <File Id="filC5BDE7BEA12416A41B6807B42B8CA2BB" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_pinkCeramic_a.png" />
+      </Component>
+      <Component Id="cmp8C7FDFD278620D36DB23FBFA2C07B539" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A514CD2C-3AA4-403D-AADC-877FB53459F5}">
+        <File Id="fil05174840958049D51C9604A7ED537649" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_pinkcrystal_a.png" />
+      </Component>
+      <Component Id="cmp7C38FC9D052387A17517798F8C3DDEE7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0554DC08-D4EB-46CC-A306-A867BB8B3B0C}">
+        <File Id="fil6C0614ABB5AE09A69EDB28502074E324" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_redCeramic_a.png" />
+      </Component>
+      <Component Id="cmpC7C04D22109DB53ACF44639A31BCDB5A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C198813D-B8A1-4758-86F0-1E688C241DA6}">
+        <File Id="fil5F0574C1F369AA2054602DB5AC6BEE2F" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_rockStrata_a.png" />
+      </Component>
+      <Component Id="cmpF76A7753EBFEF9BD213B3AD1E1E79ACB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{235C945D-F0C8-4097-ACAC-1568E059BA19}">
+        <File Id="fil148D7E05E74C81DC01C4808669FB0F9D" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_rockStrata_b.png" />
+      </Component>
+      <Component Id="cmpB35D39A252642E9BD18BFDB94C741A87" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{ABFB19DE-F226-4356-A7D8-0487B6FAA792}">
+        <File Id="fil3555B89BA40445D701C5D96DAF765DD1" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_rock_a.png" />
+      </Component>
+      <Component Id="cmpA188B1C262D222F6E546D7F7108486BC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D7B97147-B581-4883-862B-7E6DC869D2E2}">
+        <File Id="fil85BF57AF4718635E0202237A984F86C8" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_runway_a.png" />
+      </Component>
+      <Component Id="cmp206F62AE33E7ED93C3E8ED3C6478DF4B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C40C9950-565D-4315-B0E0-EE40B02FDA14}">
+        <File Id="filC6E1CA3F38F5C82013D3210137E34C47" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_sandRoad_a.png" />
+      </Component>
+      <Component Id="cmp17918E77EAFC93120D4F6A54B4A437AC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1A70AF02-5BF2-4685-9BE4-B9C4EC998113}">
+        <File Id="filD0997387D88E70CCD87F4AD6C9550429" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_sand_a.png" />
+      </Component>
+      <Component Id="cmp1F2326B5FF6863B7C4B7BB477B6FA33E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9A67685C-B941-4D5A-906F-197D4FE685E7}">
+        <File Id="fil243754C4F12175740860F59A49992E15" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_snow_a.png" />
+      </Component>
+      <Component Id="cmpCD4A3A26A3E6F4E5083D52502177B1A6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F557F777-0852-48AD-84C3-B9B7DB3CABA4}">
+        <File Id="fil3FD64D1159B84206605D94FDD7C094CA" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_snow_a_gloss.png" />
+      </Component>
+      <Component Id="cmp9BA9988C1D18FB6DADA728FC1C9E358D" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A2B06B9C-614C-4E5B-AEFA-CD9C793C10F7}">
+        <File Id="filADF7A50155111211110D0D97206DAE98" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_snow_a_nm.png" />
+      </Component>
+      <Component Id="cmp188A4913F42670DCF36BD72B264D7E12" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{49BC0294-9CF0-45E1-8E74-1CE727135D9C}">
+        <File Id="filF382A9FB299EEC4179F9E189BC5AE0C2" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_thatch_a.png" />
+      </Component>
+      <Component Id="cmp7BA750C8C8337A1B3D0EA1CF5276985A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2A967112-E8EF-4B2F-AA2B-4C60AEC6E9F8}">
+        <File Id="fil4E91E43C55D5CF54297F3C9ED36BC3F2" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_wallRock_a.png" />
+      </Component>
+      <Component Id="cmp47E37441528A79DC23E39068528615AE" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8F121C8F-1F30-40B6-875A-A937AE29DBA0}">
+        <File Id="fil343E2FF95198F95CD70CA65FCEA4550C" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_generic_wickerA.png" />
+      </Component>
+      <Component Id="cmpDD5E13CF7126F35BCB36D38932383434" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{64B844F4-1766-4124-9F40-A51D34D5B322}">
+        <File Id="fil64EA65F9A24596D2D972BA213869D432" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_grainElevatorLogoA.png" />
+      </Component>
+      <Component Id="cmp8ECF87E93C3FC1C2CD7B461240860B27" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4788FFBE-0A9A-4423-96B2-E8E63BF4DD12}">
+        <File Id="filD8312971A212971FE1106DE0285E79D9" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_grassAlpha.png" />
+      </Component>
+      <Component Id="cmp86F6A988C6188E75A092FDF0783FDB85" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{C916CDC7-B66E-45B6-81A6-A18A6C551B1B}">
+        <File Id="fil94BE6D7E936F47D9D3BFC2FCBAAD4B5A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_grasscliff_a.png" />
+      </Component>
+      <Component Id="cmp92B3A2F70F16FA0921443450D49D607F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9B803D02-431F-4274-A045-0E6A2E90D354}">
+        <File Id="filF9B7C355E29C266A94DE996674C4A04C" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_greyMetal_a.png" />
+      </Component>
+      <Component Id="cmpA8405125E5C1FCCC723BA41B65443FD5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5EE61B07-4BAF-42C6-A3A3-06B6756C6A72}">
+        <File Id="fil0F7D61CBF71765E5CC794CB8765F8662" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_greyMetal_a_gloss.png" />
+      </Component>
+      <Component Id="cmp5A378774A9C52CFC74933C83CB5AC023" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{42E44CB7-5FF2-4F5A-B9A7-38892E7F7900}">
+        <File Id="filD2849C4D14B7794B5D79989A58FFE29A" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_greyMetal_a_nm.png" />
+      </Component>
+      <Component Id="cmp75E955197F11999384D641C89AC4D443" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D3690B30-E758-489B-A123-06FAFD6E5165}">
+        <File Id="fil981F0D8CA7ED4E996EF685E0CD96B2D8" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_lightGrayMetal_a.png" />
+      </Component>
+      <Component Id="cmpDD31789D810FD1836755566EA42E19CB" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{99AA3DF0-A742-4003-AF8A-55E7BC4A0435}">
+        <File Id="fil689EB6C28A76B49DCA5077373A3D3AED" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_lightGreyMetal_a_gloss.png" />
+      </Component>
+      <Component Id="cmp945C2EAC754140DC93A7F94F3ABABA7A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CF92C59D-997B-4470-B69A-88207EC3204F}">
+        <File Id="fil12936BEA5FF9520FF0BE7F12B513BF45" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_longEmptyPanel_a.png" />
+      </Component>
+      <Component Id="cmp2EB34B0DBF5873D880286AA2A9C39EF5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F77E1C98-3383-465C-BECE-C67E4A589F3C}">
+        <File Id="filC59161E17D96CF13C1B7F7024DBC6614" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_metalDoor_a.png" />
+      </Component>
+      <Component Id="cmp032D1F7145E8E7C4028428ADBD5DB427" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DAFA066C-CF7F-46A1-A950-B267FF4B5F18}">
+        <File Id="fil9A8FF72A102A7AFC2E0AFA330BD215AF" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_metalDoor_a_gloss.png" />
+      </Component>
+      <Component Id="cmp2088F9A24620FC7E159879345C75408C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{51723774-99DE-4BE2-958C-18DDF6F7D499}">
+        <File Id="filF55648B8310841CEE2DE66FBF8876D30" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_metaloverlap_a.png" />
+      </Component>
+      <Component Id="cmp64306BF38DCC66CDD2261FC76369A1E1" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{495EF3ED-EC38-443F-9ACC-531C29C34FE2}">
+        <File Id="fil67C55F28ED24C044DFE0C8120D221716" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_metalRustedBlue_a" />
+      </Component>
+      <Component Id="cmp560A0835A286C21807BDFF327CA4E9F3" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2AEBBE0C-A81A-4A3C-873F-4F41B3F2B700}">
+        <File Id="fil132F2EB54E0F50A6FA8E6D34675301EE" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_metalRustedBlue_a.png" />
+      </Component>
+      <Component Id="cmp3CA30F530EF5430C99FCC1268A24423F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{75B8266A-5E85-489F-8C13-AE4BD8B2732F}">
+        <File Id="filAE1131D7A9889DB29B1489E2BC6A2CB2" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_mudpot_a.png" />
+      </Component>
+      <Component Id="cmpC718E88E04E4F009A03B447265D11B84" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{4E7C116A-F46A-43D6-9804-5BBA01726E19}">
+        <File Id="fil41667FACCFE41593CF2D2454BE9C6993" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_mudpot_a_gloss.png" />
+      </Component>
+      <Component Id="cmpDE910916F5E835008EA95970DA58F999" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A6B1CF2C-A695-4664-9976-2B23DB3CDA75}">
+        <File Id="filBF9CA79C412017EFF1423CD68FB2CB5C" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_mushroom_a.png" />
+      </Component>
+      <Component Id="cmp57F0CE8AC376A0EB540E6197006C8278" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D043C2B6-4029-4B1C-894F-269BFCC296AC}">
+        <File Id="fil6EAE2B3E377F3FCD8B22B34F201A556E" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_pipe_a.png" />
+      </Component>
+      <Component Id="cmpDD19C331DE7067B06B0447E3FDE3700B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{8A026CCA-61AE-48CB-B88E-8E9C9955B618}">
+        <File Id="filE1DAC5F4DFDA18CC2E4F800DDEAB58FC" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_solarPanel_a.png" />
+      </Component>
+      <Component Id="cmp20C8A47CA7394657F4652C4B50D93424" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{9FBF2321-B207-43EF-BA1E-511AA7497D32}">
+        <File Id="filF67353241B39C02924200D223FB81E95" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_solarPanel_a_nm.png" />
+      </Component>
+      <Component Id="cmpC9390DD65F960E4557E5A4BB7A6020E8" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{2BD94597-2A56-440A-A87B-49BAFD7EFFA8}">
+        <File Id="fil8D392F362CD1A085F9FC510198EEE219" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_solarPanel_gloss.png" />
+      </Component>
+      <Component Id="cmp3C391BA5C7DB692D58B2FDC28135A789" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5DBB4199-30F8-4D89-87B8-59F40E3B6CA2}">
+        <File Id="fil91CDDD2417601D9034DBFBBA449BDB83" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_terminalHappy_face_a.png" />
+      </Component>
+      <Component Id="cmp80BF2118B3210137E3F08EAEAA97ECA7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{39ACDDCC-1E04-4D28-96E0-A0EC63CEE7C6}">
+        <File Id="filE6670A81DB3146C0272FF31D6BE05351" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_terminalScreen_a.png" />
+      </Component>
+      <Component Id="cmp28BB41C5BF9F3134C424081194F4E222" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{29CC887D-39D3-453B-9FF2-F7B133BA6128}">
+        <File Id="fil023FCB9A346248BB0DA6E04856AD9970" KeyPath="yes" Source="..\..\..\stk-assets\textures\stk_warningPanel_a.png" />
+      </Component>
+      <Component Id="cmpBDFC7852035343D247E430EAC145DC73" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{CE937ED7-59EA-4966-B212-F8AFE94BE8EB}">
+        <File Id="fil55B7EF104C487B0B9C75057114C12F80" KeyPath="yes" Source="..\..\..\stk-assets\textures\stonetex.jpg" />
+      </Component>
+      <Component Id="cmp08E5C018CE3DB3AF4217A9E1B69A3C2B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{316087EE-1FC0-4F59-A963-D70B8ABB7D2D}">
+        <File Id="fil6F2B28B7BA5FF7F74F5FFE9673DBDF77" KeyPath="yes" Source="..\..\..\stk-assets\textures\summersky_b.jpg" />
+      </Component>
+      <Component Id="cmp63B5CB78482816741DEB3CB0CF3BA249" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{90982DAF-0C27-40A2-B3E8-905AACAE8183}">
+        <File Id="fil146AE267AFC793AB99A99E58F63C9A92" KeyPath="yes" Source="..\..\..\stk-assets\textures\summersky_e.jpg" />
+      </Component>
+      <Component Id="cmp9A51DAB9A7020812D86514696E92A66F" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{862E6BC8-8F03-417F-AAD1-A68668969BDA}">
+        <File Id="fil69131DDCBB8F98B4001BC35216B88489" KeyPath="yes" Source="..\..\..\stk-assets\textures\summersky_n.jpg" />
+      </Component>
+      <Component Id="cmp3266D108A34DF6006A65E2434D9A2BA0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{331DB490-BB24-4A82-A60C-6239D190AADD}">
+        <File Id="fil7DD4D0E2F4253AE1954697F81C0C2DFF" KeyPath="yes" Source="..\..\..\stk-assets\textures\summersky_s.jpg" />
+      </Component>
+      <Component Id="cmp47E3326341AF5CCEB069245E42351E92" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F3AAF75D-28CE-4C33-BF4D-C300F4BA4633}">
+        <File Id="filC6B88289C8C9B29D9A7B8617BCE6DCEA" KeyPath="yes" Source="..\..\..\stk-assets\textures\summersky_t.jpg" />
+      </Component>
+      <Component Id="cmp03334254E38DB24B265F803119BE8CB1" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D432F4F9-AB3B-42F6-9DA5-D1F7C908F8F9}">
+        <File Id="filDBCAEC99DAE424523A9D86C2EA9D5BE4" KeyPath="yes" Source="..\..\..\stk-assets\textures\summersky_w.jpg" />
+      </Component>
+      <Component Id="cmp78F499C5A1BEC97488A2274A6D0851DA" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1C67FF91-53A6-4C47-8F74-2A4DC65486CA}">
+        <File Id="filBCFAD31F6813DFAE69BA9F02B0EEFA32" KeyPath="yes" Source="..\..\..\stk-assets\textures\tapis.png" />
+      </Component>
+      <Component Id="cmpF8BE23922D7D2B52B661E7EE0207F715" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D881ADFE-EE95-4A96-BB1A-E0EDB8E4B158}">
+        <File Id="fil6DA1DEF0BC840F721521CD341AEC58CC" KeyPath="yes" Source="..\..\..\stk-assets\textures\tarmac.jpg" />
+      </Component>
+      <Component Id="cmp15943FEF198A37D28ED2F8253876D8A6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3301D3E2-D204-446E-97E8-E9A15591F5DC}">
+        <File Id="filC6AA0A40F8FCF73274257EA9A446AC95" KeyPath="yes" Source="..\..\..\stk-assets\textures\tiles.png" />
+      </Component>
+      <Component Id="cmpB32E1495932980923935714D3F5440D7" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B00D80A3-F14E-4C2A-B839-098B16AE0AA7}">
+        <File Id="filF6B535D1084C867BD875B18E9F673584" KeyPath="yes" Source="..\..\..\stk-assets\textures\TiZeta_barkM.png" />
+      </Component>
+      <Component Id="cmpB993731A1AB673695EE44FED02559454" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{041517C7-2A62-44A4-B26E-0ECD394EEDD4}">
+        <File Id="filBBCBFCA2235B70DBD449AC38F7A4BCD9" KeyPath="yes" Source="..\..\..\stk-assets\textures\Tizeta_grey1.png" />
+      </Component>
+      <Component Id="cmp6BCEDDFF263B94175CADCB0C7CA58B45" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{288FDE88-F279-4636-9363-7890B0CC0C0E}">
+        <File Id="filA354D6EE3B493B87E788C868D91DF2FA" KeyPath="yes" Source="..\..\..\stk-assets\textures\TiZeta_ivy.png" />
+      </Component>
+      <Component Id="cmpEC3582AF65B33A4394770599C3BCD39B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7F0A798C-7CEB-4B31-B3AF-9A29962F2301}">
+        <File Id="fil9F3059017194AA9E591F3DA328352F3E" KeyPath="yes" Source="..\..\..\stk-assets\textures\toll_roof.png" />
+      </Component>
+      <Component Id="cmp9643678283D45019689DA52276FBC8F0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{EA58B0CF-A388-4AC7-9158-6178946AAC0B}">
+        <File Id="fil967D7E37EF1D0F81E5FF69868A053B96" KeyPath="yes" Source="..\..\..\stk-assets\textures\to_black_rockMountain.jpg" />
+      </Component>
+      <Component Id="cmp6CDF5247DCF23730C65A07F3A04EE3D5" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1359514E-C8C8-497E-8F52-8E7900E130E5}">
+        <File Id="fil8F108D952ED7AE4AFCE281B133BA2782" KeyPath="yes" Source="..\..\..\stk-assets\textures\track.png" />
+      </Component>
+      <Component Id="cmpD42E3ADBED323891FE32E05BF0E42D2A" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3BB56FBB-8188-472A-B7AF-16BFF1674600}">
+        <File Id="fil09B2BBF923A093FBA1187A5CFBC09D87" KeyPath="yes" Source="..\..\..\stk-assets\textures\track2.jpg" />
+      </Component>
+      <Component Id="cmp3B016083634F3FD98CA7DF1A0635E553" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{D0D4F60D-5093-4456-85E9-2D93CFE30A69}">
+        <File Id="fil54737141D7934EA3053BB50DBA4D01BC" KeyPath="yes" Source="..\..\..\stk-assets\textures\transparence.png" />
+      </Component>
+      <Component Id="cmpE063884D340F8911C139A4A65667A731" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E4D11EA5-3B8E-41BD-8617-61F528EA6F37}">
+        <File Id="fil04772353E5B7B4ACBB0D53ED27B25E0A" KeyPath="yes" Source="..\..\..\stk-assets\textures\transparence2.png" />
+      </Component>
+      <Component Id="cmp8AB57001D977B66598BBA508582327BD" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DCB2A777-C602-402C-8165-0AC0B2AE8EEA}">
+        <File Id="fil193257F852EBBC977FE75D913A6E8129" KeyPath="yes" Source="..\..\..\stk-assets\textures\tree_1.png" />
+      </Component>
+      <Component Id="cmp804C5709EDED026D1940B6F3477BD6E0" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{839C6549-F713-4D11-B482-5CCBB1AAA22D}">
+        <File Id="fil0A1EFEC9AEB3F868FF7AB154BA99A841" KeyPath="yes" Source="..\..\..\stk-assets\textures\tree_cut.jpg" />
+      </Component>
+      <Component Id="cmp5145D86BB40735BA665E260B3996D120" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{1D334762-8FDE-4871-9032-DFD01752AE91}">
+        <File Id="fil6F7AED47E471C4E0E33450F973FB51B2" KeyPath="yes" Source="..\..\..\stk-assets\textures\tree_zen.jpg" />
+      </Component>
+      <Component Id="cmp29076D45B11A361DD30EB93AC30CFEAA" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B188908E-2D95-4463-81AD-D40650EF0F65}">
+        <File Id="fil2D97B638356C5EE283F20AEB6EAE34D8" KeyPath="yes" Source="..\..\..\stk-assets\textures\trophy_glossmap.png" />
+      </Component>
+      <Component Id="cmp7C51BF87A6EB9A7561099238B831B7BF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{799A070C-E694-4791-9384-F23364897D0D}">
+        <File Id="fil703DD49D525D9E9A014571E015505B73" KeyPath="yes" Source="..\..\..\stk-assets\textures\unlit.png" />
+      </Component>
+      <Component Id="cmp7539F772C65902C1D2D3502C99721764" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7393E5BE-7E85-4B46-A194-E5825E266F72}">
+        <File Id="fil0AA282ABC0FD39DCC1A482FABC17D4FB" KeyPath="yes" Source="..\..\..\stk-assets\textures\vegetation_1.png" />
+      </Component>
+      <Component Id="cmp4879B15CD396DA0D100DC74345F16F1C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F4437B2B-006A-4CAD-A921-2D554F255098}">
+        <File Id="fil494A1E27E02E27E8FB672A19F90EC3E2" KeyPath="yes" Source="..\..\..\stk-assets\textures\wall_rock.png" />
+      </Component>
+      <Component Id="cmp7705EB0B6DB4B05EDEF90C1BDE3CF136" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5165829C-F464-4AFE-8E18-AA3036876DD8}">
+        <File Id="filB6ACDFE63264C9F9DF0CEA757E418544" KeyPath="yes" Source="..\..\..\stk-assets\textures\water-splash.png" />
+      </Component>
+      <Component Id="cmp7792680B8E04A08E93F84C822C7D7BAE" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7421D097-D1FE-478C-827B-29713164CC44}">
+        <File Id="filB57BDD4EAFF98FDD7B5AAB152F965D42" KeyPath="yes" Source="..\..\..\stk-assets\textures\waterfall-particules.png" />
+      </Component>
+      <Component Id="cmp6960C7E0A9BF554E956AC2197B7817F3" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{FD375BE5-A796-45D7-BADC-C2FF408FE2D1}">
+        <File Id="fil31B3A94E42A5A3877A07B23DB36DF157" KeyPath="yes" Source="..\..\..\stk-assets\textures\waternormals.jpg" />
+      </Component>
+      <Component Id="cmp43BC30C76959C6D8227D1AB7C8A84FFF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{5179D35E-303D-4602-A736-3C6A2F150C2D}">
+        <File Id="fil1119BE031BF96D3EDCE4684BFA4EBA39" KeyPath="yes" Source="..\..\..\stk-assets\textures\waternormals2.jpg" />
+      </Component>
+      <Component Id="cmp15FD0985CC325821D5839189697FB0FA" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A3FBC641-1612-46FF-92B4-66A0912655A2}">
+        <File Id="fil3271C0792715A29698897471E5A75B77" KeyPath="yes" Source="..\..\..\stk-assets\textures\waterparticles.png" />
+      </Component>
+      <Component Id="cmpC157702500F3E513CA5A30D47124563C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{B4C47D68-5D04-40C6-9401-24756C04A5B8}">
+        <File Id="filD7370126EE29A4DA1BE844B920427965" KeyPath="yes" Source="..\..\..\stk-assets\textures\water_light.png" />
+      </Component>
+      <Component Id="cmp0F379DDAF02E782687110197DB20A37E" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E699689D-3A42-46E9-8031-3E118B028EAB}">
+        <File Id="fil63049662C0D399428F47C3B60197F4C8" KeyPath="yes" Source="..\..\..\stk-assets\textures\woodBridge.jpg" />
+      </Component>
+      <Component Id="cmp92358FCAED466504A1DF2A8DF7717B6B" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{E4166227-1D3B-4EBB-B051-DDAF9C6E5185}">
+        <File Id="fil5693A31045916068C3E61AEB5EF23B2F" KeyPath="yes" Source="..\..\..\stk-assets\textures\wooden.png" />
+      </Component>
+      <Component Id="cmp428179FEC3DB54D7A1047262622C9A7C" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{7F2507DA-0944-43A3-8DD3-ED0F1546739C}">
+        <File Id="fil2CFF1FFFED694B1E2C1099884A6F67F9" KeyPath="yes" Source="..\..\..\stk-assets\textures\wooden2.png" />
+      </Component>
+      <Component Id="cmp601AF9D7D5A635BAE6D836C5D4A40EAA" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{F1CCCE5B-9C31-4D98-BB38-70B69D58DE5D}">
+        <File Id="filB3CDAB7EABCB40D5AAFAD9D51DE25EB0" KeyPath="yes" Source="..\..\..\stk-assets\textures\woodPost.png" />
+      </Component>
+      <Component Id="cmp334C67ED1506070C7CB80BF46D6AC523" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{DC281793-4764-4001-9B8C-154C32EC6CDD}">
+        <File Id="filBBFA8BE8F976E7619C375E98AD08AF99" KeyPath="yes" Source="..\..\..\stk-assets\textures\wood_planks1.jpg" />
+      </Component>
+      <Component Id="cmp5BE64040F7CB8F0A79A492122B8DCC52" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{795F8A45-406D-41CE-9146-3887506B55F7}">
+        <File Id="filFFB18667D6B28B0F244223AC25EACA5A" KeyPath="yes" Source="..\..\..\stk-assets\textures\wood_planks1_alpha.png" />
+      </Component>
+      <Component Id="cmpB6609F1E8D9CEF93EA2AD637D19870FC" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{74E4BCFF-D803-4203-B99B-7D3331FC3AF5}">
+        <File Id="filC2640879471EFD03CECC988BB7EA59F2" KeyPath="yes" Source="..\..\..\stk-assets\textures\yellow_dirt.jpg" />
+      </Component>
+      <Component Id="cmp581C11C0AED0AF26E471A301A0A3EDCF" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{3736CA25-38AA-4C2E-9F85-8A333678FB7F}">
+        <File Id="fil53A1975268238539F60DA130A2C438DB" KeyPath="yes" Source="..\..\..\stk-assets\textures\zipper-particle.png" />
+      </Component>
+      <Component Id="cmpA20883F91187612ECDAE1AD281AD3250" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{90EBABB5-3322-493B-A280-B8683C0F970F}">
+        <File Id="fil85B9292A72ACC5DBF655EAA74A8387E8" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\bananawrap.png" />
+      </Component>
+      <Component Id="cmp8DE64B918126F040C9F2EC0271C2C95A" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{F69B62D0-D5B4-4982-ABEB-7BDAF754665A}">
+        <File Id="fil3957A7B9DA0CAE9A7827B76DD6E685BD" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\bonusblock2.png" />
+      </Component>
+      <Component Id="cmp8004ABCADDE77A5E58DB2AF35F83DC7E" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{9EA4C1D0-3153-41AF-87A6-D3AEB9B464A6}">
+        <File Id="fil3A0885EAA6AA7110D78D4F590EDDD977" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\brick.png" />
+      </Component>
+      <Component Id="cmp011D4157E55294F3ADA71D5CB9789422" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{FC2C7812-4974-409D-80AF-3947F11EFF81}">
+        <File Id="fil103B1E2D0B160B3DD413E560B50B3E8D" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\bumpy_surface.png" />
+      </Component>
+      <Component Id="cmpA04F8A920F862C6E2C522464E6880B21" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{612F5EE3-B5A0-46AF-88DA-5072AAEA8B89}">
+        <File Id="fil288F1F1175A0B2B574FB7830418881D4" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\bush2.png" />
+      </Component>
+      <Component Id="cmp7A8EC899FBD0B8F39DBEE4616911C2B2" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{BFDCBCC1-DB90-48C0-9A2F-EBD16C06E0BD}">
+        <File Id="fil5F41CDA7BA0312344E0AA18364399C4B" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\butterfly.png" />
+      </Component>
+      <Component Id="cmpB13895E6344271B24C1BBDE55A6F7073" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{D96E89CE-9987-41AF-89CE-75EE7F961B06}">
+        <File Id="fil497C6367692A6B29D8F29F0A3BF61F2F" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\chrome.png" />
+      </Component>
+      <Component Id="cmp0857BD689EEC398F7A88C39639D8FC27" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{55740C79-89F0-4A83-8B9D-60947351477F}">
+        <File Id="fil6A97D028EB98B788312716C640C684B1" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\chrome2.png" />
+      </Component>
+      <Component Id="cmp5419CF79C9F6DBC92A2671CCB82AB18F" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{16851FC4-6230-4539-B82A-5F8AA20E56D9}">
+        <File Id="fil443346A7FAF32810997428EA566E4534" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\concrete.png" />
+      </Component>
+      <Component Id="cmp9BF4933F4865A8D3B28DCB376F7F271E" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{7B709053-1981-4501-8BA6-26E2D36F3E32}">
+        <File Id="filD9F3F5B088C0162E537D8B02D61B4CD1" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\coniferous_tree_alpha.jpg" />
+      </Component>
+      <Component Id="cmp388B39667EA0BC64774A34DF31AAC0CD" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{DCE4BE9D-3BFE-4824-AABD-045ED1B90A8E}">
+        <File Id="filF0BFCCE0D1092E28E3492BE94609EEED" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\dirt.png" />
+      </Component>
+      <Component Id="cmp94A3C561BBF71BD9AEC4ED73A0B398D0" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{19A6A4FB-88E1-46CE-A2EC-734ABC073DD8}">
+        <File Id="fil855D89E03BA9319034468C6A099F36DA" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\egypt.png" />
+      </Component>
+      <Component Id="cmp647257EC840E55D0F45419E7AFA080FD" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{6F677CF1-69CB-49C0-BD28-8930C7386065}">
+        <File Id="fil96466F2A6E1F4FD97DAB229CED4C2CD6" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\fence.png" />
+      </Component>
+      <Component Id="cmp0E5A665149C785AC647116DD9A945DBA" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{858BE0CB-C3F1-4BF2-A44D-6E961544AA09}">
+        <File Id="fil7C8FD079BDC49AE7799CED64C09AE464" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\flames.png" />
+      </Component>
+      <Component Id="cmpE65C7E647229EF84D1E54F5AA3A64F10" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{9D4906C9-372A-4F29-B2F0-8F7169DCCD46}">
+        <File Id="fil952EF01E83D0C9F679089C918EF4B8F5" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\fuzzy.png" />
+      </Component>
+      <Component Id="cmpB1398F0EB3C5B84C5DC63A7D46BFDC67" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{176AE361-F653-41F7-B990-F8C7BD433804}">
+        <File Id="filC0DD7C2C7CEABD995306CE73BCFF943B" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\grass.jpg" />
+      </Component>
+      <Component Id="cmp467046EFE90A6A85348C51CC336A5CA3" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{1FBC42A6-2A0D-4A4F-86CC-7201AABE346C}">
+        <File Id="fil38718AD7AB67E9909149F5FBBB24F5EE" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\grass4.png" />
+      </Component>
+      <Component Id="cmpF3F33F2C8BF2BE5E9891D31B2A7B4D73" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{A0DF3131-B1EC-468E-B926-1E4151216D02}">
+        <File Id="fil2E8727DE7666F05D7E0FF6781A7C9EBE" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\logs.png" />
+      </Component>
+      <Component Id="cmp87C5B567A7F13B94B1897AC8C87FFAB9" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{9D0E0FDC-3E0B-41F7-BEA1-364526171382}">
+        <File Id="filDA0C92993FC3B96B6116A2EDF2FC53CF" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\lscales.png" />
+      </Component>
+      <Component Id="cmpE62E8E694F9C21C43E3DC765B3D39FD9" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{F5141A87-E8EB-46A9-8AEB-0EEAD13AD31C}">
+        <File Id="fil2CDF7C8F8439182C269FA60F302C1992" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\materials.xml" />
+      </Component>
+      <Component Id="cmp1B26D842B94B8B652E4A12B589018FA1" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{96578ECE-7FD1-4D8B-9223-B4EECC583DA9}">
+        <File Id="fil5FC47E8EE21C5169DE965499375D0B77" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\metalgrid.png" />
+      </Component>
+      <Component Id="cmp3D224E8CA1D478300D7AC5710BAEBD18" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{78D93687-14B8-475E-A617-06EDBF31AD5B}">
+        <File Id="fil4F41BC019DC573EE27D65D2DA8F561C0" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\oakbark.jpg" />
+      </Component>
+      <Component Id="cmp3916522B5707B3DBB06505CDAE61E344" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{6C47CE9F-DB40-46E5-862B-88F5AEC16015}">
+        <File Id="fil36023D31BBB904DAA6B0AFCFFF093DBE" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\oakleaf_fall.png" />
+      </Component>
+      <Component Id="cmpACB562177EDA0A19F9F09E9E269CEC02" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{94B44FB1-826A-4ED9-866E-65D4A57F40C5}">
+        <File Id="fil1487264A49811ECD1B7027E050F83045" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\pebbles.png" />
+      </Component>
+      <Component Id="cmp5CEA019E004C9C8290DE784E4181ED82" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{804389B6-585B-4AA5-B3B1-162A8D39A3A1}">
+        <File Id="fil169520613DD9098C4A34CC8AF4820E3F" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\purplenebula.jpg" />
+      </Component>
+      <Component Id="cmpEDD92E58400DFACFC2D14FCFFC446D78" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{AAFB3A89-D0AB-4CE7-8675-13D797DA4873}">
+        <File Id="filE18C538D1F5249C5024C57387E0C96EF" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\purplenebula2.png" />
+      </Component>
+      <Component Id="cmpDA1733CF9B229C816838EA830AF0FA58" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{6D0B8EF5-D34A-4FDC-9AA6-A574A6D9C2BF}">
+        <File Id="filB57897AC1CD2BB6E21DE0DFEDCE43D7E" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\railing.png" />
+      </Component>
+      <Component Id="cmp8AAF56282B852741D44DEDEFC9ED0F2C" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{2ACD3625-0EA9-428F-9583-A613494D77E7}">
+        <File Id="filFD0185E0794038438541977EF3EA9A41" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\redwhite.png" />
+      </Component>
+      <Component Id="cmpF23BBD028F8BA4DD37D2BA8072D62EF5" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{C4A4D30F-D4F8-4300-81E4-8CE39DC13242}">
+        <File Id="filCFD217EBA081C96067240D903548F45F" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\skyscraper1.png" />
+      </Component>
+      <Component Id="cmp14876440441F0CD3A9B730F5FB6A3D07" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{F44F7C28-71E1-4840-A021-2225EF1FF8E9}">
+        <File Id="fil88C002A8CA97EF3BD44EEA5620C45072" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\skyscraper2.png" />
+      </Component>
+      <Component Id="cmp3EECDB240FD7B00EF28BC78736B52376" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{3925913D-A7CD-4BC6-8F58-977C607D2395}">
+        <File Id="filA1683D384723838F962716B31EB7DD49" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\skyscraper3.png" />
+      </Component>
+      <Component Id="cmp275CE1B0F88BCE4CAE81146C99E881D2" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{E6DF0B65-35EF-497F-B8BF-FD792409879E}">
+        <File Id="filCD9E41EF2607ED9D6AE19FD1E697227D" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\skyscraper3a.png" />
+      </Component>
+      <Component Id="cmp313BF81D8DDDBD52139EB0CA1EA8B3AE" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{379B1515-0AF7-4C17-A306-9588BC0E4554}">
+        <File Id="fil7D518EBC9435A9295FDDCD859628B4B8" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\stonewall.png" />
+      </Component>
+      <Component Id="cmp438273707A313BFCF6E2A7AEFE551964" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{4777956E-E023-43BA-990D-BC9FE0C36FD2}">
+        <File Id="filE8C5FEAA1CA6146224AF65D7214DF3FF" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\tinytux.png" />
+      </Component>
+      <Component Id="cmp30689712BECB9D5297AAC6D15AF44689" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{9C79AE9B-BD00-48CA-BA18-9A77D8C85F5A}">
+        <File Id="filBB26CF81BC7B48FD4853E184415FF9DC" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\trackborder.png" />
+      </Component>
+      <Component Id="cmp2D58F27271FE472017D99539A45D93A2" Directory="dir924CABAF0CED24D41D6E8BB265FA034B" Guid="{E59572BE-CC11-4BC4-A1AD-BEB39DFA0D2C}">
+        <File Id="fil8FAF07469C6C8254412A26B19A34E738" KeyPath="yes" Source="..\..\..\stk-assets\textures\deprecated\wood.jpg" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

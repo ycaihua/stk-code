@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="sfx">
+      <Component Id="cmp9D2EA8D7F0939AFD704DB3F75DE79A3F" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{5CA4673C-BA28-4A98-A87A-0D12EE31AC5C}">
+        <File Id="filB42B86657DC9096DE674A103B9C9964E" KeyPath="yes" Source="..\..\..\stk-assets\sfx\airplane_jetEngine.ogg" />
+      </Component>
+      <Component Id="cmp987584E5FA417C9D128AEDA48B507885" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{3EDB0FFC-12EF-40B0-8203-1582E871BEE8}">
+        <File Id="filF14B293A4451A009519E78BA92697BFF" KeyPath="yes" Source="..\..\..\stk-assets\sfx\anvil.ogg" />
+      </Component>
+      <Component Id="cmp51764361E26DBD890B156E1D248F2324" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{36879419-0F90-4673-9F78-B155A424DB55}">
+        <File Id="filE0AE493A98A01C0B3635DB91841E70CB" KeyPath="yes" Source="..\..\..\stk-assets\sfx\appear.ogg" />
+      </Component>
+      <Component Id="cmpD902CEB2326D6ABFE0872A93ACB12602" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{F6525641-DF95-4332-8CDE-7629C8542CE1}">
+        <File Id="fil852AA53F080D03D3A37297B7993510AD" KeyPath="yes" Source="..\..\..\stk-assets\sfx\ball_bounce.ogg" />
+      </Component>
+      <Component Id="cmp534F1998F791C887B365C3373209402B" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{21C010F1-1249-4704-B2C3-506D4EAD6FDC}">
+        <File Id="fil6EECDB67306671E8BAE58CE81DB1FC18" KeyPath="yes" Source="..\..\..\stk-assets\sfx\boing.ogg" />
+      </Component>
+      <Component Id="cmpAFE3658117B362A52ABDBFC4B1CABB12" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{858514A2-F2AC-40B8-8F9D-0E9610D20DB6}">
+        <File Id="fil2EA622A48BEA93C0D7980A652210DD80" KeyPath="yes" Source="..\..\..\stk-assets\sfx\bowling_roll.ogg" />
+      </Component>
+      <Component Id="cmpFF7B7597E14D13B46166FE5C76B8B36C" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{EDC614CD-CB3D-4C0C-9CF4-BD6254899FD1}">
+        <File Id="filF077458F90AF73F6AB6D5E8B9B338BA9" KeyPath="yes" Source="..\..\..\stk-assets\sfx\bowling_shoot.ogg" />
+      </Component>
+      <Component Id="cmp1302A1A219D096A30639BB2FA0353D6F" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{4FBD8A3B-3C59-4FDD-A6DF-388879BB0992}">
+        <File Id="fil56702A1C4F664B9223574208EBB20B77" KeyPath="yes" Source="..\..\..\stk-assets\sfx\break.ogg" />
+      </Component>
+      <Component Id="cmpCFE04037F4B9AD7DE732C41FC7552C85" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{BAF4B211-1421-4CED-8B93-62F071FC7418}">
+        <File Id="filC4FECCF2A1F481221CC6D36F083DDF77" KeyPath="yes" Source="..\..\..\stk-assets\sfx\bubblegum_explode.ogg" />
+      </Component>
+      <Component Id="cmp6C921E7EDC2F9E830A9005850280E721" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{15F3BE64-948A-4582-8520-58E3F933CCEF}">
+        <File Id="fil2E557107EF5CC024475ADC9AE1D42C4E" KeyPath="yes" Source="..\..\..\stk-assets\sfx\bzzt.ogg" />
+      </Component>
+      <Component Id="cmp3838EF3A01AB481EC70BD67ADF74DC3C" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{1867734E-9043-4553-9A53-1443F4AF8484}">
+        <File Id="fil5BEFC47379473185F155672B96C37253" KeyPath="yes" Source="..\..\..\stk-assets\sfx\car_accel.ogg" />
+      </Component>
+      <Component Id="cmp7D33924659CA1BC160C605D1259A5C6E" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{F29342A9-8D32-4F75-A669-FD2E7C4A51B3}">
+        <File Id="fil55C6C9C9AC752AE586313A2290C57C69" KeyPath="yes" Source="..\..\..\stk-assets\sfx\car_revup.ogg" />
+      </Component>
+      <Component Id="cmpDA4D14C11B2A55255B1D3BE01A49EC4F" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{23CDFE43-E9D9-44BE-886F-FBFB746E4D78}">
+        <File Id="filEB8CF10A8D89AAFE6C0390C7FF4FAB12" KeyPath="yes" Source="..\..\..\stk-assets\sfx\clock.ogg" />
+      </Component>
+      <Component Id="cmpE2141A02283BD704A0460381030D9144" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{DED69284-F630-4AD3-B793-2522866BF839}">
+        <File Id="fil24D8F9E2D1D128B8139D07C852436BEB" KeyPath="yes" Source="..\..\..\stk-assets\sfx\crash.ogg" />
+      </Component>
+      <Component Id="cmp276F0A9058B140D8DC90951990765E97" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{68A9F165-61B7-43A7-806C-54671B6C6670}">
+        <File Id="fil7A00BB3FA0589412FA8B641DDF7C84F4" KeyPath="yes" Source="..\..\..\stk-assets\sfx\dark.ogg" />
+      </Component>
+      <Component Id="cmpA7E5432D0F80F183FE79CFA4C7638682" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{4B5D53B8-F67E-424F-AA7E-11E437DAEBE4}">
+        <File Id="filF64389585390FA190FC6DDC0450AC7F5" KeyPath="yes" Source="..\..\..\stk-assets\sfx\energy_bar_full.ogg" />
+      </Component>
+      <Component Id="cmp7EAE8A5B5BF448120D6ED75542E2B230" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{44D8234F-EF51-46E1-B07A-4C18969766B3}">
+        <File Id="fil9B98C3212D7D397774C2D88D8D2D957C" KeyPath="yes" Source="..\..\..\stk-assets\sfx\engine_large.ogg" />
+      </Component>
+      <Component Id="cmpBBD8CE3D64381899910F74C40ACC69A4" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{9C37AF08-4057-4BD3-9523-2912871D9724}">
+        <File Id="fil0EE03729DD0722ED8F202C6FDEF868D4" KeyPath="yes" Source="..\..\..\stk-assets\sfx\engine_small.ogg" />
+      </Component>
+      <Component Id="cmpBAEB9CB5F37FBA4C13AADECB6D908FCC" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{67607615-7AEE-4514-8273-A86961DA7831}">
+        <File Id="fil67657A92E3459815F8068834D0828932" KeyPath="yes" Source="..\..\..\stk-assets\sfx\exotic-birds.ogg" />
+      </Component>
+      <Component Id="cmp916322D849DA6641E8B80B52397BDAB4" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{2874E6C9-CCAD-41CA-9EC4-335B5D2B8BF9}">
+        <File Id="fil1DA352308F86A0A79D1A7F36226DE44A" KeyPath="yes" Source="..\..\..\stk-assets\sfx\exotic-birds_2.ogg" />
+      </Component>
+      <Component Id="cmp4204ADD7DD0A97E3EA85355FBCF01523" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{C3A9BDA9-ECFE-45B6-A0E7-5C3B8029F400}">
+        <File Id="fil7EBBCFD0CAA1222DCCF14050F6708548" KeyPath="yes" Source="..\..\..\stk-assets\sfx\explosion.ogg" />
+      </Component>
+      <Component Id="cmpE903550DB770CE6A0D9CC9181B174405" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{EB9A005E-5699-4ED4-882E-A970F34CA03B}">
+        <File Id="fil7D52C09006FBDD075B6636C8FBF19623" KeyPath="yes" Source="..\..\..\stk-assets\sfx\forcefield.ogg" />
+      </Component>
+      <Component Id="cmp0057A30E386DB55670EE96A4D32CD086" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{8EF85E87-C7ED-4FCB-9FFD-0E20FDE04E2C}">
+        <File Id="fil05E9A5D2637D754321C449D5F0035E7D" KeyPath="yes" Source="..\..\..\stk-assets\sfx\gnu_flute.ogg" />
+      </Component>
+      <Component Id="cmp45E3957C610E6612EE86557CC392D6A6" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{0520709A-5255-4AAF-ABD6-D0C8326AAC26}">
+        <File Id="filEED2CC6C339F6BA96D9F20CE1CC18B26" KeyPath="yes" Source="..\..\..\stk-assets\sfx\goal_scored.ogg" />
+      </Component>
+      <Component Id="cmpFCEED0455C8E25574E3993B738F25630" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{2910FA58-C5DA-4304-84A3-FE074A38BE03}">
+        <File Id="filC6F85FAD2F78C9E7A3AD3B563809ED49" KeyPath="yes" Source="..\..\..\stk-assets\sfx\goo.ogg" />
+      </Component>
+      <Component Id="cmp01CEACC31EEDC5A9781A3A3E075201A8" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{09BFCE2A-79D9-4182-A4FE-67DED0926970}">
+        <File Id="fil55E10684B62F45F795B29C1EA02E25C2" KeyPath="yes" Source="..\..\..\stk-assets\sfx\gp_end.ogg" />
+      </Component>
+      <Component Id="cmpDBC483027C86D97BF7B25D8A52FE6F1D" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{FBD976EF-4472-484F-B3A6-49E15BFF1A98}">
+        <File Id="fil1099F2A3CC961559AA68B3930595D262" KeyPath="yes" Source="..\..\..\stk-assets\sfx\grab_collectable.ogg" />
+      </Component>
+      <Component Id="cmp542F7A9E4E0380C395AE9D757F28AEAC" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{27410906-22A9-49C3-8D45-080383BBE1B2}">
+        <File Id="fil9C1F30A69F5F0FC6776F76FD2B48A458" KeyPath="yes" Source="..\..\..\stk-assets\sfx\hammer.ogg" />
+      </Component>
+      <Component Id="cmp391E36FD9C37D1A398A113DF0264B39E" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{2A803001-FF0C-4EE2-ADAE-6F9C62DDEC7D}">
+        <File Id="filE83071CC64C5B1CD74B014A26E94582C" KeyPath="yes" Source="..\..\..\stk-assets\sfx\horn.ogg" />
+      </Component>
+      <Component Id="cmp6BE36B053F427CCB402A151C1A31CA7D" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{027CF47E-B76B-419C-9C47-430D2025CFBC}">
+        <File Id="filB4DE4486970CAE1782FF30C85B5E405F" KeyPath="yes" Source="..\..\..\stk-assets\sfx\inflate.ogg" />
+      </Component>
+      <Component Id="cmpE6C442824B80CA566D8550810AEC9B45" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{FEB6FEFE-91F0-4DEF-B391-859B09E0A861}">
+        <File Id="fil08AD48BFCB30C2CDF5BBDEB32373819C" KeyPath="yes" Source="..\..\..\stk-assets\sfx\jump.ogg" />
+      </Component>
+      <Component Id="cmp6BD7BFE99C5B91E8629EF9E1DE1EB622" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{0F09DF32-1E0F-4964-B6EC-CB8C72C23C20}">
+        <File Id="fil8E59A3F32A9C9C2C82E0D43D9435D80B" KeyPath="yes" Source="..\..\..\stk-assets\sfx\last_lap_fanfare.ogg" />
+      </Component>
+      <Component Id="cmp283D31FA205AE4B4BDC4DD9088FCA98E" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{6B82F1BA-5316-4DC6-BA06-E8C33CEABF12}">
+        <File Id="fil3407735DB3CA62F1E6494735B7786F85" KeyPath="yes" Source="..\..\..\stk-assets\sfx\License.txt" />
+      </Component>
+      <Component Id="cmpBBAB91ACD4EEAF4573FE69096ECC837E" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{14400A37-B031-4D93-9DAF-FCE4F1D5744A}">
+        <File Id="fil76ECA0573C55BEA8C006CA94006D1985" KeyPath="yes" Source="..\..\..\stk-assets\sfx\locked.ogg" />
+      </Component>
+      <Component Id="cmp1C5F50E3E440CB8EE2C82D1C94032AFD" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{A73F3477-DAB8-4990-B609-72DA2DE71813}">
+        <File Id="fil2D9FB148AE043B56FF1164C8C45A25B3" KeyPath="yes" Source="..\..\..\stk-assets\sfx\machine_sound.ogg" />
+      </Component>
+      <Component Id="cmp0AB1FEF19326194C87650494A378A15E" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{92C65F23-67D8-4059-A106-B15E6C1A6C6F}">
+        <File Id="fil99F48D39FC73676E7A4F25D19E3BC756" KeyPath="yes" Source="..\..\..\stk-assets\sfx\metal_clang.ogg" />
+      </Component>
+      <Component Id="cmpE1C96A44CFCB327431E046211F49E5D4" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{4D92EA8D-7234-4DA1-B6A6-46A85BE80D16}">
+        <File Id="fil39AC59B71FAE0684003192C1B1BEF904" KeyPath="yes" Source="..\..\..\stk-assets\sfx\parachute.ogg" />
+      </Component>
+      <Component Id="cmp5AE4932A36251AD6CEC8C3B94E9FDC22" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{E397DD8F-41E2-4C8A-B517-F1CBBCACF7A4}">
+        <File Id="fil0E63C4943B58DBE4337780DA18739598" KeyPath="yes" Source="..\..\..\stk-assets\sfx\plopp.ogg" />
+      </Component>
+      <Component Id="cmpAD5441D0E8715B58341209785819746F" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{E2D722C0-50C8-40FE-BF57-76B4F1069082}">
+        <File Id="fil229DC34D70874F367B9E3381DAADDCA3" KeyPath="yes" Source="..\..\..\stk-assets\sfx\plunger.ogg" />
+      </Component>
+      <Component Id="cmp6CF60E019BB0DA4F767D92494C1086DA" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{623C8637-C28B-4EE4-BC1B-27B0EA776D31}">
+        <File Id="filC90B65EF066086638B184F5A675E7176" KeyPath="yes" Source="..\..\..\stk-assets\sfx\portal.ogg" />
+      </Component>
+      <Component Id="cmp227F963674E7C08D08F9700AE0E4243D" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{34F05E92-C5E3-45F3-923F-0BB4807F7AC6}">
+        <File Id="fil152BFEE3CCF75031BD4F6653A492B8B9" KeyPath="yes" Source="..\..\..\stk-assets\sfx\pre_start_race.ogg" />
+      </Component>
+      <Component Id="cmpC07636B8F3DC019F9D1E1ECCC0C38199" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{FE386C17-65DE-46E1-9276-8114F57EBD0F}">
+        <File Id="fil6CF314B441E4DCE1C51DA3AD24597C89" KeyPath="yes" Source="..\..\..\stk-assets\sfx\race_finish.ogg" />
+      </Component>
+      <Component Id="cmp3A5948D7B177AE412FBA3466AD2E93EA" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{FD42D2CF-F38A-4E78-8FC4-BCB16A5CAF94}">
+        <File Id="fil29D15D3B5BFFF82C9C414BBFF0C2F810" KeyPath="yes" Source="..\..\..\stk-assets\sfx\rain.ogg" />
+      </Component>
+      <Component Id="cmpF920C30B99A14149E80ECAF185517189" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{7905FAD1-AFC2-4CC2-9AFC-0A221C9589A5}">
+        <File Id="fil2A0B12A2020BF86CADC24267480D08C6" KeyPath="yes" Source="..\..\..\stk-assets\sfx\river_loop.ogg" />
+      </Component>
+      <Component Id="cmp7CFE945CD9347A480B948AA6114201D2" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{96429419-8047-41BC-8C1F-1F5D74CCAC7B}">
+        <File Id="filDC81F075F00B9149AF77EE19FBA234B0" KeyPath="yes" Source="..\..\..\stk-assets\sfx\sfx.xml" />
+      </Component>
+      <Component Id="cmp9E0EC5C77F98F265883B72E61A06D836" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{2AEA6BC9-4543-46C2-93D3-BB37714F2151}">
+        <File Id="filAA72D10B4808FA642DB7300A7E8A7C8B" KeyPath="yes" Source="..\..\..\stk-assets\sfx\shoot.ogg" />
+      </Component>
+      <Component Id="cmpE3BE50591A56A682F6B605BCD541B065" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{40AB8165-6D12-4272-B1F2-DFC41A090E55}">
+        <File Id="filE69BECF9C47886A0B2518CEDE07189E5" KeyPath="yes" Source="..\..\..\stk-assets\sfx\skid.ogg" />
+      </Component>
+      <Component Id="cmpF35FB5F6A63A3B9AC03B82BEA90AF701" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{A1599BD4-9942-4F09-AC24-B7FB5C698FD1}">
+        <File Id="filC358DB272113B2D277D3897ABACD4B96" KeyPath="yes" Source="..\..\..\stk-assets\sfx\spaceship.ogg" />
+      </Component>
+      <Component Id="cmp3EAEB4CA63EECE50F9A3A12589959DF2" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{B5C1D35B-6705-4BC6-BF57-DBD92E5A59CE}">
+        <File Id="fil0DFB57D3010106A49E7D2A903405A34A" KeyPath="yes" Source="..\..\..\stk-assets\sfx\splash.ogg" />
+      </Component>
+      <Component Id="cmp81C209D0A8D1E17DBBA81CE51C4B87B9" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{1904682C-6C75-43D6-8FF4-0BA0889D585F}">
+        <File Id="filB18E228049159D9B578BA41461064809" KeyPath="yes" Source="..\..\..\stk-assets\sfx\start_race.ogg" />
+      </Component>
+      <Component Id="cmpF3AE18501774B484C07641A10F8E8FC0" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{27647935-446C-4F80-9F7E-E5706C5CF9FA}">
+        <File Id="fil9EF3480E4FA2EA3ACA7C4F672D191376" KeyPath="yes" Source="..\..\..\stk-assets\sfx\strike.ogg" />
+      </Component>
+      <Component Id="cmp9355A3D63E3390F5D9F86C53792CEA28" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{F8DA966E-11E7-44B1-B7DF-82F7E3EC7C53}">
+        <File Id="filA5BCD8B87F92EE319FA21869EEFA7605" KeyPath="yes" Source="..\..\..\stk-assets\sfx\swap.ogg" />
+      </Component>
+      <Component Id="cmp296E3126C86624E78D4D25782062B6FC" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{3A76B5EF-E3E2-4D91-B337-F3485026D64C}">
+        <File Id="fil012074762EC078AA38E322FD46314125" KeyPath="yes" Source="..\..\..\stk-assets\sfx\swatter.ogg" />
+      </Component>
+      <Component Id="cmp2C2B09D892D2BB8F41A1C285998D8AD2" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{2DB0F092-5F65-48E7-9D4B-6C4A845CCD22}">
+        <File Id="fil4725A6F58AD690699BD1611CA43E8230" KeyPath="yes" Source="..\..\..\stk-assets\sfx\thunder.ogg" />
+      </Component>
+      <Component Id="cmp9F9C76BDA533ACB493675297973FFCD4" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{E2541FBE-7026-4622-8C0B-CC4FDC644A21}">
+        <File Id="filD12066D2EB3C13E6DD5A0B997C12040A" KeyPath="yes" Source="..\..\..\stk-assets\sfx\track_intro.ogg" />
+      </Component>
+      <Component Id="cmpE59B1B24F5D64F6754776B3B0B7150DA" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{F877B25B-D9C8-4B14-B162-6E6778FEC3FD}">
+        <File Id="fil234584244CB1763F89E80C809E4004EE" KeyPath="yes" Source="..\..\..\stk-assets\sfx\tractor_beam.ogg" />
+      </Component>
+      <Component Id="cmpD38647F57A508B2CC80414BB6F78941C" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{A4AA697A-211B-465D-B36D-1485CB7B12CD}">
+        <File Id="filFA8ED288A280AF3885BAD293CF24A7B3" KeyPath="yes" Source="..\..\..\stk-assets\sfx\ugh.ogg" />
+      </Component>
+      <Component Id="cmp6D389288552375099177EA3B0F932418" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{70FD4893-A7D8-4AD5-A9F7-2475D46925E1}">
+        <File Id="fil40BE58F2F1A938491A11C2EBC4BFDAA4" KeyPath="yes" Source="..\..\..\stk-assets\sfx\waterfall_loop_2.ogg" />
+      </Component>
+      <Component Id="cmpB614A81B5B7A4A85BC19C1950678F2CD" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{D271104D-2E5B-47E6-BABF-5A1C5CAD8BAB}">
+        <File Id="filE25F7407C96E598DAC05E3DEE81D4663" KeyPath="yes" Source="..\..\..\stk-assets\sfx\wee.ogg" />
+      </Component>
+      <Component Id="cmp0DB24FE2176BD34F112010DC31B384FA" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{DDB084CC-8736-4A2B-B8A8-79F8A5AB2630}">
+        <File Id="fil5960F130EED81134863B31E5C9326DB9" KeyPath="yes" Source="..\..\..\stk-assets\sfx\WilhelmScream.ogg" />
+      </Component>
+      <Component Id="cmp992635EE2E1130A1519C05641CFC9088" Directory="dir5EF86FFA29A73D3C88BB4D3FBC366272" Guid="{79E3241B-54B9-4D3F-B014-DA99C51F6366}">
+        <File Id="filF268C75FAE342E15987502AAA82CD7B7" KeyPath="yes" Source="..\..\..\stk-assets\sfx\wooden_bridge.ogg" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

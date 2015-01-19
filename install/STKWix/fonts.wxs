@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="fonts">
+      <Component Id="cmp1A1EAD7AFEA3FD0ECFC90D16BC46CAD1" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{8AE333EB-5EEA-4D17-88F1-5A734F0AA8E5}">
+        <File Id="fil8666F0C3CC1FFEA1A57D77F5ED860230" KeyPath="yes" Source="..\..\data\fonts\AR_PL_SungtiL_GB0.png" />
+      </Component>
+      <Component Id="cmp45C5041EEF1A07E04F431AF01094B501" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{1859BE57-7A21-4288-BA01-59F9F815BC7F}">
+        <File Id="fil8D25DA813B29AD9364C78A4C1CCEC603" KeyPath="yes" Source="..\..\data\fonts\BigDigitFont.xml" />
+      </Component>
+      <Component Id="cmp660B7884857FB2A2CE85ABF6EF46243C" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{F8FFB7EB-83E7-4F44-AB3C-2ECE0505BA92}">
+        <File Id="fil402D93DBDE5F121639C4E04741C9C41A" KeyPath="yes" Source="..\..\data\fonts\comix.png" />
+      </Component>
+      <Component Id="cmpFBFC1788A40971BAAA844EA095CD39D3" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{98596665-50E6-43FB-A4BC-ACDC8C3692E8}">
+        <File Id="fil127D79C039095A2AA1EFDEE982604514" KeyPath="yes" Source="..\..\data\fonts\LayneHansom0.png" />
+      </Component>
+      <Component Id="cmpBDC2BD97845AFB2BDEEDA3264D4B8DEE" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{FAC77F09-1105-4FB3-93AA-CCD625F6CBDF}">
+        <File Id="filB7E2B429F1FD0A650D5015F1B6BE9733" KeyPath="yes" Source="..\..\data\fonts\LayneHansomBigDigits.png" />
+      </Component>
+      <Component Id="cmpBEFB6B084A2AFFE4219CDE5B7CB2C3BC" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{85D19239-7F86-44A0-8D7A-37F122D7F627}">
+        <File Id="fil31CFE003D313B97AA1B40EF7D6E2C8E1" KeyPath="yes" Source="..\..\data\fonts\materials.xml" />
+      </Component>
+      <Component Id="cmpD9ABB72E49667D5A89D0FE76740FF631" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{AC53A2EE-E918-47F5-A2E8-56BAF6EFFE35}">
+        <File Id="filE47F6A9D5AF310DB00D4AF21A8A39507" KeyPath="yes" Source="..\..\data\fonts\Mplus2p_JP0.png" />
+      </Component>
+      <Component Id="cmpC155AB794CF1E7CE4B24532D45E84304" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{92D8AF9D-A595-4423-805A-6DCB70B1F3E4}">
+        <File Id="fil849E0AE8011925029860EB1D01A3C4EB" KeyPath="yes" Source="..\..\data\fonts\rasheeq.xml" />
+      </Component>
+      <Component Id="cmp3EED46A2C054B6C718BDC85076A03B14" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{E2960D3F-8E5D-4633-AD54-B80788CBDA62}">
+        <File Id="filA2CC9B6B0BE90F2490508F23A383AC9C" KeyPath="yes" Source="..\..\data\fonts\rasheeq0.png" />
+      </Component>
+      <Component Id="cmp627142EA3BC40E32E6BA3DD08BDD49DC" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{1BE84755-71D6-4ACE-B3CD-DF90BF330C69}">
+        <File Id="filF37C048B20FEA65CD0A7E53623108FD0" KeyPath="yes" Source="..\..\data\fonts\rasheeq1.png" />
+      </Component>
+      <Component Id="cmp748C376E673CEE3F8CE245F2FD406EB2" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{F3FB6791-0FEB-4E9B-9F38-503C1E4BF6C9}">
+        <File Id="fil5CD5CE80D89C3B6AFC218E348DAB20F6" KeyPath="yes" Source="..\..\data\fonts\rasheeq3.png" />
+      </Component>
+      <Component Id="cmpD2DB309351A5CFA932B3D18AAE0FD704" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{64163CBD-B0AD-497D-8E9A-C7DF463C6BD2}">
+        <File Id="fil384F313A83C2E4BF40D388812A46C78F" KeyPath="yes" Source="..\..\data\fonts\rasheeq4.png" />
+      </Component>
+      <Component Id="cmp77338938B554856076C3732918F1C641" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{C69041D4-5DB0-4D69-A49D-0956FE852D39}">
+        <File Id="fil0AF31E145B4DC6B2C3D9851942374FEB" KeyPath="yes" Source="..\..\data\fonts\sigmar0.png" />
+      </Component>
+      <Component Id="cmpD3C1D9E61B2DDA2646660B5B19B04683" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{9DC3FE42-7559-4C2F-ABFB-A51BF9451FC0}">
+        <File Id="filBF261D9630CC3C6E0D34E3F2BCE6DB3D" KeyPath="yes" Source="..\..\data\fonts\StkChineseFont.xml" />
+      </Component>
+      <Component Id="cmp14EFB5FB24FC9714DDFB1FB577C0643F" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{743F01C6-37CE-497B-A5CC-2435269586AC}">
+        <File Id="fil09780E28BB7DC26205A0449E01F75C81" KeyPath="yes" Source="..\..\data\fonts\StkFont.xml" />
+      </Component>
+      <Component Id="cmp3F1D4B583D2E29EE616A0D5BEAEA59E8" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{BE72EED6-057A-420D-8529-67D4C78EF8E2}">
+        <File Id="fil220C891DDCC85D18748647C879928E39" KeyPath="yes" Source="..\..\data\fonts\StkJapaneseFont.xml" />
+      </Component>
+      <Component Id="cmp3A1723651647312C0F52EEDF13B2C141" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{3E93C98E-725E-4240-9144-FF6377D27EF7}">
+        <File Id="fil94273DDDEC98BB87149891178BC39FA9" KeyPath="yes" Source="..\..\data\fonts\title_font.png" />
+      </Component>
+      <Component Id="cmp45895E0A08D9AF7FA1FF7D2F3D344FC4" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{0D6F25E1-C75A-4994-9EC4-64E16D96E48D}">
+        <File Id="fil648847BD60E4E89E4A033F823F9A66AD" KeyPath="yes" Source="..\..\data\fonts\title_font.xml" />
+      </Component>
+      <Component Id="cmp98777AE7DF3BB3958A09369A12378877" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{659D7186-3724-446C-9D6C-C89A6530885D}">
+        <File Id="fil5B00A1F961A4B9E1217B9FCDBAFD5631" KeyPath="yes" Source="..\..\data\fonts\title_font_2.png" />
+      </Component>
+      <Component Id="cmpC066497F8CD6F5195907BE01B4725769" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{F946CBCF-DDF3-43C4-8C27-00439789D1D7}">
+        <File Id="filD78FB27E84B3EC82070FC8FA5AF5AF3A" KeyPath="yes" Source="..\..\data\fonts\wqyMicroHei0.png" />
+      </Component>
+      <Component Id="cmpC874239C0217703E71AED249A95B0DC3" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{6ACD5F03-B3DE-4681-BA95-9F1C6BC9E5E9}">
+        <File Id="fil9370037F9E8DD9146C2F29323C9FA7D9" KeyPath="yes" Source="..\..\data\fonts\wqyMicroHei1.png" />
+      </Component>
+      <Component Id="cmp9C2B8A63FD0692ECCEE0A3DA67961F52" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{413FA70B-F938-40DD-889C-0DEAFD3CBD44}">
+        <File Id="fil4F07EE08C0E118A2FCD9D94A6C77776B" KeyPath="yes" Source="..\..\data\fonts\wqyMicroHei2.png" />
+      </Component>
+      <Component Id="cmp93C7857C50B2E37D9AB8C38D80275690" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{87B65029-B336-4853-8F67-71479C9B6061}">
+        <File Id="filFE6D517E581F2255B42A8BE275905760" KeyPath="yes" Source="..\..\data\fonts\wqyMicroHei3.png" />
+      </Component>
+      <Component Id="cmp4FB06E9540810C10CD975266FCD76FA4" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{14D42223-9D40-4D83-9C26-D137791B345E}">
+        <File Id="fil18D91CCD4DE2B1FC6BEE30B7B79DB11E" KeyPath="yes" Source="..\..\data\fonts\wqyMicroHei4.png" />
+      </Component>
+      <Component Id="cmp03C9DB97D11C05F03B4C054F935AC133" Directory="dir0D29B8CB1B0A1977F87C47559772BADE" Guid="{A930CAB3-76EE-49FF-9AAB-168FA4C02D60}">
+        <File Id="filFB1032657A34B21BE7F8D3E0518F886C" KeyPath="yes" Source="..\..\data\fonts\wqyMicroHei5.png" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

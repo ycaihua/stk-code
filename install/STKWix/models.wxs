@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="models">
+      <Component Id="cmp3842A9C855C85F101D3228C2013108B5" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{93A73678-3FC2-4F1A-A451-A0EEFE58D65B}">
+        <File Id="filA4AD396ECEC3572EF4889BE15BC1AB1F" KeyPath="yes" Source="..\..\..\stk-assets\models\anchor-attach-icon.png" />
+      </Component>
+      <Component Id="cmpD6AD4F91EADEEB1A0CB20790E17BDCBF" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{B130DCEA-D205-42C8-86F1-A50C52DC6DA7}">
+        <File Id="fil500F39FF4D4D232544BFB60FF8408BF3" KeyPath="yes" Source="..\..\..\stk-assets\models\anchor-icon.png" />
+      </Component>
+      <Component Id="cmpDE94171E22AA7C6CADD800E3506B0D8D" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D3CADDC3-989D-4D53-B6CC-1AA5A316A3ED}">
+        <File Id="filF2C901E26F4E8F9D28A647CD9F0F4101" KeyPath="yes" Source="..\..\..\stk-assets\models\anchor.b3d" />
+      </Component>
+      <Component Id="cmp76A5AA4BDF5C175FB36EB7737B32E388" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{6A405775-364D-42AE-BC28-F6274C512F2A}">
+        <File Id="fil27D90585A2EAF2F0ED975690719EC1D8" KeyPath="yes" Source="..\..\..\stk-assets\models\anchor.png" />
+      </Component>
+      <Component Id="cmpD9A7E721CC8424834A69C6D1F803C2A8" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{4DD180C2-1EE1-470D-A086-C2B549FBAC13}">
+        <File Id="fil5D194B40539126CD755D0DCE9561779F" KeyPath="yes" Source="..\..\..\stk-assets\models\ball.jpg" />
+      </Component>
+      <Component Id="cmp447921AA25EF5510D822296EEF19D65E" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{35026FB9-68C3-46A4-9381-C8DC51D347D5}">
+        <File Id="filFA0EB4BA30A430E7F194E0B27E9484F2" KeyPath="yes" Source="..\..\..\stk-assets\models\balldimpleddark.jpg" />
+      </Component>
+      <Component Id="cmp2237CB4BF4048568891FBBF190B6065D" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{3B8AA87C-F70E-40DA-89F0-4FA9514BBB9E}">
+        <File Id="filA7D2C4DEE77988E16FFF5D53C2B36C0C" KeyPath="yes" Source="..\..\..\stk-assets\models\banana-low.b3d" />
+      </Component>
+      <Component Id="cmpC4D5AD61A6167E241870B67B9C701D34" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{72974A58-BEFA-42F4-A3D8-4BF3A7F59BE9}">
+        <File Id="filD6FF552D622AA97D3A4208696323608D" KeyPath="yes" Source="..\..\..\stk-assets\models\banana.b3d" />
+      </Component>
+      <Component Id="cmp192017482D7810C10691AAED64CBAE61" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{AD25CD67-543D-47A0-81A5-A2ECA00D4C02}">
+        <File Id="fil7B1A3A0E7C0A93D9F9DECB7DBA3F9142" KeyPath="yes" Source="..\..\..\stk-assets\models\banana.png" />
+      </Component>
+      <Component Id="cmpC6885B8017AFE213FC295E45DBD7EDF7" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{DD01EFC7-47C5-401B-8C4C-1850A9865601}">
+        <File Id="filAB91B52A827B29435912C3046780DA2B" KeyPath="yes" Source="..\..\..\stk-assets\models\bomb-attach-icon.png" />
+      </Component>
+      <Component Id="cmp272F2F7860F04BF1B0458C77DF34245C" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{A41F9E32-FEBB-4312-A649-FC5659E222F4}">
+        <File Id="fil710180AC68F4D24439FEB0248A54E95A" KeyPath="yes" Source="..\..\..\stk-assets\models\bomb.b3d" />
+      </Component>
+      <Component Id="cmpEC2F837419B861D13D8278A02856EC6A" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{BF10ABB1-E9B9-4251-AFCE-E470F06D3F57}">
+        <File Id="filFDFC5714651C04116C0BFBCC3C65F9CA" KeyPath="yes" Source="..\..\..\stk-assets\models\bonusblock1.png" />
+      </Component>
+      <Component Id="cmp6397FC727095946C66309ED76C0DB007" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{4C75047E-AB81-4F2F-9278-C7C15B043BF0}">
+        <File Id="fil16CC3194F9E0FFCAD343A0278FC21D4A" KeyPath="yes" Source="..\..\..\stk-assets\models\bonusblock2.b3d" />
+      </Component>
+      <Component Id="cmpCCD63FEF8D834A87EF419B50B3776142" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{309BDA49-C016-4FDE-84DA-72FB7B1E33ED}">
+        <File Id="fil15F32F254D292DE53999EE0234ACDC7A" KeyPath="yes" Source="..\..\..\stk-assets\models\bowling-icon.png" />
+      </Component>
+      <Component Id="cmp812402A70109F20EFFB847C964177003" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D0048136-18E1-4F36-AF31-47CBD923E63C}">
+        <File Id="fil61738F781BF132E932335AA893437B3B" KeyPath="yes" Source="..\..\..\stk-assets\models\bowling.b3d" />
+      </Component>
+      <Component Id="cmpAA30CFED4ABD5FE55241DDAD98A87831" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{B73D879F-D144-4F4C-A748-FD5581B9FA27}">
+        <File Id="fil251A6EC9DEDDBF0B63B832696B7122E4" KeyPath="yes" Source="..\..\..\stk-assets\models\bowling.png" />
+      </Component>
+      <Component Id="cmp5FDEE8B77D3278223F1E4248E55CEED7" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{CBC4D14F-1204-40C7-9A6D-76B455BA8334}">
+        <File Id="filE7C6FFA019B630C10639464787FA1E2D" KeyPath="yes" Source="..\..\..\stk-assets\models\bowling_spec.png" />
+      </Component>
+      <Component Id="cmp940163CE76CD1B8A063A71156EE33BE6" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{EBDD91C2-1B5D-4740-A384-CF427661F3CB}">
+        <File Id="fil5DDE00735D5F9E7A37003C08423F5180" KeyPath="yes" Source="..\..\..\stk-assets\models\bronze.png" />
+      </Component>
+      <Component Id="cmpE946F27266FE1576D30C03686CEC2066" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{7C4BF54E-56DC-400C-B8D4-748226449B57}">
+        <File Id="fil2B5BD971A435E13B5B8E6030A6388E74" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum-icon.png" />
+      </Component>
+      <Component Id="cmp5C4FE764179A725B7584B12B8B533EAC" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{F9B6921C-4E13-4517-AA4D-87BE2123BFAD}">
+        <File Id="filD5639CCF40EC6514290F2D94A1A8BB4A" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum-low.b3d" />
+      </Component>
+      <Component Id="cmpE1A16F606EC8A49D774C419BADE8BCE9" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{1D3F59C2-0FE2-433B-AA95-974928A4D9C9}">
+        <File Id="filAA6577078D7225329449EE4602F00066" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum-nolok-low.b3d" />
+      </Component>
+      <Component Id="cmpBEB3F4606E2AD30E2E4C8821AA1B6366" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{69F0F76C-32A9-480D-A561-546F85E41A51}">
+        <File Id="fil59E617DE7938F38D2273D54EA4056038" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum-nolok.b3d" />
+      </Component>
+      <Component Id="cmp4FD2F562B221AE74D0B12ACD35DC256C" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{A9D5DE54-DBFA-4913-9921-F9F7B99B6838}">
+        <File Id="filC55E577A4475B55468E7DA9E802903C2" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum.b3d" />
+      </Component>
+      <Component Id="cmp79344F2413DD3B0A4590029262E19FD0" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D72BE7EB-8A57-4D87-9CA3-26444619D010}">
+        <File Id="fil3A36DEFF27C30A612DEA1BB5FFB20347" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum.png" />
+      </Component>
+      <Component Id="cmpACDFCFA9E59E765B159156BB8ED30226" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{0A12A057-F8E2-434E-AD84-34B7F79E878A}">
+        <File Id="filD482780C878118E5A2A0C196FC19C30D" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum_nolok.jpg" />
+      </Component>
+      <Component Id="cmp2E2E5CDD956532E872759B4B842DBAEA" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{06DBEC0A-F498-4689-8DCA-FAB7443F1B7F}">
+        <File Id="filCE6B643064002616A0E6A61D9D7D3327" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum_shield.b3d" />
+      </Component>
+      <Component Id="cmp7DBB0625A12A69C462AEBB0F32C63CB9" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{02B2E575-3AD3-4E91-87C7-3E09BED4A0D0}">
+        <File Id="filA68CA8FB2B1A0F5E46A65A80AAD1CFAB" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum_shield.png" />
+      </Component>
+      <Component Id="cmp93E00799CC047CF5BD6D740504F6DC20" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{12864640-162A-499F-8A8E-FEE55DE2F2A0}">
+        <File Id="filAEE45961B55779E304EFF5D1785FF408" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum_shield_nolok.b3d" />
+      </Component>
+      <Component Id="cmpEAF10181B03BD7B97226C4A867C67DEF" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{05D02B65-3D5D-4825-BBBD-3D6209F0705E}">
+        <File Id="filF0BA19C4E7476DD9297D8625200EE57D" KeyPath="yes" Source="..\..\..\stk-assets\models\bubblegum_shield_nolok.png" />
+      </Component>
+      <Component Id="cmp7D681CB31DA3341EE082F480A98B9BC8" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{A5E7D8AA-4A02-492D-8FD6-58EF558AC931}">
+        <File Id="fil89D5094D6D33F63CCBFF019BEC79C6E3" KeyPath="yes" Source="..\..\..\stk-assets\models\cake-icon.png" />
+      </Component>
+      <Component Id="cmpF506806367E54E8427B82E420B889E25" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{02824B97-D192-47FF-AD88-CB7FD6AF6C96}">
+        <File Id="filD9E4F1A82B94D8C351BA0B4FFFABAC08" KeyPath="yes" Source="..\..\..\stk-assets\models\cake.b3d" />
+      </Component>
+      <Component Id="cmpDE3117283C36A03A609C89850A17CB86" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{804BCE49-0F34-4E9E-95B1-98EDA9CEFE23}">
+        <File Id="fil5A55388AE7EFE25659FBBD415A886A65" KeyPath="yes" Source="..\..\..\stk-assets\models\cake.png" />
+      </Component>
+      <Component Id="cmp90D757F02784DFD4898E42BFDE9B050D" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{C8032934-E14A-426D-93ED-66A7A96D56EA}">
+        <File Id="filDCE2C775D8FD003AC6C74647754E5765" KeyPath="yes" Source="..\..\..\stk-assets\models\candy_stripe.png" />
+      </Component>
+      <Component Id="cmp41C8F66180B0D91F74EA60F26F49256F" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D3418C16-BF7F-4FE8-929F-5B033E615C6C}">
+        <File Id="fil1BF14DC10AA420ED3AB54A8B496993CA" KeyPath="yes" Source="..\..\..\stk-assets\models\chest.b3d" />
+      </Component>
+      <Component Id="cmpEB996262CD2B5F1AA3299B0A1436BCE7" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D08B0B5C-FA2F-4F60-B11B-523EBD6366C8}">
+        <File Id="fil2A7DCEC787928DBD7D249B62680AED52" KeyPath="yes" Source="..\..\..\stk-assets\models\chest.jpg" />
+      </Component>
+      <Component Id="cmp0F5FC79A0AEFCAFDDD4B67AFDDBE5119" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{3BB18DB4-6519-42D9-A456-0AC238E6AF2D}">
+        <File Id="fil443F039993109430EA81745A1F069631" KeyPath="yes" Source="..\..\..\stk-assets\models\christmas_hat.b3d" />
+      </Component>
+      <Component Id="cmpA94CA9C18358DD3307C49751BF873FA6" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{406DF742-9F18-4F8D-AE58-546F489C8205}">
+        <File Id="filA07D5541D3D4BC0E43DD86C1E389834B" KeyPath="yes" Source="..\..\..\stk-assets\models\christmas_hat.png" />
+      </Component>
+      <Component Id="cmpB2C8C52EE37A89ED06AA03472A6A91EA" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{1E6A8A6F-AC67-4210-AB42-F6A65387D449}">
+        <File Id="filFF7253D0D87C886D346382069F17FE8B" KeyPath="yes" Source="..\..\..\stk-assets\models\easter_egg-icon.png" />
+      </Component>
+      <Component Id="cmpDAFFCBA69B6133ACCED4024E798131D9" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{FE66B02F-5989-4D22-BC1A-1B071B5B66E7}">
+        <File Id="fil989A630A790FF09E91717CF87DA2222A" KeyPath="yes" Source="..\..\..\stk-assets\models\easter_egg.b3d" />
+      </Component>
+      <Component Id="cmp22CF5E8B53DDD0DC9D8F8BC35709629A" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{40D1F44C-3DB1-43DA-B04F-401118D4EDAC}">
+        <File Id="fil3308D9F1AE7BF0FB0A47067D55D2C574" KeyPath="yes" Source="..\..\..\stk-assets\models\easter_egg_3.png" />
+      </Component>
+      <Component Id="cmpA11BFE4CEB61325A8EA3A02EB4BED425" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{37F0DE32-5A42-4F14-845B-FB8D24F3889D}">
+        <File Id="fil033E6768C48EF319E848B6C6567E3F43" KeyPath="yes" Source="..\..\..\stk-assets\models\gift-box-low.b3d" />
+      </Component>
+      <Component Id="cmpDB4F2AEADBEAAF30A8C30720C268BA86" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{6C4F056B-FE95-42D7-86BA-29A14958D295}">
+        <File Id="fil36392B3935DB82F89284EE2F64F59B47" KeyPath="yes" Source="..\..\..\stk-assets\models\gift-box.b3d" />
+      </Component>
+      <Component Id="cmpF31BBEAC0F8F51C9893AAD435D8988BD" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{813C28D2-06F7-4101-BE3E-0DD38ADCC99D}">
+        <File Id="fil2F04D8FC3CF8436B16DBC8B4D2FBE7DA" KeyPath="yes" Source="..\..\..\stk-assets\models\gift-box.png" />
+      </Component>
+      <Component Id="cmpE14ABC6D2319703C2354843ACA6C5772" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{214D71F9-CC24-414A-AC92-09AD391FD4DE}">
+        <File Id="fil3D839EC313CC88D2FAB9F789C23B114C" KeyPath="yes" Source="..\..\..\stk-assets\models\gift-loop-gloss.png" />
+      </Component>
+      <Component Id="cmpCAD8126DF74AC70742495D7478C92DB7" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{5958753A-948B-4893-AA4A-76DD9CA3CA83}">
+        <File Id="fil8EBA95FB7857A304B97E27858B534320" KeyPath="yes" Source="..\..\..\stk-assets\models\gift-loop.png" />
+      </Component>
+      <Component Id="cmp457A13B8DB59203C48C96C4F7F9925BA" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{15223963-9700-4A13-9D8A-0CEA5C97772C}">
+        <File Id="fil361DFEB15C575B0DB10E55D3C6E4789C" KeyPath="yes" Source="..\..\..\stk-assets\models\gold.png" />
+      </Component>
+      <Component Id="cmp831A5D0F33FE5796E4FBD2D48C4D78C5" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{408DE4BF-C8F8-44CB-AC34-069621A158F8}">
+        <File Id="fil0DCEA170104583075444902F93ED6F75" KeyPath="yes" Source="..\..\..\stk-assets\models\Hammer.jpg" />
+      </Component>
+      <Component Id="cmp3F6C56FFC365CDF7238DCC25625B088A" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{CCC4EBAA-4FBE-4107-B11A-C6456648B2BF}">
+        <File Id="fil6AC2AD4C73912F997A01C9B107C70DDA" KeyPath="yes" Source="..\..\..\stk-assets\models\jump-bomb.jpg" />
+      </Component>
+      <Component Id="cmp38B42CC1305609A0B3764804638A970A" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{7368A78B-09B1-47B4-9514-FD1772D4E1B1}">
+        <File Id="filE0A800F192FE1241E1878A80CC1409E7" KeyPath="yes" Source="..\..\..\stk-assets\models\License.txt" />
+      </Component>
+      <Component Id="cmp51A79C9216D803145731034190E0BCB7" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{99B2FE65-B798-42AE-811A-A4BC8E75CDD1}">
+        <File Id="fil8D0CB811AA98F6B3C49E12CBEB55CEDD" KeyPath="yes" Source="..\..\..\stk-assets\models\materials.xml" />
+      </Component>
+      <Component Id="cmp4232AE961267429056F5B3BA39D87FF1" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{821F4210-9550-48FA-9746-B551C9251319}">
+        <File Id="filAE959B3B0F9A338D4CBF0A0458A021C2" KeyPath="yes" Source="..\..\..\stk-assets\models\nitrotank-big-low.b3d" />
+      </Component>
+      <Component Id="cmp34B6B86FBE9F02A25721AD6A6A7BACEE" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{35A62F3F-F7E8-4CF5-94F7-FE526B0795FC}">
+        <File Id="fil6A3F3A19AE3AC03C0E42A43BCDE5FCA0" KeyPath="yes" Source="..\..\..\stk-assets\models\nitrotank-big.b3d" />
+      </Component>
+      <Component Id="cmp702E8FA94526A0C283DC06C8A3FEBE13" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{363A00F0-8534-497A-84E7-32CB0161436C}">
+        <File Id="filD401E8CA1757FF091CADFDBBE78AA084" KeyPath="yes" Source="..\..\..\stk-assets\models\nitrotank-small-low.b3d" />
+      </Component>
+      <Component Id="cmp557A270EE137CB6FA281A5AF87C710AB" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{3CA70F3A-1270-4360-A258-BFF95F97850A}">
+        <File Id="filB8E124ED081954CB07397E1BC5F3A4FB" KeyPath="yes" Source="..\..\..\stk-assets\models\nitrotank-small.b3d" />
+      </Component>
+      <Component Id="cmp556F31224FC9A747AF3236F16F512F01" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{3CB6EC49-669B-458D-8203-C93071D387B1}">
+        <File Id="filCF6421156B82DD01C866CCC0BA7A822D" KeyPath="yes" Source="..\..\..\stk-assets\models\parachute-attach-icon.png" />
+      </Component>
+      <Component Id="cmp579CFACD268F8CFA3463B10791488D93" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{4AA06372-A04D-4208-9933-388CE119A241}">
+        <File Id="fil24C486B96017AA95F125EDE94FC4B470" KeyPath="yes" Source="..\..\..\stk-assets\models\parachute-icon.png" />
+      </Component>
+      <Component Id="cmpC85934AF26080CC7D607384CE2C9E0A7" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D4D2E1EA-656F-4C30-8A5B-F1422C60EBD4}">
+        <File Id="fil77DE14542C358183FA217E348DC45ED6" KeyPath="yes" Source="..\..\..\stk-assets\models\parachute.b3d" />
+      </Component>
+      <Component Id="cmp42BB50C818D796C0D36E3F86DE2C16AD" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D9207C91-4152-4122-8BD3-9B84EA9268A9}">
+        <File Id="fil7423ACF02FA7849322F2F224D0EDC196" KeyPath="yes" Source="..\..\..\stk-assets\models\parachute.png" />
+      </Component>
+      <Component Id="cmpD2A946513DD5998AA948C9B8DF42F7A3" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{E156743F-C44A-4BEC-82E2-080FE4889A7C}">
+        <File Id="filCB5ABA667BD96415D987A7576194F1EF" KeyPath="yes" Source="..\..\..\stk-assets\models\plunger-icon.png" />
+      </Component>
+      <Component Id="cmp9996A11E5B036C2486891E559F6C3D5B" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{C13A9A52-D1FC-4283-B15A-A6AFE2E62525}">
+        <File Id="filE1885B07A8D73D0B49AB52A40E8B69A0" KeyPath="yes" Source="..\..\..\stk-assets\models\plunger.b3d" />
+      </Component>
+      <Component Id="cmpC5484745073B5D56735A9EDB51BBFBB8" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{9C97D863-017B-48F4-A83F-63010CDC47CA}">
+        <File Id="filBD97C510685F289F5DD1AA85E63DD0D8" KeyPath="yes" Source="..\..\..\stk-assets\models\plunger.png" />
+      </Component>
+      <Component Id="cmp776866AFA802DFF218E0B9529D31E877" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{0014BD8E-E213-4200-AAB4-8DD69887A29F}">
+        <File Id="fil6A88A2D8C0D1759D334B19CFE14B747D" KeyPath="yes" Source="..\..\..\stk-assets\models\referee.xml" />
+      </Component>
+      <Component Id="cmp6CE0374A0D0C737A027937AC65F1BABF" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{3711B1B7-0836-4768-9500-7EDB30BF409C}">
+        <File Id="filE2853DC3C2581E3F862A36D3C703049D" KeyPath="yes" Source="..\..\..\stk-assets\models\reset-attach-icon.png" />
+      </Component>
+      <Component Id="cmpF0129A194DFB7CA2130EF1AA8ADD5066" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{B2FDA94B-3E06-4BEB-9F19-160FB18EC7FE}">
+        <File Id="fil761F34F250B9364B893A0E310EEA1276" KeyPath="yes" Source="..\..\..\stk-assets\models\reset-button.b3d" />
+      </Component>
+      <Component Id="cmp67252D86A7E61660DFE30EA02738FDDC" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D16CE475-35AB-41C1-B7E4-7F0493AA62A4}">
+        <File Id="fil7CB3B3F62293AF68B9C6B6E637115B25" KeyPath="yes" Source="..\..\..\stk-assets\models\reset-button.png" />
+      </Component>
+      <Component Id="cmp9D820F3CA5A65F6406F1902BDF684965" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{FEAEC5F0-C5F6-4E05-B242-87D7DCBBCFF4}">
+        <File Id="fil7668C4EA8A51CAE1A48BBAD7DA052768" KeyPath="yes" Source="..\..\..\stk-assets\models\rubber_ball-icon.png" />
+      </Component>
+      <Component Id="cmpA4C83ED864F7574C079A49F77F31C52B" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{2FC63098-3970-42E0-A3C1-03A2A830FDDA}">
+        <File Id="filECEF23DDECFB93E8F400C0C74F6EF0EF" KeyPath="yes" Source="..\..\..\stk-assets\models\rubber_ball.b3d" />
+      </Component>
+      <Component Id="cmpD12E3CA44646B57478DA8B7EFF6A3F2D" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D1AACB2A-B2B3-4D1A-82C4-F2F526A5AA50}">
+        <File Id="fil13C4DCDAB09C48B2CCD81EF828FF4D51" KeyPath="yes" Source="..\..\..\stk-assets\models\shield-icon.png" />
+      </Component>
+      <Component Id="cmpB0AF38A635BD1C228A2826D5FF5C3212" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{44A9AD5F-DF36-4DF7-ACE2-C4F84F88CEC8}">
+        <File Id="fil5927FC7F4133A6E74462E83CC946C232" KeyPath="yes" Source="..\..\..\stk-assets\models\shroom_color2.png" />
+      </Component>
+      <Component Id="cmpA0C4E02C94595598747E801E9C97E3D8" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{21EBEC5D-6457-4B7C-B969-BC47C5B46C2A}">
+        <File Id="fil58852A8B1F3F8C65D01F52F7F0F1D67E" KeyPath="yes" Source="..\..\..\stk-assets\models\shroom_color_a.png" />
+      </Component>
+      <Component Id="cmp05C447365C7BDDE9A153CA2804F484C1" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{5796B183-1D0B-4E53-B349-DC7A0ADF6B79}">
+        <File Id="fil5DFE5A4BDD4BCC172B12C09A2AD81737" KeyPath="yes" Source="..\..\..\stk-assets\models\silver.png" />
+      </Component>
+      <Component Id="cmp665D62030076E8A44010EA8FA56F01DB" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{D24FB506-1803-43F7-BF48-8924D768E30A}">
+        <File Id="fil507DC80C30E76890080FDF424B4FADD8" KeyPath="yes" Source="..\..\..\stk-assets\models\stk_mod_nitroBarrel.png" />
+      </Component>
+      <Component Id="cmpFEA0B4FA7B3C8F3CB7C3792804D4BA28" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{EB37B2F5-6241-4751-8CDF-0B06367EB7FC}">
+        <File Id="filB933F05799D6F207850CFEEB5F34D0BC" KeyPath="yes" Source="..\..\..\stk-assets\models\stk_mod_nitroBottle.png" />
+      </Component>
+      <Component Id="cmpE327D0104A524204212D89836E7475D9" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{A9FC8047-BC87-4016-AEA3-CD329E33FE3E}">
+        <File Id="fil9E71C98F23D7956526BDBD96E3698275" KeyPath="yes" Source="..\..\..\stk-assets\models\stk_mod_nitroLogo.png" />
+      </Component>
+      <Component Id="cmp43419EF51603B0992FF95E9CAA9A9696" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{E28A5CAB-6CAB-4CD4-99EC-775E985C8D92}">
+        <File Id="fil2EC82C0D1181D5E1D3E8FFF89D9B9F6D" KeyPath="yes" Source="..\..\..\stk-assets\models\swap-icon.png" />
+      </Component>
+      <Component Id="cmpE158BF29E4D342A1C9EFC89C842A16DA" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{A4F9CC22-FAB5-408B-AA9B-15372DAF678A}">
+        <File Id="fil780D60C934483A077C42BE5013FC23D2" KeyPath="yes" Source="..\..\..\stk-assets\models\swatter-icon.png" />
+      </Component>
+      <Component Id="cmpBB9273379CF2CF58FC83588D26659D83" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{C3DA9AF3-2397-45E2-BC8B-678B4D6D0B36}">
+        <File Id="filFB3750F1A0D3564D0C61762ED336CF12" KeyPath="yes" Source="..\..\..\stk-assets\models\swatter.b3d" />
+      </Component>
+      <Component Id="cmpA9FAB83A2B5169DA2F7FF82B84D1126D" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{838ED595-632F-43FA-94AD-83324E32D50E}">
+        <File Id="fil413F5E10AD624D18C4EEFEA64EB31FB8" KeyPath="yes" Source="..\..\..\stk-assets\models\swatter.png" />
+      </Component>
+      <Component Id="cmp6E88852E5763E4A9253ECD9A8792EE6B" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{4B7BA36C-3508-4000-AFA6-6CFE1A03AF22}">
+        <File Id="fil82BA2910A9E7AD86F0112A5550001427" KeyPath="yes" Source="..\..\..\stk-assets\models\swatter_anim2.b3d" />
+      </Component>
+      <Component Id="cmpACDD51FCD5D14F513543347976014568" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{40B6D26F-1A24-4571-9DB3-60C4EF1BCD12}">
+        <File Id="fil807E13500BC510873A35FF7B0C04D7F8" KeyPath="yes" Source="..\..\..\stk-assets\models\swatter_nolok.b3d" />
+      </Component>
+      <Component Id="cmpFB38C2952672C6EADCF43D11F8991D4D" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{332A4100-EC43-4B6D-8181-43D599B140E8}">
+        <File Id="fil2D0376EBB3412BE0396C52807EB12B23" KeyPath="yes" Source="..\..\..\stk-assets\models\thunderbird.b3d" />
+      </Component>
+      <Component Id="cmp2E5D28312C4299BA0745E3541C60531C" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{924D5C86-7BAA-4615-A268-CFD75FDC7222}">
+        <File Id="fil940AECAE7F64E912B825D97638E0ADED" KeyPath="yes" Source="..\..\..\stk-assets\models\thunderbird.png" />
+      </Component>
+      <Component Id="cmp35DBE62D6F5A7B81AD6C1C43EE6D2567" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{C615B79C-0780-4BF0-9DD8-55B06C109A17}">
+        <File Id="fil40BCF7121887F97130988104AA746B4A" KeyPath="yes" Source="..\..\..\stk-assets\models\tire.b3d" />
+      </Component>
+      <Component Id="cmp9F1529CF6CCD1EDBE8DD2A3D22429022" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{05F6DF65-F900-4655-B9BE-CC4BBEB6F650}">
+        <File Id="fil354271F271D1908E34CDF242806899F7" KeyPath="yes" Source="..\..\..\stk-assets\models\tnt-bomb.png" />
+      </Component>
+      <Component Id="cmp54A88A9671F51E45BA221B99C25533C8" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{CE220BBC-2160-4EA3-8268-7AACC0853A3F}">
+        <File Id="filE661564D9147DC168C094D65662CF807" KeyPath="yes" Source="..\..\..\stk-assets\models\traffic_light.png" />
+      </Component>
+      <Component Id="cmpE902A258854DC7CB00A16E72D1375C6E" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{FB27AB22-8DC7-4142-AB64-FA42BD5A1312}">
+        <File Id="fil005E6FC3A2B13B4984D9EA6DEF1B2D18" KeyPath="yes" Source="..\..\..\stk-assets\models\trophy_bronze.b3d" />
+      </Component>
+      <Component Id="cmp1D81EBA5DA7B5085EE7F40C4D6A2181A" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{73CF3B4F-A09B-4B22-9573-6AE098FB2D0F}">
+        <File Id="fil45E62D7B90261F5CF2960DCB6D714FC4" KeyPath="yes" Source="..\..\..\stk-assets\models\trophy_gold.b3d" />
+      </Component>
+      <Component Id="cmp36CB7EFC800D81664A48C978E8D4F6CB" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{1E49AAF5-D489-407F-8B9A-57A56B442AC9}">
+        <File Id="filAC433BECC5791C2801FEC692E07129AF" KeyPath="yes" Source="..\..\..\stk-assets\models\trophy_silver.b3d" />
+      </Component>
+      <Component Id="cmp7EF51ABC50762F107DAEE8595407AE50" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{E77469B2-41E8-4B2C-BDAE-FB66F9F6717E}">
+        <File Id="fil1EBE146471CAF90CF5C372227249B701" KeyPath="yes" Source="..\..\..\stk-assets\models\warning.b3d" />
+      </Component>
+      <Component Id="cmpCF4F6DAFBCDFCB89D38B21A4D47ED40F" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{0A9ABCF8-F887-4598-947B-46907DE771C0}">
+        <File Id="fil38FF6EFDA333545B61484FEF56C660A2" KeyPath="yes" Source="..\..\..\stk-assets\models\warning.png" />
+      </Component>
+      <Component Id="cmp8C386FEEBAD5A812F988A0E92CECD8A7" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{55ED0204-E9C2-4950-92D8-E00A20799EA5}">
+        <File Id="filF7E66463B7B19071B1E35E0C35E1EA1D" KeyPath="yes" Source="..\..\..\stk-assets\models\zipper.b3d" />
+      </Component>
+      <Component Id="cmpA0DA1334FADADC0B798B51727A422409" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{911BC51E-2BDB-46A8-84D8-E3451F8D81C3}">
+        <File Id="fil10D3115671FB11995453F43BCB0E929F" KeyPath="yes" Source="..\..\..\stk-assets\models\zipper.png" />
+      </Component>
+      <Component Id="cmpDCE33912054AF41A01C7F31162B36AE8" Directory="dir137A84E14CAA1823CCB025C987CB2687" Guid="{5CAFE0FA-B539-4811-A5A8-8881B26CD427}">
+        <File Id="fil589DB43101290293C6760B80FD6BA778" KeyPath="yes" Source="..\..\..\stk-assets\models\zipper_collect.png" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

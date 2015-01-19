@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+
+    <ComponentGroup Id="karts">
+      <Component Id="cmp51C026D8223688AC1304A3E5461785A0" Directory="dirD38E16EECC47AEEE2CED21E0E7A19AE1" Guid="{02FC03F2-9ECC-471E-9076-5D68ACF63D66}">
+        <File Id="fil51F89DFDC68939130E4C70CC7BBE7DEF" KeyPath="yes" Source="..\..\..\stk-assets\karts\License.txt" />
+      </Component>
+      <Component Id="cmpF4BC9D1C3DAAE2C9EEEEE9703DBC58B6" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{D5814F67-E03B-4DFA-8BA7-E03A25562249}">
+        <File Id="filC71F454EDC58FF7E412420C5C8E466EB" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\adiumy.b3d" />
+      </Component>
+      <Component Id="cmp4F04F0569D93A2EE4758520111634AF5" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{4A99E62C-C56D-4654-A261-63DCD24C3820}">
+        <File Id="fil60BC29C967B4200C1F7195A14842EAEA" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\adiumy.jpg" />
+      </Component>
+      <Component Id="cmp23A86CE47EB9AEA0C1E80F65E4FFD872" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{83DE80EA-3068-49E0-A9A0-2ECA8A22F56E}">
+        <File Id="fil09119B0CE06EDA950A2EA558AC95DBC5" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\adiumyicon.png" />
+      </Component>
+      <Component Id="cmp18F4C31F888C81ACBE4B98360545B1CD" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{E0CF7DA5-62EB-42BF-8796-C425757C87D9}">
+        <File Id="fil7D65061196D537C39F73361194908B91" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\adiumyshadow.png" />
+      </Component>
+      <Component Id="cmpCBECAC761DE5C38AD069614A7F6CBA7A" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{DB1C983E-F5FD-4A4E-A725-BF622BFDDDE1}">
+        <File Id="filA6E6B12D995FD54FD2EEB48D663A9D05" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\Circle.b3d" />
+      </Component>
+      <Component Id="cmpBBDCEAC2EED077A592145F926D0409FC" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{3A970358-8D59-45B9-BF38-B8F0A2B288B0}">
+        <File Id="fil155C5D17B38C80C4251D8E7AA21D7DE8" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\egg.png" />
+      </Component>
+      <Component Id="cmpAF641437A0F1A4476838F0EF218F84D1" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{A266E286-CCE0-42CC-B2BB-7BEC5CD817FD}">
+        <File Id="filF6F81CE199B6662DDB9D3849C8A4D835" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\egg_gloss.png" />
+      </Component>
+      <Component Id="cmpC4A0C2DD52CD696E256672DAA19A5170" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{1BEFAF67-4558-4F55-9307-3EE82DDE1A54}">
+        <File Id="fil8B1FEC5866AEF30D5E5212A2C32F4A71" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\hc.propeller.b3d" />
+      </Component>
+      <Component Id="cmpF377B90EBCCA2EC6F260F058F2049403" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{8C64169F-E162-4F3A-9DF6-C4CDCF7457FE}">
+        <File Id="fil48E1714E023F677DE93D145742C18660" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\kart.xml" />
+      </Component>
+      <Component Id="cmpFE6BE732B8B4BDD05664CA1E99E0F561" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{E0FE5346-7F92-4C2A-B3F1-4311CC6118CE}">
+        <File Id="fil30BFAF55972D35CE49364B50E055611A" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\materials.xml" />
+      </Component>
+      <Component Id="cmp1BC8E58A9E36EF9E020336276572B899" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{D302F289-1013-4C55-954B-552A8D3B23F1}">
+        <File Id="fil8DCBB170857B98DD59DA892ED7D9066B" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmp77FB651FB8B4AD371EEAA1C48C738B19" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{31753688-A5F2-497C-BA37-0D21AA0AF4DE}">
+        <File Id="fil49EFB677B7D160B85AAA78EBF4DE3A20" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmpABEAB412997F2FE08CA494A1253AE6CE" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{5967D8AE-7059-4F86-85C3-5A4848009FED}">
+        <File Id="filD3278D78412AE0E0D47086146887A3D6" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmpE1709C398BD0431B7543132710CD4826" Directory="dir4A8D0109FBD77BD4EFF41E6AA9A959D6" Guid="{9FAC6B6B-D4C2-4A58-B819-8186B3887385}">
+        <File Id="filF9CF5560EC64164835CB4D54AD422FF7" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_adiumy\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp3D0199EB571D5DFD66C4DF9D0131FADA" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{B6676373-3830-4AA2-9132-2525C0BB1B6C}">
+        <File Id="fil76DFAA336CDEC7065FDFE50AEEC19AFB" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\amanda.b3d" />
+      </Component>
+      <Component Id="cmp151A3133338AB5FF8C591DB6932DCE7B" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{56651E56-8C33-41DB-8E1D-D9E3C4210D31}">
+        <File Id="fil34BD379E9FD9DC044B78DC4DBD7840E8" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\amanda_icon.png" />
+      </Component>
+      <Component Id="cmpA8A33615CCC2EEA9D5FA393393AB5E9B" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{C42CA2FA-3D2B-4C1D-874D-704F6A443AAC}">
+        <File Id="fil616EE9D4F24641C084DFEA661B42FDF3" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\amanda_shadow.png" />
+      </Component>
+      <Component Id="cmp23C24892CB669888004204CE7AE498B7" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{207D9C39-40DD-4A11-8F96-6E1B1810D11C}">
+        <File Id="fil78F50513C251D0E57B523588D27E6A11" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\attachment.png" />
+      </Component>
+      <Component Id="cmp2FE06A516E918C1249D081D07D753FE2" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{3A84379A-B8F0-439C-AEF4-0276127B67A9}">
+        <File Id="fil286F10C9391E749AEC3B0AAC4F581B68" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\attachment_gloss.png" />
+      </Component>
+      <Component Id="cmpD8E65DBD47876DA5A6CE1A3A72941143" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{362C71E6-BF6F-4E04-BED9-16432D7DE85C}">
+        <File Id="fil77950610E447142D75713CB4D41734F0" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\body.png" />
+      </Component>
+      <Component Id="cmp87CC8C15CB930E54454F209BE697D7AB" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{941A6E97-042B-456B-BBAA-EB87FDED7998}">
+        <File Id="filF3D3853692CE453B120A2F1306125C82" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\body_gloss.png" />
+      </Component>
+      <Component Id="cmp8099C8A735C89333BD47484FFA64B7C3" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{F097B98B-4DB2-4416-9CF3-00E01EAA08CA}">
+        <File Id="filF0A7E2E446B50C84A5CDFC2D4A1E4D7C" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\car.png" />
+      </Component>
+      <Component Id="cmp123211E86A17571915A2C4965A16C514" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{B571F0F0-E17D-4CFC-AECE-0514C8867879}">
+        <File Id="fil0B1B9A878D0EA47BB4EE6DFC65DC374D" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\car_gloss.png" />
+      </Component>
+      <Component Id="cmp671A8B53532A12CEBDCA74FBDFAC84DF" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{FF930947-C3DD-432F-A88D-B15BB5CF28FE}">
+        <File Id="fil7CCC7FF0A6B589BF109753D5DA75518D" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\fender.png" />
+      </Component>
+      <Component Id="cmpBBB21E822256111A2EE32D7DA700BA21" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{860F20D4-DD92-41A2-8B80-F62457202665}">
+        <File Id="fil8B0D78F7FBCA330D76D60A30B5E614DA" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\fender_gloss.png" />
+      </Component>
+      <Component Id="cmpE0BD19E29572E789A599AFDF32335AD1" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{995F4C9F-FDB4-4029-AAC9-2799E3886082}">
+        <File Id="fil8823E30236C25557EAF8AA517F0CAE5A" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\kart.xml" />
+      </Component>
+      <Component Id="cmp9EBF8187F415565E53578CB4CDCA642B" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{3429ECDC-1DB9-4246-9646-61616A3F3FD6}">
+        <File Id="fil320AD1FBDB4DF586877F10DE98B17332" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\license.txt" />
+      </Component>
+      <Component Id="cmpE4858309C853914C1C22A5D89F4DAEAE" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{CC5A85E5-EDDC-47FB-B891-753134EE6B94}">
+        <File Id="fil56B654D60353A10A6B3D773409A01C31" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\materials.xml" />
+      </Component>
+      <Component Id="cmpC12599D61A6E064C8C8006F007F95A47" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{888918EC-AAAB-4C44-898E-8D7E126EE495}">
+        <File Id="fil07393B47A77351EBB92179EA51F81A68" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\motor.png" />
+      </Component>
+      <Component Id="cmp9E05CA76BCFC11102E7D80EB11EF71D4" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{0EF7611C-568B-4F90-BB49-2A07BFEFFEE1}">
+        <File Id="filFB58BE58A3CDE7000ECF4BF1227BE3B0" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\motor_gloss.png" />
+      </Component>
+      <Component Id="cmp8387B962073317821A723F4C7EF06422" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{B8E65C03-0663-479A-B14D-80D099CDFA20}">
+        <File Id="fil8ABF21C66887E68AEABAA60BFBBF984A" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmp3983586F244C1309E486123586685276" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{565B6B56-DBAE-4DF0-BBD1-7976959303C6}">
+        <File Id="filE3764951FB4F455CF856712D1F0B5623" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp2997275666ABE63343C18475EA07360D" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{7163F22D-93FB-4668-8B5D-A5F89B675FF2}">
+        <File Id="fil58059EED3B3A938F3231279F93FE1E98" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp043CA8BE8887332131F232013274D7A1" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{17DE4956-48C8-4DAD-BB7C-92021CDD5D73}">
+        <File Id="fil4AAECB80B6E5B82CEFC2D9F9DB7F526A" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmpC689A6745BD6BD49EDEF12F5350CF5D6" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{F8DB94B7-FF70-4BD1-AA87-989F5F7A3D32}">
+        <File Id="fil5ADE99B24E098492A40A7CC44F4D7917" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\wheel.png" />
+      </Component>
+      <Component Id="cmpC068A636D4209D53A7371DA660983CD0" Directory="dir2898E5699EBAF9FF936B5AB57CAC04C0" Guid="{F7260C84-500F-43BC-9EF1-1DCAE514E269}">
+        <File Id="filFF56F58152C9980A572D3243C067B342" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_amanda\wheel_gloss.png" />
+      </Component>
+      <Component Id="cmp0890561B1F2EE6CEF4788444FA43A9D7" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{B36CBB45-62DA-4ED8-ADDC-3D58AF6B9B18}">
+        <File Id="fil92D033521598BA9B300FF865FB569197" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\Circle.003.b3d" />
+      </Component>
+      <Component Id="cmpB698EFAF03FB55610F477F399F5DE563" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{4B5E9E80-0D36-4219-97E0-60755349EBA6}">
+        <File Id="fil74E64EC630D828ABAF476F7A36D9A60C" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\hair.png" />
+      </Component>
+      <Component Id="cmp754B542EC21B8596F386AAE23A66A483" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{CA4433A2-893D-46D2-8382-08C26BD0A19E}">
+        <File Id="fil51F2774B857783A1D2FB8E14E63CBCE1" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\icon-sara.png" />
+      </Component>
+      <Component Id="cmp975AABE5A5D9A9DC43A6B6966A91E266" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{0DA64E61-6AB4-4532-B01F-8A589858B5D3}">
+        <File Id="fil5C188BC565C343A19EBC4B62EFBE3E94" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\kart.xml" />
+      </Component>
+      <Component Id="cmp965C8614911FE9218A6577D4F554DC6B" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{949B7932-67FD-48EF-A59F-801CDF1DB901}">
+        <File Id="fil7C1B5E7776140A84EB08FCE76BA1A137" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\materials.xml" />
+      </Component>
+      <Component Id="cmp6C0038F5E07D342EEE6436ACC5F6DE93" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{498EC571-ED0B-4697-8FDA-54BD9BA5A31E}">
+        <File Id="fil4825FAC48896989B1E12D02C2CBDAB07" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\motif.png" />
+      </Component>
+      <Component Id="cmp25F0CB7F57A2EA6229304C64D2F0B2DE" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{FC5E6451-7039-4D34-BEDB-56D11DE8C24B}">
+        <File Id="fil68B46A51BDC51D3FD3FBB500DFB8546C" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\motif_gloss.png" />
+      </Component>
+      <Component Id="cmpEF73113CD6120D25C2BAA6DF97999B43" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{E12D88B1-2577-4684-91E2-6E8E795972CA}">
+        <File Id="filF39077BF1894F362B4114448DDD05D04" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\Plane.001.b3d" />
+      </Component>
+      <Component Id="cmp90641E5DA273B5CAA76FA3DF492D8AD9" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{3B669A1D-BBE1-4A8A-A086-F3F329952FFC}">
+        <File Id="filC59498DFC4CB2125CA9D74BD44C05612" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\Plane.004.b3d" />
+      </Component>
+      <Component Id="cmpF77116A6673B0DD3BA7B2A6285B05250" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{69A67C9B-BD36-44DE-826C-FBC6B6768020}">
+        <File Id="fil6807B4E461A8A0653FF736DBEEF106E7" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\reactor_core_anim.png" />
+      </Component>
+      <Component Id="cmp83E1571D67189FC3680EF86D870D4E0C" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{7FADAC09-5961-4D0A-A917-396CB325B9DB}">
+        <File Id="fil49DC2B3562BDA86A504D307BE97C865B" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\sara the racer.b3d" />
+      </Component>
+      <Component Id="cmp229730A212C7F2088EEEE40D16700C82" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{4B331059-0B64-4FEB-8D77-C5CA41F89EB6}">
+        <File Id="filECDA93656D57BAA8D094268A87AE415D" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\saraEyes.png" />
+      </Component>
+      <Component Id="cmp88CF0BA2F9B202A2DAA0FB079786DC65" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{B4E6DF4E-8944-4789-83BF-ADADCAE98E25}">
+        <File Id="filA365890CD7022E9FFDC4D7B5133C36D3" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\shoes_gloves.png" />
+      </Component>
+      <Component Id="cmp6258D60EC85818F0D6C48BE23E005662" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{8D075DBB-6FF9-42CA-9917-6754C708A0EA}">
+        <File Id="filF39F245177E381B3663231512C70788B" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\shoes_gloves_gloss.png" />
+      </Component>
+      <Component Id="cmpC279AF470290A9B08DA185C73C5B0523" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{CD56A114-EB0B-4810-AA68-4EB5922A4E52}">
+        <File Id="filFAFCB5DB70E77A2631A5882597D440F2" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\turbinia.b3d" />
+      </Component>
+      <Component Id="cmpF405BFB6944792A8139C17ED0954DD1C" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{380C2A4C-C20E-4350-9ABA-54C729732E6A}">
+        <File Id="fil23CE0EBC17D8351E579BDC59FBEE3464" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\turbinia_mainBody.png" />
+      </Component>
+      <Component Id="cmp01B5934E4BB93394EBB24C18F08C625C" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{34A00565-9A05-42F4-916F-C398ACED6814}">
+        <File Id="filB3E3C73089A189D484BF1F71EBB8BD7C" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\turbinia_mainBody_gloss.png" />
+      </Component>
+      <Component Id="cmpEAEB8BE4B4A3B3CEE5FC015E77AA1043" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{12911E7F-4881-4B73-83AD-A2F790464933}">
+        <File Id="fil26DAE0C57603B4283F0AB71BD7B73EA8" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\turbinia_shadow.png" />
+      </Component>
+      <Component Id="cmpAE9859245972846B1923F3AFBCF01997" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{4080333C-D0DD-4B04-AC20-30B23AA35A7F}">
+        <File Id="filBEF81CE44236A983351F8A75FDC9A3F3" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmp4048BB8EB3FE2A732FDE5EDF508C3776" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{33C4565E-0EB9-44FB-B380-0D506D2A8997}">
+        <File Id="fil7EFB846CC37B8F541814374C6A5B2DBC" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp9BE3CCB5C98F2D187DB1389556603E7F" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{D6BD6EAE-2B56-4F70-847F-0327B250B541}">
+        <File Id="fil562E622701E2FD222518DA45E2230B4B" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmpB96F1DA9A5F61FCA7A29CA8A152A1EEF" Directory="dir17679974F9448E8429D454038160ADCA" Guid="{35089375-C819-484F-B4D1-D24298F59006}">
+        <File Id="fil2A9D0D44B6F3ABA37A015197290B5B40" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_racer\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp2F325D75FB0BD2C2C1468DCB30FCDCDB" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{C39D7BF4-8279-400F-843B-BB9E69B7F1F2}">
+        <File Id="filF0615D7C076D5C5DFB068D7AF2DEFBAB" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\Circle.003_Circle.002.b3d" />
+      </Component>
+      <Component Id="cmp1CB708F4ACE6C4BD7142D3DF769C3A52" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{AD787A45-9C3A-4D12-BDC9-EF0619C694EC}">
+        <File Id="filC576A01E90F1E59ED1450A9CECB4DBD3" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\dress_border.png" />
+      </Component>
+      <Component Id="cmpBB23A8CCE30647794ECEEEFF0A3CAB93" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{461DA9C8-8E5B-46C0-B647-EA52583DC2EF}">
+        <File Id="fil5BFBFC4633B4A52ED17C0456B3401D99" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\dress_textile.png" />
+      </Component>
+      <Component Id="cmpFA3C0447EDA26AB9555147270E141B6E" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{DF3E7B36-E33A-4E23-8192-7A132CF68D15}">
+        <File Id="filD174B48E0E5E3BC0D85EB7D7D7A61651" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\hair.png" />
+      </Component>
+      <Component Id="cmp00D21F010E2F5EEA305C1576C60B0DCA" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{E2A18F58-49D3-4A52-A1A1-FDFF5FE5AC3F}">
+        <File Id="fil77DA3BA5378CDAA6274A863A03AF2DC7" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\icon-sara.png" />
+      </Component>
+      <Component Id="cmp6ECEFC209669A638496E4D4688DDB708" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{EA2F92FF-3688-4267-AF4C-2BAA1DF6929A}">
+        <File Id="fil7CC63E188C4F5DCA8CEDC92A34685FFD" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\kart.xml" />
+      </Component>
+      <Component Id="cmp4E22C326B128FD0A544FC6EF4F2A5D17" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{EB393465-7147-40FC-9EAC-17FE46E47624}">
+        <File Id="fil8A3BACF01E862043CA98EF9E87A6E785" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\materials.xml" />
+      </Component>
+      <Component Id="cmpA2124C48BD906BBDC4A65843EE26CE4A" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{409E146F-C287-4C04-A063-C6725FB5C68D}">
+        <File Id="fil4C9E43F9568EF38F9DF96A864D9D660A" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\sara the wizard.b3d" />
+      </Component>
+      <Component Id="cmp2F8B9167E8C3783B1F932FDD32488E18" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{0DA1DB71-DC8F-468B-9B2E-56B8B46DA605}">
+        <File Id="fil5B0692827FF9AC15CCA7049B3C42C615" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\sara wizard.b3d" />
+      </Component>
+      <Component Id="cmpDF16A1A6146882CA140BA2ACCFC1E590" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{1ADE76FF-B1C2-416E-809B-CA1CC3DC2C51}">
+        <File Id="fil01E3D862AEF5941C1896E2C2FDB251E5" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\sara-shadow.png" />
+      </Component>
+      <Component Id="cmp58C9C23A05DCF4309BA0AA94438C1F1E" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{BE4A3020-26FD-4A81-9E41-705D3B0F71BF}">
+        <File Id="filEBFD6707050B2726005BB88CF7E70344" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\sara2.b3d" />
+      </Component>
+      <Component Id="cmpCE5388444C1268F4F694794C7EEC86F1" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{FE6DD01B-76EA-45F6-965D-504AE2A06CBB}">
+        <File Id="filEA3C17F339F62B6B0E0C6530313B8528" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\saraEyes.png" />
+      </Component>
+      <Component Id="cmp6118FEA5E75CA4AEBA63AA019BF562F2" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{8BE52D4D-E968-486B-89E0-C863BAE85913}">
+        <File Id="filA7B73627C21E3E9D8EE129FA83C1162F" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\stkkart_caterpillar.png" />
+      </Component>
+      <Component Id="cmp51307D078F82EC839A75221FB32AED9C" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{0B46B3D4-ED84-47CC-B10E-6291DB9D38FB}">
+        <File Id="filDF9D0F5CBA790EA21CCC162C3FE8AE4B" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\stkkart_detail.png" />
+      </Component>
+      <Component Id="cmp2E5BF482EB516347D207D3204756B907" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{BFFFAB35-86DA-491E-8705-1689FCF9B099}">
+        <File Id="fil9A76F5DC09B0EC658BB60806E50F2CB4" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\stkkart_leatherShoes_a.png" />
+      </Component>
+      <Component Id="cmpB6DA4F0E1E81778FE3CAD42F4EAD5FF0" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{1A15B984-87A7-45BE-87DF-1BE8D8D7806C}">
+        <File Id="fil901C203C769E43F220B186FE608C3C85" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\stkkart_snowMobileMain.png" />
+      </Component>
+      <Component Id="cmp341A13B4CCFB25E504272126640905AA" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{F44E602C-1125-41C5-8CF5-B4F00816976E}">
+        <File Id="fil492F0679BC63245723947B1B49E57AE4" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\stkkart_snowMobileMain_gloss.png" />
+      </Component>
+      <Component Id="cmp4DF54C925C5F421BBD89CF735D476E1E" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{3799B9B8-1475-478D-9A69-A6AF37339574}">
+        <File Id="filBDC6E723B005EAE02C28DF92DCEA32B2" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\stkkart_textileSara.png" />
+      </Component>
+      <Component Id="cmp3D30D85E6846B7593620D0E4F49D5C59" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{62544FB7-E3D8-4E61-8847-24C5E0197027}">
+        <File Id="filD7E025199FDABF2793AAB96053EF4561" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\stkkart_textileSara_gloss.png" />
+      </Component>
+      <Component Id="cmp7CF32DFFA42C36393503A538D50C8A37" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{5556EE87-19E2-4002-935A-BE0DA2CDC243}">
+        <File Id="fil6EEF0678B19EC161C62E64A950C9FA0B" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmp879F9C6EEB8CCC3919DA63BC2489564C" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{5B00B726-48AA-4230-B1F3-B5101196AB3A}">
+        <File Id="fil4FDDB362BCF0834640A47674D6517943" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp839D8BE9F93086A8DEACD9E44F269E50" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{250D7BB6-A429-4FFD-B419-F3BA69C301FF}">
+        <File Id="fil4B2C3F5FB4F8B396704EFA200FC8CE3A" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmpA8305DA1E0B799E0F6F0DBE32297AD37" Directory="dir5AB30F8D2962403C45F8BA55778D1295" Guid="{4A9CA938-FFAA-40E9-A188-6F3E85F624CF}">
+        <File Id="filF9A049AD4C4C2D9C993461C4B2A51B3A" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_sara_the_wizard\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmpA2EB86855E4CE2832994ADB36F28396E" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{28DB9673-0F2E-46B1-97D1-87D7900F00C8}">
+        <File Id="filC621055EE6850BA3A8B96466A3510592" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\hc.propeller.b3d" />
+      </Component>
+      <Component Id="cmpC510E9DE3BA96A62914636EFFB731C87" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{6A1EBA8A-E28F-401D-8893-3D09962114A8}">
+        <File Id="fil658F8422E6AFA774405C8A9E4FD5A090" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\hc_body.png" />
+      </Component>
+      <Component Id="cmp41B345B5C15A01D0291A7EA3B280BB86" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{81378CCE-CEED-4EFB-ABDE-03C66297A24D}">
+        <File Id="fil306A33DC50DEB4E19ABB50FD57316342" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\hc_body_gloss.png" />
+      </Component>
+      <Component Id="cmpBD211B2DBC12191AD9F945DD881A64F8" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{AA98B107-1D4D-44E9-B09C-53624B161EC1}">
+        <File Id="fil2965F2CB916751C05F915A9B777EE9CD" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\kart.xml" />
+      </Component>
+      <Component Id="cmp6AC1E383C978E6A09EB88CFDF6FB8CE3" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{A8EEBBD4-F1A7-4261-AF95-C48A448D556E}">
+        <File Id="fil955655FEA2209C4BB5D53056DBE0AE9C" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\materials.xml" />
+      </Component>
+      <Component Id="cmp8117D08986C1F2CBB81E50FF8C6CE3E8" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{BE64092B-A0C0-4640-8488-CEBD434C4BEA}">
+        <File Id="filCDE6581D36396890D7D1DA18EA475A12" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\mouse_texture.png" />
+      </Component>
+      <Component Id="cmp5EBA996715B7CB238A90FFFC6521C2A2" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{BE800E3C-D7DC-463D-923B-3B38C8FC2F56}">
+        <File Id="fil2966236037E1078FDC40B6305A56080D" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\shadow.png" />
+      </Component>
+      <Component Id="cmp574A373758F949FB6DECF00F6DC60562" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{C6C99374-2BEB-4FF6-8EB8-0D286FEA8FCF}">
+        <File Id="filB260F160870C00E8B4E57865881E020F" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\skirt.png" />
+      </Component>
+      <Component Id="cmp67058EC0B8CCC39DA24021125C954BE4" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{67346ACB-16E6-452C-93EE-EB46EA1B3AA3}">
+        <File Id="fil84B4E9BC67751E8835F153D6702F0DB1" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\skirt_gloss.png" />
+      </Component>
+      <Component Id="cmpAD8AA3991A7293FE4D07D1A6BD389C19" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{6A0C4FA6-0FAF-4FBC-A2F8-FFA10496C359}">
+        <File Id="fil24906962700B12729EFE987EAFF19CC6" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\xfce_icon32.png" />
+      </Component>
+      <Component Id="cmp535DA42CD98C6295CBE8E022F675C4F5" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{59BFD91C-B13B-47A3-8CEE-BF433E9DE128}">
+        <File Id="fil27C9A050C9755841D9C01937027814A9" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\xfce_icon64.png" />
+      </Component>
+      <Component Id="cmpC20C7816D4411DA07769144801643861" Directory="dir2E30047E94B8F450FA7445F4D8125FA1" Guid="{94D3A32E-98A3-4195-BC22-EFD65BC2B35E}">
+        <File Id="filEE2876D8285356A6D3A59D1191ED3C53" KeyPath="yes" Source="..\..\..\stk-assets\karts\20_xue\xue.b3d" />
+      </Component>
+      <Component Id="cmp8259809F73F9EC8E4CC9F7B45BA2C2CF" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{D350FC32-2023-4984-9C7F-813094DB5805}">
+        <File Id="fil4C8B3DD602D6DEE23BE32954E46E8527" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\beastie-icon.png" />
+      </Component>
+      <Component Id="cmpBE94B64B1EF051D8F22ED7583AC2B418" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{BEF9FC63-6CA2-49B9-84B6-FC414C8895BD}">
+        <File Id="filCB554106737FA94260804177C3B23487" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\beastie-shadow.png" />
+      </Component>
+      <Component Id="cmp881C2CAB2E705EDBDA27391BD5A5CABF" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{A3B80674-C0A6-4C58-AD43-5C604AE6031F}">
+        <File Id="fil9676BCAE5C702D2D5E959E6B9D815DE9" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\beastie.b3dz" />
+      </Component>
+      <Component Id="cmp7B05BBD3929CCF816F03A91C27F4FF52" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{C81FC3A3-3A25-48E9-B593-82F8E3FEDFA8}">
+        <File Id="fil424AD800548EA8997448C95419370FAC" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\beastie_texture.png" />
+      </Component>
+      <Component Id="cmpAA4A2E2B91B53F1E9B6535A2F8B20175" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{F9D343F8-D72E-4966-9D48-86FB07506029}">
+        <File Id="fil2725E03B011A6869BE6D89120EA0DDA2" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\kart.png" />
+      </Component>
+      <Component Id="cmpE4C4398FAD1F7FE4D11A92FC9B82E5B4" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{3842416B-FEF4-4BF4-8698-95268D0B2DE2}">
+        <File Id="fil47254FAACB93B2C21B459BC39928C09C" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\kart.xml" />
+      </Component>
+      <Component Id="cmpAE7356FEC50F44C7C030F796A80A5220" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{A98CB187-3C24-4DA7-A46E-D97F2D508356}">
+        <File Id="filC374135415A1154C7D8FF72C8A8C96A0" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\License.txt" />
+      </Component>
+      <Component Id="cmpDCC219653590B9F3AF317CF2F18C55E9" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{162C7948-210A-40C2-83C2-A268DB190546}">
+        <File Id="fil93D044DA9ECE6FF9D404359C63440109" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\materials.xml" />
+      </Component>
+      <Component Id="cmp4352724603C93AD3093242ED6714E1D1" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{07FAE136-37AE-46FE-958F-DB4281D35E06}">
+        <File Id="fil79966AAC0AA342CBD03641526B69FD01" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpA910070AB1F2B5733A93DC1516DDAC64" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{EB385B11-292B-46A9-A073-4E6C6C441B35}">
+        <File Id="fil938EB89E999E890C8E9825EEC2E9D064" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp7F5E2F563ACE16A8E4FBBDF5FB6F40FA" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{C9ABEA16-9EFF-4919-8704-72AD7891C06E}">
+        <File Id="fil2B967CCFB6ECEB46DAE39F1CFA857193" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp6781BAE1BE681338A4482A5C40E0C01E" Directory="dir4A6F2E780CEB213AFEDE4DB2EFBEEE88" Guid="{DCF039CF-100E-4012-AF96-18381DD78F70}">
+        <File Id="filBA1630D6CF11FCDD07F46EF43ECCC9FA" KeyPath="yes" Source="..\..\..\stk-assets\karts\beastie\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmpF52A955A80169B43C3F5ED757457F8B2" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{4C1A8F64-B7BF-41B6-B18D-80B0ED5C5E96}">
+        <File Id="filCCCA5DAA14B8808D139D49CEA24A2289" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\auge.png" />
+      </Component>
+      <Component Id="cmp7FEF61D47BFE6E889D9718521F15AB7C" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{10B57FD8-F45A-456F-B38D-8E2F653E9131}">
+        <File Id="fil0FEB8D02CE603CAFCA31F78B6AF32F25" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\elephpant-neu.png" />
+      </Component>
+      <Component Id="cmp4F750B46FCE5E8BA0B74CD75663BC52C" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{77B8056B-E87E-4628-819B-751FA8A79083}">
+        <File Id="fil6B500AF37ECC38DEF0A6ACBB2ABDECC7" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\elephpant.b3dz" />
+      </Component>
+      <Component Id="cmp69E6FF9980A27625100001B9B8E32413" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{06A62840-3100-4713-860F-072CBB759993}">
+        <File Id="fil39385994A8601DBECCF9EE3E782FD98F" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\elephpanticon.png" />
+      </Component>
+      <Component Id="cmp7386424CC7119935F5CBE0CB06B17ACA" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{F7A06A3E-F6FF-4E80-A755-A555CF7676A1}">
+        <File Id="filA4135C71F3C91F4530A6BB7A02B739F9" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\elephpantshadow.png" />
+      </Component>
+      <Component Id="cmp99C8921E4910A77AAAD58F2F5837FF46" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{D484BB79-FDAF-4F22-B58C-04051790E65F}">
+        <File Id="fil614776124308AEA656D9C3E17F672A76" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\kart.xml" />
+      </Component>
+      <Component Id="cmpD7DF517896D7A9558C5A61D2F64633F4" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{BEB8121E-4935-4F30-8FCD-6AE5DB1127E7}">
+        <File Id="fil498F7D35E041F86F5B8B348960D8A179" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpEF254F5ADBD2DDAB8BAFE866E5A47E83" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{01A0187B-8843-4684-9766-8A2CCE734410}">
+        <File Id="fil9AE8A7E2B425C034DB13736FEC4FC32B" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp2EE508BF5E12FB4FC00E9811E8EC1C0F" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{D0C1E318-FBC2-4E7E-A5C3-D3B0E7C23999}">
+        <File Id="fil389E15FF806EFBD40EFEAD987B96479B" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp1EBC38E6EB10392E7D387BB0C9182B50" Directory="dirCBA40065E379B809A3AA6ECDFB687A0F" Guid="{95EA966C-ED18-44D7-A240-FAE0ED23A339}">
+        <File Id="fil7ACACD85B65B76E8DA34E479839EEED2" KeyPath="yes" Source="..\..\..\stk-assets\karts\elephpant\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmpD059542340B183EAACFE195085A7425B" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{91E10416-7F35-4F62-84CC-4D6954E6DFFF}">
+        <File Id="fil9C5A2C08BA4B07F1E1970DD185913666" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\emule.b3dz" />
+      </Component>
+      <Component Id="cmp565F29C02523DB3E5BB9DB761D5EFCD4" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{633582BA-7D68-4B10-A8B9-3274046AF6A6}">
+        <File Id="fil9946E8DFCA6B2ECCEC153C1EB0FF2E5A" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\emule_char.jpg" />
+      </Component>
+      <Component Id="cmp2A5B58F79531A4F2B90FCBE6B43CB3EB" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{9DE9D1E1-BDC5-4231-B845-81152D9FD56A}">
+        <File Id="filB2C37899DE2BDFF28C31B484A5ABE1B0" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\emule_icon128.png" />
+      </Component>
+      <Component Id="cmp1708137E85C43A55E12C424E435993B3" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{411920D6-4F35-496C-9136-EBE74F5CBC43}">
+        <File Id="filC9E9561D1FD99FA6409CB0F79346BECD" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\emule_icon32.png" />
+      </Component>
+      <Component Id="cmp939D4E18E9801906134E3605624F39F1" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{731D6612-EFAC-4D1A-955A-15706BC76F1E}">
+        <File Id="fil38AEC1FC5DA13F2C69BFB9071CCECB1D" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\emule_kart.jpg" />
+      </Component>
+      <Component Id="cmp6F162AD39F0CC6B678110F6520EDD488" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{EFDED5EC-4177-4AD4-A981-70CC19726D3F}">
+        <File Id="filD07487188F4A1BA9BB0FCFA74D18D108" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\emule_shadow.png" />
+      </Component>
+      <Component Id="cmp7E9FC3C737FBE3C8EA1E53E4373D9484" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{8F660FEC-9F59-432F-88A6-C4A475B614F8}">
+        <File Id="filBC1051A6E185B954517D4807AFDD798E" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\emule_wheels.jpg" />
+      </Component>
+      <Component Id="cmpDF4280C495B41AB094B4097F6ED95BC7" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{447B3495-351E-40A5-8D73-0B2CE7C75414}">
+        <File Id="fil464300B345FB77896671F4F5D2A2DA56" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\kart.xml" />
+      </Component>
+      <Component Id="cmpAA6F30D42D34576D5928D71FF31926E8" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{06EA3A7F-078A-4111-A015-38AD58946FD5}">
+        <File Id="fil9609467567291285F648BF45AD281962" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\license.txt" />
+      </Component>
+      <Component Id="cmp9926AF1A9E6ABD48F2A8E56B28C3D4DE" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{3B7593BE-0019-4856-880D-12BB4D3FD094}">
+        <File Id="fil02EBE247EE9994A3CD80F08DC1BE44D5" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\materials.xml" />
+      </Component>
+      <Component Id="cmp0B1CA11CEB4094A788F838BB9B79BBEE" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{DC81FA43-C706-4E5E-A158-B142E5DAEACC}">
+        <File Id="fil33793A9C7ED981E719DA761384FC0CF9" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpF1ABCFF87F964680CCE8AA67DBA9405D" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{3E5B35AE-6738-47F8-B1FA-34D588D18269}">
+        <File Id="filF623AA114259EE671689DE3878AA56A7" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmpECC23AB14771CECC15971EF8660BDBC8" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{464D5A63-6C30-4312-BC6A-7FDCDF630C0B}">
+        <File Id="fil562A3304033E295C8251D80966454339" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp392A73A110F6B48C0EAFF51D6C41AD7B" Directory="dirFF4D22A7DD7828304AB0440C887D6CF0" Guid="{CC1546F6-D530-431C-BC3A-0D298CDAB7B7}">
+        <File Id="fil71F03E3559DB0A81CA70920496AB4877" KeyPath="yes" Source="..\..\..\stk-assets\karts\emule\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp672EF643D7963528DD2633BABF302C57" Directory="dirAE17342145EA45165C7E681FB9715B21" Guid="{93EEF492-9810-4D20-889C-FB52B1406CE6}">
+        <File Id="fil0CA5F015142BFEF2CAE25845EC90B357" KeyPath="yes" Source="..\..\..\stk-assets\karts\gnu\Carpet.b3d" />
+      </Component>
+      <Component Id="cmp3725A14A3F324F5E59C039BF3C04F5C9" Directory="dirAE17342145EA45165C7E681FB9715B21" Guid="{050384F1-03DE-4CDD-B2A7-5A9446459881}">
+        <File Id="filA2FDDFE306A321B89928A3B566BF840A" KeyPath="yes" Source="..\..\..\stk-assets\karts\gnu\gnu.b3dz" />
+      </Component>
+      <Component Id="cmp0159B79BC9D7FFD9CF11C70545EA24CA" Directory="dirAE17342145EA45165C7E681FB9715B21" Guid="{710769DF-443D-43FB-9334-FE17B45223C9}">
+        <File Id="fil823BCE962BE659AB8F40E1592D6244A6" KeyPath="yes" Source="..\..\..\stk-assets\karts\gnu\gnuicon.png" />
+      </Component>
+      <Component Id="cmpE3611DB2502E5F92F40F983950E4688F" Directory="dirAE17342145EA45165C7E681FB9715B21" Guid="{AC4F705A-E0A3-41A4-A301-1560438E101C}">
+        <File Id="filFA22F40B058326A9185E7D97BCB02BA6" KeyPath="yes" Source="..\..\..\stk-assets\karts\gnu\gnushadow.png" />
+      </Component>
+      <Component Id="cmpE3BF570FDF9266D0F8D3732657926113" Directory="dirAE17342145EA45165C7E681FB9715B21" Guid="{009A01B8-542C-421C-AAEE-A8E2A56E6032}">
+        <File Id="fil2EAB1A7B5EA04790AAE7E754272186E0" KeyPath="yes" Source="..\..\..\stk-assets\karts\gnu\kart.xml" />
+      </Component>
+      <Component Id="cmp1621F957B0CE439B088CD2340D752AB9" Directory="dirAE17342145EA45165C7E681FB9715B21" Guid="{D3C3C320-EFEE-4F89-AB96-349131BCA8A4}">
+        <File Id="fil4730BF182E8889B2F0ADC0A30F136949" KeyPath="yes" Source="..\..\..\stk-assets\karts\gnu\materials.xml" />
+      </Component>
+      <Component Id="cmpD0A7CBEC8A7B3619FBD68699E6108AFB" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{DDF667B0-AA71-4665-8AD3-4C499C7DC8CD}">
+        <File Id="filCB48874E01A4F49689EB7CD8EC6404BC" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\hexley.b3d" />
+      </Component>
+      <Component Id="cmpEE37A4A1DF52CCEB0C676D4B77461CA7" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{853FFED2-7DF8-4829-AB0D-FAA447721C83}">
+        <File Id="fil9B88B543A624518F0E0F1CED4A4081B8" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\hexley2.png" />
+      </Component>
+      <Component Id="cmpB23C634ACF9CEDADC1DC5CFA12973FF8" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{B50ABF78-0E95-4F6F-8619-3F26BA772C93}">
+        <File Id="fil57B56F5E08CD393D5FD3A9D292DC1D22" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\hexley2shadow.png" />
+      </Component>
+      <Component Id="cmp7521AA9DCA424600C05BCDB497CA83BD" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{CBDCE7B4-4042-434C-876F-56D158081F1D}">
+        <File Id="fil75C8E5D3CBBF7199E74AB5DF783D4B74" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\hexleyicon.png" />
+      </Component>
+      <Component Id="cmp17CD6E50B79E1D87DB395FB9E9CCA162" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{13097BD7-9626-45B1-A639-C64CCCAC8AA1}">
+        <File Id="filBB4F3EA8266786AB0B9C56EBB5633825" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\hexley_eye.png" />
+      </Component>
+      <Component Id="cmp00C9D8E881BD6BB5CFADE092C5719A4F" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{CDAC536B-4E9E-4BC1-B3C5-D96D60A5EB79}">
+        <File Id="filB7CA2261A2AA34DF026DEF4B26D7B5A1" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\kart.xml" />
+      </Component>
+      <Component Id="cmpE41D6A51A800C8C528B5943783539D4A" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{8F614F79-A26E-4139-9FAE-4BD961AFC54A}">
+        <File Id="fil37DCC39AF7CC7932129BD9B3520E6AE1" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpDF1714D97EC91D7783A26DFA614AC83C" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{D660BA28-436B-4ADB-BDFD-0E266F933DE0}">
+        <File Id="fil986502E7968F11E0920F78735DDA3310" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp2928916CC64AA2361EA714496FADD3EB" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{7B0BDAF9-8041-43AC-9EB5-D8465844A9FC}">
+        <File Id="fil35FEF2176F2625E5A74FDDDD24EFA5AD" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmpD66797FFF366F934F9A63B9102EDCBD9" Directory="dir88AD0576078D302D1D3D1DE6E884E102" Guid="{FACF9450-6872-46CF-9551-B8A332AC7F90}">
+        <File Id="fil04A6D85D2E5366FC499041EB8A211F86" KeyPath="yes" Source="..\..\..\stk-assets\karts\hexley\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp4F6B077265ACFFB01108687BBDED71D3" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{5AD3859B-2F40-4FF3-9BF6-C8D2300BCF87}">
+        <File Id="filF3C78D04511F9F3DD11301FE6BFAEC7B" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\colormap_konqi.jpg" />
+      </Component>
+      <Component Id="cmp0CC3B62DF0E683E9DBD429903C09F6E2" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{15C27D9F-B8A4-43B9-B0E1-5A9B42904EFB}">
+        <File Id="filFB6348E2DDC562ECF99724CE7791C9B4" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\kart.xml" />
+      </Component>
+      <Component Id="cmpD4D2951C10D197FA7D25BBD255F6A4A2" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{9B6254E0-B6B6-4AA4-AC20-A06CB5D8C250}">
+        <File Id="fil5651DCB4108094A2EF7F8B4B844C5EA0" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqi eye.png" />
+      </Component>
+      <Component Id="cmp108A5907998FF2EF760FBA133A32C248" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{964B41F2-5922-4AF0-8DDE-DC2318D005C1}">
+        <File Id="filC138AF9A1A60963C8743E1AFD79A7B8F" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqi vehicle texture up1.png" />
+      </Component>
+      <Component Id="cmpAE1A82E28868993EB0F0FA85B4F2ED6C" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{5FD307B7-159E-4071-954A-C6AB78706099}">
+        <File Id="fil70ACEA87BC7FF3F1BEC140EDCB76A8B4" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqi.b3d" />
+      </Component>
+      <Component Id="cmp264D81C4ECDD0A4D1060C79271E571EF" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{616BB04E-1F92-4646-901D-EADF667FB773}">
+        <File Id="fil8A3EA59D79B7AEF022387AF2A5406EA8" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqiV1 shadow.png" />
+      </Component>
+      <Component Id="cmpF188A67EE0113CFBCFB15D71CC8BEBC9" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{B966B38C-1A31-494A-80AC-09095FE9C6E0}">
+        <File Id="fil20DC00C2A1C719A44E3B6F73FBCC49F2" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\KonqiV1-kartequipmenttexture.png" />
+      </Component>
+      <Component Id="cmpFC60C721F4EEEE4FE6E6C475771E5101" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{97D01AC5-061D-4EEB-8416-8D64C2C4DD88}">
+        <File Id="fil18D1B67B13E162A0D32DDDD574642FF2" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqiV1-name.png" />
+      </Component>
+      <Component Id="cmp098333946373DCFFBA6B9A013269F871" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{E3F76BD1-02AC-475E-889C-A65F0D7DA52D}">
+        <File Id="filCF2CBE606D3B20F875003E2E29ACA672" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqiV1-steertexture.png" />
+      </Component>
+      <Component Id="cmpE4030DB474C68715C19567EBCA5FBBAC" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{37AE4A5F-DF61-4A62-8C0B-026560049C32}">
+        <File Id="filB3F4246BF62DE4467286EF5C70C21BE8" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqiV2 wheel texture.png" />
+      </Component>
+      <Component Id="cmp35C8539E652AF293095D93E4C4731F99" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{1F6375F0-FEE4-4EE1-8B20-3CDCD0F1F67A}">
+        <File Id="fil7626CBD14CD8D6DCB45247966D3FDDAF" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqi_icon.png" />
+      </Component>
+      <Component Id="cmp76DA588CABE70F5F25550F7516EC1D11" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{5ABCF56E-736E-4EC2-82F1-8FC1437E4B6A}">
+        <File Id="fil5F8D464699F99200C06F31BDB233237F" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\konqi_kerchief.png" />
+      </Component>
+      <Component Id="cmp7AF529F9BC0C79D07F30089FE818E075" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{CCC3D1CC-2E14-43F9-9CBC-B5ABC46CC962}">
+        <File Id="fil410D684337CEAE36066ED7BC81F0CD43" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\License.txt" />
+      </Component>
+      <Component Id="cmp2C93230E3ACDE21F00B73733C935DD09" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{09977098-A276-465B-B9FB-F5228608615E}">
+        <File Id="fil682839F83EB094C14E4C7DED7B598B24" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\materials.xml" />
+      </Component>
+      <Component Id="cmp75C1296C7A0388E38C6B4FBFE2B96C5D" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{B655A242-55CA-46CA-AE23-2541FA96ECBF}">
+        <File Id="filFD50922C551B2EFD3F007B9552BD2485" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpB73A30A978BE3A5A14A3A978C0348D0C" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{0C2937F7-4D35-44D5-B900-FA90C51EE80A}">
+        <File Id="filA379F8E0000D81FB0B3E1B2C7B2EC1AB" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmpDF51D394A0164D5EC538C510CAD3B825" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{B247E877-AE1C-40C5-8D4D-82D11EADBD68}">
+        <File Id="fil4959E9CCD5DFC42D686820FC918C9526" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp2A823292A86EF3BCD517B0910258866C" Directory="dirF183AE697FEF23160B8C65D96206A0B4" Guid="{2D38391F-31E9-4737-8C6B-5BA15CE2C0C3}">
+        <File Id="fil0C62DD7DDF483C274AB7FFC3FAB18ECB" KeyPath="yes" Source="..\..\..\stk-assets\karts\konqi\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmpA1C1D10E47B70CA01AB82F8D5C6A7C4B" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{5457DEAD-EA6A-43EA-AE50-E326FFBC61B9}">
+        <File Id="fil9114632195894134763D948644448E5F" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\AAARH.png" />
+      </Component>
+      <Component Id="cmp4AA776A11F2F658C5D2D6121D4A02675" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{727A85A7-F4C5-4472-B2B7-659DBDDA962E}">
+        <File Id="filAA2CA2031425F211C3B2ABE23E2973B5" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\kart.xml" />
+      </Component>
+      <Component Id="cmp869F375518EEF577A6835FB59775E94E" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{F0C5FAE8-6F73-4C5A-8732-B0E130A95E2D}">
+        <File Id="fil2272F39409B1418CB7055DC2E30C79DE" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\materials.xml" />
+      </Component>
+      <Component Id="cmp0C781488DEE4F40447C953C3A14754D5" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{9CAEBC07-0E69-4DD1-9959-1D63323E0EEA}">
+        <File Id="fil50BF04F1CAFE4B50855115C4B9E885C8" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\nolok.b3dz" />
+      </Component>
+      <Component Id="cmp6A215ED4C8BCB3861477F08032091898" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{99E8095A-D7DD-45A1-A6A2-D2C773280668}">
+        <File Id="filD7A3F5BDE47191F163A0F8C9E357C437" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\nolokicon.png" />
+      </Component>
+      <Component Id="cmp7DC4CF272E39F463AEE1D7AD8ACEFAFE" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{5E2317B2-14A1-485A-BBDA-6FC15E2B4FFB}">
+        <File Id="filE641916F1EFF34783BE8DC56B09CDCC1" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\nolokshadow.png" />
+      </Component>
+      <Component Id="cmpA4A708C3195B3478508930093FCB0807" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{BCA6E0CE-C5A6-40AE-BF5B-20D55FB814C7}">
+        <File Id="fil0BBBDC1F7A82446ADBD4C9E988016403" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\nolokwheel.png" />
+      </Component>
+      <Component Id="cmpC424214F6C68869AFF2712A4C8C69AEA" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{98B41623-CEAC-4B2E-B9BD-DB1ADA603D1D}">
+        <File Id="fil75D74F1486E160DA2D230BC5C4A7985A" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\nolok_kart.png" />
+      </Component>
+      <Component Id="cmpB30E400A462B6DD532D20378E2B1F395" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{71F4A4D1-75FD-4574-AFA2-6AD035493660}">
+        <File Id="filB902CC80C6FD2A99CB441ED1463E569D" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\nolok_window.png" />
+      </Component>
+      <Component Id="cmpE09486D318E796157ADE1132A5AC795F" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{00CE578F-D991-4322-A610-1D9D005B29A3}">
+        <File Id="filB46D70E5308DD4D0209640A221E3AC69" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\Private-sphere.png" />
+      </Component>
+      <Component Id="cmp10ACB0EFC16C18943B457998CD147D61" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{665B057D-041F-4A99-B43D-8B50C9DBA757}">
+        <File Id="filF6CA5F5BA5051BEDAE2CDB36151C9677" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmp911ADAE8132D681020C415F0DB843A31" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{A2036437-AF5B-4461-B305-D0F9F7D0314D}">
+        <File Id="filD3BAD8DF78D8E45102C2FED9001BE311" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmpF717D76D282CD2C5D10DE2277F5982AF" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{017CFABC-2C0E-4449-AD1D-84F07329D255}">
+        <File Id="filB0C6AB688806FD13BA6379C135FDD7BB" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp769D3020F59DF74295214B4B65EB5562" Directory="dirF8D7676FED5D0DF68B1025FFE0CFE661" Guid="{ECF3286B-DD5C-4716-A118-7A1ADDFCF785}">
+        <File Id="fil5347DEBC7D742C301B7FFC591E17D959" KeyPath="yes" Source="..\..\..\stk-assets\karts\nolok\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp085E90BA5FF01D1DA6DB11A56E6DF5BA" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{EEE590B0-29FF-44F9-9D29-1BA8311AB133}">
+        <File Id="fil45841E4A8A8BB04918C0694B5E8E7D7E" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\kart.xml" />
+      </Component>
+      <Component Id="cmpACA0E0E72A3966B46A11EBFFE9FE4192" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{8FD2B970-79EB-40A4-854F-BCDD967BCB28}">
+        <File Id="fil9722AC9E9BF26C795C03BD2A78EA2CD1" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\materials.xml" />
+      </Component>
+      <Component Id="cmp26C70C89039CA65358C5CE49F6619DE4" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{D93BD5EC-BB44-43E9-A034-570B59DCB603}">
+        <File Id="filACF0DB90FE115B66078D0DD7CBBC2BFA" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\pidgin-kart.png" />
+      </Component>
+      <Component Id="cmp52571825B9F79787C7870096D7A77A70" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{A19A7570-51E5-4C21-A2FF-A4B5E6A1571A}">
+        <File Id="fil60FEC2E52EED826D1DD3D2B726BB6260" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\pidgin.b3d" />
+      </Component>
+      <Component Id="cmp2A9CCA7C025D1F43EB4DDF1EEACF6EA3" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{001724D7-61F0-409B-9B04-E2D22F64CF25}">
+        <File Id="fil57112EBA6BD7D738027A2936902DF12E" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\pidgin.png" />
+      </Component>
+      <Component Id="cmp464A17E3665483E2524959FCA0CFAEDD" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{B998A07E-F762-4D57-BF95-B8854543C3B4}">
+        <File Id="fil33254F4918D3C26553D0FD5EC5A94113" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\pidginicon.png" />
+      </Component>
+      <Component Id="cmp5C5361BECD09E527B8278A5E26348CFE" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{6B13FA68-F6B5-4ABE-AC91-C74F9AC54CAB}">
+        <File Id="fil853BFBAAC55D82091414DA2DC788622D" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\pidginshadow.png" />
+      </Component>
+      <Component Id="cmpADD5C4B369738E5687BC5F635A2634B0" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{CC11FA7C-6330-46BE-BD86-43DDD63E5DF8}">
+        <File Id="fil1D07F2623D196672FE6985EFB52D76A5" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\pidginwheel.png" />
+      </Component>
+      <Component Id="cmp15AE1345A619B026A0575C5D8BAEAB55" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{7B362444-5EC4-44B6-B6DF-1DDCB5EE9B4E}">
+        <File Id="fil265CC44D4E4E69A81C66A4E7EEC9F662" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpBC657D84A2E5DD4ED09CC593AA0A99D5" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{17C7220F-6849-4D82-94D2-7C8AEA18166E}">
+        <File Id="fil7E5F329F3DCBE31D6C089E017A5CD30F" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmpA7ED8338B6E89B68378A31D69ABFF519" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{01D4075E-D9D8-496B-ABEA-41D5CE2021B6}">
+        <File Id="filCF3508038EA6F5DF156ED12E9C1CD3C8" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp98F5606CB074ACE8A15B56C2D35DE511" Directory="dir9AD67D53B78E563B37A0E2EEBFB2BBBE" Guid="{83BC71D1-E3D4-465C-A1A6-E4E2D875EBF6}">
+        <File Id="fil223D5AECD512AD95FE7FFB1A2C99BAF3" KeyPath="yes" Source="..\..\..\stk-assets\karts\pidgin\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp87AF5B8B9AF11E9BDA1BD795A06F684E" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{B1ED78AD-7749-4807-87CE-9422282681AA}">
+        <File Id="filFAB475D9C9827C8A7DB4100F3BE4F1B7" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\fog.png" />
+      </Component>
+      <Component Id="cmpDB6DA36A441B2A6539B712D1D3078125" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{86993512-2DFE-4E51-A46C-289F9133BBE6}">
+        <File Id="fil4E478FD5FBB13E8F8E0DC5B4C390720A" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\kart.xml" />
+      </Component>
+      <Component Id="cmpB95E60F261D29A187C992FC0DA102A02" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{B9C72CD0-F166-4BD5-BE16-4F5DA9522188}">
+        <File Id="fil1A66BF4B82F50984331C50D859F577E3" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\materials.xml" />
+      </Component>
+      <Component Id="cmp2B42DA7445A3438E9BA384F7BAFC00A0" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{E01F9FCC-B7DE-43D9-BE31-5212CB0613B2}">
+        <File Id="fil4FACE0CC9909BF04D8D650F32FDC81FE" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\puffy-icon.png" />
+      </Component>
+      <Component Id="cmp3D3AB85D27CDFC58516E8CBE6A3C8F6B" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{7CCFB095-BB76-4DF1-B628-D44D8732CAD7}">
+        <File Id="filEB939A04AAC1ECB073556888AE568467" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\puffy-shadow.png" />
+      </Component>
+      <Component Id="cmp45F0056C9E0981559B02DAB49ED635B9" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{93356B69-47E2-48EA-A9FB-E6C3EB8F6EDC}">
+        <File Id="fil0F325FBB460AFD2AE8D012D6DFE51AAB" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\puffy.b3d" />
+      </Component>
+      <Component Id="cmp93B569E1BE380FED6A3D2718341BB837" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{94EA58DC-B4AB-4015-8F30-DBDC52C61CB0}">
+        <File Id="filB1854E9CB3B04672BD8D81DD0FD722FA" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\puffy.b3dz" />
+      </Component>
+      <Component Id="cmpAD06B5DDBD1609BCEA0207C1AAEC7B12" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{5020B152-66BD-44BE-9FF0-2AB4826162AD}">
+        <File Id="fil013C416F712A98255C066AD7390AE02C" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\puffy.png" />
+      </Component>
+      <Component Id="cmp4CF361CCD670820A8B9B2DE7A1E5276F" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{6E221973-35BD-4E2E-B82B-4765BE6220C1}">
+        <File Id="fil15E6F0DB263B2810ADBE68F1832CB7B9" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\water-P.png" />
+      </Component>
+      <Component Id="cmpD51553F5F508A9372D598C2693237C8D" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{2861F4DD-C37A-4CAA-9947-F7C1A8AFE980}">
+        <File Id="fil357FC4C789AA2DD8BC68DB523FB29F86" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpBA6C1CFF4EBEE87DB7370A5E26108480" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{3CE98036-FC08-4288-9C0D-6D08ADD82D5C}">
+        <File Id="fil0A94DC7E80D1DFA2CCA7C9A32BD520C7" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmpC2078A266A99F284BBBB28D006BEEA3D" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{2084B83F-09F7-49BD-892D-2730D105076C}">
+        <File Id="fil0F67F270E27100AAE61444FEE3CCDEFA" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmpE2929CF689633C047DFCED7E7B07CD1D" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{C2AABF5A-D3E8-4A1A-B34D-E73974818943}">
+        <File Id="filF539412482BADDFAF017A7BF6C360C39" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp34BB5F7217F2AF4CFBC8FF3BF877C774" Directory="dir3BD9F1AF8962AAC90BA4210B76F4CDFC" Guid="{3C6060BD-E6A9-45D6-9B48-8C112EDABA40}">
+        <File Id="fil7A1D14D14A96EACE7F53DA21CE281C90" KeyPath="yes" Source="..\..\..\stk-assets\karts\puffy\window.png" />
+      </Component>
+      <Component Id="cmpCE424FD4B3F474E3D27D3FA8FE7DCA44" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{D1EAFC52-0A09-4F1F-BC58-7530BABAFD19}">
+        <File Id="fil5E8D522E1EAD244F4DBA30AEAFAEFD09" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\icon32.png" />
+      </Component>
+      <Component Id="cmp87094B4F0B1691158510472376CE2C92" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{5184815A-E496-478A-8C62-3D6E319BF574}">
+        <File Id="filF6E7CA5FF2A58D4C317274D45369D7A1" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\icon_large.png" />
+      </Component>
+      <Component Id="cmp18B182EBB27CFFF47C4B5DB7786D75A1" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{F9483A31-0129-4CB7-AEDA-77937968A4FE}">
+        <File Id="fil3F46E46838EDA6B57B88FB5BD0AA5103" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\kart.diffuse.jpg" />
+      </Component>
+      <Component Id="cmp24EB68C0E6F317F4FCC7EAA9FBFD0E1F" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{8F7A1CCD-C56C-4EF3-B3AE-20990BEED3B7}">
+        <File Id="filE0B5C8EA2F6D5B5E466199BBC79C7581" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\kart.xml" />
+      </Component>
+      <Component Id="cmp11204C5A0774D892AE29176C325FFE0F" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{6C55BD82-CB78-4160-9D70-91B2A6538632}">
+        <File Id="fil6282951DA7293453E871537F4D7CC0FA" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\License.txt" />
+      </Component>
+      <Component Id="cmp7D48F7F36E5B50612D1E9A0E2D846A61" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{B142B36C-42E6-482E-93AA-C5780459CBC8}">
+        <File Id="fil3A4A40326B26D10418A7E047A8F1CF08" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\shadow.png" />
+      </Component>
+      <Component Id="cmpE056453371C71AFD91356E8F4F478B12" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{CE25EA11-0F5A-4448-ACB4-0F183E715EC7}">
+        <File Id="fil0729358EDE0E99E71828B8584E74A4B4" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\suzanne.b3dz" />
+      </Component>
+      <Component Id="cmp0DA0EB49CAF70718CD5D8316760D1FAC" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{12F41784-D2B9-483E-B2DF-1B0CF2E27F34}">
+        <File Id="filB5203D36CD3C38D41DA5F0A06FE47537" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\suzanne.diffuse.jpg" />
+      </Component>
+      <Component Id="cmpAF574CF5A58A9F5D0D1B936345C6EF08" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{284B6FA0-7069-4E25-B08C-1D12AF413031}">
+        <File Id="fil81E9AB3F830700C304405D27008CCACA" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmp597A4BC0E173403F011E2618EFB301A1" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{680B44E8-5340-4910-9BB2-A81DDA703718}">
+        <File Id="fil5D02464411ED2407C02DB55E0158B970" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp3600F48E649C6CA37A7777ED62D1EE81" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{083F7786-5C98-4075-981F-30B68CD07DE7}">
+        <File Id="fil2B9E90578DD8C1EE54414BBD42186886" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmpF57992583AE486A00B910F0F9831DB7A" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{9C6B965A-A9F5-45D1-AE2B-B6C962ADE9A1}">
+        <File Id="fil6E483108F9EDE37E51F5B7096682506B" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmp4148742025DF09E1BFC8486E441373B8" Directory="dir319BAC3E7B5ABAD1974949B80D3CEE51" Guid="{DA9A2703-B518-479D-A951-C212179098C4}">
+        <File Id="fil8B35BB3E87439CA3B1004CB9F80F4758" KeyPath="yes" Source="..\..\..\stk-assets\karts\suzanne\Wheel.diffuse.jpg" />
+      </Component>
+      <Component Id="cmpD182237C06E40ED53E4149FB0A82790E" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{CE68AB47-1897-42F4-9172-35297F373C9A}">
+        <File Id="filC44A801805ECCA764906492021BB1106" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\crash.ogg" />
+      </Component>
+      <Component Id="cmp6696606C56A574E4211CB6B6261A18B6" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{0548FD8C-3896-4DD2-A233-3C54F70106D3}">
+        <File Id="fil7A0C26759902198F8CF0433A3BB1F08D" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\explode.ogg" />
+      </Component>
+      <Component Id="cmp2234C1994C454635955E33562CA866D4" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{4D5440A9-D118-470E-A1B9-06382D9D909A}">
+        <File Id="fil317D3CB94F175F56E507245C2F45323F" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\goo.ogg" />
+      </Component>
+      <Component Id="cmp74613521A545DE6F3161BE491A26D71C" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{4E2968BB-85E7-40AB-B379-D6F0CE1080A3}">
+        <File Id="fil351D0226EDACF4CA7F27BD3296E1296E" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\horn.ogg" />
+      </Component>
+      <Component Id="cmp5FEA4BA3F35A6E5742B2D08A4C554316" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{A7806E72-EAC6-44B7-AFC1-CD2E59BF9CC1}">
+        <File Id="fil778EFC066F970AD15C16BEDFFAD034CC" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\kart.xml" />
+      </Component>
+      <Component Id="cmpA10FE02C0CF623A242890042AAFFD201" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{56DA73B4-29A1-4064-B884-5FBE258B36E6}">
+        <File Id="fil825FC3D681CCD988A2F07BA9BD5A2E93" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\pass.ogg" />
+      </Component>
+      <Component Id="cmp5CD1FFC40E28E46CCBE80FC255ACC98A" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{1AE50BD5-4D56-4C25-97DF-27536AC14620}">
+        <File Id="fil6043378F6353BB7CCAB3E42986E37CF0" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\Terminal.png" />
+      </Component>
+      <Component Id="cmp8DC18636B3B3D562104839F40F62E882" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{0FD3B555-07E6-49A4-B09D-ECB5CA7E6004}">
+        <File Id="fil58010F06F8ACEBD7EC8831857E5F42FE" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\tux.b3dz" />
+      </Component>
+      <Component Id="cmp737EB91454CAF685D144B66871C72B23" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{DE04EB56-69CE-448B-B4B7-27A8A19BDF39}">
+        <File Id="filB369FFAC6CD223201832B5096693FBCD" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\tuxicon.png" />
+      </Component>
+      <Component Id="cmp9D7BE3CA64655A2FF98A3F75640D9E60" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{650FBB1B-461E-4E60-9E32-047946C0897B}">
+        <File Id="fil7565BF8773079368E7A88A5571951BEF" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\tuxkart.png" />
+      </Component>
+      <Component Id="cmp8997A666974261D4884B7C766D6093C5" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{296509AD-3377-4FAC-A0F8-0019791BAE6C}">
+        <File Id="fil18418550AF363BC9D4F17134084B2BDB" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\tuxkartshadow.png" />
+      </Component>
+      <Component Id="cmpFC30B5FCA2B6BA2E5F2DA7DFDDDE1357" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{B8965A61-3C5D-499F-93B4-ACB6CA98AD59}">
+        <File Id="filFEE64CF4D36DB8553A5C7549FC5DE219" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\tux_body.png" />
+      </Component>
+      <Component Id="cmp3834E21A56CD08AE60226BF911972712" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{69A26A72-2426-410D-ABB3-BF7C44AD029E}">
+        <File Id="fil27B57F9D84512363CE009A83AC9B8F9E" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\uh-oh.ogg" />
+      </Component>
+      <Component Id="cmp645086A18EFBD78E6D0B25EB75146E23" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{F96B1DD0-EB61-40E3-8899-9A9CEEF32A95}">
+        <File Id="filBBB7BA1737EF8AB6DFE09A181AC9B630" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmpFAEF5AF3D888B4200491467C7B3B22C5" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{1363A30B-1A69-4DA7-A5D8-F49E0E654C7C}">
+        <File Id="fil427BAB9A61A317ECF74F2D812C2F354B" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp205FD8735021AD01FB18B4294A4346A0" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{8A1273CD-D0D6-49ED-9645-A5A612B74CE6}">
+        <File Id="fil180083606B1157EAB7656FB05E5EEB4D" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp9AC1A074E3075E7034421B625442613E" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{0896D699-ECDD-44F0-B0C3-D05FCE6A533C}">
+        <File Id="fil456C1A1C6B93AE67DE56FBEB3E001ECD" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmpE94233056176C57E0D00957CBB94BFB1" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{05CBDE84-2C0E-4E4A-8B8C-625D458B8EE2}">
+        <File Id="fil674F69FAD2196C6053454012D5A70874" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\win.ogg" />
+      </Component>
+      <Component Id="cmp42343AFF2DEE38012161BAEDAA7896F1" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{FD7BA96F-3EE3-407C-BC93-A7ECBF431045}">
+        <File Id="filBCA1A08149FC39B3E60C9E16A19E19A4" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\yeah.ogg" />
+      </Component>
+      <Component Id="cmp35C8483FD4C6FDF06856E99EDDF82C2E" Directory="dirE80FA8160D5CDDCFC97124679B69933D" Guid="{8448BB9D-1682-4B2B-8E2F-6E40D74B8DE4}">
+        <File Id="fil3CB7AA7707AF044F05D15358D1ED2707" KeyPath="yes" Source="..\..\..\stk-assets\karts\tux\zipper.ogg" />
+      </Component>
+      <Component Id="cmp5D106D9FDF8FE09306776C4E88B19141" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{06C5E85D-7567-416F-A6A0-71C609170210}">
+        <File Id="filEC23CCF264C0751799CE0916E2023FFE" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\eye.png" />
+      </Component>
+      <Component Id="cmp5B481249C49790FFBF7CAF529D1CF8CB" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{CBFFBAD5-3989-4884-8260-E6BD84DC37B4}">
+        <File Id="fil7F61963E408A7C94785F84C6AC25EFE5" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\kart.xml" />
+      </Component>
+      <Component Id="cmp345D809C06C0F1D9E869E6263DE3F1BE" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{13EEFBF3-07D5-4091-8EE4-71662F62BF49}">
+        <File Id="fil8855360A95F80562F13D41F1B542111D" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wheel-front-left.b3d" />
+      </Component>
+      <Component Id="cmp9FE0AB24509C63AFBB696C10881E6FFF" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{53BD98E1-5ECC-47E9-89CE-3007F4DCEC31}">
+        <File Id="fil1DC784D5D67D5FB88FAE9286B65A07BC" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wheel-front-right.b3d" />
+      </Component>
+      <Component Id="cmp6642261C6CA03CA952A6EFFD67185AD2" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{DAC6C6D1-B1D7-48E4-91E9-0BCDCF19348D}">
+        <File Id="fil47121BD21BA1F8FFA4EC1A384E14057B" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wheel-rear-left.b3d" />
+      </Component>
+      <Component Id="cmp512B0BC1F4C0C949BA23D14E00216B21" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{0F3C9E5E-FF15-40E1-A2D3-E5925C8BB682}">
+        <File Id="fil010DDA70F725EE0356818EC5894F67A5" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wheel-rear-right.b3d" />
+      </Component>
+      <Component Id="cmpE7BA95073CFB1518E4CA9E403CAF31A8" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{537111AB-3DC3-49CE-96F0-E1DA3AF2D97C}">
+        <File Id="filBCE5D1E145663723C95FE18356B2D0E0" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wilber.b3dz" />
+      </Component>
+      <Component Id="cmpA19B1DBFE9DCE74784BA4C4250D70E08" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{7C9A3848-0059-4487-BA62-971E8480D571}">
+        <File Id="filAC620E88929E333E770213BEB91099DC" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wilber2neu.png" />
+      </Component>
+      <Component Id="cmp2A634C26BA91CE7332925CF01A3C4AE1" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{F2B52037-CF64-4F81-9D29-922F327FD786}">
+        <File Id="fil8F2B2C2FC34976E9E8A09AFD341581D4" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wilbericon.png" />
+      </Component>
+      <Component Id="cmpD42C9D4FE49C3075C4C4AE6F3903D561" Directory="dirDC8394AF5EF363B400E8DD67DE002324" Guid="{0F3B022B-516F-43CD-99EB-E76A703AD2B8}">
+        <File Id="fil03FA2B57FE7ABB80C37E30FD4DDDE18D" KeyPath="yes" Source="..\..\..\stk-assets\karts\wilber\wilbershadow.png" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="library">
+      <Component Id="cmpE09099DBC30268EB826E130B289DB5A0" Directory="dirFA61642C87C61DF3EEE1043685B32392" Guid="{2A175E48-D449-44B1-8810-7165E81162A0}">
+        <File Id="fil243F6C3369B4BCD54C72A770DCBFD5EF" KeyPath="yes" Source="..\..\..\stk-assets\library\gfx_jetblastGround_a\node.xml" />
+      </Component>
+      <Component Id="cmp2E003E78EA770FD803589ACE79FCC3CD" Directory="dir689204D806ED2E3D47B9DFE055C60DA3" Guid="{30C3192C-2967-425B-BB00-1673EF24B52F}">
+        <File Id="filE0FC94A52AEBAE443C3CD4EA3FBE30F6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_animGrass_a\node.xml" />
+      </Component>
+      <Component Id="cmp8A5992B0AB2B683FD61F8F968FBBB72B" Directory="dir689204D806ED2E3D47B9DFE055C60DA3" Guid="{9BECB1C9-B3C6-4350-94D1-29E8F9ED85DD}">
+        <File Id="filF568BAEE2722C0999E02D1EB90130EAA" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_animGrass_a\stklib_animGrass_a_main.b3d" />
+      </Component>
+      <Component Id="cmp44DB7789736EEFBDF4FC07AC53EA0895" Directory="dirF5CBEB1D28B48843128274C3E2FDC971" Guid="{4E6DBD0A-AFA4-4F6F-93C9-6FACFF144A13}">
+        <File Id="fil6212296741950010416177ECA6E2D978" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_armchair_a\node.xml" />
+      </Component>
+      <Component Id="cmp782568373797A750D7B06F7835E23594" Directory="dirF5CBEB1D28B48843128274C3E2FDC971" Guid="{9EE402D3-683E-4618-8BD5-55B37BAC033E}">
+        <File Id="filAA8B5FF7BB7356D724321E51E2F6F897" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_armchair_a\stklib_armchair_a_main.b3d" />
+      </Component>
+      <Component Id="cmpC3FD926E1F4D6FEB4C9B5691201DC4B0" Directory="dir1295BA28BD125CE751EF95A5BC91C34B" Guid="{BA872760-AB09-433B-A27B-E13B67D35BF2}">
+        <File Id="fil9853C7D2E77CFBBB6EA10DE858E538DF" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_asianLantern_a\node.xml" />
+      </Component>
+      <Component Id="cmp33225F70F506CA74FA5BE207A248709C" Directory="dir1295BA28BD125CE751EF95A5BC91C34B" Guid="{D0DFF0AF-FD6A-46DA-9D84-CF9A231AAE8C}">
+        <File Id="filCBC36B22FF2100857DF927138E13A297" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_asianLantern_a\stklib_asianLantern_a_main.b3d" />
+      </Component>
+      <Component Id="cmp48CA90DCC55F9EAA24BE1E37842BA041" Directory="dir011F16FB6F433D97DDE7026C8C79856D" Guid="{50144EAF-7ED3-48C3-AADE-141B8615A569}">
+        <File Id="fil14CEAE92275998D649F2C70E2783A014" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_asianWoodPost_a\node.xml" />
+      </Component>
+      <Component Id="cmp13603390B398D4E174A10D25314450F3" Directory="dir011F16FB6F433D97DDE7026C8C79856D" Guid="{6BBCBB35-62CA-4619-931D-C3DAB41EBCD3}">
+        <File Id="filB60E043FC784AFF57362A59B0DDBCA97" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_asianWoodPost_a\stklib_asianWoodPost_a_main.b3d" />
+      </Component>
+      <Component Id="cmpA7D235C618AFAA5F3D7400D75D43B3FB" Directory="dir28BB703AEA1027F9EB7B15576C18B055" Guid="{902BAB87-FF8F-45E4-85BB-354CECCD31E9}">
+        <File Id="filDA7724408ED92F6EB9B3B42FF11026A8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecFountain_a\materials.xml" />
+      </Component>
+      <Component Id="cmpED4A30182228684CBBC7EE87AD6385C8" Directory="dir28BB703AEA1027F9EB7B15576C18B055" Guid="{7EC57CC2-4049-4FA8-A0ED-D81C28AFA098}">
+        <File Id="filAB382089D24BB35232BA939967314CF9" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecFountain_a\node.xml" />
+      </Component>
+      <Component Id="cmpCA89354C45B11945C895BF108E788B2F" Directory="dir28BB703AEA1027F9EB7B15576C18B055" Guid="{6AC38078-2042-43C0-A20D-456DA94C6501}">
+        <File Id="fil13EA78756376B1C8E68CC61659E43891" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecFountain_a\ouroboros-full-717049.jpg" />
+      </Component>
+      <Component Id="cmp0BDB04E89191E4E425EEB96626B316B3" Directory="dir28BB703AEA1027F9EB7B15576C18B055" Guid="{25328800-7914-4B12-8447-8842EBE28E97}">
+        <File Id="filB653EDD44F9BBEE083A8CC5821F08A9B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecFountain_a\stklib_aztecFountain_ao_a.png" />
+      </Component>
+      <Component Id="cmp1D48373D81F02CD94F113FB5E489B9E9" Directory="dir28BB703AEA1027F9EB7B15576C18B055" Guid="{45AC3BF5-24E5-4306-9533-3D8E23F4FB07}">
+        <File Id="filB2BFC51929FF73E210F5B70733B96791" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecFountain_a\stklib_aztecFountain_a_main.b3d" />
+      </Component>
+      <Component Id="cmp5F89EC9A3D7F203893BEC4647E77E2F4" Directory="dir7A1266D06E9CBFB316691E0347ED141A" Guid="{B13C7F84-1480-48EC-9217-D20F81C3143D}">
+        <File Id="fil46DE998FAA18FE76874687BE94ACE085" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHouse_a\node.xml" />
+      </Component>
+      <Component Id="cmpB02513EF913C587913DEFF18D920252B" Directory="dir7A1266D06E9CBFB316691E0347ED141A" Guid="{1F3261A2-79A0-412B-BFF2-C950D5754138}">
+        <File Id="fil216FCE80C0BA4F8D6F477C731107607D" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHouse_a\roof_test.png" />
+      </Component>
+      <Component Id="cmp0F5D4C875C6565FDDCCF31795F1B9069" Directory="dir7A1266D06E9CBFB316691E0347ED141A" Guid="{C1657E27-E33E-4DDB-BB9A-0B2C26CB1157}">
+        <File Id="fil4D6FBC8866C7978C68313C705E190EB8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHouse_a\stklib_aztecHouse_a_main.b3d" />
+      </Component>
+      <Component Id="cmp3AB61E5D7CACCF38D92B8E0E79912299" Directory="dir7A1266D06E9CBFB316691E0347ED141A" Guid="{C80CB8B6-4C66-4723-A956-82BDC62A15D0}">
+        <File Id="filF8FDE67C5268E2A81868EC8BB6F8D661" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHouse_a\stklib_aztecHouse_a_main_high.b3d" />
+      </Component>
+      <Component Id="cmpCC9A4EA9CCE731F71FDFE0F9FEFA479A" Directory="dir7A1266D06E9CBFB316691E0347ED141A" Guid="{CCD15B5C-18AB-4104-80DC-85A7EA36C631}">
+        <File Id="fil126E38CD73366E19C45B3C37F0897E5D" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHouse_a\stklib_aztecHouse_a_main_low.b3d" />
+      </Component>
+      <Component Id="cmpD0406D63F0BAF5947C0C743AEBA52D72" Directory="dir28298ECECF6AF1EC18F8173C0921BA0A" Guid="{3889F69E-64E6-4A14-9577-53D559A8CF79}">
+        <File Id="filCEE1C9C59013A227BB68AC19FBF16182" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHouse_b\node.xml" />
+      </Component>
+      <Component Id="cmpC44B89D3B17E43A23B94E0DAC57C4ADD" Directory="dir28298ECECF6AF1EC18F8173C0921BA0A" Guid="{86DB646B-72E9-4B73-9E94-C1BB1B7B37B0}">
+        <File Id="filFDF659C03729CFBBCF9280DD3A4FB1E8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHouse_b\stklib_aztecHouse_b_main.b3d" />
+      </Component>
+      <Component Id="cmpF8D229D235E859BD8B96713D9ADAED06" Directory="dir02A8EF45E65DDFCCCBCEB0B96A2D0C6D" Guid="{D5A17775-42D3-471E-BA99-1FE2926975FB}">
+        <File Id="fil9557293D2F9BB700F7B8D2FC9571AA63" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHut_a\node.xml" />
+      </Component>
+      <Component Id="cmp09748C3E40A0B341157AEF885BF2B03E" Directory="dir02A8EF45E65DDFCCCBCEB0B96A2D0C6D" Guid="{401678B5-95BE-4AA1-A268-3D65E5D125CE}">
+        <File Id="filC0272CB445F4F7C54404770CAA4D1109" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztecHut_a\stklib_aztecHut_a_main.b3d" />
+      </Component>
+      <Component Id="cmp6F45D9A47A319D5186A10221006EACE7" Directory="dir08AD061C91C434CEFEE89D68C7D8EB33" Guid="{F63B418C-801B-4B4C-8B0C-0B3C9DDD5837}">
+        <File Id="filBE359F6D1E9AD5D74A94DAE52DBEDBDF" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekGirlCheering_a\node.xml" />
+      </Component>
+      <Component Id="cmp1366E887034E56E8C898232FF1A3A481" Directory="dir08AD061C91C434CEFEE89D68C7D8EB33" Guid="{D90C6CF2-F57E-47F0-AE12-B122D9D95D6E}">
+        <File Id="fil7C0F6D79FB007FD53388DEC511DA6D83" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekGirlCheering_a\stklib_aztekGirlCheering_a_main.b3d" />
+      </Component>
+      <Component Id="cmpCD532616D348C7F60398AE0B06EC5E19" Directory="dir08AD061C91C434CEFEE89D68C7D8EB33" Guid="{AAFC340B-3739-4372-9E87-A024F2BBA996}">
+        <File Id="filACCFD723BA8B48CBE330E971BE543E3C" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekGirlCheering_a\stktex_aztekGirlBody_a.png" />
+      </Component>
+      <Component Id="cmp65C6724D0BFBDA0DD036B2B24CC77526" Directory="dir08AD061C91C434CEFEE89D68C7D8EB33" Guid="{24719821-AD4B-46A6-A2A2-6D069C2D9A49}">
+        <File Id="fil54335CC9BB1E45FB0B8C4FA0AD46AEE7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekGirlCheering_a\stktex_aztekGirlFace_a.png" />
+      </Component>
+      <Component Id="cmp75A53EA4A2DC08C9FAFD9CE6A114F9D7" Directory="dir4B0C253FCFC557C19AC436DF7098F381" Guid="{D31B4311-3045-4880-9B42-708ABEEDAA00}">
+        <File Id="fil8A4FDDDF4C1E7E6999D07F24D36F83F6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekTorch_a\gfx_aztekTorchDistord.b3d" />
+      </Component>
+      <Component Id="cmpB690B5FA0A7F6F93090740E1E2B5A4ED" Directory="dir4B0C253FCFC557C19AC436DF7098F381" Guid="{9FB712B1-5E88-49ED-8BD7-D45EC9B4A718}">
+        <File Id="fil08C2877376BE41D60D0A635766219495" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekTorch_a\materials.xml" />
+      </Component>
+      <Component Id="cmpC969090310E0BE4F2006DEC74D357889" Directory="dir4B0C253FCFC557C19AC436DF7098F381" Guid="{484E06C3-64ED-4EA2-80AE-549567B58D7B}">
+        <File Id="fil5BFF686114A8DFC4EF746ACE6EB1BE73" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekTorch_a\node.xml" />
+      </Component>
+      <Component Id="cmp1996CA42D539556F1A8F4BC8DA0CA7B0" Directory="dir4B0C253FCFC557C19AC436DF7098F381" Guid="{DC2EAA26-14F2-47AA-AB81-25E86DBAAC3E}">
+        <File Id="fil92AC71FADE3C378C4B4160FF1F578B99" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekTorch_a\stklib_aztekTorch_a_main.b3d" />
+      </Component>
+      <Component Id="cmp6373A415CB0FB7F216225B78593B08D1" Directory="dir25AF75869C262370525C5292CE27E7C3" Guid="{8EFA5B1D-02F9-4D59-B0B2-2964EA6DCCFA}">
+        <File Id="fil8322C5E6FA399E06B9280609FE5B9E08" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekVase_a\node.xml" />
+      </Component>
+      <Component Id="cmp5189916DB74EB6266661ABA270CD8627" Directory="dir25AF75869C262370525C5292CE27E7C3" Guid="{F84E128C-6D5D-4BE9-AA6D-B817A7F3AA83}">
+        <File Id="fil3C01540ADBEDF801D80FD1FDAE719092" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_aztekVase_a\stklib_aztekVase_a_main.b3d" />
+      </Component>
+      <Component Id="cmp80197A3E29EF4D8974D625F48F478B69" Directory="dirE4AD1C9C54FF1038D0E999DDA6E94ACE" Guid="{9548841F-0826-42F0-BC74-2DFEC0CAA94A}">
+        <File Id="fil245B5F6A24B1C7C60BD8618D2F5FC170" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_balcony_a\node.xml" />
+      </Component>
+      <Component Id="cmp7A0D097186961336814C78BC2C9508F5" Directory="dirE4AD1C9C54FF1038D0E999DDA6E94ACE" Guid="{C86E4EC7-43EA-4A4D-A89A-E1DF97C5553D}">
+        <File Id="fil9B7716DD39116C752D40C80C6D836B18" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_balcony_a\stklib_balcony_a.b3d" />
+      </Component>
+      <Component Id="cmpA6819732D2180595C8D65DEA68AB78D8" Directory="dir7185C0B9A95DB614E90214292033ECDA" Guid="{33251866-33F8-49EB-9C3B-63B6E212168B}">
+        <File Id="fil88028711ABB5ECDB6F215884BCC77F01" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_bambooTorch_a\node.xml" />
+      </Component>
+      <Component Id="cmp42FF127ED0B662E571B37BA3F0493A3A" Directory="dir7185C0B9A95DB614E90214292033ECDA" Guid="{8C34C333-02D1-49EA-AD42-74C6697CD555}">
+        <File Id="filDF0CD4D821F9D5864015327E52C4AE1A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_bambooTorch_a\stklib_bambooTorch_a_main.b3d" />
+      </Component>
+      <Component Id="cmp20AB084E6350340DC84D65369FFEF55E" Directory="dir9EAEDD9755172E798560B084FDB30EA9" Guid="{8B220F59-ACD9-404F-B102-5D19C2273E18}">
+        <File Id="filCFE6776F2953C2BF63B3805A301892E7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_beachBarMenu_a\node.xml" />
+      </Component>
+      <Component Id="cmp7ACC000660BAED11A16FD87A414B0098" Directory="dir9EAEDD9755172E798560B084FDB30EA9" Guid="{887F3C8C-97A0-4CEA-ABE4-F7A2F2FB838B}">
+        <File Id="fil3F0086D7294AC5EA994A4585AF977B2F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_beachBarMenu_a\stklib_beachBarMenu_a_main.b3d" />
+      </Component>
+      <Component Id="cmp834E7E1970BBD6623EBE9409B531E3A0" Directory="dir497014B9592D8EB5E4A7ADB1A71CAB02" Guid="{EDC1A541-4D5A-484C-9354-43661B3C3E04}">
+        <File Id="filF5C938F30FD0CA24D7F07A1B0A3ACEF8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_beachWomen_a\node.xml" />
+      </Component>
+      <Component Id="cmpBCBB7F2658BE9C5D2EFD19AAAAE3E179" Directory="dir497014B9592D8EB5E4A7ADB1A71CAB02" Guid="{FC4305F1-EB17-42D6-84FF-4A9C81898694}">
+        <File Id="fil086DAFE832A7AA91306E39DF4CE8AF44" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_beachWomen_a\stklib_beachWomen_a_main.b3d" />
+      </Component>
+      <Component Id="cmp39B94325D72B0803108A02745C15014A" Directory="dir497014B9592D8EB5E4A7ADB1A71CAB02" Guid="{7EE2F221-A184-4FA4-B9DE-9B85D6F4F7BA}">
+        <File Id="fil20421151985E50D0D22B1C349D3E8F6E" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_beachWomen_a\stktex_beachWomenBody_a.png" />
+      </Component>
+      <Component Id="cmpF8C7A76497656EA956432BA3EF66EDF2" Directory="dir0B07BA02F11393D8875C7AD09F1675E5" Guid="{3E435AEB-7341-410E-A6A7-0135C0422B4F}">
+        <File Id="filB91C8514A9508F1806DF23B7210093AB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_bigBlueFutureLight_a\node.xml" />
+      </Component>
+      <Component Id="cmp9BE0AE3DC2BCB2A9C15E6ECD9F2E5A3D" Directory="dir0B07BA02F11393D8875C7AD09F1675E5" Guid="{389ABA63-8372-4EB7-BE90-144DF9D19121}">
+        <File Id="fil26BA9C37398FADF02505AE2CC14CE236" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_bigBlueFutureLight_a\stklib_bigBlueFutureLight_a_main.b3d" />
+      </Component>
+      <Component Id="cmpE60A08299502A0C01C6823E4210FD0D5" Directory="dir879C1303D5BFC2A439E03DF159C3992B" Guid="{F36A9BE5-C2E5-4888-A684-7BE3843D0AC8}">
+        <File Id="fil173A995E9D10C931C7942E41112B3784" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_boxGrid_a\node.xml" />
+      </Component>
+      <Component Id="cmp43238775F3B5F6985CE0FA732334CB8F" Directory="dir879C1303D5BFC2A439E03DF159C3992B" Guid="{6F043F54-D300-4FCC-90F3-4D4B7DE68559}">
+        <File Id="filBBB968F870467CB67BAB5C2543C5A698" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_boxGrid_a\stklib_boxGrid_a_main.b3d" />
+      </Component>
+      <Component Id="cmp1383FA67B92EE72412E6120144519AF1" Directory="dirF9D3FAB21EF22F1399E615A99A5F5940" Guid="{63A4D70F-A5B7-47BB-BA79-8CC93D89D379}">
+        <File Id="fil8EFC68604AE6E7516363EF6FD5106AA5" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_cattail_a\node.xml" />
+      </Component>
+      <Component Id="cmpC5831AAA8954FF9D5FE810E5DDD8243A" Directory="dirF9D3FAB21EF22F1399E615A99A5F5940" Guid="{70E3E18F-D6DF-4A1D-8743-4CBBB86D67B5}">
+        <File Id="filF3F292280FFD405DDC062012EFB4CCD6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_cattail_a\stklib_cattail_a_main.b3d" />
+      </Component>
+      <Component Id="cmp9E69359401055C0FF9C6C1BAE300AA8C" Directory="dirD517F47E02FB39669EC6B67C90BF5D26" Guid="{C29EC33F-44B6-485F-956A-0EAEEBA46B13}">
+        <File Id="filC0C59B4B697B2B2C7B679BE8B2018791" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_chimney_a\node.xml" />
+      </Component>
+      <Component Id="cmpCA13C7DB26D4499140C11D54E3598BB4" Directory="dirD517F47E02FB39669EC6B67C90BF5D26" Guid="{6EA4C55F-A699-46A1-AE02-0BC5285D41EA}">
+        <File Id="fil95FD1A8961A7581DE5ECFB1C41F61289" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_chimney_a\stklib_chimney_a_main.b3d" />
+      </Component>
+      <Component Id="cmp9EE7F760060ACFB45877EE0F613C87A6" Directory="dirCB19E9B607DA8122C2E9E41F70AB870A" Guid="{3CF6C610-0826-472C-931F-24309121ED3C}">
+        <File Id="filE1DC0952A64980335A990E7C80764575" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_chimney_b\node.xml" />
+      </Component>
+      <Component Id="cmp98189A526DC33B266AFD5B5D85D163DC" Directory="dirCB19E9B607DA8122C2E9E41F70AB870A" Guid="{23378FE5-2F54-4845-A80B-03AE366BBF72}">
+        <File Id="fil2F97B6FEE1734E836D21F11506E5592A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_chimney_b\stklib_chimney_b_main.b3d" />
+      </Component>
+      <Component Id="cmpDBB4574D156B2AEB6E681F713C889672" Directory="dirEE891602C5BFD75AD1191F00EFD406B1" Guid="{8413ADCD-4F5D-4591-8FDD-6A661EF92123}">
+        <File Id="fil3F29048DDE8AF3BFBF6334B539903924" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_cliffGrassEarth_a\node.xml" />
+      </Component>
+      <Component Id="cmpC5F74A7520CD91E22CA5D507FDD19F57" Directory="dirEE891602C5BFD75AD1191F00EFD406B1" Guid="{E97653DE-9635-4904-B0E0-2FF587DC9F4E}">
+        <File Id="fil54B339688FCCC8F80E8273AE6AFA2069" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_cliffGrassEarth_a\stklib_cliffGrassEarth_a.b3d" />
+      </Component>
+      <Component Id="cmpAA47063B393DCD6E2E9008E215208C0E" Directory="dir0F5BE38FBE125CC9EDE1BCFEC3C5BE07" Guid="{A75CFD7F-EE7F-4C3B-AA7B-6FC0CD1A0FF0}">
+        <File Id="fil1FADFDF1E646C1D448B251C3211268CC" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_cocoaTree_a\node.xml" />
+      </Component>
+      <Component Id="cmp78F6326835AAC79003DB6C090DB4D30A" Directory="dir0F5BE38FBE125CC9EDE1BCFEC3C5BE07" Guid="{F2AB15FA-53F5-4D7A-8E07-0EB0EFB01EA2}">
+        <File Id="fil8B8BB7D1E882EF8FC6C1C7C31B471F19" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_cocoaTree_a\stklib_cocoaTree_a_main.b3d" />
+      </Component>
+      <Component Id="cmpB7106318FB4007C73BFEE2F4F78018DD" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{04BE6BD6-41CE-4B0A-B72C-A3BDE6916C69}">
+        <File Id="filA31804F6F3C1504798E10B139A25D4A6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\materials.xml" />
+      </Component>
+      <Component Id="cmp8E343AE4559673D8610C281453B4245C" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{1CEDF30B-93D9-471F-B3FE-F28FFB872756}">
+        <File Id="fil71E1537C02D2FD9A145A52877762383E" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\node.xml" />
+      </Component>
+      <Component Id="cmp714819743C22D5C0D1F2128D032B11E0" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{B6CC2308-D17C-497D-812A-3051AE59E799}">
+        <File Id="fil5C4306B71D5E42971E372052EC572CCD" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\stklib_conifer_a.blend" />
+      </Component>
+      <Component Id="cmp38801F6360C4D0C07478B6FAE565EB64" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{B1D6B2AE-8E29-4CB2-8050-EDB02E9CCC82}">
+        <File Id="filEDDE38AD7A069D15A228ED04A60E156C" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\stklib_conifer_a.blend1" />
+      </Component>
+      <Component Id="cmp7426A5BB5DAEACF8307BE1B6F411120D" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{A75A3FDA-44FB-47ED-A5D0-9865D8957A9E}">
+        <File Id="fil47EF44DEC332090C3B2E2C4B72B934AA" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\stklib_conifer_a_lodhi.b3d" />
+      </Component>
+      <Component Id="cmp486BC7663FE5A0BF0597B89B07EF7BBD" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{A49C2D4C-4BAF-4507-A6B4-3971501CFAC3}">
+        <File Id="fil317C56D2D9A14F8FF83C1A37640C27EF" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\stklib_conifer_a_low.png" />
+      </Component>
+      <Component Id="cmp5437BB40DBB07C16337A77D07DF11F15" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{08BF6DF7-BBF6-49DE-AF97-8BE0D51255A6}">
+        <File Id="fil2214BBE0EE42B12972530C96CB0334A5" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\stklib_conifer_a_main_proxy.b3d" />
+      </Component>
+      <Component Id="cmpAB87040913C9BE290F7AF138D890E3DE" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{AC281038-F6AD-49A8-99D2-331D00255D27}">
+        <File Id="fil59899282190EDDB036A31F045978A2AD" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\stktex_treeBark_a.png" />
+      </Component>
+      <Component Id="cmpCDEF563A7DA26A8DB6A7A0EB4449B986" Directory="dir278E34AE48CB2743946402EFB3A84BCB" Guid="{6F35C38F-B248-4706-BD83-7DE3547DC75F}">
+        <File Id="fil0BF161B895D7CC961B96C6918ECFD740" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\stk_pineNeedles_a.png" />
+      </Component>
+      <Component Id="cmp0AB5F3D6A7685551504D0851BF6634A4" Directory="dir2157A9CD91A7E056DF671027868242DE" Guid="{804A590C-BFB6-49AC-96B6-30B4168708A9}">
+        <File Id="filF937BE30AF06C46AAE7D430E2350B668" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\textures\stklib_conifer_a_low.png" />
+      </Component>
+      <Component Id="cmp63AB0A1D8A973C961CF47F787BBF6D35" Directory="dir2157A9CD91A7E056DF671027868242DE" Guid="{9DB8E059-4177-439A-AC4F-A38263BF1DC0}">
+        <File Id="fil2BC1EC23E007FAFA548444A85975D248" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\textures\stktex_treeBark_a.png" />
+      </Component>
+      <Component Id="cmp7950C2913E890F93CDFE6DC3FE5DF086" Directory="dir2157A9CD91A7E056DF671027868242DE" Guid="{877AB5B5-02E6-4A4B-B6A9-5C837F9832FE}">
+        <File Id="filAFF755BC68C803E914A93DC23F2F8737" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_conifer_a\textures\stk_pineNeedles_a.png" />
+      </Component>
+      <Component Id="cmp52BFD5149BC95D6547855666A9BACCCD" Directory="dir7695147769369A9AA2C1EE48C1D462A8" Guid="{EE9CB49E-498A-4758-9094-D0D015364645}">
+        <File Id="filD23E977F0404F7469A54BB0F2A58ED76" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_deadTree_a\materials.xml" />
+      </Component>
+      <Component Id="cmpE7485EDCF5D260169B32E6F3473BF832" Directory="dir7695147769369A9AA2C1EE48C1D462A8" Guid="{A05465B3-E743-49D6-A634-EA3079393AE1}">
+        <File Id="filE35ECF7709BF9D0B5E65F7BC72F68F5B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_deadTree_a\node.xml" />
+      </Component>
+      <Component Id="cmp77ADA51449CCDCA7486FC0CD4BE0BB9A" Directory="dir7695147769369A9AA2C1EE48C1D462A8" Guid="{C73F8C05-8FCB-4D08-8566-8CB45380AA0F}">
+        <File Id="fil95EC1F61F55FE4E8A9716EC8B56B63C2" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_deadTree_a\stklib_deadTree_a_main.b3d" />
+      </Component>
+      <Component Id="cmp18492FA06877F718778EB4D2DE837499" Directory="dir33893DFB18AEC4C072DED0CEB46B5FEF" Guid="{7018763D-9C3A-4F93-A898-065EA6400632}">
+        <File Id="filD935D0194D985795F4E21915D41A8086" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fern_a\materials.xml" />
+      </Component>
+      <Component Id="cmpD8300E52D76D168C984BF1216274604A" Directory="dir33893DFB18AEC4C072DED0CEB46B5FEF" Guid="{75164BB5-617E-4F8E-B057-B441FFABF83F}">
+        <File Id="filE2B5FD467853A5F5E20313A32383B557" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fern_a\node.xml" />
+      </Component>
+      <Component Id="cmp8D75CB21B99DF63E8D06A3068680821F" Directory="dir33893DFB18AEC4C072DED0CEB46B5FEF" Guid="{B6BD703F-35EF-41F1-B05D-18F5F6730197}">
+        <File Id="fil5E45A63CFCB4A91F941A4AF0A9AB680E" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fern_a\stklib_fern_a.b3d" />
+      </Component>
+      <Component Id="cmp65653BEFC5E3F45C4AC227DB5F9D7389" Directory="dir33893DFB18AEC4C072DED0CEB46B5FEF" Guid="{169473C5-5FC4-4797-954D-4F89604F4671}">
+        <File Id="fil538B070BB91C67EB4000C924513D1D21" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fern_a\stklib_fern_a_a.b3d" />
+      </Component>
+      <Component Id="cmp0F310A7407F127C6AF9701FF685591DC" Directory="dir33893DFB18AEC4C072DED0CEB46B5FEF" Guid="{6073ECEF-89EC-4EE3-B38D-B4A77130BA3D}">
+        <File Id="fil6CE26F1FD1C290022B6C2C0A9232CC67" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fern_a\stklib_fern_a_b.b3d" />
+      </Component>
+      <Component Id="cmpEE26BF05A472FB46226D4C662403C40A" Directory="dir33893DFB18AEC4C072DED0CEB46B5FEF" Guid="{7C483D59-1B12-4F99-BBFC-87426239F714}">
+        <File Id="fil4D22F54ABE75F36B12C4AD8192B93A41" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fern_a\stktex_fern_diff_a.png" />
+      </Component>
+      <Component Id="cmp48B4E5B6501A340AAC68A8808BFA8B5D" Directory="dir455504D1F86AB8580CB00685C8957CBB" Guid="{EAD0033E-8005-42E6-B0E6-DA105F6169EE}">
+        <File Id="fil7A257FC3D5748ABCEB93B69CFE7CEC64" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrelTest_a\node.xml" />
+      </Component>
+      <Component Id="cmp211DF6728D84B717CAB132B04D5F2282" Directory="dir455504D1F86AB8580CB00685C8957CBB" Guid="{AE00E69C-47A3-4FDC-B2A3-5CA764981AF4}">
+        <File Id="filFF1D81A3E059B64FD438163FE3A58589" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrelTest_a\stklib_fitchBarrelTestcovert_a.b3d" />
+      </Component>
+      <Component Id="cmp56D43EAD540A6160E47D8BD3AFBCEE5B" Directory="dir455504D1F86AB8580CB00685C8957CBB" Guid="{B2E07272-A290-4F6E-941D-70458E2865D4}">
+        <File Id="filA4D282CAC86422A40F4FE4BE7541120F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrelTest_a\stklib_fitchBarrelTestDestroyed_a.b3d" />
+      </Component>
+      <Component Id="cmp14DD721E757DE259D8DF7257CB1A61D8" Directory="dir455504D1F86AB8580CB00685C8957CBB" Guid="{4160BFAF-4E87-446C-BBE2-0B138B990890}">
+        <File Id="fil3F382A0F64D73DD160A56711FD99050B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrelTest_a\stklib_fitchBarrelTest_ao_a.png" />
+      </Component>
+      <Component Id="cmpBDFE4226A3F335FB235692579881BBF1" Directory="dir455504D1F86AB8580CB00685C8957CBB" Guid="{DE76F029-6950-4934-8D4E-E563A636844C}">
+        <File Id="fil32F7BFD8C2F75C7779B60F841857C539" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrelTest_a\stklib_fitchBarreltest_a_main.b3d" />
+      </Component>
+      <Component Id="cmpFFC060934738C3BE8DB83765D4A6FAA1" Directory="dir95A0A3477EC718E12524522A53628A04" Guid="{B746A43F-B0F9-4E97-BAF8-D39012162815}">
+        <File Id="filCFF0A9D1B20112C821FA517F0BB70838" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrel_a\node.xml" />
+      </Component>
+      <Component Id="cmp2812D3D00E5308038D28C30A9CB8B69A" Directory="dir95A0A3477EC718E12524522A53628A04" Guid="{4CCCE435-F614-4808-94B9-D4D874DB1DCE}">
+        <File Id="fil54B24AC52B865711A802A1D71AAE7D84" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrel_a\stklib_fitchBarrel_ao_a.png" />
+      </Component>
+      <Component Id="cmpCBEAD1664F9DB1B9B41E64201AF2740E" Directory="dir95A0A3477EC718E12524522A53628A04" Guid="{A612B29F-1F5E-4643-BBC9-93FE0855761C}">
+        <File Id="filBE6BD00DAFDA2F36ED1EE8BC76DF6495" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_fitchBarrel_a\stklib_fitchBarrel_a_main.b3d" />
+      </Component>
+      <Component Id="cmpE37E7449D128753B097AECBD52D14C0A" Directory="dirA02A9AA9620D3A2E7425D2E007080CE5" Guid="{58F23EF0-983C-4027-93F0-E5C4B81E4FFF}">
+        <File Id="fil43A265938409B2C35C8F7335A9C71EA9" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_greenRadioTower_a\node.xml" />
+      </Component>
+      <Component Id="cmp52D67C8A50F52E253E71A650ECAAB81A" Directory="dirA02A9AA9620D3A2E7425D2E007080CE5" Guid="{E910524E-9ABE-42D4-9C12-61736BBB81A9}">
+        <File Id="fil80829474F1724B8B4CB7056CBFE08BC0" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_greenRadioTower_a\stklib_greenRadioTower_a_main.b3d" />
+      </Component>
+      <Component Id="cmpDD7AC13583C29078DC41650BBF92CA62" Directory="dir74663F3DBDB053AFBE25330D85FD7058" Guid="{2D406405-C346-4D1E-ACF6-D2DE07B63C2C}">
+        <File Id="filF55E2ECBE8D4C61CE706D2E27673E0A7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_hayBall_a\node.xml" />
+      </Component>
+      <Component Id="cmpC3D704893EB56FAF2A28129D08EDC3FF" Directory="dir74663F3DBDB053AFBE25330D85FD7058" Guid="{179CE068-DCC9-4504-A66B-6ECE474F4A2A}">
+        <File Id="fil6EEB1601DE51D3F2ADE7BD26C3A91433" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_hayBall_a\stklib_hayBall_a_main.b3d" />
+      </Component>
+      <Component Id="cmp2A7A2E98169256FD4B1AE06B3D6319A1" Directory="dir74663F3DBDB053AFBE25330D85FD7058" Guid="{69BB741A-F077-4CA7-BAEB-070C192FBEC2}">
+        <File Id="filBEE5C340E692EC64A48C46771805CD55" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_hayBall_a\stklib_hayBall_diff_a.png" />
+      </Component>
+      <Component Id="cmp3FFC8BC53A737D91C567AF76C3E54B24" Directory="dir75F6C3CF48B683639D78C83C70DC02D6" Guid="{A0CAD647-EF85-48B9-91CA-9D347A973DC6}">
+        <File Id="fil9718C978D0B33DE8CF3DDAD5D12108E3" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_hexajet_a\node.xml" />
+      </Component>
+      <Component Id="cmp7BC3A8AB72E8680C0DD96D34206AA2E6" Directory="dir75F6C3CF48B683639D78C83C70DC02D6" Guid="{2FC02A04-F3C9-4BA9-AF0C-D9EA61DF4571}">
+        <File Id="filD99F732505C77F452C4A63151A83777C" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_hexajet_a\stklib_hexajet_a_main.b3d" />
+      </Component>
+      <Component Id="cmp3C5CF23C178A19FF4685912131A0D039" Directory="dir49404D0D4C89AA28644C988DBA359171" Guid="{315B474C-014A-4D40-AC03-DF18B738F278}">
+        <File Id="fil4C7AB60B84D346AF7E0C64121505D602" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jetBlast_a\materials.xml" />
+      </Component>
+      <Component Id="cmpC11D4DE0F245A0D31D7FD15E6F2DDB70" Directory="dir49404D0D4C89AA28644C988DBA359171" Guid="{E27B0B62-AF8E-4FE8-8808-84692DA6DDE3}">
+        <File Id="filD85D2C0D3B082FF26AC40316B396B526" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jetBlast_a\node.xml" />
+      </Component>
+      <Component Id="cmp325A2024887ADC4B4FF638D2FF0DD08F" Directory="dir49404D0D4C89AA28644C988DBA359171" Guid="{E981BBDE-DF05-4278-8C59-3BD719BCE4C7}">
+        <File Id="filB95540DE3AADA71734802CBAD5D34143" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jetBlast_a\stklib_jetBlast_a_main.b3d" />
+      </Component>
+      <Component Id="cmp3599011901D02E2925CF33A990442B01" Directory="dir6DCB627FC5B09A883A85C500E61180B9" Guid="{621F75C4-6A7C-42CA-A34A-DA40961103B4}">
+        <File Id="fil2A26B12F9777A711D7C6316D856E361F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jungleTree_a\city_tree.jpg" />
+      </Component>
+      <Component Id="cmp2B587E4C212D45FE3E733C4CA0061204" Directory="dir6DCB627FC5B09A883A85C500E61180B9" Guid="{ADE4F6A6-B159-42E1-AFAF-1131FAD7A32C}">
+        <File Id="filC357749CA97C1E3046D627FB29294510" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jungleTree_a\node.xml" />
+      </Component>
+      <Component Id="cmp373D007E10C53E763321E207FE6649A2" Directory="dir6DCB627FC5B09A883A85C500E61180B9" Guid="{1402C83D-3F85-4532-8453-750A48CD3779}">
+        <File Id="fil809CD19D5C059F42A7AF945C66F008CB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jungleTree_a\stklib_jungleTree_a.b3d" />
+      </Component>
+      <Component Id="cmpDB1E875B390BC8687F225D5BD8D071FE" Directory="dir6DCB627FC5B09A883A85C500E61180B9" Guid="{226E6D60-394A-403D-9CE4-07B525A64E0F}">
+        <File Id="fil2DEC35EE764D694412651E5279DB6637" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jungleTree_a\stk_plants_test.b3d" />
+      </Component>
+      <Component Id="cmpD99B777C13F4CAB5E78FFE8171EBCA21" Directory="dir74116FA9DE684BEB128457E4F5B9C9F5" Guid="{EFFB4DB3-5D0F-4554-9761-94B0B12772A0}">
+        <File Id="fil0AA8058E4CFCD67ECA29ECB27543C709" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jungleTree_b\node.xml" />
+      </Component>
+      <Component Id="cmp9E293C1CE5D99F08B3371AEBEAFF2E7F" Directory="dir74116FA9DE684BEB128457E4F5B9C9F5" Guid="{973B64DB-9A65-40D9-B347-67B5A3471FA9}">
+        <File Id="fil20BB6183655FFF15ABE10623B406ADA0" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jungleTree_b\SomeModel.b3d" />
+      </Component>
+      <Component Id="cmp44D84A46FF9A32C0C710F63F74A743C2" Directory="dir74116FA9DE684BEB128457E4F5B9C9F5" Guid="{963884F4-8BE9-4A91-BA7E-5FD0C4107849}">
+        <File Id="fil5B8030D04956FC82BA7D413FA02DD1C8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_jungleTree_b\stklib_jungleTree_b_main.b3d" />
+      </Component>
+      <Component Id="cmp32D8776EB20CBFBB14A726F7FCC23116" Directory="dir0FC863DE6BC92D0189C5B08BAC9C6E26" Guid="{80419D77-4669-4801-A09C-A9D29333D129}">
+        <File Id="fil6AD5E285A843C6B7C8FB71D45549F4FA" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_liana_a\license.txt" />
+      </Component>
+      <Component Id="cmpDFD3D1D2F46AADE148BB32C774AB5E7B" Directory="dir0FC863DE6BC92D0189C5B08BAC9C6E26" Guid="{EF641E36-68C4-4927-8AA5-DE87ABA4FA17}">
+        <File Id="fil74072073034A999B3948B024F428CC3E" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_liana_a\materials.xml" />
+      </Component>
+      <Component Id="cmp9E5432BD9BA73E04064248DC2816C342" Directory="dir0FC863DE6BC92D0189C5B08BAC9C6E26" Guid="{DA204F79-17F2-4031-866E-B1B59D84FA42}">
+        <File Id="fil6A63D091D62E69437DF02EC5C3EB5D23" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_liana_a\node.xml" />
+      </Component>
+      <Component Id="cmpC357900A9441A1A8FC853F03FF98E8F6" Directory="dir0FC863DE6BC92D0189C5B08BAC9C6E26" Guid="{1E4B9359-75E6-4BAC-BFD4-727AD2629D1F}">
+        <File Id="fil009D71E28DD7920A3F89C9DEC28C597F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_liana_a\stklib_liana_a.b3d" />
+      </Component>
+      <Component Id="cmpD8E7D9A19E043250DB93B484AD118FAB" Directory="dir0FC863DE6BC92D0189C5B08BAC9C6E26" Guid="{E6C4E53C-EF5C-4889-BF45-DA446FF1CAA3}">
+        <File Id="fil689957E2B08A596064AFC2BF46492139" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_liana_a\stklib_liana_a_main.b3d" />
+      </Component>
+      <Component Id="cmp2AA3C1EB5EFCD8965C5BEA2F3AA15F88" Directory="dir0FC863DE6BC92D0189C5B08BAC9C6E26" Guid="{473F920C-2C72-47FE-840A-B2154E7262FE}">
+        <File Id="filFE881C6706230B1D710ABA8F43E30440" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_liana_a\stklib_liana_diff_a.png" />
+      </Component>
+      <Component Id="cmp5A962F5198CB2011EA37F4E9A52AFB27" Directory="dirB1FD92F1219A3C0A7A19DBB2D653F5F7" Guid="{8CA8D7C2-1767-4F3F-9249-F9A7692C82B6}">
+        <File Id="fil06FA8F27CBB981760255E0A5E7F82F2A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_logBarrier_a\node.xml" />
+      </Component>
+      <Component Id="cmp23B4ED733E2575E7440A8CF3D86910FA" Directory="dirB1FD92F1219A3C0A7A19DBB2D653F5F7" Guid="{FA46EC71-A07C-4F34-919B-3EBA34E7B75B}">
+        <File Id="fil678977D7EC78623808D417446732B4EA" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_logBarrier_a\stklib_logBarrier_a_main.b3d" />
+      </Component>
+      <Component Id="cmpBA9FACB626B41CAE25767085B8C47D4E" Directory="dir5F43A9F133984EBEEF22610E2100B44A" Guid="{63163371-EDF8-4B56-87E4-283D42653402}">
+        <File Id="filD8D6A842396F5ADC279BEBDCFABE17F5" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveAlcove_a\node.xml" />
+      </Component>
+      <Component Id="cmpA02A48EAB4B8503C8ACB95A2F77C56D6" Directory="dir5F43A9F133984EBEEF22610E2100B44A" Guid="{032741AB-45A1-4F3C-8748-49913FBCEBC3}">
+        <File Id="fil2671825C8FC16CA6B56237A8D159BE59" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveAlcove_a\stklib_loveAlcove_a_main.b3d" />
+      </Component>
+      <Component Id="cmpF3D34DEA85F499536E131B88DD861A1A" Directory="dirB6CFF3566F08E602C7E5D7BF875DBEEC" Guid="{CADB8935-520E-4081-8376-54DE22196E70}">
+        <File Id="filAC8C6D50142D5AC78F87527E7C57AC72" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveGate_a\node.xml" />
+      </Component>
+      <Component Id="cmpC7492040232DFBE25AB38C560222AF98" Directory="dirB6CFF3566F08E602C7E5D7BF875DBEEC" Guid="{2D531C16-3949-466A-A0BD-31E5D163BCB9}">
+        <File Id="fil6AF5A403F67EACFA2EE82C5F04B9E012" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveGate_a\stklib_loveGate_a_main.b3d" />
+      </Component>
+      <Component Id="cmp2AE1F06A874BDBC3900A0507368EE82E" Directory="dir8B330D4CC71830EA5F191C72411E7FF2" Guid="{34BF798B-1869-4050-A9E3-04EF71A1DE00}">
+        <File Id="fil9652DE1B9F6F7536A13F838787887E0F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveLantern_a\materials.xml" />
+      </Component>
+      <Component Id="cmp625BF956397512AFDE6A2CA30E079EB0" Directory="dir8B330D4CC71830EA5F191C72411E7FF2" Guid="{2F926880-3971-411E-BB09-BD879D84FAD9}">
+        <File Id="fil1F741D081C3211D8FEF70B8D68C3731A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveLantern_a\node.xml" />
+      </Component>
+      <Component Id="cmp8786F180CCE47E5EE9495D657E0DFEDF" Directory="dir8B330D4CC71830EA5F191C72411E7FF2" Guid="{A00E2AB5-B095-437F-BADB-0AD89A24BD5F}">
+        <File Id="fil7F6AA61D1E4A539EA9E50823D3E9590C" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveLantern_a\stklib_loveLantern_a_main.b3d" />
+      </Component>
+      <Component Id="cmpC175BA3AB0D880C6E07043B9D2EE4685" Directory="dir8B330D4CC71830EA5F191C72411E7FF2" Guid="{7F270DB2-15FB-44A1-AD5D-FD51D88F37E2}">
+        <File Id="fil105C3598FD7343F979EB13D44CABC9ED" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveLantern_a\stklib_loveLantern_glow_a.png" />
+      </Component>
+      <Component Id="cmpA046804DA2901AC7DD089D14E04AE6C1" Directory="dir8B330D4CC71830EA5F191C72411E7FF2" Guid="{00BE97D5-92A9-4509-B1A7-44A92DE3DB6F}">
+        <File Id="fil14FB0F202774F58B246600C5F5590CDD" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_loveLantern_a\stklib_loveLantern_heart_a.png" />
+      </Component>
+      <Component Id="cmpF800C3684F950448EAB7C68851BA1EB4" Directory="dir4F612BC5262D48C58F23AC23D54119D4" Guid="{58C34E2D-A8D6-46C1-AC91-7111DE538D34}">
+        <File Id="fil1C4ACDB40BB31B7D4ED71700B5746C66" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_lowAnimGrass_a\node.xml" />
+      </Component>
+      <Component Id="cmp4012F09A94200BA4207081A67B167AF9" Directory="dir4F612BC5262D48C58F23AC23D54119D4" Guid="{CE397585-E595-4C04-A39E-7F5C894D7D42}">
+        <File Id="fil39F41589A6D6E6CDCC9E863C7BAD68C2" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_lowAnimGrass_a\stklib_lowAnimGrass_a_main.b3d" />
+      </Component>
+      <Component Id="cmp23F5F9A2F2FDCC04FB17198B0CCA11EC" Directory="dir756B85324FABF516D49B0058C81F0E49" Guid="{2E31BCC8-CED0-48E4-905A-AF1A4C35A62E}">
+        <File Id="filE80A70F9331F895E6FF9B33A9ADF8403" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_lowPalmTree_a\materials.xml" />
+      </Component>
+      <Component Id="cmpE5261BBFF18668AFD93309A3FD7AD687" Directory="dir756B85324FABF516D49B0058C81F0E49" Guid="{CEC0564C-8C11-482F-A3AA-CC3008789D4B}">
+        <File Id="fil400228FA7E828E2B2612DEC0AD514DDC" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_lowPalmTree_a\node.xml" />
+      </Component>
+      <Component Id="cmpC50058A807B9628B1796757E70ED6578" Directory="dir756B85324FABF516D49B0058C81F0E49" Guid="{C78D3524-7D50-4D94-B08B-936A8608D87E}">
+        <File Id="filA784577507BBBE718BA21A490C55DA12" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_lowPalmTree_a\stklib_lowPalmTree_a_main.b3d" />
+      </Component>
+      <Component Id="cmpF40DE74295AF177FA036C0596C7CCDD1" Directory="dir4C11955728A07E8770AC52EF736C6F0C" Guid="{05C238BB-2177-4A05-92C6-1FFA72FFC335}">
+        <File Id="fil27C2274A16F77705334DD459CDDBD371" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_lowRockBarrier_a\node.xml" />
+      </Component>
+      <Component Id="cmpDE4F0FE46025057418C632250BDD21EA" Directory="dir4C11955728A07E8770AC52EF736C6F0C" Guid="{07299D55-0C9E-4416-8829-0161B345B902}">
+        <File Id="fil74C4FF80AB2E76DF9917E380A212C611" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_lowRockBarrier_a\stklib_lowRockBarrier_a_main.b3d" />
+      </Component>
+      <Component Id="cmp2AF7FE6F1F5DE9936E413412B3C4741A" Directory="dir7E8EBA1F8D63458EB0DC7093F24DFED1" Guid="{F6B5749E-C84C-492F-A3DF-29C6FA5F39BC}">
+        <File Id="filF84E4A32C32C63535F22C1F098A1F8D6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_metalSupportBeam_a\node.xml" />
+      </Component>
+      <Component Id="cmp5097BB487AA7931E6DD3FFF06EF9FE9B" Directory="dir7E8EBA1F8D63458EB0DC7093F24DFED1" Guid="{DA155981-D486-4444-8349-626947AFBE86}">
+        <File Id="fil066D6CEC50CA8556F3211B21F822AF17" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_metalSupportBeam_a\stklib_metalSupportBeam_a_main.b3d" />
+      </Component>
+      <Component Id="cmp9F64AFA9DE6D788E1FA3751681A36D51" Directory="dir7BCF75F4258CA2B292D461C80F36E79D" Guid="{25105749-8F42-4868-B42C-73EC71980BA4}">
+        <File Id="fil8F51E46C84C87AC4918128B4A0BA6F6F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_monkeyCheering_a\node.xml" />
+      </Component>
+      <Component Id="cmp27325CB86E91B06495DA3B045B00BB76" Directory="dir7BCF75F4258CA2B292D461C80F36E79D" Guid="{066C23E1-968E-47B1-9601-1A979D461174}">
+        <File Id="filA136F36D0E6DB6C1E2AD85386D97C980" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_monkeyCheering_a\stklib_monkeyCheering_a_main.b3d" />
+      </Component>
+      <Component Id="cmp03C909033A650D255DDFB9CD9C0F061E" Directory="dir7BCF75F4258CA2B292D461C80F36E79D" Guid="{BC93B70A-8433-4AD4-8E24-6F770FA57655}">
+        <File Id="filAE409FC8B029DE713A9CB6CFC2CD6EF5" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_monkeyCheering_a\stktex_monkey_a.png" />
+      </Component>
+      <Component Id="cmpEA980833148EA2FB5091E833697BA16E" Directory="dirD9DEB90A6E082B5300D629FF3238F5BB" Guid="{2D75F65F-4163-4A3A-A571-865C01996341}">
+        <File Id="fil914CC36F22BECE70842DE19EF3B93096" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_mudpot_a\animated_bubble.b3d" />
+      </Component>
+      <Component Id="cmpED51B5EBBF78321DE304F94DC07BB251" Directory="dirD9DEB90A6E082B5300D629FF3238F5BB" Guid="{226FD82A-19CE-4118-9046-E92C96D57EB0}">
+        <File Id="fil383C847AC3482AF7090ACFE5D4DDF3BB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_mudpot_a\node.xml" />
+      </Component>
+      <Component Id="cmpCCC5414B4418FDFA286B916334F61C92" Directory="dirD9DEB90A6E082B5300D629FF3238F5BB" Guid="{7011617A-5440-4EDD-B63E-15DCCD4BDD93}">
+        <File Id="filAFF81F0233D559ACBD89AFB45BFACDFF" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_mudpot_a\SomeModel.b3d" />
+      </Component>
+      <Component Id="cmpDE0EEAE25F84E9880619523793098F93" Directory="dirD9DEB90A6E082B5300D629FF3238F5BB" Guid="{4DEE9C97-0542-498D-985E-E3439017AC3A}">
+        <File Id="filA0C13C3B64D029A0DC1688660299DD85" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_mudpot_a\stklib_mudpot_a_main.b3d" />
+      </Component>
+      <Component Id="cmp452CAFC62D34BB6A5C03DBE1914F2BDE" Directory="dir442F8EE9AF6FBB5DDC73E659F4EC6186" Guid="{85F9D91A-B5E2-4CF5-9EE0-0CB28BDB052F}">
+        <File Id="fil2AC1AD7F2462765D6A05055524A68D6B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_mushroom_a\node.xml" />
+      </Component>
+      <Component Id="cmp180C41F8C96AA58A19335D5FEEF7970B" Directory="dir442F8EE9AF6FBB5DDC73E659F4EC6186" Guid="{3E992EEC-C27B-4C21-A2AD-3B3301DD872C}">
+        <File Id="fil856F650D48F95435E5D3FA00153F3B73" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_mushroom_a\stklib_mushroom_a_main.b3d" />
+      </Component>
+      <Component Id="cmpD1CF2FFE477561F1E092F172567E7BB9" Directory="dir61C671F244C94C05D24DE5ABA1AB68EB" Guid="{1FF34A9E-92F1-433F-90FB-90D9F8CB57F8}">
+        <File Id="fil3A867F5E8FFEE1EA9B767B1762D4204B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_oldLantern_a\materials.xml" />
+      </Component>
+      <Component Id="cmp08745FEE04AB5B1BEC233D55D1284A26" Directory="dir61C671F244C94C05D24DE5ABA1AB68EB" Guid="{82469CD1-A77A-46F8-A28E-549EB4914CA7}">
+        <File Id="filF548CB700157D203E8BA32F1C7852E32" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_oldLantern_a\node.xml" />
+      </Component>
+      <Component Id="cmp7A4B4721E17A91EC981AD4D2465D4556" Directory="dir61C671F244C94C05D24DE5ABA1AB68EB" Guid="{B73E4919-9B65-498F-8461-FC7942A350AB}">
+        <File Id="fil49C0F36BB1942EB89B477957AC1E4BEC" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_oldLantern_a\stklib_oldLantern_ao_a.png" />
+      </Component>
+      <Component Id="cmp867A6259B584BF64072ED81ED5133627" Directory="dir61C671F244C94C05D24DE5ABA1AB68EB" Guid="{CD1CEA0E-6EAE-441A-B29C-C1A76D86962C}">
+        <File Id="fil1759A6CCFBC0EF68E9060A610070A395" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_oldLantern_a\stklib_oldLantern_a_main.b3d" />
+      </Component>
+      <Component Id="cmp3C0FA0A5050F3801F799CF543315453A" Directory="dir61C671F244C94C05D24DE5ABA1AB68EB" Guid="{41C58743-B6B1-4CC5-974E-DE663B7674ED}">
+        <File Id="filC72B1954D44EBA41DB2496F0A20BE830" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_oldLantern_a\stklib_oldLantern_glow_a.b3d" />
+      </Component>
+      <Component Id="cmpD5DBF6DCB40C9078FD0436BBF588B09C" Directory="dir61C671F244C94C05D24DE5ABA1AB68EB" Guid="{9B9CAF33-EB67-479F-A426-9210E80116E8}">
+        <File Id="fil3A508CD837BA86709E59CB178ED0358E" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_oldLantern_a\stklib_oldLantern_glow_a.png" />
+      </Component>
+      <Component Id="cmp29BBF18D035FA29652D5481556C32C2B" Directory="dir61C671F244C94C05D24DE5ABA1AB68EB" Guid="{B03C156E-89AD-4019-989D-508623C7C667}">
+        <File Id="fil83CE3CBC588110A7DC5377576F2EFAF6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_oldLantern_a\stklib_oldLantern_lensFlare_a.png" />
+      </Component>
+      <Component Id="cmp409006C7FEA8E86B66AF3374206A8AC2" Directory="dir7EB1D505E2DB761B458AB93C8041E988" Guid="{D5E27DF2-9964-4BB9-A402-93B2FBB975CB}">
+        <File Id="fil443C84DDAFDD7C5775A6EC85AF42D80E" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_olmec_a\node.xml" />
+      </Component>
+      <Component Id="cmp360EF9A5DFEF2B97F07D3C3406D045A1" Directory="dir7EB1D505E2DB761B458AB93C8041E988" Guid="{9F2B4F7B-FE4D-40E5-A710-7D3864488D35}">
+        <File Id="fil1C19A8C7AD5FA6B3D2E00F4C76078634" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_olmec_a\stklib_olmec_ao_a.png" />
+      </Component>
+      <Component Id="cmp4E354A4A9A64F1743D262E5806B692AD" Directory="dir7EB1D505E2DB761B458AB93C8041E988" Guid="{14F991BD-D93C-4E59-91B9-5486EE21E9BC}">
+        <File Id="fil65AD49B1B921303464BA5CF86B25B550" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_olmec_a\stklib_olmec_a_main.b3d" />
+      </Component>
+      <Component Id="cmp7A03E6326D95CE5D4292568311B83EA6" Directory="dir7EB1D505E2DB761B458AB93C8041E988" Guid="{42247657-3B79-43DA-B8BA-66458CA5E60D}">
+        <File Id="fil9F4F5455C66CF16AEF6022BBC98F1D99" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_olmec_a\stklib_olmec_nm_a.png" />
+      </Component>
+      <Component Id="cmpE075943E8461CED406C1D696634D2FE1" Directory="dir7EB1D505E2DB761B458AB93C8041E988" Guid="{6333D81D-CEC5-4F5C-AE5F-B0C6B0093E21}">
+        <File Id="fil49B5FE69D7713ED9931E81A15CBD5726" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_olmec_a\stktex_generic_concreteA.png" />
+      </Component>
+      <Component Id="cmp1CF43259F6FCCC7D3F723CBDCAFBDE68" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{D57D0AE6-4062-4CDE-929B-78E096E542FE}">
+        <File Id="fil6D2E387C0A6986BD88FAC68E757BE901" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\materials.xml" />
+      </Component>
+      <Component Id="cmp66EA758476F5B29F0FB972BBB6CF4AC1" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{5B5DA231-119B-4921-B3BA-A83A7E056D5A}">
+        <File Id="fil622E969FBBCF70D237184A18DB0CA6D6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\node.xml" />
+      </Component>
+      <Component Id="cmp520928C945CF4A0F2D9C3B552AF9E0AE" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{03B677AE-98D2-4138-A710-4DE20DF9BA7F}">
+        <File Id="fil1F7874DDA36307652F0E158E39E9FA31" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\stklib_palmTree_a.b3d" />
+      </Component>
+      <Component Id="cmpA0C51C1379F4EFE0A02980739486115E" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{C0FAEEAD-0B76-4F57-BAA5-1ECB39DC5BEC}">
+        <File Id="fil101B5B0E9501A3CA8041FE5A01FF2A46" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\stklib_palmTree_a_leaf.b3d" />
+      </Component>
+      <Component Id="cmp96DD2F4196A163CB6BE4CB85FAC3AE6D" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{57826070-C293-4FD0-B2E0-77482E137742}">
+        <File Id="fil7FDFB341B2669DE275DACB368396AD18" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\stklib_palmTree_a_LOD_a.b3d" />
+      </Component>
+      <Component Id="cmp8FCD9A45F2F677E8E3BB76E03C209DDD" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{4F6916E4-FC37-4318-8F28-12C39BA7D58A}">
+        <File Id="fil93B90F9A890626466202D5949B70C2DB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\stklib_palmTree_a_LOD_b.b3d" />
+      </Component>
+      <Component Id="cmpF6681DB37847612C95D96F28DF788844" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{D4E0BABB-1FB0-449E-97C0-F82CE9BC8C7D}">
+        <File Id="fil3AFB69D7529002FB32293FC9AA0D5596" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\stklib_palmTree_a_LOD_c.b3d" />
+      </Component>
+      <Component Id="cmpA73511309367F3D17848E4346087C8CA" Directory="dir73D77C93A9401E52BE82974A6A6C143B" Guid="{BE5324CF-7559-4A7B-A0E7-A2919D614A9C}">
+        <File Id="fil3B740C388FB22008D2ECB69013E50823" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_palmTree_a\stklib_palmTree_a_main.b3d" />
+      </Component>
+      <Component Id="cmp6C5B2A3F77B060DC6E99E5BD51561CC9" Directory="dir4F233105D8A5793404738A9EA60CF91E" Guid="{E6997917-1943-4166-A008-A196FA181B08}">
+        <File Id="fil7D0EDFA7DDC346F20185BCEF21A7BDC0" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_pinkRibbon_a\node.xml" />
+      </Component>
+      <Component Id="cmp1BBE9CFDC20544EA014DE05726F223ED" Directory="dir4F233105D8A5793404738A9EA60CF91E" Guid="{7EFF0298-778E-4EAC-B253-E85AB1C17AD8}">
+        <File Id="filE1AB91F847CA630F46C65E0740558D02" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_pinkRibbon_a\stklib_pinkRibbon_a.b3d" />
+      </Component>
+      <Component Id="cmp428D176F837CF3872E893A229D0F0D79" Directory="dir4F233105D8A5793404738A9EA60CF91E" Guid="{9128C92B-31E1-4BBC-A820-F7F30A8EE59C}">
+        <File Id="fil0A6069B2ABCCC64206ADAD93DF1D605B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_pinkRibbon_a\stktex_pinkRibbonFabric_diff_a.png" />
+      </Component>
+      <Component Id="cmp1481AC9FEED0739E6B00354143EBEF7D" Directory="dir9AEA1B4B1DAF270A491DFCFD9A16F16F" Guid="{06E9D4F2-CDEE-43B6-A511-779667F4FD60}">
+        <File Id="fil2EF29277A8C7A55C75FA4E60C1C0F1C5" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_princessSaraDepartureAirport_a\node.xml" />
+      </Component>
+      <Component Id="cmp473A61483B4B5553AEB91D8FFB26F885" Directory="dir9AEA1B4B1DAF270A491DFCFD9A16F16F" Guid="{DAABD72A-F98A-45ED-AF3B-6329A52A82E2}">
+        <File Id="fil01524C399DA8CD67CB530A4713633F11" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_princessSaraDepartureAirport_a\stklib_princessSaraDepartureAirport_a_main.b3d" />
+      </Component>
+      <Component Id="cmpE884704D0D3AD5F455709BB6713A0DC6" Directory="dirAE4F06BE2D5DC30DED0278BF0D9BDEB2" Guid="{CCAB1C4B-B702-497C-AC85-B719AA824BDB}">
+        <File Id="filDC0C31C2382111C5A677AAC997DB645C" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_pumpkin_a\node.xml" />
+      </Component>
+      <Component Id="cmpDD5B1A133857CB8EF70800EB157B4E3B" Directory="dirAE4F06BE2D5DC30DED0278BF0D9BDEB2" Guid="{F2804573-E56B-4AE6-8B68-79098ACCAD5B}">
+        <File Id="filEDAD76737FEA907E8F8AB5A387191DF6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_pumpkin_a\stklib_pumpkin_a_main.b3d" />
+      </Component>
+      <Component Id="cmp8E537C4A06366C282F883408C0A9CA35" Directory="dirAE4F06BE2D5DC30DED0278BF0D9BDEB2" Guid="{F6A1A368-70BC-41D7-A453-0A6A75B3E88F}">
+        <File Id="fil467F4BEA1D14712BBD9A0DB511A01FAA" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_pumpkin_a\stklib_pumpkin_diff_a.png" />
+      </Component>
+      <Component Id="cmp5061A7B83F4ED4A51BEE3ED88C2AA366" Directory="dir11361B6639A9D0A294D84BBF60BD570C" Guid="{9CFA24B6-F161-47D4-ADA1-0D3CE990A559}">
+        <File Id="filCEF1245B34A688EE133550D3D3020D0B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_quetzalcoatl_a\materials.xml" />
+      </Component>
+      <Component Id="cmp859CF04E9E1A18C8D170570579B00AE9" Directory="dir11361B6639A9D0A294D84BBF60BD570C" Guid="{1D30D59E-4BEA-46C5-A588-8CD5E0B25928}">
+        <File Id="fil85B530B380C394CF8264D2A1D1420D15" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_quetzalcoatl_a\node.xml" />
+      </Component>
+      <Component Id="cmpB1226F9A272A972210EB0A2ABF47D2A6" Directory="dir11361B6639A9D0A294D84BBF60BD570C" Guid="{8000F52D-6722-4EE9-9E16-41C4A597BD49}">
+        <File Id="filDE20F450DD7F43E9CE03E1F1DCB2B993" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_quetzalcoatl_a\stklib_quetzalcoatl_a_ao.png" />
+      </Component>
+      <Component Id="cmp0F0AED42B53111FFF3EF7B89EF216AC4" Directory="dir11361B6639A9D0A294D84BBF60BD570C" Guid="{D9AA5D83-830E-43BA-A856-4087478D716B}">
+        <File Id="fil92392F1F16881F68F15F39D2E7CF6AA1" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_quetzalcoatl_a\stklib_quetzalcoatl_a_main.b3d" />
+      </Component>
+      <Component Id="cmp1DBF80C7D024B27EF2999E12E2D0FFAE" Directory="dir11361B6639A9D0A294D84BBF60BD570C" Guid="{C64BBAE3-3A34-4A97-9981-18B847C6F856}">
+        <File Id="fil3429029CE5119F3F3AEBDAFE8B6EF7CB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_quetzalcoatl_a\stklib_quetzalcoatl_nm_a.png" />
+      </Component>
+      <Component Id="cmpAA5DFCD1E59D031912C2B17D095D6F7A" Directory="dir807C5A26B3150258EF1C1180114A437F" Guid="{B7AA7F0F-0127-4948-A52D-7204BC4260F7}">
+        <File Id="filCEBB53BB0BDA67E831338163882E12FE" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redFlowerBush_a\materials.xml" />
+      </Component>
+      <Component Id="cmpF8A4508857AE08C09DF83D1F2FD720B3" Directory="dir807C5A26B3150258EF1C1180114A437F" Guid="{53039DF6-E9B9-4167-BD22-D90F1E8896B6}">
+        <File Id="fil09BEE798B610010DE85F5735F20050D8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redFlowerBush_a\node.xml" />
+      </Component>
+      <Component Id="cmp36347C052FFD7E9AC0A875C5E3537C03" Directory="dir807C5A26B3150258EF1C1180114A437F" Guid="{10DB6AA9-3ED5-4C23-A9F0-8F794115DE5D}">
+        <File Id="fil6A3B881547E88F7986FED65642BCB0CD" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redFlowerBush_a\stklib_redFlowerBush_a_main.b3d" />
+      </Component>
+      <Component Id="cmp481606641FFA58DDF2AE1B60768D63DA" Directory="dir807C5A26B3150258EF1C1180114A437F" Guid="{BAF0D4A5-4807-4AFA-A8B2-82DF4280477B}">
+        <File Id="fil9B37433F0F7BF4C34FC098969388B8C0" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redFlowerBush_a\stktex_greenBrush_a.png" />
+      </Component>
+      <Component Id="cmp717449533AD9424651537A7A719F71EC" Directory="dir807C5A26B3150258EF1C1180114A437F" Guid="{832BCB3A-4C0F-4630-92D1-89283B956660}">
+        <File Id="fil1161B67A90C83610C0CA71DBA5631F91" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redFlowerBush_a\stktex_redFlower_a.png" />
+      </Component>
+      <Component Id="cmp6160A7AE66FDF26EDFE3C382A342FFAF" Directory="dir005033466B3AA087D69D956CF4AF5EFB" Guid="{9200EC6D-5CD9-4B9E-9EC0-D10F7E565BD8}">
+        <File Id="filEAC7702586601F2AA356B7F8577ECB5D" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redParrot_a\materials.xml" />
+      </Component>
+      <Component Id="cmp1775A12C19D2CFFC3C54EC74C7BFBCF3" Directory="dir005033466B3AA087D69D956CF4AF5EFB" Guid="{BC22F47C-C9DD-4749-8D38-3C7B03690572}">
+        <File Id="fil8C79C88811D62576D0AD9FD72172E3C1" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redParrot_a\node.xml" />
+      </Component>
+      <Component Id="cmpF67F6070D18E3D95421A8C27B051FECF" Directory="dir005033466B3AA087D69D956CF4AF5EFB" Guid="{B761B1DD-159F-494E-A744-18CCED89F9E7}">
+        <File Id="fil8C9BFEC9EFC79AF08B8FD95027783693" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redParrot_a\stklib_redParrot_a_mainstklib_redParrot_a_main.b3d" />
+      </Component>
+      <Component Id="cmpFCE519EAB6644D051FD3B9BD8E933FC9" Directory="dir005033466B3AA087D69D956CF4AF5EFB" Guid="{A993EA4B-E940-4139-8667-3D4DC751086D}">
+        <File Id="fil2FB32E561FEED6A96A53867B11F4782F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redParrot_a\stktex_redParrot_a.png" />
+      </Component>
+      <Component Id="cmpD6FC74707BE135C776443186FACCE56A" Directory="dirD59C5AA383963584AF2E097B5E9092F0" Guid="{342D99E1-8E08-42E7-956B-D7EF166A2129}">
+        <File Id="fil6DD13ECBD85B9381AFB4CE9F9086130A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redSeaweed_a\node.xml" />
+      </Component>
+      <Component Id="cmp5EF94A730A70EABBF8D13838A7127928" Directory="dirD59C5AA383963584AF2E097B5E9092F0" Guid="{A14E2A27-3CD3-423E-B061-375AF291D351}">
+        <File Id="filD2D2C6E3B8E86C22EF36C600DFE29396" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redSeaweed_a\stklib_redSeaweed_a_main.b3d" />
+      </Component>
+      <Component Id="cmpBC254A19BACA4C21D18274E1E2923C23" Directory="dir76C3ACD03BEBD5DB45525345CC385049" Guid="{428DB0CB-6D04-4704-92B0-DF52EA91C4B9}">
+        <File Id="fil498FB81C53FB05AA30426416CB444A9B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redToriiPortal_a\node.xml" />
+      </Component>
+      <Component Id="cmpA0FD5DDF12A6062A419473EA0379F999" Directory="dir76C3ACD03BEBD5DB45525345CC385049" Guid="{0894F1EB-8B0F-4A92-A7A7-1A2651EC05AF}">
+        <File Id="fil80F9143B8044BEB5FD2C9A09D56DAB3A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redToriiPortal_a\stklib_redToriiPortal_a_main.b3d" />
+      </Component>
+      <Component Id="cmp0D7A250FF6208386596A3BA215DBD153" Directory="dir76C3ACD03BEBD5DB45525345CC385049" Guid="{426064CE-825A-4026-B077-9FE576A50EDC}">
+        <File Id="filF5E9D7356171C841548B7EB9EA697C3B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redToriiPortal_a\torii_LOD50.b3d" />
+      </Component>
+      <Component Id="cmpECBAD154877A02A5FB8F154DE61271CB" Directory="dir3DB8C822DE788254A5DBB59532FCE37A" Guid="{7833FE55-DFDD-419D-93E4-FAE596C2D01B}">
+        <File Id="fil6B76B234C077DA90923C10ACA68931DD" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redXmasLight_a\materials.xml" />
+      </Component>
+      <Component Id="cmp5A620024DF571F6C852B755E8650B7DD" Directory="dir3DB8C822DE788254A5DBB59532FCE37A" Guid="{EE2DD397-0817-4DA0-8B58-836DAF6FD33F}">
+        <File Id="fil508598904C6095FB84AEE7661AF6BE89" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redXmasLight_a\node.xml" />
+      </Component>
+      <Component Id="cmpA49B68689FB5E1B7B43176EB93647EF9" Directory="dir3DB8C822DE788254A5DBB59532FCE37A" Guid="{A5FAE878-EB9C-4C9F-991B-AAB8A01FD3E5}">
+        <File Id="fil9B6D3AF2141E3AA98894AED314C5A93E" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redXmasLight_a\redXmas_light.png" />
+      </Component>
+      <Component Id="cmp9D686F568FA4626003BE2535B27DD8F6" Directory="dir3DB8C822DE788254A5DBB59532FCE37A" Guid="{80C23DB8-8CC7-4841-AD54-0EEC307F8BA1}">
+        <File Id="fil848CB81BE21672E30701B6714E612BA1" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redXmasLight_a\redXmas_light_gloss.png" />
+      </Component>
+      <Component Id="cmpDF79B2808F7BDC1FFA42E6663D50C43C" Directory="dir3DB8C822DE788254A5DBB59532FCE37A" Guid="{77B614E7-E1C8-400A-864D-3E1195C7C096}">
+        <File Id="filAE555181C8D33EE6571AD707DD923350" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_redXmasLight_a\stklib_redXmasLight_a_main.b3d" />
+      </Component>
+      <Component Id="cmpCF2C2F248D68A990058091A5F02BD9EE" Directory="dir3D69E690A30C00EF80683B0B8935E204" Guid="{9EAB29B1-20FE-41C3-A192-056A9EDB387A}">
+        <File Id="fil4874C62FDB8A2A5F468A19AB5325F05A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_ReedBoat_a\node.xml" />
+      </Component>
+      <Component Id="cmp3F660622B6F3E5885F877C41FBD2291D" Directory="dir3D69E690A30C00EF80683B0B8935E204" Guid="{80A9A875-0AEB-452A-B4E0-A7DBBEAFBABD}">
+        <File Id="fil62E68B5D9AE316062065F396EE4F43AE" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_ReedBoat_a\stklib_ReedBoat_a.b3d" />
+      </Component>
+      <Component Id="cmp9E2FC60DA7003859FB22C769CEA4E30C" Directory="dir5ADACCD5C3D232F73AEE1F0CCDCA66A8" Guid="{A16C6579-D3EE-4D9E-A7A1-61C6AEFA4B1A}">
+        <File Id="filC1C035E3CEE66F2B19FBAA2DDADA8AD1" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_reef_a\materials.xml" />
+      </Component>
+      <Component Id="cmp3A2363F0AFC4FAB188D6582A8D4E27FA" Directory="dir5ADACCD5C3D232F73AEE1F0CCDCA66A8" Guid="{0B4AE64F-94E9-400F-9A79-0B36271E40CC}">
+        <File Id="filF95B216C76353D3F8D78326F7B0DD67A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_reef_a\node.xml" />
+      </Component>
+      <Component Id="cmpDFC8929B1220F8C8E1DC644DD6CDF74D" Directory="dir5ADACCD5C3D232F73AEE1F0CCDCA66A8" Guid="{137397AD-CE07-480A-8D68-D33BFCF7B44A}">
+        <File Id="filF339B517972C6539162D5342A2BDF7E7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_reef_a\stklib_reef_a_bump.b3d" />
+      </Component>
+      <Component Id="cmp482B20614C6767F474BBD33A5C92BE59" Directory="dir5ADACCD5C3D232F73AEE1F0CCDCA66A8" Guid="{9A088B40-06E6-4F7B-96C8-79733AD72436}">
+        <File Id="filF30F1CD69CC523D06384DF2A2D5203BB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_reef_a\stklib_reef_a_disk.b3d" />
+      </Component>
+      <Component Id="cmpEC1BDABC1E47517DB0F1B63499E28A6C" Directory="dir5ADACCD5C3D232F73AEE1F0CCDCA66A8" Guid="{0C6B338A-5F0E-47E8-AD88-CA64F1D7E3C5}">
+        <File Id="fil81C3CA92F328FE48F7DBD80A520BA0A4" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_reef_a\stklib_reef_a_main.b3d" />
+      </Component>
+      <Component Id="cmp91BA921EE8D43CFCCB36534D0F2EBF52" Directory="dir2487E91EFBFAE69A1361199DE4D28DA1" Guid="{4024D6F3-9EA4-43AF-993C-11BCA31FD385}">
+        <File Id="fil1C58F7923C990D468383D429160956C4" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_roots_a\node.xml" />
+      </Component>
+      <Component Id="cmpB1F9E54ABAAFA966B205F36160314CE2" Directory="dir2487E91EFBFAE69A1361199DE4D28DA1" Guid="{17521EBB-0600-4754-9DD0-BC21BECA24DE}">
+        <File Id="fil5D9DBA8302E18B160DABFDAA9E4829F7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_roots_a\stklib_roots_a_main.b3d" />
+      </Component>
+      <Component Id="cmpA50CF915F023C7AC31A7A279548DC853" Directory="dirB40923230C354971D531AD1E48961C4A" Guid="{B40A6DB1-70B4-4F4A-83BE-73D30E6DE9B8}">
+        <File Id="filD497DC63DBB3BC60F84E4301050865AB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_sagebrush_a\license.txt" />
+      </Component>
+      <Component Id="cmpE0E85F411141DF7F9BDF06C7CEC59ABC" Directory="dirB40923230C354971D531AD1E48961C4A" Guid="{AD449CC6-E11E-4DD5-BC66-E1200BEE390A}">
+        <File Id="fil6280A21D963FEE44E29130DFA71A58D7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_sagebrush_a\materials.xml" />
+      </Component>
+      <Component Id="cmp36E9399562E9A28EFA63C419D79A1962" Directory="dirB40923230C354971D531AD1E48961C4A" Guid="{1947D7E3-B432-45A4-9942-0C4508F95F5A}">
+        <File Id="fil99FB523FA68D1E14383D279831F55EF8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_sagebrush_a\node.xml" />
+      </Component>
+      <Component Id="cmp5EEC50900A47DC47CDBDC283B3B353E0" Directory="dirB40923230C354971D531AD1E48961C4A" Guid="{2E621314-14C6-4AD6-8909-232A24E7ACDA}">
+        <File Id="fil849A447AA6B40C2CA48BF358EA517BBC" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_sagebrush_a\stklib_sagebrush_a_main.b3d" />
+      </Component>
+      <Component Id="cmp9FA03722837C04D3352D569EC2AAA4D1" Directory="dirB40923230C354971D531AD1E48961C4A" Guid="{5B21FEA8-4129-4C1D-ACFE-8523107552BB}">
+        <File Id="fil95AB5BA2E9E2DA6B43FFAC2DED3860DC" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_sagebrush_a\stktex_branches_diff_a.png" />
+      </Component>
+      <Component Id="cmpAAC1C89DE16E180373226E6EB0D89AF0" Directory="dirB40923230C354971D531AD1E48961C4A" Guid="{9E160F2D-D154-4945-97D9-CD9946C62993}">
+        <File Id="fil0A6E32C8304A87AE630234F9C22AB28B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_sagebrush_a\stktex_bushSageBrush_diff_a.png" />
+      </Component>
+      <Component Id="cmpA14C44CF80BEC49996A0BB730666B88B" Directory="dirB40923230C354971D531AD1E48961C4A" Guid="{7796092E-9B96-4AEC-849D-A03411C5BA72}">
+        <File Id="fil7C397CBFE79B4E6E4A87EEF117837BE7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_sagebrush_a\stktex_flowerSageBrush_diff_a.png" />
+      </Component>
+      <Component Id="cmp5444DB60C6217B3BB1116A7DE7F02E58" Directory="dir73F01C3476BC2AB90CAD6801F1741138" Guid="{72241CF1-9782-4D38-91EB-BF604FE8A78B}">
+        <File Id="fil590E96DD40A254F859E14DBC153E9698" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_saraVertical_a\materials.xml" />
+      </Component>
+      <Component Id="cmpBD4E73A4A4656D844377E83E0945566E" Directory="dir73F01C3476BC2AB90CAD6801F1741138" Guid="{D9B0AF21-C487-4B09-A632-F9F2A63018C2}">
+        <File Id="filAF5A585925DC2A3754FC285FC0D6C3B2" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_saraVertical_a\node.xml" />
+      </Component>
+      <Component Id="cmp4F7A619F9369FA8BDEF95CE76805441B" Directory="dir73F01C3476BC2AB90CAD6801F1741138" Guid="{D4B13019-03E2-4631-8A18-9045B12FA84E}">
+        <File Id="fil720EC02838585A998C77D87A31D16E6D" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_saraVertical_a\stklib_saraVertical_a_main.b3d" />
+      </Component>
+      <Component Id="cmp8CD61CAFA833638530660D894CCE3E28" Directory="dir221C77461980F0969DC9DCF12AAB3DBB" Guid="{1D78EE5D-9A2E-4591-9125-B0B93B317A0E}">
+        <File Id="fil2A12580F32EE073B946158C697C888E2" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_seaLantern_a\materials.xml" />
+      </Component>
+      <Component Id="cmpFE856DF15262C68DBF75DEFCE24E0321" Directory="dir221C77461980F0969DC9DCF12AAB3DBB" Guid="{A93B32A9-B00F-4A17-B481-3C787A5D2279}">
+        <File Id="filAF18F43EC7CFE4855C2646573CB19DA5" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_seaLantern_a\node.xml" />
+      </Component>
+      <Component Id="cmpBD4596EEFBEC06335EA6EFCA51B79A11" Directory="dir221C77461980F0969DC9DCF12AAB3DBB" Guid="{45F90A49-1960-4797-8201-0DDC19DFB4DC}">
+        <File Id="fil2DFD0A29421C4A41A18B1305E3C34C3A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_seaLantern_a\stklib_oceanLantern_glow_a.png" />
+      </Component>
+      <Component Id="cmp77029B50E62C4923AA5F7C9ED7940662" Directory="dir221C77461980F0969DC9DCF12AAB3DBB" Guid="{15E0C16D-68D4-4A69-B7CC-5CEC4B90BF92}">
+        <File Id="fil8C634BE6E4932A7D9887ECA6A80AC164" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_seaLantern_a\stklib_seaLantern_a_main.b3d" />
+      </Component>
+      <Component Id="cmpD647945F6903EDBC5D2CEA4630A04F0C" Directory="dirAE781B2EC769AA702300CE57FD29EBE1" Guid="{1CF35CFD-5795-4665-9F40-A24C3E70E39D}">
+        <File Id="filE6D58329525A807792F3DA9B1D2B52D7" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_stkVertical_a\materials.xml" />
+      </Component>
+      <Component Id="cmp7BC6F1D7C76EEF74BB82A7FA4ACA542A" Directory="dirAE781B2EC769AA702300CE57FD29EBE1" Guid="{28ABDF3D-23C1-4E62-9576-21A786E3322A}">
+        <File Id="fil6EA51BA991A5F4094101D05C660CACA9" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_stkVertical_a\node.xml" />
+      </Component>
+      <Component Id="cmpD2F574D48E873D3F6F965339F258C612" Directory="dirAE781B2EC769AA702300CE57FD29EBE1" Guid="{1848E48A-06C7-49E0-81F6-CC080D0214B7}">
+        <File Id="fil160DF3089C85DDCC2C44B0969440F8D5" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_stkVertical_a\stklib_stkVertical_a_main.b3d" />
+      </Component>
+      <Component Id="cmp2A76FECA1748BF2B60425F6DCD27BA38" Directory="dir4FE78275C43DF568BCF15C67E26D745B" Guid="{B2E5ECA1-BEAA-4584-8C17-0C3FB22DBF67}">
+        <File Id="filC4C39283CC3F9072928BF6068778F2AB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tetrapodUnderwater_a\node.xml" />
+      </Component>
+      <Component Id="cmp260D4C266789FBA0A102F2FECE5113DA" Directory="dir4FE78275C43DF568BCF15C67E26D745B" Guid="{1E85F62B-6F25-4DAE-8481-CED3710EEF03}">
+        <File Id="filE41366EEEDBB87D69718BEC16D1B0092" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tetrapodUnderwater_a\stklib_tetrapodUnderwater_a_main.b3d" />
+      </Component>
+      <Component Id="cmp2293880AC6C5DCBD48F107DA90F91372" Directory="dir58297E26874B4FADF8FD15803CA03074" Guid="{9AD62BBB-EBB1-41E3-9BF8-A6CCD721FC51}">
+        <File Id="fil787523CB309FFC79DCDACC804ACFC09B" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_trijet_a\node.xml" />
+      </Component>
+      <Component Id="cmpE558197DF5D4AB48346850258D8D1643" Directory="dir58297E26874B4FADF8FD15803CA03074" Guid="{24F0F1B4-AB0A-40ED-9D64-32AFEE0ED803}">
+        <File Id="fil7C666BA97D926D200F7E2B7DCBB7D1C3" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_trijet_a\stklib_trijet_a_main.b3d" />
+      </Component>
+      <Component Id="cmp528504D9BEA6D6C56766E4F775138CF6" Directory="dir9EEBC40527CA540EDC6FC63599C0F5E4" Guid="{8BEA8AF4-2128-4B56-A2A6-7FBA0D1E3C8F}">
+        <File Id="fil9E73C63AF64CA766C379BB508F81570A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tropicalPlant_a\materials.xml" />
+      </Component>
+      <Component Id="cmpE0136E4E8CA0C3926F46A1FB628974DB" Directory="dir9EEBC40527CA540EDC6FC63599C0F5E4" Guid="{8FD6A0FF-5A6C-42ED-807F-82773E9BEF66}">
+        <File Id="filF674D625B736A26442DF0AD030486C78" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tropicalPlant_a\node.xml" />
+      </Component>
+      <Component Id="cmpD24F86969EC270D34E0E29EAD9BD138C" Directory="dir9EEBC40527CA540EDC6FC63599C0F5E4" Guid="{7F42D817-1D66-46D9-A223-CD611A1E8674}">
+        <File Id="fil2A72CB62CA3C36240F433C705761B9B3" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tropicalPlant_a\stklib_tropicalPlant_a_main.b3d" />
+      </Component>
+      <Component Id="cmpFDD905696FEE337BC58C465B536A398F" Directory="dir9EEBC40527CA540EDC6FC63599C0F5E4" Guid="{304892B0-0A94-4530-8E6C-6A577C966C7A}">
+        <File Id="fil255E9052B0A1517B9AEA906A50FC177C" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tropicalPlant_a\stklib_tropicalPlant_a_main_a.b3d" />
+      </Component>
+      <Component Id="cmpDA16AA5D232ABB70465204746DE50E3A" Directory="dir9EEBC40527CA540EDC6FC63599C0F5E4" Guid="{ECD46422-6050-444C-940F-2D7E44F9E2DF}">
+        <File Id="fil09CF53D49997C52A210C8198A073B65F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tropicalPlant_a\stklib_tropicalPlant_a_main_b.b3d" />
+      </Component>
+      <Component Id="cmpC129CE6E8E20B46E76225379038DA8DB" Directory="dir9EEBC40527CA540EDC6FC63599C0F5E4" Guid="{66750987-BBC4-441C-8C23-5EE1BCCA10AA}">
+        <File Id="fil90C91DB6A6EA5078B815DF7F3584D705" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_tropicalPlant_a\stktex_tropicalPlant_a.png" />
+      </Component>
+      <Component Id="cmpCC9C1654903BE79C3D3C44E6A18BFAA9" Directory="dir1D5276BB9F7462C94FC0860E904BB52B" Guid="{FE5988EC-023E-4862-AFF4-56F51E651515}">
+        <File Id="fil28C0A6D9C68802BA7B10DB806949334A" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_umbrellaBeach_a\node.xml" />
+      </Component>
+      <Component Id="cmpEFD7BEA2D3D69ED8ED19C13BF0FABFBF" Directory="dir1D5276BB9F7462C94FC0860E904BB52B" Guid="{F16B195E-2542-4806-846C-3DEB5FD3210C}">
+        <File Id="filD2A92EDBE87E0F58557F1D06B86A2F62" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_umbrellaBeach_a\stklib_umbrellaBeach_a_main.b3d" />
+      </Component>
+      <Component Id="cmp005316FF34D4668A5312A08C6C273E4C" Directory="dir9DE1532AE3D09053A377A783104DC6D1" Guid="{26908917-72F1-4E1D-9A87-1E3D146AB297}">
+        <File Id="fil4A7181970651FEF5ADDEA8C5225A446F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_waterLily_a\node.xml" />
+      </Component>
+      <Component Id="cmp94CD535BC6F21A59708DAA8BEDD9B21B" Directory="dir9DE1532AE3D09053A377A783104DC6D1" Guid="{CF24270E-2FF6-4812-BEF4-3CCA1B4B348C}">
+        <File Id="fil5D8855AED64DBD3333202448E6EACCBB" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_waterLily_a\stklib_waterLily_a_main.b3d" />
+      </Component>
+      <Component Id="cmpAE8EF2D2E5640FAF638E1831A14FDB66" Directory="dir9DE1532AE3D09053A377A783104DC6D1" Guid="{ED543BA1-B227-4A7B-80FA-034ABB80659B}">
+        <File Id="fil73E3B7C994248EC6431680ED9B1878F6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_waterLily_a\stklib_waterLily_a_main_high.b3d" />
+      </Component>
+      <Component Id="cmpE5BE0A9DBC5850DD41DB9750808F9F85" Directory="dir9DE1532AE3D09053A377A783104DC6D1" Guid="{AE17839E-656E-4268-B88D-AC58AB591DC8}">
+        <File Id="filD5204A919CF5E34AD35DBB7712FA004F" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_waterLily_a\stklib_waterLily_a_main_low.b3d" />
+      </Component>
+      <Component Id="cmp3FF5E689118FB0897895EBAEC73BAA78" Directory="dir8DC0938BFDD6A91A739685F5647388A4" Guid="{CD7D6714-17A5-4890-9E1C-C765C3C04F91}">
+        <File Id="fil2FC9F8F14E0C7DC01A25ED773946EE9C" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_windpump_a\node.xml" />
+      </Component>
+      <Component Id="cmpBD048D94C1D7A86DEE6FEA05E404FC79" Directory="dir8DC0938BFDD6A91A739685F5647388A4" Guid="{19F8BB67-0559-40FA-9044-324A6AE4F8F2}">
+        <File Id="fil20993DE37BD3E0E65612C224C13B9D23" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_windpump_a\stklib_windpump_a_main.b3d" />
+      </Component>
+      <Component Id="cmp816A521DEE85C8DB94ED944C97DC5426" Directory="dir8DC0938BFDD6A91A739685F5647388A4" Guid="{86E442F5-D0B2-4184-A346-182085798F8E}">
+        <File Id="filF4B372DD5A078F2462EA72F8FC9C9AF8" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_windpump_a\stklib_windpump_a_windmill.b3d" />
+      </Component>
+      <Component Id="cmp3747A9D9520A32C41EC7C46388EBC665" Directory="dir8622811CBE88DD1B76141706A351E778" Guid="{3BDD2A84-2C87-40C2-8D22-8DB3AD689945}">
+        <File Id="fil1C5DFD4A66B645E111357192EFE37CF6" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_woodLittleBridge_a\node.xml" />
+      </Component>
+      <Component Id="cmp6D4833C990819DEF14B9FAA091009FD6" Directory="dir8622811CBE88DD1B76141706A351E778" Guid="{28B248AE-DBE8-4B96-917F-1919679CD8CE}">
+        <File Id="fil01BE84838EC45C5D7493A2BF04FF3328" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_woodLittleBridge_a\stklib_woodLittleBridge_a_main.b3d" />
+      </Component>
+      <Component Id="cmpA47C68396550299EFDA827A66D4A1BBE" Directory="dirB9A65C27B7B83F7F80650AA28A732B0F" Guid="{BEE81594-9C95-4389-94D4-00E795C9F52B}">
+        <File Id="fil47347DC408C4AE138D86E012C1A1D7EA" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_woodLodge_a\node.xml" />
+      </Component>
+      <Component Id="cmp9A7A4B9D8373F990D84521AE0A715B7E" Directory="dirB9A65C27B7B83F7F80650AA28A732B0F" Guid="{17666AA4-FF8C-4046-B6A9-54BCF29C445D}">
+        <File Id="filD57F2AFF44DC3790F851D573C675C9C1" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_woodLodge_a\stklib_woodLodge_a_main.b3d" />
+      </Component>
+      <Component Id="cmp70016DABF9521F878B20F3C85CE8A1F7" Directory="dir2D4B6A0872BC5DEFADBDED4BF2A4E6DB" Guid="{3E348D15-57DF-43E8-838D-9E6996A2B4DA}">
+        <File Id="fil104F2FFE223CAB99D32E1F98BAB38FD4" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_woodPostLamp_a\node.xml" />
+      </Component>
+      <Component Id="cmp7710B3949CB3AEE2C7FA85A25340A03D" Directory="dir2D4B6A0872BC5DEFADBDED4BF2A4E6DB" Guid="{91F71923-91B5-4F8C-B8FE-D9F297BC79A7}">
+        <File Id="fil5D36533A9DCC6BA2B2946C3E63B084D0" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_woodPostLamp_a\stklib_woodPostLamp_ao_a.png" />
+      </Component>
+      <Component Id="cmp65BE9EB19472159F1EFC45856C5B4F37" Directory="dir2D4B6A0872BC5DEFADBDED4BF2A4E6DB" Guid="{43A905B3-6CBA-4A31-BC74-2586CD129137}">
+        <File Id="filB9121C87822A2F93DBCD4A588471A042" KeyPath="yes" Source="..\..\..\stk-assets\library\stklib_woodPostLamp_a\stklib_woodPostLamp_a_main.b3d" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

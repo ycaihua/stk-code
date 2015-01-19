@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="music">
+      <Component Id="cmp7571D6C4A34DC38B767BB7B9BE2FAB5E" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{5A9B0E59-80D3-4940-AFE3-6EDD7286D454}">
+        <File Id="fil5BBAC54421BA18C552576D465C601618" KeyPath="yes" Source="..\..\..\stk-assets\music\amazon_jungle.music" />
+      </Component>
+      <Component Id="cmpCA7D033ED834C581B31CD89C9A023227" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{D4DB7D71-888B-48F1-9656-25BCD2440359}">
+        <File Id="fil19B88431F49BE0C30DCA4AF53C7F815C" KeyPath="yes" Source="..\..\..\stk-assets\music\amazon_jungle.ogg" />
+      </Component>
+      <Component Id="cmp4D66023164607CC9DD2D28762B858762" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{1D76D615-1838-4648-87A9-B9C0DC9E90AD}">
+        <File Id="fil534050834557D57337B58BB7C1F5C412" KeyPath="yes" Source="..\..\..\stk-assets\music\bay.music" />
+      </Component>
+      <Component Id="cmp58918CEB48D8CA3A04C218D32AAE7F80" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{9ACE9237-E9B5-415A-AF14-728F75357DCA}">
+        <File Id="fil2695436AED2E3E9A05161D5E54AC5498" KeyPath="yes" Source="..\..\..\stk-assets\music\bay.ogg" />
+      </Component>
+      <Component Id="cmp0BCD4C283F3D5B04A7A656E69EAE5BDD" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{2F226B2F-FD86-4241-87B2-13626265E668}">
+        <File Id="fil3AB7286A5BC45E0D6DA847DD328AFA03" KeyPath="yes" Source="..\..\..\stk-assets\music\Boom_boom_boom.music" />
+      </Component>
+      <Component Id="cmp4F9F741239CCF085B5FA41CED61C65F5" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{F9EC1294-5BAE-4811-8ED1-12BD1C713BD2}">
+        <File Id="filCD297D9799B247CEB84B47223F7AA023" KeyPath="yes" Source="..\..\..\stk-assets\music\Boom_boom_boom.ogg" />
+      </Component>
+      <Component Id="cmpCE456FF0C6B8BCAA0E9409FE461BA640" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{6ED42B9D-0395-4AB4-9856-941FF15CC1B6}">
+        <File Id="fil45B7F49FA6939E53550F216C883E7EEA" KeyPath="yes" Source="..\..\..\stk-assets\music\cocoa_river.music" />
+      </Component>
+      <Component Id="cmp179E02FA6937D916C0B71FB4EA8831B3" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{A323FC54-1881-405F-9FB8-A3E719B02500}">
+        <File Id="fil4268C47433772529B0B1B3BD0374B57C" KeyPath="yes" Source="..\..\..\stk-assets\music\cocoa_river.ogg" />
+      </Component>
+      <Component Id="cmpE45360E6D3B2A926390C916A5353F73E" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{90E350E4-A31E-47DE-A7DD-A03548FD701E}">
+        <File Id="fil5A35CF1229EC282833D4D308F91BC353" KeyPath="yes" Source="..\..\..\stk-assets\music\cocoa_river_fast.ogg" />
+      </Component>
+      <Component Id="cmp674EEF81B73FB5FBDEA4A48035D6692F" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{6F5647A3-E863-423B-AF95-302621217688}">
+        <File Id="filCD351A442337C221D76EB350D503B748" KeyPath="yes" Source="..\..\..\stk-assets\music\cocoa_river_fast.ogg2" />
+      </Component>
+      <Component Id="cmp04D14B2C922BE5BF84991A192F3DF300" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{4DFD2180-6B48-498F-9C22-8AC23903C003}">
+        <File Id="fil3B2E860B33789811A37E527CFC93C7D4" KeyPath="yes" Source="..\..\..\stk-assets\music\demonhill.music" />
+      </Component>
+      <Component Id="cmp9DE44DC91BC68F40A249C3CF1F0F41EB" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{3B67B3E3-F7DD-4EC6-AA0C-BEB7E81CFF4D}">
+        <File Id="fil8B7E834655274CC9F17CBA35D6CC66BC" KeyPath="yes" Source="..\..\..\stk-assets\music\demonhill.ogg" />
+      </Component>
+      <Component Id="cmpD2692BAF7E3FBE3B2DB7D7FBFE472607" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{3A8748ED-00BD-4A15-91AA-88C9382261C2}">
+        <File Id="filD83816427592C95779EDFD8C281013C0" KeyPath="yes" Source="..\..\..\stk-assets\music\egypt.music" />
+      </Component>
+      <Component Id="cmpA8ADB6FBC7511C799DD4234E6AE8C283" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{5DAA89EE-A56A-4AD1-81E4-ED64ED537D81}">
+        <File Id="filC02492BBB5D88701F848694C29D37FE2" KeyPath="yes" Source="..\..\..\stk-assets\music\egypt.ogg" />
+      </Component>
+      <Component Id="cmp72678888CB466BF569E7CE43DCCA25E0" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{B837F807-C7CE-4978-A835-32903E7EC58A}">
+        <File Id="filC33D74574C9C8B468B9700B51773D06F" KeyPath="yes" Source="..\..\..\stk-assets\music\garden.music" />
+      </Component>
+      <Component Id="cmp7F98EB668A1422150761AAED275905AB" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{ABFE357D-8C2F-4A29-A9F3-62CC1AFF8150}">
+        <File Id="fil18778C22070D9C703D9E1D6AEEA55AC7" KeyPath="yes" Source="..\..\..\stk-assets\music\garden.ogg" />
+      </Component>
+      <Component Id="cmp72C6586CF32562BD86B5FDD0D27C6E15" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{5F4D8752-0392-42D7-9221-9A1127C2C881}">
+        <File Id="fil7E4A63C3E9FC37A6970BAE94C918A386" KeyPath="yes" Source="..\..\..\stk-assets\music\hacienda.music" />
+      </Component>
+      <Component Id="cmp02FE060337682B66EE7327D7F2B9CCBD" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{DB031D09-08B7-4C8A-B323-FD4E54F0F697}">
+        <File Id="filCBAB967DCF4D346E34414B0ADCE0773F" KeyPath="yes" Source="..\..\..\stk-assets\music\hacienda.ogg" />
+      </Component>
+      <Component Id="cmp703F5A5CE2F09C6A0A2DAB81C2A70D59" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{EABA4629-99FF-4D75-8018-BAE0D646E74F}">
+        <File Id="fil2F5DB7DADE3B77A7A16FED6A34CC365E" KeyPath="yes" Source="..\..\..\stk-assets\music\kart_grand_prix.music" />
+      </Component>
+      <Component Id="cmp8E1CC4CDE910A2E97378F1B1E7BCD6BC" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{CDCBF394-D1E2-4C22-BD88-2E782DD074DA}">
+        <File Id="fil9FEE443C15BFFBE151BD48EAD35BD6F6" KeyPath="yes" Source="..\..\..\stk-assets\music\kart_grand_prix.ogg" />
+      </Component>
+      <Component Id="cmpC04FB25691EE13A05E7A838483620FC7" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{14E56125-3C5A-48CE-BD7A-14D1928BE887}">
+        <File Id="fil9626A7A13BD241AE376B100FC30A8727" KeyPath="yes" Source="..\..\..\stk-assets\music\klabauter_dance.music" />
+      </Component>
+      <Component Id="cmp7997C638152AE084D0AECC3BCEE77C92" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{6AF1DDE6-4AC9-4E3E-B0F9-4EBE599D094A}">
+        <File Id="filA3E48CD76A258B12C8CCA16946A2EEC5" KeyPath="yes" Source="..\..\..\stk-assets\music\klabauter_dance.ogg" />
+      </Component>
+      <Component Id="cmp3B75A11DDF19136ABAD41A9432E59A03" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{D7AFF9DD-9BE1-41C1-938E-1E41BE95FB85}">
+        <File Id="fil8CE13BB662902984AFEB7D9975459BD9" KeyPath="yes" Source="..\..\..\stk-assets\music\landing_in_gran_paradiso.music" />
+      </Component>
+      <Component Id="cmp1420B929C63FC0B5923F5852FE1AFB22" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{69525B53-7263-4952-93F0-248867D4013A}">
+        <File Id="fil2AB143D54CAEE2722C7754BD7DF2CF31" KeyPath="yes" Source="..\..\..\stk-assets\music\landing_in_gran_paradiso.ogg" />
+      </Component>
+      <Component Id="cmp335E8FCB7A45F519986DB2CAA0A3B22B" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{B3DC3ECD-8317-4E61-A938-B60C631D9E93}">
+        <File Id="fil2B4FC17ABD9AECF05567933204D49D6C" KeyPath="yes" Source="..\..\..\stk-assets\music\landing_in_gran_paradiso_fast.ogg" />
+      </Component>
+      <Component Id="cmpA8EED71281BF31AB5D7F4FE034670D89" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{EEE4CE67-A43A-432C-818A-E1D716C88A57}">
+        <File Id="filC98778E20FBC28D8B8D5B2B6895D06CF" KeyPath="yes" Source="..\..\..\stk-assets\music\lava.music" />
+      </Component>
+      <Component Id="cmpC5045472536B959EE615AB0B37E63F17" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{37DC4278-E83C-4918-ABD0-2140106C14DA}">
+        <File Id="fil2B87CD31F087C56500A59EB9575E9B76" KeyPath="yes" Source="..\..\..\stk-assets\music\Lava.ogg" />
+      </Component>
+      <Component Id="cmp6D860A2BC65A53A7C0C1BBE7256A2FEF" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{EA4ABFAE-3015-4C68-BDCB-79B3C388D3AC}">
+        <File Id="filF2068D03E59D440D557BB3B1D6478D8C" KeyPath="yes" Source="..\..\..\stk-assets\music\License.txt" />
+      </Component>
+      <Component Id="cmp627A0852E0219F65792693FC1AE7D18A" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{FBB00F81-022B-45EC-94D4-793D45FB3B9F}">
+        <File Id="filB845DB43FEA9FAD9D7D4950FCD491516" KeyPath="yes" Source="..\..\..\stk-assets\music\lose_theme.music" />
+      </Component>
+      <Component Id="cmpA145FF67CCD682A4DB2C06A5961AEF16" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{F0364A2E-0247-437D-BE00-7D3244C911B2}">
+        <File Id="filB11D406C4F0E82784990416E8F7F13AB" KeyPath="yes" Source="..\..\..\stk-assets\music\lose_theme.ogg" />
+      </Component>
+      <Component Id="cmp6E56F5AB7B613F0FBEA49EC549ED19F5" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{C13A943A-794E-4133-92FB-C97D5CE6C6C1}">
+        <File Id="fil3542C1EA2BEFE9858C038CB2FBC2E503" KeyPath="yes" Source="..\..\..\stk-assets\music\main_theme.music" />
+      </Component>
+      <Component Id="cmp7D53AA467FDC1E105582FE207DF6DE78" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{A3162AAB-89BF-4115-839F-6B36CBC9CBA5}">
+        <File Id="filBDF6289BD335CACE9D2854B2681137F7" KeyPath="yes" Source="..\..\..\stk-assets\music\menutheme.ogg" />
+      </Component>
+      <Component Id="cmp14D1984F286D12F7C36EC41E7947BD18" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{B71B2CD7-C142-42F4-A4DD-E7CCA2383D5B}">
+        <File Id="filA04D6EDBE0085CD622AB37B35FD65D11" KeyPath="yes" Source="..\..\..\stk-assets\music\Origin.music" />
+      </Component>
+      <Component Id="cmpBAA30F47A5CB694C32FCAE919BA3A4E3" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{4C5FBC2B-E76F-4A79-AC28-A6F38487536F}">
+        <File Id="filD17DB9F25C306511251B7F6C60CF1DF1" KeyPath="yes" Source="..\..\..\stk-assets\music\Origin.ogg" />
+      </Component>
+      <Component Id="cmp76DAE00752DD516AAE1682045CFF8577" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{A5EA9EAE-EE95-478B-82E2-1D538FB67896}">
+        <File Id="fil412D28E33663D39C396EE0DDFEA5D2B3" KeyPath="yes" Source="..\..\..\stk-assets\music\overworld.music" />
+      </Component>
+      <Component Id="cmpECC67607DC6430C35850929245EE412F" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{15FCD6F3-8A81-4C0C-87DD-BC8DF8899FB4}">
+        <File Id="filF64D067E7A9E9DF31A90C657BE45C175" KeyPath="yes" Source="..\..\..\stk-assets\music\overworld.ogg" />
+      </Component>
+      <Component Id="cmp321477FB11E21C15C3C495EBE8F29C7B" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{B2559249-8612-4C0B-A3D3-78E108CFF83C}">
+        <File Id="fil9A2519493A6BD0980CCF635DE4E052DD" KeyPath="yes" Source="..\..\..\stk-assets\music\Penguin_Party.music" />
+      </Component>
+      <Component Id="cmp64BFD345C7F675A3899B1D1D62BCE43B" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{40936D74-0A96-43A9-854D-845902915257}">
+        <File Id="filA0E8D3DD4E9853572C39361AB277609F" KeyPath="yes" Source="..\..\..\stk-assets\music\Penguin_Party.ogg" />
+      </Component>
+      <Component Id="cmpBB502999E1BB482420E98278079035B6" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{6FCA70F9-ED1D-449C-949F-ADA99AAB6ECD}">
+        <File Id="filC3AF16D61FBD412A472E1D5024BF9C20" KeyPath="yes" Source="..\..\..\stk-assets\music\race_summary.music" />
+      </Component>
+      <Component Id="cmp752AF4B9E4F73A3513658DA1CC1D771B" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{38D73AFF-3B26-4630-9F12-293CF2823B39}">
+        <File Id="filD9F8076A61F53A0CAA79E3ADAE3B55AC" KeyPath="yes" Source="..\..\..\stk-assets\music\race_summary.ogg" />
+      </Component>
+      <Component Id="cmp906EA457D87F84635109EC3507F15F6B" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{6CAFBAF3-35D3-4DBA-A39A-6601D25093E0}">
+        <File Id="fil026C94A7EC6B21458B89E0783A01EF9A" KeyPath="yes" Source="..\..\..\stk-assets\music\SkyVibe-HighFrequency.music" />
+      </Component>
+      <Component Id="cmp5770256956FB9BF24B2865B88055995D" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{56B88BFA-BA86-4B6A-9701-B96E3221E4FC}">
+        <File Id="fil2219273C697786C2DF666D91F9FCCF0A" KeyPath="yes" Source="..\..\..\stk-assets\music\SkyVibe-HighFrequency.ogg" />
+      </Component>
+      <Component Id="cmp5E24A5574BD64D25BDB525A2D7380A38" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{40D713B8-D0CA-4BB0-89BC-A1BF526607C6}">
+        <File Id="fil46AA4DE7803DDC465AE32D2BC95CB38F" KeyPath="yes" Source="..\..\..\stk-assets\music\snowmountain.music" />
+      </Component>
+      <Component Id="cmp47FBEBEDC7448A6CE33B05ED8B07318B" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{C97B4AF2-8DA4-47F9-9001-B8E70F1BDDCD}">
+        <File Id="fil18301ACAC583B575D632EB248B55A6B0" KeyPath="yes" Source="..\..\..\stk-assets\music\snowmountain.ogg" />
+      </Component>
+      <Component Id="cmp388FA5DEB92819745A3ED691DADE512C" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{1F47FC34-A9ED-41F4-88E9-8C58E046DAD5}">
+        <File Id="filC3874B9126C4C9E82E2911A159ED2891" KeyPath="yes" Source="..\..\..\stk-assets\music\Snowy.music" />
+      </Component>
+      <Component Id="cmpE3D97E208FD894A37689651701FF029A" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{CFA1E66F-E280-470B-B8B5-EF51DC25E368}">
+        <File Id="fil03C83AB8F5589A740FB8411ED06A27DF" KeyPath="yes" Source="..\..\..\stk-assets\music\Snowy.ogg" />
+      </Component>
+      <Component Id="cmp761504D8543C7695850066E37902275B" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{513C931A-2162-4BD5-8376-4AF4B4452B26}">
+        <File Id="filDB153B6DEA0AD251C0F8D1096C620B14" KeyPath="yes" Source="..\..\..\stk-assets\music\subsea.music" />
+      </Component>
+      <Component Id="cmp38E21BE4944322A79184A20099F3BEED" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{B0B42974-8DCA-4953-87B7-FAF4214EE75C}">
+        <File Id="fil2047DDFE446AC18F1BDB7FA685A603C6" KeyPath="yes" Source="..\..\..\stk-assets\music\subsea.ogg" />
+      </Component>
+      <Component Id="cmp095DE35131C6C7D3CA1CE97D17042EA1" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{D1A279D0-7FC0-42C7-8685-1ED7E0DEED47}">
+        <File Id="fil886FF6BBE904E138A2E302FFE1F013A7" KeyPath="yes" Source="..\..\..\stk-assets\music\TheDeadRocks-EasyJob.music" />
+      </Component>
+      <Component Id="cmp12E1E50FE28760E031FC7C3808594A29" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{B46D990D-C12D-4168-A588-EE56C7E8B35F}">
+        <File Id="fil580692F73EB84C4EFD7F8AA1BA9262EC" KeyPath="yes" Source="..\..\..\stk-assets\music\TheDeadRocks-EasyJob.ogg" />
+      </Component>
+      <Component Id="cmp4E1092A88B6BA5C37C62909E69F3F156" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{A994880E-6FF5-4340-987B-FFD9090B1C8F}">
+        <File Id="fil493E6A81B2327FE1041B3DDC33B4685A" KeyPath="yes" Source="..\..\..\stk-assets\music\valley.music" />
+      </Component>
+      <Component Id="cmp1214F6FB48E5556E7FF338F132E12C21" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{D77242BF-2F9B-4CD5-BBE6-6F011AB3C39C}">
+        <File Id="fil1F569EDA58EDAA9E6607BD3861671ECB" KeyPath="yes" Source="..\..\..\stk-assets\music\valley.ogg" />
+      </Component>
+      <Component Id="cmp24B6B6DE57CC5D52F9A794169FF698A9" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{71F3559D-EF0F-4008-AA17-18CE5A18EAFD}">
+        <File Id="fil6B5DC36F79981A97404039141649313B" KeyPath="yes" Source="..\..\..\stk-assets\music\win_theme.music" />
+      </Component>
+      <Component Id="cmp48CF4C82BF9B8537EB52A79399A8F735" Directory="dir87F5FAB97CCB59A61A68CA0905FE68D2" Guid="{F10E2850-8629-4402-9DAA-27D7B33DD6D3}">
+        <File Id="fil1A84C170E6AAE47FCC6C91A003C70311" KeyPath="yes" Source="..\..\..\stk-assets\music\win_theme.ogg" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <ComponentGroup Id="Shaders">
+      <Component Id="cmpD82C67B144D609721BBDD6EB185CDDE4" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{E0F8AEEB-408C-4832-A50F-617E2C2F3AAE}">
+        <File Id="fil1CBA13BC19600A7F2A8CCA2B2477406B" KeyPath="yes" Source="..\..\data\shaders\bilateralH.comp" />
+      </Component>
+      <Component Id="cmpDE8D067EA183C246CFC46A4092358B6B" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{7A36B26F-A904-40E7-8573-E2FA7D210D3F}">
+        <File Id="fil37311280409AF62F13B365E872B29BD3" KeyPath="yes" Source="..\..\data\shaders\bilateralH.frag" />
+      </Component>
+      <Component Id="cmp08F1EEF3C1BB79ACC48ABE9A7BCC3360" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{43773CAF-36DE-48E3-99BD-9A9657135C39}">
+        <File Id="filFFB865FC1088AC76615B3B71140A05E3" KeyPath="yes" Source="..\..\data\shaders\bilateralV.comp" />
+      </Component>
+      <Component Id="cmp45F2E771262ACBA168DDB8954A53B58D" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{E1543897-4C69-4846-BECA-535092ACE1C8}">
+        <File Id="filDCB506110B0C27A53D200ED6BD9661EC" KeyPath="yes" Source="..\..\data\shaders\bilateralV.frag" />
+      </Component>
+      <Component Id="cmpD933952C1F9C67305CABD4C491B25598" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{858674E1-4BC5-445D-99EF-CEC7B5712808}">
+        <File Id="fil4E5AD6C3DCE3C6EB77CDDA5653FEC8F0" KeyPath="yes" Source="..\..\data\shaders\billboard.frag" />
+      </Component>
+      <Component Id="cmp2F29322E530F7254D969D4871FB1B5E3" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{4CC11798-C884-494E-B7F7-EE72B3A02993}">
+        <File Id="filE33AFDEDD74CD875C082760F49445625" KeyPath="yes" Source="..\..\data\shaders\billboard.vert" />
+      </Component>
+      <Component Id="cmpC8A76FC25DE3C374A4C2CF02E3B664B8" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{6FD76418-0DC5-481B-9E30-54C0851822A4}">
+        <File Id="fil730266417F6DA5AC2A8E7493DF8ED534" KeyPath="yes" Source="..\..\data\shaders\bloom.frag" />
+      </Component>
+      <Component Id="cmpF780DF562A78E17EBC7487A2A228CFC6" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{B60963A1-EB82-4897-8840-8B09BD706A5A}">
+        <File Id="filBEBED2C6A72AAB5F41E5CEDE1BBEB603" KeyPath="yes" Source="..\..\data\shaders\bloomblend.frag" />
+      </Component>
+      <Component Id="cmp0A83074FC379985007200999DEAFE2D6" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{DC476414-3A7A-49E8-A5DC-D6B277F24AF3}">
+        <File Id="fil6999F553A89042CA6A6C2AC66BAB0BE8" KeyPath="yes" Source="..\..\data\shaders\blurshadowH.comp" />
+      </Component>
+      <Component Id="cmp467CDCE46EEFA821E5B08E00AB3AB3B6" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{69535530-DCEB-4A01-A72F-01CD3435728E}">
+        <File Id="fil56B7E115325B93813F38B79792E52E4C" KeyPath="yes" Source="..\..\data\shaders\blurshadowV.comp" />
+      </Component>
+      <Component Id="cmpDA149915FAD0FC2466F78EB0B7D377DD" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{56A415C8-0BC0-4EB8-AA50-95ADFE54486F}">
+        <File Id="fil6B48EFEEC72DA71E53D4814F6598E560" KeyPath="yes" Source="..\..\data\shaders\coloredquad.frag" />
+      </Component>
+      <Component Id="cmpDF8B72820D56585EE3EDFC5F8BF12554" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{BE7BA356-EC94-44D5-83BF-1CF7B8A925DF}">
+        <File Id="filB8016A711BC3E498CA213BF07A6430B8" KeyPath="yes" Source="..\..\data\shaders\coloredquad.vert" />
+      </Component>
+      <Component Id="cmpCAA9E9E93EF37084E746F5C5D0949C87" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{E8A25122-6614-49D0-8020-FF04616160C7}">
+        <File Id="filB426F3DB6D29346C5138E6AAF60BEED2" KeyPath="yes" Source="..\..\data\shaders\colorize.frag" />
+      </Component>
+      <Component Id="cmpF9096E9EFB0C6CA6BAF33FB921DD7DCD" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{6D268AC8-DF6E-47CE-AC92-D9B04DC05BF2}">
+        <File Id="fil48FB3EDF3A20FDE04FF6760818D7B241" KeyPath="yes" Source="..\..\data\shaders\colortexturedquad.frag" />
+      </Component>
+      <Component Id="cmpEB517A549684320CC6760D5B19D33E2D" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{56273CED-3528-4BC2-9BEC-927962AE8975}">
+        <File Id="fil3CEF4E37AE486989ADE3794B6D644CF1" KeyPath="yes" Source="..\..\data\shaders\colortexturedquad.vert" />
+      </Component>
+      <Component Id="cmp3412C45347CF1C1C02415723B94F8C44" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{3D6D5D34-7F60-4B2C-8529-199464C07FA6}">
+        <File Id="fil7AC5AF6625DDF35DDFF7F3E4598914EC" KeyPath="yes" Source="..\..\data\shaders\depthhistogram.comp" />
+      </Component>
+      <Component Id="cmpC3DF0CB686D9846D8B8DCDC4871C55B7" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{7FA13DD2-AC13-47B4-B5DC-8396526E4B56}">
+        <File Id="fil144B17762B014F83542B84E7D66C57F6" KeyPath="yes" Source="..\..\data\shaders\detailledobject_pass2.frag" />
+      </Component>
+      <Component Id="cmp3247BBBC3EB08B318CB000BED462A732" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{76834565-17BF-497D-94C0-A521CEF8750D}">
+        <File Id="fil9BC26491C4C3EEC856D6042F48634FFA" KeyPath="yes" Source="..\..\data\shaders\displace.frag" />
+      </Component>
+      <Component Id="cmp7A208882DC601FD573066777FFECEA46" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{56CC9DDA-553D-4C7F-A63C-B896A8A44598}">
+        <File Id="fil24406739B326528BD446E0D63509918C" KeyPath="yes" Source="..\..\data\shaders\displace.vert" />
+      </Component>
+      <Component Id="cmpAC0FA9C4CDF41F83B586B35AA58257C2" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{76E0BF2C-05C9-4FA4-BA6D-C3AB11051929}">
+        <File Id="filF65CC8149C7E75DCF71EC78DDE2B5D85" KeyPath="yes" Source="..\..\data\shaders\dof.frag" />
+      </Component>
+      <Component Id="cmp812684FF3C9FA0F85F1683384C271493" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{C20207BA-38F2-4518-85F4-CA9E2D175271}">
+        <File Id="fil17F1E8EE61D82859EA7CE58E652B8F43" KeyPath="yes" Source="..\..\data\shaders\flipparticle.vert" />
+      </Component>
+      <Component Id="cmp591917505C7A66C410CC9085A1578759" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{38A137C7-94A8-494C-A442-40875147DFAD}">
+        <File Id="filE8CAB9601AE6A70077C43FEE296E71A0" KeyPath="yes" Source="..\..\data\shaders\fog.frag" />
+      </Component>
+      <Component Id="cmp035D3377D857EABE4116D2C47DE7D315" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{C7B73039-E88F-4FFA-A2E6-55E7F42A913E}">
+        <File Id="fil13EA3463F5CFE67EE1798C745C93F6EC" KeyPath="yes" Source="..\..\data\shaders\frustrum.vert" />
+      </Component>
+      <Component Id="cmpDDC0E58922B8105F6997EE56C1BAF043" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{428415F8-9139-4D09-88E6-D1A715387096}">
+        <File Id="filB689E1E0210615508A4222C23B9D5782" KeyPath="yes" Source="..\..\data\shaders\gaussian3h.frag" />
+      </Component>
+      <Component Id="cmp1B234BCAF4E20D900333EAA55433CA24" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{8CC061CC-08C3-49A3-A91A-73FE4D18D365}">
+        <File Id="filA0CD85CF048CEA0CE2DB7CFA271FACB9" KeyPath="yes" Source="..\..\data\shaders\gaussian3v.frag" />
+      </Component>
+      <Component Id="cmpF9C5E641D9F1F6A076E94B3AD9873436" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{CFE1BCE1-7521-49FB-856B-F26D8BBEC932}">
+        <File Id="fil3B3E1B5AE6F7238C59F8E1EB1DCDFDDC" KeyPath="yes" Source="..\..\data\shaders\gaussian6h.comp" />
+      </Component>
+      <Component Id="cmp477A8DD15D72CAD6FDB26874AEE5997B" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{1C1773AA-A746-4370-9B78-9647D95EB751}">
+        <File Id="fil559864CEF4D9D56E58B45C5B732C8DB8" KeyPath="yes" Source="..\..\data\shaders\gaussian6h.frag" />
+      </Component>
+      <Component Id="cmp893D47FE520CC5A1DDC3259E0D64442C" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{8959CCF2-6EBF-4B6D-AE17-66EF38876620}">
+        <File Id="fil18DB18B7AED50A509F25ECB53BC78A01" KeyPath="yes" Source="..\..\data\shaders\gaussian6v.comp" />
+      </Component>
+      <Component Id="cmpE8DD32C6889076851E8F5249643F9A46" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{A97D594F-1D05-4702-983A-14A5A0FC0637}">
+        <File Id="fil8613CCD720D9A9E84F7E5D822E2D80F9" KeyPath="yes" Source="..\..\data\shaders\gaussian6v.frag" />
+      </Component>
+      <Component Id="cmp83B2A66A1437150C8CF2D89A7C85EA7B" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{7052BA68-1A13-4386-9600-E87503353D0B}">
+        <File Id="filDC2349359D938436C1B3E384D0756997" KeyPath="yes" Source="..\..\data\shaders\gi.frag" />
+      </Component>
+      <Component Id="cmpC89897BE69DA38679332D7B78B1D4FA5" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{6481D512-152D-487A-AD07-92ED12C013AE}">
+        <File Id="filFC49CFA791536C8AA8905904BB5CB9BD" KeyPath="yes" Source="..\..\data\shaders\glow.frag" />
+      </Component>
+      <Component Id="cmp3DCC46321099723F3290CFEB7D2438CF" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{C5F86805-B8EC-4453-864C-3F7517BF374C}">
+        <File Id="filDE0914EEBBEA5DD0E0068F6D0E431B27" KeyPath="yes" Source="..\..\data\shaders\glow_object.frag" />
+      </Component>
+      <Component Id="cmpE1F33451D4E077E7B565B475A79C6A50" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{413A8925-F3D9-44FC-8304-1FE727F4325C}">
+        <File Id="fil6369F86AFBBB28E7BBDD1BB401F82E9C" KeyPath="yes" Source="..\..\data\shaders\glow_object.vert" />
+      </Component>
+      <Component Id="cmp9BC4CF0808C4B4A47DF0E66D28ACDE61" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{2091FD91-AEC1-42A1-AAA8-DFF240EC3AE0}">
+        <File Id="fil88A98F8FDE718104E353105F9F0E3E27" KeyPath="yes" Source="..\..\data\shaders\godfade.frag" />
+      </Component>
+      <Component Id="cmp2E78A02056071121B94A81E19FF66854" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{69BCE5D5-A4CD-4D9F-8E30-CA3432449E58}">
+        <File Id="filCE05159C4D934E20794AB5188C081F4A" KeyPath="yes" Source="..\..\data\shaders\godray.frag" />
+      </Component>
+      <Component Id="cmp9049EB907AEB26DBC373FD420B4FAB6D" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{3240E1C8-684B-439E-9B42-417E970C1CBD}">
+        <File Id="filF546064EC66089132E0F31C806FD9A35" KeyPath="yes" Source="..\..\data\shaders\grass_pass.vert" />
+      </Component>
+      <Component Id="cmpE9489A4489B3E326F234FD3C598EAA29" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{EF7DEE20-6D11-484F-A3FF-E09A9C9F9F44}">
+        <File Id="fil7E907499985C03468DDEA4DD04687BC5" KeyPath="yes" Source="..\..\data\shaders\grass_pass2.frag" />
+      </Component>
+      <Component Id="cmp1785A8EF2A5137A7F9D197ACD1215BC3" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{509B38B7-6609-46C7-87F6-9F9B5BF6F63E}">
+        <File Id="filD546C368183BFC40685EEBC96649B412" KeyPath="yes" Source="..\..\data\shaders\header.txt" />
+      </Component>
+      <Component Id="cmp4960BB967699BD9D914A5BEA101EB5B1" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{572B615C-1D43-44F1-95DD-07C26B0F2B2D}">
+        <File Id="fil3CF98E5BC72A05850E36B579F01F8755" KeyPath="yes" Source="..\..\data\shaders\IBL.frag" />
+      </Component>
+      <Component Id="cmp2BB9D1E7205527ADA3935802BBD7EBE5" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{D2726AE2-0B8B-4E91-B548-4F987BB18867}">
+        <File Id="filCF44EA9B0D88FF917E0E550C3A6061EB" KeyPath="yes" Source="..\..\data\shaders\importance_sampling_specular.frag" />
+      </Component>
+      <Component Id="cmp4330FFC1EAF2246858AB68731437F606" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{87BF2A33-22AE-4BF6-A471-5D44CA0D7D8D}">
+        <File Id="fil2D4D28E9E44CF60696073A616EC4B103" KeyPath="yes" Source="..\..\data\shaders\instanced_detailledobject_pass2.frag" />
+      </Component>
+      <Component Id="cmp8DC49EE2770C4BDADF5A717F6FB81018" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{9596D422-F05D-468E-939D-FB503017DD94}">
+        <File Id="fil1F70AB6682F53C8A6EC05CB05A0E9173" KeyPath="yes" Source="..\..\data\shaders\instanced_grass.vert" />
+      </Component>
+      <Component Id="cmpF1BC4D1AAAC924DCA92E9346209FCD75" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{37467107-BD7E-4306-8EA0-6AE3700170CB}">
+        <File Id="fil9636C3214A76F362B08BD8E0772C6B0A" KeyPath="yes" Source="..\..\data\shaders\instanced_grass_pass2.frag" />
+      </Component>
+      <Component Id="cmpC89F7CBD3CB187F0FE46E4BDAD7E1DD4" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{1E553A69-7C8F-4A6F-9FA9-12913C91B0B4}">
+        <File Id="fil9DF720D4DAC5102EFDE3A8C25E641CE6" KeyPath="yes" Source="..\..\data\shaders\instanced_normalmap.frag" />
+      </Component>
+      <Component Id="cmp2720567F06F79DA6E51BA0D68E64C23A" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{BD2FBF3A-4DDC-438A-889D-10A1363528BC}">
+        <File Id="fil77DD6187F746A8F35487461CB78AD292" KeyPath="yes" Source="..\..\data\shaders\instanced_objectpass_spheremap.frag" />
+      </Component>
+      <Component Id="cmpC1B13FDACD0AA2C752BCAB2ADC61E726" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{38F04857-E54D-4B29-9E3A-F3E35FDB9F1C}">
+        <File Id="fil23EECC148600CDC4663D1E0C7C846A37" KeyPath="yes" Source="..\..\data\shaders\instanced_objectref_pass1.frag" />
+      </Component>
+      <Component Id="cmpD642358D2A21CB3CDA886B9789CF53BF" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{59174F90-451A-4051-B0FA-09FCC8B09BC7}">
+        <File Id="fil73D5613B1161EDF0D8782D031B577AA3" KeyPath="yes" Source="..\..\data\shaders\instanced_objectref_pass2.frag" />
+      </Component>
+      <Component Id="cmpB6BB6779130A2E0528BBD7F026057AB3" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{0D34B8C5-8208-46F2-8F70-5CDF49099D59}">
+        <File Id="fil0D1F579031FA80452C5ACE8C8A529ADB" KeyPath="yes" Source="..\..\data\shaders\instanced_object_pass.vert" />
+      </Component>
+      <Component Id="cmp2E2C4AB7B5E37FD2E9DA83FDBB0EE9B9" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{62B8096F-E951-4165-A1D4-C0C6E7D11A58}">
+        <File Id="filC68225DACD3B14F5BE6105202ACFF45E" KeyPath="yes" Source="..\..\data\shaders\instanced_object_pass1.frag" />
+      </Component>
+      <Component Id="cmp882670E55EC5768EE827882B96263BC2" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{DD45808A-A8D4-4D6F-86F2-C9DEBB81356F}">
+        <File Id="fil01DE14DAEE8D2908AD640ACC00B3AE10" KeyPath="yes" Source="..\..\data\shaders\instanced_object_pass2.frag" />
+      </Component>
+      <Component Id="cmp5547C5781302440C2E6DAC23E614D8F0" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{421694BC-C053-4D6D-9D78-5BAE72862364}">
+        <File Id="filD92A130285A85B61A657198BCE686065" KeyPath="yes" Source="..\..\data\shaders\instanced_object_unlit.frag" />
+      </Component>
+      <Component Id="cmpE4C204B7539C51DB413AF84A04040592" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{87892861-91D8-4BC6-8D70-BF71BEB26C13}">
+        <File Id="filB9F884DE68378B57BEA18A77E44BA76D" KeyPath="yes" Source="..\..\data\shaders\instanced_rsm.frag" />
+      </Component>
+      <Component Id="cmpCBE96BE5820184826F8C09B17D169ECA" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{352BBBBA-CAC8-4FE3-96CF-E78D35E34F18}">
+        <File Id="filCF606BFF85DB7BED590B1B50501EF2C9" KeyPath="yes" Source="..\..\data\shaders\instanced_rsm.vert" />
+      </Component>
+      <Component Id="cmp3C7084BACE35EFB27B8325941AD81425" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{1CC8C8AF-3E3C-44A4-A184-610A5DCE33FE}">
+        <File Id="filFF1CA226374591E220A7979C2F934A39" KeyPath="yes" Source="..\..\data\shaders\instanced_shadow.geom" />
+      </Component>
+      <Component Id="cmp78B737D00A9B967FD7078FB602CA1768" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{F1979197-71C2-4A97-953B-863A96AEB6EF}">
+        <File Id="filB4EF6FF86D49E01687CB0000FAB6979B" KeyPath="yes" Source="..\..\data\shaders\instanced_shadowref.frag" />
+      </Component>
+      <Component Id="cmpDF40378DC68B0DC43A33934AD7ABE5CC" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{0AA15FBE-3952-4F51-82CC-F0DB28C2A8B0}">
+        <File Id="filA02F62E99C55E7858E3B454E2F873AFD" KeyPath="yes" Source="..\..\data\shaders\instanciedgrassshadow.vert" />
+      </Component>
+      <Component Id="cmp96091D501EBFC71AFC702C99824ACAA7" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{9FBEE728-F01A-4D33-94A9-1F9B4B84DC75}">
+        <File Id="filD12FE307A017C77E13B8572E7E1BD112" KeyPath="yes" Source="..\..\data\shaders\instanciedshadow.vert" />
+      </Component>
+      <Component Id="cmpBD6D5237BE7E8C01CEB942A1A7156E35" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{EC5E8E92-1287-4C94-8F7D-7CCEFBB63FF2}">
+        <File Id="fil32EC002C9E07287D7B7BE633735822D2" KeyPath="yes" Source="..\..\data\shaders\layertexturequad.frag" />
+      </Component>
+      <Component Id="cmpE0657ABDB52169C80D18594D27A23D15" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{CABB21DB-C429-480D-A21B-D2A309F40FC2}">
+        <File Id="fil51F97C088BE044BF9D433E275ED1C429" KeyPath="yes" Source="..\..\data\shaders\lensblend.frag" />
+      </Component>
+      <Component Id="cmpCEFAF4E1E6279BEACB3FEA64061734C6" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{6FFFC9C2-F870-4220-B655-109CA6C87BED}">
+        <File Id="fil7CC616C077282FAFCFC8D9D358DEF8A4" KeyPath="yes" Source="..\..\data\shaders\Lightspaceboundingbox.comp" />
+      </Component>
+      <Component Id="cmpF85FA07955F570C48C59A2BB8428D485" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{69AFCAAD-8A27-4A01-AFE8-6E56EC7FA56D}">
+        <File Id="fil4CA41E283553CD76624802251F7DFE51" KeyPath="yes" Source="..\..\data\shaders\linearizedepth.frag" />
+      </Component>
+      <Component Id="cmpAFDF8AFFB822C3BC2220EC0D21F8E882" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{4A12BCA5-F5A5-4183-91C0-117E9673FC6D}">
+        <File Id="filD51B522418CDC961E5AC0D7C40B054E0" KeyPath="yes" Source="..\..\data\shaders\mlaa_blend2.frag" />
+      </Component>
+      <Component Id="cmp49197736238AD248FD4017BC112E73ED" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{E2E66370-890D-49D9-9E17-DCCD6779BACF}">
+        <File Id="filC8D729F4F14BE6A0BB1347FCDEA1BE54" KeyPath="yes" Source="..\..\data\shaders\mlaa_color1.frag" />
+      </Component>
+      <Component Id="cmp912933AD66C7A984D472EDCC875A804E" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{B728CF65-59BD-4907-B211-205F3F85F4E2}">
+        <File Id="filDEAC5566E212E6E5EE82BDD6CEFEAF52" KeyPath="yes" Source="..\..\data\shaders\MLAA_COPYING" />
+      </Component>
+      <Component Id="cmpCC3618311D4E6DEAD8D720773190763B" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{5665C081-AEB9-41A9-9CE6-A1B6BCBD0725}">
+        <File Id="fil3F6DBFB96D697038A32BD4D6CB7BAE59" KeyPath="yes" Source="..\..\data\shaders\mlaa_neigh3.frag" />
+      </Component>
+      <Component Id="cmp06FF1314628C171A021E94FB26DE122B" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{A2BF4195-E1B4-4316-8849-B7EAA71F69B9}">
+        <File Id="fil840F2D663D5695F515A4A042ED9872E7" KeyPath="yes" Source="..\..\data\shaders\mlaa_offset.vert" />
+      </Component>
+      <Component Id="cmpF34CFF8F4D67627228E681B67AE88DE9" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{0E099FA7-8E3A-4D53-83A9-B218214DC7CF}">
+        <File Id="filE93245495D83ED35B87A823F172372DF" KeyPath="yes" Source="..\..\data\shaders\motion_blur.frag" />
+      </Component>
+      <Component Id="cmpE61CCD12C69B2F63F3CED3A60DED9BF4" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{60B9B447-0BCF-4FD2-ACCF-A7A724EE67BF}">
+        <File Id="filE9DB91268433362B985FCE79E648DC40" KeyPath="yes" Source="..\..\data\shaders\normalmap.frag" />
+      </Component>
+      <Component Id="cmp46F9A052359BECFE8CE46C692B5C7DEC" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{E5D36928-6219-402A-A8BF-3497D4A8AF16}">
+        <File Id="fil6688D3BC9596DAFBDCEF49288EE88C20" KeyPath="yes" Source="..\..\data\shaders\normal_visualizer.geom" />
+      </Component>
+      <Component Id="cmp86156EC9EFEBA1CF370B44CC0E9C0FFD" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{3B1C9F6B-27CB-4C70-8EB2-1275BA557E60}">
+        <File Id="filEDEFD8DFEEA78C6EA319E47CBE6C06B0" KeyPath="yes" Source="..\..\data\shaders\objectpass_spheremap.frag" />
+      </Component>
+      <Component Id="cmp15D08565B94923A4EDF7AB8D5338D2B2" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{6B28441E-A4C1-4E1F-B5A2-014BBD579F94}">
+        <File Id="filEFCFAA8CD0ED76C8150D35CC1216AB21" KeyPath="yes" Source="..\..\data\shaders\objectref_pass1.frag" />
+      </Component>
+      <Component Id="cmpB7ED0E77CFFED84BE642BB24A9430BE9" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{93A472EB-CEFE-4F7F-942B-84E6D0F1C27B}">
+        <File Id="filAAC75C291F2934EA4702D3736AA2B377" KeyPath="yes" Source="..\..\data\shaders\objectref_pass2.frag" />
+      </Component>
+      <Component Id="cmp0E706B64DFAEDB664BF9781629F4EE0F" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{040AD490-4B4D-4B26-A838-6E74C18C7B02}">
+        <File Id="filDE2E6A119F43CCC785CBA2C6DF228F6A" KeyPath="yes" Source="..\..\data\shaders\object_pass.vert" />
+      </Component>
+      <Component Id="cmp47B4F40D298BC2C99768BF2D68C9A9FF" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{048BC1D1-D99F-42F1-A1FC-0794D4826572}">
+        <File Id="fil61C54C91A5B089CD8FE0DE85B2BF9FB7" KeyPath="yes" Source="..\..\data\shaders\object_pass1.frag" />
+      </Component>
+      <Component Id="cmpCEF834D5DD4C278A81CA87802AE7A910" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{D58120E1-4977-48CC-B918-67724F1BC5C5}">
+        <File Id="fil36AEB79FA8BEC35BFA2C8EA1315DEC25" KeyPath="yes" Source="..\..\data\shaders\object_pass2.frag" />
+      </Component>
+      <Component Id="cmp77122EF8FA9754561F33BF4776F46B3A" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{648F8715-0B15-4DDC-85A2-118D934F9C53}">
+        <File Id="fil17715D04FED680049E53FD16B17AC5B1" KeyPath="yes" Source="..\..\data\shaders\object_unlit.frag" />
+      </Component>
+      <Component Id="cmp1D1761F94216831A584F3004DF6F4821" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{77E0406F-7749-4F06-BDFD-906D2F0C8D06}">
+        <File Id="filD2AB01BED8D9A675DE076EB6F595A189" KeyPath="yes" Source="..\..\data\shaders\particle.frag" />
+      </Component>
+      <Component Id="cmp5B84F670015B8A52766D432036E42233" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{F1B8FCE1-C652-4983-8EB2-51A14B8E0053}">
+        <File Id="filB3CC539C75410987581CC351FF7EC3B4" KeyPath="yes" Source="..\..\data\shaders\particle.vert" />
+      </Component>
+      <Component Id="cmpC3C7A371D2034EA9FDAD5858C57121A1" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{6A8E512B-84B2-40B6-A5E9-DEC3863EF737}">
+        <File Id="filD833C057BFCAB22CE5590A465C2027E2" KeyPath="yes" Source="..\..\data\shaders\particlesimheightmap.vert" />
+      </Component>
+      <Component Id="cmp34D939613323D910DBAD855D5BD99E10" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{184951BC-78B1-42B7-A31E-244A3803B41C}">
+        <File Id="fil01BE20E09452AE1EC6C20715DE66E0EA" KeyPath="yes" Source="..\..\data\shaders\pass.frag" />
+      </Component>
+      <Component Id="cmp1F04AFF662ECCBBF7DD6C89C362704B6" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{CC40C21B-E6FD-4B12-ACD5-F47C85DC8047}">
+        <File Id="fil40119C2D1BDCBA4F0A11278033DF3275" KeyPath="yes" Source="..\..\data\shaders\pass.vert" />
+      </Component>
+      <Component Id="cmp19D70EC3E0FEBA98E2662EA1E05AD6D6" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{5F086D23-EB2A-4365-86DC-C5AC2E64D1CE}">
+        <File Id="fil6243CDA8442748DE0768534C9BD1C42A" KeyPath="yes" Source="..\..\data\shaders\pointemitter.vert" />
+      </Component>
+      <Component Id="cmpB4A0F2CF8297B773ECEB3D1C9A16F275" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{1389ACBF-2BFB-4104-A112-7B46BD7F661A}">
+        <File Id="filFB878D5E5CC998D5BCBD5C717F542AE1" KeyPath="yes" Source="..\..\data\shaders\pointlight.frag" />
+      </Component>
+      <Component Id="cmp4662CD1D55330EF28AD7E5DC1BCF2CB2" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{A06D002B-9964-4FF2-BC1A-8D9C3D356504}">
+        <File Id="fil300A5B76413C055D1870C7981A576736" KeyPath="yes" Source="..\..\data\shaders\pointlight.vert" />
+      </Component>
+      <Component Id="cmp8932C8FF217A6382AEA747180BFC0052" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{5DF5DBA2-BE06-4ACF-8A8B-93828E3EC010}">
+        <File Id="fil0C55F0C9A7943F4D73A6407CF2BB228D" KeyPath="yes" Source="..\..\data\shaders\pointlightscatter.frag" />
+      </Component>
+      <Component Id="cmp7C2B2C87C56F2893C54F628302252FAA" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{5A804555-36DE-43E1-9FCC-0C55D23CF9F1}">
+        <File Id="fil7683817DB9A764353F43F395450DFE44" KeyPath="yes" Source="..\..\data\shaders\primitive2dlist.vert" />
+      </Component>
+      <Component Id="cmp6E911C7078749DD77044040EC1FB1393" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{7AB9C31E-C286-43E8-90F7-427847C07564}">
+        <File Id="fil4B9C07F857776DB4D4F91FCA4170C5A6" KeyPath="yes" Source="..\..\data\shaders\rh.frag" />
+      </Component>
+      <Component Id="cmp167E26896656A9B102663515E8914F03" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{A9AE7B58-0E44-46DF-B130-6B56559EB7BF}">
+        <File Id="fil56B70EFF769C4CDD5DD3D4A95FAE62E5" KeyPath="yes" Source="..\..\data\shaders\rhdebug.frag" />
+      </Component>
+      <Component Id="cmpB9A148C16A873B8DD8492BA0A644F915" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{1B28440C-0737-4B31-A8BA-623BFBDE1372}">
+        <File Id="fil5DB8E427EE2998DDCD1FFF49FE2B51E3" KeyPath="yes" Source="..\..\data\shaders\rhdebug.vert" />
+      </Component>
+      <Component Id="cmpFAE4FD84F51B76670F1AD08B41D6A105" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{F5BC7CEF-1396-4FBE-BCAD-68417E98BF33}">
+        <File Id="fil55A3250B0ABD32FDC3B579A182DE8CDA" KeyPath="yes" Source="..\..\data\shaders\rhpassthrough.geom" />
+      </Component>
+      <Component Id="cmp456F7EE9DF15EF60F097FDFC367A370E" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{7ED144D5-3C9F-462E-833F-E59D3F924CF2}">
+        <File Id="fil19B2C9CC9B6962497797196BD2DBB151" KeyPath="yes" Source="..\..\data\shaders\rsm.frag" />
+      </Component>
+      <Component Id="cmp769226B958DC6B2E9F69A85A69FCCA1E" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{A80E50BB-A448-4B21-AE22-1B51FE181B61}">
+        <File Id="fil137DADFF1600D948714785EE2691F4F1" KeyPath="yes" Source="..\..\data\shaders\rsm.vert" />
+      </Component>
+      <Component Id="cmpA484B0DB942314E556C8A2DD373A8944" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{BE849D1B-58D1-4AB3-AC47-922E886D505B}">
+        <File Id="fil5CDCD5E7F4A16254F5AF7D070C22B672" KeyPath="yes" Source="..\..\data\shaders\screenquad.vert" />
+      </Component>
+      <Component Id="cmp32B07FFF70C48B6ADA4EF0AB0891710B" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{36094F47-E094-46E9-A59F-F7ED7F5B118B}">
+        <File Id="fil37AB47E157ABFE42ED24A7A20FC37103" KeyPath="yes" Source="..\..\data\shaders\shadow.frag" />
+      </Component>
+      <Component Id="cmp5CECDC1D9C1EA802D76567A465B0B4DE" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{61C5C52C-361B-4553-B4C8-66D0CC7C7D64}">
+        <File Id="fil2506215EBDF39CDC02E56CAE0D2A4E63" KeyPath="yes" Source="..\..\data\shaders\shadow.geom" />
+      </Component>
+      <Component Id="cmp99058BF8AC110A6B97666C6DDA1FCA3F" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{8F2AB595-2453-4EB0-8716-C35777A5E4FB}">
+        <File Id="filC28A4103C2C76CA0B90690A948EBEE2E" KeyPath="yes" Source="..\..\data\shaders\shadow.vert" />
+      </Component>
+      <Component Id="cmp47333A6F4981BFD220121636F7EDA2FA" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{0EF49412-ADF7-436D-9B79-9115FFC9C922}">
+        <File Id="fil97F76C1C26F4B208923E079EA72645B5" KeyPath="yes" Source="..\..\data\shaders\shadowref.frag" />
+      </Component>
+      <Component Id="cmp201723C61F1147097280097ADC5A8667" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{4C3C30EF-8EB1-4582-89C2-6119463912EB}">
+        <File Id="fil2807B954913E8A6DFD271564D4B74C63" KeyPath="yes" Source="..\..\data\shaders\shadow_grass.vert" />
+      </Component>
+      <Component Id="cmpD924B7648FCF1D3918ADE6A0ADA49AD1" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{D0C72AF2-BC3A-435E-B29B-C13F6F251581}">
+        <File Id="fil07344952882F38B6670EAEA9780A8134" KeyPath="yes" Source="..\..\data\shaders\skinning.vert" />
+      </Component>
+      <Component Id="cmp2C1FA49C92F6932AE2186CC3CDB747E1" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{E9115DAF-B379-4177-BD41-F64F9024C1CC}">
+        <File Id="fil79D62C9BAE95EB4B5F0916430F19005E" KeyPath="yes" Source="..\..\data\shaders\sky.frag" />
+      </Component>
+      <Component Id="cmp1B112F830E20D8883EB95EB521DC2111" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{FE8BC13C-8EFD-4679-9C99-A2180DBEFA89}">
+        <File Id="filA3A9C97492AF51E5C59D11BB6CA7E8B5" KeyPath="yes" Source="..\..\data\shaders\sky.vert" />
+      </Component>
+      <Component Id="cmp6B9D2D1BB49F94C0A2CEA3BF2E9746E3" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{DCAF3CD7-2CCE-4970-8404-94F3E7A6B4B4}">
+        <File Id="filE4DDAB09D0A082B96EC631AE1FFF4F89" KeyPath="yes" Source="..\..\data\shaders\slicedscreenquad.vert" />
+      </Component>
+      <Component Id="cmp62E95DA00BF90DFBF6973C60A3549FE8" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{2EC6A11D-8B1C-4854-97B3-65CFA8C1C4B1}">
+        <File Id="filE423354D03191855951986CC85B0E736" KeyPath="yes" Source="..\..\data\shaders\slicedscreenquad_nvworkaround.vert" />
+      </Component>
+      <Component Id="cmp0089796B13A301874830499F25EAD506" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{D26E5C8B-52FB-45C8-9F9D-29A20ED72219}">
+        <File Id="fil56F3F3CC9CD947CBBBDC1D29C6EBD7F9" KeyPath="yes" Source="..\..\data\shaders\splatting.frag" />
+      </Component>
+      <Component Id="cmpA273A013B41BD5D55C8E3F7DDD85A81E" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{5D1CF4BD-B436-4FC8-89E6-BD15A30AE24B}">
+        <File Id="fil12BAE034FFC97EFA303798A1798AB4B6" KeyPath="yes" Source="..\..\data\shaders\splatting_rsm.frag" />
+      </Component>
+      <Component Id="cmpAEB79B68E2D3B9F76E183B920558F8A5" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{3273A8D8-F6C8-4CA5-BC5A-0254A141EFEE}">
+        <File Id="fil7A05694024F9C1BB71713AEF915FEAEB" KeyPath="yes" Source="..\..\data\shaders\ssao.frag" />
+      </Component>
+      <Component Id="cmp174C049772436FBD7E59C1194506E8BA" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{30E673FE-3296-4D1C-B518-C43D1FCEFEFF}">
+        <File Id="fil5260C485238614274992E715A0049F59" KeyPath="yes" Source="..\..\data\shaders\sunlight.frag" />
+      </Component>
+      <Component Id="cmpB55EBD6598CA87EFAE61555558D02B8A" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{4B6A1C42-C182-4D50-AF24-C349387B9835}">
+        <File Id="fil5BA32D6DE2B8C0A7BB6FCD697F3EEAF8" KeyPath="yes" Source="..\..\data\shaders\sunlightshadow.frag" />
+      </Component>
+      <Component Id="cmpA3D0BDD3D03F9E8EFBEEB805589F689C" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{21976BA4-880D-467A-A2D1-425E351C9161}">
+        <File Id="fil7236374AC72B6D5E8433CA92C6D87248" KeyPath="yes" Source="..\..\data\shaders\sunlightshadowesm.frag" />
+      </Component>
+      <Component Id="cmp152A8AB46561E3ADC19ADACB20D3DE74" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{F9B04A01-8553-4EA8-8154-0D1D9DA279AF}">
+        <File Id="filA9C2491AA50A7BB2F6DADF5CD341230B" KeyPath="yes" Source="..\..\data\shaders\texturedquad.frag" />
+      </Component>
+      <Component Id="cmpAF679C9F780822F72F93F71636E910AE" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{DA140FE8-E3B0-46D9-8905-022CB64187EF}">
+        <File Id="fil24BDB7C86170DF95BBCB70FD2DA010FD" KeyPath="yes" Source="..\..\data\shaders\texturedquad.vert" />
+      </Component>
+      <Component Id="cmpA4698EF47907230E1B1E69B03AA05E5D" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{5F2B5A20-B7DB-4039-AD3E-623CDA051D94}">
+        <File Id="filF62DC3F1B288F711362D9E00AC72844B" KeyPath="yes" Source="..\..\data\shaders\tonemap.frag" />
+      </Component>
+      <Component Id="cmpAB6188BD6027E7EBBDF8B8A771326CD8" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{5962A35E-8025-4CC5-B540-F7071487AD96}">
+        <File Id="filA555610B1B355E04735D42C732FBCFCB" KeyPath="yes" Source="..\..\data\shaders\transparent.frag" />
+      </Component>
+      <Component Id="cmp69F57A1C21103AE21B787CED2B5B599C" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{E54AE3BB-D192-4F22-8325-F6B45E97BEE4}">
+        <File Id="filA874731A74B7E36DA1387876DF361198" KeyPath="yes" Source="..\..\data\shaders\transparentfog.frag" />
+      </Component>
+      <Component Id="cmp930FA7CEB22C71E2E04CC484395D9D80" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{C310F3AC-FC10-4A2D-B138-20CFD810DBF0}">
+        <File Id="filD78E5AB8DD4A8FAE378CD9C31B9EC3A1" KeyPath="yes" Source="..\..\data\shaders\uniformcolortexturedquad.frag" />
+      </Component>
+      <Component Id="cmpEEC531F91977C9C0D8BF957709ACC8F7" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{F015DB9C-9009-4D56-8357-E1B87748EA24}">
+        <File Id="filF4CE86086626D64845013902130A00C1" KeyPath="yes" Source="..\..\data\shaders\untextured_object.frag" />
+      </Component>
+      <Component Id="cmpB26AC7E3E8857EF444C29955D97D97B7" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{237AA266-269D-4D7A-AE7E-986534E3CE16}">
+        <File Id="fil84E5ED7992CC95AF33856C55B6376D57" KeyPath="yes" Source="..\..\data\shaders\volumetriclight.frag" />
+      </Component>
+      <Component Id="cmpF898046EA5D3D53A0C6F5C66AD3CA9F8" Directory="dir93A6E808D866819D4779B5926EAAB4DB" Guid="{2AD42D9C-A4EB-4204-B9CA-0E4B090CA8FD}">
+        <File Id="filD4BAE64B06A11968315147457FB60345" KeyPath="yes" Source="..\..\data\shaders\white.frag" />
+      </Component>
+      <Component Id="cmp4FA4F4CC121F8008C7119F592DF6AAD0" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{941D3D00-51A2-4FFE-A189-CCBD11AAC3D2}">
+        <File Id="fil39EC95B55BD80E0ACE87E2DE8F09662E" KeyPath="yes" Source="..\..\data\shaders\utils\decodeNormal.frag" />
+      </Component>
+      <Component Id="cmp449DA79BDA2187272FCF3C634194373A" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{6A2DFF3F-C3C0-48F0-A9DD-37B3E0739988}">
+        <File Id="fil4AE064C37DEC9344A92111FE10290C03" KeyPath="yes" Source="..\..\data\shaders\utils\DiffuseBRDF.frag" />
+      </Component>
+      <Component Id="cmpEC26778AD8E3C9292DF63AF9588B3965" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{22FE6EDF-5B5F-46D4-AF19-DBC1AAF6F371}">
+        <File Id="fil8819C6F83EC8FF8A6F6ABB7E5021F91A" KeyPath="yes" Source="..\..\data\shaders\utils\DiffuseIBL.frag" />
+      </Component>
+      <Component Id="cmpDD441FD01EB17833EF73738B9ABBCB81" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{0AF83F01-D6AF-496B-915C-6BA00A91D65D}">
+        <File Id="fil2E17C54E9C5AB556EBC3E6B7C36B7790" KeyPath="yes" Source="..\..\data\shaders\utils\encode_normal.frag" />
+      </Component>
+      <Component Id="cmp3E616D5C8E6C97423485E0CF1F7BDCD1" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{B026C289-A1DF-4C57-8B6F-A35957094B17}">
+        <File Id="fil754814AAD98913E0FDA12A2B30AD1864" KeyPath="yes" Source="..\..\data\shaders\utils\getCIEXYZ.frag" />
+      </Component>
+      <Component Id="cmp8C02C0F713E29B9C0CCABACAA6F691A0" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{868FB9DB-DA58-48C1-9E4C-059A8183CC71}">
+        <File Id="filE91F8E545C6007A7AA6B06837FBC89D9" KeyPath="yes" Source="..\..\data\shaders\utils\getLightFactor.frag" />
+      </Component>
+      <Component Id="cmpA5F386B0E277F60DA8EDE53C0B868521" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{015E6E76-27B1-4725-B5BA-ABDB476DE281}">
+        <File Id="filFF8E3D68635BC19E7142B94D34287AEE" KeyPath="yes" Source="..\..\data\shaders\utils\getPosFromUVDepth.frag" />
+      </Component>
+      <Component Id="cmp0B5170B2B499469E2C8631D56C51C120" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{2E69D0B7-2B26-45E0-90CE-AD8856F6640E}">
+        <File Id="fil7B1B21BCDDEE0FDFE760EE7BC2BE31CD" KeyPath="yes" Source="..\..\data\shaders\utils\getRGBfromCIEXxy.frag" />
+      </Component>
+      <Component Id="cmpA59EB1967BF39ED8D9D44A8131B0D8A7" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{997CD52B-7B05-4AC2-9F38-5F880EAD6BDB}">
+        <File Id="fil2404841CC85D08D88A55315D205342CB" KeyPath="yes" Source="..\..\data\shaders\utils\getworldmatrix.vert" />
+      </Component>
+      <Component Id="cmp5FAC2260144EF3BB12B880063B17858D" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{DAC02241-E49C-4070-A42F-4F249325E966}">
+        <File Id="filE5C6ED55614E490FFDA1336E123F8F89" KeyPath="yes" Source="..\..\data\shaders\utils\SpecularBRDF.frag" />
+      </Component>
+      <Component Id="cmp3D43F808BC15B33A010D2DF3ED2D7176" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{2585F96C-3D38-4982-A159-DF3055CC2428}">
+        <File Id="fil5A770A7CCA97638DA748BB9AB0193689" KeyPath="yes" Source="..\..\data\shaders\utils\SpecularIBL.frag" />
+      </Component>
+      <Component Id="cmpF11138438AEC44CD4498256F8CCB66CE" Directory="dir0A95B02AF70B92783527B018A5151C22" Guid="{5269F0B1-2185-447B-8945-07E2AE55C8AC}">
+        <File Id="fil05ED523B848E20E2846DAEE2A18B7B30" KeyPath="yes" Source="..\..\data\shaders\utils\SunMRP.frag" />
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+</Wix>

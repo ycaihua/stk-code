@@ -21,7 +21,23 @@
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="challenges.wxs" />
+    <Compile Include="fonts.wxs" />
+    <Compile Include="gfx.wxs" />
+    <Compile Include="grandprix.wxs" />
+    <Compile Include="gui.wxs" />
+    <Compile Include="karts.wxs" />
+    <Compile Include="library.wxs" />
+    <Compile Include="misc.wxs" />
+    <Compile Include="models.wxs" />
+    <Compile Include="music.wxs" />
+    <Compile Include="po.wxs" />
     <Compile Include="Product.wxs" />
+    <Compile Include="sfx.wxs" />
+    <Compile Include="shaders.wxs" />
+    <Compile Include="skins.wxs" />
+    <Compile Include="textures.wxs" />
+    <Compile Include="tracks.wxs" />
   </ItemGroup>
   <ItemGroup>
     <WixExtension Include="WixUIExtension">

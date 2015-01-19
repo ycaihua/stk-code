@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="po">
+      <Component Id="cmpDB381988BD716BCDE956E419B409AA31" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{67A5CE82-9689-42D3-A994-23C3AE0B48CE}">
+        <File Id="fil437F007DD5AC7AE5615C0CA84BD583F3" KeyPath="yes" Source="..\..\data\po\ar.po" />
+      </Component>
+      <Component Id="cmpB48F1FB6CD44E9F97BFE1B564580B414" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{E8610C0E-3123-4890-8A72-56A6D5283357}">
+        <File Id="fil54B955261285EE14FC8F28583CFF337F" KeyPath="yes" Source="..\..\data\po\bg.po" />
+      </Component>
+      <Component Id="cmpC7071EC71492E558EEABE136D016E4A9" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{93E09AB2-939F-4B90-A0E2-4E4ED3C4BA16}">
+        <File Id="filBB1B2E78B19A9F930A616472562DC75F" KeyPath="yes" Source="..\..\data\po\bn.po" />
+      </Component>
+      <Component Id="cmp33FC34DCDA692519EE7B9A310DEDBC3B" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{C1CE0242-7F7B-4D90-B375-FD11C5411BD6}">
+        <File Id="fil3EC3DA179745B3CCA9F97899CE78CF6A" KeyPath="yes" Source="..\..\data\po\br.po" />
+      </Component>
+      <Component Id="cmp2907D93FD61D4155A57F05D602537CF2" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{5D665833-FE1C-4FCE-A867-010FB0B0B6A1}">
+        <File Id="fil331FC82088E14BB8CB8F5E3B9B44C20B" KeyPath="yes" Source="..\..\data\po\ca.po" />
+      </Component>
+      <Component Id="cmp2D80D8DA5DF2F3E30549F34A6747FD31" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{DCC3BF15-5F0E-49F2-A507-D9D1AC64EB25}">
+        <File Id="fil88C844EC3EC26951A73F93498408B170" KeyPath="yes" Source="..\..\data\po\cs.po" />
+      </Component>
+      <Component Id="cmpEE122DFFDB0E3446E01D55E958A9FD93" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{0C466E9D-0E7B-42A1-B606-249444D3ABFC}">
+        <File Id="fil21370E9F1F7D9E190D788EDDAAB5B7C3" KeyPath="yes" Source="..\..\data\po\de.po" />
+      </Component>
+      <Component Id="cmp09F2D0464038FCAD43EF20D573994BF7" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{03C67D63-B444-4837-8A12-7985E81E2057}">
+        <File Id="fil8EA9FFA7C46DFB71E100EB26FEE3E495" KeyPath="yes" Source="..\..\data\po\el.po" />
+      </Component>
+      <Component Id="cmpDD1C0A48E5AB1E82BB869BCA631D74E0" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{ADA89746-3A9B-470B-AF63-7AE4F37E067F}">
+        <File Id="filE4A8EEB6E141E5041B4B6A3A0E341218" KeyPath="yes" Source="..\..\data\po\en_AU.po" />
+      </Component>
+      <Component Id="cmpD667276B7653A73FC3AAD3B6075E23F7" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{0904E64B-4362-432D-9FC8-8FB7901146CA}">
+        <File Id="filEDEA07D3BA96CC49CF2D075F77D7AE74" KeyPath="yes" Source="..\..\data\po\en_GB.po" />
+      </Component>
+      <Component Id="cmp1419F779CBB4E4FEC495527AF4880383" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{8CA2A408-F1AC-40A4-A95A-059C3E407FA5}">
+        <File Id="fil43967A7EFF4DE6784F6FB2FF7C62AE99" KeyPath="yes" Source="..\..\data\po\es.po" />
+      </Component>
+      <Component Id="cmpCD4FFC8071FD4B501639FADAE83A2383" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{4A767ABE-9FCF-4655-992B-D85A76F14635}">
+        <File Id="fil1272F49F5F5A4A8E444CE312DC3D04A0" KeyPath="yes" Source="..\..\data\po\eu.po" />
+      </Component>
+      <Component Id="cmpB86F11F13F1E208D8B9A7393BE2287CA" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{F5D0DD73-1632-4849-87DF-77AEF3050F61}">
+        <File Id="fil61F96537A9BC152D564D0C814CFD4D7A" KeyPath="yes" Source="..\..\data\po\extract_strings_from_XML.py" />
+      </Component>
+      <Component Id="cmp7F88D19B96B622326D5B5465B73131A6" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{CEB89FBE-D9A2-481A-B081-AB61BB804AD6}">
+        <File Id="filF6DA00AFCE66C3ADD8430D1ECB553B39" KeyPath="yes" Source="..\..\data\po\fi.po" />
+      </Component>
+      <Component Id="cmp7C8262B912C4C569822458F368E099A2" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{2157EF2A-4390-451F-B7A9-DC9F15D0353C}">
+        <File Id="filB1A11D99E19D31673C82EE5E7E81E515" KeyPath="yes" Source="..\..\data\po\fr.po" />
+      </Component>
+      <Component Id="cmp49AAFC901632DBD41B46D2582F62FDDB" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{CD628C29-2B2B-41C9-8C16-973CAAF11BA6}">
+        <File Id="fil36E3129D9FAF55C5AAB2EAF52208DF5C" KeyPath="yes" Source="..\..\data\po\fr_CA.po" />
+      </Component>
+      <Component Id="cmpC36CBB0C09F66326ED635C443BD9FBEE" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{95928628-45C9-4AEC-BB17-A03627BC3982}">
+        <File Id="filD9F528CE8D601B5E834B2891C034ECC8" KeyPath="yes" Source="..\..\data\po\ga.po" />
+      </Component>
+      <Component Id="cmpA0002019172941D766BE5B36194C75C9" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{92CA863E-C0CA-4462-ADC4-57F7FD287DE0}">
+        <File Id="filCBDB60391EBBE181B11C94F91771D071" KeyPath="yes" Source="..\..\data\po\gd.po" />
+      </Component>
+      <Component Id="cmp6296CEE603681EC0CBAFD1F586205B22" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{D4505D64-177A-4413-8F82-DD6682E0DCA8}">
+        <File Id="fil294A33E97DBA14BDD75B7183DC37DF5B" KeyPath="yes" Source="..\..\data\po\gl.po" />
+      </Component>
+      <Component Id="cmpDF398F01327934601DEAD0282B577035" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{999B9283-9F98-4F9F-AD9F-8EF18A785C68}">
+        <File Id="filCAE7184681B0903D62D4911881C4C39E" KeyPath="yes" Source="..\..\data\po\he.po" />
+      </Component>
+      <Component Id="cmpEB25F2552EDB3BFBCF6E0B2DD41C8DE9" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{00BC41A4-FD00-451E-9660-CE6F38E46754}">
+        <File Id="fil75153EF956852DF53A0EC2BAFCEE933C" KeyPath="yes" Source="..\..\data\po\hr.po" />
+      </Component>
+      <Component Id="cmp730B9D50CF8D81C25785858FB7964F1A" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{E3674080-E0E5-475F-8D13-C9852CC8EF2D}">
+        <File Id="fil5BCF3D38F134F43B47FC12A552F2FED3" KeyPath="yes" Source="..\..\data\po\hu.po" />
+      </Component>
+      <Component Id="cmp271F09799487AE30953E861AE2A4DFDB" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{08361E9F-4D1E-45CD-A4C8-76C41DD1C21E}">
+        <File Id="filAE4DB4D435BB2B3E83BA89845328C475" KeyPath="yes" Source="..\..\data\po\id.po" />
+      </Component>
+      <Component Id="cmpD07691AFBF291382BC36CB4718A96BD5" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{6CC81BDD-A8D0-4313-A869-A01FBCF9E857}">
+        <File Id="filAB87357A3CC9717AF40BF48E087D3D9E" KeyPath="yes" Source="..\..\data\po\it.po" />
+      </Component>
+      <Component Id="cmpCE9C0FEA8B892F9F584216B8AF1BF9D9" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{2EACD10A-0727-4B88-A5B3-911AD7DA2544}">
+        <File Id="fil2B5693445114E85F5318D156E2B2AE8C" KeyPath="yes" Source="..\..\data\po\ja.po" />
+      </Component>
+      <Component Id="cmp4C430516DB668F3819CEB8B1F40F3797" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{037A63E4-AB24-4E6A-909D-53A4BDB0C09E}">
+        <File Id="fil57A4701A700019392218D036FADEF29F" KeyPath="yes" Source="..\..\data\po\ky.po" />
+      </Component>
+      <Component Id="cmpDC62F304DE0B3BF4B6255228A15BC299" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{9B19737E-CA37-4E27-849F-6AD9B7BF3918}">
+        <File Id="filED75E6B2A452B40C0815470060269461" KeyPath="yes" Source="..\..\data\po\lt.po" />
+      </Component>
+      <Component Id="cmp507BDF1B6B1AE276C0C1F96D30EFC2AF" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{9D1F18FE-F597-4299-A90F-A59DB0413792}">
+        <File Id="fil5AC7BA84EF11FFCD2B519E60FC6384AE" KeyPath="yes" Source="..\..\data\po\nb.po" />
+      </Component>
+      <Component Id="cmp69093B97A915B5C54CBCB161CD60EA6B" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{C596063B-AB92-41ED-973B-74C91D1AFF70}">
+        <File Id="fil380D3F5EB8947E26B544E9D3B4F96E7A" KeyPath="yes" Source="..\..\data\po\nl.po" />
+      </Component>
+      <Component Id="cmp3A3E59CE6F13C57F83A17ECC94CFE9B4" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{02A21316-BC92-4D4D-B9D7-C2A00CAB6CCF}">
+        <File Id="filDB610315FBC7A7F0F5DC3A22C1B749FB" KeyPath="yes" Source="..\..\data\po\nn.po" />
+      </Component>
+      <Component Id="cmp6A9F92B97242C9A3F3410300DD801EE0" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{06AE08DC-629C-4662-ACAB-3154263E0465}">
+        <File Id="fil86163D917699F67D51A2CAC379CE12B7" KeyPath="yes" Source="..\..\data\po\pl.po" />
+      </Component>
+      <Component Id="cmp4B54D0072ACC1B6CB2298E157CFBAD0F" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{5B47C4C3-DDD9-4275-8ED2-ABC8E8DFC72A}">
+        <File Id="fil55771159F28998EF49905377901C3DA5" KeyPath="yes" Source="..\..\data\po\pt.po" />
+      </Component>
+      <Component Id="cmpAC6360D301C730647A4D01BD5F0D21E2" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{FB642FB4-3A88-4EEB-A103-4A8896111324}">
+        <File Id="filC4C42075C12FCFC072DF366FC95DF457" KeyPath="yes" Source="..\..\data\po\pt_BR.po" />
+      </Component>
+      <Component Id="cmp8F83D1F0C1940422FE48066D91B5509C" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{586A2898-F8B9-418F-90F0-B42216A64C2D}">
+        <File Id="fil7087BDA596123851EC4373BD59956D72" KeyPath="yes" Source="..\..\data\po\ru.po" />
+      </Component>
+      <Component Id="cmp8CF37535C6DF9E602812F765CE8253E7" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{B2018F81-4D39-4FDC-AA67-69002F0B4BF0}">
+        <File Id="filB4BC93F94D01FEB3ACD475770502D8C9" KeyPath="yes" Source="..\..\data\po\sk.po" />
+      </Component>
+      <Component Id="cmp6F0CB16E4462985BBFDD918BFA4EFA06" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{EB92D6BD-03D5-4169-826C-EC2494BF9737}">
+        <File Id="fil4354B2411C2263836EBC14C30C8C6529" KeyPath="yes" Source="..\..\data\po\sl.po" />
+      </Component>
+      <Component Id="cmp98E9CA2C85A1B319B031B245E73C9DEB" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{0AD24D31-9223-4B15-856B-A27B0745261E}">
+        <File Id="fil6DE0D7457BF5E4B0868AD03CE04001B4" KeyPath="yes" Source="..\..\data\po\sr.po" />
+      </Component>
+      <Component Id="cmp3B4973B13DC8EFD1DFE403AF6849E3DB" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{D09DE939-E980-4F38-B8F2-6602CD3265B2}">
+        <File Id="filA26FAF02C7B38583D6A3A87DA122F007" KeyPath="yes" Source="..\..\data\po\supertuxkart.pot" />
+      </Component>
+      <Component Id="cmp3DC78D37411ED5351B179B44E31CA59C" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{F6848BD2-4603-4633-ADD5-590EE45E525C}">
+        <File Id="fil3B215C7036CEB6C3C72B06456A390FCC" KeyPath="yes" Source="..\..\data\po\sv.po" />
+      </Component>
+      <Component Id="cmpC12BCCB5307A4AA6A04A5804C22F6D4D" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{B7735569-54DD-4CB3-AAA5-491ED3DEB814}">
+        <File Id="fil2DB54D9563765947E646739C596CB1B8" KeyPath="yes" Source="..\..\data\po\tr.po" />
+      </Component>
+      <Component Id="cmp99BBE90BF426B4BB5967AD1EE4A4C3B6" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{483CBA4E-EE97-4B47-A79A-991D68B781BF}">
+        <File Id="fil5966264384B2A62FC0D8410BFC4A6393" KeyPath="yes" Source="..\..\data\po\uk.po" />
+      </Component>
+      <Component Id="cmp8E22B44F776B80A2A8D87425AEA16D61" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{52A692FE-6D7C-4A22-9FF1-122FD284E9AA}">
+        <File Id="fil2A8963C9574ADC5BAB8BCCFFAE51667A" KeyPath="yes" Source="..\..\data\po\vi.po" />
+      </Component>
+      <Component Id="cmpEFE82B344C71FC0038D448C768007CD1" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{01DEF2B5-BB92-458C-A34A-DDACACEAE859}">
+        <File Id="filBB022BA0369E87A8B8A4BAAB7B99D4FA" KeyPath="yes" Source="..\..\data\po\zh_CN.po" />
+      </Component>
+      <Component Id="cmp694D14F70522827B158618D6B63DFAF0" Directory="dir5FBD8F20FC5AE303B8881BF77992D3B0" Guid="{0D51F54B-BB13-4134-A2CD-C70EC2B22223}">
+        <File Id="fil5B9A1AF8D5F8F9D6EC3CA3194C6721D8" KeyPath="yes" Source="..\..\data\po\zh_TW.po" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

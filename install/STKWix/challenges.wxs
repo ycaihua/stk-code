@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="challenges">
+      <Component Id="cmp261AB3BD12AF9A70207BFCC96E34F830" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{4378EE28-2350-4B16-9073-CF6CF60F7D50}">
+        <File Id="filFC0ED54AE3083396741D985D1DBCDCAD" KeyPath="yes" Source="..\..\data\challenges\city.challenge" />
+      </Component>
+      <Component Id="cmp5E81AA574B9557347724248A37E48F4A" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{71AA8CE2-2E6E-404D-9DB0-383DA3797BC4}">
+        <File Id="fil888C457A247740FB108743A5F534792A" KeyPath="yes" Source="..\..\data\challenges\farm.challenge" />
+      </Component>
+      <Component Id="cmpAD8DD5EF1676D607548D85AFFD350035" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{FD61D5C7-7895-4695-86C3-7D96D746C0C6}">
+        <File Id="fil40E65DA10CAAD20044C2D54BA22775CA" KeyPath="yes" Source="..\..\data\challenges\fortmagma.challenge" />
+      </Component>
+      <Component Id="cmp339694F376A25873982AAEDD0D1B7E20" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{FBD21C23-B76B-4FCC-BDFF-BAE3A77011DC}">
+        <File Id="fil75B32EC36B759B2D037D1BA846F35C48" KeyPath="yes" Source="..\..\data\challenges\gp1.challenge" />
+      </Component>
+      <Component Id="cmp6E045004C0A83FE60C7B7A3BE560AD77" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{5A9EB47C-AB84-422A-9365-06A468DEB0BA}">
+        <File Id="fil88E4B34951F65463BA26165B3E1C14DD" KeyPath="yes" Source="..\..\data\challenges\gp2.challenge" />
+      </Component>
+      <Component Id="cmp41AE67BD302440EA4D113F2666060030" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{9EED1CFF-A10D-47BF-8221-6266F7601B5E}">
+        <File Id="filB55540E8489621346986E89D9E6A34BC" KeyPath="yes" Source="..\..\data\challenges\gp3.challenge" />
+      </Component>
+      <Component Id="cmp8F34022924C664EB63BF7264D68C1C01" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{31E4A894-CDE8-4739-B751-5CCE0D24B57F}">
+        <File Id="fil3B64E0B1783F59F699B6185883A2FD5F" KeyPath="yes" Source="..\..\data\challenges\gp4.challenge" />
+      </Component>
+      <Component Id="cmp1AD51319E909C4CF1FD41F3B12631820" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{F8CC4094-4671-49A5-BDD5-C375D97D108F}">
+        <File Id="filB4481933D5E5F7D1BB41EFAEC8406A53" KeyPath="yes" Source="..\..\data\challenges\hacienda.challenge" />
+      </Component>
+      <Component Id="cmp3DFCEA4E51F5F3655F55A46DC4F85413" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{CC50E592-5A82-446D-911B-188C2ADA1981}">
+        <File Id="fil8D411D5826E5DB1229A8730FF225EB15" KeyPath="yes" Source="..\..\data\challenges\islandtrack.challenge" />
+      </Component>
+      <Component Id="cmpA3CCA2F5A387E4E9A0A9AF3F4394B9EE" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{1B9417C8-8AE5-4785-AAA7-00A7F0D335CD}">
+        <File Id="fil6F834CA82328DAB3BAD4972D6E208F65" KeyPath="yes" Source="..\..\data\challenges\jungle.challenge" />
+      </Component>
+      <Component Id="cmpD8BE3C2F7F536B3CBBEF1FB878FDB306" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{C9F25F4D-682D-4D0B-B0DF-D9D788B54784}">
+        <File Id="fil8B561DC2B027067FB29ED7CFFB28EDB3" KeyPath="yes" Source="..\..\data\challenges\lighthouse.challenge" />
+      </Component>
+      <Component Id="cmpF50CA073B2D0754F2988160B099C8A3A" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{EEF03CC7-936A-443C-9AF1-9C3BDC760557}">
+        <File Id="filF60A2AD307E6551CF691A35FAD16AAC3" KeyPath="yes" Source="..\..\data\challenges\mansion.challenge" />
+      </Component>
+      <Component Id="cmpC9E204CDD4D49F2B916D40CDBD7FBEC2" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{8A5A6952-276A-4BD4-B07D-15BFEE316F17}">
+        <File Id="fil1375312B472656425A0C6BC290C02012" KeyPath="yes" Source="..\..\data\challenges\mines.challenge" />
+      </Component>
+      <Component Id="cmp78503B2C4C67347C703FD3B7ABF213E3" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{63AF888C-C7D3-4DCE-81FC-7B62C0C20B2D}">
+        <File Id="filC171990A67A051B4A3F6600FB2946EF1" KeyPath="yes" Source="..\..\data\challenges\minigolf.challenge" />
+      </Component>
+      <Component Id="cmp49E52C8F35596954CE9DEA679E94A1B8" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{AF054902-6AC8-4EAA-973A-57F59EA0D4E9}">
+        <File Id="fil0F70512052FD96A62D0D2CDFB0DEB8AE" KeyPath="yes" Source="..\..\data\challenges\olivermath.challenge" />
+      </Component>
+      <Component Id="cmpBE259F3391EEB317F7AE54569E6DEFFA" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{C83D4D84-B9B3-4198-9EA7-C3251CB44D18}">
+        <File Id="filD9960163F4F9261CDF21DD6054566F0D" KeyPath="yes" Source="..\..\data\challenges\sandtrack.challenge" />
+      </Component>
+      <Component Id="cmpA03DAF02BF745C93470368C04C536517" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{0414B853-8D06-43B4-9BED-8ACAD7847A89}">
+        <File Id="fil7038E13C67CBF4273D9E869C4FD80305" KeyPath="yes" Source="..\..\data\challenges\scotland.challenge" />
+      </Component>
+      <Component Id="cmpF2194ED700C78ED2B319B8AF62853A67" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{32362E80-D798-4514-BE5E-06A92E5127EE}">
+        <File Id="fil39B8C888A56B82A10B5EFF8698BAE936" KeyPath="yes" Source="..\..\data\challenges\snowmountain.challenge" />
+      </Component>
+      <Component Id="cmp6FA379CABA52926E3D4129E4F2DDFE7F" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{97834AB9-186E-4722-A4DA-B71BC2D52F6A}">
+        <File Id="fil37D480AFEFF0A8BB26F67EA3A57D647A" KeyPath="yes" Source="..\..\data\challenges\snowpeak.challenge" />
+      </Component>
+      <Component Id="cmp5313A7490B9D5DA28E9A681045A1628D" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{582D2C0C-81E6-4764-B704-7AEE5C143A6A}">
+        <File Id="fil44694A0D3EF7CED811E598E5A35E737C" KeyPath="yes" Source="..\..\data\challenges\startrack.challenge" />
+      </Component>
+      <Component Id="cmp8D585945A36B1BBEFC78C6C0EDDABAC2" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{5B588018-4136-42E9-9C3B-D7850B44EB70}">
+        <File Id="fil8EEBFFE66F12A58171198F54B6668B14" KeyPath="yes" Source="..\..\data\challenges\subsea.challenge" />
+      </Component>
+      <Component Id="cmpC55C69D53903B1009458A94073ED505C" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{085B05FC-64CA-4616-96BC-E97D50D2C757}">
+        <File Id="fil4C31121998005F3FBEDD8365B67839DD" KeyPath="yes" Source="..\..\data\challenges\tuxtollway.challenge" />
+      </Component>
+      <Component Id="cmp39594B8B2B709BF334484A2D458E3963" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{9040307C-82B9-483F-94A7-9EF8BEA5147A}">
+        <File Id="fil3E71D2DF2ED295F5E65FED9F28B4EBB3" KeyPath="yes" Source="..\..\data\challenges\xr591.challenge" />
+      </Component>
+      <Component Id="cmp7368497EC681DC38E432430939F4749F" Directory="dirFD546B30B1C30257A7A80815D4A5EA3E" Guid="{D727F947-1259-46D3-B869-A56F275E8C84}">
+        <File Id="fil1BEFB5284F3A6DB108B4390707BA3CF8" KeyPath="yes" Source="..\..\data\challenges\zengarden.challenge" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

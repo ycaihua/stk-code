@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="misc">
+      <Component Id="cmp26BA3180DDD4A4B05F2D597422EB7145" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{89BFB644-CE57-4D29-B508-52D85B52D8D0}">
+        <File Id="filF48612B63EF4C346FE1439B081FCBBB4" KeyPath="yes" Source="..\..\data\achievements.xml" />
+      </Component>
+      <Component Id="cmpD6FBE299D033FC6279ECBA59BE08868A" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{E0FD160B-A778-43BB-B2E5-BF527B4A92C1}">
+        <File Id="filB0D74C96A262A7AA311C263DD44FA176" KeyPath="yes" Source="..\..\data\addons.supertuxkart.net.pem" />
+      </Component>
+      <Component Id="cmp16D503A51867914FAE28DB5F1C1289C5" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{21D5E2B2-7072-4FA7-9CE5-C799B942A077}">
+        <File Id="fil631E06F9157B44422F138C836028F40D" KeyPath="yes" Source="..\..\data\CREDITS" />
+      </Component>
+      <Component Id="cmp5DCF151DDF330970C43109FDFAFBC94B" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{65B974BC-EC8F-4566-B1C3-094250744552}">
+        <File Id="filDE785FC6BE3DAF622E03747E06F87728" KeyPath="yes" Source="..\..\data\graphical_restrictions.xml" />
+      </Component>
+      <Component Id="cmp82D7384B1295294D2CE8913FC52EC948" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{CC4832B4-3F5D-4D86-B771-4597A702ACC6}">
+        <File Id="fil432DD713A1AA7FC33ACB70E7CEB1C58F" KeyPath="yes" Source="..\..\data\items.xml" />
+      </Component>
+      <Component Id="cmp09A8CAE112B78F7D8E26213147877321" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{B078CDDB-7006-4C4B-8FD5-2E3A18A9C98B}">
+        <File Id="fil54DD93AAC1AF3564AA9F902A2A504F6D" KeyPath="yes" Source="..\..\data\powerup.xml" />
+      </Component>
+      <Component Id="cmpEC3037AA0625E783F4E5310720BC831D" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{2B712DC4-2959-444D-9A4E-676D9BCB4299}">
+        <File Id="fil96E549EC253EA492D864D1E64674948C" KeyPath="yes" Source="..\..\data\stk_config.xml" />
+      </Component>
+      <Component Id="cmpF3190CD563DDC798BDCF714574F7723D" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{80801313-C392-40DE-B6CC-8ABDD01F8006}">
+        <File Id="fil1585C33A6BC8657CD9A0C4D32F72CCA4" KeyPath="yes" Source="..\..\data\SuperTuxKart-Info.plist" />
+      </Component>
+      <Component Id="cmp3896ED0C6836264A56D30574552850A8" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{074BE199-6C55-425E-9914-AD30B3FDC333}">
+        <File Id="filD7E7C38079437460329CF6D063265D0C" KeyPath="yes" Source="..\..\data\supertuxkart.appdata.xml" />
+      </Component>
+      <Component Id="cmp9802FAD61959659DC8725924F454717F" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{E089FE94-1ABD-407B-9F57-A264D72F7CB6}">
+        <File Id="filB669B3F5F1EE58A0E760768F53CC099D" KeyPath="yes" Source="..\..\data\supertuxkart.desktop" />
+      </Component>
+      <Component Id="cmpCAF78693B0F3C241592D67636DAF3A0F" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{CC0A92C0-6CBA-4F10-9604-5F663DF23856}">
+        <File Id="fil547C30BFC3EBFFFA670CD1ADED037333" KeyPath="yes" Source="..\..\data\supertuxkart.icns" />
+      </Component>
+      <Component Id="cmp2D240C9B9C76A70781F33802317AAF3D" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{18EBCACE-BAB6-430F-BA9B-2B57D59B8B91}">
+        <File Id="fil4C82F211343C7B43101330BF64FDB7B7" KeyPath="yes" Source="..\..\data\supertuxkart_128.png" />
+      </Component>
+      <Component Id="cmp4B81EEBCC9DB00AEA4A7467FD96C1618" Directory="dirC202475C84215EEEECB6F7F457B64EC0" Guid="{1048D26E-9849-4B9C-B7D8-09C8A29CFFFF}">
+        <File Id="fil051C084A3D565F1D3320EFF46DDD0C50" KeyPath="yes" Source="..\..\data\supertuxkart_32.png" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

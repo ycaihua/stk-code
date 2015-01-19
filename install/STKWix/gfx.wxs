@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="gfx">
+      <Component Id="cmp50ADFA1B9640942C2CC11E27DE35DF69" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{CE998AE8-53CA-450C-AE47-999E646C39D2}">
+        <File Id="filB76080D76B54A200F36B2D1B676FAEBE" KeyPath="yes" Source="..\..\data\gfx\black_smoke.xml" />
+      </Component>
+      <Component Id="cmp6E8101CEC7495819A6AF48375A28A372" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{94DFDE57-8AE3-493D-B3A1-6259FDB03228}">
+        <File Id="fil8E492BA114209CF61D87292231B0B58E" KeyPath="yes" Source="..\..\data\gfx\droplet.xml" />
+      </Component>
+      <Component Id="cmpD80F57DA033C9C8246FFF52250C23110" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{629005E5-5050-451B-A552-F642C5597F78}">
+        <File Id="fil1EE37804BF3E2423953CF06B11E5029D" KeyPath="yes" Source="..\..\data\gfx\explosion.xml" />
+      </Component>
+      <Component Id="cmp5771041373E2CB71038DFCA120E8F26E" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{B06BB307-7C99-4C6B-8753-1C92F2EF838E}">
+        <File Id="fil4C494941502550C53F29386798997F8C" KeyPath="yes" Source="..\..\data\gfx\explosion_bomb.xml" />
+      </Component>
+      <Component Id="cmp67C945D60080BD65924B05B6192CF8E9" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{467BF275-AAE8-48C8-9F18-EF0864E5BE55}">
+        <File Id="filC8844F7D5145BE59DDF65F26D58F8E44" KeyPath="yes" Source="..\..\data\gfx\explosion_cake.xml" />
+      </Component>
+      <Component Id="cmpDAEA23882B97AD72ECAF8A71EBD3C0E5" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{7ADF9868-D1AF-493F-88D7-B4D876A57AA3}">
+        <File Id="fil56761E5AE36BD12407204871F148C506" KeyPath="yes" Source="..\..\data\gfx\fire.xml" />
+      </Component>
+      <Component Id="cmp895D846E82AE2609F8FA286006BDABC8" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{44F1E652-8406-4735-A9BA-B95A5A89C7E7}">
+        <File Id="filA8BB6C63C5151EEA7ED563F3B79951AB" KeyPath="yes" Source="..\..\data\gfx\gfx_fallingLeaf_a.xml" />
+      </Component>
+      <Component Id="cmp09DAC4B62FD5F269E78DF4379D1C0844" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{DB766711-4189-40E7-8264-495FCA585ECA}">
+        <File Id="filB7C601977D60E1B7E1290EF1478CE543" KeyPath="yes" Source="..\..\data\gfx\gfx_jetBlastEarth_a.xml" />
+      </Component>
+      <Component Id="cmpA57DCE993F9903A05DD8BB4737529956" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{51BE81A6-AD5E-483E-91E9-35B0B6376170}">
+        <File Id="filF22A3783E4AA5F340493608D3490DEF5" KeyPath="yes" Source="..\..\data\gfx\gfx_jetBlastSand_a.xml" />
+      </Component>
+      <Component Id="cmpB820C4A587E4D0BF96294862F8F954AE" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{FA1AF597-139C-4294-A108-B17343B2B8D7}">
+        <File Id="fil17F1695CBC718F610D4D53412B1CAEA6" KeyPath="yes" Source="..\..\data\gfx\gfx_mudPot_a.xml" />
+      </Component>
+      <Component Id="cmp0F955B5CE056AEB1463F58499137B7A8" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{D841634D-256F-401A-B38D-0276350D8443}">
+        <File Id="fil6477D3EDAD6BF2B2FCF4B830DDAB56A5" KeyPath="yes" Source="..\..\data\gfx\gfx_sparkFire_a.xml" />
+      </Component>
+      <Component Id="cmp3658292F5F1D015BC2C07FAB648FF2C2" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{14797884-E14C-4E67-B990-FA8D39AA963F}">
+        <File Id="filD680C18049E3E3E5DDC147A2D318FBFC" KeyPath="yes" Source="..\..\data\gfx\jump_explosion.xml" />
+      </Component>
+      <Component Id="cmp8B969CBDE2D195EEF6325ABE8E281B97" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{B780C31B-F65B-484B-AD8C-9BE668CD075C}">
+        <File Id="fil150DB21F47D12A6D23E9CF6E7E0FC098" KeyPath="yes" Source="..\..\data\gfx\nitro-smoke.xml" />
+      </Component>
+      <Component Id="cmpBF1AA2B47A7EB846E84D1A53CDE45FE2" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{5EEF5AC4-875B-42BB-8ECA-26FD71E4D948}">
+        <File Id="fil4FFEDE2ABCFBC714A9C6E24C75A147C8" KeyPath="yes" Source="..\..\data\gfx\nitro.xml" />
+      </Component>
+      <Component Id="cmpE44F75474829063187D458E9DF82EA90" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{4802B2EB-0A7A-49F6-930C-BA730FD1E1B5}">
+        <File Id="fil1252118D1DA0F043E5C5F6B72AF7435B" KeyPath="yes" Source="..\..\data\gfx\rain-ground.xml" />
+      </Component>
+      <Component Id="cmp13583E9552853C22AAE2807DAA17486F" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{7C82BED6-E064-4903-AB25-22CBCCD11D1C}">
+        <File Id="fil6006D12268FFF2B145D5F7C62B3AD5D0" KeyPath="yes" Source="..\..\data\gfx\rain.xml" />
+      </Component>
+      <Component Id="cmp9CC9EE4CC62E785FE3556CC79432511C" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{6617857F-FA01-4757-A701-4EB9DF7EC353}">
+        <File Id="fil68BCD806DAFC2943B7339B65C9054804" KeyPath="yes" Source="..\..\data\gfx\skid1.xml" />
+      </Component>
+      <Component Id="cmp890C2CE5AFB5B9D9CDBFB0732243EA6C" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{24678C40-35A8-4AB0-AC75-41C89103B5EA}">
+        <File Id="fil352462E894DF419BC9DB033C7A10796C" KeyPath="yes" Source="..\..\data\gfx\skid2.xml" />
+      </Component>
+      <Component Id="cmpA82BF208E1D49A0464BAC33C6CBCC877" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{F3CD9274-8EDD-4346-B476-4368455D63B5}">
+        <File Id="filE75FD28A069F0A9A003A3ED6030D8AF1" KeyPath="yes" Source="..\..\data\gfx\smoke.xml" />
+      </Component>
+      <Component Id="cmp27A079814180CF84690A8B2289253165" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{78043EEC-AE7A-4A3A-98B4-9174F0C151DC}">
+        <File Id="fil38BFA36AE0087C481B3FF12B2B02795F" KeyPath="yes" Source="..\..\data\gfx\smoke_brown.xml" />
+      </Component>
+      <Component Id="cmpB5DD4DC1D489E42B8ECC31F604238E86" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{D76A6CD2-B1F5-4226-BADE-F8D49DB8CCD3}">
+        <File Id="fil1B565D42102C883AAA141FA6B98F4271" KeyPath="yes" Source="..\..\data\gfx\smoke_red.xml" />
+      </Component>
+      <Component Id="cmp0BDC70BF674327FD47FF3386F9EEAA83" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{6EB033F8-84DC-4EDA-864E-B0DD0D8D4C0B}">
+        <File Id="fil5E5DB4F88BF9D7793675F3D8AFB4E126" KeyPath="yes" Source="..\..\data\gfx\smoke_short_burst.xml" />
+      </Component>
+      <Component Id="cmp5B61F5EC12243CA9C2D91E64F5064E18" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{1E3D1EA9-6D22-4FCF-9CF5-0A090851D894}">
+        <File Id="fil9F70B0744456B5DC84A5C7757C7BE696" KeyPath="yes" Source="..\..\data\gfx\smoke_yellow.xml" />
+      </Component>
+      <Component Id="cmp72624A93338E4ADFF9ACED0FDC8D376A" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{42BE5844-7D91-4197-ADDA-918BF45D03AB}">
+        <File Id="fil05E36DCADEBDA0B82F9CDB282D0CEED4" KeyPath="yes" Source="..\..\data\gfx\snow.xml" />
+      </Component>
+      <Component Id="cmp1FA645D394D3366F01187547FE441011" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{D0FE85F5-70C4-47C5-915F-D116967B07C1}">
+        <File Id="fil4FDED1A63551AD949FA1605998255927" KeyPath="yes" Source="..\..\data\gfx\sparks.xml" />
+      </Component>
+      <Component Id="cmp2966DC1E45103C9C25B105413C28BF84" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{44C21084-CD57-4BA9-8D3D-E8AF7AC4F19E}">
+        <File Id="fil5913A4AC4F8400385C9E3A24BC8D3B2B" KeyPath="yes" Source="..\..\data\gfx\splash.xml" />
+      </Component>
+      <Component Id="cmp3A5520D3E68D0CB733224918B8FB3786" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{2FAA1D2D-FBA9-476A-B31C-C030F4B678BB}">
+        <File Id="filF763F87E4D8E51E710A29FFEDE3A8B55" KeyPath="yes" Source="..\..\data\gfx\swampDriving.xml" />
+      </Component>
+      <Component Id="cmpF7C604CB4122FE2D6420A879B755FCE8" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{A65A7AC8-0DDE-4B0C-AA49-E3C386017F03}">
+        <File Id="fil7CB08B68F2084218F9C03A29EF0AF456" KeyPath="yes" Source="..\..\data\gfx\waterfall.xml" />
+      </Component>
+      <Component Id="cmp07BA3BDA69F0D1FA0A5AFF51DE4B0C1D" Directory="dirB3926A2F9E66F11DD1C4F5609B50FCD1" Guid="{645E9265-FA03-4849-8968-2A998A2295FF}">
+        <File Id="filE47607F49D8002C1E68EB6AA30D6D1C5" KeyPath="yes" Source="..\..\data\gfx\zipper_fire.xml" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

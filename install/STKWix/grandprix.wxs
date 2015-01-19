@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <ComponentGroup Id="grandprix">
+      <Component Id="cmp0027D77343191FF6EDC0E3377B3F20CD" Directory="dir8AA1257AAA62788D624C429C30F552F3" Guid="{46DEB5E1-B637-40C1-944C-E049B70F1931}">
+        <File Id="fil1F08E8D726EEBA1C4A9D3F87E15B65C9" KeyPath="yes" Source="..\..\data\grandprix\1_penguinplayground.grandprix" />
+      </Component>
+      <Component Id="cmp154A96F190ADCD43C0CDCF4A46147F27" Directory="dir8AA1257AAA62788D624C429C30F552F3" Guid="{860EA850-3329-4F8C-B5C3-AA41BBCDA77E}">
+        <File Id="fil8665856993F93F1D0A014412572E189C" KeyPath="yes" Source="..\..\data\grandprix\2_offthebeatentrack.grandprix" />
+      </Component>
+      <Component Id="cmpE1742F3FC9224589B27502955F3B0783" Directory="dir8AA1257AAA62788D624C429C30F552F3" Guid="{F544A0BB-6401-4CF4-BACE-84B8F2E1D8FA}">
+        <File Id="filFFED32E187D29C653DF172240FC1ADFC" KeyPath="yes" Source="..\..\data\grandprix\3_tothemoonandback.grandprix" />
+      </Component>
+      <Component Id="cmp0D468CE4205A9057D5B378A0501F6465" Directory="dir8AA1257AAA62788D624C429C30F552F3" Guid="{4DC4A2EF-AEC6-4D2B-839B-134454068228}">
+        <File Id="filB4B82E2EF7D7CDB3D4940BD9991F462C" KeyPath="yes" Source="..\..\data\grandprix\4_atworldsend.grandprix" />
+      </Component>
+      <Component Id="cmpDB897261865644CCFCCCF24489066B92" Directory="dir8AA1257AAA62788D624C429C30F552F3" Guid="{7712DC15-0B2B-465F-83AC-E858AB16D13E}">
+        <File Id="fil32A65CDDF8C7D57D96684883D6B970C5" KeyPath="yes" Source="..\..\data\grandprix\basic_drive.tutorial" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

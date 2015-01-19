@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="skins">
+      <Component Id="cmpECCE343419FCAAFAB076E1A1C2BFD54D" Directory="dir470D17FA0B36DE9C3269FC0A788764AB" Guid="{A26B83B5-9BF8-4B18-9D1C-919F2576A5B6}">
+        <File Id="fil04CE11AAABAB978E3CFD4A0883610F41" KeyPath="yes" Source="..\..\data\skins\Ocean.stkskin" />
+      </Component>
+      <Component Id="cmp33ED4A82C52450A32886354575A3B234" Directory="dir470D17FA0B36DE9C3269FC0A788764AB" Guid="{486ECBC8-9815-4A29-9A3C-3DCD2A703EA6}">
+        <File Id="fil065EC55B48A78136F7F48806EE907DDE" KeyPath="yes" Source="..\..\data\skins\Peach.stkskin" />
+      </Component>
+      <Component Id="cmp24831CCB9C14DE78C8FF263CF8185E2D" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{69C3D211-E027-4DE9-A7DE-87CE7553251C}">
+        <File Id="fil27DFD1A719EE6D17C3111C4066E8C6E4" KeyPath="yes" Source="..\..\data\skins\ocean\background.jpg" />
+      </Component>
+      <Component Id="cmp3796F896FFF7D07139FB0E8A4783ED69" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{0DEBCA57-13F2-40FD-8E86-A47B01C2B4FA}">
+        <File Id="filA5654602C84FD316E540F20053477681" KeyPath="yes" Source="..\..\data\skins\ocean\bubble.png" />
+      </Component>
+      <Component Id="cmp02C17F19CDF3549FEC7FF20771E674E3" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{93C163DB-CD03-46EF-95DE-09211085D8EB}">
+        <File Id="fil1674327D6C81D5259F49185D94449B99" KeyPath="yes" Source="..\..\data\skins\ocean\dialog.png" />
+      </Component>
+      <Component Id="cmpDB1A187E2A5512122D3A8DF578DFA678" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{FB63B4B5-86D5-4F7D-9026-F6C7D876BA70}">
+        <File Id="filBE79F01B102BB16DBD9FFF30967A96C4" KeyPath="yes" Source="..\..\data\skins\ocean\glassbutton.png" />
+      </Component>
+      <Component Id="cmpD6FDC21D9BF843E4F9B391756CC8BBC8" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{3AFF0FB1-64D7-44F7-91F8-F34CDFAC948A}">
+        <File Id="filFC55B2F34F778F6A166173A3B8E518F9" KeyPath="yes" Source="..\..\data\skins\ocean\glassbutton_deactivated.png" />
+      </Component>
+      <Component Id="cmpB0F0563A5F908B10E0271B4F968F311F" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{D52C87DC-8FEF-499C-8EAC-983F4BD77D7C}">
+        <File Id="fil2AB77C001D45D4F837A6145DCAE61B40" KeyPath="yes" Source="..\..\data\skins\ocean\glassbutton_focused.png" />
+      </Component>
+      <Component Id="cmpE71B2688B1BB02AF605E5E1E2AFD4680" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{AC84FA74-3248-47CD-96EC-943160C86E55}">
+        <File Id="fil2B74480D55BB39314146414567C37874" KeyPath="yes" Source="..\..\data\skins\ocean\glasscheckbox.png" />
+      </Component>
+      <Component Id="cmpC0F0E02AF5CF82EB40DB3825B05A1FDE" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{55634610-C317-403B-9269-DB00A07F77B9}">
+        <File Id="fil057DA60DC2A3EB094559622DD2276528" KeyPath="yes" Source="..\..\data\skins\ocean\glasscheckbox_checked.png" />
+      </Component>
+      <Component Id="cmp0F2C55154F2201FDC8B76910877126FD" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{AEB31937-36BD-482B-9DD1-46FBC4B7498F}">
+        <File Id="filD6C63A2F9A82680E2110BEB071452C97" KeyPath="yes" Source="..\..\data\skins\ocean\glasscheckbox_checked_deactivated.png" />
+      </Component>
+      <Component Id="cmp3142198688F8C5913AEC5BFE17CF54CC" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{AD82BF0D-149E-4755-A753-91C274CFCE18}">
+        <File Id="fil0E19A214698D412A360C810B17BF4C42" KeyPath="yes" Source="..\..\data\skins\ocean\glasscheckbox_checked_focus.png" />
+      </Component>
+      <Component Id="cmpF60329FD96D4841E1075958A048AC55D" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{F56F1B53-12BE-483B-A093-65DE305E75A4}">
+        <File Id="filD8DCD95D177C40FBFB9EE2BC3F43D24F" KeyPath="yes" Source="..\..\data\skins\ocean\glasscheckbox_deactivated.png" />
+      </Component>
+      <Component Id="cmpFEBA28239E262646479FE1A5953510F7" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{5C113231-C834-4DF4-85F3-87D76CE0B948}">
+        <File Id="fil7CCDCB820DB01009908A8E1E4E828E8D" KeyPath="yes" Source="..\..\data\skins\ocean\glasscheckbox_focus.png" />
+      </Component>
+      <Component Id="cmp72EA663FEAD4B0B38D2E60824F2CA5EE" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{84B248FA-E258-4893-8486-B49A716B426A}">
+        <File Id="fil27D5569DE226D52B6F74829E0DFEDF45" KeyPath="yes" Source="..\..\data\skins\ocean\glasssgauge_fill.png" />
+      </Component>
+      <Component Id="cmpF8B88D62C053E88B3BE17E3F13A333D7" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{EC49F689-A840-49CF-8A64-77EB02E402A5}">
+        <File Id="fil127D5D96A91D9DD5EE7590EA6BDDEDC4" KeyPath="yes" Source="..\..\data\skins\ocean\glassspinner.png" />
+      </Component>
+      <Component Id="cmp29F0C79A2F33F35DA1E8E49548E39AD1" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{4742AF4E-11E8-49A4-8826-FA997D1A9D42}">
+        <File Id="filE967EA3959DD02711D79876E60F13DD1" KeyPath="yes" Source="..\..\data\skins\ocean\glassspinner_deactivated.png" />
+      </Component>
+      <Component Id="cmpB5914869CB500750F12C38CCAA1DB213" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{FBA5695A-8005-45D2-AD9A-8B60B67F0903}">
+        <File Id="fil11B6C600D99019365DBB8D8A60E9022A" KeyPath="yes" Source="..\..\data\skins\ocean\glassspinner_down.png" />
+      </Component>
+      <Component Id="cmp5B4CAE1B41192798B9669EA77F3BD4B8" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{1D210BAF-3E83-4B97-8C3F-827CF6ED277D}">
+        <File Id="filE58A3E99229607406B63D88F5B97C6E7" KeyPath="yes" Source="..\..\data\skins\ocean\glassspinner_focus.png" />
+      </Component>
+      <Component Id="cmpD2C2B7664F2D54EA5098C8D4B337C7C9" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{27916591-2A5F-45B0-AC8C-DFF069CA3F81}">
+        <File Id="filC3647A852E74AF60772610AA775CBFDA" KeyPath="yes" Source="..\..\data\skins\ocean\glassspinner_halo.png" />
+      </Component>
+      <Component Id="cmpF68C0996B42B1DDA383034ADA60934D8" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{17B1D053-8679-476F-B0B6-A79810F3A48A}">
+        <File Id="filA34522CFFC6E132DA4F9774A16756447" KeyPath="yes" Source="..\..\data\skins\ocean\glasstab.png" />
+      </Component>
+      <Component Id="cmp2E684036B71A7ECFF6D7107DB96BAEB9" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{5BE5384A-E788-431A-A24A-C99879A84D0B}">
+        <File Id="fil7C1B18525F0E4EAEBCB4FD9CD68C0772" KeyPath="yes" Source="..\..\data\skins\ocean\glasstab_down.png" />
+      </Component>
+      <Component Id="cmp200BA4AB92884E4F4B9D00CA16210E4A" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{17492A3F-195B-4774-803A-EBDE40EA02E0}">
+        <File Id="fil8D23452E2F99716DB4E9944308C91E14" KeyPath="yes" Source="..\..\data\skins\ocean\glasstab_focus.png" />
+      </Component>
+      <Component Id="cmp46BB5AACA86925109EB7E8C87794DA94" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{8F02028F-FD07-474A-8E2B-2203287EEFFD}">
+        <File Id="fil00CBEE9D456AA878C58A9408D62B6104" KeyPath="yes" Source="..\..\data\skins\ocean\glass_iconhighlight_focus.png" />
+      </Component>
+      <Component Id="cmp4605F0FFF7010EE29ED9A0FB2987ABB0" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{73EF7563-4AB9-41CE-A289-6669D4632C69}">
+        <File Id="fil6B3C1E26C21DC4EF29CBC232FACBF39A" KeyPath="yes" Source="..\..\data\skins\ocean\glass_rsection.png" />
+      </Component>
+      <Component Id="cmp0DD6568E10C899F04D4440A34143A7B4" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{0EB6D1B2-30E8-4638-A4FB-E98D409EA6C5}">
+        <File Id="fil0605F0FBCAF15CF049865794D9D8FB08" KeyPath="yes" Source="..\..\data\skins\ocean\glass_section.png" />
+      </Component>
+      <Component Id="cmp64E6390CDD91484FA2504F8A6FB3F370" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{EC35834C-59B3-482E-B568-29975A5EFF79}">
+        <File Id="filCB7028E28800AE81258222380E7856B7" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square1.png" />
+      </Component>
+      <Component Id="cmp95FA272FC8F707354DDE462F5E361534" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{6F9CE7AF-4FA3-4021-A668-E8EB31707E5E}">
+        <File Id="fil82D07BB45B70B8B03DA565EF33B7BA96" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square2.png" />
+      </Component>
+      <Component Id="cmpFC9EAE5B99B9538432DBCF921E6C5B00" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{D51DB0D0-3B19-4E3A-8869-F289942174EE}">
+        <File Id="filD074481261C63E7BB6FA510068341E46" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square3.png" />
+      </Component>
+      <Component Id="cmpA54FA58B72526E51A14F8D9CC1E2B64A" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{F739173D-2B88-4370-BD74-890FED61188A}">
+        <File Id="filA104C2AF2AD0F9FD6258EB2F1B5E116B" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square4.png" />
+      </Component>
+      <Component Id="cmp58454B147F3AAA055D52B8987EC31054" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{B2DEE223-265A-4F4E-A4F6-A2CC47DA1133}">
+        <File Id="fil1F13130AABBB38F9427BADDCE6F93C77" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square_focused.png" />
+      </Component>
+      <Component Id="cmp8533A8F65BB4417D626001799FC6F7FC" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{8822BA30-090A-4DCC-B1CC-7A24D3FBABB4}">
+        <File Id="fil90D143BDEA787DBAE146133DA4688119" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square_focused2.png" />
+      </Component>
+      <Component Id="cmpA850BF3C782AF164E5CC3B769A91832B" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{632EE4DE-EDBE-4A20-B4A6-02738A4D281F}">
+        <File Id="fil979DA5374F6378D7F6112C2689534076" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square_focused3.png" />
+      </Component>
+      <Component Id="cmp0050B7BD7C534D8665F010B82C48969F" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{19C79D84-9B0A-4D9D-A479-B2E64B2BB940}">
+        <File Id="fil657706921642AB9A9639B9A930729C60" KeyPath="yes" Source="..\..\data\skins\ocean\glass_square_focused4.png" />
+      </Component>
+      <Component Id="cmp139B93857BFA63941A26B73F32C883D6" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{6E3FDA5D-E78B-4B6B-A89C-FB71564E601B}">
+        <File Id="fil456EBD3B96AAFE46097379B6FED7BC99" KeyPath="yes" Source="..\..\data\skins\ocean\left_arrow.png" />
+      </Component>
+      <Component Id="cmp3F784E95A357385676706D77F3920AFA" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{34E821B2-A338-4CB6-B500-AB0DD65DF6CC}">
+        <File Id="fil53CB103C2EE288D2B918A6F4CD05155D" KeyPath="yes" Source="..\..\data\skins\ocean\left_arrow_focus.png" />
+      </Component>
+      <Component Id="cmp0186C9E52F93BACBAA0B29148A11F547" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{6F36D328-7C5D-40BA-9759-78E505278656}">
+        <File Id="filD32EFFA750D9E4774A902821CB6340E3" KeyPath="yes" Source="..\..\data\skins\ocean\License.txt" />
+      </Component>
+      <Component Id="cmp26909A48CEF7D9C2DFFA87BB45774E22" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{04F78714-7393-4456-B248-72048ACFFF6C}">
+        <File Id="fil393C8BD9F08BE5ECA74DB416C05B1472" KeyPath="yes" Source="..\..\data\skins\ocean\list_sort_down.png" />
+      </Component>
+      <Component Id="cmp810545A1336EEC99A17B03AD2348F64C" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{0557577C-290E-4F64-A06A-42D374AF0E5A}">
+        <File Id="filD5B4E353790D6462A66CA944F2786FD4" KeyPath="yes" Source="..\..\data\skins\ocean\list_sort_up.png" />
+      </Component>
+      <Component Id="cmp5C90B651A2D91B16B92B8CE440177CB4" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{A850161D-05C5-43A4-A638-922F556AEDFC}">
+        <File Id="filF223CD98A534C18E45012B79D4D9937B" KeyPath="yes" Source="..\..\data\skins\ocean\rating_star.png" />
+      </Component>
+      <Component Id="cmpD1EB0EA0B209654EBD776571236EFDBD" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{1E6153BE-48CB-4E5A-BFB6-A49CF71A203D}">
+        <File Id="filE8B0CE9B087FB4B13DDD11CBEDA103AC" KeyPath="yes" Source="..\..\data\skins\ocean\right_arrow.png" />
+      </Component>
+      <Component Id="cmpAF3FAEEBC0D142AA6B1C7A08A590E0C8" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{2BCE53AA-2216-4757-94FB-73FE88DA3F6A}">
+        <File Id="fil7DFCC0238740EFAF7627E41F1B7A5A2D" KeyPath="yes" Source="..\..\data\skins\ocean\right_arrow_focus.png" />
+      </Component>
+      <Component Id="cmp20A4563F1348EFEEB5156845A4816654" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{9A5B5AD5-A2EB-4789-8D8E-5A6C652D0B96}">
+        <File Id="filDF6BC202BCDB39141A4D556B867D9E89" KeyPath="yes" Source="..\..\data\skins\ocean\scrollbar_bg.png" />
+      </Component>
+      <Component Id="cmpD986A33ADC637DD952B2006C3AAC9923" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{20197F0B-7F53-45AE-A0AA-43001AA58A04}">
+        <File Id="fil59AB5966AACDA59169E337023AEE3077" KeyPath="yes" Source="..\..\data\skins\ocean\scrollbar_btn.png" />
+      </Component>
+      <Component Id="cmp4CE9F6FDC9A2C960CF66A24053A78B51" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{C160AFAE-6049-475F-B5B5-E12C526D10CB}">
+        <File Id="filB8FCF52B05A906A65C5C9B9758EC3630" KeyPath="yes" Source="..\..\data\skins\ocean\scrollbar_btn_down.png" />
+      </Component>
+      <Component Id="cmp6C3854326755F43ED1F040FAF95A91D9" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{68BCD2E8-273D-43F7-91E6-53EC0853609D}">
+        <File Id="fil9D8F1042A786678F15C82934D159933B" KeyPath="yes" Source="..\..\data\skins\ocean\scrollbar_thumb.png" />
+      </Component>
+      <Component Id="cmp2EA695B4D0D58673BCC9F9C17C567596" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{A3BE4D9F-DDF6-41FF-AFA5-216D08E97A3B}">
+        <File Id="fil2F6C5BF3EE3B5896CF43EDCDE15413C3" KeyPath="yes" Source="..\..\data\skins\ocean\select.png" />
+      </Component>
+      <Component Id="cmpFEE6D2651ED840C9E9FEA6FC46C1A325" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{487E98E0-F96D-49A1-8ECE-E9AE7BB223DA}">
+        <File Id="filA0CE9CD12CA2383FBCFD6D5E4149438B" KeyPath="yes" Source="..\..\data\skins\ocean\table_header.png" />
+      </Component>
+      <Component Id="cmp132107CB729F43669D4DCAEA5F449998" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{8FBDE079-84DC-4846-9A3D-51D0D1021C4D}">
+        <File Id="fil30BAA0CBA10B86EFA97DF029F0EC0FDA" KeyPath="yes" Source="..\..\data\skins\ocean\table_header_down.png" />
+      </Component>
+      <Component Id="cmp74B0BE4BF8D5DCC12031DA16403FCAEB" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{FFC08BBD-A968-4DC5-8BF7-FC3ABFC6923C}">
+        <File Id="filB5372DA2948FAAAAC4F26650E4244808" KeyPath="yes" Source="..\..\data\skins\ocean\textbubble.png" />
+      </Component>
+      <Component Id="cmp672DCD079568CDD81D3AC7A428393622" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{A16D8210-D599-4606-B7F0-13A097FDDDEF}">
+        <File Id="filFDAF89C5A89EF13385243F69D33168C2" KeyPath="yes" Source="..\..\data\skins\ocean\textbubble2.png" />
+      </Component>
+      <Component Id="cmpB64EBF569C284B00F5B3DAD09889488D" Directory="dirC08B719562E48A5C95C1595CADE1219F" Guid="{71F215D5-F3EE-48C5-9EE7-7F2AFD7FDE15}">
+        <File Id="fil6218CC6297A7A8D6270008E91D8FB56B" KeyPath="yes" Source="..\..\data\skins\ocean\tooltip.png" />
+      </Component>
+      <Component Id="cmpD6FB00012705A4E56812D8C3FAF57484" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{44F7CAB4-2143-4180-98A4-3E9FD02FCDE9}">
+        <File Id="fil649557D4091C11DE14C751AC45A69CAB" KeyPath="yes" Source="..\..\data\skins\peach\achievement.png" />
+      </Component>
+      <Component Id="cmpB934C7FBCB19391A6C0ED990488BF7BF" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{F5AC4183-F8AB-4FCB-8169-0ABB2A7B0D6C}">
+        <File Id="fil5D6462C913457AD7E52891419751D25C" KeyPath="yes" Source="..\..\data\skins\peach\background.jpg" />
+      </Component>
+      <Component Id="cmp1D90780D21EDF78C992A577C7E7D114C" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{608312AC-5AD9-45AE-B403-2BFD45BD8C3D}">
+        <File Id="fil625CE93DE5D38B9CCF2006C74654D336" KeyPath="yes" Source="..\..\data\skins\peach\bubble.png" />
+      </Component>
+      <Component Id="cmpE9664D6B04564FA1E744A070F2417681" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{A21B3EE5-D1B6-47EB-A014-89A91D5EF598}">
+        <File Id="fil4A75BF7F635093BABF8C79247EDE64B0" KeyPath="yes" Source="..\..\data\skins\peach\dialog.png" />
+      </Component>
+      <Component Id="cmpBCEE43B3193BAF3E0921E500FDA71C8B" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{0F0594E7-0CDA-42A4-AEE8-9B6AAFAEC1E9}">
+        <File Id="filDF1ABAAD03114959553A9BEDC4920542" KeyPath="yes" Source="..\..\data\skins\peach\friend.png" />
+      </Component>
+      <Component Id="cmpD00FECBC121436E65E90101021F0A0BC" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{61A5AEC6-5265-4BBF-9F25-43C1D374ABE4}">
+        <File Id="fil846EAC4ADF919F890908D2E19943CA6A" KeyPath="yes" Source="..\..\data\skins\peach\glassbutton.png" />
+      </Component>
+      <Component Id="cmp4891044EE7DE9EBFA70859A63B012921" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{7778ECBB-555A-454C-8D98-4CB33CBB7975}">
+        <File Id="fil8F9026F5A927B03647524FC0EEAD7345" KeyPath="yes" Source="..\..\data\skins\peach\glassbutton_deactivated.png" />
+      </Component>
+      <Component Id="cmpB2D126D77BF1E9399A175D95D5F1BFF3" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{CBE26E62-E46E-452F-915A-E0DC6A353A6C}">
+        <File Id="filA8BF46A488DDB07E76BDBA903770C461" KeyPath="yes" Source="..\..\data\skins\peach\glassbutton_focused.png" />
+      </Component>
+      <Component Id="cmp9DC600A8043D597B3C848747AFFC32C0" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{4332A6EA-3D64-4608-8C3B-B64472E2E457}">
+        <File Id="fil1EA187A1BDA6FC5AD4A2FA9961AC6CF9" KeyPath="yes" Source="..\..\data\skins\peach\glasscheckbox.png" />
+      </Component>
+      <Component Id="cmp5E5BC2CAC21B3C1CD924247269BB740C" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{C6F33509-8EB6-4E98-884D-84555D707860}">
+        <File Id="fil317EC171D0FC99FFC53941DAD193570E" KeyPath="yes" Source="..\..\data\skins\peach\glasscheckbox_checked.png" />
+      </Component>
+      <Component Id="cmpE175D71A290D58C5069D25AD4F5FC833" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{AA7A979D-1CF7-44BA-B443-472960439130}">
+        <File Id="fil8F1439BEFA6F8D4ECA2D7210665B4A5D" KeyPath="yes" Source="..\..\data\skins\peach\glasscheckbox_checked_deactivated.png" />
+      </Component>
+      <Component Id="cmp78DBEED949BC25B3375051D11C6285B3" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{67299002-4F07-4F96-8377-789AE3179CD8}">
+        <File Id="fil3120F7524CD091CB211B713FA836F8B4" KeyPath="yes" Source="..\..\data\skins\peach\glasscheckbox_checked_focus.png" />
+      </Component>
+      <Component Id="cmp01A5BC604BC7D9240225C08E06E3A9A5" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{0979F0E3-270D-4B3D-B0D9-751318434151}">
+        <File Id="fil0B8F0FD40CB14840CE6F0403798C4FC3" KeyPath="yes" Source="..\..\data\skins\peach\glasscheckbox_deactivated.png" />
+      </Component>
+      <Component Id="cmpFCF48023B54997BAA0E7A819E100EA74" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{403EDF9C-1816-4EDC-BB92-F4E1608715B0}">
+        <File Id="fil274703273D3112912557CC0E7D44CB9C" KeyPath="yes" Source="..\..\data\skins\peach\glasscheckbox_focus.png" />
+      </Component>
+      <Component Id="cmpCFDABF2F5F17012A6B080A30CD927613" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{CD8AB4AC-E29D-4FD7-A705-7FCF18052E63}">
+        <File Id="fil815FE0CC150B6625D55743B1DC15C3A1" KeyPath="yes" Source="..\..\data\skins\peach\glasssgauge_fill.png" />
+      </Component>
+      <Component Id="cmp92351A51BB6572118F8A0C97A05EDBD9" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{C6885CAA-58FE-41AC-BEAF-7FE7089001DC}">
+        <File Id="filE40156D96F33B2B1483C046532678C1A" KeyPath="yes" Source="..\..\data\skins\peach\glassspinner.png" />
+      </Component>
+      <Component Id="cmpCF388673DB48A9A2ACF6E9C5B99F177A" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{A5E2A662-9FB0-460B-891E-14DFD9A54F47}">
+        <File Id="fil144108DCFC661B6C84B65107A726D9E6" KeyPath="yes" Source="..\..\data\skins\peach\glassspinner_deactivated.png" />
+      </Component>
+      <Component Id="cmp68BD3B6C69C2FAC8AFA12931393E9F9D" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{62FC7543-8768-4367-81CB-7CB1470E68DA}">
+        <File Id="fil9F8190B3EE5D9B31C66F31A258E56795" KeyPath="yes" Source="..\..\data\skins\peach\glassspinner_down.png" />
+      </Component>
+      <Component Id="cmp010D310D9E47B842546F11803F63EF9C" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{50A2274E-B603-490A-B553-20D0E5987525}">
+        <File Id="fil6B6F2EB107DDB9515D22F6C247D96C5E" KeyPath="yes" Source="..\..\data\skins\peach\glassspinner_focus.png" />
+      </Component>
+      <Component Id="cmpECC8F183327F03F8B40323D4175ECBA1" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{A0CFDDFC-6A33-448D-88C9-B4DDE274D597}">
+        <File Id="fil2089E8E8DFE901D5B61B813552F118FF" KeyPath="yes" Source="..\..\data\skins\peach\glassspinner_halo.png" />
+      </Component>
+      <Component Id="cmpB38EF7CCE07EC82212284B815F8E75FE" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{D02D7B07-11D5-4AA3-B44F-04A578971ECB}">
+        <File Id="fil5F78FE92B1341D32EF1500687AB64708" KeyPath="yes" Source="..\..\data\skins\peach\glasstab.png" />
+      </Component>
+      <Component Id="cmp091E41F360B60AEA9C1C34253A1BFC4E" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{B0E05286-9DFF-4782-B026-776BB806F175}">
+        <File Id="filB637BE9A5439A748D6074404947309CB" KeyPath="yes" Source="..\..\data\skins\peach\glasstab_down.png" />
+      </Component>
+      <Component Id="cmpBCC1204F29AB30A55CD3FFFA946CAC4E" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{35E18A4B-E5CE-4231-9EC2-8133E784877A}">
+        <File Id="filF8340BBD2B822346A5B73D27F304E8DB" KeyPath="yes" Source="..\..\data\skins\peach\glasstab_focus.png" />
+      </Component>
+      <Component Id="cmp339C86253AAE6863E9F68D2EA5CCAE1C" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{68078272-4D62-47EF-9658-F663255D9CD2}">
+        <File Id="fil56E5290555119B8602285DE4D20764E1" KeyPath="yes" Source="..\..\data\skins\peach\glass_iconhighlight_focus.png" />
+      </Component>
+      <Component Id="cmpD9619E016AA067DCA31C84B702B03F97" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{BFB824E2-CA79-422A-B19E-5084B7D924E3}">
+        <File Id="fil049D0DC0A1D8429608D9A572876EA6BC" KeyPath="yes" Source="..\..\data\skins\peach\glass_rsection.png" />
+      </Component>
+      <Component Id="cmp8324B3617578D0DC144DEF68CE676A62" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{1728C7A2-3E3A-4DC4-B6E8-9A14088CB896}">
+        <File Id="fil5D5A13FBAA3C692E45317D7C573C8F39" KeyPath="yes" Source="..\..\data\skins\peach\glass_section.png" />
+      </Component>
+      <Component Id="cmp2B5DA12219630BBF84864182360CA8C5" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{99919A28-23C8-4E40-9E15-30C30B126BF5}">
+        <File Id="fil25E5B4D0C7E496335BF50E91967ACD48" KeyPath="yes" Source="..\..\data\skins\peach\glass_square1.png" />
+      </Component>
+      <Component Id="cmpE6D58A4AC3D8FCD8A2C5CA741DACFAC6" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{4C924E03-E536-4F1C-BB6B-D524C3934154}">
+        <File Id="filB3449EAD6670B77A162EA262D00E9760" KeyPath="yes" Source="..\..\data\skins\peach\glass_square2.png" />
+      </Component>
+      <Component Id="cmp239684F65A14AD2C163D012273552334" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{C6B75B76-18DB-49F2-BBF8-71F8F10A589D}">
+        <File Id="fil3FCE88ECA655E10F4856EE8629F89A00" KeyPath="yes" Source="..\..\data\skins\peach\glass_square3.png" />
+      </Component>
+      <Component Id="cmpA4F5053EC7DEB05AE501C7C8BA0CB90D" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{423C6B33-525F-4282-8088-7A8443BFD4F3}">
+        <File Id="filEF24587F19F4D97B18E332B5D71A0B33" KeyPath="yes" Source="..\..\data\skins\peach\glass_square4.png" />
+      </Component>
+      <Component Id="cmpA66A66EA54340BD213FBD4ABB2BBAAE8" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{91E3156F-10BC-4C6F-B00F-1DD6B1A2CCC9}">
+        <File Id="fil8DA47C1166813C6FA5EB1D8CCF234C67" KeyPath="yes" Source="..\..\data\skins\peach\glass_square_focused.png" />
+      </Component>
+      <Component Id="cmpE8D415E100BC6829B9CB60EF3E4C8A17" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{175246D7-49A6-4C43-8D7B-05C258BDDD6B}">
+        <File Id="filA04D41BE08E3E26EF1B85AA9581DF8E4" KeyPath="yes" Source="..\..\data\skins\peach\glass_square_focused2.png" />
+      </Component>
+      <Component Id="cmp0D22AD401617B81D7CD0DE4CC6CED894" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{91E3C40A-8BEE-4943-AD71-B70E68D04FFD}">
+        <File Id="fil8F1E415FF9DE315C1CAF04433A9F1B0A" KeyPath="yes" Source="..\..\data\skins\peach\glass_square_focused3.png" />
+      </Component>
+      <Component Id="cmp9898D5F0D6A9824182576527F16A6C72" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{999B19FF-916A-4D29-A2D6-0EB93B3FF0FA}">
+        <File Id="fil54CE05E96891DB7AC97170C8819523E5" KeyPath="yes" Source="..\..\data\skins\peach\glass_square_focused4.png" />
+      </Component>
+      <Component Id="cmp0F05B07907B6C014D5DDDF9BD980522F" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{967D35E7-0A25-42D6-9851-2263ABCF55F8}">
+        <File Id="fil58A0DA80C2EB35961594A69109AC5E6B" KeyPath="yes" Source="..\..\data\skins\peach\left_arrow.png" />
+      </Component>
+      <Component Id="cmp1D4336FB8D9C96FBB37DC59238D8016E" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{1EC19CA1-26DC-4606-9909-BBFEB725B990}">
+        <File Id="filB614D1B9BBDFC75F48E9063F0347672E" KeyPath="yes" Source="..\..\data\skins\peach\left_arrow_focus.png" />
+      </Component>
+      <Component Id="cmp9864591C6BA3CA0C60DC2E305CEE6938" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{2F275B45-CB49-4919-A80B-7AD3052CC8FD}">
+        <File Id="fil0DC02ACF175E02901A41A5361D48293E" KeyPath="yes" Source="..\..\data\skins\peach\License.txt" />
+      </Component>
+      <Component Id="cmp3A345BF17257DFE23D7C8431738DCBFA" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{EFE50886-C7A6-4621-86CD-9A695671B5A2}">
+        <File Id="fil744854C649E69252BC06462D9C3E7289" KeyPath="yes" Source="..\..\data\skins\peach\list_sort_down.png" />
+      </Component>
+      <Component Id="cmpAFA6C25F347339DFDA0830D9B8E61EFF" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{BA1D11AE-91DB-4156-8B77-DC49660D76D5}">
+        <File Id="fil0E9C71979ACE3E2C3BCC1B885ACC7C08" KeyPath="yes" Source="..\..\data\skins\peach\list_sort_up.png" />
+      </Component>
+      <Component Id="cmp0606AF190772E235B50155B6D46DA4D7" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{061784E3-D87C-43A0-9CBA-F0772A7EC80D}">
+        <File Id="fil9C52E4973BEFBF19757A656586B001E8" KeyPath="yes" Source="..\..\data\skins\peach\rating_star.png" />
+      </Component>
+      <Component Id="cmpDACDA0BC6066947B533C33C5EA4560DF" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{C488AD6F-2DE9-48C5-876D-776A06C52542}">
+        <File Id="fil626D284B9DF4C77F9E23571DB5B83BD9" KeyPath="yes" Source="..\..\data\skins\peach\right_arrow.png" />
+      </Component>
+      <Component Id="cmp3C9BAC70D3A8606BB7B3492E6BB59F59" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{BCD6771E-4372-4CE1-A046-FD97706F54C3}">
+        <File Id="filAD7B18BB5F580512614A7E4ED12A8830" KeyPath="yes" Source="..\..\data\skins\peach\right_arrow_focus.png" />
+      </Component>
+      <Component Id="cmp2D3DE09041F129FDA9BDE865C4AFD80B" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{DA12785A-E3B5-49BE-A9F1-85206AC303CF}">
+        <File Id="fil55BE8CF0B5E02CDB8BFBB3DF1B3E65BA" KeyPath="yes" Source="..\..\data\skins\peach\scrollbar_bg.png" />
+      </Component>
+      <Component Id="cmp393E49B5831F403A44E9E9EDD28C6BA4" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{3FDB143F-2870-4B04-AE3D-508A4C06927D}">
+        <File Id="fil68DDB766B2517245AB14D9A3D2BF66D9" KeyPath="yes" Source="..\..\data\skins\peach\scrollbar_btn.png" />
+      </Component>
+      <Component Id="cmpEF8444A993DA9991247EE7DA6DAC5E8D" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{C61F24D5-2A4A-40D1-9C1D-DA096E22D9F3}">
+        <File Id="fil5BF04840EBEE30D2D7ED43DF5219A14F" KeyPath="yes" Source="..\..\data\skins\peach\scrollbar_btn_down.png" />
+      </Component>
+      <Component Id="cmpD5F527CE18C20B9377E54F7931E40333" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{2556B085-35FC-42A0-82E5-3E17F6ACBFDF}">
+        <File Id="fil5C0BA9C4092DAE0DABC928EE832D8E81" KeyPath="yes" Source="..\..\data\skins\peach\scrollbar_thumb.png" />
+      </Component>
+      <Component Id="cmp98D7B15FDFE318EAA9CF460B75A5249B" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{D79278BA-A540-478F-8FE4-78A35CC73893}">
+        <File Id="fil8F9DA2D34B1F60BFF741DEBB689C0635" KeyPath="yes" Source="..\..\data\skins\peach\select.png" />
+      </Component>
+      <Component Id="cmp180EE8D8D79A0BE17383CC0EB8B121F1" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{CA7F75BA-EB42-4EBF-85E2-E12E131A21D0}">
+        <File Id="filF2AD8362F30B376F440E0245F45A55DD" KeyPath="yes" Source="..\..\data\skins\peach\table_header.png" />
+      </Component>
+      <Component Id="cmp5D8E6200133375424E103C41E452CDC4" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{18DF3BDD-7893-470E-8C4A-C2AD4C3C8D95}">
+        <File Id="fil6AEEC307BE8147A1D4774DBE372C34DB" KeyPath="yes" Source="..\..\data\skins\peach\table_header_down.png" />
+      </Component>
+      <Component Id="cmp05E61AC31A59987C014C336CB176CD64" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{27620CF5-F2A7-468F-B73D-A8F4472A9D54}">
+        <File Id="fil67D388F4BF6310470D2634B86D639832" KeyPath="yes" Source="..\..\data\skins\peach\textbubble.png" />
+      </Component>
+      <Component Id="cmp82B2165C8260AC46FC707E619AB6CC7D" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{C77A233C-3B65-4CD2-B92B-6E85AAAB7C09}">
+        <File Id="filA89D66B2E144AB206014F254E87D477C" KeyPath="yes" Source="..\..\data\skins\peach\textbubble2.png" />
+      </Component>
+      <Component Id="cmp00C609DD5315BAD679F8CEE9002E36E4" Directory="dir437EC504A4CDDDF38A1506164E0B39CA" Guid="{07801CE1-3DBD-4E36-9659-C0B7779D6069}">
+        <File Id="fil294C5F3F2D4C3137D0AA344301ED85EB" KeyPath="yes" Source="..\..\data\skins\peach\tooltip.png" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

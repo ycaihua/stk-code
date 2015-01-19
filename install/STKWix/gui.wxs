@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <ComponentGroup Id="gui">
+      <Component Id="cmpE622368E2338DB7B8C5BDE60105CD0E9" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AF69703D-AF1F-48E6-B79C-D85356D091C4}">
+        <File Id="filC648971460999BED5DC1465D7B53CDFD" KeyPath="yes" Source="..\..\data\gui\addons.png" />
+      </Component>
+      <Component Id="cmpCE8F43730C47C2B744CCB8E5F7696BC7" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{B5AF83AA-A8FB-4D46-9175-1C054FFAE1A6}">
+        <File Id="fil70BF17C87B24E02D225D96851338D1B2" KeyPath="yes" Source="..\..\data\gui\addons_loading.stkgui" />
+      </Component>
+      <Component Id="cmp4718A7303DF15B55103982C33F3875EC" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{D104FA56-406A-4B8B-8DC7-DCB1BB1EF439}">
+        <File Id="fil628086DF115EDAEF2539029882E039B7" KeyPath="yes" Source="..\..\data\gui\addons_screen.stkgui" />
+      </Component>
+      <Component Id="cmp5EFD4F5D89C2DB81BCD5C94394B202C7" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{85AE7BB5-F73F-42BB-B85F-E946147C2739}">
+        <File Id="fil67F624B0E9D41ED6BA2F90BF2EC888D5" KeyPath="yes" Source="..\..\data\gui\arenas.stkgui" />
+      </Component>
+      <Component Id="cmpA4F4C840D72D9B69B908300EBBF1A0DB" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{7E0C9801-1F47-4600-B7FF-369EA1143FD5}">
+        <File Id="filEB798749788F07D32CD33EC719E9DD91" KeyPath="yes" Source="..\..\data\gui\back.png" />
+      </Component>
+      <Component Id="cmpC8D0E9F01F15C9196121BC7D8E7E344F" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{7E947632-8DF8-4B62-95F0-BFB3B212B295}">
+        <File Id="fil2F8AD54F485CF565070324EF6EA386B7" KeyPath="yes" Source="..\..\data\gui\banana.png" />
+      </Component>
+      <Component Id="cmpC56AFA7ADDC55AC50A1FEC244A12CE26" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{137E475D-20E1-448E-8117-629C2453F4F5}">
+        <File Id="filB7735345522E9F556D6CFF226353EDA6" KeyPath="yes" Source="..\..\data\gui\bar.png" />
+      </Component>
+      <Component Id="cmp4FF5F276613210617F3D58BE239AEEB7" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A9734F58-663A-4D74-8340-458758701B9E}">
+        <File Id="fil5859F4A775CC5AA4EB1B3B161739CE30" KeyPath="yes" Source="..\..\data\gui\blue_plus.png" />
+      </Component>
+      <Component Id="cmp2343931855218F68DA9873B783C30027" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{B888389D-E35F-4460-80F9-223ED7F43ED1}">
+        <File Id="fil8178468E03F0021CCC81BE5644A7D94A" KeyPath="yes" Source="..\..\data\gui\challenge.png" />
+      </Component>
+      <Component Id="cmp417BAC3E0EBDDC4246108F7D74C5C979" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{D67F50E9-D78E-4E76-B42B-D2DC9580FFC6}">
+        <File Id="fil379A74851221D3DFA8698DA71BC09037" KeyPath="yes" Source="..\..\data\gui\challenges.stkgui" />
+      </Component>
+      <Component Id="cmpA679BB67981062FA5F238D0F316B7C86" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{7BB1F02F-6757-46B2-92C9-1CF19E1533E8}">
+        <File Id="filEC0B74F0BC3993B168BA4ABA0B0D5C3F" KeyPath="yes" Source="..\..\data\gui\confirm_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp57A641B40FF5296CCB7C3C249BC4A5F1" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{FB0A2722-072B-4C36-8221-DAEA6E0A7742}">
+        <File Id="fil95E163EFAC1FCB094036138D7F663091" KeyPath="yes" Source="..\..\data\gui\confirm_resolution_dialog.stkgui" />
+      </Component>
+      <Component Id="cmpF069BB8408EA7826219600A558E45FB7" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{FBD8D64E-7AB2-4B2E-ADDF-5D50E4E06065}">
+        <File Id="filC1B1A4F435B07C7647F7FDB80FC78EAC" KeyPath="yes" Source="..\..\data\gui\credits.stkgui" />
+      </Component>
+      <Component Id="cmp515F6BCEDC104D108C97988D682621CF" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{ADB2E15E-B5BE-4C04-93CE-EE67A927E761}">
+        <File Id="filF1E7EF5616915A068E4E2A885FE16531" KeyPath="yes" Source="..\..\data\gui\cup_bronze.png" />
+      </Component>
+      <Component Id="cmp3AAAB7CBF098BFE5C8C5575868DB0D25" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{8057B507-DA64-4082-8FD3-4128909BA818}">
+        <File Id="fil4B78C6F273885D6D4D503B0AD43B442D" KeyPath="yes" Source="..\..\data\gui\cup_gold.png" />
+      </Component>
+      <Component Id="cmpD678EB092D52AEFACA9B346FA23B2D33" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{2A19E6D1-C096-446F-91F1-A68C6BC2544D}">
+        <File Id="filB0AD1D3DAD7202E134AA2B91195EE3A2" KeyPath="yes" Source="..\..\data\gui\cup_silver.png" />
+      </Component>
+      <Component Id="cmp0F360C2919403E563FB55BC1C0C6064E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{8B37DACA-EB4A-4417-A6C8-1F6BA643C3A2}">
+        <File Id="filF2248FC210BC6A5AD54B3CDFD250F5B5" KeyPath="yes" Source="..\..\data\gui\custom_video_settings.stkgui" />
+      </Component>
+      <Component Id="cmp15296A9AFA0E7AC9B17AB5E56B78D650" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{77E2050C-0F95-4C7C-B192-6A7CD286B1DF}">
+        <File Id="fil649C862057367402A608D29E52C3E4D0" KeyPath="yes" Source="..\..\data\gui\debug_slider.stkgui" />
+      </Component>
+      <Component Id="cmp03B7BB445F3D98FFE18B3029B5CE8124" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{6B3B6C57-F203-413A-9A52-BDE46B3A8FC4}">
+        <File Id="filDCA6497BBF1BAA1412523DC74C4874C4" KeyPath="yes" Source="..\..\data\gui\difficulty_best.png" />
+      </Component>
+      <Component Id="cmpF7DCF4104255AF74DC315C057FFBE884" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{C43052BC-7001-4002-85EC-AB4C03D2A16D}">
+        <File Id="filEB6586B91B5568CD8483BCD83819660C" KeyPath="yes" Source="..\..\data\gui\difficulty_easy.png" />
+      </Component>
+      <Component Id="cmpA606D5A319AA29536F2143DB4DF3EE2E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{0786F982-F516-4395-B8DE-D31245E347FC}">
+        <File Id="fil793B9537E168D108FFDF2725C84B3579" KeyPath="yes" Source="..\..\data\gui\difficulty_hard.png" />
+      </Component>
+      <Component Id="cmp3C3EE5D09A97E1696E041BABC2519F0F" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{BEB25435-724D-47A3-9717-283569E01768}">
+        <File Id="fil96B71C9BDC786BBF243D101E20FD6D7A" KeyPath="yes" Source="..\..\data\gui\difficulty_medium.png" />
+      </Component>
+      <Component Id="cmpF9654D324D2849FB08935D3EBE59C02C" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{D74584E0-4758-46FA-8F01-DD25DE5F8A74}">
+        <File Id="fil00C89A11EA572A7267343B35EA5CD9CA" KeyPath="yes" Source="..\..\data\gui\down.png" />
+      </Component>
+      <Component Id="cmp648EF85153254048227CA5120BBDE308" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{87992941-87E1-44BC-972B-0C84E34BBFA5}">
+        <File Id="fil4897E358656C3BEA20A7FA6180A54531" KeyPath="yes" Source="..\..\data\gui\dropdown.png" />
+      </Component>
+      <Component Id="cmp4AAFB9709C582797B8CAFD3BB3CB7049" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{FB383983-0439-4007-AA91-EBCD9C92D456}">
+        <File Id="fil6027852D5D4398699CA03E9BD48E041A" KeyPath="yes" Source="..\..\data\gui\easter_egg.stkgui" />
+      </Component>
+      <Component Id="cmp2F70A2E33D3686D6BBE0A46B27D77F2A" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{C6B89F7D-A2B9-4AF3-8083-D3651FFA4362}">
+        <File Id="fil918FCF4FE8C7D7E3187AB7E7839E35F7" KeyPath="yes" Source="..\..\data\gui\edit.png" />
+      </Component>
+      <Component Id="cmp4CFBC0386D8386DAC2C57A2E5387EC66" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{8960F992-5499-41FE-A1F5-7FE56B33E988}">
+        <File Id="filA801C44FF1D21FA14EDAD3B2C9E7F500" KeyPath="yes" Source="..\..\data\gui\edit_track.stkgui" />
+      </Component>
+      <Component Id="cmp66417AE0BA255439CFD74FE13F8E4204" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{6AA3DEC5-62F4-46F4-BD3E-93015F76810C}">
+        <File Id="filFFEECCF2EBA3B835134BB35BA13F8AFD" KeyPath="yes" Source="..\..\data\gui\enter_gp_name_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp5FA09E20EEB0E81E69AAE349734F2534" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A7BD8B41-D4E5-44DC-B964-EA608904C90F}">
+        <File Id="fil2B94D4543D04377102D53DF368A4680F" KeyPath="yes" Source="..\..\data\gui\enter_player_name_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp3756B3B119A46C54842FB6FD156E8FBD" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{1F6CAB45-AE6A-4A9A-AC37-56CFF9DECE2F}">
+        <File Id="fil6B1A1E35D868554A79B5A9605DB8B77F" KeyPath="yes" Source="..\..\data\gui\feature_unlocked.stkgui" />
+      </Component>
+      <Component Id="cmp0A3B7EFEF6356D860A8A018B8681C9CA" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{BF3272FB-7D63-423D-8487-CC075ABF1DB6}">
+        <File Id="filC0E9D9C35D8AF8ACAFEF440ECA723BA7" KeyPath="yes" Source="..\..\data\gui\gamepad.png" />
+      </Component>
+      <Component Id="cmp828C108245B67624EA89944C6152F7AD" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{ED17CC0A-1213-41FD-82C1-F75A29300E5B}">
+        <File Id="fil1C92BEFC07F62DDB486DCEF977A22770" KeyPath="yes" Source="..\..\data\gui\gamepad_off.png" />
+      </Component>
+      <Component Id="cmpB883AF82BABCB99BB507CB2BEF4C729B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AF93F5F3-F4BE-4735-BA0F-D28725626574}">
+        <File Id="fil4B6969DCF571976700EF9F8E5DC7F81D" KeyPath="yes" Source="..\..\data\gui\gauge_empty.png" />
+      </Component>
+      <Component Id="cmp7E3ABD92FCCAE14159890E7BC41D3A6B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{1157A9B9-D81A-4A9B-A29E-A9C8923F9DD1}">
+        <File Id="fil7B559F7CF2C74C37C1AAB82A0AF39F52" KeyPath="yes" Source="..\..\data\gui\gauge_full.png" />
+      </Component>
+      <Component Id="cmpA8BB775223C3699CD63779149CA26604" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{48DA44C8-BB6C-4C02-B855-0AF35787A97D}">
+        <File Id="filC4305DAA507A65003FD0AACE169C1F89" KeyPath="yes" Source="..\..\data\gui\gauge_full_bright.png" />
+      </Component>
+      <Component Id="cmp5F06124A7619D8B6DA253C8B9722CB64" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{078F4BE3-2AE9-4163-9707-62028A0B60B3}">
+        <File Id="filBCFB95375473A89DFD13E543997408CF" KeyPath="yes" Source="..\..\data\gui\gauge_goal.png" />
+      </Component>
+      <Component Id="cmp1A55AE9B215C7F6E8B2D1436848682FD" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{E5BAF1B5-4C1D-48B7-9BD1-1FAE8D97256A}">
+        <File Id="filA0E04FA8C183901CF4955D29755E9381" KeyPath="yes" Source="..\..\data\gui\gift.png" />
+      </Component>
+      <Component Id="cmpAF2998A2B5621E6511F41036BE452803" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{FC238F18-F42E-4CE8-847C-C6538DDB6364}">
+        <File Id="filAB955278F7FD49661C8C45DE9886149B" KeyPath="yes" Source="..\..\data\gui\gpedit.stkgui" />
+      </Component>
+      <Component Id="cmp9D21571D55B1010E8A5358AF7B8FE591" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{033BB80B-0F85-4DB4-A597-E82C2E546FB9}">
+        <File Id="filC2CB1B6D22302DC293B957ABAA830CD6" KeyPath="yes" Source="..\..\data\gui\gpeditor.png" />
+      </Component>
+      <Component Id="cmpEEE33379025632943906BF38C719FB76" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{1B2033CE-CD8B-43B1-A15C-E35695FC3542}">
+        <File Id="filD57C76B599C7A63CBC5F4E379B5E39DC" KeyPath="yes" Source="..\..\data\gui\gpeditor.stkgui" />
+      </Component>
+      <Component Id="cmp4F1A3992D2C6466AE5B2463BBA8BB86F" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{5E737C29-F348-4B67-993E-24E0ED98FB4A}">
+        <File Id="fil0EDC4FDD138FDD4D28288FD27306A494" KeyPath="yes" Source="..\..\data\gui\gp_copy.png" />
+      </Component>
+      <Component Id="cmpF880EE13C78F0EC106C4209A4807BD2D" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A5169A16-EC60-445D-8B23-3FB85D57E796}">
+        <File Id="filB6A3CF1E783FB230E7EC6504452108F7" KeyPath="yes" Source="..\..\data\gui\gp_edit.png" />
+      </Component>
+      <Component Id="cmp85BA99F62E7DA5C8029D7497F2D20351" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{F3F93DD6-F064-437B-A554-AABCE8EA0F07}">
+        <File Id="fil0FB17D31D62C6ED8DCAA20097291933B" KeyPath="yes" Source="..\..\data\gui\gp_info.stkgui" />
+      </Component>
+      <Component Id="cmp0A04D5249E0FDB16B61BC80442048A59" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{92C5B410-CA4C-4001-A181-B72F4BEB6C51}">
+        <File Id="fil2D8B47828AE93224011DE78A9AC7A599" KeyPath="yes" Source="..\..\data\gui\gp_new.png" />
+      </Component>
+      <Component Id="cmp0894297A1FC97A5B86A1B7ACBCD03CBC" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{794AE128-F432-4D38-96B1-E01401955858}">
+        <File Id="filF6B7ED90AAC501270375B8AA9BB697AC" KeyPath="yes" Source="..\..\data\gui\gp_remove.png" />
+      </Component>
+      <Component Id="cmpD5AF61BCFFFDDBD7290EBACCDFF2844D" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A6883C41-8D28-44D1-94CF-462A006EDF13}">
+        <File Id="filB07AC35AFB09F81695C98185513F9708" KeyPath="yes" Source="..\..\data\gui\grand_prix_lose.stkgui" />
+      </Component>
+      <Component Id="cmpC9C1C7B41E1496EA80539D9C5FAEB3C4" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{106FA44C-6225-41CF-9433-BE305B9070AD}">
+        <File Id="fil10B82316006EEEEC6D69DA23362D4C65" KeyPath="yes" Source="..\..\data\gui\grand_prix_win.stkgui" />
+      </Component>
+      <Component Id="cmpB8CE29450376749D0899A33D759B45D4" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{091EF430-176D-4081-86F7-4852ADA628ED}">
+        <File Id="fil93FCA4F8A47984DA9FCE2BE5C93403CD" KeyPath="yes" Source="..\..\data\gui\green_check.png" />
+      </Component>
+      <Component Id="cmpCE14B31E48638D5CF8DB1F91F2760AC3" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AF3C0C31-D9C0-403E-8282-98CBB0A68D11}">
+        <File Id="filD8763ECB7CEEAFA6889698E743F2A3B3" KeyPath="yes" Source="..\..\data\gui\gui_lock.png" />
+      </Component>
+      <Component Id="cmp7F9A60D99727FF443088417E6F696B6F" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{6E600A65-6786-43D6-92E0-89334350F7DA}">
+        <File Id="filAF3C0B06ED87DB28AEC88D4DE06357E7" KeyPath="yes" Source="..\..\data\gui\help1.stkgui" />
+      </Component>
+      <Component Id="cmp838DCFC67D1CB29C7B27534A33DFB00A" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AC1C1B7A-1D85-45C4-AB90-009F1B7D6CB6}">
+        <File Id="filEFE8E3F1E6A6FD6BDC76E81847CA4182" KeyPath="yes" Source="..\..\data\gui\help2.stkgui" />
+      </Component>
+      <Component Id="cmp10C9621B4BF8339F5C95CEFBB8857EF3" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{EF14A2DE-4234-483F-A18B-51132DD86B1F}">
+        <File Id="filC6A9852DAF70C2861B4421034199154F" KeyPath="yes" Source="..\..\data\gui\help3.stkgui" />
+      </Component>
+      <Component Id="cmpCB4BCC4D62623D2894B0FC5C79A7B231" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{2B36F42A-F2FB-42FB-BD7C-0A2651507172}">
+        <File Id="fil48C86CDA57EDC3752C1F34A52108674C" KeyPath="yes" Source="..\..\data\gui\help4.stkgui" />
+      </Component>
+      <Component Id="cmp7359EDE29D262F1118F5C47D22ECE955" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A38542F8-315F-4D76-8969-2ABB2436E92D}">
+        <File Id="fil6F541896B3D98743D7443C4621EE87B9" KeyPath="yes" Source="..\..\data\gui\hourglass.png" />
+      </Component>
+      <Component Id="cmpF3B173943C544A86A27A4F902BB4B493" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{5121BB6E-046C-4730-A429-5D6A2155CCA5}">
+        <File Id="fil05707E681A9B1FC34603ABAAC492DB27" KeyPath="yes" Source="..\..\data\gui\icons-frame.png" />
+      </Component>
+      <Component Id="cmpF03C930ECBFDBE0E1CC7534EF12D95F0" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{856CBB26-E493-4D87-96E8-A02611C19293}">
+        <File Id="fil573338CA7F74F86B577E68DFBD3196AE" KeyPath="yes" Source="..\..\data\gui\karts.png" />
+      </Component>
+      <Component Id="cmp66E33EC6D2DAF62F0E450F18344E4FC7" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{7E3CE3B5-7AE0-4F2A-8BE0-6DC62EFA9F32}">
+        <File Id="filB82414FB870BA765DCA0BB4F69659951" KeyPath="yes" Source="..\..\data\gui\karts.stkgui" />
+      </Component>
+      <Component Id="cmpB60A446AA489D65BD1EFB23EAE0DFC15" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{429E723F-1D34-4F14-8AAB-A069A6EEB2DD}">
+        <File Id="fil6B5DF918D9DDD11EF3EF797628BCCDA8" KeyPath="yes" Source="..\..\data\gui\karts_online.stkgui" />
+      </Component>
+      <Component Id="cmp6CDBEB5E33AE0127636E14D48DA53C95" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{65BC960C-7411-4CE2-AF82-1D293A1445E1}">
+        <File Id="fil1EE0A2306D93DD4FFB271B81BB4EFDD6" KeyPath="yes" Source="..\..\data\gui\keyboard.png" />
+      </Component>
+      <Component Id="cmpC2AF82FDAAC2E1371F7B46E535D9CAC2" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{60124296-E2BF-484D-8563-70C94F1D0E45}">
+        <File Id="fil8E33496118B783BFEBEB2C0D7E7F3AA4" KeyPath="yes" Source="..\..\data\gui\License.txt" />
+      </Component>
+      <Component Id="cmpB8DA593AE1449635ECEF8284E8756728" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AA68C50B-8E27-48CB-AF8F-7FBD46EF43A3}">
+        <File Id="filDB53C067521D65649F34EB2EBC76BD97" KeyPath="yes" Source="..\..\data\gui\loading.png" />
+      </Component>
+      <Component Id="cmp13AC45F6AE9054057C49164B1B9811FD" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{B3F27025-FE9F-4BDA-A20F-59991E0A58BF}">
+        <File Id="fil00B6DE6D34D73400FF45C52C7EBA43AB" KeyPath="yes" Source="..\..\data\gui\logo.png" />
+      </Component>
+      <Component Id="cmp35ECDF2377272DE04E7B3CCF6BAB2599" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{BA9E9BDC-A22D-43DB-87B0-699657BBD168}">
+        <File Id="fil4478F4337CD234C9A913E0466450889A" KeyPath="yes" Source="..\..\data\gui\logo_slim.png" />
+      </Component>
+      <Component Id="cmpA6CE13F7BD5D41009906B8735AA8B98E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{7CDCAAEE-1E57-4930-BC17-0810BA6C555F}">
+        <File Id="fil4C614F9047A7CCCECFCBE8378922D8D7" KeyPath="yes" Source="..\..\data\gui\main.stkgui" />
+      </Component>
+      <Component Id="cmp0AF658DAEE2D0566AA09D15EE2A27318" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{BD4B2D9B-F625-489D-8B27-8B79499E503A}">
+        <File Id="filFFABC423BDF07C71B905A58279C118F2" KeyPath="yes" Source="..\..\data\gui\main_about.png" />
+      </Component>
+      <Component Id="cmp63B58A877D9C405DC71F51B6E470CB50" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{8410920E-66E9-44CB-BBC4-AC566012B1E7}">
+        <File Id="filFA630098FC064A2295EF6FA71A0012AE" KeyPath="yes" Source="..\..\data\gui\main_help.png" />
+      </Component>
+      <Component Id="cmp52FF2184A7F8EEDB7540BBC516DDAB7C" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{D8FCD861-A9E7-4B8D-9A6B-C56DAEC66FF0}">
+        <File Id="filD098D0E0AFD1EAA1D89BD8258CDF2B30" KeyPath="yes" Source="..\..\data\gui\main_network.png" />
+      </Component>
+      <Component Id="cmp4F0F30B9C8ABED05FAE2ACE1311CC514" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{506CA555-BD2E-4340-BC04-FADC9A3C232D}">
+        <File Id="fil31EC6EB2F3B7C792E3E9DF84111E7FFE" KeyPath="yes" Source="..\..\data\gui\main_options.png" />
+      </Component>
+      <Component Id="cmp898E77AE1E73CFA04F58AAFBA43C0F4E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A1B3387B-3843-41C4-8637-EC2A10628135}">
+        <File Id="fil999CD30BEEB1DAE544625806DA0B71D2" KeyPath="yes" Source="..\..\data\gui\main_quit.png" />
+      </Component>
+      <Component Id="cmpA8214CB15FDF02D3F772E87BE9DBDA18" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{494F264F-7076-412D-B657-71D1F8951DD5}">
+        <File Id="fil552A367F8DD0B4C50ADE2FD90A53B7E5" KeyPath="yes" Source="..\..\data\gui\main_race.png" />
+      </Component>
+      <Component Id="cmp93BDC92F504B3A55F397C5BC29E2ACCD" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{43E77979-EEE4-464A-9F6F-F226F4F16147}">
+        <File Id="fil9F59A5508A7343A30F1B97C442D7CC7B" KeyPath="yes" Source="..\..\data\gui\main_race_multi.png" />
+      </Component>
+      <Component Id="cmp377B76B3D141B794C2CFE81F76ABD8F0" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{8E52F38F-3558-412A-A45D-93A29BD390E3}">
+        <File Id="fil49783401C2C7FBB4A994BD0AB2E43961" KeyPath="yes" Source="..\..\data\gui\materials.xml" />
+      </Component>
+      <Component Id="cmp36E39E3348364B11E2FF91D7749AF132" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{D91A9078-AC63-4555-9531-5A19DEA4F3C3}">
+        <File Id="fil583A32AD24590E198916C9451ECE9499" KeyPath="yes" Source="..\..\data\gui\menu_addons.png" />
+      </Component>
+      <Component Id="cmp179FABED8E75733F94F755301B31BB13" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{27110C28-9695-4E00-AE10-2DB8E9761638}">
+        <File Id="fil1079F5F6140B6C4E9170F69EA2C041A0" KeyPath="yes" Source="..\..\data\gui\menu_addons_focus.png" />
+      </Component>
+      <Component Id="cmpDDC37E70687580F1C33B21FEE302A90C" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{CC627DFA-80F4-4CF0-AA17-4958ACEF8769}">
+        <File Id="fil7FC50F131FFCAF6F4DDDF272C4432A7E" KeyPath="yes" Source="..\..\data\gui\menu_multi.png" />
+      </Component>
+      <Component Id="cmp92DA1AE23B9719C76E9A875C7EDA4D0B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{68E112EC-77E5-47D2-81A5-C7AF22953569}">
+        <File Id="fil5B24C8CCEF69167BA47E9A1324461918" KeyPath="yes" Source="..\..\data\gui\menu_multi_focus.png" />
+      </Component>
+      <Component Id="cmpE3BBD7CCC5F997B059722D6759E7EF55" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{07456585-499B-4719-9F4A-79998846B1AA}">
+        <File Id="fil929FBF6F5995CEEBFDC464BC2D949A5E" KeyPath="yes" Source="..\..\data\gui\menu_online.png" />
+      </Component>
+      <Component Id="cmp6EFD470473AA0BE03C97EB81198E858C" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{D7D06A24-8F82-458E-B50A-01CD9764775F}">
+        <File Id="fil3D3BC0601EE0CFDFB50DE5F740CA1FBB" KeyPath="yes" Source="..\..\data\gui\menu_online_focus.png" />
+      </Component>
+      <Component Id="cmp948BFDB03E3A286A834530357E79B7E1" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{95BB6476-48F5-4A50-9E9A-BDD707E92C9D}">
+        <File Id="filDC6E30B8C18A2C9CEA00803F1191EADE" KeyPath="yes" Source="..\..\data\gui\menu_race.png" />
+      </Component>
+      <Component Id="cmpFB96E25BB1F789C59849E4209F3D4E05" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{71A52BCD-8AD7-49CB-9DF8-B3AB72170E70}">
+        <File Id="filE7C08600CDA2ACE3B0EA6DE22C6276FA" KeyPath="yes" Source="..\..\data\gui\menu_race_focus.png" />
+      </Component>
+      <Component Id="cmpC2DFB16B409AA87FB7E61797153E12CD" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{DE44EA7F-E2BB-4096-A79C-70F6C7176FB2}">
+        <File Id="filD83EB09B38732814BB593E2581777106" KeyPath="yes" Source="..\..\data\gui\menu_story.png" />
+      </Component>
+      <Component Id="cmp03DA94B41147B69368A5449954A5C98A" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{DE9E2034-0D30-4EA4-A646-B3F67949C902}">
+        <File Id="fil16A7E859AEC388B8004CEBACB4F77843" KeyPath="yes" Source="..\..\data\gui\menu_story_focus.png" />
+      </Component>
+      <Component Id="cmpC9C2C1397FFD550FCB3D34DB818B6043" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A6C3BC79-F04C-4DDB-89BE-D36AF3521CCA}">
+        <File Id="fil37019C7854C76F509A6644A4CA314857" KeyPath="yes" Source="..\..\data\gui\mode_3strikes.png" />
+      </Component>
+      <Component Id="cmpC780D5801390358B65FE92AC7940DA9C" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{F7782FB3-9324-404F-B187-F22FB61D2BEA}">
+        <File Id="fil21C6B98C362B44A420CC7ABCBA1BBFA5" KeyPath="yes" Source="..\..\data\gui\mode_easter.png" />
+      </Component>
+      <Component Id="cmp2D8138B4027AB62BF1743E17F292791B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{C853D3F4-4A13-440A-80E0-F399F110E098}">
+        <File Id="filF32F505EE0BB94AD2879D83CA5449638" KeyPath="yes" Source="..\..\data\gui\mode_ftl.png" />
+      </Component>
+      <Component Id="cmp2DA1551D0F5E40129D3B067B213C3A07" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{94665921-C1F9-42F2-B183-AF5D39DFB1AA}">
+        <File Id="fil0CACF32E522AA2709E5D3C27278E2A70" KeyPath="yes" Source="..\..\data\gui\mode_normal.png" />
+      </Component>
+      <Component Id="cmp5B9C3D2AA0BDCD643DB96025987A1E9D" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{23DEBF4A-FE70-4F40-AD35-AA0E4038476D}">
+        <File Id="fil6EF183624B509F450F2A22D13ABBAC3E" KeyPath="yes" Source="..\..\data\gui\mode_soccer.png" />
+      </Component>
+      <Component Id="cmpC65284D7D297AD24BF51EA311311F367" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A9A2A554-EE0F-4EE3-806E-372FA9AC50FC}">
+        <File Id="fil941CF19A081D4D9A73FC780F631C39C2" KeyPath="yes" Source="..\..\data\gui\mode_tt.png" />
+      </Component>
+      <Component Id="cmp731A2CDA5A7072DA7F8783879EA658A1" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{945C5258-06A5-4534-AC10-8423A2F3F0A5}">
+        <File Id="fil2159C253F323BAC3B090B10D634C969F" KeyPath="yes" Source="..\..\data\gui\nitro.png" />
+      </Component>
+      <Component Id="cmp23ABF5C2708607219045D23182071A52" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{8732B8E6-F90E-492B-B728-06CCB5249A35}">
+        <File Id="filAA3E116EE372BDB343BAC2F924E423F1" KeyPath="yes" Source="..\..\data\gui\no-package-featured.png" />
+      </Component>
+      <Component Id="cmpB6A5407622B2DA16FF9BD621E0C58BEC" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{CF0EFDDD-EB80-4337-891C-DADFA96D1197}">
+        <File Id="fil84AEE87E0CCEC3DCDB4C7CD45E191649" KeyPath="yes" Source="..\..\data\gui\no-package.png" />
+      </Component>
+      <Component Id="cmpE136C7F20CF356CDD8458E965F8C7628" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{36E9680E-2BE3-4E2B-A1B4-C9104C88EE5F}">
+        <File Id="fil85725A8AB015DDDE7FC47E51B72640B3" KeyPath="yes" Source="..\..\data\gui\notes.png" />
+      </Component>
+      <Component Id="cmpD96A2367A6EAA3EDE228EEFA415E210E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{0190E594-028F-469C-A58E-CA49E35F7D2C}">
+        <File Id="fil41EFA4029FCEF20554EA11C16A710405" KeyPath="yes" Source="..\..\data\gui\options_audio.png" />
+      </Component>
+      <Component Id="cmpBC24593003A47911D99D22697651824F" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{6B2EED3E-B17C-463E-BD94-4608B06106C0}">
+        <File Id="filC06B8D5DC4D84727B110C72A3A9A6F38" KeyPath="yes" Source="..\..\data\gui\options_audio.stkgui" />
+      </Component>
+      <Component Id="cmp7DFB420C756A2EABD6C57D14516C1762" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{EF31584F-1E89-42BB-ABC8-43E562C0B84F}">
+        <File Id="filFC91BC4FBC7C23AAFC3F015543EA7355" KeyPath="yes" Source="..\..\data\gui\options_device.stkgui" />
+      </Component>
+      <Component Id="cmp556225A7784544BDD8E96FF271AC3829" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{84635209-A130-4271-95AD-6250DEE97FBF}">
+        <File Id="fil37F51207D6297B62019A0E21E78CBEC8" KeyPath="yes" Source="..\..\data\gui\options_input.png" />
+      </Component>
+      <Component Id="cmp2C8493477489AB8B85C1D6D32206D1E4" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{45780D29-DF96-45C0-8C4B-2897C1F943B6}">
+        <File Id="filA82593ABB00BEB4B04165CF45BF7A4B1" KeyPath="yes" Source="..\..\data\gui\options_input.stkgui" />
+      </Component>
+      <Component Id="cmpA382D6601A35D261FC49F634318854A6" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{DDFEA054-D50A-45F8-86CB-CD6BE436AACD}">
+        <File Id="fil39C3222145D67E9BC2D233CFEE724270" KeyPath="yes" Source="..\..\data\gui\options_players.png" />
+      </Component>
+      <Component Id="cmp92FCB48182BC7660150CF714EE592462" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{473355CF-ABFF-4898-BFE3-5CEC952B8D71}">
+        <File Id="filDE64B64CD324DEC24C857976DA132D75" KeyPath="yes" Source="..\..\data\gui\options_players.stkgui" />
+      </Component>
+      <Component Id="cmp0DFC235385810207E875937A55B8B04B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{E571B937-3DB8-46DA-9B20-3ED1F8F9F43D}">
+        <File Id="filDCE0A06FA8051B415EB1A8E9E0D07187" KeyPath="yes" Source="..\..\data\gui\options_ui.png" />
+      </Component>
+      <Component Id="cmpFC1EB0E70289B7E4CB8B77E6E9DAFB76" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{DDAAE26E-EC96-49A2-AD12-79C34B6C5CAF}">
+        <File Id="fil68B8D6CCCA7DF475CE5D60873B90C2B5" KeyPath="yes" Source="..\..\data\gui\options_ui.stkgui" />
+      </Component>
+      <Component Id="cmpB928CC06D2B92C0C5099EF33D3BBEBFE" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{24D40CD8-4D47-43D4-ACCD-BD98391BDD81}">
+        <File Id="filEC5E966BD8F5A3CCED4F2AC51F5D4DFE" KeyPath="yes" Source="..\..\data\gui\options_video.png" />
+      </Component>
+      <Component Id="cmp18F5584278A3B332FD6FC2DCBF1D9531" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{01FB0C63-7160-4E22-B33B-202CFA0AC580}">
+        <File Id="filEC818BE140521462EB3B5C6A30675F71" KeyPath="yes" Source="..\..\data\gui\options_video.stkgui" />
+      </Component>
+      <Component Id="cmp4071B53FBFC9D5E01F28A5C6C53A5B6B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{6E6935C1-E5BF-4565-A694-331C0301F5A2}">
+        <File Id="filCAE3599F8277F79C5CF680F9E707C089" KeyPath="yes" Source="..\..\data\gui\overworld_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp193EB3C35D939B79430A0CB8D628CB21" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{1F46622F-0D96-46FD-8A06-31329EC2CB63}">
+        <File Id="fil1A76E56CF35C3F691B8DE4F39FC9CFE4" KeyPath="yes" Source="..\..\data\gui\package-featured.png" />
+      </Component>
+      <Component Id="cmp8A1265A4E5DBDA3F71E62DA2631CC897" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{9C93D2B6-4F77-4685-83DF-C8D69E99D1D7}">
+        <File Id="filE0F7C7C80454200EE3CCF61FBA245A0F" KeyPath="yes" Source="..\..\data\gui\package-uninstall.png" />
+      </Component>
+      <Component Id="cmpA316C3B8D4375ADE45CD704DF08048FF" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{99023CB8-A766-43F2-9700-34CC4434CF61}">
+        <File Id="filA716726F0985391DC8628FE4487E7C64" KeyPath="yes" Source="..\..\data\gui\package-update.png" />
+      </Component>
+      <Component Id="cmpE07F2BC2BD331BAEEA973B8AEDB6B42A" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{90D21BE5-8D78-4432-8F08-1B4C5C5E21F1}">
+        <File Id="fil4C7CC9B77A9D1DA32B2AF7E1C3EBB9C3" KeyPath="yes" Source="..\..\data\gui\package.png" />
+      </Component>
+      <Component Id="cmp91AAB69A39E09D80D2D254D9913CA617" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{3C9B14B3-2FF4-4481-9810-9B3A5EC91821}">
+        <File Id="filD603A9578E87E80AF91F10F4C7A30B1E" KeyPath="yes" Source="..\..\data\gui\press_a_key_dialog.stkgui" />
+      </Component>
+      <Component Id="cmpF0743B2FFBE5385D7533B50036BCCCB9" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{CB2ACA98-C5D5-462D-94BC-F77C404F629A}">
+        <File Id="filE3C866B17337213355CD5F714853B426" KeyPath="yes" Source="..\..\data\gui\racesetup.stkgui" />
+      </Component>
+      <Component Id="cmpBE40D5A64FB23E207D9C3F4D449CCE50" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{6AD6131C-A8CF-44E0-9D5C-5282ED3464ED}">
+        <File Id="fil8C28C216F7A09A430AFB9C7802DF2560" KeyPath="yes" Source="..\..\data\gui\race_giveup.png" />
+      </Component>
+      <Component Id="cmp9952B0C54E5A0401ADBB7EDFD5D5AEAE" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{EB9D5661-E695-44F2-A54C-FC9AA06497B4}">
+        <File Id="fil5AE6678A38D989A9F4BC9E65393CB914" KeyPath="yes" Source="..\..\data\gui\race_paused_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp4D331A4495577684492982DCDACAD5FF" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{3AEEEE85-A68E-4BBB-BC91-B85F6829D2DF}">
+        <File Id="filBAFAB2D1911488957D809977C08EA9A0" KeyPath="yes" Source="..\..\data\gui\race_result.stkgui" />
+      </Component>
+      <Component Id="cmp5407ADA66119A0D9A12A5BF2D3C8CE75" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{F3FFD84C-5855-4AD8-806E-B7FDE3BEF9EE}">
+        <File Id="fil5666347892950080982A85B057239A47" KeyPath="yes" Source="..\..\data\gui\random_kart.png" />
+      </Component>
+      <Component Id="cmp998A87BBABA2BC70E1C823ABB1E4BC97" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{BCCD90EF-65AD-473C-8A67-7AB2288BEF08}">
+        <File Id="filB973D91A9EB49AE8AF31896A25B4EA57" KeyPath="yes" Source="..\..\data\gui\red_mark.png" />
+      </Component>
+      <Component Id="cmp57A11458A388F3A464661DC927F42FA8" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{9A8A948C-838B-47D7-AEDB-3B8FC0FEA6A8}">
+        <File Id="fil0B091F2BBAB804E0E8AE8990CBCB5EC4" KeyPath="yes" Source="..\..\data\gui\remove.png" />
+      </Component>
+      <Component Id="cmp02D94D5B52A3013992D97CA78034E51F" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{5EC4BCCB-256C-4A90-8F17-F385C7764CC8}">
+        <File Id="fil3A85165264BBD79D58EB0F5F91744B58" KeyPath="yes" Source="..\..\data\gui\rename.png" />
+      </Component>
+      <Component Id="cmp35DB24BCA9CCA10E1B4ACCEA5FC1715E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{E791FB05-A673-4053-B954-3D2FD51E2526}">
+        <File Id="fil129311E84580E2733399352B4F1D2E8C" KeyPath="yes" Source="..\..\data\gui\restart.png" />
+      </Component>
+      <Component Id="cmp592D62E65497FC71967C767A2D697F6B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{78D0E98F-312F-4B09-B9E4-D11001F8D2CA}">
+        <File Id="fil64400AEB986E082496FBEF5569E1650B" KeyPath="yes" Source="..\..\data\gui\save.png" />
+      </Component>
+      <Component Id="cmp8E7B7611E2E6DC6478F765E25BCF9D4E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{B07D2A53-CBDC-45C7-8D7F-D5E22AA87BD8}">
+        <File Id="filE51B336B682A2BF4326956D7912D8D18" KeyPath="yes" Source="..\..\data\gui\screen1610.png" />
+      </Component>
+      <Component Id="cmpBC7271281E2250D02D4D92B1A19ADCCA" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{4CC4F324-977D-4128-8EE7-D38A4DA096AB}">
+        <File Id="filAD68E7A61C2F3A69163C441C1A5A235C" KeyPath="yes" Source="..\..\data\gui\screen169.png" />
+      </Component>
+      <Component Id="cmp604A46AEAD8824FEE857312FAA0781F5" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{272CDC96-EE52-4A24-A650-917DB15018FA}">
+        <File Id="fil5E2A1A14F20EBCE66A84E2EAC80A7157" KeyPath="yes" Source="..\..\data\gui\screen32.png" />
+      </Component>
+      <Component Id="cmp021DC6C0EA9F53199EA5E30712EB7CC9" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{F6E9F9C9-3B0A-4A33-BF04-EFE061C45E5B}">
+        <File Id="fil330A73F64E0EB588628E27AAE64636CF" KeyPath="yes" Source="..\..\data\gui\screen43.png" />
+      </Component>
+      <Component Id="cmpA7B8C254E1267D92EA0D63201E08C49E" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{E5963FDC-0C32-4F8E-8038-97598860AAD0}">
+        <File Id="fil419C7D637BE501CD569978192107DC73" KeyPath="yes" Source="..\..\data\gui\screen53.png" />
+      </Component>
+      <Component Id="cmp3536553CFABAC2DE8A84B91489BDF20A" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{91FD2EE3-8B74-4A4B-87BE-8F2973BEF40E}">
+        <File Id="fil54F41C01D5B013E7D1E62F07D0143905" KeyPath="yes" Source="..\..\data\gui\screen54.png" />
+      </Component>
+      <Component Id="cmpA1123C4899DB154C982D394FA4E53051" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{3D24EE05-461D-4150-86DD-2EBDCF356912}">
+        <File Id="filAE1FBB7EB195A9C45D50387D64A65779" KeyPath="yes" Source="..\..\data\gui\screen_other.png" />
+      </Component>
+      <Component Id="cmpECDF86D7C68D359CE18ED071D498B9CE" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{CFCA0BCB-DBCD-42D1-9C51-DF75CD0CADB4}">
+        <File Id="fil661B4EA98FC9566A552D867D04550EBD" KeyPath="yes" Source="..\..\data\gui\scroll_down.png" />
+      </Component>
+      <Component Id="cmp2C0716D81D5505154C040DA48AFE23AA" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{7E8A7C0A-8C31-4B35-A967-6446AD1F9770}">
+        <File Id="fil457485A13FF13D19A1A02C2322448517" KeyPath="yes" Source="..\..\data\gui\scroll_up.png" />
+      </Component>
+      <Component Id="cmpB3B5B50C13B7115AE8E3AA409789FC6B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{82946AB1-6DFB-4E5D-B5D6-B14B01020640}">
+        <File Id="fil6F3857F46937FAE5D9B27354EE463E80" KeyPath="yes" Source="..\..\data\gui\search.png" />
+      </Component>
+      <Component Id="cmp01256412B4EED7AA8C44E80AA05587F0" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AAFABDEA-6B2B-4E1E-8E19-CBBAB7EC203F}">
+        <File Id="filBC2554B1C4DED4CF28D101C53ECABE07" KeyPath="yes" Source="..\..\data\gui\select_challenge.stkgui" />
+      </Component>
+      <Component Id="cmp13CFCE5C15DAAA89BD91C88947A5A766" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{1265E8F2-235D-4CF3-A073-AE88B50E3D6F}">
+        <File Id="fil85E8DA2714F115E92AA7758888FD7450" KeyPath="yes" Source="..\..\data\gui\soccer_ball_blue.png" />
+      </Component>
+      <Component Id="cmp5FCB85A7AC2D7C711ED064477BCD2EEF" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{4744DF9D-370B-4DB9-87C7-EEF55E410D8D}">
+        <File Id="fil9A688AFA97B1BBCDE36B4887A78EC57E" KeyPath="yes" Source="..\..\data\gui\soccer_ball_empty.png" />
+      </Component>
+      <Component Id="cmpAE4BB69F0A18BF41072A02DEE5246984" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AD7718C9-1FBB-451B-BE23-E4AC49AEA763}">
+        <File Id="fil221D741DF4083E59C576616B496570BA" KeyPath="yes" Source="..\..\data\gui\soccer_ball_red.png" />
+      </Component>
+      <Component Id="cmp00A7BBF0CCB5B4DCF2417194E1E1473B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{9DCE11A9-0441-4D22-A1D1-E9ED21564266}">
+        <File Id="fil5168681ECE34D0C465C2C55DE768D950" KeyPath="yes" Source="..\..\data\gui\soccer_player_blue.png" />
+      </Component>
+      <Component Id="cmp26FD8927A42CC947E1A231077A5B8E0B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{0C08752A-CD1B-4275-9E5A-B344DB059EEF}">
+        <File Id="filCD32DF63710E13838DF3B9C103D83386" KeyPath="yes" Source="..\..\data\gui\soccer_player_red.png" />
+      </Component>
+      <Component Id="cmpA9EE02552FC50C11D65694F050272F98" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{236FA6CF-46AE-4EE8-A6B5-4BA55E445673}">
+        <File Id="fil6C92302C697C446FA9966485CDC33010" KeyPath="yes" Source="..\..\data\gui\soccer_setup.stkgui" />
+      </Component>
+      <Component Id="cmp64BA5B521A42B7C7EA3D3EEFAAC3EE67" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{E8E6D77B-B4DF-4E34-8BEE-A6F870046B00}">
+        <File Id="filD40C9DBC5E4309233B521B611D427E60" KeyPath="yes" Source="..\..\data\gui\speedback.png" />
+      </Component>
+      <Component Id="cmpD719541C6EBE87F049650EDEFE82AD89" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{60ADA64E-FE1C-4C7A-B16D-23E34BD39E40}">
+        <File Id="filBE48DC25909AFA3DB7E20AFCFDB9E46F" KeyPath="yes" Source="..\..\data\gui\speedfore.png" />
+      </Component>
+      <Component Id="cmp035454CF5347A7FDD47E6F739A22950D" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A8FA01C5-2243-4A77-BCB8-50F106EDE8ED}">
+        <File Id="filADFFB1825ED15DF661B38B4E4202DF45" KeyPath="yes" Source="..\..\data\gui\top_bar.png" />
+      </Component>
+      <Component Id="cmp39536B9BBB9FAD5B6004F19AE339BDC1" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{C17AB90F-A025-47CB-A972-A5A433974C0D}">
+        <File Id="fil58CFCBEB2A56A914A7FFE8EC7683D90F" KeyPath="yes" Source="..\..\data\gui\tracks.stkgui" />
+      </Component>
+      <Component Id="cmp4AF966E72FAEDF2E6D0961F7A6F0A606" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{5B007B34-4A8F-4A19-A961-1D0754C8C57B}">
+        <File Id="fil58286E3976EF2131772AA35A260C1655" KeyPath="yes" Source="..\..\data\gui\track_info.stkgui" />
+      </Component>
+      <Component Id="cmp761C6EB9366669598AACE3F703B6A07C" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{E9F2F220-4490-4C03-9898-0D915ED75C79}">
+        <File Id="fil50772D17C6224D9796E60B0B87BADC05" KeyPath="yes" Source="..\..\data\gui\track_random.png" />
+      </Component>
+      <Component Id="cmp07858CA8030272BB22AF84DEDA35E0E2" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{EF4B605A-59A0-4B47-9D6D-1630967AEAE6}">
+        <File Id="filE278BEF8871FB1F258855A82280BD638" KeyPath="yes" Source="..\..\data\gui\tutorial.png" />
+      </Component>
+      <Component Id="cmp42A9E2EC2F55846D40E00AAD4C763B33" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{A3953138-381F-4154-A997-507EB826179C}">
+        <File Id="fil36D8533E618B6E060F316FB14F4C56B8" KeyPath="yes" Source="..\..\data\gui\tutorial.stkgui" />
+      </Component>
+      <Component Id="cmpDE5FF6DDB11FA1E57A7AC0158A83E21B" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{AF9D3D29-C2CD-4C22-8F92-B1FF53F00A4E}">
+        <File Id="fil07C308719A893D129E7ADD8943B6EA6E" KeyPath="yes" Source="..\..\data\gui\tutorial_message_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp3B8B270D1CAA61BB550457C1E5769A42" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{36494D28-026B-4354-B557-8079082452FD}">
+        <File Id="filDE6799B5E80C3009631DE375B0744B73" KeyPath="yes" Source="..\..\data\gui\up.png" />
+      </Component>
+      <Component Id="cmpF360E82EEA9E836F696FD96408AF51BE" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{F24B0D85-2939-4C5F-96DD-F05C377DF2D5}">
+        <File Id="fil0916E2ECDA52933EA01F2CA54A111205" KeyPath="yes" Source="..\..\data\gui\user_screen.stkgui" />
+      </Component>
+      <Component Id="cmp2AC9936A6617220D90DCBDA03A2905C4" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{8BA7B505-4AFF-4AE0-90D6-5ADA3E403514}">
+        <File Id="fil2FF606548B3563725E60E47A0CDAEF4B" KeyPath="yes" Source="..\..\data\gui\user_screen_tab.stkgui" />
+      </Component>
+      <Component Id="cmp7338C75B7E0BC455DE1126F2B70F5510" Directory="dir65BD4773B017B3720F73A850383DD6DD" Guid="{484BF34A-58EA-4E40-909B-55DC49072FB8}">
+        <File Id="filE9040666674E235460D7CF496DB28810" KeyPath="yes" Source="..\..\data\gui\weapons.png" />
+      </Component>
+      <Component Id="cmp516ADE09D5A9712151071945125E0025" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{D78BED62-84B5-4446-8584-F65726CD1C51}">
+        <File Id="fil87ECA97F89E9CABB5775F6C9470F789D" KeyPath="yes" Source="..\..\data\gui\online\change_password.stkgui" />
+      </Component>
+      <Component Id="cmp429E51C3322B8B184DAACF862A59AE3E" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{A397F1B8-B4D0-4439-A62C-10D107160D03}">
+        <File Id="filCF913A78974A48E2AC4A3C4AE0C15CA6" KeyPath="yes" Source="..\..\data\gui\online\create_server.stkgui" />
+      </Component>
+      <Component Id="cmp7F6DFA94232EAF655FA2CC2CFA4727F1" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{E1328D9F-F75B-4CCA-942A-050A676E1921}">
+        <File Id="fil58900A9A1BCAB7AFBCC7142B5CC363D7" KeyPath="yes" Source="..\..\data\gui\online\guest_login.stkgui" />
+      </Component>
+      <Component Id="cmp243C38702597638596176CDC392AE575" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{C1289946-1F19-4B2F-930F-E763920DFC5E}">
+        <File Id="fil3505EE0AD0C0CAE17AB1B1B3533C63B2" KeyPath="yes" Source="..\..\data\gui\online\lobby.stkgui" />
+      </Component>
+      <Component Id="cmp10390560E2A875719495776CAECDB1DF" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{CE632DDD-018A-49EB-85FD-4CA8E3DD9A3B}">
+        <File Id="fil94A04B134288E6BF5E16E5F8CC42046A" KeyPath="yes" Source="..\..\data\gui\online\lobby_settings.stkgui" />
+      </Component>
+      <Component Id="cmp73FDCF4EA79613B8649DD10DAB4FDFCF" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{57F57E7E-B8A7-4DB4-954D-6EDA56748353}">
+        <File Id="fil947E576320A2E6CDA080C08ADF7A0281" KeyPath="yes" Source="..\..\data\gui\online\main.stkgui" />
+      </Component>
+      <Component Id="cmp685B371EBB3E42074D8E5FA058D3236B" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{23B89C0F-DFE5-4594-8D02-92119ACC7AAD}">
+        <File Id="fil2FBD0FCC3DAAD4609448D5489BA7AB86" KeyPath="yes" Source="..\..\data\gui\online\menu_create_server.png" />
+      </Component>
+      <Component Id="cmp5C5E2E2A56BA0CB4033973AEF6EB476D" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{2625B2AE-5900-42CF-9096-F6FC9422C118}">
+        <File Id="fil48134BDC2E2A0E82D10CCD4B882C8483" KeyPath="yes" Source="..\..\data\gui\online\menu_create_server_hover.png" />
+      </Component>
+      <Component Id="cmpBA60399D60AC597CF7934280C25F4A48" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{0A39F64F-70A8-4296-B418-E2B575B2AA37}">
+        <File Id="filCC33A6AD2F188F981F2C7CC4B52EA99F" KeyPath="yes" Source="..\..\data\gui\online\menu_find_server.png" />
+      </Component>
+      <Component Id="cmp7F5A0B887E38E130606904AFAE009D82" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{8B7EC179-F9A0-47BC-AD06-B391FC28C34A}">
+        <File Id="fil8906B9CDDB30085A9130F7F51F39A2A4" KeyPath="yes" Source="..\..\data\gui\online\menu_find_server_hover.png" />
+      </Component>
+      <Component Id="cmpD7DD5C1EFE0C48ADFECFC03782866BA3" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{4D05B005-2558-4CF1-8E31-70EA0082B384}">
+        <File Id="fil42E8328A26837376A9ACD17A7B59EDEF" KeyPath="yes" Source="..\..\data\gui\online\menu_quick_play.png" />
+      </Component>
+      <Component Id="cmp3CC117B9877F8461F646A7B4A3934A1A" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{C5C7E8C4-CEE5-4C39-A7FE-2C0552041241}">
+        <File Id="fil51CA7FDF6075502EAE3108EBB34D6A21" KeyPath="yes" Source="..\..\data\gui\online\menu_quick_play_hover.png" />
+      </Component>
+      <Component Id="cmp94519D63E93B13F9DCD328E9A2E7BD3F" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{3DB9F0CB-6F1D-4CA0-8286-B9E6C4F628CC}">
+        <File Id="filEEF9FCAC68F085A58681F240F4D22878" KeyPath="yes" Source="..\..\data\gui\online\notification_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp8A03AF2E6762A34DC32576FEE6BAF034" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{F34E201B-B732-4B58-9482-AD8D495DED6D}">
+        <File Id="fil2C2AFCE539515A0266460E3ECB9121C9" KeyPath="yes" Source="..\..\data\gui\online\profile_achievements.stkgui" />
+      </Component>
+      <Component Id="cmpBBEFA2D5B344EF45D2B3662F6E0FE30D" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{44D8ABA4-8E8E-4E2D-9326-77C41D243334}">
+        <File Id="fil07EA1DCB32D958DBF73738A2D92CD33C" KeyPath="yes" Source="..\..\data\gui\online\profile_achievements_tab.stkgui" />
+      </Component>
+      <Component Id="cmpE72F82E8DBFF2247BC3245ECC9EB78D5" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{EC822E8B-3FFD-4962-AA73-08EAECB3974A}">
+        <File Id="fil084AE2E5AB87685A47BCBB9ED71959FD" KeyPath="yes" Source="..\..\data\gui\online\profile_friends.stkgui" />
+      </Component>
+      <Component Id="cmp14CA82CB8D04BBBCED0F45C07AA89AFA" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{E2FA257C-E0A6-4225-92D5-FC0811F30A1A}">
+        <File Id="fil6D935C1C6201FB94982DBD9176E4AFB2" KeyPath="yes" Source="..\..\data\gui\online\profile_overview.stkgui" />
+      </Component>
+      <Component Id="cmp5D38A25289525B738AF6F4F251BD21A1" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{663CD437-C86E-4F44-A77E-67B67D8D7285}">
+        <File Id="fil52A9045C71BDAE943A1010B5D7399732" KeyPath="yes" Source="..\..\data\gui\online\profile_settings.stkgui" />
+      </Component>
+      <Component Id="cmp9F997F8B8990BD1D572E02CEE4CA6C3F" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{B1FAFCE5-F4E8-48B8-9681-F3872B1F21FD}">
+        <File Id="filBA60D35325EC79C9A6A11FABCA3D0CE4" KeyPath="yes" Source="..\..\data\gui\online\recovery_info.stkgui" />
+      </Component>
+      <Component Id="cmp5DF1CD35FE376806BCFFB0A26ACD3A54" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{6B13EDD4-1E91-48BF-840E-104016659AC7}">
+        <File Id="filD1F62E1E1FCF345EB8A247719278601E" KeyPath="yes" Source="..\..\data\gui\online\recovery_input.stkgui" />
+      </Component>
+      <Component Id="cmpB9952E4FAD3547040B45A3153E18C5A3" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{FF39E70D-D409-42C9-8692-791960DF47CF}">
+        <File Id="fil1797823C577F4698C0DD0160680137EB" KeyPath="yes" Source="..\..\data\gui\online\register.stkgui" />
+      </Component>
+      <Component Id="cmp7AABA4035C38D181FBABA934C3776C05" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{2BFEA3AE-77A9-46E4-B1CF-81BAF9F5A398}">
+        <File Id="fil49B0A710808B4A6F3455F035D22DD52A" KeyPath="yes" Source="..\..\data\gui\online\registration_terms.stkgui" />
+      </Component>
+      <Component Id="cmp3079F53BD0CB60C36B92B0D92397FA15" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{E17888CB-1FB2-47AF-8314-FCE83DB14374}">
+        <File Id="fil176A6C8A04D57F4855C2AAC8B11F1119" KeyPath="yes" Source="..\..\data\gui\online\server_info_dialog.stkgui" />
+      </Component>
+      <Component Id="cmpD2AAE5CAB8A4968F49B6924D1EB0AAFE" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{E886EB28-C55A-4C1E-92FC-651A5A1108CC}">
+        <File Id="filD61325FE6E6DEF53175A425912BE0397" KeyPath="yes" Source="..\..\data\gui\online\server_selection.stkgui" />
+      </Component>
+      <Component Id="cmpE825C07839F9E9A4639E646BF37201BF" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{26498E04-74C1-445B-8411-E84B84A3ED6F}">
+        <File Id="fil26008F946141682A6EECD530DF018A74" KeyPath="yes" Source="..\..\data\gui\online\user_info_dialog.stkgui" />
+      </Component>
+      <Component Id="cmp9F6BE5FD8F9128A3C5FBBC61A8B85F9F" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{77E763D0-0640-40F1-9BB2-79559E9AD160}">
+        <File Id="fil222F308954C44D51EABAE84C6581EE33" KeyPath="yes" Source="..\..\data\gui\online\user_search.stkgui" />
+      </Component>
+      <Component Id="cmp020A8B53C7A7843BDCE8AE7CAD10049C" Directory="dir4B4D33921FBC050AB1E6B74F343304A3" Guid="{3CF8CB59-4A44-49E8-8E80-F352FB1B7E57}">
+        <File Id="fil574FC027A333ED313B15F0994F5773C2" KeyPath="yes" Source="..\..\data\gui\online\vote_dialog.stkgui" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
