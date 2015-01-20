@@ -8,8 +8,12 @@
     <Media Id="1" Cabinet="Supertuxkart.cab" EmbedCab="yes" CompressionLevel="high" />
     <UIRef Id="WixUI_Mondo" />
 
+    <Property Id="NSISINSTALLFOLDER">
+      <RegistrySearch Id="NSISDirRegistry" Type="raw" Root="HKCU" Key="Software\SuperTuxKart"/>
+    </Property>
+
     <Property Id="INSTALLFOLDER">
-      <RegistrySearch Id="InstallDirRegistry" Type="raw" Root="HKCU" Key="Software\SuperTuxKart" Name="InstallDir" />
+      <RegistrySearch Id="InstallDirRegistry" Type="raw" Root="HKCU" Key="Software\SuperTuxKart" Name="InstallDir"/>
     </Property>
 
     <Feature Id="STK" Title="SuperTuxKart" Description="The game" Display="expand" ConfigurableDirectory="INSTALLFOLDER" Level="1">
@@ -30,10 +34,15 @@
       <ComponentGroupRef Id="textures" />
       <ComponentGroupRef Id="tracks" />
       <ComponentGroupRef Id="misc" />
+      <Feature Id="RemoveNSIS" Title="Remove Older Supertuxkart" Description="Remove previously detected install" Display="expand" Level="1">
+        <Condition Level="0">NSISINSTALLFOLDER=""</Condition>
+        <ComponentGroupRef Id="CleanNSISInstall"/>
+      </Feature>
     </Feature>
     <Feature Id="VCRedist" Title="Visual C++ 12.0 Runtime" Display="expand" Level="1">
       <MergeRef Id="VCRedist"/>
     </Feature>
+
 
     <WixVariable Id="WixUIBannerBmp" Value="../../src/windows_installer/logo_slim.bmp" />
     <WixVariable Id="WixUIDialogBmp" Value="../../src/windows_installer/stk_installer.bmp" />
@@ -257,7 +266,12 @@
         <RegistryKey Root="HKCU" Key="Software\SuperTuxKart">
           <RegistryValue Type="string" Name="InstallDir" Value="[INSTALLFOLDER]"/>
         </RegistryKey>
-        <util:RemoveFolderEx On="install" Property="INSTALLFOLDER" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="CleanNSISInstall" Directory="INSTALLFOLDER">
+      <Component Id="RemoveFolder" Guid="4660F2AB-60FD-4C2C-A466-8F640C21EC96" KeyPath="yes">
+        <util:RemoveFolderEx On="install" Property="NSISINSTALLFOLDER" />
+        <RemoveRegistryValue Root="HKCU" Key="Software\SuperTuxKart" />
       </Component>
     </ComponentGroup>
   </Fragment>
