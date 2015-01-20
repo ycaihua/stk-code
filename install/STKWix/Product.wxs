@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
   <Product Id="36F3F5EF-6601-4AD2-8E3C-1D8287E4B482" Name="SuperTuxKart" Language="1033" Version="0.8.2" Manufacturer="STK Team" UpgradeCode="fad3e579-dbeb-457a-a06f-6630a0ced8ec">
     <Package InstallerVersion="405" Compressed="yes" InstallScope="perMachine" />
 
@@ -256,6 +257,7 @@
         <RegistryKey Root="HKCU" Key="Software\SuperTuxKart">
           <RegistryValue Type="string" Name="InstallDir" Value="[INSTALLFOLDER]"/>
         </RegistryKey>
+        <util:RemoveFolderEx On="install" Property="INSTALLFOLDER" />
       </Component>
     </ComponentGroup>
   </Fragment>
