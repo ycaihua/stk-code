@@ -1,6 +1,83 @@
 #include "stkview.hpp"
+#include "irr_driver.hpp"
 #include <cassert>
+#include <SViewFrustum.h>
 
+STKView::STKView()
+{
+    reset();
+}
+
+STKView::~STKView()
+{
+
+}
+
+void STKView::reset()
+{
+    memset(m_shadow_camnodes, 0, 4 * sizeof(void*));
+}
+
+void STKView::addViewFrustrumCascadeIntersection(const scene::SViewFrustum *frustrum, unsigned cascade)
+{
+    float tmp[24] = {
+        frustrum->getFarLeftDown().X,
+        frustrum->getFarLeftDown().Y,
+        frustrum->getFarLeftDown().Z,
+        frustrum->getFarLeftUp().X,
+        frustrum->getFarLeftUp().Y,
+        frustrum->getFarLeftUp().Z,
+        frustrum->getFarRightDown().X,
+        frustrum->getFarRightDown().Y,
+        frustrum->getFarRightDown().Z,
+        frustrum->getFarRightUp().X,
+        frustrum->getFarRightUp().Y,
+        frustrum->getFarRightUp().Z,
+        frustrum->getNearLeftDown().X,
+        frustrum->getNearLeftDown().Y,
+        frustrum->getNearLeftDown().Z,
+        frustrum->getNearLeftUp().X,
+        frustrum->getNearLeftUp().Y,
+        frustrum->getNearLeftUp().Z,
+        frustrum->getNearRightDown().X,
+        frustrum->getNearRightDown().Y,
+        frustrum->getNearRightDown().Z,
+        frustrum->getNearRightUp().X,
+        frustrum->getNearRightUp().Y,
+        frustrum->getNearRightUp().Z,
+    };
+    memcpy(m_shadows_cam[cascade], tmp, 24 * sizeof(float));
+}
+
+const float *STKView::getViewFrustrumCascadeVertices(unsigned cascade) const
+{
+    return m_shadows_cam[cascade];
+}
+
+void STKView::addCascadeCamera(const scene::ICameraSceneNode *SunCamera, const core::matrix4 &ProjectionMatrix)
+{
+    unsigned i = sun_ortho_matrix.size();
+    m_shadow_camnodes[i] = (scene::ICameraSceneNode *) const_cast<scene::ICameraSceneNode *>(SunCamera)->clone();
+
+    m_shadow_camnodes[i]->setProjectionMatrix(ProjectionMatrix, true);
+    m_shadow_camnodes[i]->render();
+    sun_ortho_matrix.push_back(irr_driver->getVideoDriver()->getTransform(video::ETS_PROJECTION) * irr_driver->getVideoDriver()->getTransform(video::ETS_VIEW));
+}
+
+const scene::ICameraSceneNode *STKView::getCascadeCamera(unsigned cascade) const
+{
+    return m_shadow_camnodes[cascade];
+}
+
+void STKView::setCascadeRelativeScale(float horizontal, float vertical, unsigned cascade)
+{
+    m_shadow_scales[cascade] = std::make_pair(horizontal, vertical);
+}
+
+std::pair<float, float> STKView::getRelativeScale(unsigned cascade) const
+{
+    return m_shadow_scales[cascade];
+}
 
 void STKView::setViewMatrix(core::matrix4 matrix)
 {
@@ -41,11 +118,11 @@ void STKView::genProjViewMatrix()
     m_InvProjViewMatrix = m_ProjViewMatrix;
     m_InvProjViewMatrix.makeInverse();
     sun_ortho_matrix.clear();
-}
-
-void STKView::addShadowViewProj(const core::matrix4 &m)
-{
-    sun_ortho_matrix.push_back(m);
+    for (unsigned i = 0; i < 4; i++)
+    {
+        if (m_shadow_camnodes[i])
+            delete m_shadow_camnodes[i];
+    }
 }
 
 const std::vector<core::matrix4> &STKView::getShadowViewProj() const

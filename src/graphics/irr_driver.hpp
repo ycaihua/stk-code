@@ -300,9 +300,6 @@ private:
     scene::ICameraSceneNode *m_suncam;
     core::vector3df m_sundirection;
     video::SColorf m_suncolor;
-    std::pair<float, float> m_shadow_scales[4];
-    scene::ICameraSceneNode *m_shadow_camnodes[4];
-    float m_shadows_cam[4][24];
     STKView m_CurrentView;
 
     std::vector<GlowData> m_glowing;

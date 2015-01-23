@@ -591,7 +591,7 @@ void IrrDriver::renderParticles()
 //    m_scene_manager->drawAll(scene::ESNRP_TRANSPARENT_EFFECT);
 }
 
-static void renderWireFrameFrustrum(float *tmp, unsigned i)
+static void renderWireFrameFrustrum(const float *tmp, unsigned i)
 {
     glUseProgram(MeshShader::ViewFrustrumShader::getInstance()->Program);
     glBindVertexArray(MeshShader::ViewFrustrumShader::getInstance()->frustrumvao);
@@ -608,16 +608,16 @@ void IrrDriver::renderShadowsDebug()
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glViewport(0, UserConfigParams::m_height / 2, UserConfigParams::m_width / 2, UserConfigParams::m_height / 2);
     m_post_processing->renderTextureLayer(m_rtts->getShadowFBO().getRTT()[0], 0);
-    renderWireFrameFrustrum(m_shadows_cam[0], 0);
+    renderWireFrameFrustrum(getCurrentView().getViewFrustrumCascadeVertices(0), 0);
     glViewport(UserConfigParams::m_width / 2, UserConfigParams::m_height / 2, UserConfigParams::m_width / 2, UserConfigParams::m_height / 2);
     m_post_processing->renderTextureLayer(m_rtts->getShadowFBO().getRTT()[0], 1);
-    renderWireFrameFrustrum(m_shadows_cam[1], 1);
+    renderWireFrameFrustrum(getCurrentView().getViewFrustrumCascadeVertices(1), 1);
     glViewport(0, 0, UserConfigParams::m_width / 2, UserConfigParams::m_height / 2);
     m_post_processing->renderTextureLayer(m_rtts->getShadowFBO().getRTT()[0], 2);
-    renderWireFrameFrustrum(m_shadows_cam[2], 2);
+    renderWireFrameFrustrum(getCurrentView().getViewFrustrumCascadeVertices(2), 2);
     glViewport(UserConfigParams::m_width / 2, 0, UserConfigParams::m_width / 2, UserConfigParams::m_height / 2);
     m_post_processing->renderTextureLayer(m_rtts->getShadowFBO().getRTT()[0], 3);
-    renderWireFrameFrustrum(m_shadows_cam[3], 3);
+    renderWireFrameFrustrum(getCurrentView().getViewFrustrumCascadeVertices(3), 3);
     glViewport(0, 0, UserConfigParams::m_width, UserConfigParams::m_height);
 }
 

@@ -180,6 +180,8 @@ static void addEdge(const core::vector3df &P0, const core::vector3df &P1)
 static
 bool isCulledPrecise(const scene::ICameraSceneNode *cam, const scene::ISceneNode *node)
 {
+    if (!cam)
+        return true;
     if (!node->getAutomaticCulling())
         return false;
 
@@ -199,7 +201,7 @@ bool isCulledPrecise(const scene::ICameraSceneNode *cam, const scene::ISceneNode
 
 static void
 handleSTKCommon(scene::ISceneNode *Node, std::vector<scene::ISceneNode *> *ImmediateDraw,
-    const scene::ICameraSceneNode *cam, scene::ICameraSceneNode *shadowcam[4], const scene::ICameraSceneNode *rsmcam,
+    const scene::ICameraSceneNode *cam, const scene::ICameraSceneNode *shadowcam[4], const scene::ICameraSceneNode *rsmcam,
     bool &culledforcam, bool culledforshadowcam[4], bool &culledforrsm, bool drawRSM)
 {
     STKMeshCommon *node = dynamic_cast<STKMeshCommon*>(Node);
@@ -485,7 +487,7 @@ handleSTKCommon(scene::ISceneNode *Node, std::vector<scene::ISceneNode *> *Immed
 
 static void
 parseSceneManager(core::list<scene::ISceneNode*> &List, std::vector<scene::ISceneNode *> *ImmediateDraw,
-    const scene::ICameraSceneNode* cam, scene::ICameraSceneNode *shadow_cam[4], const scene::ICameraSceneNode *rsmcam,
+    const scene::ICameraSceneNode* cam, const scene::ICameraSceneNode *shadow_cam[4], const scene::ICameraSceneNode *rsmcam,
     bool culledforcam, bool culledforshadowcam[4], bool culledforrsm, bool drawRSM)
 {
     core::list<scene::ISceneNode*>::Iterator I = List.begin(), E = List.end();
@@ -583,7 +585,14 @@ PROFILER_PUSH_CPU_MARKER("- culling", 0xFF, 0xFF, 0x0);
 
     bool cam = false, rsmcam = false;
     bool shadowcam[4] = { false, false, false, false };
-    parseSceneManager(List, ImmediateDrawList::getInstance(), camnode, m_shadow_camnodes, m_suncam, cam, shadowcam, rsmcam, !m_rsm_map_available);
+    const scene::ICameraSceneNode *CascedesCam[4] =
+    {
+        irr_driver->getCurrentView().getCascadeCamera(0),
+        irr_driver->getCurrentView().getCascadeCamera(1),
+        irr_driver->getCurrentView().getCascadeCamera(2),
+        irr_driver->getCurrentView().getCascadeCamera(3)
+    };
+    parseSceneManager(List, ImmediateDrawList::getInstance(), camnode, CascedesCam, m_suncam, cam, shadowcam, rsmcam, !m_rsm_map_available);
 PROFILER_POP_CPU_MARKER();
 
     // Add a 1 s timeout
