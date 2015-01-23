@@ -539,7 +539,7 @@ void PostProcessing::renderMotionBlur(unsigned cam, FrameBuffer &in_fbo, FrameBu
     FullScreenShader::MotionBlurShader::getInstance()->SetTextureUnits(in_fbo.getRTT()[0], irr_driver->getDepthStencilTexture());
     DrawFullScreenEffect<FullScreenShader::MotionBlurShader>(
                                   // Todo : use a previousPVMatrix per cam, not global
-                                  irr_driver->getPreviousPVMatrix(),
+                                  irr_driver->getCurrentView().getPreviousPVMatrix(),
                                   cb->getCenter(cam),
                                   cb->getBoostTime(0) * 10, // Todo : should be framerate dependent
                                   0.15f);
