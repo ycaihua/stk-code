@@ -38,6 +38,7 @@
 #include "ISkinnedMesh.h"
 //#include "graphics/rtts.hpp"
 #include "graphics/shaders.hpp"
+#include "graphics/stkview.hpp"
 #include "graphics/wind.hpp"
 #include "io/file_manager.hpp"
 #include "utils/aligned_array.hpp"
@@ -202,13 +203,13 @@ private:
     Wind                 *m_wind;
     /** RTTs. */
     RTT                *m_rtts;
-    std::vector<core::matrix4> sun_ortho_matrix;
+
     core::vector3df    rh_extend;
     core::matrix4      rh_matrix;
     core::matrix4      rsm_matrix;
     bool               m_rsm_matrix_initialized;
     bool               m_rsm_map_available;
-    core::vector2df    m_current_screen_size;
+
 
     /** Additional details to be shown in case that a texture is not found.
      *  This is used to specify details like: "while loading kart '...'" */
@@ -216,9 +217,6 @@ private:
 
     /** The main MRT setup. */
     core::array<video::IRenderTarget> m_mrt;
-
-    /** Matrixes used in several places stored here to avoid recomputation. */
-    core::matrix4 m_ViewMatrix, m_InvViewMatrix, m_ProjMatrix, m_InvProjMatrix, m_ProjViewMatrix, m_previousProjViewMatrix, m_InvProjViewMatrix;
 
     std::vector<video::ITexture *> SkyboxTextures;
     std::vector<video::ITexture *> SphericalHarmonicsTextures;
@@ -305,6 +303,7 @@ private:
     std::pair<float, float> m_shadow_scales[4];
     scene::ICameraSceneNode *m_shadow_camnodes[4];
     float m_shadows_cam[4][24];
+    STKView m_CurrentView;
 
     std::vector<GlowData> m_glowing;
 
@@ -360,10 +359,7 @@ public:
     void renderSkybox(const scene::ICameraSceneNode *camera);
     void setPhase(STKRenderingPass);
     STKRenderingPass getPhase() const;
-    const std::vector<core::matrix4> &getShadowViewProj() const
-    {
-        return sun_ortho_matrix;
-    }
+
     void IncreaseObjectCount();
     void IncreasePolyCount(unsigned);
     core::array<video::IRenderTarget> &getMainSetup();
@@ -459,7 +455,7 @@ public:
                         const video::SColor *cb=NULL,
                         const video::SColor *cc=NULL);
 
-
+    STKView &getCurrentView() { return m_CurrentView; }
 
     // ------------------------------------------------------------------------
     /** Convenience function that loads a texture with default parameters
@@ -669,18 +665,6 @@ public:
     class STKMeshSceneNode *getSunInterposer() { return m_sun_interposer; }
     void cleanSunInterposer();
     void createSunInterposer();
-    // ------------------------------------------------------------------------
-    void setViewMatrix(core::matrix4 matrix) { m_ViewMatrix = matrix; matrix.getInverse(m_InvViewMatrix); }
-    const core::matrix4 &getViewMatrix() const { return m_ViewMatrix; }
-    const core::matrix4 &getInvViewMatrix() const { return m_InvViewMatrix; }
-    void setProjMatrix(core::matrix4 matrix) { m_ProjMatrix = matrix; matrix.getInverse(m_InvProjMatrix); }
-    const core::matrix4 &getProjMatrix() const { return m_ProjMatrix; }
-    const core::matrix4 &getInvProjMatrix() const { return m_InvProjMatrix; }
-    void genProjViewMatrix() { m_previousProjViewMatrix = m_ProjViewMatrix; m_ProjViewMatrix = m_ProjMatrix * m_ViewMatrix; m_InvProjViewMatrix = m_ProjViewMatrix; m_InvProjViewMatrix.makeInverse(); }
-    const core::matrix4 & getPreviousPVMatrix() { return m_previousProjViewMatrix; }
-    const core::matrix4 &getProjViewMatrix() const { return m_ProjViewMatrix; }
-    const core::matrix4 &getInvProjViewMatrix() const { return m_InvProjViewMatrix; }
-    const core::vector2df &getCurrentScreenSize() const { return m_current_screen_size; }
     // ------------------------------------------------------------------------
     float getSSAORadius() const
     {

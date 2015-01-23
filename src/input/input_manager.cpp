@@ -967,7 +967,7 @@ EventPropagation InputManager::input(const SEvent& event)
             {
                 Camera *cam = Camera::getActiveCamera();
                 // Center of the screen
-                core::vector2df screen_size = irr_driver->getCurrentScreenSize();
+                core::vector2df screen_size = irr_driver->getCurrentView().getCurrentScreenSize();
                 int mid_x = (int) screen_size.X / 2;
                 int mid_y = (int) screen_size.Y / 2;
                 // Relative mouse movement

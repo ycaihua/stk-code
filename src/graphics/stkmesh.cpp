@@ -226,8 +226,8 @@ void fillLocalBuffer(GLMesh &mesh, scene::IMeshBuffer* mb)
 
 core::matrix4 computeMVP(const core::matrix4 &ModelMatrix)
 {
-    core::matrix4 ModelViewProjectionMatrix = irr_driver->getProjMatrix();
-    ModelViewProjectionMatrix *= irr_driver->getViewMatrix();
+    core::matrix4 ModelViewProjectionMatrix = irr_driver->getCurrentView().getProjMatrix();
+    ModelViewProjectionMatrix *= irr_driver->getCurrentView().getViewMatrix();
     ModelViewProjectionMatrix *= ModelMatrix;
     return ModelViewProjectionMatrix;
 }

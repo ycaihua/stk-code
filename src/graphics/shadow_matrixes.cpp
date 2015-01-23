@@ -225,11 +225,11 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
         UpdateSplitAndLightcoordRangeFromComputeShaders(width, height);
     static_cast<scene::CSceneManager *>(m_scene_manager)->OnAnimate(os::Timer::getTime());
     camnode->render();
-    irr_driver->setProjMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_PROJECTION));
-    irr_driver->setViewMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_VIEW));
-    irr_driver->genProjViewMatrix();
+    getCurrentView().setProjMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_PROJECTION));
+    getCurrentView().setViewMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_VIEW));
+    getCurrentView().genProjViewMatrix();
 
-    m_current_screen_size = core::vector2df(float(width), float(height));
+    getCurrentView().setViewportSize(core::vector2df(float(width), float(height)));
 
     const float oldfar = camnode->getFarValue();
     const float oldnear = camnode->getNearValue();
@@ -249,11 +249,11 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
     };
 
     float tmp[16 * 9 + 2];
-    memcpy(tmp, irr_driver->getViewMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[16], irr_driver->getProjMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[32], irr_driver->getInvViewMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[48], irr_driver->getInvProjMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[64], irr_driver->getProjViewMatrix().pointer(), 16 * sizeof(float));
+    memcpy(tmp, getCurrentView().getViewMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[16], getCurrentView().getProjMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[32], getCurrentView().getInvViewMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[48], getCurrentView().getInvProjMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[64], getCurrentView().getProjViewMatrix().pointer(), 16 * sizeof(float));
 
     m_suncam->render();
     for (unsigned i = 0; i < 4; i++)
@@ -262,7 +262,7 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
             delete m_shadow_camnodes[i];
         m_shadow_camnodes[i] = (scene::ICameraSceneNode *) m_suncam->clone();
     }
-    sun_ortho_matrix.clear();
+
     const core::matrix4 &SunCamViewMatrix = m_suncam->getViewMatrix();
 
     if (World::getWorld() && World::getWorld()->getTrack())
@@ -339,7 +339,7 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
             m_shadow_camnodes[i]->setProjectionMatrix(tmp_matrix, true);
             m_shadow_camnodes[i]->render();
 
-            sun_ortho_matrix.push_back(getVideoDriver()->getTransform(video::ETS_PROJECTION) * getVideoDriver()->getTransform(video::ETS_VIEW));
+            getCurrentView().addShadowViewProj(getVideoDriver()->getTransform(video::ETS_PROJECTION) * getVideoDriver()->getTransform(video::ETS_VIEW));
         }
 
         // Rsm Matrix and camera
@@ -367,16 +367,14 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
         core::vector3df translation(8 * floor(campos.X / 8), 8 * floor(campos.Y / 8), 8 * floor(campos.Z / 8));
         rh_matrix.setTranslation(translation);
 
-
-        assert(sun_ortho_matrix.size() == 4);
         // reset normal camera
         camnode->setNearValue(oldnear);
         camnode->setFarValue(oldfar);
         camnode->render();
 
-        size_t size = irr_driver->getShadowViewProj().size();
+        size_t size = getCurrentView().getShadowViewProj().size();
         for (unsigned i = 0; i < size; i++)
-            memcpy(&tmp[16 * i + 80], irr_driver->getShadowViewProj()[i].pointer(), 16 * sizeof(float));
+            memcpy(&tmp[16 * i + 80], getCurrentView().getShadowViewProj()[i].pointer(), 16 * sizeof(float));
     }
 
     tmp[144] = float(width);
