@@ -1042,8 +1042,8 @@ void IrrDriver::renderShadows()
             for (unsigned i = 0; i < 2; i++)
             {
                 m_post_processing->renderGaussian6BlurLayer(m_rtts->getShadowFBO(), i,
-                    2.f * m_shadow_scales[0].first / m_shadow_scales[i].first,
-                    2.f * m_shadow_scales[0].second / m_shadow_scales[i].second);
+                    2.f * irr_driver->getCurrentView().getRelativeScale(0).first / irr_driver->getCurrentView().getRelativeScale(i).first,
+                    2.f * irr_driver->getCurrentView().getRelativeScale(0).second / irr_driver->getCurrentView().getRelativeScale(i).second);
             }
         }
         glBindTexture(GL_TEXTURE_2D_ARRAY, m_rtts->getShadowFBO().getRTT()[0]);

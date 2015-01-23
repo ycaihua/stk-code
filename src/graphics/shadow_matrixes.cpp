@@ -32,10 +32,10 @@ getFrustrumVertex(const scene::SViewFrustum &frustrum)
 transformed points between -1 and 1.
 *  \param transform a transform matrix.
 *  \param pointsInside a vector of point in 3d space.
-*  \param size returns the size (width, height) of shadowmap coverage
+*  \param returns the size (width, height) of shadowmap coverage
 */
 static core::matrix4
-getTighestFitOrthoProj(const core::matrix4 &transform, const std::vector<vector3df> &pointsInside, std::pair<float, float> &size)
+getTighestFitOrthoProj(const core::matrix4 &transform, const std::vector<vector3df> &pointsInside, float &horizontal, float &vertical)
 {
     float xmin = std::numeric_limits<float>::infinity();
     float xmax = -std::numeric_limits<float>::infinity();
@@ -61,8 +61,8 @@ getTighestFitOrthoProj(const core::matrix4 &transform, const std::vector<vector3
     float up = ymin;
     float down = ymax;
 
-    size.first = right - left;
-    size.second = down - up;
+    horizontal = right - left;
+    vertical = down - up;
 
     core::matrix4 tmp_matrix;
     // Prevent Matrix without extend
@@ -225,11 +225,11 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
         UpdateSplitAndLightcoordRangeFromComputeShaders(width, height);
     static_cast<scene::CSceneManager *>(m_scene_manager)->OnAnimate(os::Timer::getTime());
     camnode->render();
-    irr_driver->setProjMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_PROJECTION));
-    irr_driver->setViewMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_VIEW));
-    irr_driver->genProjViewMatrix();
+    getCurrentView().setProjMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_PROJECTION));
+    getCurrentView().setViewMatrix(irr_driver->getVideoDriver()->getTransform(video::ETS_VIEW));
+    getCurrentView().genProjViewMatrix();
 
-    m_current_screen_size = core::vector2df(float(width), float(height));
+    getCurrentView().setViewportSize(core::vector2df(float(width), float(height)));
 
     const float oldfar = camnode->getFarValue();
     const float oldnear = camnode->getNearValue();
@@ -249,20 +249,14 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
     };
 
     float tmp[16 * 9 + 2];
-    memcpy(tmp, irr_driver->getViewMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[16], irr_driver->getProjMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[32], irr_driver->getInvViewMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[48], irr_driver->getInvProjMatrix().pointer(), 16 * sizeof(float));
-    memcpy(&tmp[64], irr_driver->getProjViewMatrix().pointer(), 16 * sizeof(float));
+    memcpy(tmp, getCurrentView().getViewMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[16], getCurrentView().getProjMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[32], getCurrentView().getInvViewMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[48], getCurrentView().getInvProjMatrix().pointer(), 16 * sizeof(float));
+    memcpy(&tmp[64], getCurrentView().getProjViewMatrix().pointer(), 16 * sizeof(float));
 
     m_suncam->render();
-    for (unsigned i = 0; i < 4; i++)
-    {
-        if (m_shadow_camnodes[i])
-            delete m_shadow_camnodes[i];
-        m_shadow_camnodes[i] = (scene::ICameraSceneNode *) m_suncam->clone();
-    }
-    sun_ortho_matrix.clear();
+
     const core::matrix4 &SunCamViewMatrix = m_suncam->getViewMatrix();
 
     if (World::getWorld() && World::getWorld()->getTrack())
@@ -281,42 +275,18 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
         for (unsigned i = 0; i < 4; i++)
         {
             core::matrix4 tmp_matrix;
+            float h, v;
             if (!CVS->isSDSMEnabled())
             {
                 camnode->setFarValue(FarValues[i]);
                 camnode->setNearValue(NearValues[i]);
                 camnode->render();
-                const scene::SViewFrustum *frustrum = camnode->getViewFrustum();
-                float tmp[24] = {
-                    frustrum->getFarLeftDown().X,
-                    frustrum->getFarLeftDown().Y,
-                    frustrum->getFarLeftDown().Z,
-                    frustrum->getFarLeftUp().X,
-                    frustrum->getFarLeftUp().Y,
-                    frustrum->getFarLeftUp().Z,
-                    frustrum->getFarRightDown().X,
-                    frustrum->getFarRightDown().Y,
-                    frustrum->getFarRightDown().Z,
-                    frustrum->getFarRightUp().X,
-                    frustrum->getFarRightUp().Y,
-                    frustrum->getFarRightUp().Z,
-                    frustrum->getNearLeftDown().X,
-                    frustrum->getNearLeftDown().Y,
-                    frustrum->getNearLeftDown().Z,
-                    frustrum->getNearLeftUp().X,
-                    frustrum->getNearLeftUp().Y,
-                    frustrum->getNearLeftUp().Z,
-                    frustrum->getNearRightDown().X,
-                    frustrum->getNearRightDown().Y,
-                    frustrum->getNearRightDown().Z,
-                    frustrum->getNearRightUp().X,
-                    frustrum->getNearRightUp().Y,
-                    frustrum->getNearRightUp().Z,
-                };
-                memcpy(m_shadows_cam[i], tmp, 24 * sizeof(float));
 
-                std::vector<vector3df> vectors = getFrustrumVertex(*frustrum);
-                tmp_matrix = getTighestFitOrthoProj(SunCamViewMatrix, vectors, m_shadow_scales[i]);
+                getCurrentView().addViewFrustrumCascadeIntersection(camnode->getViewFrustum(), i);
+
+
+                std::vector<vector3df> vectors = getFrustrumVertex(*(camnode->getViewFrustum()));
+                tmp_matrix = getTighestFitOrthoProj(SunCamViewMatrix, vectors, h, v);
             }
             else
             {
@@ -332,14 +302,12 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
                         down, up,
                         float(CBB[currentCBB][i].zmin / 4 - 100),
                         float(CBB[currentCBB][i].zmax / 4 + 2));
-                    m_shadow_scales[i] = std::make_pair(right - left, down - up);
+                    h = right - left;
+                    v = down - up;
                 }
             }
-
-            m_shadow_camnodes[i]->setProjectionMatrix(tmp_matrix, true);
-            m_shadow_camnodes[i]->render();
-
-            sun_ortho_matrix.push_back(getVideoDriver()->getTransform(video::ETS_PROJECTION) * getVideoDriver()->getTransform(video::ETS_VIEW));
+            getCurrentView().setCascadeRelativeScale(h, v, i);
+            getCurrentView().addCascadeCamera(m_suncam, tmp_matrix);
         }
 
         // Rsm Matrix and camera
@@ -367,16 +335,14 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
         core::vector3df translation(8 * floor(campos.X / 8), 8 * floor(campos.Y / 8), 8 * floor(campos.Z / 8));
         rh_matrix.setTranslation(translation);
 
-
-        assert(sun_ortho_matrix.size() == 4);
         // reset normal camera
         camnode->setNearValue(oldnear);
         camnode->setFarValue(oldfar);
         camnode->render();
 
-        size_t size = irr_driver->getShadowViewProj().size();
+        size_t size = getCurrentView().getShadowViewProj().size();
         for (unsigned i = 0; i < size; i++)
-            memcpy(&tmp[16 * i + 80], irr_driver->getShadowViewProj()[i].pointer(), 16 * sizeof(float));
+            memcpy(&tmp[16 * i + 80], getCurrentView().getShadowViewProj()[i].pointer(), 16 * sizeof(float));
     }
 
     tmp[144] = float(width);

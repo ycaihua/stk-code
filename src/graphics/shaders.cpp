@@ -530,15 +530,15 @@ void Shaders::check(const int num) const
 void bypassUBO(GLuint Program)
 {
     GLint VM = glGetUniformLocation(Program, "ViewMatrix");
-    glUniformMatrix4fv(VM, 1, GL_FALSE, irr_driver->getViewMatrix().pointer());
+    glUniformMatrix4fv(VM, 1, GL_FALSE, irr_driver->getCurrentView().getViewMatrix().pointer());
     GLint PM = glGetUniformLocation(Program, "ProjectionMatrix");
-    glUniformMatrix4fv(PM, 1, GL_FALSE, irr_driver->getProjMatrix().pointer());
+    glUniformMatrix4fv(PM, 1, GL_FALSE, irr_driver->getCurrentView().getProjMatrix().pointer());
     GLint IVM = glGetUniformLocation(Program, "InverseViewMatrix");
-    glUniformMatrix4fv(IVM, 1, GL_FALSE, irr_driver->getInvViewMatrix().pointer());
+    glUniformMatrix4fv(IVM, 1, GL_FALSE, irr_driver->getCurrentView().getInvViewMatrix().pointer());
     GLint IPM = glGetUniformLocation(Program, "InverseProjectionMatrix");
-    glUniformMatrix4fv(IPM, 1, GL_FALSE, irr_driver->getInvProjMatrix().pointer());
+    glUniformMatrix4fv(IPM, 1, GL_FALSE, irr_driver->getCurrentView().getInvProjMatrix().pointer());
     GLint Screen = glGetUniformLocation(Program, "screen");
-    glUniform2f(Screen, irr_driver->getCurrentScreenSize().X, irr_driver->getCurrentScreenSize().Y);
+    glUniform2f(Screen, irr_driver->getCurrentView().getCurrentScreenSize().X, irr_driver->getCurrentView().getCurrentScreenSize().Y);
     GLint bLmn = glGetUniformLocation(Program, "blueLmn[0]");
     glUniform1fv(bLmn, 9, irr_driver->blueSHCoeff);
     GLint gLmn = glGetUniformLocation(Program, "greenLmn[0]");

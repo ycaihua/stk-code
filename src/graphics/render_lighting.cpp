@@ -162,8 +162,6 @@ void IrrDriver::renderLights(unsigned pointlightcount, bool hasShadow)
         }
     }
 
-    for (unsigned i = 0; i < sun_ortho_matrix.size(); i++)
-        sun_ortho_matrix[i] *= getInvViewMatrix();
     m_rtts->getFBO(FBO_COMBINED_DIFFUSE_SPECULAR).Bind();
     glClear(GL_COLOR_BUFFER_BIT);
 
