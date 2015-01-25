@@ -83,10 +83,10 @@ namespace video
 		virtual void setMaterial(const SMaterial& material);
 
 		//! loads a Texture
-		virtual ITexture* getTexture(const io::path& filename);
+		virtual ITexture* getTexture(const io::path& filename, bool srgb = true, bool compressed = true);
 
 		//! loads a Texture
-		virtual ITexture* getTexture(io::IReadFile* file);
+        virtual ITexture* getTexture(io::IReadFile* file, bool srgb = true, bool compressed = true);
 
 		//! Returns a texture by index
 		virtual ITexture* getTextureByIndex(u32 index);
@@ -670,17 +670,17 @@ namespace video
 		void deleteAllTextures();
 
 		//! opens the file and loads it into the surface
-		video::ITexture* loadTextureFromFile(io::IReadFile* file, const io::path& hashName = "");
+		video::ITexture* loadTextureFromFile(io::IReadFile* file, bool srgb, bool compressed, const io::path& hashName = "");
 
 		//! adds a surface, not loaded or created by the Irrlicht Engine
-		void addTexture(video::ITexture* surface);
+        void addTexture(video::ITexture* surface);
 
 		//! Creates a texture from a loaded IImage.
-		virtual ITexture* addTexture(const io::path& name, IImage* image, void* mipmapData=0);
+        virtual ITexture* addTexture(const io::path& name, IImage* image, void* mipmapData = 0);
 
 		//! returns a device dependent texture from a software surface (IImage)
 		//! THIS METHOD HAS TO BE OVERRIDDEN BY DERIVED DRIVERS WITH OWN TEXTURES
-		virtual video::ITexture* createDeviceDependentTexture(IImage* surface, const io::path& name, void* mipmapData=0);
+        virtual video::ITexture* createDeviceDependentTexture(IImage* surface, const io::path& name, bool srgb, bool compressed, void* mipmapData = 0);
 
 		//! checks triangle count and print warning if wrong
 		bool checkPrimitiveCount(u32 prmcnt) const;

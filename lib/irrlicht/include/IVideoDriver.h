@@ -377,7 +377,7 @@ namespace video
 		\return Pointer to the texture, or 0 if the texture
 		could not be loaded. This pointer should not be dropped. See
 		IReferenceCounted::drop() for more information. */
-		virtual ITexture* getTexture(const io::path& filename) = 0;
+		virtual ITexture* getTexture(const io::path& filename, bool srgb = true, bool compressed = true) = 0;
 
 		//! Get access to a named texture.
 		/** Loads the texture from disk if it is not
@@ -389,7 +389,7 @@ namespace video
 		\return Pointer to the texture, or 0 if the texture
 		could not be loaded. This pointer should not be dropped. See
 		IReferenceCounted::drop() for more information. */
-		virtual ITexture* getTexture(io::IReadFile* file) =0;
+        virtual ITexture* getTexture(io::IReadFile* file, bool srgb = true, bool compressed = true) = 0;
 
 		//! Returns a texture by index
 		/** \param index: Index of the texture, must be smaller than

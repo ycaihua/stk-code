@@ -1489,7 +1489,7 @@ video::ITexture *IrrDriver::getTexture(const std::string &filename,
     if(!is_premul && !is_prediv)
     {
         if (!complain_if_not_found) m_device->getLogger()->setLogLevel(ELL_NONE);
-        out = m_video_driver->getTexture(filename.c_str());
+        out = m_video_driver->getTexture(filename.c_str(), false, false);
         if (!complain_if_not_found) m_device->getLogger()->setLogLevel(ELL_WARNING);
     }
     else

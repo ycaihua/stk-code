@@ -380,7 +380,7 @@ void CNullDriver::renameTexture(ITexture* texture, const io::path& newName)
 
 
 //! loads a Texture
-ITexture* CNullDriver::getTexture(const io::path& filename)
+ITexture* CNullDriver::getTexture(const io::path& filename, bool srgb, bool compressed)
 {
 	// Identify textures by their absolute filenames if possible.
 	const io::path absolutePath = FileSystem->getAbsolutePath(filename);
@@ -413,7 +413,7 @@ ITexture* CNullDriver::getTexture(const io::path& filename)
 			return texture;
 		}
 
-		texture = loadTextureFromFile(file);
+		texture = loadTextureFromFile(file, srgb, compressed);
 		file->drop();
 
 		if (texture)
@@ -434,7 +434,7 @@ ITexture* CNullDriver::getTexture(const io::path& filename)
 
 
 //! loads a Texture
-ITexture* CNullDriver::getTexture(io::IReadFile* file)
+ITexture* CNullDriver::getTexture(io::IReadFile* file, bool srgb, bool compressed)
 {
 	ITexture* texture = 0;
 
@@ -445,7 +445,7 @@ ITexture* CNullDriver::getTexture(io::IReadFile* file)
 		if (texture)
 			return texture;
 
-		texture = loadTextureFromFile(file);
+		texture = loadTextureFromFile(file, srgb, compressed);
 
 		if (texture)
 		{
@@ -462,7 +462,7 @@ ITexture* CNullDriver::getTexture(io::IReadFile* file)
 
 
 //! opens the file and loads it into the surface
-video::ITexture* CNullDriver::loadTextureFromFile(io::IReadFile* file, const io::path& hashName )
+video::ITexture* CNullDriver::loadTextureFromFile(io::IReadFile* file, bool srgb, bool compressed, const io::path& hashName)
 {
 	ITexture* texture = 0;
 	IImage* image = createImageFromFile(file);
@@ -471,9 +471,9 @@ video::ITexture* CNullDriver::loadTextureFromFile(io::IReadFile* file, const io:
 	{
 		// create texture from surface
         if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
-            texture = new COpenGLTexture(image, hashName.size() ? hashName : file->getFileName(), 0, gldrv, false, false);
+            texture = new COpenGLTexture(image, hashName.size() ? hashName : file->getFileName(), 0, gldrv, srgb, compressed);
         else
-    		texture = createDeviceDependentTexture(image, hashName.size() ? hashName : file->getFileName() );
+    		texture = createDeviceDependentTexture(image, hashName.size() ? hashName : file->getFileName(), srgb, compressed);
 		os::Printer::log("Loaded texture", file->getFileName());
 		image->drop();
 	}
@@ -525,10 +525,10 @@ ITexture* CNullDriver::addTexture(const io::path& name, IImage* image, void* mip
 		return 0;
 
     ITexture* t;
-    if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
+/*    if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
         t = new COpenGLTexture(image, name, mipmapData, gldrv, false, false);
-    else
-        t = createDeviceDependentTexture(image, name, mipmapData);
+    else*/
+        t = createDeviceDependentTexture(image, name, true, true, mipmapData);
 	if (t)
 	{
 		addTexture(t);
@@ -553,10 +553,10 @@ ITexture* CNullDriver::addTexture(const core::dimension2d<u32>& size,
 
 	IImage* image = new CImage(format, size);
     ITexture* t;
-    if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
+/*    if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
         t = new COpenGLTexture(image, name, 0, gldrv, false, false);
-    else
-        t = createDeviceDependentTexture(image, name);
+    else*/
+        t = createDeviceDependentTexture(image, name, true, true);
 	image->drop();
 	addTexture(t);
 
@@ -570,7 +570,7 @@ ITexture* CNullDriver::addTexture(const core::dimension2d<u32>& size,
 
 //! returns a device dependent texture from a software surface (IImage)
 //! THIS METHOD HAS TO BE OVERRIDDEN BY DERIVED DRIVERS WITH OWN TEXTURES
-ITexture* CNullDriver::createDeviceDependentTexture(IImage* surface, const io::path& name, void* mipmapData)
+ITexture* CNullDriver::createDeviceDependentTexture(IImage* surface, const io::path& name, bool srgb, bool compressed, void* mipmapData)
 {
 	return new SDummyTexture(name);
 }

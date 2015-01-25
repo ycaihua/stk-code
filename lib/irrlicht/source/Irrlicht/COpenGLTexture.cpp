@@ -330,10 +330,20 @@ void COpenGLTexture::uploadTextureNew(bool newTexture)
         return;
     }
 
-    if (IsSrgb)
-        InternalFormat = hasAlpha() ? GL_COMPRESSED_SRGB_ALPHA : GL_COMPRESSED_SRGB;
+    if (IsCompressed)
+    {
+        if (IsSrgb)
+            InternalFormat = hasAlpha() ? GL_COMPRESSED_SRGB_ALPHA : GL_COMPRESSED_SRGB;
+        else
+            InternalFormat = hasAlpha() ? GL_COMPRESSED_RGBA : GL_COMPRESSED_RGB;
+    }
     else
-        InternalFormat = hasAlpha() ? GL_COMPRESSED_RGBA : GL_COMPRESSED_RGB;
+    {
+        if (IsSrgb)
+            InternalFormat = hasAlpha() ? GL_SRGB_ALPHA : GL_SRGB;
+        else
+            InternalFormat = hasAlpha() ? GL_RGBA : GL_RGB;
+    }
 
     Driver->setActiveTexture(0, this);
     if (Driver->testGLError())
