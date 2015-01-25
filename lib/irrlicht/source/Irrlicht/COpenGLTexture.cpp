@@ -20,7 +20,7 @@ namespace video
 {
     extern bool useCoreContext;
 //! constructor for usual textures
-COpenGLTexture::COpenGLTexture(IImage* origImage, const io::path& name, void* mipmapData, COpenGLDriver* driver)
+COpenGLTexture::COpenGLTexture(IImage* origImage, const io::path& name, void* mipmapData, COpenGLDriver* driver, bool srgb, bool compressed)
 	: ITexture(name), ColorFormat(ECF_A8R8G8B8), Driver(driver), Image(0), MipImage(0),
 	TextureName(0), InternalFormat(GL_RGBA), PixelFormat(GL_BGRA_EXT),
 	PixelType(GL_UNSIGNED_BYTE), MipLevelStored(0), MipmapLegacyMode(true),
@@ -47,7 +47,10 @@ COpenGLTexture::COpenGLTexture(IImage* origImage, const io::path& name, void* mi
 		// scale texture
 		origImage->copyToScaling(Image);
 	}
-	uploadTexture(true, mipmapData);
+    if (useCoreContext)
+        uploadTextureNew(true);
+    else
+        uploadTexture(true, mipmapData);
 	if (!KeepImage)
 	{
 		Image->drop();
@@ -317,6 +320,38 @@ void COpenGLTexture::getImageValues(IImage* image)
 
 	ColorFormat = getBestColorFormat(image->getColorFormat());
 }
+
+void COpenGLTexture::uploadTextureNew(bool newTexture)
+{
+    IImage* image = Image;
+    if (!image)
+    {
+        os::Printer::log("No image for OpenGL texture to upload", ELL_ERROR);
+        return;
+    }
+
+    InternalFormat = hasAlpha() ? GL_COMPRESSED_SRGB_ALPHA : GL_COMPRESSED_SRGB;
+
+    Driver->setActiveTexture(0, this);
+    if (Driver->testGLError())
+        os::Printer::log("Could not bind Texture", ELL_ERROR);
+
+    // now get image data and upload to GPU
+    void* source = image->lock();
+    if (newTexture)
+        glTexImage2D(GL_TEXTURE_2D, 0, InternalFormat, image->getDimension().Width,
+            image->getDimension().Height, 0, PixelFormat, PixelType, source);
+    else
+        glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, image->getDimension().Width,
+            image->getDimension().Height, PixelFormat, PixelType, source);
+    image->unlock();
+
+    Driver->extGlGenerateMipmap(GL_TEXTURE_2D);
+
+    if (Driver->testGLError())
+        os::Printer::log("Could not glTexImage2D", ELL_ERROR);
+}
+
 
 
 //! copies the the texture into an open gl texture.

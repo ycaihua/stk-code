@@ -51,7 +51,7 @@ class COpenGLTexture : public ITexture
 public:
 
 	//! constructor
-	COpenGLTexture(IImage* surface, const io::path& name, void* mipmapData=0, COpenGLDriver* driver=0);
+	COpenGLTexture(IImage* surface, const io::path& name, void* mipmapData=0, COpenGLDriver* driver=0, bool srgb = true, bool compressed = true);
 
 	//! destructor
 	virtual ~COpenGLTexture();
@@ -123,6 +123,7 @@ protected:
 	\param mipmapData Pointer to raw mipmap data, including all necessary mip levels, in the same format as the main texture image.
 	\param mipLevel If set to non-zero, only that specific miplevel is updated, using the MipImage member. */
 	void uploadTexture(bool newTexture=false, void* mipmapData=0, u32 mipLevel=0);
+    void uploadTextureNew(bool newTexture);
 
 	core::dimension2d<u32> ImageSize;
 	core::dimension2d<u32> TextureSize;

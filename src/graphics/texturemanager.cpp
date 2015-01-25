@@ -28,6 +28,7 @@ void resetTextureTable()
 
 void compressTexture(irr::video::ITexture *tex, bool srgb, bool premul_alpha)
 {
+    return;
     if (AlreadyTransformedTexture.find(tex) != AlreadyTransformedTexture.end())
         return;
     AlreadyTransformedTexture.insert(tex);
