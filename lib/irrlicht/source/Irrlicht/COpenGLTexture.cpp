@@ -25,7 +25,7 @@ COpenGLTexture::COpenGLTexture(IImage* origImage, const io::path& name, void* mi
 	TextureName(0), InternalFormat(GL_RGBA), PixelFormat(GL_BGRA_EXT),
 	PixelType(GL_UNSIGNED_BYTE), MipLevelStored(0), MipmapLegacyMode(true),
 	IsRenderTarget(false), AutomaticMipmapUpdate(false),
-	ReadOnlyLock(false), KeepImage(true)
+    ReadOnlyLock(false), KeepImage(true), IsSrgb(srgb), IsCompressed(compressed)
 {
 	#ifdef _DEBUG
 	setDebugName("COpenGLTexture");
@@ -65,7 +65,7 @@ COpenGLTexture::COpenGLTexture(const io::path& name, COpenGLDriver* driver)
 	TextureName(0), InternalFormat(GL_RGBA), PixelFormat(GL_BGRA_EXT),
 	PixelType(GL_UNSIGNED_BYTE), MipLevelStored(0), HasMipMaps(true),
 	MipmapLegacyMode(true), IsRenderTarget(false), AutomaticMipmapUpdate(false),
-	ReadOnlyLock(false), KeepImage(true)
+    ReadOnlyLock(false), KeepImage(true), IsSrgb(true), IsCompressed(true)
 {
 	#ifdef _DEBUG
 	setDebugName("COpenGLTexture");
@@ -330,7 +330,10 @@ void COpenGLTexture::uploadTextureNew(bool newTexture)
         return;
     }
 
-    InternalFormat = hasAlpha() ? GL_COMPRESSED_SRGB_ALPHA : GL_COMPRESSED_SRGB;
+    if (IsSrgb)
+        InternalFormat = hasAlpha() ? GL_COMPRESSED_SRGB_ALPHA : GL_COMPRESSED_SRGB;
+    else
+        InternalFormat = hasAlpha() ? GL_COMPRESSED_RGBA : GL_COMPRESSED_RGB;
 
     Driver->setActiveTexture(0, this);
     if (Driver->testGLError())

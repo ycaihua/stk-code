@@ -6,6 +6,8 @@
 #include "os.h"
 #include "CImage.h"
 #include "CAttributes.h"
+#include "COpenGLDriver.h"
+#include "COpenGLTexture.h"
 #include "IReadFile.h"
 #include "IWriteFile.h"
 #include "IImageLoader.h"
@@ -15,6 +17,7 @@
 #include "CMeshManipulator.h"
 #include "CColorConverter.h"
 #include "IAttributeExchangingObject.h"
+
 
 
 namespace irr
@@ -467,7 +470,10 @@ video::ITexture* CNullDriver::loadTextureFromFile(io::IReadFile* file, const io:
 	if (image)
 	{
 		// create texture from surface
-		texture = createDeviceDependentTexture(image, hashName.size() ? hashName : file->getFileName() );
+        if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
+            texture = new COpenGLTexture(image, hashName.size() ? hashName : file->getFileName(), 0, gldrv, false, false);
+        else
+    		texture = createDeviceDependentTexture(image, hashName.size() ? hashName : file->getFileName() );
 		os::Printer::log("Loaded texture", file->getFileName());
 		image->drop();
 	}
@@ -518,7 +524,11 @@ ITexture* CNullDriver::addTexture(const io::path& name, IImage* image, void* mip
 	if ( 0 == name.size() || !image)
 		return 0;
 
-	ITexture* t = createDeviceDependentTexture(image, name, mipmapData);
+    ITexture* t;
+    if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
+        t = new COpenGLTexture(image, name, mipmapData, gldrv, false, false);
+    else
+        t = createDeviceDependentTexture(image, name, mipmapData);
 	if (t)
 	{
 		addTexture(t);
@@ -542,7 +552,11 @@ ITexture* CNullDriver::addTexture(const core::dimension2d<u32>& size,
 		return 0;
 
 	IImage* image = new CImage(format, size);
-	ITexture* t = createDeviceDependentTexture(image, name);
+    ITexture* t;
+    if (COpenGLDriver* gldrv = dynamic_cast<COpenGLDriver *>(this))
+        t = new COpenGLTexture(image, name, 0, gldrv, false, false);
+    else
+        t = createDeviceDependentTexture(image, name);
 	image->drop();
 	addTexture(t);
 

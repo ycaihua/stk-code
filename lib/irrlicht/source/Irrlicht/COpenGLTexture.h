@@ -144,6 +144,8 @@ protected:
 	bool AutomaticMipmapUpdate;
 	bool ReadOnlyLock;
 	bool KeepImage;
+    bool IsSrgb;
+    bool IsCompressed;
 };
 
 //! OpenGL FBO texture.
