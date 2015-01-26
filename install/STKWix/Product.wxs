@@ -8,17 +8,17 @@
     <Media Id="1" Cabinet="Supertuxkart.cab" EmbedCab="yes" CompressionLevel="high" />
     <UIRef Id="WixUI_Mondo" />
 
-    <Property Id="NSISINSTALLFOLDER">
-      <RegistrySearch Id="NSISDirRegistry" Type="raw" Root="HKCU" Key="Software\SuperTuxKart"/>
+    <Property Id="INSTALLFOLDERKEY">
+      <RegistrySearch Id="InstallDirRegistry" Type="raw" Root="HKCU" Key="Software\SuperTuxKart" Name="InstallDir"/>
     </Property>
 
     <Property Id="INSTALLFOLDER">
-      <RegistrySearch Id="InstallDirRegistry" Type="raw" Root="HKCU" Key="Software\SuperTuxKart" Name="InstallDir"/>
+      <RegistrySearch Id="InstallDirRegistry2" Type="raw" Root="HKCU" Key="Software\SuperTuxKart" Name="InstallDir"/>
     </Property>
 
     <Feature Id="STK" Title="SuperTuxKart" Description="The game" Display="expand" ConfigurableDirectory="INSTALLFOLDER" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
-      <ComponentGroupRef Id="Shaders" />
+<!--      <ComponentGroupRef Id="Shaders" />
       <ComponentGroupRef Id="gfx" />
       <ComponentGroupRef Id="challenges" />
       <ComponentGroupRef Id="fonts" />
@@ -33,15 +33,21 @@
       <ComponentGroupRef Id="sfx" />
       <ComponentGroupRef Id="textures" />
       <ComponentGroupRef Id="tracks" />
-      <ComponentGroupRef Id="misc" />
-      <Feature Id="RemoveNSIS" Title="Remove Older Supertuxkart" Description="Remove previously detected install" Display="expand" Level="1">
-        <Condition Level="0">NSISINSTALLFOLDER=""</Condition>
-        <ComponentGroupRef Id="CleanNSISInstall"/>
-      </Feature>
+      <ComponentGroupRef Id="misc" />-->
     </Feature>
     <Feature Id="VCRedist" Title="Visual C++ 12.0 Runtime" Display="expand" Level="1">
       <MergeRef Id="VCRedist"/>
     </Feature>
+
+    <Binary Id="DirectyEmptynessCheckBin" SourceFile="$(var.CheckIfDirectoryIsEmpty.TargetDir)$(var.CheckIfDirectoryIsEmpty.TargetName).CA.dll" />
+
+    <CustomAction Id="CheckInstalDirEmptyness" BinaryKey="DirectyEmptynessCheckBin" DllEntry="CheckInstalFolderEmptyness" />
+    <CustomAction Id="Abort" Error="Directory is not empty, aborting." />
+
+    <InstallExecuteSequence>
+      <Custom Action="CheckInstalDirEmptyness" After="CostFinalize" />
+      <Custom Action="Abort" After="CheckInstalDirEmptyness">InstallDirOk = "0" AND NOT INSTALLFOLDERKEY</Custom>
+    </InstallExecuteSequence>
 
 
     <WixVariable Id="WixUIBannerBmp" Value="../../src/windows_installer/logo_slim.bmp" />
@@ -266,12 +272,6 @@
         <RegistryKey Root="HKCU" Key="Software\SuperTuxKart">
           <RegistryValue Type="string" Name="InstallDir" Value="[INSTALLFOLDER]"/>
         </RegistryKey>
-      </Component>
-    </ComponentGroup>
-    <ComponentGroup Id="CleanNSISInstall" Directory="INSTALLFOLDER">
-      <Component Id="RemoveFolder" Guid="4660F2AB-60FD-4C2C-A466-8F640C21EC96" KeyPath="yes">
-        <util:RemoveFolderEx On="install" Property="NSISINSTALLFOLDER" />
-        <RemoveRegistryValue Root="HKCU" Key="Software\SuperTuxKart" />
       </Component>
     </ComponentGroup>
   </Fragment>
