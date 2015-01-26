@@ -38,6 +38,9 @@ src/html
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+*.wixobj
+*.wixpdb
+*.msi
 *~
 *.swp
 
