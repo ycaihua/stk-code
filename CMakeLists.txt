@@ -371,6 +371,7 @@ if(MSVC OR MINGW)
         "${PROJECT_SOURCE_DIR}/dependencies/dll"
         $<TARGET_FILE_DIR:supertuxkart>)
   add_custom_target(stkshaders SOURCES ${STK_SHADERS})
+ 
 endif()
 
 # Optional tools
@@ -378,8 +379,11 @@ add_subdirectory(tools/font_tool)
 
 
 # ==== Make dist target ====
-if(MSVC OR MINGW)
-  # Don't create a dist target for VS
+if(MINGW)
+  # Don't create a dist target
+elseif (MSVC)
+  include_external_msproject(STKWix ${PROJECT_SOURCE_DIR}/install/STKWix/STKWix.wixproj TYPE 315F2D43-67C6-4BD6-871F-96FB57256CAB)
+   include_external_msproject(CheckIfDirectoryIsEmpty  ${PROJECT_SOURCE_DIR}/install/CheckIfDirectoryIsEmpty/CheckIfDirectoryIsEmpty.csproj TYPE 8675E6A2-8B0D-4C32-91C1-84A3D9D449B9)
 else()
   add_custom_target(dist
     COMMAND rm -rf ${CMAKE_BINARY_DIR}/SuperTuxKart-${PROJECT_VERSION} && rm -f ${CMAKE_BINARY_DIR}/SuperTuxKart-${PROJECT_VERSION}.tar.bz2
