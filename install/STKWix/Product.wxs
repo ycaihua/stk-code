@@ -7,27 +7,6 @@
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
     <Media Id="1" Cabinet="Supertuxkart.cab" EmbedCab="yes" CompressionLevel="high" />
 
-    <UI Id="MyUI">
-
-        <Dialog Id="UserRegistrationDlg" Width="370" Height="270" Title="[ProductName] Setup" NoMinimize="yes">
-          <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="&amp;Back">
-            <Publish Event="NewDialog" Value="CustomizeDlg">1</Publish>
-          </Control>
-          <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="&amp;Next">
-            <Publish Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
-          </Control>
-          <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="Cancel">
-            <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
-          </Control>
-        </Dialog>
-      <UIRef Id="WixUI_Mondo" />
-      <UIRef Id="WixUI_ErrorProgressText" />
-
-
-      <Publish Dialog="CustomizeDlg" Control="Next" Event="NewDialog" Value="UserRegistrationDlg" Order="2">1</Publish>
-      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="UserRegistrationDlg" Order="2">1</Publish>
-    </UI>
-
     <UIRef Id="MyUI" />
 
     <Property Id="INSTALLFOLDERKEY">
@@ -40,7 +19,7 @@
 
     <Feature Id="STK" Title="SuperTuxKart" Description="The game" Display="expand" ConfigurableDirectory="INSTALLFOLDER" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
-      <!--      <ComponentGroupRef Id="Shaders" />
+      <ComponentGroupRef Id="Shaders" />
       <ComponentGroupRef Id="gfx" />
       <ComponentGroupRef Id="challenges" />
       <ComponentGroupRef Id="fonts" />
@@ -55,7 +34,7 @@
       <ComponentGroupRef Id="sfx" />
       <ComponentGroupRef Id="textures" />
       <ComponentGroupRef Id="tracks" />
-      <ComponentGroupRef Id="misc" />-->
+      <ComponentGroupRef Id="misc" />
     </Feature>
     <Feature Id="VCRedist" Title="Visual C++ 12.0 Runtime" Display="expand" Level="1">
       <MergeRef Id="VCRedist"/>
@@ -66,10 +45,32 @@
     <CustomAction Id="CheckInstalDirEmptyness" BinaryKey="DirectyEmptynessCheckBin" DllEntry="CheckInstalFolderEmptyness" />
     <CustomAction Id="Abort" Error="Directory is not empty, aborting." />
 
-    <InstallExecuteSequence>
-      <Custom Action="CheckInstalDirEmptyness" After="CostFinalize" />
-      <Custom Action="Abort" After="CheckInstalDirEmptyness">InstallDirOk = "0" AND NOT INSTALLFOLDERKEY</Custom>
-    </InstallExecuteSequence>
+    <UI Id="MyUI">
+      
+      <Dialog Id="NotEmptyWarning" Width="260" Height="85" Title="[ProductName] Setup" NoMinimize="yes">
+        <Control Id="Return" Type="PushButton" X="100" Y="57" Width="56" Height="17" Default="yes" Cancel="yes" Text="OK">
+          <Publish Event="NewDialog" Value="VerifyReadyDlg" >1</Publish>
+        </Control>
+        <Control Id="TextNotOk" Type="Text" X="48" Y="15" Width="194" Height="30" TabSkip="no">
+          <Text>
+            Install folder is not empty. Setup will try to install but STK may encounters issues.
+          </Text>
+          <Condition Action="show">InstallDirOk = "0" AND NOT INSTALLFOLDERKEY</Condition>
+          <Condition Action="hide">InstallDirOk = "1" OR INSTALLFOLDERKEY</Condition>
+        </Control>
+        <Control Id="TextOk" Type="Text" X="48" Y="15" Width="194" Height="30" TabSkip="no">
+          <Text>
+            Install folder is OK.
+          </Text>
+          <Condition Action="show">InstallDirOk = "1" OR INSTALLFOLDERKEY</Condition>
+          <Condition Action="hide">InstallDirOk = "0" AND NOT INSTALLFOLDERKEY</Condition>
+        </Control>
+      </Dialog>
+      <UIRef Id="WixUI_Mondo" />
+
+      <Publish Dialog="CustomizeDlg" Control="Next" Event="DoAction" Value="CheckInstalDirEmptyness" Order="2">1</Publish>
+      <Publish Dialog="CustomizeDlg" Control="Next" Event="NewDialog" Value="NotEmptyWarning" Order="2">1</Publish>
+    </UI>
 
 
     <WixVariable Id="WixUIBannerBmp" Value="../../src/windows_installer/logo_slim.bmp" />
