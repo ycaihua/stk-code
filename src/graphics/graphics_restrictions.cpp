@@ -56,7 +56,8 @@ namespace GraphicsRestrictions
             "TextureCompressionS3TC",
             "AMDVertexShaderLayer",
             "DriverRecentEnough",
-            "HighDefinitionTextures"
+            "HighDefinitionTextures",
+            "AdvancedPipeline"
         };
     }   // namespace Private
     using namespace Private;
@@ -168,6 +169,18 @@ public:
 
         }
 
+        // ATI: some drivers use e.g.: "4.1 ATI-1.24.38"
+        if (driver_version.find("ATI-") != std::string::npos)
+        {
+            std::string driver;
+            // Try to force the driver name to be in a standard way by removing
+            // optional strings
+            driver = StringUtils::replace(driver_version, "ATI-", "");
+            std::vector<std::string> s = StringUtils::split(driver, ' ');
+            convertVersionString(s[1]);
+            return;
+        }
+
         // AMD: driver_version = "4.3.13283 Core Profile/Debug Context 14.501.1003.0"
         // ----------------------------------------------
         if (card_name.find("AMD") != std::string::npos)
@@ -179,6 +192,14 @@ public:
                 return;
             }
 
+        }
+
+        // ATI: other drivers use "4.0.10188 Core Profile Context"
+        if (card_name.find("ATI") != std::string::npos)
+        {
+            std::vector<std::string> s = StringUtils::split(driver_version, ' ');
+            convertVersionString(s[0]);
+            return;
         }
 
         Log::warn("Graphics", "Can not find version for '%s' '%s' - ignored.",
@@ -196,7 +217,7 @@ public:
         for(unsigned int i=0; i<m_version.size(); i++)
             if(other.m_version[i]!=m_version[i]) return false;
         return true;
-    }   // operator ==
+    }   // operator==
     // ------------------------------------------------------------------------
     /** Compares two version numbers. Equal returns true if the elements are
     *  identical.
@@ -213,9 +234,13 @@ public:
         for (unsigned int i = 0; i<min_n; i++)
         {
             if (m_version[i] > other.m_version[i]) return false;
+            if (m_version[i] < other.m_version[i]) return true;
         }
-        return true;
-    }   // operator>
+        if (m_version.size() >= other.m_version.size())
+            return false;
+        else
+            return true;
+    }   // operator<
     // ------------------------------------------------------------------------
     /** If *this <= other. */
     bool operator<= (const Version &other) const
@@ -226,8 +251,11 @@ public:
             if (m_version[i] > other.m_version[i]) return false;
             if (m_version[i] < other.m_version[i]) return true;
         }
-        return true;
-    }   // operator>
+        if (m_version.size() > other.m_version.size())
+            return false;
+        else
+            return true;
+    }   // operator<=
 
 };   // class Version
 // ============================================================================
@@ -376,6 +404,10 @@ void unitTesting()
     assert(Version("1.2.3") <= Version("1.2.3.1"));
     assert(Version("1.2.3") <= Version("1.2.3"));
     assert(Version("1.2.3") == Version("1.2.3"));
+    assert(Version("10.3")  <  Version("10.3.2"));
+    assert(Version("10.3") <=  Version("10.3.2"));
+    assert(!(Version("10.3.2") <  Version("10.3")));
+    assert(!(Version("10.3.2") <= Version("10.3")));
     assert(Version("3.3 NVIDIA-10.0.19 310.90.10.05b1", 
                    "NVIDIA GeForce GTX 680MX OpenGL Engine")
            == Version("310.90.10.5")                                    );
@@ -394,6 +426,14 @@ void unitTesting()
     assert(Version("1.4 (3.0 Mesa 10.1.0)",
                    "Mesa DRI Intel(R) Ivybridge Mobile")
            == Version("10.1.0"));
+    assert(Version("4.3.13283 Core Profile Context 14.501.1003.0",
+                   "AMD Radeon R9 200 Series")
+        == Version("14.501.1003.0"));
+    assert(Version("4.0.10188 Core Profile Context",
+                   "ATI Radeon HD 5400 Series")
+        == Version("4.0.10188"));
+    assert(Version("4.1 ATI-1.24.38", "AMD Radeon HD 6970M OpenGL Engine") 
+        == Version("1.24.38"));
 
 }   // unitTesting
 
