@@ -3611,9 +3611,6 @@
       <Component Id="cmp637EA9D1E3E088F0145B5945F2D10F15" Directory="dir5045D6722F6087F58AF10541374F49BC" Guid="{C99BAD1C-DEAD-46AB-9849-64F1449CAB84}">
         <File Id="fil34F6DAD6B554A043322EFE788B5A0697" KeyPath="yes" Source="..\..\..\stk-assets\tracks\snowmountain\materials.xml" />
       </Component>
-      <Component Id="cmpD10A5503437B23B37CF86AE38391FFDE" Directory="dir5045D6722F6087F58AF10541374F49BC" Guid="{0E2622CE-9616-4B7D-ADE3-D482EBD79EA0}">
-        <File Id="filECE2F99196842624FF20C0BCB9EB8F87" KeyPath="yes" Source="..\..\..\stk-assets\tracks\snowmountain\materials.xml~" />
-      </Component>
       <Component Id="cmp8952CBA115ED15F8A2A3F1C39223E136" Directory="dir5045D6722F6087F58AF10541374F49BC" Guid="{CEAD30F0-17C8-42CA-B595-15896E073ED9}">
         <File Id="filE94D9F9C1C73A5478159130F5E2A7137" KeyPath="yes" Source="..\..\..\stk-assets\tracks\snowmountain\pidgin.png" />
       </Component>

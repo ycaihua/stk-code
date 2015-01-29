@@ -258,9 +258,6 @@
       <Component Id="cmp21088C04D6077D0F81C166B4A5AD7C07" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{274328C7-825E-489B-A568-A78EA28BBF82}">
         <File Id="fil90C7BF078F0988E2656A15841E246500" KeyPath="yes" Source="..\..\..\stk-assets\textures\materials.xml" />
       </Component>
-      <Component Id="cmpAD7A048C4C0EB64DD1D53C0AACAA4EA6" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{0FA0E91E-3FF3-4EB0-AAAB-EEF85CB4AA23}">
-        <File Id="fil1885C786E9EF0C45BCD42777FAB119DE" KeyPath="yes" Source="..\..\..\stk-assets\textures\materials.xml~" />
-      </Component>
       <Component Id="cmp76AE0D831E09A120239FD8B7420D2C31" Directory="dirFC7CCAA6AD3859EAA53CEF34A706DFFF" Guid="{A87A7E94-61B7-4AF9-891E-5D63D9AD23B1}">
         <File Id="filC8F8484A4712723CB14671085B8A698F" KeyPath="yes" Source="..\..\..\stk-assets\textures\metal_plates.png" />
       </Component>
