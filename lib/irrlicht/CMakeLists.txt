@@ -35,7 +35,14 @@ if(UNIX AND USE_XRANDR)
     add_definitions(-D_IRR_LINUX_X11_RANDR_)
 endif()
 
+file(GLOB_RECURSE IRR_DEVICES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Device/*.h")
+file(GLOB_RECURSE IRR_DEVICES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Device/*.cpp")
+
+include(../../cmake/SourceGroupFunctions.cmake)
+source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS)
+
 set(IRRLICHT_SOURCES
+${IRR_DEVICES_SOURCES}
 source/Irrlicht/CGUIListBox.cpp
 source/Irrlicht/CZBuffer.cpp
 source/Irrlicht/CGUIModalScreen.cpp
@@ -90,8 +97,6 @@ source/Irrlicht/CGUIFont.cpp
 source/Irrlicht/CTriangleSelector.cpp
 source/Irrlicht/CParticlePointEmitter.cpp
 source/Irrlicht/CTextSceneNode.cpp
-source/Irrlicht/CIrrDeviceLinux.cpp
-source/Irrlicht/CIrrDeviceStub.cpp
 source/Irrlicht/CGUIInOutFader.cpp
 source/Irrlicht/CGUITreeView.cpp
 source/Irrlicht/CAnimatedMeshSceneNode.cpp
@@ -101,17 +106,14 @@ source/Irrlicht/CSceneNodeAnimatorCameraMaya.cpp
 source/Irrlicht/CSceneNodeAnimatorFlyCircle.cpp
 source/Irrlicht/CColorConverter.cpp
 source/Irrlicht/CMeshCache.cpp
-source/Irrlicht/CIrrDeviceFB.cpp
 source/Irrlicht/CMemoryFile.cpp
 source/Irrlicht/CMountPointReader.cpp
 source/Irrlicht/CBillboardSceneNode.cpp
 source/Irrlicht/CGUIImageList.cpp
 source/Irrlicht/CSceneCollisionManager.cpp
-source/Irrlicht/CIrrDeviceWin32.cpp
 source/Irrlicht/CEmptySceneNode.cpp
 source/Irrlicht/CParticleBoxEmitter.cpp
 source/Irrlicht/CParticleSystemSceneNode.cpp
-source/Irrlicht/CIrrDeviceConsole.cpp
 source/Irrlicht/CImage.cpp
 source/Irrlicht/CTarReader.cpp
 source/Irrlicht/CGUIButton.cpp
@@ -124,7 +126,6 @@ source/Irrlicht/CSkyBoxSceneNode.cpp
 source/Irrlicht/CWriteFile.cpp
 source/Irrlicht/COctreeTriangleSelector.cpp
 source/Irrlicht/CFileList.cpp
-source/Irrlicht/CIrrDeviceSDL.cpp
 source/Irrlicht/COSOperator.cpp
 source/Irrlicht/CImageLoaderJPG.cpp
 source/Irrlicht/COpenGLExtensionHandler.cpp
@@ -159,14 +160,12 @@ source/Irrlicht/CParticleMeshEmitter.cpp
 source/Irrlicht/CSceneNodeAnimatorRotation.cpp
 source/Irrlicht/glext.h
 source/Irrlicht/CB3DMeshFileLoader.h
-source/Irrlicht/CIrrDeviceLinux.h
 source/Irrlicht/CMeshCache.h
 source/Irrlicht/CAttributes.h
 source/Irrlicht/CParticleMeshEmitter.h
 source/Irrlicht/CParticlePointEmitter.h
 source/Irrlicht/CParticleRotationAffector.h
 source/Irrlicht/CMountPointReader.h
-source/Irrlicht/CIrrDeviceConsole.h
 source/Irrlicht/CTerrainSceneNode.h
 source/Irrlicht/CSceneNodeAnimatorCollisionResponse.h
 source/Irrlicht/CImageLoaderBMP.h
@@ -220,7 +219,6 @@ source/Irrlicht/CSceneCollisionManager.h
 source/Irrlicht/ISceneNodeAnimatorFinishing.h
 source/Irrlicht/CGUITabControl.h
 source/Irrlicht/CSphereSceneNode.h
-source/Irrlicht/CIrrDeviceStub.h
 source/Irrlicht/CDummyTransformationSceneNode.h
 source/Irrlicht/CParticleBoxEmitter.h
 source/Irrlicht/COctreeSceneNode.h
@@ -230,7 +228,6 @@ source/Irrlicht/CLightSceneNode.h
 source/Irrlicht/CParticleSphereEmitter.h
 source/Irrlicht/CZBuffer.h
 source/Irrlicht/CImage.h
-source/Irrlicht/CIrrDeviceWin32.h
 source/Irrlicht/CGUIEditBox.h
 source/Irrlicht/CGUISpriteBank.h
 source/Irrlicht/CSceneNodeAnimatorFlyStraight.h
@@ -255,7 +252,6 @@ source/Irrlicht/CImageWriterPNG.h
 source/Irrlicht/CParticleScaleAffector.h
 source/Irrlicht/CImageLoaderJPG.h
 source/Irrlicht/CBillboardSceneNode.h
-source/Irrlicht/CIrrDeviceSDL.h
 source/Irrlicht/CSkyDomeSceneNode.h
 source/Irrlicht/CGUIInOutFader.h
 source/Irrlicht/CGUIFont.h
@@ -280,7 +276,6 @@ source/Irrlicht/CXMLWriter.h
 source/Irrlicht/CParticleCylinderEmitter.h
 source/Irrlicht/ITriangleRenderer.h
 source/Irrlicht/CSceneNodeAnimatorDelete.h
-source/Irrlicht/CIrrDeviceFB.h
 source/Irrlicht/CGUIEnvironment.h
 source/Irrlicht/CTerrainTriangleSelector.h
 source/Irrlicht/CAttributeImpl.h
@@ -300,6 +295,7 @@ source/Irrlicht/CGUIListBox.h
 source/Irrlicht/CGUIFileOpenDialog.h
 source/Irrlicht/CTextSceneNode.h
 
+${IRR_DEVICES_HEADERS}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IGUIFontBitmap.h

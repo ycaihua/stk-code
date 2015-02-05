@@ -18,7 +18,7 @@
 #endif
 
 #if defined(_IRR_COMPILE_WITH_X11_DEVICE_)
-#include "CIrrDeviceLinux.h"
+#include "Device/CIrrDeviceLinux.h"
 #endif
 #ifdef _IRR_COMPILE_WITH_OSX_DEVICE_
 #include "MacOSX/OSXClipboard.h"
