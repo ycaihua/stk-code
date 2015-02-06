@@ -10,7 +10,7 @@
 
 #include "IGUITabControl.h"
 #include "irrArray.h"
-#include "IGUISkin.h"
+#include <GUI/IGUISkin.h>
 
 namespace irr
 {

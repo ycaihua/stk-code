@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUISkin.h"
+#include <GUI/IGUISkin.h>
 #include "irrString.h"
 
 namespace irr

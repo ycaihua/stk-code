@@ -10,7 +10,7 @@
 #include "IAnimatedMesh.h"
 #include "IMesh.h"
 #include "../os.h"
-#include "IGUISkin.h"
+#include <GUI/IGUISkin.h>
 
 namespace irr
 {

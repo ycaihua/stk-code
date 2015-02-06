@@ -25,7 +25,7 @@
 #include <SColor.h>
 #include <Maths/vector2d.h>
 #include <Maths/dimension2d.h>
-#include <IGUISkin.h>
+#include <GUI/IGUISkin.h>
 namespace irr
 {
     namespace video { class ITexture;    }
