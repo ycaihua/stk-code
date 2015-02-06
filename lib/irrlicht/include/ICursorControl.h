@@ -6,7 +6,7 @@
 #define __I_CURSOR_CONTROL_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "position2d.h"
+#include <Maths/position2d.h>
 #include "rect.h"
 
 namespace irr

@@ -7,7 +7,7 @@
 
 #include "irrTypes.h"
 #include "dimension2d.h"
-#include "position2d.h"
+#include <Maths/position2d.h>
 
 namespace irr
 {

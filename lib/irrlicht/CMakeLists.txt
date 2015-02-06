@@ -225,7 +225,6 @@ include/IMeshBuffer.h
 include/irrlicht.h
 include/ITimer.h
 include/IImage.h
-include/position2d.h
 include/IGUIToolbar.h
 include/IGUISpinBox.h
 include/IGUITabControl.h

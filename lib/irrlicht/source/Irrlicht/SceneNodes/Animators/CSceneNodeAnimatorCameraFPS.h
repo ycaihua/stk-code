@@ -7,7 +7,7 @@
 
 #include "ISceneNodeAnimatorCameraFPS.h"
 #include "vector2d.h"
-#include "position2d.h"
+#include <Maths/position2d.h>
 #include "SKeyMap.h"
 #include "irrArray.h"
 
