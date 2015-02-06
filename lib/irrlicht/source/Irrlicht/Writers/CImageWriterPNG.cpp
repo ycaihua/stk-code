@@ -6,11 +6,11 @@
 
 #ifdef _IRR_COMPILE_WITH_PNG_WRITER_
 
-#include "Loaders/CImageLoaderPNG.h"
-#include "CColorConverter.h"
+#include "../Loaders/CImageLoaderPNG.h"
+#include "../CColorConverter.h"
 #include "IWriteFile.h"
 #include "irrString.h"
-#include "os.h" // for logging
+#include "../os.h" // for logging
 
 #ifdef _IRR_COMPILE_WITH_LIBPNG_
 #ifndef _IRR_USE_NON_SYSTEM_LIB_PNG_
