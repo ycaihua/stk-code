@@ -6,7 +6,7 @@
 #define __S_PARTICLE_H_INCLUDED__
 
 #include "vector3d.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include "SColor.h"
 
 namespace irr

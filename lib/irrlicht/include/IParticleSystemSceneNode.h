@@ -16,7 +16,7 @@
 #include "IParticleFadeOutAffector.h"
 #include "IParticleGravityAffector.h"
 #include "IParticleRotationAffector.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 
 namespace irr
 {

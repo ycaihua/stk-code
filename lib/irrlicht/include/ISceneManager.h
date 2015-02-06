@@ -10,7 +10,7 @@
 #include "irrString.h"
 #include "path.h"
 #include "vector3d.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include "SColor.h"
 #include "ETerrainElements.h"
 #include "ESceneNodeTypes.h"

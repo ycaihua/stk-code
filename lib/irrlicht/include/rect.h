@@ -6,7 +6,7 @@
 #define __IRR_RECT_H_INCLUDED__
 
 #include "irrTypes.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include <Maths/position2d.h>
 
 namespace irr

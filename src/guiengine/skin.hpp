@@ -24,7 +24,7 @@
 #include <rect.h>
 #include <SColor.h>
 #include <vector2d.h>
-#include <dimension2d.h>
+#include <Maths/dimension2d.h>
 #include <IGUISkin.h>
 namespace irr
 {

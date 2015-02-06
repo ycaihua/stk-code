@@ -32,7 +32,7 @@
 
 #include <IVideoDriver.h>
 #include <vector2d.h>
-#include <dimension2d.h>
+#include <Maths/dimension2d.h>
 #include <SColor.h>
 #include "IrrlichtDevice.h"
 #include "ISkinnedMesh.h"
