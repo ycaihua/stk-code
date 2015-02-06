@@ -18,7 +18,7 @@
 #ifndef HEADER_EVENT_HANDLER_HPP
 #define HEADER_EVENT_HANDLER_HPP
 
-#include <vector2d.h>
+#include <Maths/vector2d.h>
 #include <IEventReceiver.h>
 #include "input/input.hpp"
 #include "utils/leak_check.hpp"

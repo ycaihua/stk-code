@@ -29,7 +29,7 @@
 #include "utils/vec3.hpp"
 
 #include "SColor.h"
-#include "vector2d.h"
+#include <Maths/vector2d.h>
 #include <Maths/rect.h>
 
 #include <vector>

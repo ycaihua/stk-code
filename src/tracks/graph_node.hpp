@@ -21,7 +21,7 @@
 
 #include <vector>
 
-#include <vector2d.h>
+#include <Maths/vector2d.h>
 #include <Maths/dimension2d.h>
 #include <Maths/line2d.h>
 

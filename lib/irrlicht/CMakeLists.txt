@@ -266,7 +266,6 @@ include/IParticleMeshEmitter.h
 include/IGUIColorSelectDialog.h
 include/IGUIImage.h
 include/IGUIListBox.h
-include/vector2d.h
 include/CIndexBuffer.h
 include/IAnimatedMesh.h
 include/SMaterial.h

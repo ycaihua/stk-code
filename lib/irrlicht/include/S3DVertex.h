@@ -6,7 +6,7 @@
 #define __S_3D_VERTEX_H_INCLUDED__
 
 #include "vector3d.h"
-#include "vector2d.h"
+#include <Maths/vector2d.h>
 #include "SColor.h"
 
 namespace irr

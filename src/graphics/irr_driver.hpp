@@ -31,7 +31,7 @@
 #include <vector>
 
 #include <IVideoDriver.h>
-#include <vector2d.h>
+#include <Maths/vector2d.h>
 #include <Maths/dimension2d.h>
 #include <SColor.h>
 #include "IrrlichtDevice.h"
