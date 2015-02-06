@@ -22,7 +22,7 @@
 #include <GUI/IGUIScrollBar.h>
 #include <GUI/IGUISpinBox.h>
 #include <GUI/IGUIStaticText.h>
-#include "IGUITabControl.h"
+#include <GUI/IGUITabControl.h>
 #include "IGUITable.h"
 #include "IGUIToolbar.h"
 #include "IGUIWindow.h"

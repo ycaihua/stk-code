@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUITabControl.h"
+#include <GUI/IGUITabControl.h>
 #include "irrArray.h"
 #include <GUI/IGUISkin.h>
 
