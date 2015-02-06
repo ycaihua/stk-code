@@ -780,7 +780,6 @@ void Track::convertTrackToBullet(scene::ISceneNode *node)
                  ((scene::IAnimatedMeshSceneNode*)node)->isReadOnlyMaterials();
              break;
         case scene::ESNT_SKY_BOX :
-        case scene::ESNT_SKY_DOME:
         case scene::ESNT_PARTICLE_SYSTEM :
         case scene::ESNT_TEXT:
             // These are non-physical
@@ -1787,31 +1786,10 @@ void Track::loadTrackModel(bool reverse_track, unsigned int mode_id)
     }
     m_track_object_manager->enableFog(m_use_fog);
 
-    // Sky dome and boxes support
+    // Skyboxes support
     // --------------------------
     irr_driver->suppressSkyBox();
-    if(m_sky_type==SKY_DOME && m_sky_textures.size() > 0)
-    {
-        scene::ISceneNode *node = irr_driver->addSkyDome(m_sky_textures[0],
-                                                         m_sky_hori_segments,
-                                                         m_sky_vert_segments,
-                                                         m_sky_texture_percent,
-                                                         m_sky_sphere_percent);
-        for(unsigned int i=0; i<node->getMaterialCount(); i++)
-        {
-            video::SMaterial &irrMaterial=node->getMaterial(i);
-            for(unsigned int j=0; j<video::MATERIAL_MAX_TEXTURES; j++)
-            {
-                video::ITexture* t=irrMaterial.getTexture(j);
-                if(!t) continue;
-                core::matrix4 *m = &irrMaterial.getTextureMatrix(j);
-                m_animated_textures.push_back(new MovingTexture(m, m_sky_dx, m_sky_dy));
-            }   // for j<MATERIAL_MAX_TEXTURES
-        }   // for i<getMaterialCount
-
-        m_all_nodes.push_back(node);
-    }
-    else if(m_sky_type==SKY_BOX && m_sky_textures.size() == 6)
+    if(m_sky_type==SKY_BOX && m_sky_textures.size() == 6)
     {
         //if (m_spherical_harmonics_textures.size() > 0)
             m_all_nodes.push_back(irr_driver->addSkyBox(m_sky_textures, m_spherical_harmonics_textures));

@@ -1,7 +1,7 @@
 #ifndef GPUPARTICLES_H
 #define GPUPARTICLES_H
 
-#include "../lib/irrlicht/source/Irrlicht/CParticleSystemSceneNode.h"
+#include "../lib/irrlicht/source/Irrlicht/SceneNodes/CParticleSystemSceneNode.h"
 #include <ISceneManager.h>
 #include <IParticleSystemSceneNode.h>
 
