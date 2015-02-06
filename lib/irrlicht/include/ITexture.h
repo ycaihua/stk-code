@@ -10,7 +10,7 @@
 #include <Maths/dimension2d.h>
 #include "EDriverTypes.h"
 #include "path.h"
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 
 namespace irr
 {

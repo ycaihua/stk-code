@@ -20,7 +20,7 @@
 #define HEADER_LOD_NODE_HPP
 
 #include <Maths/aabbox3d.h>
-#include <matrix4.h>
+#include <Maths/matrix4.h>
 #include <ISceneNode.h>
 #include <vector>
 #include <string>

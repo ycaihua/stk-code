@@ -8,7 +8,7 @@
 #include "IAnimatedMeshSceneNode.h"
 #include "IAnimatedMesh.h"
 
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 
 
 namespace irr

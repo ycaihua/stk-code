@@ -6,7 +6,7 @@
 #define __S_MATERIAL_H_INCLUDED__
 
 #include "SColor.h"
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 #include "irrArray.h"
 #include "irrMath.h"
 #include "EMaterialTypes.h"

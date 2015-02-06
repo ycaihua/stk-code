@@ -5,7 +5,7 @@
 #ifndef __S_MATERIAL_LAYER_H_INCLUDED__
 #define __S_MATERIAL_LAYER_H_INCLUDED__
 
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 #include "irrAllocator.h"
 
 namespace irr

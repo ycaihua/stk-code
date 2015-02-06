@@ -9,7 +9,7 @@
 #include "SColor.h"
 #include "ITexture.h"
 #include "irrArray.h"
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 #include <Maths/plane3d.h>
 #include <Maths/dimension2d.h>
 #include <Maths/position2d.h>

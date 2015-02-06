@@ -153,7 +153,7 @@
 #include "Keycodes.h"
 #include <Maths/line2d.h>
 #include <Maths/line3d.h>
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 #include <Maths/plane3d.h>
 #include <Maths/position2d.h>
 #include <Maths/quaternion.h>

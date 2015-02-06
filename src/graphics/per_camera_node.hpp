@@ -19,7 +19,7 @@
 #ifndef HEADER_PER_CAMERA_HPP
 #define HEADER_PER_CAMERA_HPP
 
-#include <matrix4.h>
+#include <Maths/matrix4.h>
 #include <Maths/aabbox3d.h>
 #include <IDummyTransformationSceneNode.h>
 #include <ESceneNodeTypes.h>
