@@ -237,7 +237,6 @@ include/ISceneUserDataSerializer.h
 include/irrArray.h
 include/irrString.h
 include/IMesh.h
-include/line3d.h
 include/IMeshLoader.h
 include/CMeshBuffer.h
 include/ETerrainElements.h

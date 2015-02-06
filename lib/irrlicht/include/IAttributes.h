@@ -10,7 +10,7 @@
 #include "vector3d.h"
 #include "vector2d.h"
 #include <Maths/line2d.h>
-#include "line3d.h"
+#include <Maths/line3d.h>
 #include "triangle3d.h"
 #include "position2d.h"
 #include "rect.h"
@@ -19,7 +19,6 @@
 #include <Maths/quaternion.h>
 #include "plane3d.h"
 #include "triangle3d.h"
-#include "line3d.h"
 #include "irrString.h"
 #include "irrArray.h"
 #include "IXMLReader.h"

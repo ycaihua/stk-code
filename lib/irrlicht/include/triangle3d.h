@@ -6,7 +6,7 @@
 #define __IRR_TRIANGLE_3D_H_INCLUDED__
 
 #include "vector3d.h"
-#include "line3d.h"
+#include <Maths/line3d.h>
 #include "plane3d.h"
 #include <Maths/aabbox3d.h>
 

@@ -9,7 +9,7 @@
 #include "vector3d.h"
 #include "triangle3d.h"
 #include "position2d.h"
-#include "line3d.h"
+#include <Maths/line3d.h>
 
 namespace irr
 {
