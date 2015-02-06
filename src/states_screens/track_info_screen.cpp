@@ -44,7 +44,7 @@
 #include "utils/translation.hpp"
 
 #include <GUI/IGUIEnvironment.h>
-#include <IGUIImage.h>
+#include <GUI/IGUIImage.h>
 #include <IGUIStaticText.h>
 
 using namespace irr::gui;

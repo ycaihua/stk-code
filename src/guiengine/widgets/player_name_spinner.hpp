@@ -20,7 +20,7 @@
 #define PLAYER_NAME_SPINNER_HPP
 
 #include "guiengine/widgets/spinner_widget.hpp"
-#include <IGUIImage.h>
+#include <GUI/IGUIImage.h>
 
 class KartSelectionScreen;
 
