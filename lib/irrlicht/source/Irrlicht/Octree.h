@@ -7,7 +7,7 @@
 
 #include "SViewFrustum.h"
 #include "S3DVertex.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 #include "irrArray.h"
 #include "CMeshBuffer.h"
 

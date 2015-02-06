@@ -8,7 +8,7 @@
 #include "ITriangleSelector.h"
 #include "IMesh.h"
 #include "irrArray.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 
 namespace irr
 {

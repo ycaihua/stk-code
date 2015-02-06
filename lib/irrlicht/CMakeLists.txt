@@ -50,6 +50,8 @@ file(GLOB IRR_SCENENODES_PARTICLES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} 
 file(GLOB IRR_SCENENODES_ANIMATORS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Animators/*.h")
 file(GLOB IRR_SCENENODES_ANIMATORS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Animators/*.cpp")
 
+file(GLOB IRR_MATHS_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/Maths/*.h")
+
 include(../../cmake/SourceGroupFunctions.cmake)
 source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS)
 source_group_hierarchy(IRR_LOADERS_SOURCES IRR_LOADERS_HEADERS)
@@ -58,6 +60,8 @@ source_group_hierarchy(IRR_GUI_SOURCES IRR_GUI_HEADERS)
 source_group_hierarchy(IRR_SCENENODES_SOURCES IRR_SCENENODES_HEADERS)
 source_group_hierarchy(IRR_SCENENODES_PARTICLES_SOURCES IRR_SCENENODES_PARTICLES_HEADERS)
 source_group_hierarchy(IRR_SCENENODES_ANIMATORS_SOURCES IRR_SCENENODES_ANIMATORS_HEADERS)
+
+source_group_hierarchy(IRR_MATHS_INCLUDE IRR_MATHS_INCLUDE)
 
 set(IRRLICHT_SOURCES
 ${IRR_DEVICES_SOURCES}
@@ -183,6 +187,7 @@ ${IRR_GUI_HEADERS}
 ${IRR_SCENENODES_HEADERS}
 ${IRR_SCENENODES_PARTICLES_HEADERS}
 ${IRR_SCENENODES_ANIMATORS_HEADERS}
+${IRR_MATHS_INCLUDE}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IGUIFontBitmap.h
@@ -234,7 +239,6 @@ include/irrString.h
 include/IMesh.h
 include/line3d.h
 include/IMeshLoader.h
-include/aabbox3d.h
 include/CMeshBuffer.h
 include/ETerrainElements.h
 include/EDebugSceneTypes.h

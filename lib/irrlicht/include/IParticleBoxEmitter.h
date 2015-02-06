@@ -6,7 +6,7 @@
 #define __I_PARTICLE_BOX_EMITTER_H_INCLUDED__
 
 #include "IParticleEmitter.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 
 namespace irr
 {

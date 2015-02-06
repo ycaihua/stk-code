@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include "triangle3d.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 #include "matrix4.h"
 #include "line3d.h"
 
