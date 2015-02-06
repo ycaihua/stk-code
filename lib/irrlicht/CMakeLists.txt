@@ -43,8 +43,12 @@ file(GLOB_RECURSE IRR_WRITERS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "sour
 file(GLOB_RECURSE IRR_WRITERS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Writers/*.cpp")
 file(GLOB_RECURSE IRR_GUI_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/GUI/*.h")
 file(GLOB_RECURSE IRR_GUI_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/GUI/*.cpp")
-file(GLOB_RECURSE IRR_SCENENODES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/*.h")
-file(GLOB_RECURSE IRR_SCENENODES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/*.cpp")
+file(GLOB IRR_SCENENODES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/*.h")
+file(GLOB IRR_SCENENODES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/*.cpp")
+file(GLOB IRR_SCENENODES_PARTICLES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Particles/*.h")
+file(GLOB IRR_SCENENODES_PARTICLES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Particles/*.cpp")
+file(GLOB IRR_SCENENODES_ANIMATORS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Animators/*.h")
+file(GLOB IRR_SCENENODES_ANIMATORS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Animators/*.cpp")
 
 include(../../cmake/SourceGroupFunctions.cmake)
 source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS)
@@ -52,6 +56,8 @@ source_group_hierarchy(IRR_LOADERS_SOURCES IRR_LOADERS_HEADERS)
 source_group_hierarchy(IRR_WRITERS_SOURCES IRR_WRITERS_HEADERS)
 source_group_hierarchy(IRR_GUI_SOURCES IRR_GUI_HEADERS)
 source_group_hierarchy(IRR_SCENENODES_SOURCES IRR_SCENENODES_HEADERS)
+source_group_hierarchy(IRR_SCENENODES_PARTICLES_SOURCES IRR_SCENENODES_PARTICLES_HEADERS)
+source_group_hierarchy(IRR_SCENENODES_ANIMATORS_SOURCES IRR_SCENENODES_ANIMATORS_HEADERS)
 
 set(IRRLICHT_SOURCES
 ${IRR_DEVICES_SOURCES}
@@ -59,40 +65,28 @@ ${IRR_LOADERS_SOURCES}
 ${IRR_WRITERS_SOURCES}
 ${IRR_GUI_SOURCES}
 ${IRR_SCENENODES_SOURCES}
+${IRR_SCENENODES_PARTICLES_SOURCES}
+${IRR_SCENENODES_ANIMATORS_SOURCES}
 source/Irrlicht/CZBuffer.cpp
-source/Irrlicht/CParticleCylinderEmitter.cpp
 source/Irrlicht/CLimitReadFile.cpp
 source/Irrlicht/CVideoModeList.cpp
 source/Irrlicht/CDefaultGUIElementFactory.cpp
-source/Irrlicht/CParticleSphereEmitter.cpp
-source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.cpp
 source/Irrlicht/CTerrainTriangleSelector.cpp
 source/Irrlicht/CFileSystem.cpp
 source/Irrlicht/os.cpp
 source/Irrlicht/CFPSCounter.cpp
 source/Irrlicht/CZipReader.cpp
 source/Irrlicht/CDefaultSceneNodeAnimatorFactory.cpp
-source/Irrlicht/CParticleFadeOutAffector.cpp
-source/Irrlicht/CSceneNodeAnimatorFollowSpline.cpp
-source/Irrlicht/CParticleGravityAffector.cpp
 source/Irrlicht/COpenGLSLMaterialRenderer.cpp
-source/Irrlicht/CParticleRotationAffector.cpp
 source/Irrlicht/CTriangleBBSelector.cpp
-source/Irrlicht/CSceneNodeAnimatorTexture.cpp
 source/Irrlicht/COpenGLTexture.cpp
-source/Irrlicht/CParticleAttractionAffector.cpp
 source/Irrlicht/CAttributes.cpp
-source/Irrlicht/CSceneNodeAnimatorCollisionResponse.cpp
 source/Irrlicht/CTriangleSelector.cpp
-source/Irrlicht/CParticlePointEmitter.cpp
-source/Irrlicht/CSceneNodeAnimatorCameraMaya.cpp
-source/Irrlicht/CSceneNodeAnimatorFlyCircle.cpp
 source/Irrlicht/CColorConverter.cpp
 source/Irrlicht/CMeshCache.cpp
 source/Irrlicht/CMemoryFile.cpp
 source/Irrlicht/CMountPointReader.cpp
 source/Irrlicht/CSceneCollisionManager.cpp
-source/Irrlicht/CParticleBoxEmitter.cpp
 source/Irrlicht/CImage.cpp
 source/Irrlicht/CTarReader.cpp
 source/Irrlicht/COpenGLParallaxMapRenderer.cpp
@@ -104,12 +98,10 @@ source/Irrlicht/CFileList.cpp
 source/Irrlicht/COSOperator.cpp
 source/Irrlicht/COpenGLExtensionHandler.cpp
 source/Irrlicht/CXMLWriter.cpp
-source/Irrlicht/CSceneNodeAnimatorCameraFPS.cpp
 source/Irrlicht/CSceneManager.cpp
 source/Irrlicht/Irrlicht.cpp
 source/Irrlicht/COpenGLShaderMaterialRenderer.cpp
 source/Irrlicht/COpenGLDriver.cpp
-source/Irrlicht/CSceneNodeAnimatorFlyStraight.cpp
 source/Irrlicht/irrXML.cpp
 source/Irrlicht/CSkinnedMesh.cpp
 source/Irrlicht/CXMLReader.cpp
@@ -117,36 +109,24 @@ source/Irrlicht/CDummyTransformationSceneNode.cpp
 source/Irrlicht/CGeometryCreator.cpp
 source/Irrlicht/CNullDriver.cpp
 source/Irrlicht/CReadFile.cpp
-source/Irrlicht/CParticleRingEmitter.cpp
 source/Irrlicht/CMetaTriangleSelector.cpp
 source/Irrlicht/CDefaultSceneNodeFactory.cpp
-source/Irrlicht/CParticleScaleAffector.cpp
-source/Irrlicht/CSceneNodeAnimatorDelete.cpp
-source/Irrlicht/CParticleMeshEmitter.cpp
-source/Irrlicht/CSceneNodeAnimatorRotation.cpp
 source/Irrlicht/glext.h
 source/Irrlicht/CMeshCache.h
 source/Irrlicht/CAttributes.h
-source/Irrlicht/CParticleMeshEmitter.h
-source/Irrlicht/CParticlePointEmitter.h
-source/Irrlicht/CParticleRotationAffector.h
 source/Irrlicht/CMountPointReader.h
-source/Irrlicht/CSceneNodeAnimatorCollisionResponse.h
 source/Irrlicht/CSkinnedMesh.h
 source/Irrlicht/COpenGLParallaxMapRenderer.h
-source/Irrlicht/CParticleRingEmitter.h
 source/Irrlicht/COpenGLShaderMaterialRenderer.h
 source/Irrlicht/COctreeTriangleSelector.h
 source/Irrlicht/COpenGLTexture.h
 source/Irrlicht/Octree.h
 source/Irrlicht/os.h
 source/Irrlicht/CDefaultGUIElementFactory.h
-source/Irrlicht/CSceneNodeAnimatorFlyCircle.h
 source/Irrlicht/CTriangleBBSelector.h
 source/Irrlicht/S2DVertex.h
 source/Irrlicht/CDefaultSceneNodeAnimatorFactory.h
 source/Irrlicht/resource.h
-source/Irrlicht/CSceneNodeAnimatorCameraMaya.h
 source/Irrlicht/SoftwareDriver2_helper.h
 source/Irrlicht/dmfsupport.h
 source/Irrlicht/CMeshManipulator.h
@@ -154,54 +134,39 @@ source/Irrlicht/IImagePresenter.h
 source/Irrlicht/IZBuffer.h
 source/Irrlicht/wglext.h
 source/Irrlicht/CTimer.h
-source/Irrlicht/CSceneNodeAnimatorCameraFPS.h
-source/Irrlicht/CParticleFadeOutAffector.h
 source/Irrlicht/COpenGLSLMaterialRenderer.h
-source/Irrlicht/CParticleAttractionAffector.h
 source/Irrlicht/MacOSX/AppDelegate.h
 source/Irrlicht/MacOSX/CIrrDeviceMacOSX.h
 source/Irrlicht/MacOSX/OSXClipboard.h
 source/Irrlicht/CSceneManager.h
 source/Irrlicht/COpenGLDriver.h
 source/Irrlicht/CSceneCollisionManager.h
-source/Irrlicht/ISceneNodeAnimatorFinishing.h
 source/Irrlicht/CDummyTransformationSceneNode.h
-source/Irrlicht/CParticleBoxEmitter.h
 source/Irrlicht/CReadFile.h
 source/Irrlicht/COSOperator.h
-source/Irrlicht/CParticleSphereEmitter.h
 source/Irrlicht/CZBuffer.h
 source/Irrlicht/CImage.h
-source/Irrlicht/CSceneNodeAnimatorFlyStraight.h
 source/Irrlicht/COpenGLExtensionHandler.h
 source/Irrlicht/CTriangleSelector.h
-source/Irrlicht/CParticleGravityAffector.h
 source/Irrlicht/CDefaultSceneNodeFactory.h
 source/Irrlicht/CXMLReaderImpl.h
 source/Irrlicht/COpenGLMaterialRenderer.h
 source/Irrlicht/CVideoModeList.h
-source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.h
 source/Irrlicht/CColorConverter.h
 source/Irrlicht/SoftwareDriver2_compile_config.h
-source/Irrlicht/CSceneNodeAnimatorTexture.h
 source/Irrlicht/CXMLReader.h
-source/Irrlicht/CParticleScaleAffector.h
 source/Irrlicht/CFileSystem.h
-source/Irrlicht/CSceneNodeAnimatorRotation.h
 source/Irrlicht/S4DVertex.h
 source/Irrlicht/CBlit.h
 source/Irrlicht/CZipReader.h
 source/Irrlicht/IAttribute.h
 source/Irrlicht/CNullDriver.h
 source/Irrlicht/CWriteFile.h
-source/Irrlicht/CSceneNodeAnimatorFollowSpline.h
 source/Irrlicht/glxext.h
 source/Irrlicht/CMetaTriangleSelector.h
 source/Irrlicht/CTarReader.h
 source/Irrlicht/CXMLWriter.h
-source/Irrlicht/CParticleCylinderEmitter.h
 source/Irrlicht/ITriangleRenderer.h
-source/Irrlicht/CSceneNodeAnimatorDelete.h
 source/Irrlicht/CTerrainTriangleSelector.h
 source/Irrlicht/CAttributeImpl.h
 source/Irrlicht/CGeometryCreator.h
@@ -216,6 +181,8 @@ ${IRR_LOADERS_HEADERS}
 ${IRR_WRITERS_HEADERS}
 ${IRR_GUI_HEADERS}
 ${IRR_SCENENODES_HEADERS}
+${IRR_SCENENODES_PARTICLES_HEADERS}
+${IRR_SCENENODES_ANIMATORS_HEADERS}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IGUIFontBitmap.h

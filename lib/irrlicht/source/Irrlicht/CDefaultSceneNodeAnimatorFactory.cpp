@@ -3,8 +3,8 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CDefaultSceneNodeAnimatorFactory.h"
-#include "CSceneNodeAnimatorCameraFPS.h"
-#include "CSceneNodeAnimatorCameraMaya.h"
+#include "SceneNodes/Animators/CSceneNodeAnimatorCameraFPS.h"
+#include "SceneNodes/Animators/CSceneNodeAnimatorCameraMaya.h"
 #include "ICursorControl.h"
 #include "ISceneNodeAnimatorCollisionResponse.h"
 #include "ISceneManager.h"
