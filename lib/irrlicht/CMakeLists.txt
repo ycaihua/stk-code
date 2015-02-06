@@ -256,7 +256,6 @@ include/SColor.h
 include/IXMLWriter.h
 include/CDynamicMeshBuffer.h
 include/IFileArchive.h
-include/IGUIContextMenu.h
 include/IVideoDriver.h
 include/irrMath.h
 include/ISceneNode.h

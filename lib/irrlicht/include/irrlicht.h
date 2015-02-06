@@ -73,7 +73,7 @@
 #include <GUI/IGUICheckBox.h>
 #include <GUI/IGUIColorSelectDialog.h>
 #include <GUI/IGUIComboBox.h>
-#include "IGUIContextMenu.h"
+#include <GUI/IGUIContextMenu.h>
 #include "IGUIEditBox.h"
 #include "IGUIElement.h"
 #include "IGUIElementFactory.h"
