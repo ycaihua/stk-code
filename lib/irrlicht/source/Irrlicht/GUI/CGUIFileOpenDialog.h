@@ -10,7 +10,7 @@
 
 #include <GUI/IGUIFileOpenDialog.h>
 #include <GUI/IGUIButton.h>
-#include "IGUIListBox.h"
+#include <GUI/IGUIListBox.h>
 #include <GUI/IGUIEditBox.h>
 #include "IFileSystem.h"
 
