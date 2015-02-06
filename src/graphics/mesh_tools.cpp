@@ -378,7 +378,7 @@ scene::IMesh* MeshTools::createMeshWithTangents(scene::IMesh* mesh, bool(*predic
         buffer->Vertices.reallocate(idxCnt);
         buffer->Indices.reallocate(idxCnt);
 
-        core::map<video::S3DVertexTangents, int> vertMap;
+        std::unordered_map<video::S3DVertexTangents, int> vertMap;
         int vertLocation;
 
         // copy vertices
@@ -413,16 +413,16 @@ scene::IMesh* MeshTools::createMeshWithTangents(scene::IMesh* mesh, bool(*predic
                 }
                 break;
             }
-            core::map<video::S3DVertexTangents, int>::Node* n = vertMap.find(vNew);
-            if (n)
+            std::unordered_map<video::S3DVertexTangents, int>::iterator n = vertMap.find(vNew);
+            if (n != vertMap.end())
             {
-                vertLocation = n->getValue();
+                vertLocation = n->second;
             }
             else
             {
                 vertLocation = buffer->Vertices.size();
                 buffer->Vertices.push_back(vNew);
-                vertMap.insert(vNew, vertLocation);
+                vertMap.insert(std::make_pair(vNew, vertLocation));
             }
 
             // create new indices
