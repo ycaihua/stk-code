@@ -82,7 +82,7 @@
 #include <GUI/IGUIFont.h>
 #include <GUI/IGUIFontBitmap.h>
 #include <GUI/IGUIImage.h>
-#include "IGUIInOutFader.h"
+#include <GUI/IGUIInOutFader.h>
 #include "IGUIListBox.h"
 #include "IGUIMeshViewer.h"
 #include "IGUIScrollBar.h"

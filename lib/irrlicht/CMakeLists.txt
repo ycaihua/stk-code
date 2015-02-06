@@ -225,7 +225,6 @@ include/IGUIToolbar.h
 include/IGUISpinBox.h
 include/IGUITabControl.h
 include/IBillboardTextSceneNode.h
-include/IGUIInOutFader.h
 include/path.h
 include/IMetaTriangleSelector.h
 include/ISceneUserDataSerializer.h
