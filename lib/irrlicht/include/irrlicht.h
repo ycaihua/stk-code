@@ -70,7 +70,7 @@
 #include "IGeometryCreator.h"
 #include "IGPUProgrammingServices.h"
 #include <GUI/IGUIButton.h>
-#include "IGUICheckBox.h"
+#include <GUI/IGUICheckBox.h>
 #include "IGUIColorSelectDialog.h"
 #include "IGUIComboBox.h"
 #include "IGUIContextMenu.h"
