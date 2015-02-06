@@ -27,7 +27,7 @@
 #include <GUI/IGUIElement.h>
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 #include <algorithm>
 
 using namespace GUIEngine;

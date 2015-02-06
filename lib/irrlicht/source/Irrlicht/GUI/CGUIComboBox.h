@@ -9,7 +9,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include <GUI/IGUIComboBox.h>
-#include "IGUIStaticText.h"
+#include <GUI/IGUIStaticText.h>
 #include "irrString.h"
 #include "irrArray.h"
 

@@ -293,7 +293,6 @@ include/IMeshManipulator.h
 include/CVertexBuffer.h
 include/SSharedMeshBuffer.h
 include/ISceneNodeAnimatorCameraFPS.h
-include/IGUIStaticText.h
 include/IMeshWriter.h
 include/IMeshSceneNode.h
 include/IParticleAnimatedMeshSceneNodeEmitter.h

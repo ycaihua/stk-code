@@ -11,7 +11,7 @@
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include <GUI/IGUIButton.h>
-#include "IGUIStaticText.h"
+#include <GUI/IGUIStaticText.h>
 #include <GUI/IGUIFont.h>
 #include <GUI/IGUIFontBitmap.h>
 #include "IFileList.h"

@@ -9,7 +9,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include "CGUIWindow.h"
-#include "IGUIStaticText.h"
+#include <GUI/IGUIStaticText.h>
 #include <GUI/IGUIImage.h>
 #include "irrArray.h"
 

@@ -21,7 +21,7 @@
 
 #include "guiengine/widgets/spinner_widget.hpp"
 #include "states_screens/state_manager.hpp"
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 #include <GUI/IGUIImage.h>
 #include <string>
 

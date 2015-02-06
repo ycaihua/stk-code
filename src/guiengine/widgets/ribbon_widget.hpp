@@ -27,7 +27,7 @@
 #include "utils/leak_check.hpp"
 #include "utils/ptr_vector.hpp"
 
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 
 namespace GUIEngine
 {

@@ -89,7 +89,7 @@
 #include <GUI/IGUISkin.h>
 #include <GUI/IGUISpinBox.h>
 #include <GUI/IGUISpriteBank.h>
-#include "IGUIStaticText.h"
+#include <GUI/IGUIStaticText.h>
 #include "IGUITabControl.h"
 #include "IGUITable.h"
 #include "IGUIToolbar.h"

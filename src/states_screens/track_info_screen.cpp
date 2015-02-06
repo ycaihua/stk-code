@@ -45,7 +45,7 @@
 
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIImage.h>
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 
 using namespace irr::gui;
 using namespace irr::video;

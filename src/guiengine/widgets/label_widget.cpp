@@ -24,7 +24,7 @@
 
 #include <GUI/IGUIElement.h>
 #include <GUI/IGUIEnvironment.h>
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 #include <GUI/IGUIButton.h>
 
 #include <assert.h>
