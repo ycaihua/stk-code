@@ -9,7 +9,7 @@
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include <GUI/IGUIFont.h>
-#include "IGUIWindow.h"
+#include <GUI/IGUIWindow.h>
 
 #include "../os.h"
 
