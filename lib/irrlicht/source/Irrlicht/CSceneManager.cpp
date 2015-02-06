@@ -25,7 +25,7 @@
 #endif
 
 #ifdef _IRR_COMPILE_WITH_B3D_LOADER_
-#include "CB3DMeshFileLoader.h"
+#include "Loaders/CB3DMeshFileLoader.h"
 #endif
 
 #include "CCubeSceneNode.h"

@@ -6,7 +6,7 @@
 
 #ifdef _IRR_COMPILE_WITH_BMP_WRITER_
 
-#include "CImageLoaderBMP.h"
+#include "Loaders/CImageLoaderBMP.h"
 #include "IWriteFile.h"
 #include "CColorConverter.h"
 #include "irrString.h"

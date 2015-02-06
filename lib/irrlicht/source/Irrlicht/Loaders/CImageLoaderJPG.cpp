@@ -7,8 +7,8 @@
 #ifdef _IRR_COMPILE_WITH_JPG_LOADER_
 
 #include "IReadFile.h"
-#include "CImage.h"
-#include "os.h"
+#include "../CImage.h"
+#include "../os.h"
 #include "irrString.h"
 
 namespace irr
