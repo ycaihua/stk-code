@@ -36,7 +36,7 @@
 #include "utils/translation.hpp"
 
 #include <GUI/IGUIEnvironment.h>
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 
 using irr::gui::IGUIStaticText;
 using GUIEngine::PROP_ID;

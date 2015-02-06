@@ -31,7 +31,7 @@
 #include "utils/translation.hpp"
 #include "input/wiimote_manager.hpp"
 
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 #include <GUI/IGUIEnvironment.h>
 
 using namespace GUIEngine;

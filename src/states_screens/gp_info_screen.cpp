@@ -41,7 +41,7 @@
 #include "utils/translation.hpp"
 
 #include <GUI/IGUIEnvironment.h>
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 
 #include <algorithm>
 

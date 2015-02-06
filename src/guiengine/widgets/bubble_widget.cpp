@@ -20,7 +20,7 @@
 #include "utils/translation.hpp"
 #include <algorithm>
 
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 #include <GUI/IGUIElement.h>
 #include <GUI/IGUIEnvironment.h>
 

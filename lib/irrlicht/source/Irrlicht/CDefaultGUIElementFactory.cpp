@@ -21,7 +21,7 @@
 #include <GUI/IGUIMeshViewer.h>
 #include <GUI/IGUIScrollBar.h>
 #include <GUI/IGUISpinBox.h>
-#include "IGUIStaticText.h"
+#include <GUI/IGUIStaticText.h>
 #include "IGUITabControl.h"
 #include "IGUITable.h"
 #include "IGUIToolbar.h"

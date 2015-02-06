@@ -28,7 +28,7 @@
 #include <GUI/IGUIElement.h>
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
-#include <IGUIStaticText.h>
+#include <GUI/IGUIStaticText.h>
 #include <GUI/IGUIImage.h>
 using namespace GUIEngine;
 using namespace irr::core;
