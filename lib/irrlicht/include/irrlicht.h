@@ -176,7 +176,7 @@
 #include "SSkinMeshBuffer.h"
 #include "SVertexIndex.h"
 #include "SViewFrustum.h"
-#include "triangle3d.h"
+#include <Maths/triangle3d.h>
 #include "vector2d.h"
 #include "vector3d.h"
 

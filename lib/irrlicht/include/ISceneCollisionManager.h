@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include "vector3d.h"
-#include "triangle3d.h"
+#include <Maths/triangle3d.h>
 #include "position2d.h"
 #include <Maths/line3d.h>
 

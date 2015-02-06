@@ -15,7 +15,7 @@
 #include "position2d.h"
 #include "SMaterial.h"
 #include "IMeshBuffer.h"
-#include "triangle3d.h"
+#include <Maths/triangle3d.h>
 #include "EDriverTypes.h"
 #include "EDriverFeatures.h"
 #include "SExposedVideoData.h"

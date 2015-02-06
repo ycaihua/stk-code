@@ -21,7 +21,7 @@
 
 #include <algorithm>
 #include <S3DVertex.h>
-#include <triangle3d.h>
+#include <Maths/triangle3d.h>
 
 #include "LinearMath/btTransform.h"
 
