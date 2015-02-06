@@ -270,7 +270,6 @@ include/vector2d.h
 include/CIndexBuffer.h
 include/IAnimatedMesh.h
 include/SMaterial.h
-include/rect.h
 include/EDriverFeatures.h
 include/IVideoModeList.h
 include/fast_atof.h

@@ -18,7 +18,7 @@
 #ifndef __BUBBLE_WIDGET_HPP__
 #define __BUBBLE_WIDGET_HPP__
 
-#include <rect.h>
+#include <Maths/rect.h>
 #include <irrString.h>
 
 #include "guiengine/widget.hpp"

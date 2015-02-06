@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include <Maths/position2d.h>
-#include "rect.h"
+#include <Maths/rect.h>
 
 namespace irr
 {

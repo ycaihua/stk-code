@@ -19,7 +19,7 @@
 #ifndef HEADER_CREDITS_HPP
 #define HEADER_CREDITS_HPP
 
-#include <rect.h>
+#include <Maths/rect.h>
 namespace irr
 {
     namespace video { class IVideoDriver; }

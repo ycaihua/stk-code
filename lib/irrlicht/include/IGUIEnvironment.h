@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include "IGUISkin.h"
-#include "rect.h"
+#include <Maths/rect.h>
 #include "EMessageBoxFlags.h"
 #include "IEventReceiver.h"
 #include "IXMLReader.h"

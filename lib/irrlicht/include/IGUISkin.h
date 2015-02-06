@@ -8,7 +8,7 @@
 #include "IAttributeExchangingObject.h"
 #include "EGUIAlignment.h"
 #include "SColor.h"
-#include "rect.h"
+#include <Maths/rect.h>
 
 namespace irr
 {

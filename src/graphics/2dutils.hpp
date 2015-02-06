@@ -2,7 +2,7 @@
 #define UTILS2D_HPP
 
 #include "gl_headers.hpp"
-#include <rect.h>
+#include <Maths/rect.h>
 #include <SColor.h>
 #include <S3DVertex.h>
 #include <SVertexIndex.h>
