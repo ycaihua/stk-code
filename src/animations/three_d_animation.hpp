@@ -21,7 +21,7 @@
 
 #include <string>
 
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 using namespace irr;
 
 #include "btBulletDynamicsCommon.h"

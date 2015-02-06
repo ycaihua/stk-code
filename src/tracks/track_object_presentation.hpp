@@ -20,7 +20,7 @@
 #ifndef HEADER_TRACK_OBJECT_PRESENTATION_HPP
 #define HEADER_TRACK_OBJECT_PRESENTATION_HPP
 
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 #include <IAnimatedMeshSceneNode.h>
 namespace irr
 {

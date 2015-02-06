@@ -5,7 +5,7 @@
 #include <vector>
 #include <matrix4.h>
 #include <SColor.h>
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 #include "gl_headers.hpp"
 
 bool needsUBO();

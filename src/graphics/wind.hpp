@@ -17,7 +17,7 @@
 #ifndef HEADER_WIND_HPP
 #define HEADER_WIND_HPP
 
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 using namespace irr;
 using core::vector3df;
 

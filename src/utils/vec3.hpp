@@ -20,7 +20,7 @@
 #ifndef HEADER_VEC3_HPP
 #define HEADER_VEC3_HPP
 
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 #include <Maths/vector2d.h>
 using namespace irr;
 

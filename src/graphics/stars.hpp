@@ -23,7 +23,7 @@
 
 #include <vector>
 
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 namespace irr
 {
     namespace scene { class ISceneNode; }

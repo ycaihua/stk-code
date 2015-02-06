@@ -19,7 +19,7 @@
 #ifndef HEADER_TRACK_OBJECT_HPP
 #define HEADER_TRACK_OBJECT_HPP
 
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 
 #include "items/item.hpp"
 #include "physics/physical_object.hpp"

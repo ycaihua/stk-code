@@ -6,7 +6,7 @@
 #define __I_SCENE_NODE_ANIMATOR_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 #include "ESceneNodeAnimatorTypes.h"
 #include "IAttributeExchangingObject.h"
 #include "IEventReceiver.h"

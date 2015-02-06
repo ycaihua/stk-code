@@ -308,7 +308,6 @@ include/ISceneNodeAnimatorCameraMaya.h
 include/IMeshManipulator.h
 include/CVertexBuffer.h
 include/SSharedMeshBuffer.h
-include/vector3d.h
 include/ISceneNodeAnimatorCameraFPS.h
 include/IGUIMeshViewer.h
 include/matrix4.h

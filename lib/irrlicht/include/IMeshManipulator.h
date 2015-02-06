@@ -6,7 +6,7 @@
 #define __I_MESH_MANIPULATOR_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 #include <Maths/aabbox3d.h>
 #include "matrix4.h"
 #include "IAnimatedMesh.h"
