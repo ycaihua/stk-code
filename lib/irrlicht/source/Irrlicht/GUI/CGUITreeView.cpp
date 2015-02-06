@@ -11,7 +11,7 @@
 #include "IVideoDriver.h"
 #include "IGUIFont.h"
 #include "CGUIScrollBar.h"
-#include "os.h"
+#include "../os.h"
 
 namespace irr
 {

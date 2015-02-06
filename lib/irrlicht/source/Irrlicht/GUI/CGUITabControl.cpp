@@ -11,7 +11,7 @@
 #include "IGUIFont.h"
 #include "IVideoDriver.h"
 #include "rect.h"
-#include "os.h"
+#include "../os.h"
 
 namespace irr
 {

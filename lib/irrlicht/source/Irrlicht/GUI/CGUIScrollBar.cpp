@@ -11,7 +11,7 @@
 #include "CGUIButton.h"
 #include "IGUIFont.h"
 #include "IGUIFontBitmap.h"
-#include "os.h"
+#include "../os.h"
 
 namespace irr
 {

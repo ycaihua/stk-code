@@ -5,7 +5,7 @@
 #include "CGUIFont.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "os.h"
+#include "../os.h"
 #include "IGUIEnvironment.h"
 #include "IXMLReader.h"
 #include "IReadFile.h"

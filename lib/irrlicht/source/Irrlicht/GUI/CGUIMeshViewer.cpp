@@ -9,7 +9,7 @@
 #include "IVideoDriver.h"
 #include "IAnimatedMesh.h"
 #include "IMesh.h"
-#include "os.h"
+#include "../os.h"
 #include "IGUISkin.h"
 
 namespace irr
