@@ -4,7 +4,7 @@
 #ifndef __C_GUI_IMAGE_LIST_H_INCLUDED__
 #define __C_GUI_IMAGE_LIST_H_INCLUDED__
 
-#include "IGUIImageList.h"
+#include <GUI/IGUIImageList.h>
 #include "IVideoDriver.h"
 
 namespace irr

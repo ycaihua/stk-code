@@ -287,7 +287,6 @@ include/EDriverTypes.h
 include/IFileSystem.h
 include/SMesh.h
 include/IParticleAffector.h
-include/IGUIImageList.h
 include/EShaderTypes.h
 include/SceneParameters.h
 include/IGUIScrollBar.h

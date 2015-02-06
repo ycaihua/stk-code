@@ -6,7 +6,7 @@
 #define __I_GUI_TREE_VIEW_H_INCLUDED__
 
 #include <GUI/IGUIElement.h>
-#include "IGUIImageList.h"
+#include <GUI/IGUIImageList.h>
 #include "irrTypes.h"
 
 namespace irr
