@@ -14,7 +14,7 @@
 #include "SMaterial.h"
 #include "irrString.h"
 #include <Maths/aabbox3d.h>
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 #include "irrList.h"
 #include "IAttributes.h"
 

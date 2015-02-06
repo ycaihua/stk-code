@@ -15,7 +15,7 @@
 #include <Maths/position2d.h>
 #include <Maths/rect.h>
 #include <Maths/dimension2d.h>
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 #include <Maths/quaternion.h>
 #include <Maths/plane3d.h>
 #include "irrString.h"

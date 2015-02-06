@@ -22,7 +22,7 @@
 #include "utils/no_copy.hpp"
 
 #include <string>
-#include <matrix4.h>
+#include <Maths/matrix4.h>
 using namespace irr;
 
 class XMLNode;

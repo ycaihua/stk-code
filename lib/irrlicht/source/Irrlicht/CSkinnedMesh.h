@@ -11,7 +11,7 @@
 #include "SMeshBuffer.h"
 #include "S3DVertex.h"
 #include "irrString.h"
-#include "matrix4.h"
+#include <Maths/matrix4.h>
 #include <Maths/quaternion.h>
 
 namespace irr

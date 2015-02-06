@@ -19,7 +19,7 @@
 #ifndef HEADER_SLIP_STREAM_HPP
 #define HEADER_SLIP_STREAM_HPP
 
-#include <matrix4.h>
+#include <Maths/matrix4.h>
 namespace irr
 {
     namespace video { class SMaterial; class SColor; }
