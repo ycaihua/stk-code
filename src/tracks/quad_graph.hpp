@@ -28,7 +28,7 @@
 #include "utils/aligned_array.hpp"
 #include "utils/no_copy.hpp"
 
-#include <dimension2d.h>
+#include <Maths/dimension2d.h>
 namespace irr
 {
     namespace scene { class ISceneNode; class IMesh; class IMeshBuffer; }

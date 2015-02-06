@@ -6,7 +6,7 @@
 #define __IRR_I_VIDEO_MODE_LIST_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 
 namespace irr
 {

@@ -6,7 +6,7 @@
 #define __I_IRRLICHT_DEVICE_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include "IVideoDriver.h"
 #include "EDriverTypes.h"
 #include "EDeviceTypes.h"

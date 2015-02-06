@@ -7,7 +7,7 @@
 
 #include "EDriverTypes.h"
 #include "EDeviceTypes.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include "ILogger.h"
 
 namespace irr

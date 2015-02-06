@@ -6,7 +6,7 @@
 #define __IRR_C_VIDEO_MODE_LIST_H_INCLUDED__
 
 #include "IVideoModeList.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include "irrArray.h"
 
 namespace irr

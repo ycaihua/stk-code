@@ -11,7 +11,7 @@
 #include "irrArray.h"
 #include "matrix4.h"
 #include <Maths/plane3d.h>
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include <Maths/position2d.h>
 #include "SMaterial.h"
 #include "IMeshBuffer.h"

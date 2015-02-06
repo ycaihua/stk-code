@@ -6,7 +6,7 @@
 #define __I_Z_BUFFER_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include "S2DVertex.h"
 
 namespace irr

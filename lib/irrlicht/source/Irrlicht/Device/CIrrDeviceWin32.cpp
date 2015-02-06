@@ -14,7 +14,7 @@
 #include "../CTimer.h"
 #include "irrString.h"
 #include "../COSOperator.h"
-#include "dimension2d.h"
+#include <Maths/dimension2d.h>
 #include "IGUISpriteBank.h"
 #include <mmsystem.h>
 #include <regstr.h>
