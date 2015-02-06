@@ -9,7 +9,7 @@
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include <GUI/IGUIFont.h>
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 #include <GUI/IGUIScrollBar.h>
 #include "utils/time.hpp"
 

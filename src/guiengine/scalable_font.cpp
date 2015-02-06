@@ -8,7 +8,7 @@
 #include <IXMLReader.h>
 #include <IReadFile.h>
 #include <IVideoDriver.h>
-#include <IGUISpriteBank.h>
+#include <GUI/IGUISpriteBank.h>
 
 #include "guiengine/engine.hpp"
 #include "io/file_manager.hpp"

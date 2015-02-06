@@ -6,7 +6,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include <GUI/IGUIFont.h>
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 #include <GUI/IGUIElement.h>
 #include "IVideoDriver.h"
 #include "IAttributes.h"

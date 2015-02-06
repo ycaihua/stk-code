@@ -24,7 +24,7 @@ extern bool GLContextDebugBit;
 #include "../COSOperator.h"
 #include "../CColorConverter.h"
 #include <SIrrCreationParameters.h>
-#include <IGUISpriteBank.h>
+#include <GUI/IGUISpriteBank.h>
 #include <X11/XKBlib.h>
 #include <X11/Xatom.h>
 

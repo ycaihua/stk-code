@@ -12,7 +12,7 @@
 #include <GUI/IGUIButton.h>
 #include "IGUIStaticText.h"
 #include <GUI/IGUIFont.h>
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 #include "IFileList.h"
 #include "../os.h"
 #include "fast_atof.h"

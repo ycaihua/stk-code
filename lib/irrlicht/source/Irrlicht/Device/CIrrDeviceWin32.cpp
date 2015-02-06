@@ -15,7 +15,7 @@
 #include "irrString.h"
 #include "../COSOperator.h"
 #include <Maths/dimension2d.h>
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 #include <mmsystem.h>
 #include <regstr.h>
 #include <winuser.h>

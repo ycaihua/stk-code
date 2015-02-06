@@ -88,7 +88,7 @@
 #include <GUI/IGUIScrollBar.h>
 #include <GUI/IGUISkin.h>
 #include <GUI/IGUISpinBox.h>
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 #include "IGUIStaticText.h"
 #include "IGUITabControl.h"
 #include "IGUITable.h"
