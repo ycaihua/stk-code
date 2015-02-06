@@ -260,7 +260,6 @@ include/IVideoDriver.h
 include/irrMath.h
 include/ISceneNode.h
 include/irrpack.h
-include/plane3d.h
 include/ISceneManager.h
 include/IImageWriter.h
 include/EGUIElementTypes.h

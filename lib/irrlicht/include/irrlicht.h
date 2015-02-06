@@ -154,7 +154,7 @@
 #include <Maths/line2d.h>
 #include <Maths/line3d.h>
 #include "matrix4.h"
-#include "plane3d.h"
+#include <Maths/plane3d.h>
 #include "position2d.h"
 #include <Maths/quaternion.h>
 #include "rect.h"
