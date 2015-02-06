@@ -76,7 +76,7 @@
 #include <GUI/IGUIContextMenu.h>
 #include <GUI/IGUIEditBox.h>
 #include <GUI/IGUIElement.h>
-#include "IGUIElementFactory.h"
+#include <GUI/IGUIElementFactory.h>
 #include "IGUIEnvironment.h"
 #include "IGUIFileOpenDialog.h"
 #include "IGUIFont.h"

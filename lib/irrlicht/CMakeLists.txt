@@ -215,7 +215,6 @@ include/irrList.h
 include/SAnimatedMesh.h
 include/IGUITreeView.h
 include/IGUIFont.h
-include/IGUIElementFactory.h
 include/IParticleSystemSceneNode.h
 include/ITerrainSceneNode.h
 include/SMeshBuffer.h
