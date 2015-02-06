@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CTerrainTriangleSelector.h"
-#include "CTerrainSceneNode.h"
+#include "SceneNodes/CTerrainSceneNode.h"
 #include "os.h"
 
 namespace irr

@@ -28,22 +28,21 @@
 #include "Loaders/CB3DMeshFileLoader.h"
 #endif
 
-#include "CCubeSceneNode.h"
-#include "CSphereSceneNode.h"
-#include "CAnimatedMeshSceneNode.h"
-#include "COctreeSceneNode.h"
-#include "CCameraSceneNode.h"
-#include "CLightSceneNode.h"
-#include "CBillboardSceneNode.h"
-#include "CMeshSceneNode.h"
-#include "CSkyBoxSceneNode.h"
-#include "CSkyDomeSceneNode.h"
-#include "CParticleSystemSceneNode.h"
+#include "SceneNodes/CCubeSceneNode.h"
+#include "SceneNodes/CSphereSceneNode.h"
+#include "SceneNodes/CAnimatedMeshSceneNode.h"
+#include "SceneNodes/COctreeSceneNode.h"
+#include "SceneNodes/CCameraSceneNode.h"
+#include "SceneNodes/CLightSceneNode.h"
+#include "SceneNodes/CBillboardSceneNode.h"
+#include "SceneNodes/CMeshSceneNode.h"
+#include "SceneNodes/CSkyBoxSceneNode.h"
+#include "SceneNodes/CParticleSystemSceneNode.h"
 #include "CDummyTransformationSceneNode.h"
-#include "CWaterSurfaceSceneNode.h"
-#include "CTerrainSceneNode.h"
-#include "CEmptySceneNode.h"
-#include "CTextSceneNode.h"
+#include "SceneNodes/CWaterSurfaceSceneNode.h"
+#include "SceneNodes/CTerrainSceneNode.h"
+#include "SceneNodes/CEmptySceneNode.h"
+#include "SceneNodes/CTextSceneNode.h"
 
 #include "CDefaultSceneNodeFactory.h"
 
@@ -587,23 +586,6 @@ ISceneNode* CSceneManager::addSkyBoxSceneNode(video::ITexture* top, video::IText
 
 	ISceneNode* node = new CSkyBoxSceneNode(top, bottom, left, right,
 			front, back, parent, this, id);
-
-	node->drop();
-	return node;
-}
-
-
-//! Adds a skydome scene node. A skydome is a large (half-) sphere with a
-//! panoramic texture on it and is drawn around the camera position.
-ISceneNode* CSceneManager::addSkyDomeSceneNode(video::ITexture* texture,
-	u32 horiRes, u32 vertRes, f32 texturePercentage,f32 spherePercentage, f32 radius,
-	ISceneNode* parent, s32 id)
-{
-	if (!parent)
-		parent = this;
-
-	ISceneNode* node = new CSkyDomeSceneNode(texture, horiRes, vertRes,
-		texturePercentage, spherePercentage, radius, parent, this, id);
 
 	node->drop();
 	return node;

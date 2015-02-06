@@ -6,7 +6,7 @@
 
 #include <IMeshSceneNode.h>
 #include <IMesh.h>
-#include "../lib/irrlicht/source/Irrlicht/CMeshSceneNode.h"
+#include "../lib/irrlicht/source/Irrlicht/SceneNodes/CMeshSceneNode.h"
 
 #include <vector>
 #include "material.hpp"

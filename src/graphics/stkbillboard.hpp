@@ -1,7 +1,7 @@
 #ifndef STKBILLBOARD_HPP
 #define STKBILLBOARD_HPP
 
-#include "../lib/irrlicht/source/Irrlicht/CBillboardSceneNode.h"
+#include "../lib/irrlicht/source/Irrlicht/SceneNodes/CBillboardSceneNode.h"
 #include <IBillboardSceneNode.h>
 #include <irrTypes.h>
 #include "utils/cpp2011.hpp"

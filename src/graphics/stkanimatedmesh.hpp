@@ -1,7 +1,7 @@
 #ifndef STKANIMATEDMESH_HPP
 #define STKANIMATEDMESH_HPP
 
-#include "../lib/irrlicht/source/Irrlicht/CAnimatedMeshSceneNode.h"
+#include "../lib/irrlicht/source/Irrlicht/SceneNodes/CAnimatedMeshSceneNode.h"
 #include <IAnimatedMesh.h>
 #include <irrTypes.h>
 #include "graphics/stkmesh.hpp"

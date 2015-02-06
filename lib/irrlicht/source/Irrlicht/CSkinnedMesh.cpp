@@ -6,7 +6,7 @@
 #ifdef _IRR_COMPILE_WITH_SKINNED_MESH_SUPPORT_
 
 #include "CSkinnedMesh.h"
-#include "CBoneSceneNode.h"
+#include "SceneNodes/CBoneSceneNode.h"
 #include "IAnimatedMeshSceneNode.h"
 #include "os.h"
 
