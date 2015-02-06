@@ -10,7 +10,7 @@
 
 #include "IGUIFontBitmap.h"
 #include "irrString.h"
-#include "irrMap.h"
+#include <unordered_map>
 #include "IXMLReader.h"
 #include "IReadFile.h"
 #include "irrArray.h"
@@ -98,7 +98,7 @@ private:
 	void setMaxHeight();
 
 	core::array<SFontArea>		Areas;
-	core::map<wchar_t, s32>		CharacterMap;
+	std::unordered_map<wchar_t, s32>		CharacterMap;
 	video::IVideoDriver*		Driver;
 	IGUISpriteBank*			SpriteBank;
 	IGUIEnvironment*		Environment;
