@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIContextMenu.h"
+#include <GUI/IGUIContextMenu.h>
 #include "irrString.h"
 #include "irrArray.h"
 #include "IGUIFont.h"
