@@ -20,7 +20,7 @@
 #include <GUI/IGUIListBox.h>
 #include <GUI/IGUIMeshViewer.h>
 #include <GUI/IGUIScrollBar.h>
-#include "IGUISpinBox.h"
+#include <GUI/IGUISpinBox.h>
 #include "IGUIStaticText.h"
 #include "IGUITabControl.h"
 #include "IGUITable.h"

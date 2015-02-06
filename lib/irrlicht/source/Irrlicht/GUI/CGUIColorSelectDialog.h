@@ -10,7 +10,7 @@
 
 #include <GUI/IGUIColorSelectDialog.h>
 #include <GUI/IGUIButton.h>
-#include "IGUISpinBox.h"
+#include <GUI/IGUISpinBox.h>
 #include <GUI/IGUIImage.h>
 #include "irrArray.h"
 
