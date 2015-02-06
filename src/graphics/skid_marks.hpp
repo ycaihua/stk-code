@@ -22,7 +22,7 @@
 
 #include <vector>
 
-#include <aabbox3d.h>
+#include <Maths/aabbox3d.h>
 #include <SMeshBuffer.h>
 namespace irr
 {

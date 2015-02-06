@@ -5,7 +5,7 @@
 #ifndef __I_ANIMATED_MESH_H_INCLUDED__
 #define __I_ANIMATED_MESH_H_INCLUDED__
 
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 #include "IMesh.h"
 
 namespace irr

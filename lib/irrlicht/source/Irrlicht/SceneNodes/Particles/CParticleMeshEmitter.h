@@ -7,7 +7,7 @@
 
 #include "IParticleMeshEmitter.h"
 #include "irrArray.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 #include "IMeshBuffer.h"
 
 namespace irr

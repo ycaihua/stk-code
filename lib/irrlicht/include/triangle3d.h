@@ -8,7 +8,7 @@
 #include "vector3d.h"
 #include "line3d.h"
 #include "plane3d.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 
 namespace irr
 {

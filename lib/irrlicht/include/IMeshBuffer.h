@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include "SMaterial.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 #include "S3DVertex.h"
 #include "SVertexIndex.h"
 #include "EHardwareBufferFlags.h"

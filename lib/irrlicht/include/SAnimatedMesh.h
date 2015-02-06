@@ -7,7 +7,7 @@
 
 #include "IAnimatedMesh.h"
 #include "IMesh.h"
-#include "aabbox3d.h"
+#include <Maths/aabbox3d.h>
 #include "irrArray.h"
 
 namespace irr
