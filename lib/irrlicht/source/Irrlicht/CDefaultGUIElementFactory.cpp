@@ -14,7 +14,7 @@
 #include <GUI/IGUIComboBox.h>
 #include <GUI/IGUIContextMenu.h>
 #include <GUI/IGUIEditBox.h>
-#include "IGUIFileOpenDialog.h"
+#include <GUI/IGUIFileOpenDialog.h>
 #include "IGUIInOutFader.h"
 #include "IGUIImage.h"
 #include "IGUIListBox.h"

@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIFileOpenDialog.h"
+#include <GUI/IGUIFileOpenDialog.h>
 #include <GUI/IGUIButton.h>
 #include "IGUIListBox.h"
 #include <GUI/IGUIEditBox.h>
