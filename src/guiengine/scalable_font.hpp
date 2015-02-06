@@ -8,7 +8,7 @@
 #include "utils/leak_check.hpp"
 
 #include "IrrCompileConfig.h"
-#include "IGUIFontBitmap.h"
+#include <GUI/IGUIFontBitmap.h>
 #include "irrString.h"
 #include "irrMap.h"
 #include "IXMLReader.h"

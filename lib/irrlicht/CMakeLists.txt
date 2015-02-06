@@ -192,7 +192,6 @@ ${IRR_MATHS_INCLUDE}
 ${IRR_GUI_INCLUDE}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
-include/IGUIFontBitmap.h
 include/IEventReceiver.h
 include/EMessageBoxFlags.h
 include/IParticleSphereEmitter.h

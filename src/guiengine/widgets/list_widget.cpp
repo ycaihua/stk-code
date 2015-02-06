@@ -24,7 +24,7 @@
 #include <GUI/IGUIElement.h>
 #include <IGUISkin.h>
 #include <GUI/IGUIEnvironment.h>
-#include "IGUIFontBitmap.h"
+#include <GUI/IGUIFontBitmap.h>
 
 #include <sstream>
 

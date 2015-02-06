@@ -13,7 +13,7 @@
 #include <GUI/IGUIButton.h>
 #include "IGUIStaticText.h"
 #include <GUI/IGUIFont.h>
-#include "IGUIFontBitmap.h"
+#include <GUI/IGUIFontBitmap.h>
 #include "IFileList.h"
 #include "../os.h"
 
