@@ -26,7 +26,7 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIButton.h>
+#include <GUI/IGUIButton.h>
 
 using namespace GUIEngine;
 using namespace irr::core;

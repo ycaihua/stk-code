@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIButton.h"
+#include <GUI/IGUIButton.h>
 #include "IGUISpriteBank.h"
 #include "SColor.h"
 

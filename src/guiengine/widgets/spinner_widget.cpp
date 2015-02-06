@@ -27,7 +27,7 @@
 
 #include <IGUIElement.h>
 #include <IGUIEnvironment.h>
-#include <IGUIButton.h>
+#include <GUI/IGUIButton.h>
 #include <IGUIStaticText.h>
 #include <IGUIImage.h>
 using namespace GUIEngine;

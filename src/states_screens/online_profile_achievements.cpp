@@ -30,7 +30,7 @@
 #include "states_screens/dialogs/user_info_dialog.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIButton.h>
+#include <GUI/IGUIButton.h>
 
 #include <iostream>
 #include <sstream>

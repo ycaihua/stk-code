@@ -40,7 +40,7 @@
 #include "utils/random_generator.hpp"
 
 #include <IGUIEnvironment.h>
-#include <IGUIButton.h>
+#include <GUI/IGUIButton.h>
 
 using namespace GUIEngine;
 using irr::core::stringw;

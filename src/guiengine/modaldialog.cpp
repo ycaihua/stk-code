@@ -26,7 +26,7 @@
 #include "utils/log.hpp"
 
 #include <IGUIEnvironment.h>
-#include <IGUIButton.h>
+#include <GUI/IGUIButton.h>
 
 using namespace irr;
 using namespace core;

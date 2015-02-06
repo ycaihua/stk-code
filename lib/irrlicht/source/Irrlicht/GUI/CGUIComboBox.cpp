@@ -10,7 +10,7 @@
 #include "IGUISkin.h"
 #include "IGUIEnvironment.h"
 #include "IGUIFont.h"
-#include "IGUIButton.h"
+#include <GUI/IGUIButton.h>
 #include "CGUIListBox.h"
 #include "../os.h"
 

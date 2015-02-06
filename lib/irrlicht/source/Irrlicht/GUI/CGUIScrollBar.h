@@ -9,7 +9,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include "IGUIScrollBar.h"
-#include "IGUIButton.h"
+#include <GUI/IGUIButton.h>
 
 namespace irr
 {
