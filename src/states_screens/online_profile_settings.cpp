@@ -25,7 +25,7 @@
 #include "states_screens/dialogs/change_password_dialog.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIButton.h>
+#include <GUI/IGUIButton.h>
 
 #include <iostream>
 #include <sstream>

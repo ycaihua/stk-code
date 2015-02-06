@@ -8,7 +8,7 @@
 
 #include "IGUIEnvironment.h"
 
-#include "IGUIButton.h"
+#include <GUI/IGUIButton.h>
 #include "IGUICheckBox.h"
 #include "IGUIColorSelectDialog.h"
 #include "IGUIComboBox.h"

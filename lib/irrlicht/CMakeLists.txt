@@ -51,6 +51,7 @@ file(GLOB IRR_SCENENODES_ANIMATORS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} 
 file(GLOB IRR_SCENENODES_ANIMATORS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Animators/*.cpp")
 
 file(GLOB IRR_MATHS_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/Maths/*.h")
+file(GLOB IRR_GUI_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/GUI/*.h")
 
 include(../../cmake/SourceGroupFunctions.cmake)
 source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS)
@@ -62,6 +63,7 @@ source_group_hierarchy(IRR_SCENENODES_PARTICLES_SOURCES IRR_SCENENODES_PARTICLES
 source_group_hierarchy(IRR_SCENENODES_ANIMATORS_SOURCES IRR_SCENENODES_ANIMATORS_HEADERS)
 
 source_group_hierarchy(IRR_MATHS_INCLUDE IRR_MATHS_INCLUDE)
+source_group_hierarchy(IRR_GUI_INCLUDE IRR_GUI_INCLUDE)
 
 set(IRRLICHT_SOURCES
 ${IRR_DEVICES_SOURCES}
@@ -187,6 +189,7 @@ ${IRR_SCENENODES_HEADERS}
 ${IRR_SCENENODES_PARTICLES_HEADERS}
 ${IRR_SCENENODES_ANIMATORS_HEADERS}
 ${IRR_MATHS_INCLUDE}
+${IRR_GUI_INCLUDE}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IGUIFontBitmap.h
@@ -324,7 +327,6 @@ include/IGPUProgrammingServices.h
 include/IrrCompileConfig.h
 include/ISceneNodeFactory.h
 include/IGUITable.h
-include/IGUIButton.h
 include/EMaterialFlags.h
 include/EDeviceTypes.h
 include/IGUIWindow.h

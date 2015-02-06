@@ -9,7 +9,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include "IGUIColorSelectDialog.h"
-#include "IGUIButton.h"
+#include <GUI/IGUIButton.h>
 #include "IGUISpinBox.h"
 #include "IGUIImage.h"
 #include "irrArray.h"

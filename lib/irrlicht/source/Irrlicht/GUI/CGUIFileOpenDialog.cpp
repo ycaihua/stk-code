@@ -10,7 +10,7 @@
 #include "IGUISkin.h"
 #include "IGUIEnvironment.h"
 #include "IVideoDriver.h"
-#include "IGUIButton.h"
+#include <GUI/IGUIButton.h>
 #include "IGUIStaticText.h"
 #include "IGUIFont.h"
 #include "IGUIFontBitmap.h"

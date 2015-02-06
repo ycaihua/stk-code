@@ -9,7 +9,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include "IGUIFileOpenDialog.h"
-#include "IGUIButton.h"
+#include <GUI/IGUIButton.h>
 #include "IGUIListBox.h"
 #include "IGUIEditBox.h"
 #include "IFileSystem.h"

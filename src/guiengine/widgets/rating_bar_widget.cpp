@@ -23,7 +23,7 @@
 
 #include <IGUIEnvironment.h>
 #include <IGUIElement.h>
-#include <IGUIButton.h>
+#include <GUI/IGUIButton.h>
 #include <cmath>
 #include <string.h>
 
