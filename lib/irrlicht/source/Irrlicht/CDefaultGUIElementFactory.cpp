@@ -19,7 +19,7 @@
 #include <GUI/IGUIImage.h>
 #include <GUI/IGUIListBox.h>
 #include <GUI/IGUIMeshViewer.h>
-#include "IGUIScrollBar.h"
+#include <GUI/IGUIScrollBar.h>
 #include "IGUISpinBox.h"
 #include "IGUIStaticText.h"
 #include "IGUITabControl.h"

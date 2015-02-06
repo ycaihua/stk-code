@@ -85,7 +85,7 @@
 #include <GUI/IGUIInOutFader.h>
 #include <GUI/IGUIListBox.h>
 #include <GUI/IGUIMeshViewer.h>
-#include "IGUIScrollBar.h"
+#include <GUI/IGUIScrollBar.h>
 #include "IGUISkin.h"
 #include "IGUISpinBox.h"
 #include "IGUISpriteBank.h"
