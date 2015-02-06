@@ -39,7 +39,7 @@
 #include "utils/translation.hpp"
 #include "utils/random_generator.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
 
 using namespace GUIEngine;

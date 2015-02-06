@@ -26,7 +26,7 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 
 
 using namespace GUIEngine;

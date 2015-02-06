@@ -6,7 +6,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include "IGUISkin.h"
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include "IGUIFont.h"
 #include "../os.h"

@@ -37,7 +37,7 @@
 #include "utils/log.hpp"
 #include "utils/profiler.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIContextMenu.h>
 
 #include <cmath>

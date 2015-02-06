@@ -8,7 +8,7 @@
 #include <locale.h>
 
 #include "IGUISkin.h"
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include <GUI/IGUIButton.h>
 #include "IGUIStaticText.h"

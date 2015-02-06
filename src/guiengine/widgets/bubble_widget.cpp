@@ -22,7 +22,7 @@
 
 #include <IGUIStaticText.h>
 #include <GUI/IGUIElement.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 
 using namespace irr::core;
 using namespace irr::gui;

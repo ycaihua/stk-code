@@ -5,7 +5,7 @@
 #include "CGUIInOutFader.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include "../os.h"
 

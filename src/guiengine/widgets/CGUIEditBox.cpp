@@ -5,7 +5,7 @@
 #include "guiengine/widgets/CGUIEditBox.hpp"
 
 #include "IGUISkin.h"
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include "IGUIFont.h"
 #include "IVideoDriver.h"
 #include <Maths/rect.h>

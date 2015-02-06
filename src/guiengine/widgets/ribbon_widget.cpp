@@ -31,7 +31,7 @@
 #include "utils/vs.hpp"
 
 #include <GUI/IGUIElement.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
 
 using namespace GUIEngine;

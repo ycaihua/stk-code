@@ -34,7 +34,7 @@
 #include "utils/profiler.hpp"
 
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <IGUIListBox.h>
 
 #include <iostream>
