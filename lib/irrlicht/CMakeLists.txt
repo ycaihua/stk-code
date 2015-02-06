@@ -289,7 +289,6 @@ include/SMeshBufferTangents.h
 include/ILightSceneNode.h
 include/ISceneCollisionManager.h
 include/heapsort.h
-include/IGUIComboBox.h
 include/Keycodes.h
 include/SParticle.h
 include/EDriverTypes.h

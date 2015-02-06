@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIComboBox.h"
+#include <GUI/IGUIComboBox.h>
 #include "IGUIStaticText.h"
 #include "irrString.h"
 #include "irrArray.h"

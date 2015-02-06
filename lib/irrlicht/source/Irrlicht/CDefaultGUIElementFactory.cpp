@@ -11,7 +11,7 @@
 #include <GUI/IGUIButton.h>
 #include <GUI/IGUICheckBox.h>
 #include <GUI/IGUIColorSelectDialog.h>
-#include "IGUIComboBox.h"
+#include <GUI/IGUIComboBox.h>
 #include "IGUIContextMenu.h"
 #include "IGUIEditBox.h"
 #include "IGUIFileOpenDialog.h"
