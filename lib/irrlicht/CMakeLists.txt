@@ -37,12 +37,15 @@ endif()
 
 file(GLOB_RECURSE IRR_DEVICES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Device/*.h")
 file(GLOB_RECURSE IRR_DEVICES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Device/*.cpp")
+file(GLOB_RECURSE IRR_LOADERS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Loaders/*.h")
+file(GLOB_RECURSE IRR_LOADERS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Loaders/*.cpp")
 
 include(../../cmake/SourceGroupFunctions.cmake)
-source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS)
+source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS IRR_LOADERS_SOURCES IRR_LOADERS_HEADERS)
 
 set(IRRLICHT_SOURCES
 ${IRR_DEVICES_SOURCES}
+${IRR_LOADERS_SOURCES}
 source/Irrlicht/CGUIListBox.cpp
 source/Irrlicht/CZBuffer.cpp
 source/Irrlicht/CGUIModalScreen.cpp
@@ -64,8 +67,6 @@ source/Irrlicht/CFPSCounter.cpp
 source/Irrlicht/CGUIContextMenu.cpp
 source/Irrlicht/CImageWriterJPG.cpp
 source/Irrlicht/CZipReader.cpp
-source/Irrlicht/CImageLoaderPNG.cpp
-source/Irrlicht/CImageLoaderBMP.cpp
 source/Irrlicht/CDefaultSceneNodeAnimatorFactory.cpp
 source/Irrlicht/CSkyDomeSceneNode.cpp
 source/Irrlicht/CGUIFileOpenDialog.cpp
@@ -127,7 +128,6 @@ source/Irrlicht/CWriteFile.cpp
 source/Irrlicht/COctreeTriangleSelector.cpp
 source/Irrlicht/CFileList.cpp
 source/Irrlicht/COSOperator.cpp
-source/Irrlicht/CImageLoaderJPG.cpp
 source/Irrlicht/COpenGLExtensionHandler.cpp
 source/Irrlicht/CXMLWriter.cpp
 source/Irrlicht/CSceneNodeAnimatorCameraFPS.cpp
@@ -142,7 +142,6 @@ source/Irrlicht/CSkinnedMesh.cpp
 source/Irrlicht/CXMLReader.cpp
 source/Irrlicht/CDummyTransformationSceneNode.cpp
 source/Irrlicht/CGUITable.cpp
-source/Irrlicht/CB3DMeshFileLoader.cpp
 source/Irrlicht/CGeometryCreator.cpp
 source/Irrlicht/CNullDriver.cpp
 source/Irrlicht/CCameraSceneNode.cpp
@@ -159,7 +158,6 @@ source/Irrlicht/CImageWriterBMP.cpp
 source/Irrlicht/CParticleMeshEmitter.cpp
 source/Irrlicht/CSceneNodeAnimatorRotation.cpp
 source/Irrlicht/glext.h
-source/Irrlicht/CB3DMeshFileLoader.h
 source/Irrlicht/CMeshCache.h
 source/Irrlicht/CAttributes.h
 source/Irrlicht/CParticleMeshEmitter.h
@@ -168,12 +166,10 @@ source/Irrlicht/CParticleRotationAffector.h
 source/Irrlicht/CMountPointReader.h
 source/Irrlicht/CTerrainSceneNode.h
 source/Irrlicht/CSceneNodeAnimatorCollisionResponse.h
-source/Irrlicht/CImageLoaderBMP.h
 source/Irrlicht/CSkinnedMesh.h
 source/Irrlicht/COpenGLParallaxMapRenderer.h
 source/Irrlicht/CParticleRingEmitter.h
 source/Irrlicht/COpenGLShaderMaterialRenderer.h
-source/Irrlicht/CImageLoaderPNG.h
 source/Irrlicht/COctreeTriangleSelector.h
 source/Irrlicht/COpenGLTexture.h
 source/Irrlicht/Octree.h
@@ -250,7 +246,6 @@ source/Irrlicht/CEmptySceneNode.h
 source/Irrlicht/CParticleSystemSceneNode.h
 source/Irrlicht/CImageWriterPNG.h
 source/Irrlicht/CParticleScaleAffector.h
-source/Irrlicht/CImageLoaderJPG.h
 source/Irrlicht/CBillboardSceneNode.h
 source/Irrlicht/CSkyDomeSceneNode.h
 source/Irrlicht/CGUIInOutFader.h
@@ -296,6 +291,7 @@ source/Irrlicht/CGUIFileOpenDialog.h
 source/Irrlicht/CTextSceneNode.h
 
 ${IRR_DEVICES_HEADERS}
+${IRR_LOADERS_HEADERS}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IGUIFontBitmap.h

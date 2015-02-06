@@ -13,7 +13,7 @@
 
 #include "IVideoDriver.h"
 #include "IFileSystem.h"
-#include "os.h"
+#include "../os.h"
 
 #ifdef _DEBUG
 #define _B3D_READER_DEBUG
