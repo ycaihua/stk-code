@@ -10,7 +10,7 @@
 #include "IGUIEnvironment.h"
 #include "IVideoDriver.h"
 #include "IGUIFont.h"
-#include "os.h"
+#include "../os.h"
 
 namespace irr
 {

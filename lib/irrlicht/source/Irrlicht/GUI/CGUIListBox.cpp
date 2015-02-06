@@ -12,7 +12,7 @@
 #include "IGUIFont.h"
 #include "IGUISpriteBank.h"
 #include "CGUIScrollBar.h"
-#include "os.h"
+#include "../os.h"
 
 namespace irr
 {

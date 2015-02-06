@@ -15,7 +15,7 @@
 #include "IGUIFont.h"
 #include "IGUIFontBitmap.h"
 #include "IFileList.h"
-#include "os.h"
+#include "../os.h"
 
 namespace irr
 {

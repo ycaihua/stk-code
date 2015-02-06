@@ -36,12 +36,12 @@
 #include "CGUIToolBar.h"
 #include "CGUITable.h"
 
-#include "CDefaultGUIElementFactory.h"
+#include "../CDefaultGUIElementFactory.h"
 #include "IWriteFile.h"
 #include "IXMLWriter.h"
 
-#include "BuiltInFont.h"
-#include "os.h"
+#include "../BuiltInFont.h"
+#include "../os.h"
 
 namespace irr
 {
