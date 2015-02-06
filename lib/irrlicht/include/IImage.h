@@ -6,7 +6,7 @@
 #define __I_IMAGE_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "position2d.h"
+#include <Maths/position2d.h>
 #include "rect.h"
 #include "SColor.h"
 

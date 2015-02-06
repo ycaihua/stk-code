@@ -12,7 +12,7 @@
 #include <Maths/line2d.h>
 #include <Maths/line3d.h>
 #include <Maths/triangle3d.h>
-#include "position2d.h"
+#include <Maths/position2d.h>
 #include "rect.h"
 #include "dimension2d.h"
 #include "matrix4.h"
