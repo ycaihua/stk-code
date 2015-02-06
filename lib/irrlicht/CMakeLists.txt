@@ -132,7 +132,6 @@ source/Irrlicht/S2DVertex.h
 source/Irrlicht/CDefaultSceneNodeAnimatorFactory.h
 source/Irrlicht/resource.h
 source/Irrlicht/SoftwareDriver2_helper.h
-source/Irrlicht/dmfsupport.h
 source/Irrlicht/CMeshManipulator.h
 source/Irrlicht/IImagePresenter.h
 source/Irrlicht/IZBuffer.h
