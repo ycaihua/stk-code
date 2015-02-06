@@ -74,7 +74,7 @@
 #include <GUI/IGUIColorSelectDialog.h>
 #include <GUI/IGUIComboBox.h>
 #include <GUI/IGUIContextMenu.h>
-#include "IGUIEditBox.h"
+#include <GUI/IGUIEditBox.h>
 #include "IGUIElement.h"
 #include "IGUIElementFactory.h"
 #include "IGUIEnvironment.h"

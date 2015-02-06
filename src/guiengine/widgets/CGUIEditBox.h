@@ -6,7 +6,7 @@
 #define __C_GUI_EDIT_BOX_H_INCLUDED__
 
 #include "IrrCompileConfig.h"
-#include "IGUIEditBox.h"
+#include <GUI/IGUIEditBox.h>
 #include "irrArray.h"
 #include "IOSOperator.h"
 #include "utils/leak_check.hpp"

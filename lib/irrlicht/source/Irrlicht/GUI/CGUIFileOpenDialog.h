@@ -11,7 +11,7 @@
 #include "IGUIFileOpenDialog.h"
 #include <GUI/IGUIButton.h>
 #include "IGUIListBox.h"
-#include "IGUIEditBox.h"
+#include <GUI/IGUIEditBox.h>
 #include "IFileSystem.h"
 
 namespace irr
