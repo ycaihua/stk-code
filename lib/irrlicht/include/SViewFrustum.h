@@ -5,7 +5,7 @@
 #ifndef __S_VIEW_FRUSTUM_H_INCLUDED__
 #define __S_VIEW_FRUSTUM_H_INCLUDED__
 
-#include "plane3d.h"
+#include <Maths/plane3d.h>
 #include "vector3d.h"
 #include <Maths/line3d.h>
 #include <Maths/aabbox3d.h>

@@ -17,7 +17,7 @@
 #include "dimension2d.h"
 #include "matrix4.h"
 #include <Maths/quaternion.h>
-#include "plane3d.h"
+#include <Maths/plane3d.h>
 #include "irrString.h"
 #include "irrArray.h"
 #include "EAttributes.h"
