@@ -35,7 +35,7 @@ using namespace irr;
 #include "utils/no_copy.hpp"
 #include "utils/vec3.hpp"
 
-#include <line2d.h>
+#include <Maths/line2d.h>
 
 class AbstractKart;
 class LODNode;

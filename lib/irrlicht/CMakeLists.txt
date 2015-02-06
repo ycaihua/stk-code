@@ -260,7 +260,6 @@ include/IGUIContextMenu.h
 include/IVideoDriver.h
 include/irrMath.h
 include/ISceneNode.h
-include/line2d.h
 include/irrpack.h
 include/plane3d.h
 include/ISceneManager.h

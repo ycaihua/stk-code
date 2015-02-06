@@ -23,7 +23,7 @@
 
 #include <vector2d.h>
 #include <dimension2d.h>
-#include <line2d.h>
+#include <Maths/line2d.h>
 
 #include "tracks/quad.hpp"
 #include "tracks/quad_set.hpp"

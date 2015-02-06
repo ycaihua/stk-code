@@ -21,7 +21,7 @@
 
 #include "tracks/check_structure.hpp"
 #include "utils/cpp2011.hpp"
-#include <line2d.h>
+#include <Maths/line2d.h>
 using namespace irr;
 
 class CheckManager;
