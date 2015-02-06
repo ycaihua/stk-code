@@ -35,7 +35,7 @@
 
 
 #include <GUI/IGUIEnvironment.h>
-#include <IGUIListBox.h>
+#include <GUI/IGUIListBox.h>
 
 #include <iostream>
 

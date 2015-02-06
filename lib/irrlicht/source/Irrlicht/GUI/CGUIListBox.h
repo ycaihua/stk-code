@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIListBox.h"
+#include <GUI/IGUIListBox.h>
 #include "irrArray.h"
 
 namespace irr

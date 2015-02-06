@@ -17,7 +17,7 @@
 #include <GUI/IGUIFileOpenDialog.h>
 #include <GUI/IGUIInOutFader.h>
 #include <GUI/IGUIImage.h>
-#include "IGUIListBox.h"
+#include <GUI/IGUIListBox.h>
 #include "IGUIMeshViewer.h"
 #include "IGUIScrollBar.h"
 #include "IGUISpinBox.h"

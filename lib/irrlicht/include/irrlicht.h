@@ -83,7 +83,7 @@
 #include <GUI/IGUIFontBitmap.h>
 #include <GUI/IGUIImage.h>
 #include <GUI/IGUIInOutFader.h>
-#include "IGUIListBox.h"
+#include <GUI/IGUIListBox.h>
 #include "IGUIMeshViewer.h"
 #include "IGUIScrollBar.h"
 #include "IGUISkin.h"
