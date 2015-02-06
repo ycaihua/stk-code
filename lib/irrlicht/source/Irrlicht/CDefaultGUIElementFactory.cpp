@@ -13,7 +13,7 @@
 #include <GUI/IGUIColorSelectDialog.h>
 #include <GUI/IGUIComboBox.h>
 #include <GUI/IGUIContextMenu.h>
-#include "IGUIEditBox.h"
+#include <GUI/IGUIEditBox.h>
 #include "IGUIFileOpenDialog.h"
 #include "IGUIInOutFader.h"
 #include "IGUIImage.h"

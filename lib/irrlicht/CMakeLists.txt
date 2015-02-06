@@ -220,7 +220,6 @@ include/IGUIElementFactory.h
 include/IParticleSystemSceneNode.h
 include/ITerrainSceneNode.h
 include/SMeshBuffer.h
-include/IGUIEditBox.h
 include/ILogger.h
 include/ILightManager.h
 include/IMeshBuffer.h
