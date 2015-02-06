@@ -39,6 +39,8 @@ file(GLOB_RECURSE IRR_DEVICES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "sour
 file(GLOB_RECURSE IRR_DEVICES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Device/*.cpp")
 file(GLOB_RECURSE IRR_LOADERS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Loaders/*.h")
 file(GLOB_RECURSE IRR_LOADERS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Loaders/*.cpp")
+file(GLOB_RECURSE IRR_WRITERS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Writers/*.h")
+file(GLOB_RECURSE IRR_WRITERS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/Writers/*.cpp")
 
 include(../../cmake/SourceGroupFunctions.cmake)
 source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS IRR_LOADERS_SOURCES IRR_LOADERS_HEADERS)
@@ -46,6 +48,7 @@ source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS IRR_LOADERS_SOURC
 set(IRRLICHT_SOURCES
 ${IRR_DEVICES_SOURCES}
 ${IRR_LOADERS_SOURCES}
+${IRR_WRITERS_SOURCES}
 source/Irrlicht/CGUIListBox.cpp
 source/Irrlicht/CZBuffer.cpp
 source/Irrlicht/CGUIModalScreen.cpp
@@ -65,7 +68,6 @@ source/Irrlicht/CTerrainSceneNode.cpp
 source/Irrlicht/os.cpp
 source/Irrlicht/CFPSCounter.cpp
 source/Irrlicht/CGUIContextMenu.cpp
-source/Irrlicht/CImageWriterJPG.cpp
 source/Irrlicht/CZipReader.cpp
 source/Irrlicht/CDefaultSceneNodeAnimatorFactory.cpp
 source/Irrlicht/CSkyDomeSceneNode.cpp
@@ -74,7 +76,6 @@ source/Irrlicht/CGUISpriteBank.cpp
 source/Irrlicht/CParticleFadeOutAffector.cpp
 source/Irrlicht/CGUIMenu.cpp
 source/Irrlicht/CSphereSceneNode.cpp
-source/Irrlicht/CImageWriterPNG.cpp
 source/Irrlicht/CSceneNodeAnimatorFollowSpline.cpp
 source/Irrlicht/CGUIMessageBox.cpp
 source/Irrlicht/CParticleGravityAffector.cpp
@@ -154,7 +155,6 @@ source/Irrlicht/CGUIImage.cpp
 source/Irrlicht/CGUIEnvironment.cpp
 source/Irrlicht/CParticleScaleAffector.cpp
 source/Irrlicht/CSceneNodeAnimatorDelete.cpp
-source/Irrlicht/CImageWriterBMP.cpp
 source/Irrlicht/CParticleMeshEmitter.cpp
 source/Irrlicht/CSceneNodeAnimatorRotation.cpp
 source/Irrlicht/glext.h
@@ -244,7 +244,6 @@ source/Irrlicht/CSceneNodeAnimatorTexture.h
 source/Irrlicht/CXMLReader.h
 source/Irrlicht/CEmptySceneNode.h
 source/Irrlicht/CParticleSystemSceneNode.h
-source/Irrlicht/CImageWriterPNG.h
 source/Irrlicht/CParticleScaleAffector.h
 source/Irrlicht/CBillboardSceneNode.h
 source/Irrlicht/CSkyDomeSceneNode.h
@@ -259,7 +258,6 @@ source/Irrlicht/CGUIMenu.h
 source/Irrlicht/CBlit.h
 source/Irrlicht/CZipReader.h
 source/Irrlicht/CGUIToolBar.h
-source/Irrlicht/CImageWriterJPG.h
 source/Irrlicht/IAttribute.h
 source/Irrlicht/CNullDriver.h
 source/Irrlicht/CWriteFile.h
@@ -276,7 +274,6 @@ source/Irrlicht/CTerrainTriangleSelector.h
 source/Irrlicht/CAttributeImpl.h
 source/Irrlicht/CGeometryCreator.h
 source/Irrlicht/CSkyBoxSceneNode.h
-source/Irrlicht/CImageWriterBMP.h
 source/Irrlicht/BuiltInFont.h
 source/Irrlicht/CMemoryFile.h
 source/Irrlicht/CFPSCounter.h
@@ -292,6 +289,7 @@ source/Irrlicht/CTextSceneNode.h
 
 ${IRR_DEVICES_HEADERS}
 ${IRR_LOADERS_HEADERS}
+${IRR_WRITERS_HEADERS}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IGUIFontBitmap.h

@@ -6,9 +6,9 @@
 
 #ifdef _IRR_COMPILE_WITH_JPG_WRITER_
 
-#include "CColorConverter.h"
+#include "../CColorConverter.h"
 #include "IWriteFile.h"
-#include "CImage.h"
+#include "../CImage.h"
 #include "irrString.h"
 
 #ifdef _IRR_COMPILE_WITH_LIBJPEG_
