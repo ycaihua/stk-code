@@ -27,7 +27,7 @@
 #include "guiengine/widgets/button_widget.hpp"
 #include "utils/leak_check.hpp"
 #include "utils/ptr_vector.hpp"
-#include "IGUIElement.h"
+#include <GUI/IGUIElement.h>
 
 
 namespace irr { namespace gui { class STKModifiedSpriteBank; } }

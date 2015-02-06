@@ -22,7 +22,7 @@
 #include "utils/vs.hpp"
 
 #include <IGUIEnvironment.h>
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 #include <GUI/IGUIButton.h>
 #include <cmath>
 #include <string.h>

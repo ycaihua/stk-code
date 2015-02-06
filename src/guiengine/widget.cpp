@@ -20,7 +20,7 @@
 #include <iostream>
 #include <sstream>
 
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 
 using namespace irr;
 using namespace core;

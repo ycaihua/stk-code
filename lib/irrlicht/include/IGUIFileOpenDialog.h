@@ -5,7 +5,7 @@
 #ifndef __I_GUI_FILE_OPEN_DIALOG_H_INCLUDED__
 #define __I_GUI_FILE_OPEN_DIALOG_H_INCLUDED__
 
-#include "IGUIElement.h"
+#include <GUI/IGUIElement.h>
 #include "path.h"
 
 namespace irr

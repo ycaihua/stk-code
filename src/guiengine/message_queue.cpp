@@ -25,7 +25,7 @@
 #include "guiengine/scalable_font.hpp"
 #include "guiengine/skin.hpp"
 
-#include "IGUIElement.h"
+#include <GUI/IGUIElement.h>
 
 using namespace GUIEngine;
 

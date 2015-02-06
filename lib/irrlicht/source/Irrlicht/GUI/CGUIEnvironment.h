@@ -9,7 +9,7 @@
 #ifdef _IRR_COMPILE_WITH_GUI_
 
 #include "IGUIEnvironment.h"
-#include "IGUIElement.h"
+#include <GUI/IGUIElement.h>
 #include "irrArray.h"
 #include "IFileSystem.h"
 #include "IOSOperator.h"

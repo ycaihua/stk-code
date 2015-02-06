@@ -5,7 +5,7 @@
 #ifndef __I_GUI_TABLE_H_INCLUDED__
 #define __I_GUI_TABLE_H_INCLUDED__
 
-#include "IGUIElement.h"
+#include <GUI/IGUIElement.h>
 #include "irrTypes.h"
 #include "SColor.h"
 #include "IGUISkin.h"

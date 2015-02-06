@@ -28,7 +28,7 @@
 #include "config/user_config.hpp"
 
 #include <IGUIEnvironment.h>
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 #include <GUI/IGUIButton.h>
 
 using namespace GUIEngine;

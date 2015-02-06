@@ -25,7 +25,7 @@
 
 #include <iostream>
 
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 
 using namespace GUIEngine;
 
