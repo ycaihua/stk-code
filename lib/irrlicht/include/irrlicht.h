@@ -152,7 +152,7 @@
 #include "ILightManager.h"
 #include "Keycodes.h"
 #include <Maths/line2d.h>
-#include "line3d.h"
+#include <Maths/line3d.h>
 #include "matrix4.h"
 #include "plane3d.h"
 #include "position2d.h"
