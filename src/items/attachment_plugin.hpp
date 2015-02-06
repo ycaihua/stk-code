@@ -19,7 +19,7 @@
 #ifndef HEADER_ATTACHMENT_PLUGIN_HPP
 #define HEADER_ATTACHMENT_PLUGIN_HPP
 
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 
 class AbstractKart;
 class Attachment;

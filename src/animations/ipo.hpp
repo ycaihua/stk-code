@@ -23,7 +23,7 @@
 #include <vector>
 
 #include <Maths/vector2d.h>
-#include <vector3d.h>
+#include <Maths/vector3d.h>
 using namespace irr;
 
 #include "utils/no_copy.hpp"

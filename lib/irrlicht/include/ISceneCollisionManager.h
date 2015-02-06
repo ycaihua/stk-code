@@ -6,7 +6,7 @@
 #define __I_SCENE_COLLISION_MANAGER_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 #include <Maths/triangle3d.h>
 #include <Maths/position2d.h>
 #include <Maths/line3d.h>

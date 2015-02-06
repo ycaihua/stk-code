@@ -5,7 +5,7 @@
 #ifndef __S_3D_VERTEX_H_INCLUDED__
 #define __S_3D_VERTEX_H_INCLUDED__
 
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 #include <Maths/vector2d.h>
 #include "SColor.h"
 

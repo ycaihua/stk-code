@@ -178,7 +178,7 @@
 #include "SViewFrustum.h"
 #include <Maths/triangle3d.h>
 #include <Maths/vector2d.h>
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 
 /*! \mainpage Irrlicht Engine 1.8 API documentation
  *

@@ -6,7 +6,7 @@
 #define __S_VIEW_FRUSTUM_H_INCLUDED__
 
 #include <Maths/plane3d.h>
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 #include <Maths/line3d.h>
 #include <Maths/aabbox3d.h>
 #include "matrix4.h"

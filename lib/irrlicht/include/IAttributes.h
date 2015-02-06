@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include "SColor.h"
-#include "vector3d.h"
+#include <Maths/vector3d.h>
 #include <Maths/vector2d.h>
 #include <Maths/line2d.h>
 #include <Maths/line3d.h>
