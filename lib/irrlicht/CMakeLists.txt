@@ -316,7 +316,6 @@ include/SSharedMeshBuffer.h
 include/vector3d.h
 include/ISceneNodeAnimatorCameraFPS.h
 include/IGUIMeshViewer.h
-include/triangle3d.h
 include/matrix4.h
 include/IGUIStaticText.h
 include/IMeshWriter.h
