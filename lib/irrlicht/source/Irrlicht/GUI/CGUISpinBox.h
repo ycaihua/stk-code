@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUISpinBox.h"
+#include <GUI/IGUISpinBox.h>
 
 namespace irr
 {
