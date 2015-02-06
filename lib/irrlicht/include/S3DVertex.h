@@ -270,5 +270,66 @@ inline u32 getVertexPitchFromType(E_VERTEX_TYPE vertexType)
 } // end namespace video
 } // end namespace irr
 
+#include <unordered_map>
+
+namespace std {
+	template <>
+	struct hash<irr::video::S3DVertex>
+	{
+		std::size_t hashVector3d(const irr::core::vector3df &v) const
+		{
+			return hash<float>()(v.X) ^ hash<float>()(v.Y) ^ hash<float>()(v.Z);
+		}
+
+		std::size_t hashVector2d(const irr::core::vector2df &v) const
+		{
+			return hash<float>()(v.X) ^ hash<float>()(v.Y);
+		}
+
+		std::size_t operator()(const irr::video::S3DVertex& v) const
+		{
+			return hashVector3d(v.Pos) ^ hashVector3d(v.Normal) ^ hashVector2d(v.TCoords);
+		}
+	};
+
+	template <>
+	struct hash<irr::video::S3DVertex2TCoords>
+	{
+		std::size_t hashVector3d(const irr::core::vector3df &v) const
+		{
+			return hash<float>()(v.X) ^ hash<float>()(v.Y) ^ hash<float>()(v.Z);
+		}
+
+		std::size_t hashVector2d(const irr::core::vector2df &v) const
+		{
+			return hash<float>()(v.X) ^ hash<float>()(v.Y);
+		}
+
+		std::size_t operator()(const irr::video::S3DVertex2TCoords& v) const
+		{
+			return hashVector3d(v.Pos) ^ hashVector3d(v.Normal) ^ hashVector2d(v.TCoords) ^ hashVector2d(v.TCoords2);
+		}
+	};
+
+	template <>
+	struct hash<irr::video::S3DVertexTangents>
+	{
+		std::size_t hashVector3d(const irr::core::vector3df &v) const
+		{
+			return hash<float>()(v.X) ^ hash<float>()(v.Y) ^ hash<float>()(v.Z);
+		}
+
+		std::size_t hashVector2d(const irr::core::vector2df &v) const
+		{
+			return hash<float>()(v.X) ^ hash<float>()(v.Y);
+		}
+
+		std::size_t operator()(const irr::video::S3DVertexTangents& v) const
+		{
+			return hashVector3d(v.Pos) ^ hashVector3d(v.Normal) ^ hashVector2d(v.TCoords) ^ hashVector3d(v.Tangent) ^ hashVector3d(v.Binormal);
+		}
+	};
+}
+
 #endif
 

@@ -7,7 +7,7 @@
 #include "CMeshBuffer.h"
 #include "SAnimatedMesh.h"
 #include "os.h"
-#include <map>
+#include <unordered_map>
 
 namespace irr
 {
@@ -953,7 +953,7 @@ IMesh* CMeshManipulator::createMeshWithTangents(IMesh* mesh, bool recalculateNor
 		buffer->Vertices.reallocate(idxCnt);
 		buffer->Indices.reallocate(idxCnt);
 
-		std::map<video::S3DVertexTangents, int> vertMap;
+		std::unordered_map<video::S3DVertexTangents, int> vertMap;
 		int vertLocation;
 
 		// copy vertices
@@ -988,7 +988,7 @@ IMesh* CMeshManipulator::createMeshWithTangents(IMesh* mesh, bool recalculateNor
 				}
 				break;
 			}
-			std::map<video::S3DVertexTangents, int>::iterator n = vertMap.find(vNew);
+			std::unordered_map<video::S3DVertexTangents, int>::iterator n = vertMap.find(vNew);
 			if (n != vertMap.end())
 			{
 				vertLocation = n->second;
@@ -1041,7 +1041,7 @@ IMesh* CMeshManipulator::createMeshWith2TCoords(IMesh* mesh) const
 		buffer->Vertices.reallocate(idxCnt);
 		buffer->Indices.reallocate(idxCnt);
 
-		std::map<video::S3DVertex2TCoords, int> vertMap;
+		std::unordered_map<video::S3DVertex2TCoords, int> vertMap;
 		int vertLocation;
 
 		// copy vertices
@@ -1076,7 +1076,7 @@ IMesh* CMeshManipulator::createMeshWith2TCoords(IMesh* mesh) const
 				}
 				break;
 			}
-			std::map<video::S3DVertex2TCoords, int>::iterator n = vertMap.find(vNew);
+			std::unordered_map<video::S3DVertex2TCoords, int>::iterator n = vertMap.find(vNew);
 			if (n != vertMap.end())
 			{
 				vertLocation = n->second;
@@ -1125,7 +1125,7 @@ IMesh* CMeshManipulator::createMeshWith1TCoords(IMesh* mesh) const
 		buffer->Vertices.reallocate(idxCnt);
 		buffer->Indices.reallocate(idxCnt);
 
-		std::map<video::S3DVertex, int> vertMap;
+		std::unordered_map<video::S3DVertex, int> vertMap;
 		int vertLocation;
 
 		// copy vertices
@@ -1159,7 +1159,7 @@ IMesh* CMeshManipulator::createMeshWith1TCoords(IMesh* mesh) const
 				}
 				break;
 			}
-			std::map<video::S3DVertex, int>::iterator n = vertMap.find(vNew);
+			std::unordered_map<video::S3DVertex, int>::iterator n = vertMap.find(vNew);
 			if (n != vertMap.end())
 			{
 				vertLocation = n->second;
@@ -1478,8 +1478,8 @@ IMesh* CMeshManipulator::createForsythOptimizedMesh(const IMesh *mesh) const
 				buf->Vertices.reallocate(vcount);
 				buf->Indices.reallocate(icount);
 
-				std::map<const video::S3DVertex, const u16> sind; // search index for fast operation
-				typedef std::map<const video::S3DVertex, const u16>::iterator snode;
+				std::unordered_map<video::S3DVertex, const u16> sind; // search index for fast operation
+				typedef std::unordered_map<video::S3DVertex, const u16>::iterator snode;
 
 				// Main algorithm
 				u32 highest = 0;
@@ -1590,8 +1590,8 @@ IMesh* CMeshManipulator::createForsythOptimizedMesh(const IMesh *mesh) const
 				buf->Vertices.reallocate(vcount);
 				buf->Indices.reallocate(icount);
 
-				std::map<const video::S3DVertex2TCoords, const u16> sind; // search index for fast operation
-				typedef std::map<const video::S3DVertex2TCoords, const u16>::iterator snode;
+				std::unordered_map<video::S3DVertex2TCoords, const u16> sind; // search index for fast operation
+				typedef std::unordered_map<video::S3DVertex2TCoords, const u16>::iterator snode;
 
 				// Main algorithm
 				u32 highest = 0;
@@ -1703,8 +1703,8 @@ IMesh* CMeshManipulator::createForsythOptimizedMesh(const IMesh *mesh) const
 				buf->Vertices.reallocate(vcount);
 				buf->Indices.reallocate(icount);
 
-				std::map<const video::S3DVertexTangents, const u16> sind; // search index for fast operation
-				typedef std::map<const video::S3DVertexTangents, const u16>::iterator snode;
+				std::unordered_map<video::S3DVertexTangents, const u16> sind; // search index for fast operation
+				typedef std::unordered_map<video::S3DVertexTangents, const u16>::iterator snode;
 
 				// Main algorithm
 				u32 highest = 0;
