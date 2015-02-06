@@ -92,7 +92,7 @@
 #include <GUI/IGUIStaticText.h>
 #include <GUI/IGUITabControl.h>
 #include <GUI/IGUITable.h>
-#include "IGUIToolbar.h"
+#include <GUI/IGUIToolbar.h>
 #include "IGUIWindow.h"
 #include "IGUITreeView.h"
 #include "IImage.h"

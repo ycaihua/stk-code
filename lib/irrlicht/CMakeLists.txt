@@ -221,7 +221,6 @@ include/IMeshBuffer.h
 include/irrlicht.h
 include/ITimer.h
 include/IImage.h
-include/IGUIToolbar.h
 include/IBillboardTextSceneNode.h
 include/path.h
 include/IMetaTriangleSelector.h
