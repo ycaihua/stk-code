@@ -23,7 +23,7 @@
 #include <GUI/IGUISpinBox.h>
 #include <GUI/IGUIStaticText.h>
 #include <GUI/IGUITabControl.h>
-#include "IGUITable.h"
+#include <GUI/IGUITable.h>
 #include "IGUIToolbar.h"
 #include "IGUIWindow.h"
 #include "IGUITreeView.h"

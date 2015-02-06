@@ -305,7 +305,6 @@ include/IOSOperator.h
 include/IGPUProgrammingServices.h
 include/IrrCompileConfig.h
 include/ISceneNodeFactory.h
-include/IGUITable.h
 include/EMaterialFlags.h
 include/EDeviceTypes.h
 include/IGUIWindow.h
