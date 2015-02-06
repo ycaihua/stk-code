@@ -18,7 +18,7 @@
 #include <GUI/IGUIInOutFader.h>
 #include <GUI/IGUIImage.h>
 #include <GUI/IGUIListBox.h>
-#include "IGUIMeshViewer.h"
+#include <GUI/IGUIMeshViewer.h>
 #include "IGUIScrollBar.h"
 #include "IGUISpinBox.h"
 #include "IGUIStaticText.h"
