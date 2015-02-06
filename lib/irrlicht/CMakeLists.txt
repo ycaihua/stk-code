@@ -305,7 +305,6 @@ include/IrrCompileConfig.h
 include/ISceneNodeFactory.h
 include/EMaterialFlags.h
 include/EDeviceTypes.h
-include/IGUIWindow.h
 include/EAttributes.h
 include/S3DVertex.h
 include/ISceneNodeAnimatorCollisionResponse.h
