@@ -5,7 +5,7 @@
 #define __I_GUI_IMAGE_LIST_H_INCLUDED__
 
 #include "IGUIElement.h"
-#include "rect.h"
+#include <Maths/rect.h>
 #include "irrTypes.h"
 
 namespace irr

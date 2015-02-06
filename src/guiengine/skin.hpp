@@ -21,7 +21,7 @@
 
 #include <string>
 
-#include <rect.h>
+#include <Maths/rect.h>
 #include <SColor.h>
 #include <vector2d.h>
 #include <Maths/dimension2d.h>

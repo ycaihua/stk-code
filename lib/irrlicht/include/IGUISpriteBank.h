@@ -8,7 +8,7 @@
 #include "IReferenceCounted.h"
 #include "irrArray.h"
 #include "SColor.h"
-#include "rect.h"
+#include <Maths/rect.h>
 
 namespace irr
 {

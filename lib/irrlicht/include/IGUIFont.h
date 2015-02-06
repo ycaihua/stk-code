@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include "SColor.h"
-#include "rect.h"
+#include <Maths/rect.h>
 #include "irrString.h"
 
 namespace irr

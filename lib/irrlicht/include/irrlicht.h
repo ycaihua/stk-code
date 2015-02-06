@@ -157,7 +157,7 @@
 #include <Maths/plane3d.h>
 #include <Maths/position2d.h>
 #include <Maths/quaternion.h>
-#include "rect.h"
+#include <Maths/rect.h>
 #include "S3DVertex.h"
 #include "SAnimatedMesh.h"
 #include "SceneParameters.h"

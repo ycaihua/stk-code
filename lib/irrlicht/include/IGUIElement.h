@@ -7,7 +7,7 @@
 
 #include "IAttributeExchangingObject.h"
 #include "irrList.h"
-#include "rect.h"
+#include <Maths/rect.h>
 #include "irrString.h"
 #include "IEventReceiver.h"
 #include "EGUIElementTypes.h"

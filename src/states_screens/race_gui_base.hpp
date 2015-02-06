@@ -23,7 +23,7 @@
 
 #include <irrString.h>
 #include <vector2d.h>
-#include <rect.h>
+#include <Maths/rect.h>
 #include <Maths/dimension2d.h>
 #include <SColor.h>
 namespace irr

@@ -9,7 +9,7 @@
 #include "IGUIEnvironment.h"
 #include "IGUIFont.h"
 #include "IVideoDriver.h"
-#include "rect.h"
+#include <Maths/rect.h>
 
 namespace irr
 {

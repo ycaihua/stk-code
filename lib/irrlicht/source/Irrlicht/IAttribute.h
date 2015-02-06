@@ -13,7 +13,7 @@
 #include <Maths/line3d.h>
 #include <Maths/triangle3d.h>
 #include <Maths/position2d.h>
-#include "rect.h"
+#include <Maths/rect.h>
 #include <Maths/dimension2d.h>
 #include "matrix4.h"
 #include <Maths/quaternion.h>

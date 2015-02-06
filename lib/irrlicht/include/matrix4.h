@@ -10,7 +10,7 @@
 #include "vector2d.h"
 #include <Maths/plane3d.h>
 #include <Maths/aabbox3d.h>
-#include "rect.h"
+#include <Maths/rect.h>
 #include "irrString.h"
 #if defined(WIN32) && !defined(__MINGW32__) && (defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86))
 	#include <intrin.h>
