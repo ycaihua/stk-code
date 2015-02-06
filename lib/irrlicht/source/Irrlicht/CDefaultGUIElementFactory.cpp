@@ -15,7 +15,7 @@
 #include <GUI/IGUIContextMenu.h>
 #include <GUI/IGUIEditBox.h>
 #include <GUI/IGUIFileOpenDialog.h>
-#include "IGUIInOutFader.h"
+#include <GUI/IGUIInOutFader.h>
 #include <GUI/IGUIImage.h>
 #include "IGUIListBox.h"
 #include "IGUIMeshViewer.h"
