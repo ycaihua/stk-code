@@ -22,7 +22,7 @@
 #include "io/file_manager.hpp"
 
 #include <GUI/IGUIElement.h>
-#include <IGUISkin.h>
+#include <GUI/IGUISkin.h>
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIFontBitmap.h>
 

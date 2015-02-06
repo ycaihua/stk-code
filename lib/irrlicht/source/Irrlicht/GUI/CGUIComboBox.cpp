@@ -7,7 +7,7 @@
 
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
-#include "IGUISkin.h"
+#include <GUI/IGUISkin.h>
 #include <GUI/IGUIFont.h>
 #include <GUI/IGUIButton.h>
 #include "CGUIListBox.h"

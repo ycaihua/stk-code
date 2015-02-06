@@ -7,7 +7,7 @@
 
 #include <locale.h>
 
-#include "IGUISkin.h"
+#include <GUI/IGUISkin.h>
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include <GUI/IGUIButton.h>

@@ -4,7 +4,7 @@
 
 #include "CGUIEditBox.h"
 
-#include "IGUISkin.h"
+#include <GUI/IGUISkin.h>
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIFont.h>
 #include "IVideoDriver.h"

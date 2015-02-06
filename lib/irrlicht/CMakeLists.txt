@@ -238,7 +238,6 @@ include/EDebugSceneTypes.h
 include/driverChoice.h
 include/IParticleAttractionAffector.h
 include/IGUISpriteBank.h
-include/IGUISkin.h
 include/irrAllocator.h
 include/IDummyTransformationSceneNode.h
 include/SSkinMeshBuffer.h

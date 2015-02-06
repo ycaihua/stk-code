@@ -5,7 +5,7 @@
 
 #include "guiengine/widgets/CGUISTKListBox.h"
 
-#include "IGUISkin.h"
+#include <GUI/IGUISkin.h>
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include <GUI/IGUIFont.h>
