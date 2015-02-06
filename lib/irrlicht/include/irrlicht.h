@@ -78,7 +78,7 @@
 #include <GUI/IGUIElement.h>
 #include <GUI/IGUIElementFactory.h>
 #include <GUI/IGUIEnvironment.h>
-#include "IGUIFileOpenDialog.h"
+#include <GUI/IGUIFileOpenDialog.h>
 #include "IGUIFont.h"
 #include "IGUIFontBitmap.h"
 #include "IGUIImage.h"

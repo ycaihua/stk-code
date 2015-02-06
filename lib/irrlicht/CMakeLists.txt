@@ -340,7 +340,6 @@ include/IRandomizer.h
 include/ISceneNodeAnimator.h
 include/IAttributes.h
 include/IParticleRotationAffector.h
-include/IGUIFileOpenDialog.h
 include/IBoneSceneNode.h
 include/IShaderConstantSetCallBack.h
 include/ITexture.h
