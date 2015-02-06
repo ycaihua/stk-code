@@ -4,7 +4,7 @@
 #ifndef __C_GUI_TREE_VIEW_H_INCLUDED__
 #define __C_GUI_TREE_VIEW_H_INCLUDED__
 
-#include "IGUITreeView.h"
+#include <GUI/IGUITreeView.h>
 #include "irrList.h"
 
 

@@ -26,7 +26,7 @@
 #include <GUI/IGUITable.h>
 #include <GUI/IGUIToolbar.h>
 #include "IGUIWindow.h"
-#include "IGUITreeView.h"
+#include <GUI/IGUITreeView.h>
 
 namespace irr
 {

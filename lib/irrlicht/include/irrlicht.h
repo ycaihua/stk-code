@@ -94,7 +94,7 @@
 #include <GUI/IGUITable.h>
 #include <GUI/IGUIToolbar.h>
 #include "IGUIWindow.h"
-#include "IGUITreeView.h"
+#include <GUI/IGUITreeView.h>
 #include "IImage.h"
 #include "IImageLoader.h"
 #include "IImageWriter.h"
