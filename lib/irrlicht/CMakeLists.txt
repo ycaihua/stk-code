@@ -265,7 +265,6 @@ include/ISceneManager.h
 include/IImageWriter.h
 include/EGUIElementTypes.h
 include/IParticleMeshEmitter.h
-include/IGUIColorSelectDialog.h
 include/IGUIImage.h
 include/IGUIListBox.h
 include/CIndexBuffer.h
