@@ -8,7 +8,7 @@
 #include "IGUISkin.h"
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IGUISpriteBank.h"
 #include "IGUIScrollBar.h"
 #include "utils/time.hpp"

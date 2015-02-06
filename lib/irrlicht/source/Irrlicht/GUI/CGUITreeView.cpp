@@ -9,7 +9,7 @@
 #include "IGUISkin.h"
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "CGUIScrollBar.h"
 #include "../os.h"
 

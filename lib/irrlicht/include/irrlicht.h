@@ -79,7 +79,7 @@
 #include <GUI/IGUIElementFactory.h>
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIFileOpenDialog.h>
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IGUIFontBitmap.h"
 #include "IGUIImage.h"
 #include "IGUIInOutFader.h"

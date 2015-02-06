@@ -5,7 +5,7 @@
 #include "CGUISkin.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IGUISpriteBank.h"
 #include <GUI/IGUIElement.h>
 #include "IVideoDriver.h"

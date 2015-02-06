@@ -8,7 +8,7 @@
 #include "IGUISkin.h"
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "ITexture.h"
 
 namespace irr

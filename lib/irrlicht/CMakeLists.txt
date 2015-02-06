@@ -213,7 +213,6 @@ include/ISkinnedMesh.h
 include/irrList.h
 include/SAnimatedMesh.h
 include/IGUITreeView.h
-include/IGUIFont.h
 include/IParticleSystemSceneNode.h
 include/ITerrainSceneNode.h
 include/SMeshBuffer.h

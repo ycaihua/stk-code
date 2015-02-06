@@ -19,7 +19,7 @@
 
 #include <iostream>
 
-#include <IGUIFont.h>
+#include <GUI/IGUIFont.h>
 #include <ITexture.h>
 
 #include "graphics/irr_driver.hpp"

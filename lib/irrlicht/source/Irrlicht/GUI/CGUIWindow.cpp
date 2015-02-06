@@ -9,7 +9,7 @@
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include <GUI/IGUIButton.h>
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IGUIFontBitmap.h"
 
 namespace irr

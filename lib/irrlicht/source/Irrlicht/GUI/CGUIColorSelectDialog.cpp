@@ -11,7 +11,7 @@
 #include "IVideoDriver.h"
 #include <GUI/IGUIButton.h>
 #include "IGUIStaticText.h"
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IGUISpriteBank.h"
 #include "IFileList.h"
 #include "../os.h"
