@@ -156,7 +156,7 @@
 #include "matrix4.h"
 #include "plane3d.h"
 #include "position2d.h"
-#include "quaternion.h"
+#include <Maths/quaternion.h>
 #include "rect.h"
 #include "S3DVertex.h"
 #include "SAnimatedMesh.h"

@@ -345,7 +345,6 @@ include/ISceneNodeAnimatorCollisionResponse.h
 include/IWriteFile.h
 include/irrTypes.h
 include/IParticleEmitter.h
-include/quaternion.h
 include/SLight.h
 include/IReadFile.h
 include/ESceneNodeTypes.h
