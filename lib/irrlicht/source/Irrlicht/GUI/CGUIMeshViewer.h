@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIMeshViewer.h"
+#include <GUI/IGUIMeshViewer.h>
 #include "SMaterial.h"
 
 namespace irr
