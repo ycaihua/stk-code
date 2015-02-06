@@ -20,7 +20,7 @@
 #include "guiengine/engine.hpp"
 #include "graphics/irr_driver.hpp"
 #include "io/file_manager.hpp"
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 
 using namespace GUIEngine;
 

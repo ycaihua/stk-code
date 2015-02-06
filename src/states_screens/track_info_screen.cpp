@@ -43,7 +43,7 @@
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <IGUIImage.h>
 #include <IGUIStaticText.h>
 

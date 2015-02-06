@@ -26,7 +26,7 @@
 #include "karts/kart_properties_manager.hpp"
 #include "online/online_profile.hpp"
 #include "states_screens/kart_selection.hpp"
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 
 static const char RANDOM_KART_ID[] = "randomkart";
 

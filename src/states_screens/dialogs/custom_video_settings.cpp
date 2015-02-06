@@ -25,7 +25,7 @@
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 
 
 using namespace GUIEngine;

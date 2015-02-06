@@ -41,7 +41,7 @@
 #include "utils/translation.hpp"
 
 #include <ICameraSceneNode.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <IGUIImage.h>
 #include <ILightSceneNode.h>
 #include <IMeshSceneNode.h>

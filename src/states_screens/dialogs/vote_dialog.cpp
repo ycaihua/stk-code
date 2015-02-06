@@ -25,7 +25,7 @@
 #include "utils/translation.hpp"
 #include "utils/string_utils.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 
 using namespace GUIEngine;
 using namespace irr;

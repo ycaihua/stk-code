@@ -4,7 +4,7 @@
 
 #include "guiengine/scalable_font.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <IXMLReader.h>
 #include <IReadFile.h>
 #include <IVideoDriver.h>

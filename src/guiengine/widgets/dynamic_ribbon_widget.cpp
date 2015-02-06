@@ -22,7 +22,7 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/vs.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <iostream>
 #include <algorithm>
 

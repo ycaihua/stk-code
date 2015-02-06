@@ -27,7 +27,7 @@
 
 #include "config/user_config.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIElement.h>
 #include <GUI/IGUIButton.h>
 

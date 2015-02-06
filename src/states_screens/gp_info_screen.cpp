@@ -40,7 +40,7 @@
 #include "tracks/track_manager.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <IGUIStaticText.h>
 
 #include <algorithm>

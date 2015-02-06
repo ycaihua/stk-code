@@ -23,7 +23,7 @@
 
 #include <GUI/IGUIElement.h>
 #include <IGUISkin.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include "IGUIFontBitmap.h"
 
 #include <sstream>

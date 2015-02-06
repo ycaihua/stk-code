@@ -5,10 +5,9 @@
 #include "CGUIComboBox.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
 #include "IGUISkin.h"
-#include "IGUIEnvironment.h"
 #include "IGUIFont.h"
 #include <GUI/IGUIButton.h>
 #include "CGUIListBox.h"

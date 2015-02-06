@@ -6,7 +6,7 @@
 
 #include "CGUIEditBox.h"
 #include "CGUIButton.h"
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include "IEventReceiver.h"
 #include "fast_atof.h"
 #include <wchar.h>

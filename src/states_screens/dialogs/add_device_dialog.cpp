@@ -32,7 +32,7 @@
 #include "input/wiimote_manager.hpp"
 
 #include <IGUIStaticText.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 
 using namespace GUIEngine;
 using namespace irr::gui;

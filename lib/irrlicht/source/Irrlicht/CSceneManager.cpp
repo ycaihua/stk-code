@@ -10,7 +10,7 @@
 #include "CMeshCache.h"
 #include "IXMLWriter.h"
 #include "ISceneUserDataSerializer.h"
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include "IMaterialRenderer.h"
 #include "IReadFile.h"
 #include "IWriteFile.h"

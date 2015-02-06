@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIEnvironment.h"
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIElement.h>
 #include "irrArray.h"
 #include "IFileSystem.h"

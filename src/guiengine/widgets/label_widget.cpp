@@ -23,7 +23,7 @@
 #include "utils/translation.hpp"
 
 #include <GUI/IGUIElement.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <IGUIStaticText.h>
 #include <GUI/IGUIButton.h>
 

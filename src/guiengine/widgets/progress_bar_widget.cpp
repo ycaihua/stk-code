@@ -20,7 +20,7 @@
 #include "utils/string_utils.hpp"
 #include <string.h>
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIElement.h>
 #include <GUI/IGUIButton.h>
 

@@ -25,7 +25,7 @@
 #include "io/file_manager.hpp"
 #include "utils/log.hpp"
 
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
 
 using namespace irr;

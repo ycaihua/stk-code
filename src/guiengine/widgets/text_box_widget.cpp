@@ -24,7 +24,7 @@
 #include "utils/translation.hpp"
 
 #include <GUI/IGUIElement.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
 
 using namespace irr;

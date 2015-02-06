@@ -18,7 +18,7 @@
 #include "guiengine/engine.hpp"
 #include "guiengine/widgets/check_box_widget.hpp"
 #include <GUI/IGUIElement.h>
-#include <IGUIEnvironment.h>
+#include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
 using namespace GUIEngine;
 using namespace irr::core;
