@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIColorSelectDialog.h"
+#include <GUI/IGUIColorSelectDialog.h>
 #include <GUI/IGUIButton.h>
 #include "IGUISpinBox.h"
 #include "IGUIImage.h"

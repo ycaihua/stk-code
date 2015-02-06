@@ -71,7 +71,7 @@
 #include "IGPUProgrammingServices.h"
 #include <GUI/IGUIButton.h>
 #include <GUI/IGUICheckBox.h>
-#include "IGUIColorSelectDialog.h"
+#include <GUI/IGUIColorSelectDialog.h>
 #include "IGUIComboBox.h"
 #include "IGUIContextMenu.h"
 #include "IGUIEditBox.h"
