@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 #include <cassert>
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 #include "utils/leak_check.hpp"
 
 namespace irr

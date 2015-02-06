@@ -6,7 +6,7 @@
 #include "ISceneManager.h"
 #include "IVideoDriver.h"
 #include "ICameraSceneNode.h"
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 #include "SMeshBuffer.h"
 #include "../os.h"
 

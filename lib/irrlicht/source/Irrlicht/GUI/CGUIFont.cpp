@@ -10,7 +10,7 @@
 #include "IXMLReader.h"
 #include "IReadFile.h"
 #include "IVideoDriver.h"
-#include "IGUISpriteBank.h"
+#include <GUI/IGUISpriteBank.h>
 
 namespace irr
 {
