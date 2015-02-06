@@ -25,7 +25,7 @@
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 #include <IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
 #include <IGUIStaticText.h>

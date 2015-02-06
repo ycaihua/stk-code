@@ -21,7 +21,7 @@
 #include <string.h>
 
 #include <IGUIEnvironment.h>
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 #include <GUI/IGUIButton.h>
 
 using namespace GUIEngine;

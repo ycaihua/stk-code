@@ -201,7 +201,6 @@ include/IGeometryCreator.h
 include/IGUIEnvironment.h
 include/irrunpack.h
 include/IParticleRingEmitter.h
-include/IGUIElement.h
 include/IMaterialRenderer.h
 include/SVertexIndex.h
 include/SMaterialLayer.h

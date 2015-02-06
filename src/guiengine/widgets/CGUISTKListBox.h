@@ -9,7 +9,7 @@
 #include "IrrCompileConfig.h"
 
 #include "IGUIListBox.h"
-#include "IGUIElement.h"
+#include <GUI/IGUIElement.h>
 #include "irrArray.h"
 #include <string>
 

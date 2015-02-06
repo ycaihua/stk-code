@@ -5,7 +5,7 @@
 #ifndef __I_GUI_LIST_BOX_H_INCLUDED__
 #define __I_GUI_LIST_BOX_H_INCLUDED__
 
-#include "IGUIElement.h"
+#include <GUI/IGUIElement.h>
 #include "SColor.h"
 
 namespace irr

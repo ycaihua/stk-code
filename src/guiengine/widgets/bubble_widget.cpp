@@ -21,7 +21,7 @@
 #include <algorithm>
 
 #include <IGUIStaticText.h>
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 #include <IGUIEnvironment.h>
 
 using namespace irr::core;

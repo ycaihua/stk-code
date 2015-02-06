@@ -21,7 +21,7 @@
 #include "guiengine/engine.hpp"
 #include "io/file_manager.hpp"
 
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 #include <IGUISkin.h>
 #include <IGUIEnvironment.h>
 #include "IGUIFontBitmap.h"

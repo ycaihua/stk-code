@@ -22,7 +22,7 @@
 #include "guiengine/skin.hpp"
 #include "utils/translation.hpp"
 
-#include <IGUIElement.h>
+#include <GUI/IGUIElement.h>
 #include <IGUIEnvironment.h>
 #include <IGUIStaticText.h>
 #include <GUI/IGUIButton.h>
