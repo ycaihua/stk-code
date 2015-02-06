@@ -287,7 +287,6 @@ include/SMesh.h
 include/IParticleAffector.h
 include/EShaderTypes.h
 include/SceneParameters.h
-include/IGUIScrollBar.h
 include/IImageLoader.h
 include/IParticleBoxEmitter.h
 include/ICursorControl.h
