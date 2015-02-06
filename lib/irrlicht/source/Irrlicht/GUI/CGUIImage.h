@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIImage.h"
+#include <GUI/IGUIImage.h>
 
 namespace irr
 {

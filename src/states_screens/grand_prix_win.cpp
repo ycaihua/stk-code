@@ -42,7 +42,7 @@
 
 #include <ICameraSceneNode.h>
 #include <GUI/IGUIEnvironment.h>
-#include <IGUIImage.h>
+#include <GUI/IGUIImage.h>
 #include <ILightSceneNode.h>
 #include <IMeshSceneNode.h>
 #include <ISceneManager.h>

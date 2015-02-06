@@ -81,7 +81,7 @@
 #include <GUI/IGUIFileOpenDialog.h>
 #include <GUI/IGUIFont.h>
 #include <GUI/IGUIFontBitmap.h>
-#include "IGUIImage.h"
+#include <GUI/IGUIImage.h>
 #include "IGUIInOutFader.h"
 #include "IGUIListBox.h"
 #include "IGUIMeshViewer.h"

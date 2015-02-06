@@ -11,7 +11,7 @@
 #include <GUI/IGUIColorSelectDialog.h>
 #include <GUI/IGUIButton.h>
 #include "IGUISpinBox.h"
-#include "IGUIImage.h"
+#include <GUI/IGUIImage.h>
 #include "irrArray.h"
 
 
