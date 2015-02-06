@@ -6,7 +6,7 @@
 #define __C_SCENE_NODE_ANIMATOR_CAMERA_FPS_H_INCLUDED__
 
 #include "ISceneNodeAnimatorCameraFPS.h"
-#include "vector2d.h"
+#include <Maths/vector2d.h>
 #include <Maths/position2d.h>
 #include "SKeyMap.h"
 #include "irrArray.h"

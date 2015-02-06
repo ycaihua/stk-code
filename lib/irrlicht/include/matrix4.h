@@ -7,7 +7,7 @@
 
 #include "irrMath.h"
 #include "vector3d.h"
-#include "vector2d.h"
+#include <Maths/vector2d.h>
 #include <Maths/plane3d.h>
 #include <Maths/aabbox3d.h>
 #include <Maths/rect.h>

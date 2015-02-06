@@ -22,7 +22,7 @@
 #include <vector>
 
 #include <irrString.h>
-#include <vector2d.h>
+#include <Maths/vector2d.h>
 #include <Maths/rect.h>
 #include <Maths/dimension2d.h>
 #include <SColor.h>
