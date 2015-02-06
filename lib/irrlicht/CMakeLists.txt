@@ -274,7 +274,6 @@ include/SMaterial.h
 include/EDriverFeatures.h
 include/IVideoModeList.h
 include/fast_atof.h
-include/IGUICheckBox.h
 include/ISceneNodeAnimatorFactory.h
 include/SVertexManipulator.h
 include/ITextSceneNode.h
