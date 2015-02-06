@@ -11,7 +11,7 @@
 #include <GUI/IGUIContextMenu.h>
 #include "irrString.h"
 #include "irrArray.h"
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 
 namespace irr
 {

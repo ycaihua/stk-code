@@ -8,7 +8,7 @@
 #include "IGUISkin.h"
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IGUIWindow.h"
 
 #include "../os.h"

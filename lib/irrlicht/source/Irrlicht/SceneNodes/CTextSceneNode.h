@@ -7,7 +7,7 @@
 
 #include "ITextSceneNode.h"
 #include "IBillboardTextSceneNode.h"
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IGUIFontBitmap.h"
 #include "ISceneCollisionManager.h"
 #include "SMesh.h"

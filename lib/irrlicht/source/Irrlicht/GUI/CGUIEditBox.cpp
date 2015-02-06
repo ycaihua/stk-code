@@ -7,7 +7,7 @@
 
 #include "IGUISkin.h"
 #include <GUI/IGUIEnvironment.h>
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 #include "IVideoDriver.h"
 #include <Maths/rect.h>
 #include "../os.h"

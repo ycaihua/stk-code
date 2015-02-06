@@ -5,7 +5,7 @@
 #ifndef __I_GUI_FONT_BITMAP_H_INCLUDED__
 #define __I_GUI_FONT_BITMAP_H_INCLUDED__
 
-#include "IGUIFont.h"
+#include <GUI/IGUIFont.h>
 
 namespace irr
 {
