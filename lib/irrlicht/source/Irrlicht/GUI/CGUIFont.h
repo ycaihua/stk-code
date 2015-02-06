@@ -8,7 +8,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUIFontBitmap.h"
+#include <GUI/IGUIFontBitmap.h>
 #include "irrString.h"
 #include <unordered_map>
 #include "IXMLReader.h"

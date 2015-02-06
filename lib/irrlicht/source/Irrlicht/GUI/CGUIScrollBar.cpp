@@ -10,7 +10,7 @@
 #include "IVideoDriver.h"
 #include "CGUIButton.h"
 #include <GUI/IGUIFont.h>
-#include "IGUIFontBitmap.h"
+#include <GUI/IGUIFontBitmap.h>
 #include "../os.h"
 
 namespace irr

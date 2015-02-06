@@ -80,7 +80,7 @@
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIFileOpenDialog.h>
 #include <GUI/IGUIFont.h>
-#include "IGUIFontBitmap.h"
+#include <GUI/IGUIFontBitmap.h>
 #include "IGUIImage.h"
 #include "IGUIInOutFader.h"
 #include "IGUIListBox.h"
