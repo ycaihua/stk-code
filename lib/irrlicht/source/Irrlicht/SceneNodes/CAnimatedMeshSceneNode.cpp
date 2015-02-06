@@ -14,7 +14,7 @@
 #include "IMesh.h"
 #include "IMeshCache.h"
 #include "IAnimatedMesh.h"
-#include "quaternion.h"
+#include <Maths/quaternion.h>
 #include "IFileSystem.h"
 
 

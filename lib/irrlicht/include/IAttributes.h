@@ -16,7 +16,7 @@
 #include "rect.h"
 #include "dimension2d.h"
 #include "matrix4.h"
-#include "quaternion.h"
+#include <Maths/quaternion.h>
 #include "plane3d.h"
 #include "triangle3d.h"
 #include "line2d.h"

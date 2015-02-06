@@ -12,7 +12,7 @@
 #include "S3DVertex.h"
 #include "irrString.h"
 #include "matrix4.h"
-#include "quaternion.h"
+#include <Maths/quaternion.h>
 
 namespace irr
 {
