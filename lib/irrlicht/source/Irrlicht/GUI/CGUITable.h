@@ -11,7 +11,7 @@
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include "IGUITable.h"
+#include <GUI/IGUITable.h>
 #include "irrArray.h"
 
 namespace irr
