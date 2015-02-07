@@ -59,7 +59,7 @@
 #include "IAttributes.h"
 #include <SceneNodes/IBillboardSceneNode.h>
 #include <SceneNodes/IBillboardTextSceneNode.h>
-#include "IBoneSceneNode.h"
+#include <SceneNodes/IBoneSceneNode.h>
 #include "ICameraSceneNode.h"
 #include "ICursorControl.h"
 #include "IDummyTransformationSceneNode.h"

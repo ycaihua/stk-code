@@ -6,7 +6,7 @@
 #define __I_SKINNED_MESH_H_INCLUDED__
 
 #include "irrArray.h"
-#include "IBoneSceneNode.h"
+#include <SceneNodes/IBoneSceneNode.h>
 #include "IAnimatedMesh.h"
 #include "SSkinMeshBuffer.h"
 
