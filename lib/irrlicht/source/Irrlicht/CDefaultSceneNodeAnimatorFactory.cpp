@@ -55,17 +55,6 @@ ISceneNodeAnimator* CDefaultSceneNodeAnimatorFactory::createSceneNodeAnimator(ES
 
 	switch(type)
 	{
-	case ESNAT_FLY_STRAIGHT:
-		anim = Manager->createFlyStraightAnimator(core::vector3df(0,0,0), core::vector3df(100,100,100), 10000, true );
-		break;
-	case ESNAT_FOLLOW_SPLINE:
-		{
-			core::array<core::vector3df> points;
-			points.push_back(core::vector3df(0,0,0));
-			points.push_back(core::vector3df(10,5,10));
-			anim = Manager->createFollowSplineAnimator(0, points);
-		}
-		break;
 	case ESNAT_ROTATION:
 		anim = Manager->createRotationAnimator(core::vector3df(0.3f,0,0));
 		break;

@@ -1014,22 +1014,6 @@ namespace scene
 		See IReferenceCounted::drop() for more information. */
 		virtual ISceneNodeAnimator* createRotationAnimator(const core::vector3df& rotationSpeed) = 0;
 
-		//! Creates a fly straight animator, which lets the attached scene node fly or move along a line between two points.
-		/** \param startPoint: Start point of the line.
-		\param endPoint: End point of the line.
-		\param timeForWay: Time in milli seconds how long the node should need to
-		move from the start point to the end point.
-		\param loop: If set to false, the node stops when the end point is reached.
-		If loop is true, the node begins again at the start.
-		\param pingpong Flag to set whether the animator should fly
-		back from end to start again.
-		\return The animator. Attach it to a scene node with ISceneNode::addAnimator()
-		and the animator will animate it.
-		If you no longer need the animator, you should call ISceneNodeAnimator::drop().
-		See IReferenceCounted::drop() for more information. */
-		virtual ISceneNodeAnimator* createFlyStraightAnimator(const core::vector3df& startPoint,
-			const core::vector3df& endPoint, u32 timeForWay, bool loop=false, bool pingpong = false) = 0;
-
 		//! Creates a texture animator, which switches the textures of the target scene node based on a list of textures.
 		/** \param textures: List of textures to use.
 		\param timePerFrame: Time in milliseconds, how long any texture in the list
@@ -1042,19 +1026,6 @@ namespace scene
 		See IReferenceCounted::drop() for more information. */
 		virtual ISceneNodeAnimator* createTextureAnimator(const core::array<video::ITexture*>& textures,
 			s32 timePerFrame, bool loop=true) = 0;
-
-		//! Creates a follow spline animator.
-		/** The animator modifies the position of
-		the attached scene node to make it follow a hermite spline.
-		It uses a subset of hermite splines: either cardinal splines
-		(tightness != 0.5) or catmull-rom-splines (tightness == 0.5).
-		The animator moves from one control point to the next in
-		1/speed seconds. This code was sent in by Matthias Gall.
-		If you no longer need the animator, you should call ISceneNodeAnimator::drop().
-		See IReferenceCounted::drop() for more information. */
-		virtual ISceneNodeAnimator* createFollowSplineAnimator(s32 startTime,
-			const core::array< core::vector3df >& points,
-			f32 speed = 1.0f, f32 tightness = 0.5f, bool loop=true, bool pingpong=false) = 0;
 
 		//! Creates a simple ITriangleSelector, based on a mesh.
 		/** Triangle selectors

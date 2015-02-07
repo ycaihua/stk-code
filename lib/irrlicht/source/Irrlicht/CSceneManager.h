@@ -257,22 +257,10 @@ namespace scene
 		//! and the animator will animate it.
 		virtual ISceneNodeAnimator* createRotationAnimator(const core::vector3df& rotationPerSecond);
 
-
-		//! Creates a fly straight animator, which lets the attached scene node
-		//! fly or move along a line between two points.
-		virtual ISceneNodeAnimator* createFlyStraightAnimator(const core::vector3df& startPoint,
-			const core::vector3df& endPoint, u32 timeForWay, bool loop=false,bool pingpong = false);
-
 		//! Creates a texture animator, which switches the textures of the target scene
 		//! node based on a list of textures.
 		virtual ISceneNodeAnimator* createTextureAnimator(const core::array<video::ITexture*>& textures,
 			s32 timePerFrame, bool loop);
-
-		//! Creates a follow spline animator.
-		virtual ISceneNodeAnimator* createFollowSplineAnimator(s32 startTime,
-			const core::array< core::vector3df >& points,
-			f32 speed, f32 tightness, bool loop, bool pingpong);
-
 
 		//! Creates a simple ITriangleSelector, based on a mesh.
 		virtual ITriangleSelector* createTriangleSelector(IMesh* mesh, ISceneNode* node);
