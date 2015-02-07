@@ -53,7 +53,6 @@
 #include "CMetaTriangleSelector.h"
 #include "CTerrainTriangleSelector.h"
 
-#include "SceneNodes/Animators/CSceneNodeAnimatorRotation.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorTexture.h"
 #include "CDefaultSceneNodeAnimatorFactory.h"
 
@@ -1376,17 +1375,6 @@ video::SColor CSceneManager::getShadowColor() const
 {
 	return ShadowColor;
 }
-
-
-//! creates a rotation animator, which rotates the attached scene node around itself.
-ISceneNodeAnimator* CSceneManager::createRotationAnimator(const core::vector3df& rotationPerSecond)
-{
-	ISceneNodeAnimator* anim = new CSceneNodeAnimatorRotation(os::Timer::getTime(),
-		rotationPerSecond);
-
-	return anim;
-}
-
 
 //! Creates a texture animator, which switches the textures of the target scene
 //! node based on a list of textures.

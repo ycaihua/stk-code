@@ -1006,14 +1006,6 @@ namespace scene
 		\param flags Allows you to disable/enable specific render passes by passing bitwise OR combinations of E_SCENE_NODE_RENDER_PASS values*/
 		virtual void drawAll(u32 flags = 0xFFFFFFFF) = 0;
 
-		//! Creates a rotation animator, which rotates the attached scene node around itself.
-		/** \param rotationSpeed Specifies the speed of the animation in degree per 10 milliseconds.
-		\return The animator. Attach it to a scene node with ISceneNode::addAnimator()
-		and the animator will animate it.
-		If you no longer need the animator, you should call ISceneNodeAnimator::drop().
-		See IReferenceCounted::drop() for more information. */
-		virtual ISceneNodeAnimator* createRotationAnimator(const core::vector3df& rotationSpeed) = 0;
-
 		//! Creates a texture animator, which switches the textures of the target scene node based on a list of textures.
 		/** \param textures: List of textures to use.
 		\param timePerFrame: Time in milliseconds, how long any texture in the list
