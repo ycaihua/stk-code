@@ -55,9 +55,6 @@ ISceneNodeAnimator* CDefaultSceneNodeAnimatorFactory::createSceneNodeAnimator(ES
 
 	switch(type)
 	{
-	case ESNAT_ROTATION:
-		anim = Manager->createRotationAnimator(core::vector3df(0.3f,0,0));
-		break;
 	case ESNAT_TEXTURE:
 		{
 			core::array<video::ITexture*> textures;

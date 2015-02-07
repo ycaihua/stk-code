@@ -251,12 +251,6 @@ namespace scene
 		//! \param camera: The new camera which should be active.
 		virtual void setActiveCamera(ICameraSceneNode* camera);
 
-		//! creates a rotation animator, which rotates the attached scene node around itself.
-		//! \param rotationPerSecond: Specifies the speed of the animation
-		//! \return The animator. Attach it to a scene node with ISceneNode::addAnimator()
-		//! and the animator will animate it.
-		virtual ISceneNodeAnimator* createRotationAnimator(const core::vector3df& rotationPerSecond);
-
 		//! Creates a texture animator, which switches the textures of the target scene
 		//! node based on a list of textures.
 		virtual ISceneNodeAnimator* createTextureAnimator(const core::array<video::ITexture*>& textures,
