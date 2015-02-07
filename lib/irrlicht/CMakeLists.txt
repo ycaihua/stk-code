@@ -253,7 +253,6 @@ include/IVideoModeList.h
 include/fast_atof.h
 include/ISceneNodeAnimatorFactory.h
 include/SVertexManipulator.h
-include/ITextSceneNode.h
 include/IDynamicMeshBuffer.h
 include/SExposedVideoData.h
 include/IReferenceCounted.h
