@@ -55,12 +55,6 @@ ISceneNodeAnimator* CDefaultSceneNodeAnimatorFactory::createSceneNodeAnimator(ES
 
 	switch(type)
 	{
-	case ESNAT_TEXTURE:
-		{
-			core::array<video::ITexture*> textures;
-			anim = Manager->createTextureAnimator(textures, 250);
-		}
-		break;
 	default:
 		break;
 	}

@@ -251,11 +251,6 @@ namespace scene
 		//! \param camera: The new camera which should be active.
 		virtual void setActiveCamera(ICameraSceneNode* camera);
 
-		//! Creates a texture animator, which switches the textures of the target scene
-		//! node based on a list of textures.
-		virtual ISceneNodeAnimator* createTextureAnimator(const core::array<video::ITexture*>& textures,
-			s32 timePerFrame, bool loop);
-
 		//! Creates a simple ITriangleSelector, based on a mesh.
 		virtual ITriangleSelector* createTriangleSelector(IMesh* mesh, ISceneNode* node);
 

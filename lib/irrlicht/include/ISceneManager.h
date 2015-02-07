@@ -1006,19 +1006,6 @@ namespace scene
 		\param flags Allows you to disable/enable specific render passes by passing bitwise OR combinations of E_SCENE_NODE_RENDER_PASS values*/
 		virtual void drawAll(u32 flags = 0xFFFFFFFF) = 0;
 
-		//! Creates a texture animator, which switches the textures of the target scene node based on a list of textures.
-		/** \param textures: List of textures to use.
-		\param timePerFrame: Time in milliseconds, how long any texture in the list
-		should be visible.
-		\param loop: If set to to false, the last texture remains set, and the animation
-		stops. If set to true, the animation restarts with the first texture.
-		\return The animator. Attach it to a scene node with ISceneNode::addAnimator()
-		and the animator will animate it.
-		If you no longer need the animator, you should call ISceneNodeAnimator::drop().
-		See IReferenceCounted::drop() for more information. */
-		virtual ISceneNodeAnimator* createTextureAnimator(const core::array<video::ITexture*>& textures,
-			s32 timePerFrame, bool loop=true) = 0;
-
 		//! Creates a simple ITriangleSelector, based on a mesh.
 		/** Triangle selectors
 		can be used for doing collision detection. Don't use this selector
