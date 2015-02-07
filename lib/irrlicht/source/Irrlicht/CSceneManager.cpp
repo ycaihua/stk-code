@@ -54,9 +54,7 @@
 #include "CTerrainTriangleSelector.h"
 
 #include "SceneNodes/Animators/CSceneNodeAnimatorRotation.h"
-#include "SceneNodes/Animators/CSceneNodeAnimatorFlyStraight.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorTexture.h"
-#include "SceneNodes/Animators/CSceneNodeAnimatorFollowSpline.h"
 #include "CDefaultSceneNodeAnimatorFactory.h"
 
 #include "CGeometryCreator.h"
@@ -1390,18 +1388,6 @@ ISceneNodeAnimator* CSceneManager::createRotationAnimator(const core::vector3df&
 }
 
 
-//! Creates a fly straight animator, which lets the attached scene node
-//! fly or move along a line between two points.
-ISceneNodeAnimator* CSceneManager::createFlyStraightAnimator(const core::vector3df& startPoint,
-					const core::vector3df& endPoint, u32 timeForWay, bool loop,bool pingpong)
-{
-	ISceneNodeAnimator* anim = new CSceneNodeAnimatorFlyStraight(startPoint,
-		endPoint, timeForWay, loop, os::Timer::getTime(), pingpong);
-
-	return anim;
-}
-
-
 //! Creates a texture animator, which switches the textures of the target scene
 //! node based on a list of textures.
 ISceneNodeAnimator* CSceneManager::createTextureAnimator(const core::array<video::ITexture*>& textures,
@@ -1412,17 +1398,6 @@ ISceneNodeAnimator* CSceneManager::createTextureAnimator(const core::array<video
 
 	return anim;
 }
-
-//! Creates a follow spline animator.
-ISceneNodeAnimator* CSceneManager::createFollowSplineAnimator(s32 startTime,
-	const core::array< core::vector3df >& points,
-	f32 speed, f32 tightness, bool loop, bool pingpong)
-{
-	ISceneNodeAnimator* a = new CSceneNodeAnimatorFollowSpline(startTime, points,
-		speed, tightness, loop, pingpong);
-	return a;
-}
-
 
 //! Adds an external mesh loader.
 void CSceneManager::addExternalMeshLoader(IMeshLoader* externalLoader)
