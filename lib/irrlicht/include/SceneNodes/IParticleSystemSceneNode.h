@@ -16,7 +16,7 @@
 #include "IParticleFadeOutAffector.h"
 #include "IParticleGravityAffector.h"
 #include "IParticleRotationAffector.h"
-#include "irrList.h"
+#include <list>
 #include <Maths/dimension2d.h>
 
 namespace irr
@@ -102,7 +102,7 @@ public:
 
 	//! Get a list of all particle affectors.
 	/** \return The list of particle affectors attached to this node. */
-	virtual const core::list<IParticleAffector*>& getAffectors() const = 0;
+	virtual const std::list<IParticleAffector*>& getAffectors() const = 0;
 
 	//! Removes all particle affectors in the particle system.
 	virtual void removeAllAffectors() = 0;

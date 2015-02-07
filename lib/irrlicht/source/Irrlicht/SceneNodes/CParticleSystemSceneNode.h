@@ -43,7 +43,7 @@ public:
 	virtual void addAffector(IParticleAffector* affector);
 
 	//! Get a list of all particle affectors.
-	virtual const core::list<IParticleAffector*>& getAffectors() const;
+	virtual const std::list<IParticleAffector*>& getAffectors() const;
 
 	//! Removes all particle affectors in the particle system.
 	virtual void removeAllAffectors();
@@ -218,7 +218,7 @@ protected:
 
 	void reallocateBuffers();
 
-	core::list<IParticleAffector*> AffectorList;
+	std::list<IParticleAffector*> AffectorList;
 	IParticleEmitter* Emitter;
 	core::array<SParticle> Particles;
 	core::dimension2d<f32> ParticleSize;

@@ -92,7 +92,7 @@ void CParticleSystemSceneNode::addAffector(IParticleAffector* affector)
 }
 
 //! Get a list of all particle affectors.
-const core::list<IParticleAffector*>& CParticleSystemSceneNode::getAffectors() const
+const std::list<IParticleAffector*>& CParticleSystemSceneNode::getAffectors() const
 {
 	return AffectorList;
 }
@@ -100,7 +100,7 @@ const core::list<IParticleAffector*>& CParticleSystemSceneNode::getAffectors() c
 //! Removes all particle affectors in the particle system.
 void CParticleSystemSceneNode::removeAllAffectors()
 {
-	core::list<IParticleAffector*>::Iterator it = AffectorList.begin();
+	std::list<IParticleAffector*>::iterator it = AffectorList.begin();
 	while (it != AffectorList.end())
 	{
 		(*it)->drop();
@@ -440,7 +440,7 @@ void CParticleSystemSceneNode::doParticleSystem(u32 time)
 	}
 
 	// run affectors
-	core::list<IParticleAffector*>::Iterator ait = AffectorList.begin();
+	std::list<IParticleAffector*>::iterator ait = AffectorList.begin();
 	for (; ait != AffectorList.end(); ++ait)
 		(*ait)->affect(now, Particles.pointer(), Particles.size());
 
@@ -579,7 +579,7 @@ void CParticleSystemSceneNode::serializeAttributes(io::IAttributes* out, io::SAt
 
 	E_PARTICLE_AFFECTOR_TYPE atype = EPAT_NONE;
 
-	for (core::list<IParticleAffector*>::ConstIterator it = AffectorList.begin();
+	for (std::list<IParticleAffector*>::const_iterator it = AffectorList.begin();
 		it != AffectorList.end(); ++it)
 	{
 		atype = (*it)->getType();
