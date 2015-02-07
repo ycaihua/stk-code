@@ -8,7 +8,7 @@
 
 #include "CIrrDeviceWin32.h"
 #include "IEventReceiver.h"
-#include "irrList.h"
+#include <list>
 #include "../os.h"
 
 #include "../CTimer.h"
@@ -664,7 +664,7 @@ namespace
 		HWND hWnd;
 		irr::CIrrDeviceWin32* irrDev;
 	};
-	irr::core::list<SEnvMapper> EnvMap;
+	std::list<SEnvMapper> EnvMap;
 
 	HKL KEYBOARD_INPUT_HKL=0;
 	unsigned int KEYBOARD_INPUT_CODEPAGE = 1252;
@@ -672,7 +672,7 @@ namespace
 
 SEnvMapper* getEnvMapperFromHWnd(HWND hWnd)
 {
-	irr::core::list<SEnvMapper>::Iterator it = EnvMap.begin();
+	std::list<SEnvMapper>::iterator it = EnvMap.begin();
 	for (; it!= EnvMap.end(); ++it)
 		if ((*it).hWnd == hWnd)
 			return &(*it);
@@ -683,7 +683,7 @@ SEnvMapper* getEnvMapperFromHWnd(HWND hWnd)
 
 irr::CIrrDeviceWin32* getDeviceFromHWnd(HWND hWnd)
 {
-	irr::core::list<SEnvMapper>::Iterator it = EnvMap.begin();
+	std::list<SEnvMapper>::iterator it = EnvMap.begin();
 	for (; it!= EnvMap.end(); ++it)
 		if ((*it).hWnd == hWnd)
 			return (*it).irrDev;
@@ -1125,7 +1125,7 @@ CIrrDeviceWin32::~CIrrDeviceWin32()
 
 	// unregister environment
 
-	irr::core::list<SEnvMapper>::Iterator it = EnvMap.begin();
+	std::list<SEnvMapper>::iterator it = EnvMap.begin();
 	for (; it!= EnvMap.end(); ++it)
 	{
 		if ((*it).hWnd == HWnd)
