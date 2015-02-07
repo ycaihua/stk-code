@@ -380,10 +380,10 @@ void CGUIEnvironment::clear()
 	}
 
 	// get the root's children in case the root changes in future
-	const core::list<IGUIElement*>& children = getRootGUIElement()->getChildren();
+	const std::list<IGUIElement*>& children = getRootGUIElement()->getChildren();
 
 	while (!children.empty())
-		(*children.getLast())->remove();
+		(*children.rbegin())->remove();
 }
 
 
@@ -924,7 +924,7 @@ void CGUIEnvironment::writeGUIElement(io::IXMLWriter* writer, IGUIElement* node)
 
 	// write children
 
-	core::list<IGUIElement*>::ConstIterator it = node->getChildren().begin();
+	std::list<IGUIElement*>::const_iterator it = node->getChildren().begin();
 	for (; it != node->getChildren().end(); ++it)
 	{
 		if (!(*it)->isSubElement())

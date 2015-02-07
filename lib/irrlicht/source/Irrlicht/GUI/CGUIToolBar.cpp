@@ -33,8 +33,8 @@ CGUIToolBar::CGUIToolBar(IGUIEnvironment* environment, IGUIElement* parent, s32 
 	{
 		parentwidth = Parent->getAbsolutePosition().getWidth();
 
-		const core::list<IGUIElement*>& children = parent->getChildren();
-		core::list<IGUIElement*>::ConstIterator it = children.begin();
+		const std::list<IGUIElement*>& children = parent->getChildren();
+		std::list<IGUIElement*>::const_iterator it = children.begin();
 		for (; it != children.end(); ++it)
 		{
 			core::rect<s32> r = (*it)->getAbsolutePosition();
