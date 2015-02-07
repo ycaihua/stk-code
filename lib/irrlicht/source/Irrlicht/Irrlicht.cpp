@@ -2,6 +2,47 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
+#include <malloc.h>
+#ifndef WIN32
+#include <stdlib.h>
+#endif
+
+void *operator new(size_t size)
+{
+#ifdef WIN32
+	return _aligned_malloc(size, 16);
+#else
+	return aligned_alloc(16, size);
+#endif
+}
+
+void* operator new[](size_t sizeInBytes)
+{
+#ifdef WIN32
+	return _aligned_malloc(sizeInBytes, 16);
+#else
+	return aligned_alloc(16, sizeInBytes);
+#endif
+}
+
+void operator delete(void *ptr)
+{
+#ifdef WIN32
+	_aligned_free(ptr);
+#else
+	free(ptr);
+#endif
+}
+
+void  operator delete[](void* ptr)
+{
+#ifdef WIN32
+	_aligned_free(ptr);
+#else
+	free(ptr);
+#endif
+}
+
 #include "IrrCompileConfig.h"
 
 static const char* const copyright = "Irrlicht Engine (c) 2002-2012 Nikolaus Gebhardt";

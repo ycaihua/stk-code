@@ -12,8 +12,17 @@
 #include <Maths/aabbox3d.h>
 #include <Maths/rect.h>
 #include "irrString.h"
-#if defined(WIN32) && !defined(__MINGW32__) && (defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86))
-	#include <intrin.h>
+
+// For SSE
+#if (defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86))
+#define HAS_SSE
+#include <cstdint>
+#if defined(WIN32) && !defined(__MINGW32__)
+#pragma warning( disable : 4316)
+#include <intrin.h>
+#else
+#include <xmmintrin.h>
+#endif
 #endif
 
 // enable this to keep track of changes to the matrix
@@ -45,386 +54,388 @@ namespace core
 	//! 4x4 matrix. Mostly used as transformation matrix for 3d calculations.
 	/** The matrix is a D3D style matrix, row major with translations in the 4th row. */
 	template <class T>
-	class CMatrix4
+	struct
+#ifdef WIN32
+		__declspec(align(16))
+#endif
+		CMatrix4
 	{
-    private:
-#if defined(WIN32) && !defined(__MINGW32__) && (defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86))
-        float M_raw[24];
-#endif
-		public:
+	private:
+		//! Matrix data, stored in row-major order
+		//! 16 bytes aligned for SSE purpose
+		float M[16];
+	public:
 
-			//! Constructor Flags
-			enum eConstructor
-			{
-				EM4CONST_NOTHING = 0,
-				EM4CONST_COPY,
-				EM4CONST_IDENTITY,
-				EM4CONST_TRANSPOSED,
-				EM4CONST_INVERSE,
-				EM4CONST_INVERSE_TRANSPOSED
-			};
+		//! Constructor Flags
+		enum eConstructor
+		{
+			EM4CONST_NOTHING = 0,
+			EM4CONST_COPY,
+			EM4CONST_IDENTITY,
+			EM4CONST_TRANSPOSED,
+			EM4CONST_INVERSE,
+			EM4CONST_INVERSE_TRANSPOSED
+		};
 
-			//! Default constructor
-			/** \param constructor Choose the initialization style */
-			CMatrix4( eConstructor constructor = EM4CONST_IDENTITY );
-			//! Copy constructor
-			/** \param other Other matrix to copy from
-			\param constructor Choose the initialization style */
-			CMatrix4(const CMatrix4<T>& other, eConstructor constructor = EM4CONST_COPY);
+		//! Default constructor
+		/** \param constructor Choose the initialization style */
+		CMatrix4(eConstructor constructor = EM4CONST_IDENTITY);
+		//! Copy constructor
+		/** \param other Other matrix to copy from
+		\param constructor Choose the initialization style */
+		CMatrix4(const CMatrix4<T>& other, eConstructor constructor = EM4CONST_COPY);
 
-			//! Simple operator for directly accessing every element of the matrix.
-			T& operator()(const s32 row, const s32 col)
-			{
+		//! Simple operator for directly accessing every element of the matrix.
+		T& operator()(const s32 row, const s32 col)
+		{
 #if defined ( USE_MATRIX_TEST )
-				definitelyIdentityMatrix=false;
+			definitelyIdentityMatrix=false;
 #endif
-				return M[ row * 4 + col ];
-			}
+			return M[row * 4 + col];
+		}
 
-			//! Simple operator for directly accessing every element of the matrix.
-			const T& operator()(const s32 row, const s32 col) const { return M[row * 4 + col]; }
+		//! Simple operator for directly accessing every element of the matrix.
+		const T& operator()(const s32 row, const s32 col) const { return M[row * 4 + col]; }
 
-			//! Simple operator for linearly accessing every element of the matrix.
-			T& operator[](u32 index)
-			{
+		//! Simple operator for linearly accessing every element of the matrix.
+		T& operator[](u32 index)
+		{
 #if defined ( USE_MATRIX_TEST )
-				definitelyIdentityMatrix=false;
+			definitelyIdentityMatrix=false;
 #endif
-				return M[index];
-			}
+			return M[index];
+		}
 
-			//! Simple operator for linearly accessing every element of the matrix.
-			const T& operator[](u32 index) const { return M[index]; }
+		//! Simple operator for linearly accessing every element of the matrix.
+		const T& operator[](u32 index) const { return M[index]; }
 
-			//! Sets this matrix equal to the other matrix.
-			inline CMatrix4<T>& operator=(const CMatrix4<T> &other);
+		//! Sets this matrix equal to the other matrix.
+		inline CMatrix4<T>& operator=(const CMatrix4<T> &other);
 
-			//! Sets all elements of this matrix to the value.
-			inline CMatrix4<T>& operator=(const T& scalar);
+		//! Sets all elements of this matrix to the value.
+		inline CMatrix4<T>& operator=(const T& scalar);
 
-			//! Returns pointer to internal array
-			const T* pointer() const { return M; }
-			T* pointer()
-			{
+		//! Returns pointer to internal array
+		const T* pointer() const { return M; }
+		T* pointer()
+		{
 #if defined ( USE_MATRIX_TEST )
-				definitelyIdentityMatrix=false;
+			definitelyIdentityMatrix=false;
 #endif
-				return M;
-			}
+			return M;
+		}
 
-			//! Returns true if other matrix is equal to this matrix.
-			bool operator==(const CMatrix4<T> &other) const;
+		//! Returns true if other matrix is equal to this matrix.
+		bool operator==(const CMatrix4<T> &other) const;
 
-			//! Returns true if other matrix is not equal to this matrix.
-			bool operator!=(const CMatrix4<T> &other) const;
+		//! Returns true if other matrix is not equal to this matrix.
+		bool operator!=(const CMatrix4<T> &other) const;
 
-			//! Add another matrix.
-			CMatrix4<T> operator+(const CMatrix4<T>& other) const;
+		//! Add another matrix.
+		CMatrix4<T> operator+(const CMatrix4<T>& other) const;
 
-			//! Add another matrix.
-			CMatrix4<T>& operator+=(const CMatrix4<T>& other);
+		//! Add another matrix.
+		CMatrix4<T>& operator+=(const CMatrix4<T>& other);
 
-			//! Subtract another matrix.
-			CMatrix4<T> operator-(const CMatrix4<T>& other) const;
+		//! Subtract another matrix.
+		CMatrix4<T> operator-(const CMatrix4<T>& other) const;
 
-			//! Subtract another matrix.
-			CMatrix4<T>& operator-=(const CMatrix4<T>& other);
+		//! Subtract another matrix.
+		CMatrix4<T>& operator-=(const CMatrix4<T>& other);
 
-			//! set this matrix to the product of two matrices
-			/** Calculate b*a */
-			inline CMatrix4<T>& setbyproduct(const CMatrix4<T>& other_a,const CMatrix4<T>& other_b );
+		//! set this matrix to the product of two matrices
+		/** Calculate b*a */
+		inline CMatrix4<T>& setbyproduct(const CMatrix4<T>& other_a, const CMatrix4<T>& other_b);
 
-			//! Set this matrix to the product of two matrices
-			/** Calculate b*a, no optimization used,
-			use it if you know you never have a identity matrix */
-			CMatrix4<T>& setbyproduct_nocheck(const CMatrix4<T>& other_a,const CMatrix4<T>& other_b );
+		//! Set this matrix to the product of two matrices
+		/** Calculate b*a, no optimization used,
+		use it if you know you never have a identity matrix */
+		CMatrix4<T>& setbyproduct_nocheck(const CMatrix4<T>& other_a, const CMatrix4<T>& other_b);
 
-			//! Multiply by another matrix.
-			/** Calculate other*this */
-			CMatrix4<T> operator*(const CMatrix4<T>& other) const;
+		//! Multiply by another matrix.
+		/** Calculate other*this */
+		CMatrix4<T> operator*(const CMatrix4<T>& other) const;
 
-			//! Multiply by another matrix.
-			/** Calculate and return other*this */
-			CMatrix4<T>& operator*=(const CMatrix4<T>& other);
+		//! Multiply by another matrix.
+		/** Calculate and return other*this */
+		CMatrix4<T>& operator*=(const CMatrix4<T>& other);
 
-			//! Multiply by scalar.
-			CMatrix4<T> operator*(const T& scalar) const;
+		//! Multiply by scalar.
+		CMatrix4<T> operator*(const T& scalar) const;
 
-			//! Multiply by scalar.
-			CMatrix4<T>& operator*=(const T& scalar);
+		//! Multiply by scalar.
+		CMatrix4<T>& operator*=(const T& scalar);
 
-			//! Set matrix to identity.
-			inline CMatrix4<T>& makeIdentity();
+		//! Set matrix to identity.
+		inline CMatrix4<T>& makeIdentity();
 
-			//! Returns true if the matrix is the identity matrix
-			inline bool isIdentity() const;
+		//! Returns true if the matrix is the identity matrix
+		inline bool isIdentity() const;
 
-			//! Returns true if the matrix is orthogonal
-			inline bool isOrthogonal() const;
+		//! Returns true if the matrix is orthogonal
+		inline bool isOrthogonal() const;
 
-			//! Returns true if the matrix is the identity matrix
-			bool isIdentity_integer_base () const;
+		//! Returns true if the matrix is the identity matrix
+		bool isIdentity_integer_base() const;
 
-			//! Set the translation of the current matrix. Will erase any previous values.
-			CMatrix4<T>& setTranslation( const vector3d<T>& translation );
+		//! Set the translation of the current matrix. Will erase any previous values.
+		CMatrix4<T>& setTranslation(const vector3d<T>& translation);
 
-			//! Gets the current translation
-			vector3d<T> getTranslation() const;
+		//! Gets the current translation
+		vector3d<T> getTranslation() const;
 
-			//! Set the inverse translation of the current matrix. Will erase any previous values.
-			CMatrix4<T>& setInverseTranslation( const vector3d<T>& translation );
+		//! Set the inverse translation of the current matrix. Will erase any previous values.
+		CMatrix4<T>& setInverseTranslation(const vector3d<T>& translation);
 
-			//! Make a rotation matrix from Euler angles. The 4th row and column are unmodified.
-			inline CMatrix4<T>& setRotationRadians( const vector3d<T>& rotation );
+		//! Make a rotation matrix from Euler angles. The 4th row and column are unmodified.
+		inline CMatrix4<T>& setRotationRadians(const vector3d<T>& rotation);
 
-			//! Make a rotation matrix from Euler angles. The 4th row and column are unmodified.
-			CMatrix4<T>& setRotationDegrees( const vector3d<T>& rotation );
+		//! Make a rotation matrix from Euler angles. The 4th row and column are unmodified.
+		CMatrix4<T>& setRotationDegrees(const vector3d<T>& rotation);
 
-			//! Returns the rotation, as set by setRotation().
-			/** This code was orginally written by by Chev. */
-			core::vector3d<T> getRotationDegrees() const;
+		//! Returns the rotation, as set by setRotation().
+		/** This code was orginally written by by Chev. */
+		core::vector3d<T> getRotationDegrees() const;
 
-			//! Make an inverted rotation matrix from Euler angles.
-			/** The 4th row and column are unmodified. */
-			inline CMatrix4<T>& setInverseRotationRadians( const vector3d<T>& rotation );
+		//! Make an inverted rotation matrix from Euler angles.
+		/** The 4th row and column are unmodified. */
+		inline CMatrix4<T>& setInverseRotationRadians(const vector3d<T>& rotation);
 
-			//! Make an inverted rotation matrix from Euler angles.
-			/** The 4th row and column are unmodified. */
-			inline CMatrix4<T>& setInverseRotationDegrees( const vector3d<T>& rotation );
+		//! Make an inverted rotation matrix from Euler angles.
+		/** The 4th row and column are unmodified. */
+		inline CMatrix4<T>& setInverseRotationDegrees(const vector3d<T>& rotation);
 
-			//! Make a rotation matrix from angle and axis, assuming left handed rotation.
-			/** The 4th row and column are unmodified. */
-			inline CMatrix4<T>& setRotationAxisRadians(const T& angle, const vector3d<T>& axis);
+		//! Make a rotation matrix from angle and axis, assuming left handed rotation.
+		/** The 4th row and column are unmodified. */
+		inline CMatrix4<T>& setRotationAxisRadians(const T& angle, const vector3d<T>& axis);
 
-			//! Set Scale
-			CMatrix4<T>& setScale( const vector3d<T>& scale );
+		//! Set Scale
+		CMatrix4<T>& setScale(const vector3d<T>& scale);
 
-			//! Set Scale
-			CMatrix4<T>& setScale( const T scale ) { return setScale(core::vector3d<T>(scale,scale,scale)); }
+		//! Set Scale
+		CMatrix4<T>& setScale(const T scale) { return setScale(core::vector3d<T>(scale, scale, scale)); }
 
-			//! Get Scale
-			core::vector3d<T> getScale() const;
+		//! Get Scale
+		core::vector3d<T> getScale() const;
 
-			//! Translate a vector by the inverse of the translation part of this matrix.
-			void inverseTranslateVect( vector3df& vect ) const;
+		//! Translate a vector by the inverse of the translation part of this matrix.
+		void inverseTranslateVect(vector3df& vect) const;
 
-			//! Rotate a vector by the inverse of the rotation part of this matrix.
-			void inverseRotateVect( vector3df& vect ) const;
+		//! Rotate a vector by the inverse of the rotation part of this matrix.
+		void inverseRotateVect(vector3df& vect) const;
 
-			//! Rotate a vector by the rotation part of this matrix.
-			void rotateVect( vector3df& vect ) const;
+		//! Rotate a vector by the rotation part of this matrix.
+		void rotateVect(vector3df& vect) const;
 
-			//! An alternate transform vector method, writing into a second vector
-			void rotateVect(core::vector3df& out, const core::vector3df& in) const;
+		//! An alternate transform vector method, writing into a second vector
+		void rotateVect(core::vector3df& out, const core::vector3df& in) const;
 
-			//! An alternate transform vector method, writing into an array of 3 floats
-			void rotateVect(T *out,const core::vector3df &in) const;
+		//! An alternate transform vector method, writing into an array of 3 floats
+		void rotateVect(T *out, const core::vector3df &in) const;
 
-			//! Transforms the vector by this matrix
-			void transformVect( vector3df& vect) const;
+		//! Transforms the vector by this matrix
+		void transformVect(vector3df& vect) const;
 
-			//! Transforms input vector by this matrix and stores result in output vector
-			void transformVect( vector3df& out, const vector3df& in ) const;
+		//! Transforms input vector by this matrix and stores result in output vector
+		void transformVect(vector3df& out, const vector3df& in) const;
 
-			//! An alternate transform vector method, writing into an array of 4 floats
-			void transformVect(T *out,const core::vector3df &in) const;
+		//! An alternate transform vector method, writing into an array of 4 floats
+		void transformVect(T *out, const core::vector3df &in) const;
 
-			//! An alternate transform vector method, reading from and writing to an array of 3 floats
-			void transformVec3(T *out, const T * in) const;
+		//! An alternate transform vector method, reading from and writing to an array of 3 floats
+		void transformVec3(T *out, const T * in) const;
 
-			//! Translate a vector by the translation part of this matrix.
-			void translateVect( vector3df& vect ) const;
+		//! Translate a vector by the translation part of this matrix.
+		void translateVect(vector3df& vect) const;
 
-			//! Transforms a plane by this matrix
-			void transformPlane( core::plane3d<f32> &plane) const;
+		//! Transforms a plane by this matrix
+		void transformPlane(core::plane3d<f32> &plane) const;
 
-			//! Transforms a plane by this matrix
-			void transformPlane( const core::plane3d<f32> &in, core::plane3d<f32> &out) const;
+		//! Transforms a plane by this matrix
+		void transformPlane(const core::plane3d<f32> &in, core::plane3d<f32> &out) const;
 
-			//! Transforms a axis aligned bounding box
-			/** The result box of this operation may not be accurate at all. For
-			correct results, use transformBoxEx() */
-			void transformBox(core::aabbox3d<f32>& box) const;
+		//! Transforms a axis aligned bounding box
+		/** The result box of this operation may not be accurate at all. For
+		correct results, use transformBoxEx() */
+		void transformBox(core::aabbox3d<f32>& box) const;
 
-			//! Transforms a axis aligned bounding box
-			/** The result box of this operation should by accurate, but this operation
-			is slower than transformBox(). */
-			void transformBoxEx(core::aabbox3d<f32>& box) const;
-
-			//! Multiplies this matrix by a 1x4 matrix
-			void multiplyWith1x4Matrix(T* matrix) const;
+		//! Transforms a axis aligned bounding box
+		/** The result box of this operation should by accurate, but this operation
+		is slower than transformBox(). */
+		void transformBoxEx(core::aabbox3d<f32>& box) const;
+
+		//! Multiplies this matrix by a 1x4 matrix
+		void multiplyWith1x4Matrix(T* matrix) const;
 
-			//! Calculates inverse of matrix. Slow.
-			/** \return Returns false if there is no inverse matrix.*/
-			bool makeInverse();
-
-
-			//! Inverts a primitive matrix which only contains a translation and a rotation
-			/** \param out: where result matrix is written to. */
-			bool getInversePrimitive ( CMatrix4<T>& out ) const;
-
-			//! Gets the inversed matrix of this one
-			/** \param out: where result matrix is written to.
-			\return Returns false if there is no inverse matrix. */
-			bool getInverse(CMatrix4<T>& out) const;
-
-			//! Builds a right-handed perspective projection matrix based on a field of view
-			CMatrix4<T>& buildProjectionMatrixPerspectiveFovRH(f32 fieldOfViewRadians, f32 aspectRatio, f32 zNear, f32 zFar);
-
-			//! Builds a left-handed perspective projection matrix based on a field of view
-			CMatrix4<T>& buildProjectionMatrixPerspectiveFovLH(f32 fieldOfViewRadians, f32 aspectRatio, f32 zNear, f32 zFar);
-
-			//! Builds a left-handed perspective projection matrix based on a field of view, with far plane at infinity
-			CMatrix4<T>& buildProjectionMatrixPerspectiveFovInfinityLH(f32 fieldOfViewRadians, f32 aspectRatio, f32 zNear, f32 epsilon=0);
-
-			//! Builds a right-handed perspective projection matrix.
-			CMatrix4<T>& buildProjectionMatrixPerspectiveRH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
-
-			//! Builds a left-handed perspective projection matrix.
-			CMatrix4<T>& buildProjectionMatrixPerspectiveLH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
-
-			//! Builds a left-handed orthogonal projection matrix.
-			CMatrix4<T>& buildProjectionMatrixOrthoLH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
-
-			//! Builds a left-handed orthogonal projection matrix, with specific corners.
-			CMatrix4<T>& buildProjectionMatrixOrthoLH(f32 left, f32 right, f32 up, f32 down, f32 zNear, f32 zFar);
-
-			//! Builds a right-handed orthogonal projection matrix.
-			CMatrix4<T>& buildProjectionMatrixOrthoRH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
-
-			//! Builds a left-handed look-at matrix.
-			CMatrix4<T>& buildCameraLookAtMatrixLH(
-					const vector3df& position,
-					const vector3df& target,
-					const vector3df& upVector);
-
-			//! Builds a right-handed look-at matrix.
-			CMatrix4<T>& buildCameraLookAtMatrixRH(
-					const vector3df& position,
-					const vector3df& target,
-					const vector3df& upVector);
-
-			//! Builds a matrix that flattens geometry into a plane.
-			/** \param light: light source
-			\param plane: plane into which the geometry if flattened into
-			\param point: value between 0 and 1, describing the light source.
-			If this is 1, it is a point light, if it is 0, it is a directional light. */
-			CMatrix4<T>& buildShadowMatrix(const core::vector3df& light, core::plane3df plane, f32 point=1.0f);
-
-			//! Builds a matrix which transforms a normalized Device Coordinate to Device Coordinates.
-			/** Used to scale <-1,-1><1,1> to viewport, for example from <-1,-1> <1,1> to the viewport <0,0><0,640> */
-			CMatrix4<T>& buildNDCToDCMatrix( const core::rect<s32>& area, f32 zScale);
-
-			//! Creates a new matrix as interpolated matrix from two other ones.
-			/** \param b: other matrix to interpolate with
-			\param time: Must be a value between 0 and 1. */
-			CMatrix4<T> interpolate(const core::CMatrix4<T>& b, f32 time) const;
-
-			//! Gets transposed matrix
-			CMatrix4<T> getTransposed() const;
-
-			//! Gets transposed matrix
-			inline void getTransposed( CMatrix4<T>& dest ) const;
-
-			//! Builds a matrix that rotates from one vector to another
-			/** \param from: vector to rotate from
-			\param to: vector to rotate to
-			 */
-			CMatrix4<T>& buildRotateFromTo(const core::vector3df& from, const core::vector3df& to);
-
-			//! Builds a combined matrix which translates to a center before rotation and translates from origin afterwards
-			/** \param center Position to rotate around
-			\param translate Translation applied after the rotation
-			 */
-			void setRotationCenter(const core::vector3df& center, const core::vector3df& translate);
-
-			//! Builds a matrix which rotates a source vector to a look vector over an arbitrary axis
-			/** \param camPos: viewer position in world coo
-			\param center: object position in world-coo and rotation pivot
-			\param translation: object final translation from center
-			\param axis: axis to rotate about
-			\param from: source vector to rotate from
-			 */
-			void buildAxisAlignedBillboard(const core::vector3df& camPos,
-						const core::vector3df& center,
-						const core::vector3df& translation,
-						const core::vector3df& axis,
-						const core::vector3df& from);
-
-			/*
-				construct 2D Texture transformations
-				rotate about center, scale, and transform.
+		//! Calculates inverse of matrix. Slow.
+		/** \return Returns false if there is no inverse matrix.*/
+		bool makeInverse();
+
+
+		//! Inverts a primitive matrix which only contains a translation and a rotation
+		/** \param out: where result matrix is written to. */
+		bool getInversePrimitive(CMatrix4<T>& out) const;
+
+		//! Gets the inversed matrix of this one
+		/** \param out: where result matrix is written to.
+		\return Returns false if there is no inverse matrix. */
+		bool getInverse(CMatrix4<T>& out) const;
+
+		//! Builds a right-handed perspective projection matrix based on a field of view
+		CMatrix4<T>& buildProjectionMatrixPerspectiveFovRH(f32 fieldOfViewRadians, f32 aspectRatio, f32 zNear, f32 zFar);
+
+		//! Builds a left-handed perspective projection matrix based on a field of view
+		CMatrix4<T>& buildProjectionMatrixPerspectiveFovLH(f32 fieldOfViewRadians, f32 aspectRatio, f32 zNear, f32 zFar);
+
+		//! Builds a left-handed perspective projection matrix based on a field of view, with far plane at infinity
+		CMatrix4<T>& buildProjectionMatrixPerspectiveFovInfinityLH(f32 fieldOfViewRadians, f32 aspectRatio, f32 zNear, f32 epsilon = 0);
+
+		//! Builds a right-handed perspective projection matrix.
+		CMatrix4<T>& buildProjectionMatrixPerspectiveRH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
+
+		//! Builds a left-handed perspective projection matrix.
+		CMatrix4<T>& buildProjectionMatrixPerspectiveLH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
+
+		//! Builds a left-handed orthogonal projection matrix.
+		CMatrix4<T>& buildProjectionMatrixOrthoLH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
+
+		//! Builds a left-handed orthogonal projection matrix, with specific corners.
+		CMatrix4<T>& buildProjectionMatrixOrthoLH(f32 left, f32 right, f32 up, f32 down, f32 zNear, f32 zFar);
+
+		//! Builds a right-handed orthogonal projection matrix.
+		CMatrix4<T>& buildProjectionMatrixOrthoRH(f32 widthOfViewVolume, f32 heightOfViewVolume, f32 zNear, f32 zFar);
+
+		//! Builds a left-handed look-at matrix.
+		CMatrix4<T>& buildCameraLookAtMatrixLH(
+			const vector3df& position,
+			const vector3df& target,
+			const vector3df& upVector);
+
+		//! Builds a right-handed look-at matrix.
+		CMatrix4<T>& buildCameraLookAtMatrixRH(
+			const vector3df& position,
+			const vector3df& target,
+			const vector3df& upVector);
+
+		//! Builds a matrix that flattens geometry into a plane.
+		/** \param light: light source
+		\param plane: plane into which the geometry if flattened into
+		\param point: value between 0 and 1, describing the light source.
+		If this is 1, it is a point light, if it is 0, it is a directional light. */
+		CMatrix4<T>& buildShadowMatrix(const core::vector3df& light, core::plane3df plane, f32 point = 1.0f);
+
+		//! Builds a matrix which transforms a normalized Device Coordinate to Device Coordinates.
+		/** Used to scale <-1,-1><1,1> to viewport, for example from <-1,-1> <1,1> to the viewport <0,0><0,640> */
+		CMatrix4<T>& buildNDCToDCMatrix(const core::rect<s32>& area, f32 zScale);
+
+		//! Creates a new matrix as interpolated matrix from two other ones.
+		/** \param b: other matrix to interpolate with
+		\param time: Must be a value between 0 and 1. */
+		CMatrix4<T> interpolate(const core::CMatrix4<T>& b, f32 time) const;
+
+		//! Gets transposed matrix
+		CMatrix4<T> getTransposed() const;
+
+		//! Gets transposed matrix
+		inline void getTransposed(CMatrix4<T>& dest) const;
+
+		//! Builds a matrix that rotates from one vector to another
+		/** \param from: vector to rotate from
+		\param to: vector to rotate to
+		*/
+		CMatrix4<T>& buildRotateFromTo(const core::vector3df& from, const core::vector3df& to);
+
+		//! Builds a combined matrix which translates to a center before rotation and translates from origin afterwards
+		/** \param center Position to rotate around
+		\param translate Translation applied after the rotation
+		*/
+		void setRotationCenter(const core::vector3df& center, const core::vector3df& translate);
+
+		//! Builds a matrix which rotates a source vector to a look vector over an arbitrary axis
+		/** \param camPos: viewer position in world coo
+		\param center: object position in world-coo and rotation pivot
+		\param translation: object final translation from center
+		\param axis: axis to rotate about
+		\param from: source vector to rotate from
+		*/
+		void buildAxisAlignedBillboard(const core::vector3df& camPos,
+			const core::vector3df& center,
+			const core::vector3df& translation,
+			const core::vector3df& axis,
+			const core::vector3df& from);
+
+		/*
+			construct 2D Texture transformations
+			rotate about center, scale, and transform.
 			*/
-			//! Set to a texture transformation matrix with the given parameters.
-			CMatrix4<T>& buildTextureTransform( f32 rotateRad,
-					const core::vector2df &rotatecenter,
-					const core::vector2df &translate,
-					const core::vector2df &scale);
+		//! Set to a texture transformation matrix with the given parameters.
+		CMatrix4<T>& buildTextureTransform(f32 rotateRad,
+			const core::vector2df &rotatecenter,
+			const core::vector2df &translate,
+			const core::vector2df &scale);
 
-			//! Set texture transformation rotation
-			/** Rotate about z axis, recenter at (0.5,0.5).
-			Doesn't clear other elements than those affected
-			\param radAngle Angle in radians
-			\return Altered matrix */
-			CMatrix4<T>& setTextureRotationCenter( f32 radAngle );
+		//! Set texture transformation rotation
+		/** Rotate about z axis, recenter at (0.5,0.5).
+		Doesn't clear other elements than those affected
+		\param radAngle Angle in radians
+		\return Altered matrix */
+		CMatrix4<T>& setTextureRotationCenter(f32 radAngle);
 
-			//! Set texture transformation translation
-			/** Doesn't clear other elements than those affected.
-			\param x Offset on x axis
-			\param y Offset on y axis
-			\return Altered matrix */
-			CMatrix4<T>& setTextureTranslate( f32 x, f32 y );
+		//! Set texture transformation translation
+		/** Doesn't clear other elements than those affected.
+		\param x Offset on x axis
+		\param y Offset on y axis
+		\return Altered matrix */
+		CMatrix4<T>& setTextureTranslate(f32 x, f32 y);
 
-			//! Set texture transformation translation, using a transposed representation
-			/** Doesn't clear other elements than those affected.
-			\param x Offset on x axis
-			\param y Offset on y axis
-			\return Altered matrix */
-			CMatrix4<T>& setTextureTranslateTransposed( f32 x, f32 y );
+		//! Set texture transformation translation, using a transposed representation
+		/** Doesn't clear other elements than those affected.
+		\param x Offset on x axis
+		\param y Offset on y axis
+		\return Altered matrix */
+		CMatrix4<T>& setTextureTranslateTransposed(f32 x, f32 y);
 
-			//! Set texture transformation scale
-			/** Doesn't clear other elements than those affected.
-			\param sx Scale factor on x axis
-			\param sy Scale factor on y axis
-			\return Altered matrix. */
-			CMatrix4<T>& setTextureScale( f32 sx, f32 sy );
+		//! Set texture transformation scale
+		/** Doesn't clear other elements than those affected.
+		\param sx Scale factor on x axis
+		\param sy Scale factor on y axis
+		\return Altered matrix. */
+		CMatrix4<T>& setTextureScale(f32 sx, f32 sy);
 
-			//! Set texture transformation scale, and recenter at (0.5,0.5)
-			/** Doesn't clear other elements than those affected.
-			\param sx Scale factor on x axis
-			\param sy Scale factor on y axis
-			\return Altered matrix. */
-			CMatrix4<T>& setTextureScaleCenter( f32 sx, f32 sy );
+		//! Set texture transformation scale, and recenter at (0.5,0.5)
+		/** Doesn't clear other elements than those affected.
+		\param sx Scale factor on x axis
+		\param sy Scale factor on y axis
+		\return Altered matrix. */
+		CMatrix4<T>& setTextureScaleCenter(f32 sx, f32 sy);
 
-			//! Sets all matrix data members at once
-			CMatrix4<T>& setM(const T* data);
+		//! Sets all matrix data members at once
+		CMatrix4<T>& setM(const T* data);
 
-			//! Sets if the matrix is definitely identity matrix
-			void setDefinitelyIdentityMatrix( bool isDefinitelyIdentityMatrix);
+		//! Sets if the matrix is definitely identity matrix
+		void setDefinitelyIdentityMatrix(bool isDefinitelyIdentityMatrix);
 
-			//! Gets if the matrix is definitely identity matrix
-			bool getDefinitelyIdentityMatrix() const;
+		//! Gets if the matrix is definitely identity matrix
+		bool getDefinitelyIdentityMatrix() const;
 
-			//! Compare two matrices using the equal method
-			bool equals(const core::CMatrix4<T>& other, const T tolerance=(T)ROUNDING_ERROR_f64) const;
+		//! Compare two matrices using the equal method
+		bool equals(const core::CMatrix4<T>& other, const T tolerance = (T)ROUNDING_ERROR_f64) const;
 
-		private:
-#if defined(WIN32) && !defined(__MINGW32__)  && (defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86))
-			//! Matrix data, stored in row-major order
-            T* M = (T*)((uintptr_t)&M_raw[4] & ~0xF);
-#else
-            T M[16];
-#endif
+	private:
 #if defined ( USE_MATRIX_TEST )
-			//! Flag is this matrix is identity matrix
-			mutable u32 definitelyIdentityMatrix;
+		//! Flag is this matrix is identity matrix
+		mutable u32 definitelyIdentityMatrix;
 #endif
 #if defined ( USE_MATRIX_TEST_DEBUG )
-			u32 id;
-			mutable u32 calls;
+		u32 id;
+		mutable u32 calls;
 #endif
 
+#ifndef WIN32
+	} __attribute__((aligned(16)));
+#else
 	};
+#endif
 
 	// Default constructor
 	template <class T>
@@ -660,6 +671,29 @@ namespace core
 #endif
 	}
 
+#ifdef HAS_SSE
+	// Note : the pointer must be aligned
+	static void
+	multiplyMatrixVectorSSE(
+			const __m128 &MatRow1,
+			const __m128 &MatRow2,
+			const __m128 &MatRow3,
+			const __m128 &MatRow4,
+			const float *RowVector,
+			float *RowDest)
+	{
+		__m128 t1 = _mm_set1_ps(RowVector[0]);
+		__m128 t2 = _mm_mul_ps(MatRow1, t1);
+	 t1 = _mm_set1_ps(RowVector[1]);
+	 t2 = _mm_add_ps(_mm_mul_ps(MatRow2, t1), t2);
+	 t1 = _mm_set1_ps(RowVector[2]);
+	 t2 = _mm_add_ps(_mm_mul_ps(MatRow3, t1), t2);
+	 t1 = _mm_set1_ps(RowVector[3]);
+	 t2 = _mm_add_ps(_mm_mul_ps(MatRow4, t1), t2);
+	 _mm_store_ps(&RowDest[0], t2);
+	}
+#endif
+
 	//! multiply by another matrix
 	// set this matrix to the product of two other matrices
 	// goal is to reduce stack use and copy
@@ -668,57 +702,18 @@ namespace core
 	{
 		const T *m1 = other_a.M;
 		const T *m2 = other_b.M;
+#ifdef HAS_SSE
+		// From http://drrobsjournal.blogspot.fr/2012/10/fast-simd-4x4-matrix-multiplication.html
 
-#if defined(WIN32) && !defined(__MINGW32__) && (defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86))
-        // From http://drrobsjournal.blogspot.fr/2012/10/fast-simd-4x4-matrix-multiplication.html
-        // Use unaligned load/store
+		const __m128 a = _mm_load_ps(m1); // First row
+		const __m128 b = _mm_load_ps(&m1[4]); // Second row
+		const __m128 c = _mm_load_ps(&m1[8]); // Third row
+		const __m128 d = _mm_load_ps(&m1[12]); // Fourth row
 
-        const float *matA = other_a.pointer();
-
-        const __m128 a = _mm_load_ps(matA); // First row
-        const __m128 b = _mm_load_ps(&matA[4]); // Second row
-        const __m128 c = _mm_load_ps(&matA[8]); // Third row
-        const __m128 d = _mm_load_ps(&matA[12]); // Fourth row
-
-         __m128 t1 = _mm_set1_ps(m2[0]);
-         __m128 t2 = _mm_mul_ps(a, t1);
-        t1 = _mm_set1_ps(m2[1]);
-        t2 = _mm_add_ps(_mm_mul_ps(b, t1), t2);
-        t1 = _mm_set1_ps(m2[2]);
-        t2 = _mm_add_ps(_mm_mul_ps(c, t1), t2);
-        t1 = _mm_set1_ps(m2[3]);
-        t2 = _mm_add_ps(_mm_mul_ps(d, t1), t2);
-        _mm_store_ps(&M[0], t2);
-
-        t1 = _mm_set1_ps(m2[4]);
-        t2 = _mm_mul_ps(a, t1);
-        t1 = _mm_set1_ps(m2[5]);
-        t2 = _mm_add_ps(_mm_mul_ps(b, t1), t2);
-        t1 = _mm_set1_ps(m2[6]);
-        t2 = _mm_add_ps(_mm_mul_ps(c, t1), t2);
-        t1 = _mm_set1_ps(m2[7]);
-        t2 = _mm_add_ps(_mm_mul_ps(d, t1), t2);
-        _mm_store_ps(&M[4], t2);
-
-        t1 = _mm_set1_ps(m2[8]);
-        t2 = _mm_mul_ps(a, t1);
-        t1 = _mm_set1_ps(m2[9]);
-        t2 = _mm_add_ps(_mm_mul_ps(b, t1), t2);
-        t1 = _mm_set1_ps(m2[10]);
-        t2 = _mm_add_ps(_mm_mul_ps(c, t1), t2);
-        t1 = _mm_set1_ps(m2[11]);
-        t2 = _mm_add_ps(_mm_mul_ps(d, t1), t2);
-        _mm_store_ps(&M[8], t2);
-
-        t1 = _mm_set1_ps(m2[12]);
-        t2 = _mm_mul_ps(a, t1);
-        t1 = _mm_set1_ps(m2[13]);
-        t2 = _mm_add_ps(_mm_mul_ps(b, t1), t2);
-        t1 = _mm_set1_ps(m2[14]);
-        t2 = _mm_add_ps(_mm_mul_ps(c, t1), t2);
-        t1 = _mm_set1_ps(m2[15]);
-        t2 = _mm_add_ps(_mm_mul_ps(d, t1), t2);
-        _mm_store_ps(&M[12], t2);
+		multiplyMatrixVectorSSE(a, b, c, d, &m2[0], &M[0]);
+		multiplyMatrixVectorSSE(a, b, c, d, &m2[4], &M[4]);
+		multiplyMatrixVectorSSE(a, b, c, d, &m2[8], &M[8]);
+		multiplyMatrixVectorSSE(a, b, c, d, &m2[12], &M[12]);
 #else
 
 		M[0] = m1[0]*m2[0] + m1[4]*m2[1] + m1[8]*m2[2] + m1[12]*m2[3];
@@ -746,7 +741,6 @@ namespace core
 #endif
 		return *this;
 	}
-
 
 	//! multiply by another matrix
 	// set this matrix to the product of two other matrices
@@ -783,6 +777,22 @@ namespace core
 
 		const T *m1 = M;
 
+#ifdef HAS_SSE
+		const T *M1 = m1;
+		const T *M2 = m2.M;
+		T *M3 = m3.M;
+		// From http://drrobsjournal.blogspot.fr/2012/10/fast-simd-4x4-matrix-multiplication.html
+
+		const __m128 a = _mm_load_ps(M1); // First row
+		const __m128 b = _mm_load_ps(&M1[4]); // Second row
+		const __m128 c = _mm_load_ps(&M1[8]); // Third row
+		const __m128 d = _mm_load_ps(&M1[12]); // Fourth row
+
+		multiplyMatrixVectorSSE(a, b, c, d, &M2[0], &M3[0]);
+		multiplyMatrixVectorSSE(a, b, c, d, &M2[4], &M3[4]);
+		multiplyMatrixVectorSSE(a, b, c, d, &M2[8], &M3[8]);
+		multiplyMatrixVectorSSE(a, b, c, d, &M2[12], &M3[12]);
+#else
 		m3[0] = m1[0]*m2[0] + m1[4]*m2[1] + m1[8]*m2[2] + m1[12]*m2[3];
 		m3[1] = m1[1]*m2[0] + m1[5]*m2[1] + m1[9]*m2[2] + m1[13]*m2[3];
 		m3[2] = m1[2]*m2[0] + m1[6]*m2[1] + m1[10]*m2[2] + m1[14]*m2[3];
@@ -802,6 +812,7 @@ namespace core
 		m3[13] = m1[1]*m2[12] + m1[5]*m2[13] + m1[9]*m2[14] + m1[13]*m2[15];
 		m3[14] = m1[2]*m2[12] + m1[6]*m2[13] + m1[10]*m2[14] + m1[14]*m2[15];
 		m3[15] = m1[3]*m2[12] + m1[7]*m2[13] + m1[11]*m2[14] + m1[15]*m2[15];
+#endif
 		return m3;
 	}
 
@@ -1373,9 +1384,9 @@ namespace core
 	template <class T>
     inline bool CMatrix4<T>::getInverse(CMatrix4<T>& out) const
     {
-        /// Calculates the inverse of this Matrix
-        /// The inverse is calculated using Cramers rule.
-        /// If no inverse exists then 'false' is returned.
+		/// Calculates the inverse of this Matrix
+		/// The inverse is calculated using Cramers rule.
+		/// If no inverse exists then 'false' is returned.
 
 #if defined ( USE_MATRIX_TEST )
         if ( this->isIdentity() )
@@ -1384,96 +1395,96 @@ namespace core
             return true;
         }
 #endif
-        const CMatrix4<T> &m = *this;
-#if defined(WIN32) && !defined(__MINGW32__) && (defined(__x86_64__) || defined(_M_X64) || defined(__i386) || defined(_M_IX86))
-        float *src = (float*)m.pointer();
-        float *dst = (float*)out.pointer();
-        // from http://www.intel.com/design/pentiumiii/sml/245043.htm
-        {
-            __m128 minor0 = {}, minor1 = {}, minor2 = {}, minor3 = {};
-            __m128 row0 = {}, row1 = {}, row2 = {}, row3 = {};
-            __m128 det = {}, tmp1 = {};
-            tmp1 = _mm_loadh_pi(_mm_loadl_pi(tmp1, (__m64*)(src)), (__m64*)(src + 4));
-            row1 = _mm_loadh_pi(_mm_loadl_pi(row1, (__m64*)(src + 8)), (__m64*)(src + 12));
-            row0 = _mm_shuffle_ps(tmp1, row1, 0x88);
-            row1 = _mm_shuffle_ps(row1, tmp1, 0xDD);
-            tmp1 = _mm_loadh_pi(_mm_loadl_pi(tmp1, (__m64*)(src + 2)), (__m64*)(src + 6));
-            row3 = _mm_loadh_pi(_mm_loadl_pi(row3, (__m64*)(src + 10)), (__m64*)(src + 14));
-            row2 = _mm_shuffle_ps(tmp1, row3, 0x88);
-            row3 = _mm_shuffle_ps(row3, tmp1, 0xDD);
-            // -----------------------------------------------
-            tmp1 = _mm_mul_ps(row2, row3);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
-            minor0 = _mm_mul_ps(row1, tmp1);
-            minor1 = _mm_mul_ps(row0, tmp1);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
-            minor0 = _mm_sub_ps(_mm_mul_ps(row1, tmp1), minor0);
-            minor1 = _mm_sub_ps(_mm_mul_ps(row0, tmp1), minor1);
-            minor1 = _mm_shuffle_ps(minor1, minor1, 0x4E);
-            // -----------------------------------------------
-            tmp1 = _mm_mul_ps(row1, row2);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
-            minor0 = _mm_add_ps(_mm_mul_ps(row3, tmp1), minor0);
-            minor3 = _mm_mul_ps(row0, tmp1);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
-            minor0 = _mm_sub_ps(minor0, _mm_mul_ps(row3, tmp1));
-            minor3 = _mm_sub_ps(_mm_mul_ps(row0, tmp1), minor3);
-            minor3 = _mm_shuffle_ps(minor3, minor3, 0x4E);
-            // -----------------------------------------------
-            tmp1 = _mm_mul_ps(_mm_shuffle_ps(row1, row1, 0x4E), row3);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
-            row2 = _mm_shuffle_ps(row2, row2, 0x4E);
-            minor0 = _mm_add_ps(_mm_mul_ps(row2, tmp1), minor0);
-            minor2 = _mm_mul_ps(row0, tmp1);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
-            minor0 = _mm_sub_ps(minor0, _mm_mul_ps(row2, tmp1));
-            minor2 = _mm_sub_ps(_mm_mul_ps(row0, tmp1), minor2);
-            minor2 = _mm_shuffle_ps(minor2, minor2, 0x4E);
-            // -----------------------------------------------
-            tmp1 = _mm_mul_ps(row0, row1);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
-            minor2 = _mm_add_ps(_mm_mul_ps(row3, tmp1), minor2);
-            minor3 = _mm_sub_ps(_mm_mul_ps(row2, tmp1), minor3);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
-            minor2 = _mm_sub_ps(_mm_mul_ps(row3, tmp1), minor2);
-            minor3 = _mm_sub_ps(minor3, _mm_mul_ps(row2, tmp1));
-            // -----------------------------------------------
-            tmp1 = _mm_mul_ps(row0, row3);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
-            minor1 = _mm_sub_ps(minor1, _mm_mul_ps(row2, tmp1));
-            minor2 = _mm_add_ps(_mm_mul_ps(row1, tmp1), minor2);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
-            minor1 = _mm_add_ps(_mm_mul_ps(row2, tmp1), minor1);
-            minor2 = _mm_sub_ps(minor2, _mm_mul_ps(row1, tmp1));
-            // -----------------------------------------------
-            tmp1 = _mm_mul_ps(row0, row2);
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
-            minor1 = _mm_add_ps(_mm_mul_ps(row3, tmp1), minor1);
-            minor3 = _mm_sub_ps(minor3, _mm_mul_ps(row1, tmp1));
-            tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
-            minor1 = _mm_sub_ps(minor1, _mm_mul_ps(row3, tmp1));
-            minor3 = _mm_add_ps(_mm_mul_ps(row1, tmp1), minor3);
-            // -----------------------------------------------
-            det = _mm_mul_ps(row0, minor0);
-            det = _mm_add_ps(_mm_shuffle_ps(det, det, 0x4E), det);
-            det = _mm_add_ss(_mm_shuffle_ps(det, det, 0xB1), det);
-            tmp1 = _mm_rcp_ss(det);
-            det = _mm_sub_ss(_mm_add_ss(tmp1, tmp1), _mm_mul_ss(det, _mm_mul_ss(tmp1, tmp1)));
-            det = _mm_shuffle_ps(det, det, 0x00);
-            minor0 = _mm_mul_ps(det, minor0);
-            _mm_storel_pi((__m64*)(dst), minor0);
-            _mm_storeh_pi((__m64*)(dst + 2), minor0);
-            minor1 = _mm_mul_ps(det, minor1);
-            _mm_storel_pi((__m64*)(dst + 4), minor1);
-            _mm_storeh_pi((__m64*)(dst + 6), minor1);
-            minor2 = _mm_mul_ps(det, minor2);
-            _mm_storel_pi((__m64*)(dst + 8), minor2);
-            _mm_storeh_pi((__m64*)(dst + 10), minor2);
-            minor3 = _mm_mul_ps(det, minor3);
-            _mm_storel_pi((__m64*)(dst + 12), minor3);
-            _mm_storeh_pi((__m64*)(dst + 14), minor3);
-        }
-        return true;
+		const CMatrix4<T> &m = *this;
+#ifdef HAS_SSE
+		float *src = (float*)m.pointer();
+		float *dst = (float*)out.pointer();
+		// from http://www.intel.com/design/pentiumiii/sml/245043.htm
+		__m128 minor0 = {}, minor1 = {}, minor2 = {}, minor3 = {};
+		__m128 row0 = {}, row1 = {}, row2 = {}, row3 = {};
+		__m128 det = {}, tmp1 = {};
+
+		tmp1 = _mm_loadh_pi(_mm_loadl_pi(tmp1, (__m64*)(src)), (__m64*)(src + 4));
+		row1 = _mm_loadh_pi(_mm_loadl_pi(row1, (__m64*)(src + 8)), (__m64*)(src + 12));
+		row0 = _mm_shuffle_ps(tmp1, row1, 0x88);
+		row1 = _mm_shuffle_ps(row1, tmp1, 0xDD);
+		tmp1 = _mm_loadh_pi(_mm_loadl_pi(tmp1, (__m64*)(src + 2)), (__m64*)(src + 6));
+		row3 = _mm_loadh_pi(_mm_loadl_pi(row3, (__m64*)(src + 10)), (__m64*)(src + 14));
+		row2 = _mm_shuffle_ps(tmp1, row3, 0x88);
+		row3 = _mm_shuffle_ps(row3, tmp1, 0xDD);
+
+		tmp1 = _mm_mul_ps(row2, row3);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
+		minor0 = _mm_mul_ps(row1, tmp1);
+		minor1 = _mm_mul_ps(row0, tmp1);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
+		minor0 = _mm_sub_ps(_mm_mul_ps(row1, tmp1), minor0);
+		minor1 = _mm_sub_ps(_mm_mul_ps(row0, tmp1), minor1);
+		minor1 = _mm_shuffle_ps(minor1, minor1, 0x4E);
+
+		tmp1 = _mm_mul_ps(row1, row2);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
+		minor0 = _mm_add_ps(_mm_mul_ps(row3, tmp1), minor0);
+		minor3 = _mm_mul_ps(row0, tmp1);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
+		minor0 = _mm_sub_ps(minor0, _mm_mul_ps(row3, tmp1));
+		minor3 = _mm_sub_ps(_mm_mul_ps(row0, tmp1), minor3);
+		minor3 = _mm_shuffle_ps(minor3, minor3, 0x4E);
+
+		tmp1 = _mm_mul_ps(_mm_shuffle_ps(row1, row1, 0x4E), row3);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
+		row2 = _mm_shuffle_ps(row2, row2, 0x4E);
+		minor0 = _mm_add_ps(_mm_mul_ps(row2, tmp1), minor0);
+		minor2 = _mm_mul_ps(row0, tmp1);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
+		minor0 = _mm_sub_ps(minor0, _mm_mul_ps(row2, tmp1));
+		minor2 = _mm_sub_ps(_mm_mul_ps(row0, tmp1), minor2);
+		minor2 = _mm_shuffle_ps(minor2, minor2, 0x4E);
+
+		tmp1 = _mm_mul_ps(row0, row1);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
+		minor2 = _mm_add_ps(_mm_mul_ps(row3, tmp1), minor2);
+		minor3 = _mm_sub_ps(_mm_mul_ps(row2, tmp1), minor3);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
+		minor2 = _mm_sub_ps(_mm_mul_ps(row3, tmp1), minor2);
+		minor3 = _mm_sub_ps(minor3, _mm_mul_ps(row2, tmp1));
+
+		tmp1 = _mm_mul_ps(row0, row3);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
+		minor1 = _mm_sub_ps(minor1, _mm_mul_ps(row2, tmp1));
+		minor2 = _mm_add_ps(_mm_mul_ps(row1, tmp1), minor2);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
+		minor1 = _mm_add_ps(_mm_mul_ps(row2, tmp1), minor1);
+		minor2 = _mm_sub_ps(minor2, _mm_mul_ps(row1, tmp1));
+
+		tmp1 = _mm_mul_ps(row0, row2);
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0xB1);
+		minor1 = _mm_add_ps(_mm_mul_ps(row3, tmp1), minor1);
+		minor3 = _mm_sub_ps(minor3, _mm_mul_ps(row1, tmp1));
+		tmp1 = _mm_shuffle_ps(tmp1, tmp1, 0x4E);
+		minor1 = _mm_sub_ps(minor1, _mm_mul_ps(row3, tmp1));
+		minor3 = _mm_add_ps(_mm_mul_ps(row1, tmp1), minor3);
+
+		det = _mm_mul_ps(row0, minor0);
+		det = _mm_add_ps(_mm_shuffle_ps(det, det, 0x4E), det);
+		det = _mm_add_ss(_mm_shuffle_ps(det, det, 0xB1), det);
+		tmp1 = _mm_rcp_ss(det);
+		det = _mm_sub_ss(_mm_add_ss(tmp1, tmp1), _mm_mul_ss(det, _mm_mul_ss(tmp1, tmp1)));
+		det = _mm_shuffle_ps(det, det, 0x00);
+		minor0 = _mm_mul_ps(det, minor0);
+		_mm_storel_pi((__m64*)(dst), minor0);
+		_mm_storeh_pi((__m64*)(dst + 2), minor0);
+		minor1 = _mm_mul_ps(det, minor1);
+		_mm_storel_pi((__m64*)(dst + 4), minor1);
+		_mm_storeh_pi((__m64*)(dst + 6), minor1);
+		minor2 = _mm_mul_ps(det, minor2);
+		_mm_storel_pi((__m64*)(dst + 8), minor2);
+		_mm_storeh_pi((__m64*)(dst + 10), minor2);
+		minor3 = _mm_mul_ps(det, minor3);
+		_mm_storel_pi((__m64*)(dst + 12), minor3);
+		_mm_storeh_pi((__m64*)(dst + 14), minor3);
+
+		return true;
 #else
 
 		f32 d = (m(0, 0) * m(1, 1) - m(0, 1) * m(1, 0)) * (m(2, 2) * m(3, 3) - m(2, 3) * m(3, 2)) -
