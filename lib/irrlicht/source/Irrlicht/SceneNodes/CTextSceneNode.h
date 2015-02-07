@@ -6,7 +6,7 @@
 #define __C_TEXT_SCENE_NODE_H_INCLUDED__
 
 #include "ITextSceneNode.h"
-#include "IBillboardTextSceneNode.h"
+#include <SceneNodes/IBillboardTextSceneNode.h>
 #include <GUI/IGUIFont.h>
 #include <GUI/IGUIFontBitmap.h>
 #include "ISceneCollisionManager.h"
