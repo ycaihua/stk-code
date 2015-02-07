@@ -14,7 +14,7 @@
 #include "irrMap.h"
 #include "IAttributes.h"
 #include "IMesh.h"
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include "CFPSCounter.h"
 #include <Core/S3DVertex.h>

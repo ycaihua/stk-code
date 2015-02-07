@@ -20,7 +20,7 @@
 #include "graphics/central_settings.hpp"
 #include <irrlicht.h>
 #include <IMesh.h>
-#include <IMeshBuffer.h>
+#include <Core/IMeshBuffer.h>
 #include "utils/log.hpp"
 #include "graphics/irr_driver.hpp"
 #include "modes/world.hpp"

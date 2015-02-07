@@ -5,7 +5,7 @@
 #ifndef __I_DYNAMIC_MESH_BUFFER_H_INCLUDED__
 #define __I_DYNAMIC_MESH_BUFFER_H_INCLUDED__
 
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include "IVertexBuffer.h"
 #include "IIndexBuffer.h"
 

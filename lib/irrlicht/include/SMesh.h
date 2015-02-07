@@ -6,7 +6,7 @@
 #define __S_MESH_H_INCLUDED__
 
 #include "IMesh.h"
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include <Maths/aabbox3d.h>
 #include "irrArray.h"
 

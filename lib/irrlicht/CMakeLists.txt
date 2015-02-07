@@ -211,7 +211,6 @@ include/SAnimatedMesh.h
 include/SMeshBuffer.h
 include/ILogger.h
 include/ILightManager.h
-include/IMeshBuffer.h
 include/irrlicht.h
 include/ITimer.h
 include/IImage.h

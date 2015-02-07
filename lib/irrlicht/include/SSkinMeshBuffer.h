@@ -5,7 +5,7 @@
 #ifndef __I_SKIN_MESH_BUFFER_H_INCLUDED__
 #define __I_SKIN_MESH_BUFFER_H_INCLUDED__
 
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include <Core/S3DVertex.h>
 
 

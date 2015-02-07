@@ -14,7 +14,7 @@
 #include <Maths/dimension2d.h>
 #include <Maths/position2d.h>
 #include "SMaterial.h"
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include <Maths/triangle3d.h>
 #include "EDriverTypes.h"
 #include "EDriverFeatures.h"

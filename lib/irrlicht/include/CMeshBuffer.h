@@ -6,7 +6,7 @@
 #define __T_MESH_BUFFER_H_INCLUDED__
 
 #include "irrArray.h"
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 
 namespace irr
 {
