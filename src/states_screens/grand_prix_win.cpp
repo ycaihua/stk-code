@@ -43,7 +43,7 @@
 #include <ICameraSceneNode.h>
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIImage.h>
-#include <ILightSceneNode.h>
+#include <SceneNodes/ILightSceneNode.h>
 #include <IMeshSceneNode.h>
 #include <ISceneManager.h>
 #include <SColor.h>

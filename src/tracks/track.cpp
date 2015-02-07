@@ -66,7 +66,7 @@
 #include "utils/translation.hpp"
 
 #include <SceneNodes/IBillboardTextSceneNode.h>
-#include <ILightSceneNode.h>
+#include <SceneNodes/ILightSceneNode.h>
 #include <IMeshCache.h>
 #include <IMeshManipulator.h>
 #include <IMeshSceneNode.h>
