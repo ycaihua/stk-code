@@ -38,7 +38,7 @@ const c8* const ParticleAffectorTypeNames[] =
 };
 
 //! A particle affector modifies particles.
-class IParticleAffector : public virtual io::IAttributeExchangingObject
+class IParticleAffector : public virtual IReferenceCounted
 {
 public:
 

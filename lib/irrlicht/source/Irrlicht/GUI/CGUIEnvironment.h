@@ -244,12 +244,6 @@ public:
 	if not specified, the root element will be used */
 	virtual bool loadGUI(io::IReadFile* file, IGUIElement* parent=0);
 
-	//! Writes attributes of the environment
-	virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const;
-
-	//! Reads attributes of the environment.
-	virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0);
-
 	//! writes an element
 	virtual void writeGUIElement(io::IXMLWriter* writer, IGUIElement* node);
 
