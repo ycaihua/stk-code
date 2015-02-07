@@ -7,7 +7,7 @@
 
 #include <Maths/rect.h>
 #include "SColor.h"
-#include "ITexture.h"
+#include <Core/ITexture.h>
 #include "irrArray.h"
 #include <Maths/matrix4.h>
 #include <Maths/plane3d.h>

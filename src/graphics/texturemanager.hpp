@@ -2,7 +2,7 @@
 #define MEMORYMANAGER_HPP
 
 #include "gl_headers.hpp"
-#include <ITexture.h>
+#include <Core/ITexture.h>
 #include <string>
 
 GLuint getTextureGLuint(irr::video::ITexture *tex);

@@ -7,7 +7,7 @@
 #include <Core/S3DVertex.h>
 #include <SVertexIndex.h>
 #include <EPrimitiveTypes.h>
-#include <ITexture.h>
+#include <Core/ITexture.h>
 #include <irrTypes.h>
 
 void draw2DImageFromRTT(GLuint texture, size_t texture_w, size_t texture_h,

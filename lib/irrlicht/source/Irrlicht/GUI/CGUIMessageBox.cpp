@@ -9,7 +9,7 @@
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIButton.h>
 #include <GUI/IGUIFont.h>
-#include "ITexture.h"
+#include <Core/ITexture.h>
 
 namespace irr
 {

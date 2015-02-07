@@ -7,7 +7,7 @@
 
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
-#include "ITexture.h"
+#include <Core/ITexture.h>
 
 namespace irr
 {

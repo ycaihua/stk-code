@@ -5,7 +5,7 @@
 #ifndef __C_OPEN_GL_TEXTURE_H_INCLUDED__
 #define __C_OPEN_GL_TEXTURE_H_INCLUDED__
 
-#include "ITexture.h"
+#include <Core/ITexture.h>
 #include "IImage.h"
 
 #include "IrrCompileConfig.h"
