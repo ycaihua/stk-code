@@ -53,7 +53,6 @@
 #include "CMetaTriangleSelector.h"
 #include "CTerrainTriangleSelector.h"
 
-#include "SceneNodes/Animators/CSceneNodeAnimatorTexture.h"
 #include "CDefaultSceneNodeAnimatorFactory.h"
 
 #include "CGeometryCreator.h"
@@ -1374,17 +1373,6 @@ void CSceneManager::setShadowColor(video::SColor color)
 video::SColor CSceneManager::getShadowColor() const
 {
 	return ShadowColor;
-}
-
-//! Creates a texture animator, which switches the textures of the target scene
-//! node based on a list of textures.
-ISceneNodeAnimator* CSceneManager::createTextureAnimator(const core::array<video::ITexture*>& textures,
-	s32 timePerFrame, bool loop)
-{
-	ISceneNodeAnimator* anim = new CSceneNodeAnimatorTexture(textures,
-		timePerFrame, loop, os::Timer::getTime());
-
-	return anim;
 }
 
 //! Adds an external mesh loader.
