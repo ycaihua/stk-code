@@ -7,7 +7,6 @@
 
 #include <SceneNodes/IParticleSystemSceneNode.h>
 #include "irrArray.h"
-#include "irrList.h"
 #include "SMeshBuffer.h"
 
 namespace irr
