@@ -46,7 +46,7 @@
 #include <SColor.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 using namespace irr::core;
 using namespace irr::gui;

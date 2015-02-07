@@ -18,7 +18,7 @@
 
 #include "karts/kart_model.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
 
 #include "config/stk_config.hpp"

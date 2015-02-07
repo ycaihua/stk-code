@@ -27,7 +27,7 @@
 #include "tracks/track_object.hpp"
 #include "utils/log.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
 
 TrackObjectManager::TrackObjectManager()

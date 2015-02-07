@@ -18,7 +18,7 @@
 
 #include "items/rubber_band.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 #include "graphics/irr_driver.hpp"
 #include "graphics/material_manager.hpp"

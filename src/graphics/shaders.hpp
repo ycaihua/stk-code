@@ -18,7 +18,7 @@
 #define HEADER_SHADERS_HPP
 
 #include <IShaderConstantSetCallBack.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include "config/user_config.hpp"
 
 #include "shaders_util.hpp"

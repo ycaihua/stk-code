@@ -19,7 +19,7 @@
 
 #include "items/item.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
 
 #include "graphics/irr_driver.hpp"

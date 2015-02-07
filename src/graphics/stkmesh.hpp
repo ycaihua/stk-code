@@ -4,7 +4,7 @@
 #include "graphics/irr_driver.hpp"
 #include "utils/tuple.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <IMesh.h>
 #include "../lib/irrlicht/source/Irrlicht/SceneNodes/CMeshSceneNode.h"
 

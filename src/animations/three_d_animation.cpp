@@ -34,7 +34,7 @@
 #include "tracks/track_object.hpp"
 #include "utils/constants.hpp"
 #include <ISceneManager.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 ThreeDAnimation::ThreeDAnimation(const XMLNode &node, TrackObject* object) : AnimationBase(node)
 {

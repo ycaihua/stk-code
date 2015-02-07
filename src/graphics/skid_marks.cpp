@@ -27,7 +27,7 @@
 #include "physics/btKart.hpp"
 #include "graphics/stkmeshscenenode.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <SMesh.h>
 
 float     SkidMarks::m_avoid_z_fighting  = 0.005f;

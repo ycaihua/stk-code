@@ -69,7 +69,7 @@
 #include <SceneNodes/ILightSceneNode.h>
 #include <IMeshCache.h>
 #include <IMeshManipulator.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
 
 #include <iostream>

@@ -20,7 +20,7 @@
 #include "graphics/irr_driver.hpp"
 
 #include <IMesh.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneNode.h>
 
 Shadow::Shadow(video::ITexture *texture, scene::ISceneNode *node,

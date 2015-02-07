@@ -21,7 +21,7 @@
 #include "graphics/irr_driver.hpp"
 #include "utils/vec3.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <IMesh.h>
 
 

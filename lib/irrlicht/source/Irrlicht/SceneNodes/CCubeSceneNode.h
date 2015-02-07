@@ -5,7 +5,7 @@
 #ifndef __C_CUBE_SCENE_NODE_H_INCLUDED__
 #define __C_CUBE_SCENE_NODE_H_INCLUDED__
 
-#include "IMeshSceneNode.h"
+#include <SceneNodes/IMeshSceneNode.h>
 #include "SMesh.h"
 
 namespace irr

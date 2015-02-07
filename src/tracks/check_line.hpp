@@ -19,7 +19,7 @@
 #ifndef HEADER_CHECK_LINE_HPP
 #define HEADER_CHECK_LINE_HPP
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <Maths/line2d.h>
 #include <Maths/vector2d.h>
 using namespace irr;

@@ -15,7 +15,7 @@
 #include "IAttributes.h"
 #include "IMesh.h"
 #include "IMeshBuffer.h"
-#include "IMeshSceneNode.h"
+#include <SceneNodes/IMeshSceneNode.h>
 #include "CFPSCounter.h"
 #include "S3DVertex.h"
 #include "SVertexIndex.h"

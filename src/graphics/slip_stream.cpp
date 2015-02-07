@@ -35,7 +35,7 @@
 
 #include <SMesh.h>
 #include <SMeshBuffer.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 /** Creates the slip stream object using a moving texture.
  *  \param kart Pointer to the kart to which the slip stream
