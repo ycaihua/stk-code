@@ -136,7 +136,7 @@
 #include "IShaderConstantSetCallBack.h"
 #include "ISkinnedMesh.h"
 #include <SceneNodes/ITerrainSceneNode.h>
-#include "ITextSceneNode.h"
+#include <SceneNodes/ITextSceneNode.h>
 #include "ITexture.h"
 #include "ITimer.h"
 #include "ITriangleSelector.h"

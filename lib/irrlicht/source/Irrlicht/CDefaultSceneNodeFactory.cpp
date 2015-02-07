@@ -4,7 +4,7 @@
 
 #include "CDefaultSceneNodeFactory.h"
 #include "ISceneManager.h"
-#include "ITextSceneNode.h"
+#include <SceneNodes/ITextSceneNode.h>
 #include <SceneNodes/ITerrainSceneNode.h>
 #include "IDummyTransformationSceneNode.h"
 #include "ICameraSceneNode.h"

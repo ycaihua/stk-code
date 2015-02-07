@@ -18,7 +18,7 @@
 #include <GUI/IGUIFont.h>
 #include "IFileSystem.h"
 #include "IReadFile.h"
-#include "ITextSceneNode.h"
+#include <SceneNodes/ITextSceneNode.h>
 #include "IAnimatedMesh.h"
 #include "SMesh.h"
 #include "CDynamicMeshBuffer.h"

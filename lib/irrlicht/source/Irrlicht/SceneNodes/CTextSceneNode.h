@@ -5,7 +5,7 @@
 #ifndef __C_TEXT_SCENE_NODE_H_INCLUDED__
 #define __C_TEXT_SCENE_NODE_H_INCLUDED__
 
-#include "ITextSceneNode.h"
+#include <SceneNodes/ITextSceneNode.h>
 #include <SceneNodes/IBillboardTextSceneNode.h>
 #include <GUI/IGUIFont.h>
 #include <GUI/IGUIFontBitmap.h>
