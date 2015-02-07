@@ -6,7 +6,7 @@
 #define __I_GUI_ELEMENT_H_INCLUDED__
 
 #include "IAttributeExchangingObject.h"
-#include "irrList.h"
+#include <list>
 #include <Maths/rect.h>
 #include "irrString.h"
 #include "IEventReceiver.h"
@@ -53,7 +53,7 @@ public:
 	virtual ~IGUIElement()
 	{
 		// delete all children
-		core::list<IGUIElement*>::Iterator it = Children.begin();
+		std::list<IGUIElement*>::iterator it = Children.begin();
 		for (; it != Children.end(); ++it)
 		{
 			(*it)->Parent = 0;
@@ -219,7 +219,7 @@ public:
 		recalculateAbsolutePosition(false);
 
 		// update all children
-		core::list<IGUIElement*>::Iterator it = Children.begin();
+		std::list<IGUIElement*>::iterator it = Children.begin();
 		for (; it != Children.end(); ++it)
 		{
 			(*it)->updateAbsolutePosition();
@@ -246,17 +246,17 @@ public:
 		// we have to search from back to front, because later children
 		// might be drawn over the top of earlier ones.
 
-		core::list<IGUIElement*>::Iterator it = Children.getLast();
+		std::list<IGUIElement*>::reverse_iterator it = Children.rbegin();
 
 		if (isVisible())
 		{
-			while(it != Children.end())
+			while(it != Children.rend())
 			{
 				target = (*it)->getElementFromPoint(point);
 				if (target)
 					return target;
 
-				--it;
+				++it;
 			}
 		}
 
@@ -288,7 +288,7 @@ public:
 	//! Removes a child.
 	virtual void removeChild(IGUIElement* child)
 	{
-		core::list<IGUIElement*>::Iterator it = Children.begin();
+		std::list<IGUIElement*>::iterator it = Children.begin();
 		for (; it != Children.end(); ++it)
 			if ((*it) == child)
 			{
@@ -313,7 +313,7 @@ public:
 	{
 		if ( isVisible() )
 		{
-			core::list<IGUIElement*>::Iterator it = Children.begin();
+			std::list<IGUIElement*>::iterator it = Children.begin();
 			for (; it != Children.end(); ++it)
 				(*it)->draw();
 		}
@@ -325,7 +325,7 @@ public:
 	{
 		if ( isVisible() )
 		{
-			core::list<IGUIElement*>::Iterator it = Children.begin();
+			std::list<IGUIElement*>::iterator it = Children.begin();
 			for (; it != Children.end(); ++it)
 				(*it)->OnPostRender( timeMs );
 		}
@@ -529,7 +529,7 @@ public:
 	/** \return True if successful, false if not. */
 	virtual bool bringToFront(IGUIElement* element)
 	{
-		core::list<IGUIElement*>::Iterator it = Children.begin();
+		std::list<IGUIElement*>::iterator it = Children.begin();
 		for (; it != Children.end(); ++it)
 		{
 			if (element == (*it))
@@ -549,7 +549,7 @@ public:
 	/** \return True if successful, false if not. */
 	virtual bool sendToBack(IGUIElement* child)
 	{
-		core::list<IGUIElement*>::Iterator it = Children.begin();
+		std::list<IGUIElement*>::iterator it = Children.begin();
 		if (child == (*it))	// already there
 			return true;
 		for (; it != Children.end(); ++it)
@@ -567,7 +567,7 @@ public:
 	}
 
 	//! Returns list with children of this element
-	virtual const core::list<IGUIElement*>& getChildren() const
+	virtual const std::list<IGUIElement*>& getChildren() const
 	{
 		return Children;
 	}
@@ -584,7 +584,7 @@ public:
 	{
 		IGUIElement* e = 0;
 
-		core::list<IGUIElement*>::ConstIterator it = Children.begin();
+		std::list<IGUIElement*>::const_iterator it = Children.begin();
 		for (; it != Children.end(); ++it)
 		{
 			if ((*it)->getID() == id)
@@ -635,7 +635,7 @@ public:
 		if (wanted==-2)
 			wanted = 1073741824; // maximum s32
 
-		core::list<IGUIElement*>::ConstIterator it = Children.begin();
+		std::list<IGUIElement*>::const_iterator it = Children.begin();
 
 		s32 closestOrder, currentOrder;
 
@@ -948,7 +948,7 @@ protected:
 		if ( recursive )
 		{
 			// update all children
-			core::list<IGUIElement*>::Iterator it = Children.begin();
+			std::list<IGUIElement*>::iterator it = Children.begin();
 			for (; it != Children.end(); ++it)
 			{
 				(*it)->recalculateAbsolutePosition(recursive);
@@ -959,7 +959,7 @@ protected:
 protected:
 
 	//! List of all children of this element
-	core::list<IGUIElement*> Children;
+	std::list<IGUIElement*> Children;
 
 	//! Pointer to the parent
 	IGUIElement* Parent;

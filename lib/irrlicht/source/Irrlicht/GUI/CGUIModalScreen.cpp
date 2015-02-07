@@ -57,7 +57,7 @@ bool CGUIModalScreen::isVisible() const
 
     // any child visible?
     bool visible = false;
-    core::list<IGUIElement*>::ConstIterator it = Children.begin();
+    std::list<IGUIElement*>::const_iterator it = Children.begin();
     for (; it != Children.end(); ++it)
     {
         if ( (*it)->isVisible() )
@@ -155,7 +155,7 @@ void CGUIModalScreen::draw()
 	u32 now = os::Timer::getTime();
 	if (now - MouseDownTime < 300 && (now / 70)%2)
 	{
-		core::list<IGUIElement*>::Iterator it = Children.begin();
+		std::list<IGUIElement*>::iterator it = Children.begin();
 		core::rect<s32> r;
 		video::SColor c = Environment->getSkin()->getColor(gui::EGDC_3D_HIGH_LIGHT);
 
