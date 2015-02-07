@@ -265,7 +265,6 @@ include/ECullingTypes.h
 include/ITriangleSelector.h
 include/coreutil.h
 include/SMeshBufferTangents.h
-include/ILightSceneNode.h
 include/ISceneCollisionManager.h
 include/heapsort.h
 include/Keycodes.h

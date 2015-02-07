@@ -11,7 +11,7 @@
 #include <SceneNodes/IBillboardSceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include "IParticleSystemSceneNode.h"
-#include "ILightSceneNode.h"
+#include <SceneNodes/ILightSceneNode.h>
 #include "IMeshSceneNode.h"
 
 namespace irr

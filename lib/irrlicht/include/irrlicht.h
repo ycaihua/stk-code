@@ -99,7 +99,7 @@
 #include "IImageLoader.h"
 #include "IImageWriter.h"
 #include "IIndexBuffer.h"
-#include "ILightSceneNode.h"
+#include <SceneNodes/ILightSceneNode.h>
 #include "ILogger.h"
 #include "IMaterialRenderer.h"
 #include "IMaterialRendererServices.h"

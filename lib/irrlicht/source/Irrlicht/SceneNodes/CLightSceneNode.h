@@ -5,7 +5,7 @@
 #ifndef __C_LIGHT_SCENE_NODE_H_INCLUDED__
 #define __C_LIGHT_SCENE_NODE_H_INCLUDED__
 
-#include "ILightSceneNode.h"
+#include <SceneNodes/ILightSceneNode.h>
 
 namespace irr
 {
