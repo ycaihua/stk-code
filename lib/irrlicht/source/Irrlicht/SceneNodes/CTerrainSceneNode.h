@@ -9,7 +9,7 @@
 #ifndef __C_TERRAIN_SCENE_NODE_H__
 #define __C_TERRAIN_SCENE_NODE_H__
 
-#include "ITerrainSceneNode.h"
+#include <SceneNodes/ITerrainSceneNode.h>
 #include "IDynamicMeshBuffer.h"
 #include "path.h"
 
