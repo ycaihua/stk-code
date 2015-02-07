@@ -58,7 +58,7 @@
 #include "IAttributeExchangingObject.h"
 #include "IAttributes.h"
 #include <SceneNodes/IBillboardSceneNode.h>
-#include "IBillboardTextSceneNode.h"
+#include <SceneNodes/IBillboardTextSceneNode.h>
 #include "IBoneSceneNode.h"
 #include "ICameraSceneNode.h"
 #include "ICursorControl.h"
