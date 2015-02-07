@@ -64,7 +64,7 @@ void CGUITreeViewNode::setIcon( const wchar_t* icon )
 
 void CGUITreeViewNode::clearChildren()
 {
-	core::list<CGUITreeViewNode*>::Iterator	it;
+	std::list<CGUITreeViewNode*>::iterator	it;
 
 	for( it = Children.begin(); it != Children.end(); it++ )
 	{
@@ -130,7 +130,7 @@ IGUITreeViewNode* CGUITreeViewNode::insertChildAfter(
 	void*					data /*= 0*/,
 	IReferenceCounted*			data2/* = 0*/ )
 {
-	core::list<CGUITreeViewNode*>::Iterator	itOther;
+	std::list<CGUITreeViewNode*>::iterator	itOther;
 	CGUITreeViewNode*									newChild = 0;
 
 	for( itOther = Children.begin(); itOther != Children.end(); itOther++ )
@@ -148,7 +148,9 @@ IGUITreeViewNode* CGUITreeViewNode::insertChildAfter(
 			{
 				data2->grab();
 			}
-			Children.insert_after( itOther, newChild );
+			std::list<CGUITreeViewNode*>::iterator InsertPos = itOther;
+			InsertPos++;
+			Children.insert( InsertPos, newChild );
 			break;
 		}
 	}
@@ -164,7 +166,7 @@ IGUITreeViewNode* CGUITreeViewNode::insertChildBefore(
 	void*					data /*= 0*/,
 	IReferenceCounted*			data2/* = 0*/ )
 {
-	core::list<CGUITreeViewNode*>::Iterator	itOther;
+	std::list<CGUITreeViewNode*>::iterator	itOther;
 	CGUITreeViewNode*									newChild = 0;
 
 	for( itOther = Children.begin(); itOther != Children.end(); itOther++ )
@@ -182,7 +184,7 @@ IGUITreeViewNode* CGUITreeViewNode::insertChildBefore(
 			{
 				data2->grab();
 			}
-			Children.insert_before( itOther, newChild );
+			Children.insert( itOther, newChild );
 			break;
 		}
 	}
@@ -209,14 +211,14 @@ IGUITreeViewNode* CGUITreeViewNode::getLastChild() const
 	}
 	else
 	{
-		return *( Children.getLast() );
+		return Children.back();
 	}
 }
 
 IGUITreeViewNode* CGUITreeViewNode::getPrevSibling() const
 {
-	core::list<CGUITreeViewNode*>::Iterator	itThis;
-	core::list<CGUITreeViewNode*>::Iterator	itOther;
+	std::list<CGUITreeViewNode*>::iterator	itThis;
+	std::list<CGUITreeViewNode*>::iterator	itOther;
 	CGUITreeViewNode*									other = 0;
 
 	if( Parent )
@@ -239,8 +241,9 @@ IGUITreeViewNode* CGUITreeViewNode::getPrevSibling() const
 
 IGUITreeViewNode* CGUITreeViewNode::getNextSibling() const
 {
-	core::list<CGUITreeViewNode*>::Iterator	itThis;
+	std::list<CGUITreeViewNode*>::iterator	itThis;
 	CGUITreeViewNode*									other = 0;
+
 
 	if( Parent )
 	{
@@ -248,7 +251,8 @@ IGUITreeViewNode* CGUITreeViewNode::getNextSibling() const
 		{
 			if( this == *itThis )
 			{
-				if( itThis != Parent->Children.getLast() )
+
+				if (itThis != --Parent->Children.end())
 				{
 					other = *( ++itThis );
 				}
@@ -288,7 +292,7 @@ IGUITreeViewNode* CGUITreeViewNode::getNextVisible() const
 
 bool CGUITreeViewNode::deleteChild( IGUITreeViewNode* child )
 {
-	core::list<CGUITreeViewNode*>::Iterator	itChild;
+	std::list<CGUITreeViewNode*>::iterator	itChild;
 	bool	deleted = false;
 
 	for( itChild = Children.begin(); itChild != Children.end(); itChild++ )
@@ -306,8 +310,8 @@ bool CGUITreeViewNode::deleteChild( IGUITreeViewNode* child )
 
 bool CGUITreeViewNode::moveChildUp( IGUITreeViewNode* child )
 {
-	core::list<CGUITreeViewNode*>::Iterator	itChild;
-	core::list<CGUITreeViewNode*>::Iterator	itOther;
+	std::list<CGUITreeViewNode*>::iterator	itChild;
+	std::list<CGUITreeViewNode*>::iterator	itOther;
 	CGUITreeViewNode*									nodeTmp;
 	bool													moved = false;
 
@@ -331,8 +335,8 @@ bool CGUITreeViewNode::moveChildUp( IGUITreeViewNode* child )
 
 bool CGUITreeViewNode::moveChildDown( IGUITreeViewNode* child )
 {
-	core::list<CGUITreeViewNode*>::Iterator	itChild;
-	core::list<CGUITreeViewNode*>::Iterator	itOther;
+	std::list<CGUITreeViewNode*>::iterator	itChild;
+	std::list<CGUITreeViewNode*>::iterator	itOther;
 	CGUITreeViewNode*									nodeTmp;
 	bool													moved = false;
 
@@ -340,7 +344,7 @@ bool CGUITreeViewNode::moveChildDown( IGUITreeViewNode* child )
 	{
 		if( child == *itChild )
 		{
-			if( itChild != Children.getLast() )
+			if (itChild != --Children.end())
 			{
 				itOther = itChild;
 				++itOther;
