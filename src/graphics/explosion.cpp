@@ -29,7 +29,7 @@
 #include "race/race_manager.hpp"
 #include "utils/vec3.hpp"
 
-#include <IParticleSystemSceneNode.h>
+#include <SceneNodes/IParticleSystemSceneNode.h>
 
 const float burst_time = 0.1f;
 
