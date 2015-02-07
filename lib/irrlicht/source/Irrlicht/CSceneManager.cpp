@@ -57,7 +57,6 @@
 #include "SceneNodes/Animators/CSceneNodeAnimatorFlyCircle.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorFlyStraight.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorTexture.h"
-#include "SceneNodes/Animators/CSceneNodeAnimatorDelete.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorFollowSpline.h"
 #include "CDefaultSceneNodeAnimatorFactory.h"
 
@@ -1431,15 +1430,6 @@ ISceneNodeAnimator* CSceneManager::createTextureAnimator(const core::array<video
 
 	return anim;
 }
-
-
-//! Creates a scene node animator, which deletes the scene node after
-//! some time automaticly.
-ISceneNodeAnimator* CSceneManager::createDeleteAnimator(u32 when)
-{
-	return new CSceneNodeAnimatorDelete(this, os::Timer::getTime() + when);
-}
-
 
 //! Creates a follow spline animator.
 ISceneNodeAnimator* CSceneManager::createFollowSplineAnimator(s32 startTime,

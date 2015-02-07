@@ -1063,14 +1063,6 @@ namespace scene
 		virtual ISceneNodeAnimator* createTextureAnimator(const core::array<video::ITexture*>& textures,
 			s32 timePerFrame, bool loop=true) = 0;
 
-		//! Creates a scene node animator, which deletes the scene node after some time automatically.
-		/** \param timeMs: Time in milliseconds, after when the node will be deleted.
-		\return The animator. Attach it to a scene node with ISceneNode::addAnimator()
-		and the animator will animate it.
-		If you no longer need the animator, you should call ISceneNodeAnimator::drop().
-		See IReferenceCounted::drop() for more information. */
-		virtual ISceneNodeAnimator* createDeleteAnimator(u32 timeMs) = 0;
-
 		//! Creates a follow spline animator.
 		/** The animator modifies the position of
 		the attached scene node to make it follow a hermite spline.

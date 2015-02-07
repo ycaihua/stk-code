@@ -78,9 +78,6 @@ ISceneNodeAnimator* CDefaultSceneNodeAnimatorFactory::createSceneNodeAnimator(ES
 			anim = Manager->createTextureAnimator(textures, 250);
 		}
 		break;
-	case ESNAT_DELETION:
-		anim = Manager->createDeleteAnimator(5000);
-		break;
 	default:
 		break;
 	}

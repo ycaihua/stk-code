@@ -283,10 +283,6 @@ namespace scene
 		virtual ISceneNodeAnimator* createTextureAnimator(const core::array<video::ITexture*>& textures,
 			s32 timePerFrame, bool loop);
 
-		//! Creates a scene node animator, which deletes the scene node after
-		//! some time automaticly.
-		virtual ISceneNodeAnimator* createDeleteAnimator(u32 timeMS);
-
 		//! Creates a follow spline animator.
 		virtual ISceneNodeAnimator* createFollowSplineAnimator(s32 startTime,
 			const core::array< core::vector3df >& points,
