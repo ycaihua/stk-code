@@ -47,8 +47,6 @@ file(GLOB IRR_SCENENODES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Ir
 file(GLOB IRR_SCENENODES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/*.cpp")
 file(GLOB IRR_SCENENODES_PARTICLES_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Particles/*.h")
 file(GLOB IRR_SCENENODES_PARTICLES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Particles/*.cpp")
-file(GLOB IRR_SCENENODES_ANIMATORS_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Animators/*.h")
-file(GLOB IRR_SCENENODES_ANIMATORS_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "source/Irrlicht/SceneNodes/Animators/*.cpp")
 
 file(GLOB IRR_MATHS_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/Maths/*.h")
 file(GLOB IRR_GUI_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/GUI/*.h")
@@ -60,7 +58,6 @@ source_group_hierarchy(IRR_WRITERS_SOURCES IRR_WRITERS_HEADERS)
 source_group_hierarchy(IRR_GUI_SOURCES IRR_GUI_HEADERS)
 source_group_hierarchy(IRR_SCENENODES_SOURCES IRR_SCENENODES_HEADERS)
 source_group_hierarchy(IRR_SCENENODES_PARTICLES_SOURCES IRR_SCENENODES_PARTICLES_HEADERS)
-source_group_hierarchy(IRR_SCENENODES_ANIMATORS_SOURCES IRR_SCENENODES_ANIMATORS_HEADERS)
 
 source_group_hierarchy(IRR_MATHS_INCLUDE IRR_MATHS_INCLUDE)
 source_group_hierarchy(IRR_GUI_INCLUDE IRR_GUI_INCLUDE)
@@ -72,7 +69,6 @@ ${IRR_WRITERS_SOURCES}
 ${IRR_GUI_SOURCES}
 ${IRR_SCENENODES_SOURCES}
 ${IRR_SCENENODES_PARTICLES_SOURCES}
-${IRR_SCENENODES_ANIMATORS_SOURCES}
 source/Irrlicht/CZBuffer.cpp
 source/Irrlicht/CLimitReadFile.cpp
 source/Irrlicht/CVideoModeList.cpp
@@ -187,7 +183,6 @@ ${IRR_WRITERS_HEADERS}
 ${IRR_GUI_HEADERS}
 ${IRR_SCENENODES_HEADERS}
 ${IRR_SCENENODES_PARTICLES_HEADERS}
-${IRR_SCENENODES_ANIMATORS_HEADERS}
 ${IRR_MATHS_INCLUDE}
 ${IRR_GUI_INCLUDE}
 include/ESceneNodeAnimatorTypes.h
@@ -285,11 +280,9 @@ include/IImageLoader.h
 include/IParticleBoxEmitter.h
 include/ICursorControl.h
 include/ICameraSceneNode.h
-include/ISceneNodeAnimatorCameraMaya.h
 include/IMeshManipulator.h
 include/CVertexBuffer.h
 include/SSharedMeshBuffer.h
-include/ISceneNodeAnimatorCameraFPS.h
 include/IMeshWriter.h
 include/IMeshSceneNode.h
 include/IParticleAnimatedMeshSceneNodeEmitter.h
@@ -307,7 +300,6 @@ include/EMaterialFlags.h
 include/EDeviceTypes.h
 include/EAttributes.h
 include/S3DVertex.h
-include/ISceneNodeAnimatorCollisionResponse.h
 include/IWriteFile.h
 include/irrTypes.h
 include/IParticleEmitter.h
