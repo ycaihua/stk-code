@@ -6,7 +6,7 @@
 #define __C_BILLBOARD_SCENE_NODE_H_INCLUDED__
 
 #include <SceneNodes/IBillboardSceneNode.h>
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 
 namespace irr
 {

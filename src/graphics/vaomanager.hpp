@@ -3,7 +3,7 @@
 
 #include "gl_headers.hpp"
 #include "utils/singleton.hpp"
-#include <S3DVertex.h>
+#include <Core/S3DVertex.h>
 #include <IMeshBuffer.h>
 #include <vector>
 #include <map>

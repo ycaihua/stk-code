@@ -4,7 +4,7 @@
 #include "gl_headers.hpp"
 #include <Maths/rect.h>
 #include <SColor.h>
-#include <S3DVertex.h>
+#include <Core/S3DVertex.h>
 #include <SVertexIndex.h>
 #include <EPrimitiveTypes.h>
 #include <ITexture.h>

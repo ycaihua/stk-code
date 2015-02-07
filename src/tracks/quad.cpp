@@ -20,7 +20,7 @@
 #include "utils/log.hpp"
 
 #include <algorithm>
-#include <S3DVertex.h>
+#include <Core/S3DVertex.h>
 #include <Maths/triangle3d.h>
 
 #include "LinearMath/btTransform.h"

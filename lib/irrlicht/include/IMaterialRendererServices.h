@@ -6,7 +6,7 @@
 #define __I_MATERIAL_RENDERER_SERVICES_H_INCLUDED__
 
 #include "SMaterial.h"
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 
 namespace irr
 {

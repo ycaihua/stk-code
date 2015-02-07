@@ -17,7 +17,7 @@
 #include "IMeshBuffer.h"
 #include <SceneNodes/IMeshSceneNode.h>
 #include "CFPSCounter.h"
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 #include "SVertexIndex.h"
 #include "SLight.h"
 #include "SExposedVideoData.h"

@@ -9,7 +9,7 @@
 
 #include "ISkinnedMesh.h"
 #include "SMeshBuffer.h"
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 #include "irrString.h"
 #include <Maths/matrix4.h>
 #include <Maths/quaternion.h>
