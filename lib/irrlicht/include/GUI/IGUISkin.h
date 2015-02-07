@@ -376,7 +376,7 @@ namespace gui
 	};
 
 	//! A skin modifies the look of the GUI elements.
-	class IGUISkin : public virtual io::IAttributeExchangingObject
+	class IGUISkin : public virtual IReferenceCounted
 	{
 	public:
 

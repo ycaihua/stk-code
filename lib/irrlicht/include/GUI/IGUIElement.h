@@ -22,7 +22,7 @@ namespace gui
 class IGUIEnvironment;
 
 //! Base class of all GUI elements.
-class IGUIElement : public virtual io::IAttributeExchangingObject, public IEventReceiver
+class IGUIElement : public virtual IReferenceCounted, public IEventReceiver
 {
 public:
 

@@ -42,7 +42,7 @@ const c8* const ParticleEmitterTypeNames[] =
 //! A particle emitter for using with particle systems.
 /** A Particle emitter emitts new particles into a particle system.
 */
-class IParticleEmitter : public virtual io::IAttributeExchangingObject
+class IParticleEmitter : public virtual IReferenceCounted
 {
 public:
 
