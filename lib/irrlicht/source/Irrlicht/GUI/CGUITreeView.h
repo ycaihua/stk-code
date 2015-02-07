@@ -5,7 +5,7 @@
 #define __C_GUI_TREE_VIEW_H_INCLUDED__
 
 #include <GUI/IGUITreeView.h>
-#include "irrList.h"
+#include <list>
 
 
 namespace irr
@@ -93,7 +93,7 @@ namespace gui
 
 		//! returns the child item count
 		virtual u32 getChildCount() const
-		{ return Children.getSize(); }
+		{ return Children.size(); }
 
 		//! removes all children (recursive) from this node
 		virtual void clearChildren();
@@ -231,7 +231,7 @@ namespace gui
 		void*				Data;
 		IReferenceCounted*		Data2;
 		bool				Expanded;
-		core::list<CGUITreeViewNode*>	Children;
+		std::list<CGUITreeViewNode*>	Children;
 	};
 
 
