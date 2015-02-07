@@ -9,7 +9,7 @@
 #include "../os.h"
 #include "../CSkinnedMesh.h"
 #include "IDummyTransformationSceneNode.h"
-#include "IBoneSceneNode.h"
+#include <SceneNodes/IBoneSceneNode.h>
 #include "IMaterialRenderer.h"
 #include "IMesh.h"
 #include "IMeshCache.h"
