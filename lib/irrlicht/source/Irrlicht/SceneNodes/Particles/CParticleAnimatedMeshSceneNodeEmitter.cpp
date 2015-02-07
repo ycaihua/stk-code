@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CParticleAnimatedMeshSceneNodeEmitter.h"
-#include "IAnimatedMeshSceneNode.h"
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include "IMesh.h"
 #include "IMeshBuffer.h"
 #include "../../os.h"

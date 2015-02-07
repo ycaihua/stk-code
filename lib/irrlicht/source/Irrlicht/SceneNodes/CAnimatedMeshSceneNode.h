@@ -5,7 +5,7 @@
 #ifndef __C_ANIMATED_MESH_SCENE_NODE_H_INCLUDED__
 #define __C_ANIMATED_MESH_SCENE_NODE_H_INCLUDED__
 
-#include "IAnimatedMeshSceneNode.h"
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include "IAnimatedMesh.h"
 
 #include <Maths/matrix4.h>

@@ -24,7 +24,7 @@
 #include "utils/no_copy.hpp"
 #include "utils/random_generator.hpp"
 
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 using namespace irr;
 
 class AbstractKart;

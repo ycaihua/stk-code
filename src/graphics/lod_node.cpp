@@ -27,7 +27,7 @@
 #include <ISceneManager.h>
 #include <ICameraSceneNode.h>
 #include <IMeshSceneNode.h>
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 
 /**
   * @param group_name Only useful for getGroupName()

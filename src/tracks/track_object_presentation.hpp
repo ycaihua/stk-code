@@ -21,7 +21,7 @@
 #define HEADER_TRACK_OBJECT_PRESENTATION_HPP
 
 #include <Maths/vector3d.h>
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 namespace irr
 {
     namespace scene { class IAnimatedMesh; class IMeshSceneNode; class ISceneNode; }

@@ -7,7 +7,7 @@
 
 #include "CSkinnedMesh.h"
 #include "SceneNodes/CBoneSceneNode.h"
-#include "IAnimatedMeshSceneNode.h"
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include "os.h"
 
 namespace irr

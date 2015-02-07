@@ -20,7 +20,7 @@
 #define HEADER_REFEREE_HPP
 
 #include <ISceneNode.h>
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <ISceneManager.h>
 #include <IMeshManipulator.h>
 using namespace irr;

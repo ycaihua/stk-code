@@ -202,7 +202,6 @@ include/SVertexIndex.h
 include/SMaterialLayer.h
 include/irrMap.h
 include/EMaterialTypes.h
-include/IAnimatedMeshSceneNode.h
 include/IParticleCylinderEmitter.h
 include/IAttributeExchangingObject.h
 include/IVertexBuffer.h

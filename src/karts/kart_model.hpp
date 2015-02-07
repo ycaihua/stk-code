@@ -22,7 +22,7 @@
 #include <string>
 #include <vector>
 
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 namespace irr
 {
     namespace scene { class IAnimatedMesh; class IMesh;
