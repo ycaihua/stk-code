@@ -14,7 +14,6 @@
 #include "SColor.h"
 #include "ETerrainElements.h"
 #include "ESceneNodeTypes.h"
-#include "ESceneNodeAnimatorTypes.h"
 #include "EMeshWriterEnums.h"
 #include "SceneParameters.h"
 #include "IGeometryCreator.h"
@@ -1206,11 +1205,6 @@ namespace scene
 		This pointer should not be dropped. See IReferenceCounted::drop() for more information. */
 		virtual ISceneNodeAnimatorFactory* getDefaultSceneNodeAnimatorFactory() = 0;
 
-		//! Adds a scene node animator factory to the scene manager.
-		/** Use this to extend the scene manager with new scene node animator types which it should be
-		able to create automaticly, for example when loading data from xml files. */
-		virtual void registerSceneNodeAnimatorFactory(ISceneNodeAnimatorFactory* factoryToAdd) = 0;
-
 		//! Get amount of registered scene node animator factories.
 		virtual u32 getRegisteredSceneNodeAnimatorFactoryCount() const = 0;
 
@@ -1222,20 +1216,10 @@ namespace scene
 		//! Get typename from a scene node type or null if not found
 		virtual const c8* getSceneNodeTypeName(ESCENE_NODE_TYPE type) = 0;
 
-		//! Returns a typename from a scene node animator type or null if not found
-		virtual const c8* getAnimatorTypeName(ESCENE_NODE_ANIMATOR_TYPE type) = 0;
-
 		//! Adds a scene node to the scene by name
 		/** \return Pointer to the scene node added by a factory
 		This pointer should not be dropped. See IReferenceCounted::drop() for more information. */
 		virtual ISceneNode* addSceneNode(const char* sceneNodeTypeName, ISceneNode* parent=0) = 0;
-
-		//! creates a scene node animator based on its type name
-		/** \param typeName: Type of the scene node animator to add.
-		\param target: Target scene node of the new animator.
-		\return Returns pointer to the new scene node animator or null if not successful. You need to
-		drop this pointer after calling this, see IReferenceCounted::drop() for details. */
-		virtual ISceneNodeAnimator* createSceneNodeAnimator(const char* typeName, ISceneNode* target=0) = 0;
 
 		//! Creates a new scene manager.
 		/** This can be used to easily draw and/or store two

@@ -80,7 +80,6 @@ source/Irrlicht/CFileSystem.cpp
 source/Irrlicht/os.cpp
 source/Irrlicht/CFPSCounter.cpp
 source/Irrlicht/CZipReader.cpp
-source/Irrlicht/CDefaultSceneNodeAnimatorFactory.cpp
 source/Irrlicht/COpenGLSLMaterialRenderer.cpp
 source/Irrlicht/CTriangleBBSelector.cpp
 source/Irrlicht/COpenGLTexture.cpp
@@ -129,7 +128,6 @@ source/Irrlicht/os.h
 source/Irrlicht/CDefaultGUIElementFactory.h
 source/Irrlicht/CTriangleBBSelector.h
 source/Irrlicht/S2DVertex.h
-source/Irrlicht/CDefaultSceneNodeAnimatorFactory.h
 source/Irrlicht/resource.h
 source/Irrlicht/SoftwareDriver2_helper.h
 source/Irrlicht/CMeshManipulator.h
@@ -188,7 +186,6 @@ ${IRR_SCENENODES_PARTICLES_HEADERS}
 ${IRR_MATHS_INCLUDE}
 ${IRR_GUI_INCLUDE}
 ${IRR_SCENENODES_INCLUDE}
-include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IEventReceiver.h
 include/EMessageBoxFlags.h
@@ -251,7 +248,6 @@ include/SMaterial.h
 include/EDriverFeatures.h
 include/IVideoModeList.h
 include/fast_atof.h
-include/ISceneNodeAnimatorFactory.h
 include/SVertexManipulator.h
 include/IDynamicMeshBuffer.h
 include/SExposedVideoData.h
@@ -307,7 +303,6 @@ include/SIrrCreationParameters.h
 include/IFileList.h
 include/SMeshBufferLightMap.h
 include/IRandomizer.h
-include/ISceneNodeAnimator.h
 include/IAttributes.h
 include/IParticleRotationAffector.h
 include/IShaderConstantSetCallBack.h

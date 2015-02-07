@@ -53,8 +53,6 @@
 #include "CMetaTriangleSelector.h"
 #include "CTerrainTriangleSelector.h"
 
-#include "CDefaultSceneNodeAnimatorFactory.h"
-
 #include "CGeometryCreator.h"
 
 //! Enable debug features
@@ -122,10 +120,6 @@ CSceneManager::CSceneManager(video::IVideoDriver* driver, io::IFileSystem* fs,
 	ISceneNodeFactory* factory = new CDefaultSceneNodeFactory(this);
 	registerSceneNodeFactory(factory);
 	factory->drop();
-
-	ISceneNodeAnimatorFactory* animatorFactory = new CDefaultSceneNodeAnimatorFactory(this, CursorControl);
-	registerSceneNodeAnimatorFactory(animatorFactory);
-	animatorFactory->drop();
 }
 
 
@@ -172,9 +166,6 @@ CSceneManager::~CSceneManager()
 	for (i=0; i<SceneNodeFactoryList.size(); ++i)
 		SceneNodeFactoryList[i]->drop();
 
-	for (i=0; i<SceneNodeAnimatorFactoryList.size(); ++i)
-		SceneNodeAnimatorFactoryList[i]->drop();
-
 	if (LightManager)
 		LightManager->drop();
 
@@ -182,7 +173,6 @@ CSceneManager::~CSceneManager()
 	// as render targets may be destroyed twice
 
 	removeAll();
-	removeAnimators();
 
 	if (Driver)
 		Driver->drop();
@@ -1727,16 +1717,6 @@ ISceneNodeAnimatorFactory* CSceneManager::getDefaultSceneNodeAnimatorFactory()
 	return getSceneNodeAnimatorFactory(0);
 }
 
-//! Adds a scene node animator factory to the scene manager.
-void CSceneManager::registerSceneNodeAnimatorFactory(ISceneNodeAnimatorFactory* factoryToAdd)
-{
-	if (factoryToAdd)
-	{
-		factoryToAdd->grab();
-		SceneNodeAnimatorFactoryList.push_back(factoryToAdd);
-	}
-}
-
 
 //! Returns amount of registered scene node animator factories.
 u32 CSceneManager::getRegisteredSceneNodeAnimatorFactoryCount() const
@@ -1917,29 +1897,6 @@ void CSceneManager::writeSceneNode(io::IXMLWriter* writer, ISceneNode* node, ISc
 		writer->writeLineBreak();
 	}
 
-	// write animators
-
-	if (!node->getAnimators().empty())
-	{
-		const wchar_t* animatorElement = L"animators";
-		writer->writeElement(animatorElement);
-		writer->writeLineBreak();
-
-		ISceneNodeAnimatorList::ConstIterator it = node->getAnimators().begin();
-		for (; it != node->getAnimators().end(); ++it)
-		{
-			attr->clear();
-			attr->addString("Type", getAnimatorTypeName((*it)->getType()));
-
-			(*it)->serializeAttributes(attr);
-
-			attr->write(writer);
-		}
-
-		writer->writeClosingTag(animatorElement);
-		writer->writeLineBreak();
-	}
-
 	// write possible user data
 
 	if (userDataSerializer)
@@ -2008,29 +1965,6 @@ ISceneNode* CSceneManager::addSceneNode(const char* sceneNodeTypeName, ISceneNod
 
 	return node;
 }
-
-ISceneNodeAnimator* CSceneManager::createSceneNodeAnimator(const char* typeName, ISceneNode* target)
-{
-	ISceneNodeAnimator *animator = 0;
-
-	for (s32 i=(s32)SceneNodeAnimatorFactoryList.size()-1; i>=0 && !animator; --i)
-		animator = SceneNodeAnimatorFactoryList[i]->createSceneNodeAnimator(typeName, target);
-
-	return animator;
-}
-
-
-//! Returns a typename from a scene node animator type or null if not found
-const c8* CSceneManager::getAnimatorTypeName(ESCENE_NODE_ANIMATOR_TYPE type)
-{
-	const char* name = 0;
-
-	for (s32 i=SceneNodeAnimatorFactoryList.size()-1; !name && i >= 0; --i)
-		name = SceneNodeAnimatorFactoryList[i]->getCreateableSceneNodeAnimatorTypeName(type);
-
-	return name;
-}
-
 
 //! Writes attributes of the scene node.
 void CSceneManager::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
