@@ -108,14 +108,6 @@ bool CCameraSceneNode::OnEvent(const SEvent& event)
 	if (!InputReceiverEnabled)
 		return false;
 
-	// send events to event receiving animators
-
-	ISceneNodeAnimatorList::Iterator ait = Animators.begin();
-
-	for (; ait != Animators.end(); ++ait)
-		if ((*ait)->isEventReceiverEnabled() && (*ait)->OnEvent(event))
-			return true;
-
 	// if nobody processed the event, return false
 	return false;
 }

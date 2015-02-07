@@ -9,7 +9,6 @@
 #include "ESceneNodeTypes.h"
 #include "ECullingTypes.h"
 #include "EDebugSceneTypes.h"
-#include "ISceneNodeAnimator.h"
 #include "ITriangleSelector.h"
 #include "SMaterial.h"
 #include "irrString.h"
@@ -26,8 +25,6 @@ namespace scene
 
 	//! Typedef for list of scene nodes
 	typedef core::list<ISceneNode*> ISceneNodeList;
-	//! Typedef for list of scene node animators
-	typedef core::list<ISceneNodeAnimator*> ISceneNodeAnimatorList;
 
 	//! Scene node interface.
 	/** A scene node is a node in the hierarchical scene graph. Every scene
@@ -63,11 +60,6 @@ namespace scene
 		{
 			// delete all children
 			removeAll();
-
-			// delete all animators
-			ISceneNodeAnimatorList::Iterator ait = Animators.begin();
-			for (; ait != Animators.end(); ++ait)
-				(*ait)->drop();
 
 			if (TriangleSelector)
 				TriangleSelector->drop();
@@ -109,19 +101,6 @@ namespace scene
 		{
 			if (IsVisible)
 			{
-				// animate this node with all animators
-
-				ISceneNodeAnimatorList::Iterator ait = Animators.begin();
-				while (ait != Animators.end())
-					{
-					// continue to the next node before calling animateNode()
-					// so that the animator may remove itself from the scene
-					// node without the iterator becoming invalid
-					ISceneNodeAnimator* anim = *ait;
-					++ait;
-					anim->animateNode(this, timeMs);
-				}
-
 				// update absolute position
 				updateAbsolutePosition();
 
@@ -340,58 +319,6 @@ namespace scene
 		{
 			if (Parent)
 				Parent->removeChild(this);
-		}
-
-
-		//! Adds an animator which should animate this node.
-		/** \param animator A pointer to the new animator. */
-		virtual void addAnimator(ISceneNodeAnimator* animator)
-		{
-			if (animator)
-			{
-				Animators.push_back(animator);
-				animator->grab();
-			}
-		}
-
-
-		//! Get a list of all scene node animators.
-		/** \return The list of animators attached to this node. */
-		const core::list<ISceneNodeAnimator*>& getAnimators() const
-		{
-			return Animators;
-		}
-
-
-		//! Removes an animator from this scene node.
-		/** If the animator is found, it is also dropped and might be
-		deleted if not other grab exists for it.
-		\param animator A pointer to the animator to be deleted. */
-		virtual void removeAnimator(ISceneNodeAnimator* animator)
-		{
-			ISceneNodeAnimatorList::Iterator it = Animators.begin();
-			for (; it != Animators.end(); ++it)
-			{
-				if ((*it) == animator)
-				{
-					(*it)->drop();
-					Animators.erase(it);
-					return;
-				}
-			}
-		}
-
-
-		//! Removes all animators from this scene node.
-		/** The animators might also be deleted if no other grab exists
-		for them. */
-		virtual void removeAnimators()
-		{
-			ISceneNodeAnimatorList::Iterator it = Animators.begin();
-			for (; it != Animators.end(); ++it)
-				(*it)->drop();
-
-			Animators.clear();
 		}
 
 
@@ -778,19 +705,6 @@ namespace scene
 			ISceneNodeList::Iterator it = toCopyFrom->Children.begin();
 			for (; it != toCopyFrom->Children.end(); ++it)
 				(*it)->clone(this, newManager);
-
-			// clone animators
-
-			ISceneNodeAnimatorList::Iterator ait = toCopyFrom->Animators.begin();
-			for (; ait != toCopyFrom->Animators.end(); ++ait)
-			{
-				ISceneNodeAnimator* anim = (*ait)->createClone(this, SceneManager);
-				if (anim)
-				{
-					addAnimator(anim);
-					anim->drop();
-				}
-			}
 		}
 
 		//! Sets the new scene manager for this node and all children.
@@ -824,9 +738,6 @@ namespace scene
 
 		//! List of all children of this node
 		core::list<ISceneNode*> Children;
-
-		//! List of all animator nodes
-		core::list<ISceneNodeAnimator*> Animators;
 
 		//! Pointer to the scene manager
 		ISceneManager* SceneManager;
