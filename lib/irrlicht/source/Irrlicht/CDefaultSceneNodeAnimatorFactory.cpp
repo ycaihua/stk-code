@@ -3,7 +3,6 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CDefaultSceneNodeAnimatorFactory.h"
-#include "SceneNodes/Animators/CSceneNodeAnimatorCameraFPS.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorCameraMaya.h"
 #include "ICursorControl.h"
 #include "ISceneNodeAnimatorCollisionResponse.h"
@@ -82,9 +81,6 @@ ISceneNodeAnimator* CDefaultSceneNodeAnimatorFactory::createSceneNodeAnimator(ES
 		break;
 	case ESNAT_DELETION:
 		anim = Manager->createDeleteAnimator(5000);
-		break;
-	case ESNAT_CAMERA_FPS:
-		anim = new CSceneNodeAnimatorCameraFPS(CursorControl);
 		break;
 	case ESNAT_CAMERA_MAYA:
 		anim = new CSceneNodeAnimatorCameraMaya(CursorControl);
