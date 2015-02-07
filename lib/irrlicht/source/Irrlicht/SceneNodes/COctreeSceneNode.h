@@ -5,7 +5,7 @@
 #ifndef __C_OCTREE_SCENE_NODE_H_INCLUDED__
 #define __C_OCTREE_SCENE_NODE_H_INCLUDED__
 
-#include "IMeshSceneNode.h"
+#include <SceneNodes/IMeshSceneNode.h>
 #include "../Octree.h"
 
 namespace irr

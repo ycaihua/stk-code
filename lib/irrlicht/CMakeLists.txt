@@ -283,7 +283,6 @@ include/IMeshManipulator.h
 include/CVertexBuffer.h
 include/SSharedMeshBuffer.h
 include/IMeshWriter.h
-include/IMeshSceneNode.h
 include/IParticleAnimatedMeshSceneNodeEmitter.h
 include/IMeshCache.h
 include/EMeshWriterEnums.h

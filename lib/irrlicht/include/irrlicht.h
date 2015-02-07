@@ -108,7 +108,7 @@
 #include "IMeshCache.h"
 #include "IMeshLoader.h"
 #include "IMeshManipulator.h"
-#include "IMeshSceneNode.h"
+#include <SceneNodes/IMeshSceneNode.h>
 #include "IMeshWriter.h"
 #include "IMetaTriangleSelector.h"
 #include "IOSOperator.h"

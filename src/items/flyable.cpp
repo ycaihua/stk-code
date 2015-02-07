@@ -24,7 +24,7 @@
 #include <math.h>
 
 #include <IMeshManipulator.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 #include "graphics/explosion.hpp"
 #include "graphics/irr_driver.hpp"

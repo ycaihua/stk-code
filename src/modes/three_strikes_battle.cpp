@@ -20,7 +20,7 @@
 #include "modes/three_strikes_battle.hpp"
 
 #include <string>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 #include "audio/music_manager.hpp"
 #include "graphics/camera.hpp"

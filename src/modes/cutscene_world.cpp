@@ -41,7 +41,7 @@
 #include "utils/constants.hpp"
 #include "utils/ptr_vector.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
 
 #include <algorithm>

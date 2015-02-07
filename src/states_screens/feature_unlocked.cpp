@@ -43,7 +43,7 @@
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
 
 #include <iostream>

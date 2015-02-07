@@ -26,7 +26,7 @@
 
 #include <ISceneManager.h>
 #include <ICameraSceneNode.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 
 /**

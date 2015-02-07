@@ -33,7 +33,7 @@
 #include "tracks/track_object_manager.hpp"
 #include "utils/constants.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 #include <string>
 

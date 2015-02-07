@@ -25,7 +25,7 @@ using namespace irr;
 #include "io/xml_node.hpp"
 #include "tracks/track.hpp"
 
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
 #include <IMeshManipulator.h>
 #include <algorithm>

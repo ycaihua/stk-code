@@ -12,7 +12,7 @@
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include "IParticleSystemSceneNode.h"
 #include <SceneNodes/ILightSceneNode.h>
-#include "IMeshSceneNode.h"
+#include <SceneNodes/IMeshSceneNode.h>
 
 namespace irr
 {

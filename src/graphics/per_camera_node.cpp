@@ -21,7 +21,7 @@
 
 #include <ICameraSceneNode.h>
 #include <ISceneManager.h>
-#include <IMeshSceneNode.h>
+#include <SceneNodes/IMeshSceneNode.h>
 
 PerCameraNode::PerCameraNode(scene::ISceneNode* parent, scene::ISceneManager* mgr, s32 id,
                              scene::ICameraSceneNode* camera, scene::ISceneNode *node)
