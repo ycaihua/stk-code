@@ -6,7 +6,7 @@
 #define __I_GUI_STATIC_TEXT_H_INCLUDED__
 
 #include <GUI/IGUIElement.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

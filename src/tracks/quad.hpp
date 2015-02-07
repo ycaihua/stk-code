@@ -19,7 +19,7 @@
 #ifndef HEADER_QUAD_HPP
 #define HEADER_QUAD_HPP
 
-#include <SColor.h>
+#include <Core/SColor.h>
 #include "utils/vec3.hpp"
 
 namespace irr

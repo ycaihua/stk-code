@@ -22,7 +22,7 @@
 #include <string>
 #include <vector>
 
-#include <SColor.h>
+#include <Core/SColor.h>
 #include <irrString.h>
 namespace irr
 {

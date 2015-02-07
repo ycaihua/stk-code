@@ -7,7 +7,7 @@
 #ifdef _IRR_COMPILE_WITH_BMP_LOADER_
 
 #include "IReadFile.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 #include "../CColorConverter.h"
 #include "../CImage.h"
 #include "../os.h"

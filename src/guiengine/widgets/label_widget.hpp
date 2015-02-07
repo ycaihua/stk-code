@@ -21,7 +21,7 @@
 #define HEADER_LABEL_HPP
 
 #include <irrString.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 
 #include "guiengine/widget.hpp"
 #include "utils/leak_check.hpp"

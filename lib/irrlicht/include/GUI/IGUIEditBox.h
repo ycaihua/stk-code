@@ -6,7 +6,7 @@
 #define __I_GUI_EDIT_BOX_H_INCLUDED__
 
 #include "IGUIElement.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

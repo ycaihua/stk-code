@@ -6,7 +6,7 @@
 #define __C_PARTICLE_GRAVITY_AFFECTOR_H_INCLUDED__
 
 #include "IParticleGravityAffector.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

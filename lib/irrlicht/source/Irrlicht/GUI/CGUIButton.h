@@ -10,7 +10,7 @@
 
 #include <GUI/IGUIButton.h>
 #include <GUI/IGUISpriteBank.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

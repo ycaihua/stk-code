@@ -5,7 +5,7 @@
 #ifndef __S_MATERIAL_H_INCLUDED__
 #define __S_MATERIAL_H_INCLUDED__
 
-#include "SColor.h"
+#include <Core/SColor.h>
 #include <Maths/matrix4.h>
 #include "irrArray.h"
 #include "irrMath.h"

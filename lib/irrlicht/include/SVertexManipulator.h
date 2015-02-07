@@ -6,7 +6,7 @@
 #define __S_VERTEX_MANIPULATOR_H_INCLUDED__
 
 #include <Core/S3DVertex.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

@@ -18,7 +18,7 @@
 
 #include "states_screens/feature_unlocked.hpp"
 
-#include <SColor.h>
+#include <Core/SColor.h>
 
 #include "audio/music_manager.hpp"
 #include "challenges/challenge_data.hpp"

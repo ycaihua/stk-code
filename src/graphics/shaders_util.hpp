@@ -4,7 +4,7 @@
 #include "utils/singleton.hpp"
 #include <vector>
 #include <Maths/matrix4.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 #include <Maths/vector3d.h>
 #include "gl_headers.hpp"
 

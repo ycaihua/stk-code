@@ -43,7 +43,7 @@
 #include "utils/translation.hpp"
 
 #include <ISceneManager.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>

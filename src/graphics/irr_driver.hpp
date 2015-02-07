@@ -33,7 +33,7 @@
 #include <IVideoDriver.h>
 #include <Maths/vector2d.h>
 #include <Maths/dimension2d.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 #include "IrrlichtDevice.h"
 #include "ISkinnedMesh.h"
 //#include "graphics/rtts.hpp"

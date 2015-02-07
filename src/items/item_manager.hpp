@@ -22,7 +22,7 @@
 #include "items/item.hpp"
 #include "utils/no_copy.hpp"
 
-#include <SColor.h>
+#include <Core/SColor.h>
 
 #include <assert.h>
 #include <map>

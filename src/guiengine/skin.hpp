@@ -22,7 +22,7 @@
 #include <string>
 
 #include <Maths/rect.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 #include <Maths/vector2d.h>
 #include <Maths/dimension2d.h>
 #include <GUI/IGUISkin.h>

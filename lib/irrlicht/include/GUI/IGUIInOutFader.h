@@ -6,7 +6,7 @@
 #define __I_GUI_IN_OUT_FADER_H_INCLUDED__
 
 #include <GUI/IGUIElement.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {
