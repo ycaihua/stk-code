@@ -28,7 +28,7 @@
 #include "utils/log.hpp"
 #include "utils/vec3.hpp"
 
-#include "SColor.h"
+#include <Core/SColor.h>
 #include <Maths/vector2d.h>
 #include <Maths/rect.h>
 

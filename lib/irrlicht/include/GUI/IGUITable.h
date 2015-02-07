@@ -7,7 +7,7 @@
 
 #include <GUI/IGUIElement.h>
 #include "irrTypes.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 #include <GUI/IGUISkin.h>
 
 namespace irr

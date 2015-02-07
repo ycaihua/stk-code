@@ -11,7 +11,7 @@
 #include "path.h"
 #include <Maths/vector3d.h>
 #include <Maths/dimension2d.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 #include "ETerrainElements.h"
 #include "ESceneNodeTypes.h"
 #include "EMeshWriterEnums.h"

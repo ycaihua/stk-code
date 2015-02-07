@@ -8,7 +8,7 @@
 #include "IReferenceCounted.h"
 #include <Maths/position2d.h>
 #include <Maths/rect.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

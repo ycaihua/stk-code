@@ -7,7 +7,7 @@
 
 #include <Maths/vector3d.h>
 #include <Maths/dimension2d.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

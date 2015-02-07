@@ -22,7 +22,7 @@
 #include "utils/leak_check.hpp"
 #include "utils/no_copy.hpp"
 
-#include <SColor.h>
+#include <Core/SColor.h>
 class Vec3;
 
 namespace irr

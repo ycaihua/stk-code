@@ -155,7 +155,7 @@
 #include <Core/S3DVertex.h>
 #include "SAnimatedMesh.h"
 #include "SceneParameters.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 #include "SExposedVideoData.h"
 #include "SIrrCreationParameters.h"
 #include "SKeyMap.h"

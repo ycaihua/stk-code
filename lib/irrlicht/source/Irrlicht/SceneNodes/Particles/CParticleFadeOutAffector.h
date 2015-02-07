@@ -6,7 +6,7 @@
 #define __C_PARTICLE_FADE_OUT_AFFECTOR_H_INCLUDED__
 
 #include "IParticleFadeOutAffector.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

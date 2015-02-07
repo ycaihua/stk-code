@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CColorConverter.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 #include "os.h"
 #include "irrString.h"
 

@@ -6,7 +6,7 @@
 #define __I_GUI_FONT_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 #include <Maths/rect.h>
 #include "irrString.h"
 

@@ -5,7 +5,7 @@
 #ifndef __S_LIGHT_H_INCLUDED__
 #define __S_LIGHT_H_INCLUDED__
 
-#include "SColor.h"
+#include <Core/SColor.h>
 
 namespace irr
 {

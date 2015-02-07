@@ -21,7 +21,7 @@
 
 #include "btBulletDynamicsCommon.h"
 
-#include <SColor.h>
+#include <Core/SColor.h>
 #include "utils/vec3.hpp"
 #include <map>
 #include <vector>

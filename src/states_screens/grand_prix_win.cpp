@@ -46,7 +46,7 @@
 #include <SceneNodes/ILightSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include <ISceneManager.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 
 #include <iostream>
 

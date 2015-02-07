@@ -22,7 +22,7 @@
 #include "utils/no_copy.hpp"
 
 #include <string>
-#include <SColor.h>
+#include <Core/SColor.h>
 using namespace irr;
 
 class Material;

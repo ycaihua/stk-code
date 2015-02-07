@@ -6,7 +6,7 @@
 #define __I_ATTRIBUTE_H_INCLUDED__
 
 #include "IReferenceCounted.h"
-#include "SColor.h"
+#include <Core/SColor.h>
 #include <Maths/vector3d.h>
 #include <Maths/vector2d.h>
 #include <Maths/line2d.h>

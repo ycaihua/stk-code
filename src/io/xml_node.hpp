@@ -25,7 +25,7 @@
 
 #include <irrString.h>
 #include <IXMLReader.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 #include <Maths/vector2d.h>
 #include <Maths/vector3d.h>
 #include <path.h>

@@ -25,7 +25,7 @@
 #include <Maths/vector2d.h>
 #include <Maths/rect.h>
 #include <Maths/dimension2d.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 namespace irr
 {
     namespace video { class ITexture; struct S3DVertex; }

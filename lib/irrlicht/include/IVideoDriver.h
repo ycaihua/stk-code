@@ -6,7 +6,7 @@
 #define __IRR_I_VIDEO_DRIVER_H_INCLUDED__
 
 #include <Maths/rect.h>
-#include "SColor.h"
+#include <Core/SColor.h>
 #include <Core/ITexture.h>
 #include "irrArray.h"
 #include <Maths/matrix4.h>

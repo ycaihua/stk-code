@@ -3,7 +3,7 @@
 
 #include "gl_headers.hpp"
 #include <Maths/rect.h>
-#include <SColor.h>
+#include <Core/SColor.h>
 #include <Core/S3DVertex.h>
 #include <SVertexIndex.h>
 #include <EPrimitiveTypes.h>

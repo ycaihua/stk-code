@@ -232,7 +232,6 @@ include/SSkinMeshBuffer.h
 include/ISceneLoader.h
 include/IrrlichtDevice.h
 include/IMaterialRendererServices.h
-include/SColor.h
 include/IXMLWriter.h
 include/CDynamicMeshBuffer.h
 include/IFileArchive.h
