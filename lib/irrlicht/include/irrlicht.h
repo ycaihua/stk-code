@@ -135,7 +135,7 @@
 #include "ISceneUserDataSerializer.h"
 #include "IShaderConstantSetCallBack.h"
 #include "ISkinnedMesh.h"
-#include "ITerrainSceneNode.h"
+#include <SceneNodes/ITerrainSceneNode.h>
 #include "ITextSceneNode.h"
 #include "ITexture.h"
 #include "ITimer.h"
