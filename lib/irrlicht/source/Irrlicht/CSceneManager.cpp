@@ -54,7 +54,6 @@
 #include "CTerrainTriangleSelector.h"
 
 #include "SceneNodes/Animators/CSceneNodeAnimatorRotation.h"
-#include "SceneNodes/Animators/CSceneNodeAnimatorFlyCircle.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorFlyStraight.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorTexture.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorFollowSpline.h"
@@ -1387,23 +1386,6 @@ ISceneNodeAnimator* CSceneManager::createRotationAnimator(const core::vector3df&
 	ISceneNodeAnimator* anim = new CSceneNodeAnimatorRotation(os::Timer::getTime(),
 		rotationPerSecond);
 
-	return anim;
-}
-
-
-//! creates a fly circle animator, which lets the attached scene node fly around a center.
-ISceneNodeAnimator* CSceneManager::createFlyCircleAnimator(
-		const core::vector3df& center, f32 radius, f32 speed,
-		const core::vector3df& direction,
-		f32 startPosition,
-		f32 radiusEllipsoid)
-{
-	const f32 orbitDurationMs = (core::DEGTORAD * 360.f) / speed;
-	const u32 effectiveTime = os::Timer::getTime() + (u32)(orbitDurationMs * startPosition);
-
-	ISceneNodeAnimator* anim = new CSceneNodeAnimatorFlyCircle(
-			effectiveTime, center,
-			radius, speed, direction,radiusEllipsoid);
 	return anim;
 }
 
