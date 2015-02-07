@@ -5,7 +5,7 @@
 #ifndef __C_PARTICLE_SYSTEM_SCENE_NODE_H_INCLUDED__
 #define __C_PARTICLE_SYSTEM_SCENE_NODE_H_INCLUDED__
 
-#include "IParticleSystemSceneNode.h"
+#include <SceneNodes/IParticleSystemSceneNode.h>
 #include "irrArray.h"
 #include "irrList.h"
 #include "SMeshBuffer.h"

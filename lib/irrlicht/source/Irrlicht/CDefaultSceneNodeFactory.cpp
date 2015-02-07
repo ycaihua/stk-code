@@ -10,7 +10,7 @@
 #include "ICameraSceneNode.h"
 #include <SceneNodes/IBillboardSceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
-#include "IParticleSystemSceneNode.h"
+#include <SceneNodes/IParticleSystemSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
 

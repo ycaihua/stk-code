@@ -4,7 +4,7 @@
 #include "io/file_manager.hpp"
 #include "config/user_config.hpp"
 #include <ICameraSceneNode.h>
-#include <IParticleSystemSceneNode.h>
+#include <SceneNodes/IParticleSystemSceneNode.h>
 #include "guiengine/engine.hpp"
 #include "graphics/particle_emitter.hpp"
 #include "../../lib/irrlicht/source/Irrlicht/os.h"

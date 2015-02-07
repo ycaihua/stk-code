@@ -3,7 +3,7 @@
 
 #include "../lib/irrlicht/source/Irrlicht/SceneNodes/CParticleSystemSceneNode.h"
 #include <ISceneManager.h>
-#include <IParticleSystemSceneNode.h>
+#include <SceneNodes/IParticleSystemSceneNode.h>
 
 namespace irr { namespace video{ class ITexture; } }
 

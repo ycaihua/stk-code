@@ -208,7 +208,6 @@ include/IVertexBuffer.h
 include/ISkinnedMesh.h
 include/irrList.h
 include/SAnimatedMesh.h
-include/IParticleSystemSceneNode.h
 include/ITerrainSceneNode.h
 include/SMeshBuffer.h
 include/ILogger.h

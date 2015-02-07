@@ -45,7 +45,7 @@
 #include <SceneNodes/IMeshSceneNode.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/IBillboardSceneNode.h>
-#include <IParticleSystemSceneNode.h>
+#include <SceneNodes/IParticleSystemSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <IMeshManipulator.h>
 
