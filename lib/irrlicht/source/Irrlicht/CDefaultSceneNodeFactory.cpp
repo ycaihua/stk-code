@@ -8,7 +8,7 @@
 #include "ITerrainSceneNode.h"
 #include "IDummyTransformationSceneNode.h"
 #include "ICameraSceneNode.h"
-#include "IBillboardSceneNode.h"
+#include <SceneNodes/IBillboardSceneNode.h>
 #include "IAnimatedMeshSceneNode.h"
 #include "IParticleSystemSceneNode.h"
 #include "ILightSceneNode.h"
