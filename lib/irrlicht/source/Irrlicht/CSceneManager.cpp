@@ -57,7 +57,6 @@
 #include "SceneNodes/Animators/CSceneNodeAnimatorFlyCircle.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorFlyStraight.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorTexture.h"
-#include "SceneNodes/Animators/CSceneNodeAnimatorCollisionResponse.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorDelete.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorFollowSpline.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorCameraFPS.h"
@@ -1488,22 +1487,6 @@ ISceneNodeAnimator* CSceneManager::createTextureAnimator(const core::array<video
 ISceneNodeAnimator* CSceneManager::createDeleteAnimator(u32 when)
 {
 	return new CSceneNodeAnimatorDelete(this, os::Timer::getTime() + when);
-}
-
-
-//! Creates a special scene node animator for doing automatic collision detection
-//! and response.
-ISceneNodeAnimatorCollisionResponse* CSceneManager::createCollisionResponseAnimator(
-	ITriangleSelector* world, ISceneNode* sceneNode, const core::vector3df& ellipsoidRadius,
-	const core::vector3df& gravityPerSecond,
-	const core::vector3df& ellipsoidTranslation, f32 slidingValue)
-{
-	ISceneNodeAnimatorCollisionResponse* anim = new
-		CSceneNodeAnimatorCollisionResponse(this, world, sceneNode,
-			ellipsoidRadius, gravityPerSecond,
-			ellipsoidTranslation, slidingValue);
-
-	return anim;
 }
 
 
