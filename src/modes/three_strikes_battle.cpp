@@ -100,11 +100,9 @@ void ThreeStrikesBattle::reset()
         scene::ISceneNode* kart_node = m_karts[n]->getNode();
 
         // FIXME: sorry for this ugly const_cast, irrlicht doesn't seem to allow getting a writable list of children, wtf??
-        core::list<scene::ISceneNode*>& children = const_cast<core::list<scene::ISceneNode*>&>(kart_node->getChildren());
-        for (core::list<scene::ISceneNode*>::Iterator it = children.begin(); it != children.end(); it++)
+        std::list<scene::ISceneNode*>& children = const_cast<std::list<scene::ISceneNode*>&>(kart_node->getChildren());
+        for (scene::ISceneNode* curr : children)
         {
-            scene::ISceneNode* curr = *it;
-
             if (core::stringc(curr->getName()) == "tire1")
             {
                 curr->setVisible(true);
@@ -236,9 +234,9 @@ void ThreeStrikesBattle::kartHit(const unsigned int kart_id)
 
     // FIXME: sorry for this ugly const_cast, irrlicht doesn't seem to allow
     // getting a writable list of children, wtf??
-    core::list<scene::ISceneNode*>& children =
-        const_cast<core::list<scene::ISceneNode*>&>(kart_node->getChildren());
-    for (core::list<scene::ISceneNode*>::Iterator it = children.begin();
+    std::list<scene::ISceneNode*>& children =
+        const_cast<std::list<scene::ISceneNode*>&>(kart_node->getChildren());
+    for (std::list<scene::ISceneNode*>::iterator it = children.begin();
                                                   it != children.end(); it++)
     {
         scene::ISceneNode* curr = *it;

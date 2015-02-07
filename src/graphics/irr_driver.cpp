@@ -2432,8 +2432,8 @@ void IrrDriver::applyObjectPassShader(scene::ISceneNode * const node, bool rimli
     }
 
 
-    core::list<scene::ISceneNode*> kids = node->getChildren();
-    scene::ISceneNodeList::Iterator it = kids.begin();
+    std::list<scene::ISceneNode*> kids = node->getChildren();
+    scene::ISceneNodeList::iterator it = kids.begin();
     for (; it != kids.end(); ++it)
     {
         applyObjectPassShader(*it, rimlit);

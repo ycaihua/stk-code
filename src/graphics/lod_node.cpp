@@ -121,7 +121,7 @@ void LODNode::OnAnimate(u32 timeMs)
         Box = m_nodes[m_detail.size()-1]->getBoundingBox();
 
         // If this node has children other than the LOD nodes, animate it
-        core::list<ISceneNode*>::Iterator it;
+        std::list<ISceneNode*>::iterator it;
         for (it = Children.begin(); it != Children.end(); it++)
         {
             if (m_nodes_set.find(*it) == m_nodes_set.end())

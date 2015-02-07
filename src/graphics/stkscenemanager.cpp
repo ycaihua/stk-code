@@ -485,11 +485,11 @@ handleSTKCommon(scene::ISceneNode *Node, std::vector<scene::ISceneNode *> *Immed
 }
 
 static void
-parseSceneManager(core::list<scene::ISceneNode*> &List, std::vector<scene::ISceneNode *> *ImmediateDraw,
+parseSceneManager(std::list<scene::ISceneNode*> &List, std::vector<scene::ISceneNode *> *ImmediateDraw,
     const scene::ICameraSceneNode* cam, scene::ICameraSceneNode *shadow_cam[4], const scene::ICameraSceneNode *rsmcam,
     bool culledforcam, bool culledforshadowcam[4], bool culledforrsm, bool drawRSM)
 {
-    core::list<scene::ISceneNode*>::Iterator I = List.begin(), E = List.end();
+    std::list<scene::ISceneNode*>::iterator I = List.begin(), E = List.end();
     for (; I != E; ++I)
     {
         if (LODNode *node = dynamic_cast<LODNode *>(*I))
@@ -518,7 +518,7 @@ parseSceneManager(core::list<scene::ISceneNode*> &List, std::vector<scene::IScen
 
         handleSTKCommon(*I, ImmediateDraw, cam, shadow_cam, rsmcam, newculledforcam, newculledforshadowcam, newculledforrsm, drawRSM);
 
-        parseSceneManager(const_cast<core::list<scene::ISceneNode*>& >((*I)->getChildren()), ImmediateDraw, cam, shadow_cam, rsmcam, newculledforcam, newculledforshadowcam, newculledforrsm, drawRSM);
+        parseSceneManager(const_cast<std::list<scene::ISceneNode*>& >((*I)->getChildren()), ImmediateDraw, cam, shadow_cam, rsmcam, newculledforcam, newculledforshadowcam, newculledforrsm, drawRSM);
     }
 }
 
@@ -576,7 +576,7 @@ void IrrDriver::PrepareDrawCalls(scene::ICameraSceneNode *camnode)
     }
     MeshForGlowPass.clear();
     DeferredUpdate.clear();
-    core::list<scene::ISceneNode*> List = m_scene_manager->getRootSceneNode()->getChildren();
+    std::list<scene::ISceneNode*> List = m_scene_manager->getRootSceneNode()->getChildren();
 
 PROFILER_PUSH_CPU_MARKER("- culling", 0xFF, 0xFF, 0x0);
     for (scene::ISceneNode *child : List)
