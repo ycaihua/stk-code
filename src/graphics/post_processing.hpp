@@ -19,7 +19,7 @@
 #define HEADER_POST_PROCESSING_HPP
 
 #include "IShaderConstantSetCallBack.h"
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 #include "SMaterial.h"
 #include "graphics/camera.hpp"
 

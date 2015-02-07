@@ -6,7 +6,7 @@
 #define __I_SKIN_MESH_BUFFER_H_INCLUDED__
 
 #include "IMeshBuffer.h"
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 
 
 namespace irr

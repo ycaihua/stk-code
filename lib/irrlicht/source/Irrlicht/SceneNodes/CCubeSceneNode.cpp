@@ -5,7 +5,7 @@
 #include "CCubeSceneNode.h"
 #include "IVideoDriver.h"
 #include "ISceneManager.h"
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 #include "SMeshBuffer.h"
 #include "../os.h"
 

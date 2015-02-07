@@ -13,7 +13,7 @@
 #include "stkscenemanager.hpp"
 #include "utils/profiler.hpp"
 
-#include <S3DVertex.h>
+#include <Core/S3DVertex.h>
 
 /**
 \page render_geometry Geometry Rendering Overview

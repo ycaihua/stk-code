@@ -152,7 +152,7 @@
 #include <Maths/position2d.h>
 #include <Maths/quaternion.h>
 #include <Maths/rect.h>
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 #include "SAnimatedMesh.h"
 #include "SceneParameters.h"
 #include "SColor.h"

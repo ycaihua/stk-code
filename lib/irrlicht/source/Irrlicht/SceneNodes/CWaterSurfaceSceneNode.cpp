@@ -6,7 +6,7 @@
 #include "ISceneManager.h"
 #include "IMeshManipulator.h"
 #include "IMeshCache.h"
-#include "S3DVertex.h"
+#include <Core/S3DVertex.h>
 #include "SMesh.h"
 #include "../os.h"
 
