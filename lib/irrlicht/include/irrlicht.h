@@ -134,7 +134,7 @@
 #include "ISkinnedMesh.h"
 #include <SceneNodes/ITerrainSceneNode.h>
 #include <SceneNodes/ITextSceneNode.h>
-#include "ITexture.h"
+#include <Core/ITexture.h>
 #include "ITimer.h"
 #include "ITriangleSelector.h"
 #include "IVertexBuffer.h"

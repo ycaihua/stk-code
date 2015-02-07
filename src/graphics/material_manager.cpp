@@ -30,7 +30,7 @@
 #include "tracks/track.hpp"
 #include "utils/string_utils.hpp"
 
-#include <ITexture.h>
+#include <Core/ITexture.h>
 #include <SMaterial.h>
 #include <Core/IMeshBuffer.h>
 

@@ -20,7 +20,7 @@
 #include <iostream>
 
 #include <GUI/IGUIFont.h>
-#include <ITexture.h>
+#include <Core/ITexture.h>
 
 #include "graphics/irr_driver.hpp"
 #include "guiengine/abstract_top_level_container.hpp"

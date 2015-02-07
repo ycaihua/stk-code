@@ -4,7 +4,7 @@
 
 #include "CAttributes.h"
 #include "fast_atof.h"
-#include "ITexture.h"
+#include <Core/ITexture.h>
 #include "IVideoDriver.h"
 
 namespace irr

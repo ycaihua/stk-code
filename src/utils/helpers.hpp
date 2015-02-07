@@ -19,7 +19,7 @@
 #ifndef HELPERS_H
 #define HELPERS_H
 
-#include <ITexture.h>
+#include <Core/ITexture.h>
 
 using irr::video::ITexture;
 

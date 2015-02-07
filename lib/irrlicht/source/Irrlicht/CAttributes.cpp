@@ -4,7 +4,7 @@
 
 #include "CAttributes.h"
 #include "CAttributeImpl.h"
-#include "ITexture.h"
+#include <Core/ITexture.h>
 #include "IXMLWriter.h"
 #include "IVideoDriver.h"
 

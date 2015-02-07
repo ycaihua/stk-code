@@ -307,7 +307,6 @@ include/IRandomizer.h
 include/IAttributes.h
 include/IParticleRotationAffector.h
 include/IShaderConstantSetCallBack.h
-include/ITexture.h
 )
 
 if(APPLE)
