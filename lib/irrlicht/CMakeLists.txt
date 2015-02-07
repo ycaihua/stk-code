@@ -50,6 +50,7 @@ file(GLOB IRR_SCENENODES_PARTICLES_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} 
 
 file(GLOB IRR_MATHS_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/Maths/*.h")
 file(GLOB IRR_GUI_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/GUI/*.h")
+file(GLOB IRR_SCENENODES_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/SceneNodes/*.h")
 
 include(../../cmake/SourceGroupFunctions.cmake)
 source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS)
@@ -61,6 +62,7 @@ source_group_hierarchy(IRR_SCENENODES_PARTICLES_SOURCES IRR_SCENENODES_PARTICLES
 
 source_group_hierarchy(IRR_MATHS_INCLUDE IRR_MATHS_INCLUDE)
 source_group_hierarchy(IRR_GUI_INCLUDE IRR_GUI_INCLUDE)
+source_group_hierarchy(IRR_SCENENODES_INCLUDE IRR_SCENENODES_INCLUDE)
 
 set(IRRLICHT_SOURCES
 ${IRR_DEVICES_SOURCES}
@@ -185,6 +187,7 @@ ${IRR_SCENENODES_HEADERS}
 ${IRR_SCENENODES_PARTICLES_HEADERS}
 ${IRR_MATHS_INCLUDE}
 ${IRR_GUI_INCLUDE}
+${IRR_SCENENODES_INCLUDE}
 include/ESceneNodeAnimatorTypes.h
 include/IParticleGravityAffector.h
 include/IEventReceiver.h
@@ -261,7 +264,6 @@ include/IReferenceCounted.h
 include/irrXML.h
 include/SKeyMap.h
 include/ECullingTypes.h
-include/IBillboardSceneNode.h
 include/ITriangleSelector.h
 include/coreutil.h
 include/SMeshBufferTangents.h

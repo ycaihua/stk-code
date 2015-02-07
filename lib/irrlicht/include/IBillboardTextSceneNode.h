@@ -5,7 +5,7 @@
 #ifndef __I_BILLBOARD_TEXT_SCENE_NODE_H_INCLUDED__
 #define __I_BILLBOARD_TEXT_SCENE_NODE_H_INCLUDED__
 
-#include "IBillboardSceneNode.h"
+#include <SceneNodes/IBillboardSceneNode.h>
 
 namespace irr
 {

@@ -26,7 +26,7 @@
 #include "utils/constants.hpp"
 
 #include <ISceneNode.h>
-#include <IBillboardSceneNode.h>
+#include <SceneNodes/IBillboardSceneNode.h>
 
 const int STAR_AMOUNT = 7;
 const float RADIUS = 0.7f;

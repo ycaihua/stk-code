@@ -2,7 +2,7 @@
 #define STK_TEXT_BILLBOARD_HPP
 
 #include "../lib/irrlicht/source/Irrlicht/SceneNodes/CBillboardSceneNode.h"
-#include <IBillboardSceneNode.h>
+#include <SceneNodes/IBillboardSceneNode.h>
 #include <irrTypes.h>
 #include <IMesh.h>
 #include "graphics/stkmeshscenenode.hpp"

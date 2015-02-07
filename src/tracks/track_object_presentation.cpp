@@ -44,7 +44,7 @@
 #include <ISceneManager.h>
 #include <IMeshSceneNode.h>
 #include <ICameraSceneNode.h>
-#include <IBillboardSceneNode.h>
+#include <SceneNodes/IBillboardSceneNode.h>
 #include <IParticleSystemSceneNode.h>
 #include <ILightSceneNode.h>
 #include <IMeshManipulator.h>

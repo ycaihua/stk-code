@@ -57,7 +57,7 @@
 #include "IAnimatedMeshSceneNode.h"
 #include "IAttributeExchangingObject.h"
 #include "IAttributes.h"
-#include "IBillboardSceneNode.h"
+#include <SceneNodes/IBillboardSceneNode.h>
 #include "IBillboardTextSceneNode.h"
 #include "IBoneSceneNode.h"
 #include "ICameraSceneNode.h"
