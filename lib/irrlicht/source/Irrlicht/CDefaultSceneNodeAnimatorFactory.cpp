@@ -55,9 +55,6 @@ ISceneNodeAnimator* CDefaultSceneNodeAnimatorFactory::createSceneNodeAnimator(ES
 
 	switch(type)
 	{
-	case ESNAT_FLY_CIRCLE:
-		anim = Manager->createFlyCircleAnimator(core::vector3df(0,0,0), 10);
-		break;
 	case ESNAT_FLY_STRAIGHT:
 		anim = Manager->createFlyStraightAnimator(core::vector3df(0,0,0), core::vector3df(100,100,100), 10000, true );
 		break;

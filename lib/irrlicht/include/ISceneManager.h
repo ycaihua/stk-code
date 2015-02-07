@@ -1014,26 +1014,6 @@ namespace scene
 		See IReferenceCounted::drop() for more information. */
 		virtual ISceneNodeAnimator* createRotationAnimator(const core::vector3df& rotationSpeed) = 0;
 
-		//! Creates a fly circle animator, which lets the attached scene node fly around a center.
-		/** \param center: Center of the circle.
-		\param radius: Radius of the circle.
-		\param speed: The orbital speed, in radians per millisecond.
-		\param direction: Specifies the upvector used for alignment of the mesh.
-		\param startPosition: The position on the circle where the animator will
-		begin. Value is in multiples of a circle, i.e. 0.5 is half way around. (phase)
-		\param radiusEllipsoid: if radiusEllipsoid != 0 then radius2 froms a ellipsoid
-		begin. Value is in multiples of a circle, i.e. 0.5 is half way around. (phase)
-		\return The animator. Attach it to a scene node with ISceneNode::addAnimator()
-		and the animator will animate it.
-		If you no longer need the animator, you should call ISceneNodeAnimator::drop().
-		See IReferenceCounted::drop() for more information. */
-		virtual ISceneNodeAnimator* createFlyCircleAnimator(
-				const core::vector3df& center=core::vector3df(0.f,0.f,0.f),
-				f32 radius=100.f, f32 speed=0.001f,
-				const core::vector3df& direction=core::vector3df(0.f, 1.f, 0.f),
-				f32 startPosition = 0.f,
-				f32 radiusEllipsoid = 0.f) = 0;
-
 		//! Creates a fly straight animator, which lets the attached scene node fly or move along a line between two points.
 		/** \param startPoint: Start point of the line.
 		\param endPoint: End point of the line.
