@@ -18,7 +18,7 @@
 #include "CAttributes.h"
 #include "CMemoryFile.h"
 #include "CLimitReadFile.h"
-#include "irrList.h"
+#include <list>
 
 #if defined (_IRR_WINDOWS_API_)
 	#if !defined ( _WIN32_WCE )
@@ -738,11 +738,11 @@ path CFileSystem::getRelativeFilename(const path& filename, const path& director
 	io::path path1, file, ext;
 	core::splitFilename(getAbsolutePath(filename), &path1, &file, &ext);
 	io::path path2(getAbsolutePath(directory));
-	core::list<io::path> list1, list2;
+	std::list<io::path> list1, list2;
 	path1.split(list1, _IRR_TEXT("/\\"), 2);
 	path2.split(list2, _IRR_TEXT("/\\"), 2);
 	u32 i=0;
-	core::list<io::path>::ConstIterator it1,it2;
+	std::list<io::path>::const_iterator it1,it2;
 	it1=list1.begin();
 	it2=list2.begin();
 
