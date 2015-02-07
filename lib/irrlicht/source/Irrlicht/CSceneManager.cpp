@@ -59,7 +59,6 @@
 #include "SceneNodes/Animators/CSceneNodeAnimatorTexture.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorDelete.h"
 #include "SceneNodes/Animators/CSceneNodeAnimatorFollowSpline.h"
-#include "SceneNodes/Animators/CSceneNodeAnimatorCameraMaya.h"
 #include "CDefaultSceneNodeAnimatorFactory.h"
 
 #include "CGeometryCreator.h"
@@ -486,28 +485,6 @@ ICameraSceneNode* CSceneManager::addCameraSceneNode(ISceneNode* parent,
 	if (makeActive)
 		setActiveCamera(node);
 	node->drop();
-
-	return node;
-}
-
-
-//! Adds a camera scene node which is able to be controlled with the mouse similar
-//! to in the 3D Software Maya by Alias Wavefront.
-//! The returned pointer must not be dropped.
-ICameraSceneNode* CSceneManager::addCameraSceneNodeMaya(ISceneNode* parent,
-	f32 rotateSpeed, f32 zoomSpeed, f32 translationSpeed, s32 id, f32 distance,
-	bool makeActive)
-{
-	ICameraSceneNode* node = addCameraSceneNode(parent, core::vector3df(),
-			core::vector3df(0,0,100), id, makeActive);
-	if (node)
-	{
-		ISceneNodeAnimator* anm = new CSceneNodeAnimatorCameraMaya(CursorControl,
-			rotateSpeed, zoomSpeed, translationSpeed, distance);
-
-		node->addAnimator(anm);
-		anm->drop();
-	}
 
 	return node;
 }
