@@ -1163,44 +1163,6 @@ namespace scene
 		See IReferenceCounted::drop() for more information. */
 		virtual ISceneNodeAnimator* createDeleteAnimator(u32 timeMs) = 0;
 
-		//! Creates a special scene node animator for doing automatic collision detection and response.
-		/** See ISceneNodeAnimatorCollisionResponse for details.
-		\param world: Triangle selector holding all triangles of the world with which
-		the scene node may collide. You can create a triangle selector with
-		ISceneManager::createTriangleSelector();
-		\param sceneNode: SceneNode which should be manipulated. After you added this animator
-		to the scene node, the scene node will not be able to move through walls and is
-		affected by gravity. If you need to teleport the scene node to a new position without
-		it being effected by the collision geometry, then call sceneNode->setPosition(); then
-		animator->setTargetNode(sceneNode);
-		\param ellipsoidRadius: Radius of the ellipsoid with which collision detection and
-		response is done. If you have got a scene node, and you are unsure about
-		how big the radius should be, you could use the following code to determine
-		it:
-		\code
-		const core::aabbox3d<f32>& box = yourSceneNode->getBoundingBox();
-		core::vector3df radius = box.MaxEdge - box.getCenter();
-		\endcode
-		\param gravityPerSecond: Sets the gravity of the environment, as an acceleration in
-		units per second per second. If your units are equivalent to metres, then
-		core::vector3df(0,-10.0f,0) would give an approximately realistic gravity.
-		You can disable gravity by setting it to core::vector3df(0,0,0).
-		\param ellipsoidTranslation: By default, the ellipsoid for collision detection is created around
-		the center of the scene node, which means that the ellipsoid surrounds
-		it completely. If this is not what you want, you may specify a translation
-		for the ellipsoid.
-		\param slidingValue: DOCUMENTATION NEEDED.
-		\return The animator. Attach it to a scene node with ISceneNode::addAnimator()
-		and the animator will cause it to do collision detection and response.
-		If you no longer need the animator, you should call ISceneNodeAnimator::drop().
-		See IReferenceCounted::drop() for more information. */
-		virtual ISceneNodeAnimatorCollisionResponse* createCollisionResponseAnimator(
-			ITriangleSelector* world, ISceneNode* sceneNode,
-			const core::vector3df& ellipsoidRadius = core::vector3df(30,60,30),
-			const core::vector3df& gravityPerSecond = core::vector3df(0,-10.0f,0),
-			const core::vector3df& ellipsoidTranslation = core::vector3df(0,0,0),
-			f32 slidingValue = 0.0005f) = 0;
-
 		//! Creates a follow spline animator.
 		/** The animator modifies the position of
 		the attached scene node to make it follow a hermite spline.

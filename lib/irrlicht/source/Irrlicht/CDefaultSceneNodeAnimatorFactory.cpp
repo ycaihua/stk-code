@@ -83,9 +83,6 @@ ISceneNodeAnimator* CDefaultSceneNodeAnimatorFactory::createSceneNodeAnimator(ES
 	case ESNAT_DELETION:
 		anim = Manager->createDeleteAnimator(5000);
 		break;
-	case ESNAT_COLLISION_RESPONSE:
-		anim = Manager->createCollisionResponseAnimator(0, target);
-		break;
 	case ESNAT_CAMERA_FPS:
 		anim = new CSceneNodeAnimatorCameraFPS(CursorControl);
 		break;
