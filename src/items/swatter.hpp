@@ -25,7 +25,7 @@
 #include "utils/random_generator.hpp"
 
 #include <Maths/vector3d.h>
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 
 using namespace irr;
 

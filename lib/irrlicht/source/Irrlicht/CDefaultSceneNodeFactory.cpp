@@ -9,7 +9,7 @@
 #include "IDummyTransformationSceneNode.h"
 #include "ICameraSceneNode.h"
 #include <SceneNodes/IBillboardSceneNode.h>
-#include "IAnimatedMeshSceneNode.h"
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include "IParticleSystemSceneNode.h"
 #include "ILightSceneNode.h"
 #include "IMeshSceneNode.h"

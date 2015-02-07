@@ -24,7 +24,7 @@
 #include "graphics/rtts.hpp"
 #include <algorithm>
 #include <IAnimatedMesh.h>
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <ICameraSceneNode.h>
 #include <ILightSceneNode.h>
 #include <ISceneManager.h>

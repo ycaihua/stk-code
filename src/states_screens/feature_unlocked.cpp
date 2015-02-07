@@ -40,7 +40,7 @@
 #include "tracks/track_manager.hpp"
 #include "utils/translation.hpp"
 
-#include <IAnimatedMeshSceneNode.h>
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <ICameraSceneNode.h>
 #include <ILightSceneNode.h>
 #include <IMeshSceneNode.h>

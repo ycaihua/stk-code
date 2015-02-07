@@ -6,7 +6,7 @@
 #define __I_PARTICLE_ANIMATED_MESH_SCENE_NODE_EMITTER_H_INCLUDED__
 
 #include "IParticleEmitter.h"
-#include "IAnimatedMeshSceneNode.h"
+#include <SceneNodes/IAnimatedMeshSceneNode.h>
 
 namespace irr
 {
