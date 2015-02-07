@@ -8,7 +8,7 @@
 #include "IParticleMeshEmitter.h"
 #include "irrArray.h"
 #include <Maths/aabbox3d.h>
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 
 namespace irr
 {

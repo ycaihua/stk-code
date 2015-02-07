@@ -10,7 +10,7 @@
 #include <Maths/aabbox3d.h>
 #include <Maths/matrix4.h>
 #include "IAnimatedMesh.h"
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include "SVertexManipulator.h"
 
 namespace irr

@@ -103,7 +103,7 @@
 #include "IMaterialRenderer.h"
 #include "IMaterialRendererServices.h"
 #include "IMesh.h"
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include "IMeshCache.h"
 #include "IMeshLoader.h"
 #include "IMeshManipulator.h"

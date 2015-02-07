@@ -4,7 +4,7 @@
 #include "gl_headers.hpp"
 #include "utils/singleton.hpp"
 #include <Core/S3DVertex.h>
-#include <IMeshBuffer.h>
+#include <Core/IMeshBuffer.h>
 #include <vector>
 #include <map>
 #include <unordered_map>

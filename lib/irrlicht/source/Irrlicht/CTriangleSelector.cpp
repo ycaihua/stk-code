@@ -4,7 +4,7 @@
 
 #include "CTriangleSelector.h"
 #include "ISceneNode.h"
-#include "IMeshBuffer.h"
+#include <Core/IMeshBuffer.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 
 namespace irr
