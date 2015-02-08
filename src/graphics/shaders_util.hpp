@@ -91,28 +91,28 @@ struct UniformHelper
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::matrix4 &mat, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::matrix4 &mat, const Args &... arg)
     {
         glUniformMatrix4fv(uniforms[N], 1, GL_FALSE, mat.pointer());
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::video::SColorf &col, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::video::SColorf &col, const Args &... arg)
     {
         glUniform3f(uniforms[N], col.r, col.g, col.b);
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::video::SColor &col, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::video::SColor &col, const Args &... arg)
     {
         glUniform4i(uniforms[N], col.getRed(), col.getGreen(), col.getBlue(), col.getAlpha());
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::vector3df &v, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::vector3df &v, const Args &... arg)
     {
         glUniform3f(uniforms[N], v.X, v.Y, v.Z);
         setUniformsHelper<N + 1>(uniforms, arg...);
@@ -120,35 +120,35 @@ struct UniformHelper
 
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::vector2df &v, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::vector2df &v, const Args &... arg)
     {
         glUniform2f(uniforms[N], v.X, v.Y);
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::dimension2df &v, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const irr::core::dimension2df &v, const Args &... arg)
     {
         glUniform2f(uniforms[N], v.Width, v.Height);
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, float f, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, float f, const Args &... arg)
     {
         glUniform1f(uniforms[N], f);
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, int f, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, int f, const Args &... arg)
     {
         glUniform1i(uniforms[N], f);
         setUniformsHelper<N + 1>(uniforms, arg...);
     }
 
     template<unsigned N = 0, typename... Args>
-    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const std::vector<float> &v, Args... arg)
+    static void setUniformsHelper(const std::vector<GLuint> &uniforms, const std::vector<float> &v, const Args &... arg)
     {
         glUniform1fv(uniforms[N], (int)v.size(), v.data());
         setUniformsHelper<N + 1>(uniforms, arg...);

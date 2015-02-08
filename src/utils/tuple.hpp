@@ -26,7 +26,7 @@ namespace STK {
         {
         }
 
-        Tuple(_This val, _Rest... rest) : Tuple<_Rest...>(rest...)
+        Tuple(const _This &val, const _Rest &... rest) : Tuple<_Rest...>(rest...)
         {
             _Elem = val;
         }

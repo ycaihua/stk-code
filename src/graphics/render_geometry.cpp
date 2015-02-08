@@ -308,7 +308,7 @@ using namespace RenderGeometry;
 
 
 template<typename T, typename...uniforms>
-void draw(const T *Shader, const GLMesh *mesh, uniforms... Args)
+void draw(const T *Shader, const GLMesh *mesh, const uniforms &... Args)
 {
     irr_driver->IncreaseObjectCount();
     GLenum ptype = mesh->PrimitiveType;
@@ -326,7 +326,7 @@ template<>
 struct custom_unroll_args<>
 {
     template<typename T, typename ...TupleTypes, typename ...Args>
-    static void exec(const T *Shader, const STK::Tuple<TupleTypes...> &t, Args... args)
+    static void exec(const T *Shader, const STK::Tuple<TupleTypes...> &t, const Args &... args)
     {
         draw<T>(Shader, STK::tuple_get<0>(t), args...);
     }
@@ -336,7 +336,7 @@ template<int N, int...List>
 struct custom_unroll_args<N, List...>
 {
     template<typename T, typename ...TupleTypes, typename ...Args>
-    static void exec(const T *Shader, const STK::Tuple<TupleTypes...> &t, Args... args)
+    static void exec(const T *Shader, const STK::Tuple<TupleTypes...> &t, const Args &... args)
     {
         custom_unroll_args<List...>::template exec<T>(Shader, t, STK::tuple_get<N>(t), args...);
     }
@@ -346,7 +346,7 @@ template<typename T, int N>
 struct TexExpander_impl
 {
     template<typename...TupleArgs, typename... Args>
-    static void ExpandTex(GLMesh &mesh, const STK::Tuple<TupleArgs...> &TexSwizzle, Args... args)
+    static void ExpandTex(GLMesh &mesh, const STK::Tuple<TupleArgs...> &TexSwizzle, const Args &... args)
     {
         size_t idx = STK::tuple_get<sizeof...(TupleArgs) - N>(TexSwizzle);
         TexExpander_impl<T, N - 1>::template ExpandTex(mesh, TexSwizzle, args..., getTextureGLuint(mesh.textures[idx]));
@@ -889,7 +889,7 @@ void IrrDriver::renderTransparent()
 }
 
 template<typename T, typename...uniforms>
-void drawShadow(const T *Shader, unsigned cascade, const GLMesh *mesh, uniforms... Args)
+void drawShadow(const T *Shader, unsigned cascade, const GLMesh *mesh, const uniforms &... Args)
 {
     irr_driver->IncreaseObjectCount();
     GLenum ptype = mesh->PrimitiveType;
@@ -907,7 +907,7 @@ template<>
 struct shadow_custom_unroll_args<>
 {
     template<typename T, typename ...TupleTypes, typename ...Args>
-    static void exec(const T *Shader, unsigned cascade, const STK::Tuple<TupleTypes...> &t, Args... args)
+    static void exec(const T *Shader, unsigned cascade, const STK::Tuple<TupleTypes...> &t, const Args &... args)
     {
         drawShadow<T>(Shader, cascade, STK::tuple_get<0>(t), args...);
     }
@@ -917,7 +917,7 @@ template<int N, int...List>
 struct shadow_custom_unroll_args<N, List...>
 {
     template<typename T, typename ...TupleTypes, typename ...Args>
-    static void exec(const T *Shader, unsigned cascade, const STK::Tuple<TupleTypes...> &t, Args... args)
+    static void exec(const T *Shader, unsigned cascade, const STK::Tuple<TupleTypes...> &t, const Args &... args)
     {
         shadow_custom_unroll_args<List...>::template exec<T>(Shader, cascade, t, STK::tuple_get<N>(t), args...);
     }
@@ -944,7 +944,7 @@ void renderShadow(unsigned cascade)
 }
 
 template<typename T, typename...Args>
-void renderInstancedShadow(unsigned cascade, Args ...args)
+void renderInstancedShadow(unsigned cascade, const Args &...args)
 {
     glUseProgram(T::InstancedShadowPassShader::getInstance()->Program);
     glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeShadow));
@@ -962,7 +962,7 @@ void renderInstancedShadow(unsigned cascade, Args ...args)
 }
 
 template<typename T, typename...Args>
-static void multidrawShadow(unsigned i, Args ...args)
+static void multidrawShadow(unsigned i, const Args &...args)
 {
     glUseProgram(T::InstancedShadowPassShader::getInstance()->Program);
     glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeShadow));
@@ -1060,7 +1060,7 @@ template<>
 struct rsm_custom_unroll_args<>
 {
     template<typename T, typename ...TupleTypes, typename ...Args>
-    static void exec(const core::matrix4 &rsm_matrix, const STK::Tuple<TupleTypes...> &t, Args... args)
+    static void exec(const core::matrix4 &rsm_matrix, const STK::Tuple<TupleTypes...> &t, const Args &... args)
     {
         draw<T>(T::getInstance(), STK::tuple_get<0>(t), rsm_matrix, args...);
     }
@@ -1070,7 +1070,7 @@ template<int N, int...List>
 struct rsm_custom_unroll_args<N, List...>
 {
     template<typename T, typename ...TupleTypes, typename ...Args>
-    static void exec(const core::matrix4 &rsm_matrix, const STK::Tuple<TupleTypes...> &t, Args... args)
+    static void exec(const core::matrix4 &rsm_matrix, const STK::Tuple<TupleTypes...> &t, const Args &... args)
     {
         rsm_custom_unroll_args<List...>::template exec<T>(rsm_matrix, t, STK::tuple_get<N>(t), args...);
     }
@@ -1098,7 +1098,7 @@ void drawRSM(const core::matrix4 & rsm_matrix)
 }
 
 template<typename T, typename...Args>
-void renderRSMShadow(Args ...args)
+void renderRSMShadow(const Args &...args)
 {
     glUseProgram(T::InstancedRSMShader::getInstance()->Program);
     glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeRSM));
@@ -1115,7 +1115,7 @@ void renderRSMShadow(Args ...args)
 }
 
 template<typename T, typename... Args>
-void multidrawRSM(Args...args)
+void multidrawRSM(const Args &...args)
 {
     glUseProgram(T::InstancedRSMShader::getInstance()->Program);
     glBindVertexArray(VAOManager::getInstance()->getInstanceVAO(T::VertexType, InstanceTypeRSM));

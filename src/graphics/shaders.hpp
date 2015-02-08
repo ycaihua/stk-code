@@ -371,7 +371,7 @@ public:
 }
 
 template<typename T, typename... Args>
-static void DrawFullScreenEffect(Args...args)
+static void DrawFullScreenEffect(const Args &...args)
 {
     glUseProgram(T::getInstance()->Program);
     glBindVertexArray(SharedObject::FullScreenQuadVAO);
