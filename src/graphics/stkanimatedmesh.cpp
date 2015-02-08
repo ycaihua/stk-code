@@ -3,7 +3,7 @@
 #include "graphics/stkanimatedmesh.hpp"
 #include <Core/ISceneManager.h>
 #include <IMaterialRenderer.h>
-#include <ISkinnedMesh.h>
+#include <Core/ISkinnedMesh.h>
 #include "graphics/irr_driver.hpp"
 #include "graphics/material_manager.hpp"
 #include "config/user_config.hpp"

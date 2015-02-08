@@ -207,7 +207,6 @@ include/EMaterialTypes.h
 include/IParticleCylinderEmitter.h
 include/IAttributeExchangingObject.h
 include/IVertexBuffer.h
-include/ISkinnedMesh.h
 include/SAnimatedMesh.h
 include/SMeshBuffer.h
 include/ILogger.h

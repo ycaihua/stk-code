@@ -35,7 +35,7 @@
 #include <Maths/dimension2d.h>
 #include <Core/SColor.h>
 #include "IrrlichtDevice.h"
-#include "ISkinnedMesh.h"
+#include <Core/ISkinnedMesh.h>
 //#include "graphics/rtts.hpp"
 #include "graphics/shaders.hpp"
 #include "graphics/wind.hpp"

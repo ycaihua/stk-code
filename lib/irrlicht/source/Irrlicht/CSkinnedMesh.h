@@ -7,7 +7,7 @@
 #ifndef __C_SKINNED_MESH_H_INCLUDED__
 #define __C_SKINNED_MESH_H_INCLUDED__
 
-#include "ISkinnedMesh.h"
+#include <Core/ISkinnedMesh.h>
 #include "SMeshBuffer.h"
 #include <Core/S3DVertex.h>
 #include "irrString.h"
