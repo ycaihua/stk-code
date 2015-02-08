@@ -197,7 +197,6 @@ include/IEventReceiver.h
 include/EMessageBoxFlags.h
 include/IParticleSphereEmitter.h
 include/IParticleFadeOutAffector.h
-include/IGeometryCreator.h
 include/irrunpack.h
 include/IParticleRingEmitter.h
 include/IMaterialRenderer.h

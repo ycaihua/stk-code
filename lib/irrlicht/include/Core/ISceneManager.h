@@ -16,7 +16,7 @@
 #include "ESceneNodeTypes.h"
 #include "EMeshWriterEnums.h"
 #include "SceneParameters.h"
-#include "IGeometryCreator.h"
+#include <Util/IGeometryCreator.h>
 #include "ISkinnedMesh.h"
 
 namespace irr

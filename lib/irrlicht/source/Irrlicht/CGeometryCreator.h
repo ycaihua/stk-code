@@ -5,7 +5,7 @@
 #ifndef __C_GEOMETRY_CREATOR_H_INCLUDED__
 #define __C_GEOMETRY_CREATOR_H_INCLUDED__
 
-#include "IGeometryCreator.h"
+#include <Util/IGeometryCreator.h>
 #include "SMeshBuffer.h"
 
 namespace irr
