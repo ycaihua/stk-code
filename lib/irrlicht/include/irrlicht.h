@@ -66,7 +66,7 @@
 #include "IEventReceiver.h"
 #include "IFileList.h"
 #include "IFileSystem.h"
-#include "IGeometryCreator.h"
+#include <Util/IGeometryCreator.h>
 #include "IGPUProgrammingServices.h"
 #include <GUI/IGUIButton.h>
 #include <GUI/IGUICheckBox.h>
