@@ -94,7 +94,7 @@
 #include <GUI/IGUIToolbar.h>
 #include <GUI/IGUIWindow.h>
 #include <GUI/IGUITreeView.h>
-#include "IImage.h"
+#include <Core/IImage.h>
 #include "IImageLoader.h"
 #include "IImageWriter.h"
 #include "IIndexBuffer.h"

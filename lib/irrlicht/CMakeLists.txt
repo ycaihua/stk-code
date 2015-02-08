@@ -214,7 +214,6 @@ include/ILogger.h
 include/ILightManager.h
 include/irrlicht.h
 include/ITimer.h
-include/IImage.h
 include/path.h
 include/IMetaTriangleSelector.h
 include/ISceneUserDataSerializer.h

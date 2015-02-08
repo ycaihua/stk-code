@@ -5,7 +5,7 @@
 #ifndef __C_IMAGE_H_INCLUDED__
 #define __C_IMAGE_H_INCLUDED__
 
-#include "IImage.h"
+#include <Core/IImage.h>
 #include <Maths/rect.h>
 
 namespace irr
