@@ -167,7 +167,7 @@
 #include "SSharedMeshBuffer.h"
 #include "SSkinMeshBuffer.h"
 #include "SVertexIndex.h"
-#include "SViewFrustum.h"
+#include <Core/SViewFrustum.h>
 #include <Maths/triangle3d.h>
 #include <Maths/vector2d.h>
 #include <Maths/vector3d.h>

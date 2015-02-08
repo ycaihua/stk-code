@@ -20,7 +20,7 @@
 #include "Particles/CParticleGravityAffector.h"
 #include "Particles/CParticleRotationAffector.h"
 #include "Particles/CParticleScaleAffector.h"
-#include "SViewFrustum.h"
+#include <Core/SViewFrustum.h>
 
 namespace irr
 {

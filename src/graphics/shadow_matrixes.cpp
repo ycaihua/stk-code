@@ -1,6 +1,6 @@
 #include <limits>
 #include <SceneNodes/ICameraSceneNode.h>
-#include <SViewFrustum.h>
+#include <Core/SViewFrustum.h>
 #include "../../lib/irrlicht/source/Irrlicht/CSceneManager.h"
 #include "../../lib/irrlicht/source/Irrlicht/os.h"
 #include "graphics/central_settings.hpp"
