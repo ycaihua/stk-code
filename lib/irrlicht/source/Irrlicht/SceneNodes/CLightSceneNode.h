@@ -25,66 +25,66 @@ public:
 	virtual ~CLightSceneNode() { }
 
 	//! pre render event
-	virtual void OnRegisterSceneNode();
+	virtual void OnRegisterSceneNode() OVERRIDE;
 
 	//! render
-	virtual void render();
+	virtual void render() OVERRIDE;
 
 	//! set node light data from light info
-	virtual void setLightData(const video::SLight& light);
+	virtual void setLightData(const video::SLight& light) OVERRIDE;
 
 	//! \return Returns the light data.
-	virtual const video::SLight& getLightData() const;
+	virtual const video::SLight& getLightData() const OVERRIDE;
 
 	//! \return Returns the light data.
-	virtual video::SLight& getLightData();
+	virtual video::SLight& getLightData() OVERRIDE;
 
 	//! Sets if the node should be visible or not.
 	/** All children of this node won't be visible either, when set
 	to true.
 	\param isVisible If the node shall be visible. */
-	virtual void setVisible(bool isVisible);
+	virtual void setVisible(bool isVisible) OVERRIDE;
 
 	//! returns the axis aligned bounding box of this node
-	virtual const core::aabbox3d<f32>& getBoundingBox() const;
+	virtual const core::aabbox3d<f32>& getBoundingBox() const OVERRIDE;
 
 	//! Returns type of the scene node
-	virtual ESCENE_NODE_TYPE getType() const { return ESNT_LIGHT; }
+	virtual ESCENE_NODE_TYPE getType() const OVERRIDE { return ESNT_LIGHT; }
 
 	//! Creates a clone of this scene node and its children.
-	virtual ISceneNode* clone(ISceneNode* newParent=0, ISceneManager* newManager=0); 
+	virtual ISceneNode* clone(ISceneNode* newParent = 0, ISceneManager* newManager = 0) OVERRIDE;
 
 
 	//! Sets the light's radius of influence.
 	/** Outside this radius the light won't lighten geometry and cast no
 	shadows. Setting the radius will also influence the attenuation, setting
-	it to (0,1/radius,0). If you want to override this behavior, set the
+	it to (0,1/radius,0). If you want to OVERRIDE this behavior, set the
 	attenuation after the radius.
 	\param radius The new radius. */
-	virtual void setRadius(f32 radius);
+	virtual void setRadius(f32 radius) OVERRIDE;
 
 	//! Gets the light's radius of influence.
 	/** \return The current radius. */
-	virtual f32 getRadius() const;
+	virtual f32 getRadius() const OVERRIDE;
 
 	//! Sets the light type.
 	/** \param type The new type. */
-	virtual void setLightType(video::E_LIGHT_TYPE type);
+	virtual void setLightType(video::E_LIGHT_TYPE type) OVERRIDE;
 
 	//! Gets the light type.
 	/** \return The current light type. */
-	virtual video::E_LIGHT_TYPE getLightType() const;
+	virtual video::E_LIGHT_TYPE getLightType() const OVERRIDE;
 
 	//! Sets whether this light casts shadows.
 	/** Enabling this flag won't automatically cast shadows, the meshes
 	will still need shadow scene nodes attached. But one can enable or
 	disable distinct lights for shadow casting for performance reasons.
 	\param shadow True if this light shall cast shadows. */
-	virtual void enableCastShadow(bool shadow=true);
+	virtual void enableCastShadow(bool shadow = true) OVERRIDE;
 
 	//! Check whether this light casts shadows.
 	/** \return True if light would cast shadows, else false. */
-	virtual bool getCastShadow() const;
+	virtual bool getCastShadow() const OVERRIDE;
 private:
 
 	video::SLight LightData;

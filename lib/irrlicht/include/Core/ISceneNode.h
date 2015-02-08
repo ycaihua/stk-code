@@ -17,6 +17,12 @@
 #include <list>
 #include "IAttributes.h"
 
+#if !defined(WIN32) && __cplusplus < 201103L
+#define OVERRIDE
+#else
+#define OVERRIDE override
+#endif
+
 namespace irr
 {
 namespace scene

@@ -44,7 +44,7 @@ public:
 	/** All children of this node won't be visible either, when set
 	to true.
 	\param isVisible If the node shall be visible. */
-	virtual void setVisible(bool isVisible) = 0;
+	virtual void setVisible(bool isVisible) OVERRIDE = 0;
 
 	//! Sets the light's radius of influence.
 	/** Outside this radius the light won't lighten geometry and cast no

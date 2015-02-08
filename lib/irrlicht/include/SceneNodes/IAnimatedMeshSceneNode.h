@@ -176,7 +176,7 @@ namespace scene
 		/** \param newParent An optional new parent.
 		\param newManager An optional new scene manager.
 		\return The newly created clone of this node. */
-		virtual ISceneNode* clone(ISceneNode* newParent=0, ISceneManager* newManager=0) = 0;
+		virtual ISceneNode* clone(ISceneNode* newParent = 0, ISceneManager* newManager = 0) OVERRIDE = 0;
 
 	};
 

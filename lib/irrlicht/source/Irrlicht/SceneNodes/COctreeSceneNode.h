@@ -24,13 +24,13 @@ namespace scene
 		//! destructor
 		virtual ~COctreeSceneNode();
 
-		virtual void OnRegisterSceneNode();
+		virtual void OnRegisterSceneNode() OVERRIDE;
 
 		//! renders the node.
-		virtual void render();
+		virtual void render() OVERRIDE;
 
 		//! returns the axis aligned bounding box of this node
-		virtual const core::aabbox3d<f32>& getBoundingBox() const;
+		virtual const core::aabbox3d<f32>& getBoundingBox() const OVERRIDE;
 
 		//! creates the tree
 		bool createTree(IMesh* mesh);
@@ -40,30 +40,30 @@ namespace scene
 		//! This function is needed for inserting the node into the scene hirachy on a
 		//! optimal position for minimizing renderstate changes, but can also be used
 		//! to directly modify the material of a scene node.
-		virtual video::SMaterial& getMaterial(u32 i);
+		virtual video::SMaterial& getMaterial(u32 i) OVERRIDE;
 
 		//! returns amount of materials used by this scene node.
-		virtual u32 getMaterialCount() const;
+		virtual u32 getMaterialCount() const OVERRIDE;
 
 		//! Returns type of the scene node
-		virtual ESCENE_NODE_TYPE getType() const { return ESNT_OCTREE; }
+		virtual ESCENE_NODE_TYPE getType() const OVERRIDE { return ESNT_OCTREE; }
 
 		//! Sets a new mesh to display
-		virtual void setMesh(IMesh* mesh);
+		virtual void setMesh(IMesh* mesh) OVERRIDE;
 
 		//! Get the currently defined mesh for display.
-		virtual IMesh* getMesh(void);
+		virtual IMesh* getMesh(void) OVERRIDE;
 
 		//! Sets if the scene node should not copy the materials of the mesh but use them in a read only style.
-		virtual void setReadOnlyMaterials(bool readonly);
+		virtual void setReadOnlyMaterials(bool readonly) OVERRIDE;
 
 		//! Check if the scene node should not copy the materials of the mesh but use them in a read only style
-		virtual bool isReadOnlyMaterials() const;
+		virtual bool isReadOnlyMaterials() const OVERRIDE;
 
 		//! Removes a child from this scene node.
 		//! Implemented here, to be able to remove the shadow properly, if there is one,
 		//! or to remove attached childs.
-		virtual bool removeChild(ISceneNode* child);
+		virtual bool removeChild(ISceneNode* child) OVERRIDE;
 
 	private:
 
