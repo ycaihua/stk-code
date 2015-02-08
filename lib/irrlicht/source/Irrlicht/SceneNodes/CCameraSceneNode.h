@@ -5,7 +5,7 @@
 #ifndef __C_CAMERA_SCENE_NODE_H_INCLUDED__
 #define __C_CAMERA_SCENE_NODE_H_INCLUDED__
 
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include "SViewFrustum.h"
 
 namespace irr

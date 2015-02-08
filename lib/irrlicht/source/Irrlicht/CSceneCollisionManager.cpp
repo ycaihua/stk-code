@@ -4,7 +4,7 @@
 
 #include "CSceneCollisionManager.h"
 #include <Core/ISceneNode.h>
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include "ITriangleSelector.h"
 #include "SViewFrustum.h"
 

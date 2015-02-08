@@ -44,7 +44,7 @@
 
 #include <Core/ISceneManager.h>
 #include <Core/SColor.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
 

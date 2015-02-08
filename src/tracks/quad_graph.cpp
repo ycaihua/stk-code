@@ -21,7 +21,7 @@
 #include "LinearMath/btTransform.h"
 
 #include <IMesh.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include "graphics/central_settings.hpp"
 #include "config/user_config.hpp"
 #include "graphics/callbacks.hpp"

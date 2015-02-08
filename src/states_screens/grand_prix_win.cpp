@@ -40,7 +40,7 @@
 #include "tracks/track_object_manager.hpp"
 #include "utils/translation.hpp"
 
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <GUI/IGUIEnvironment.h>
 #include <GUI/IGUIImage.h>
 #include <SceneNodes/ILightSceneNode.h>

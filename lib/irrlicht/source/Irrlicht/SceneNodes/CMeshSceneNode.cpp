@@ -6,7 +6,7 @@
 #include "IVideoDriver.h"
 #include <Core/ISceneManager.h>
 #include <Core/S3DVertex.h>
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include "IMeshCache.h"
 #include "IAnimatedMesh.h"
 #include "IMaterialRenderer.h"

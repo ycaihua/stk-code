@@ -6,7 +6,7 @@
 #include "../Octree.h"
 #include <Core/ISceneManager.h>
 #include "IVideoDriver.h"
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include "IMeshCache.h"
 #include "IAnimatedMesh.h"
 #include "IMaterialRenderer.h"

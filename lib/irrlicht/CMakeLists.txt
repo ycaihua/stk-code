@@ -271,7 +271,6 @@ include/SceneParameters.h
 include/IImageLoader.h
 include/IParticleBoxEmitter.h
 include/ICursorControl.h
-include/ICameraSceneNode.h
 include/CVertexBuffer.h
 include/SSharedMeshBuffer.h
 include/IMeshWriter.h

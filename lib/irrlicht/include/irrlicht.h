@@ -59,7 +59,7 @@
 #include <SceneNodes/IBillboardSceneNode.h>
 #include <SceneNodes/IBillboardTextSceneNode.h>
 #include <SceneNodes/IBoneSceneNode.h>
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include "ICursorControl.h"
 #include "IDummyTransformationSceneNode.h"
 #include "IDynamicMeshBuffer.h"

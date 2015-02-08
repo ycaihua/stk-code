@@ -5,7 +5,7 @@
 #include "CParticleSystemSceneNode.h"
 #include "../os.h"
 #include <Core/ISceneManager.h>
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include "IVideoDriver.h"
 
 #include "Particles/CParticleAnimatedMeshSceneNodeEmitter.h"

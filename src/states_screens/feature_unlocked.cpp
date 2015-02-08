@@ -41,7 +41,7 @@
 #include "utils/translation.hpp"
 
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include <Core/ISceneManager.h>

@@ -43,7 +43,7 @@
 #include "scriptengine/script_engine.hpp"
 #include <Core/ISceneManager.h>
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/IBillboardSceneNode.h>
 #include <SceneNodes/IParticleSystemSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>

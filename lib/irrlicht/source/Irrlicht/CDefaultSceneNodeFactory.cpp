@@ -7,7 +7,7 @@
 #include <SceneNodes/ITextSceneNode.h>
 #include <SceneNodes/ITerrainSceneNode.h>
 #include "IDummyTransformationSceneNode.h"
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/IBillboardSceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <SceneNodes/IParticleSystemSceneNode.h>

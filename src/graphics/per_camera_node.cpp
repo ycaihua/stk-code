@@ -19,7 +19,7 @@
 #include "graphics/irr_driver.hpp"
 #include "graphics/per_camera_node.hpp"
 
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <Core/ISceneManager.h>
 #include <SceneNodes/IMeshSceneNode.h>
 
