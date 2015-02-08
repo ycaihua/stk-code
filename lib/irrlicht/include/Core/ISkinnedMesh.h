@@ -9,6 +9,7 @@
 #include <SceneNodes/IBoneSceneNode.h>
 #include <Core/IAnimatedMesh.h>
 #include "SSkinMeshBuffer.h"
+#include <Maths/quaternion.h>
 
 namespace irr
 {
