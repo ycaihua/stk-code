@@ -35,7 +35,7 @@ using namespace irr;
 #include "utils/constants.hpp"
 #include "utils/string_utils.hpp"
 
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include <Core/ITexture.h>
 

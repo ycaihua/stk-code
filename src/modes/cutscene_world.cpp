@@ -42,7 +42,7 @@
 #include "utils/ptr_vector.hpp"
 
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 #include <algorithm>
 #include <string>

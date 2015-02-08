@@ -70,7 +70,7 @@
 #include <IMeshCache.h>
 #include <IMeshManipulator.h>
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 #include <iostream>
 #include <stdexcept>

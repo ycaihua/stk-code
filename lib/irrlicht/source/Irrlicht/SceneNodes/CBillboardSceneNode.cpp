@@ -4,7 +4,7 @@
 
 #include "CBillboardSceneNode.h"
 #include "IVideoDriver.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "ICameraSceneNode.h"
 #include "../os.h"
 

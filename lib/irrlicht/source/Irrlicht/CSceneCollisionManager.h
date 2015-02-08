@@ -6,7 +6,7 @@
 #define __C_SCENE_COLLISION_MANAGER_H_INCLUDED__
 
 #include "ISceneCollisionManager.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "IVideoDriver.h"
 
 namespace irr

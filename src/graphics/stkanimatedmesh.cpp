@@ -1,7 +1,7 @@
 #include "central_settings.hpp"
 #include "graphics/glwrap.hpp"
 #include "graphics/stkanimatedmesh.hpp"
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <IMaterialRenderer.h>
 #include <ISkinnedMesh.h>
 #include "graphics/irr_driver.hpp"

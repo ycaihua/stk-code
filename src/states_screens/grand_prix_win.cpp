@@ -45,7 +45,7 @@
 #include <GUI/IGUIImage.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <Core/SColor.h>
 
 #include <iostream>

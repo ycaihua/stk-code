@@ -22,7 +22,7 @@
 #include "karts/abstract_kart.hpp"
 #include "modes/world.hpp"
 
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <ISceneNode.h>
 #include <ICameraSceneNode.h>
 

@@ -15,7 +15,7 @@ extern bool GLContextDebugBit;
 #include <sys/utsname.h>
 #include <time.h>
 #include <IEventReceiver.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <GUI/IGUIEnvironment.h>
 #include "../os.h"
 #include "../CTimer.h"

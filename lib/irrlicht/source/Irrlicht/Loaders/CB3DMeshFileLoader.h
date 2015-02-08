@@ -12,7 +12,7 @@
 #define __C_B3D_MESH_LOADER_H_INCLUDED__
 
 #include "IMeshLoader.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "../CSkinnedMesh.h"
 #include "IReadFile.h"
 

@@ -4,7 +4,7 @@
 
 #include "CSphereSceneNode.h"
 #include "IVideoDriver.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include <Core/S3DVertex.h>
 #include "../os.h"
 

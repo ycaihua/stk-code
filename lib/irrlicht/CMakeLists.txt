@@ -237,7 +237,6 @@ include/IVideoDriver.h
 include/irrMath.h
 include/ISceneNode.h
 include/irrpack.h
-include/ISceneManager.h
 include/IImageWriter.h
 include/EGUIElementTypes.h
 include/IParticleMeshEmitter.h

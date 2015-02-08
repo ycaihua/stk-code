@@ -19,7 +19,7 @@
 #include "karts/kart_model.hpp"
 
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 #include "config/stk_config.hpp"
 #include "config/user_config.hpp"

@@ -2,7 +2,7 @@
 #define GPUPARTICLES_H
 
 #include "../lib/irrlicht/source/Irrlicht/SceneNodes/CParticleSystemSceneNode.h"
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <SceneNodes/IParticleSystemSceneNode.h>
 
 namespace irr { namespace video{ class ITexture; } }

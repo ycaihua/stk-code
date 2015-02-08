@@ -10,7 +10,7 @@
 #include "CTerrainSceneNode.h"
 #include "../CTerrainTriangleSelector.h"
 #include "IVideoDriver.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "ICameraSceneNode.h"
 #include "SViewFrustum.h"
 #include "irrMath.h"

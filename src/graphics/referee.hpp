@@ -21,7 +21,7 @@
 
 #include <ISceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <IMeshManipulator.h>
 using namespace irr;
 

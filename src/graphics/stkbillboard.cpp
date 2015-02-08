@@ -2,7 +2,7 @@
 #include "graphics/glwrap.hpp"
 #include "graphics/shaders.hpp"
 #include "graphics/irr_driver.hpp"
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 using namespace irr;
 

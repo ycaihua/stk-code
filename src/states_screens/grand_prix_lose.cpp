@@ -42,7 +42,7 @@
 #include "tracks/track_object_manager.hpp"
 #include "utils/translation.hpp"
 
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <Core/SColor.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>

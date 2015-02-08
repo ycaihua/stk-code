@@ -3,7 +3,7 @@
 #include "graphics/irr_driver.hpp"
 #include "graphics/stkmesh.hpp"
 #include "tracks/track.hpp"
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <IMaterialRenderer.h>
 #include "config/user_config.hpp"
 #include "graphics/callbacks.hpp"

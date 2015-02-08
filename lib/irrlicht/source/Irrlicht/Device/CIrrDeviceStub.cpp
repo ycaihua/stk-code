@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CIrrDeviceStub.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "IEventReceiver.h"
 #include "IFileSystem.h"
 #include <GUI/IGUIEnvironment.h>

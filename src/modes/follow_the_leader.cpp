@@ -27,7 +27,7 @@
 #include "tracks/track.hpp"
 #include "utils/translation.hpp"
 
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 //-----------------------------------------------------------------------------
 FollowTheLeaderRace::FollowTheLeaderRace() : LinearWorld()

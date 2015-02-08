@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CDefaultSceneNodeFactory.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include <SceneNodes/ITextSceneNode.h>
 #include <SceneNodes/ITerrainSceneNode.h>
 #include "IDummyTransformationSceneNode.h"

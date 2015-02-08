@@ -33,7 +33,7 @@
 #include "tracks/bezier_curve.hpp"
 #include "tracks/track_object.hpp"
 #include "utils/constants.hpp"
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <SceneNodes/IMeshSceneNode.h>
 
 ThreeDAnimation::ThreeDAnimation(const XMLNode &node, TrackObject* object) : AnimationBase(node)

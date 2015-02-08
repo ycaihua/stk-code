@@ -35,7 +35,7 @@
 #include <ICameraSceneNode.h>
 #include <SceneNodes/IParticleSystemSceneNode.h>
 #include <IParticleBoxEmitter.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <algorithm>
 
 class FadeAwayAffector : public scene::IParticleAffector
