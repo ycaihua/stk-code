@@ -517,6 +517,13 @@ namespace scene
 			return Children;
 		}
 
+		//! Returns a reference to the list of all children.
+		/** \return The list of all children of this node. */
+		std::list<ISceneNode*>& getChildren()
+		{
+			return Children;
+		}
+
 
 		//! Changes the parent of the scene node.
 		/** \param newParent The new parent to be used. */
