@@ -244,7 +244,6 @@ include/SMaterial.h
 include/EDriverFeatures.h
 include/IVideoModeList.h
 include/fast_atof.h
-include/SVertexManipulator.h
 include/IDynamicMeshBuffer.h
 include/SExposedVideoData.h
 include/IReferenceCounted.h
