@@ -12,7 +12,7 @@
 #include "IVideoDriver.h"
 #include <Core/ISceneManager.h>
 #include <SceneNodes/ICameraSceneNode.h>
-#include "SViewFrustum.h"
+#include <Core/SViewFrustum.h>
 #include "irrMath.h"
 #include "../os.h"
 #include <GUI/IGUIFont.h>

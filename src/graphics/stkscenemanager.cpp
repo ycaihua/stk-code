@@ -7,7 +7,7 @@
 #include "stkmeshscenenode.hpp"
 #include "utils/ptr_vector.hpp"
 #include <SceneNodes/ICameraSceneNode.h>
-#include <SViewFrustum.h>
+#include <Core/SViewFrustum.h>
 #include "callbacks.hpp"
 #include "utils/cpp2011.hpp"
 #include "modes/world.hpp"
@@ -20,7 +20,6 @@
 #include <Core/ISceneNode.h>
 
 #include <unordered_map>
-#include <SViewFrustum.h>
 #include <functional>
 
 template<typename T>

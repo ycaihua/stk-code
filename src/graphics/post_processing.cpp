@@ -36,7 +36,7 @@
 #include "utils/profiler.hpp"
 #include "utils/cpp2011.hpp"
 
-#include <SViewFrustum.h>
+#include <Core/SViewFrustum.h>
 
 using namespace video;
 using namespace scene;

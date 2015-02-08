@@ -274,7 +274,6 @@ include/IParticleAnimatedMeshSceneNodeEmitter.h
 include/IMeshCache.h
 include/EMeshWriterEnums.h
 include/EPrimitiveTypes.h
-include/SViewFrustum.h
 include/IXMLReader.h
 include/EHardwareBufferFlags.h
 include/IOSOperator.h

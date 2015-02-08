@@ -5,7 +5,7 @@
 #ifndef __C_OCTREE_H_INCLUDED__
 #define __C_OCTREE_H_INCLUDED__
 
-#include "SViewFrustum.h"
+#include <Core/SViewFrustum.h>
 #include <Core/S3DVertex.h>
 #include <Maths/aabbox3d.h>
 #include "irrArray.h"

@@ -6,7 +6,7 @@
 #include <Core/ISceneNode.h>
 #include <SceneNodes/ICameraSceneNode.h>
 #include "ITriangleSelector.h"
-#include "SViewFrustum.h"
+#include <Core/SViewFrustum.h>
 
 #include "os.h"
 #include "irrMath.h"
