@@ -20,7 +20,7 @@
 #include "items/item.hpp"
 
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 #include "graphics/irr_driver.hpp"
 #include "graphics/lod_node.hpp"

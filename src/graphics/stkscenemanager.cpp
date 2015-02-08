@@ -16,7 +16,7 @@
 #include "utils/profiler.hpp"
 #include "utils/time.hpp"
 
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <ISceneNode.h>
 
 #include <unordered_map>

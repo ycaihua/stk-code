@@ -41,7 +41,7 @@
 #include "tracks/track.hpp"
 #include "tracks/track_object_manager.hpp"
 #include "scriptengine/script_engine.hpp"
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/IBillboardSceneNode.h>

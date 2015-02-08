@@ -44,7 +44,7 @@
 #include <ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 #include <iostream>
 

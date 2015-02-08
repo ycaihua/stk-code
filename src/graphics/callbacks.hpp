@@ -22,7 +22,7 @@
 
 #include <IShaderConstantSetCallBack.h>
 #include <SMaterial.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <ICameraSceneNode.h>
 #include <IMaterialRendererServices.h>
 #include <set>

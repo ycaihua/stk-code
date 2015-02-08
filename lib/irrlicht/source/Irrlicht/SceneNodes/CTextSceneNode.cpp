@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CTextSceneNode.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "IVideoDriver.h"
 #include "ICameraSceneNode.h"
 #include <GUI/IGUISpriteBank.h>

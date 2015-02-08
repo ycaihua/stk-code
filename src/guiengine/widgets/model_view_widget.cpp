@@ -27,7 +27,7 @@
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 using namespace GUIEngine;
 using namespace irr::core;

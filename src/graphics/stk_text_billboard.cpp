@@ -9,7 +9,7 @@
 #include "glwrap.hpp"
 #include <SMesh.h>
 #include <SMeshBuffer.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <ICameraSceneNode.h>
 
 using namespace irr;

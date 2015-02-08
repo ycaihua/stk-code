@@ -50,7 +50,7 @@
 #include "utils/translation.hpp"
 
 #include <ISceneCollisionManager.h>
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 using namespace irr;
 
 #include <algorithm>

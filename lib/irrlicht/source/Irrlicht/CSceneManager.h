@@ -5,7 +5,7 @@
 #ifndef __C_SCENE_MANAGER_H_INCLUDED__
 #define __C_SCENE_MANAGER_H_INCLUDED__
 
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "ISceneNode.h"
 #include "ICursorControl.h"
 #include "irrString.h"

@@ -22,7 +22,7 @@
 #include "graphics/irr_driver.hpp"
 #include "graphics/post_processing.hpp"
 #include "utils/log.hpp"
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 static GLuint generateRTT3D(GLenum target, size_t w, size_t h, size_t d, GLint internalFormat, GLint format, GLint type, unsigned mipmaplevel = 1)
 {

@@ -24,7 +24,7 @@
 #include "config/user_config.hpp"
 #include "karts/abstract_kart.hpp"
 
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 #include <ICameraSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>

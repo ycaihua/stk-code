@@ -25,7 +25,7 @@
 #include "karts/controller/controller.hpp"
 #include "tracks/track.hpp"
 
-#include <ISceneManager.h>
+#include <Core/ISceneManager.h>
 
 #include <iomanip>
 #include <iostream>

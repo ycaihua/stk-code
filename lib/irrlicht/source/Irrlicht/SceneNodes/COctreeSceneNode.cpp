@@ -4,7 +4,7 @@
 
 #include "COctreeSceneNode.h"
 #include "../Octree.h"
-#include "ISceneManager.h"
+#include <Core/ISceneManager.h>
 #include "IVideoDriver.h"
 #include "ICameraSceneNode.h"
 #include "IMeshCache.h"
