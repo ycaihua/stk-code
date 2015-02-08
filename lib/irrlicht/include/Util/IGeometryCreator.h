@@ -7,7 +7,7 @@
 
 #include "IReferenceCounted.h"
 #include "IMesh.h"
-#include "IImage.h"
+#include <Core/IImage.h>
 
 namespace irr
 {

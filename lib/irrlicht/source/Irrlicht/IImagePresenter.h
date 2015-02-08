@@ -5,7 +5,7 @@
 #ifndef __I_IMAGE_PRESENTER_H_INCLUDED__
 #define __I_IMAGE_PRESENTER_H_INCLUDED__
 
-#include "IImage.h"
+#include <Core/IImage.h>
 
 namespace irr
 {

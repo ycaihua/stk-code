@@ -6,7 +6,7 @@
 #define __C_OPEN_GL_TEXTURE_H_INCLUDED__
 
 #include <Core/ITexture.h>
-#include "IImage.h"
+#include <Core/IImage.h>
 
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_OPENGL_
