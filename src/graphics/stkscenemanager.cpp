@@ -6,7 +6,7 @@
 #include "stkanimatedmesh.hpp"
 #include "stkmeshscenenode.hpp"
 #include "utils/ptr_vector.hpp"
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SViewFrustum.h>
 #include "callbacks.hpp"
 #include "utils/cpp2011.hpp"

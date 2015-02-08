@@ -25,7 +25,7 @@
 #include <algorithm>
 #include <IAnimatedMesh.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <Core/ISceneManager.h>
 

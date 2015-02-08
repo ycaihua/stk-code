@@ -25,7 +25,7 @@
 #include <IMesh.h>
 
 #include <string>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 
 
 class TrackObject;

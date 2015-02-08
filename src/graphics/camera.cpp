@@ -38,7 +38,7 @@
 #include "utils/constants.hpp"
 #include "utils/vs.hpp"
 
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include <Core/ISceneManager.h>
 
 AlignedArray<Camera::EndCameraInformation> Camera::m_end_cameras;

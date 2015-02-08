@@ -24,7 +24,7 @@
 
 #include <Core/ISceneManager.h>
 #include <Core/ISceneNode.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 
 IrrDebugDrawer::IrrDebugDrawer()
 {

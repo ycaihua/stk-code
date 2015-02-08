@@ -32,7 +32,7 @@
 
 #include <SParticle.h>
 #include <IParticleAffector.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/IParticleSystemSceneNode.h>
 #include <IParticleBoxEmitter.h>
 #include <Core/ISceneManager.h>

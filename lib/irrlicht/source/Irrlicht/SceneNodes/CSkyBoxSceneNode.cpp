@@ -5,7 +5,7 @@
 #include "CSkyBoxSceneNode.h"
 #include "IVideoDriver.h"
 #include <Core/ISceneManager.h>
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include <Core/S3DVertex.h>
 #include "../os.h"
 

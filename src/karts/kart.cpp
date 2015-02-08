@@ -67,7 +67,7 @@
 #include "utils/vs.hpp"
 #include "utils/profiler.hpp"
 
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <Core/ISceneManager.h>
 
 #include <algorithm> // for min and max

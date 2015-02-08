@@ -25,7 +25,7 @@
 #include "karts/abstract_kart.hpp"
 
 #include <Core/ISceneManager.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 

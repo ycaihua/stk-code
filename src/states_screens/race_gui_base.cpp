@@ -44,7 +44,7 @@
 #include "tracks/track.hpp"
 #include "utils/constants.hpp"
 
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 
 namespace irr
 {

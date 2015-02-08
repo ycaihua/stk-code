@@ -5,7 +5,7 @@
 #include "CBillboardSceneNode.h"
 #include "IVideoDriver.h"
 #include <Core/ISceneManager.h>
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include "../os.h"
 
 namespace irr

@@ -44,7 +44,7 @@
 #include "utils/string_utils.hpp"
 
 #include <Core/ISceneManager.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 #include <Core/ISceneNode.h>
 
 #include <map>

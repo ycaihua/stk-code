@@ -10,7 +10,7 @@
 #include <SMesh.h>
 #include <SMeshBuffer.h>
 #include <Core/ISceneManager.h>
-#include <ICameraSceneNode.h>
+#include <SceneNodes/ICameraSceneNode.h>
 
 using namespace irr;
 

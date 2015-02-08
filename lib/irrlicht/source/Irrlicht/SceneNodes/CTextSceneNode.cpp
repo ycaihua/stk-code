@@ -5,7 +5,7 @@
 #include "CTextSceneNode.h"
 #include <Core/ISceneManager.h>
 #include "IVideoDriver.h"
-#include "ICameraSceneNode.h"
+#include <SceneNodes/ICameraSceneNode.h>
 #include <GUI/IGUISpriteBank.h>
 #include "SMeshBuffer.h"
 #include "../os.h"
