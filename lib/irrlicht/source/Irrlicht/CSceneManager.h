@@ -251,33 +251,6 @@ namespace scene
 		//! \param camera: The new camera which should be active.
 		virtual void setActiveCamera(ICameraSceneNode* camera) OVERRIDE;
 
-		//! Creates a simple ITriangleSelector, based on a mesh.
-		virtual ITriangleSelector* createTriangleSelector(IMesh* mesh, ISceneNode* node) OVERRIDE;
-
-		//! Creates a simple ITriangleSelector, based on an animated mesh scene node.
-		//! Details of the mesh associated with the node will be extracted internally.
-		//! Call ITriangleSelector::update() to have the triangle selector updated based
-		//! on the current frame of the animated mesh scene node.
-		//! \param: The animated mesh scene node from which to build the selector
-		virtual ITriangleSelector* createTriangleSelector(IAnimatedMeshSceneNode* node) OVERRIDE;
-
-		//! Creates a simple ITriangleSelector, based on a mesh.
-		virtual ITriangleSelector* createOctreeTriangleSelector(IMesh* mesh,
-			ISceneNode* node, s32 minimalPolysPerNode) OVERRIDE;
-
-		//! Creates a simple dynamic ITriangleSelector, based on a axis aligned bounding box.
-		virtual ITriangleSelector* createTriangleSelectorFromBoundingBox(
-			ISceneNode* node) OVERRIDE;
-
-		//! Creates a meta triangle selector.
-		virtual IMetaTriangleSelector* createMetaTriangleSelector() OVERRIDE;
-
-		//! Creates a triangle selector which can select triangles from a terrain scene node
-		//! \param: Pointer to the created terrain scene node
-		//! \param: Level of detail, 0 for highest detail.
-		virtual ITriangleSelector* createTerrainTriangleSelector(
-			ITerrainSceneNode* node, s32 LOD = 0) OVERRIDE;
-
 		//! Adds an external mesh loader.
 		virtual void addExternalMeshLoader(IMeshLoader* externalLoader) OVERRIDE;
 

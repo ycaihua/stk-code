@@ -46,11 +46,6 @@
 #include "CDefaultSceneNodeFactory.h"
 
 #include "CSceneCollisionManager.h"
-#include "CTriangleSelector.h"
-#include "COctreeTriangleSelector.h"
-#include "CTriangleBBSelector.h"
-#include "CMetaTriangleSelector.h"
-#include "CTerrainTriangleSelector.h"
 
 #include "CGeometryCreator.h"
 
@@ -1417,64 +1412,6 @@ IMeshManipulator* CSceneManager::getMeshManipulator()
 {
 	return Driver->getMeshManipulator();
 }
-
-
-//! Creates a simple ITriangleSelector, based on a mesh.
-ITriangleSelector* CSceneManager::createTriangleSelector(IMesh* mesh, ISceneNode* node)
-{
-	if (!mesh)
-		return 0;
-
-	return new CTriangleSelector(mesh, node);
-}
-
-
-//! Creates a simple and updatable ITriangleSelector, based on a the mesh owned by an
-//! animated scene node
-ITriangleSelector* CSceneManager::createTriangleSelector(IAnimatedMeshSceneNode* node)
-{
-	if (!node || !node->getMesh())
-		return 0;
-
-	return new CTriangleSelector(node);
-}
-
-
-//! Creates a simple dynamic ITriangleSelector, based on a axis aligned bounding box.
-ITriangleSelector* CSceneManager::createTriangleSelectorFromBoundingBox(ISceneNode* node)
-{
-	if (!node)
-		return 0;
-
-	return new CTriangleBBSelector(node);
-}
-
-
-//! Creates a simple ITriangleSelector, based on a mesh.
-ITriangleSelector* CSceneManager::createOctreeTriangleSelector(IMesh* mesh,
-							ISceneNode* node, s32 minimalPolysPerNode)
-{
-	if (!mesh)
-		return 0;
-
-	return new COctreeTriangleSelector(mesh, node, minimalPolysPerNode);
-}
-
-
-//! Creates a meta triangle selector.
-IMetaTriangleSelector* CSceneManager::createMetaTriangleSelector()
-{
-	return new CMetaTriangleSelector();
-}
-
-
-//! Creates a triangle selector which can select triangles from a terrain scene node
-ITriangleSelector* CSceneManager::createTerrainTriangleSelector(
-	ITerrainSceneNode* node, s32 LOD)
-{
-	return new CTerrainTriangleSelector(node, LOD);
-}
-
 
 
 //! Adds a scene node to the deletion queue.

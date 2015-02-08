@@ -8,7 +8,6 @@
 // go to him.
 
 #include "CTerrainSceneNode.h"
-#include "../CTerrainTriangleSelector.h"
 #include "IVideoDriver.h"
 #include <Core/ISceneManager.h>
 #include <SceneNodes/ICameraSceneNode.h>
@@ -710,12 +709,6 @@ namespace scene
 		}
 
 		RenderBuffer->setDirty(EBT_INDEX);
-
-		if (DynamicSelectorUpdate && TriangleSelector)
-		{
-			CTerrainTriangleSelector* selector = (CTerrainTriangleSelector*)TriangleSelector;
-			selector->setTriangleData(this, -1);
-		}
 	}
 
 
