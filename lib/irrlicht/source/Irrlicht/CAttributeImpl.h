@@ -262,7 +262,7 @@ public:
 		ValueF.push_back(value.LowerRightCorner.Y);
 	}
 
-	CNumbersAttribute(const char* name, core::matrix4 value) :
+	CNumbersAttribute(const char* name, const core::matrix4 &value) :
 		ValueI(), ValueF(), Count(16), IsFloat(true)
 	{
 		Name = name;
@@ -924,7 +924,7 @@ public:
 		}
 	}
 
-	virtual void setMatrix(core::matrix4 value)
+	virtual void setMatrix(const core::matrix4 &value)
 	{
 		reset();
 		if (IsFloat)
@@ -1409,7 +1409,7 @@ class CMatrixAttribute : public CNumbersAttribute
 {
 public:
 
-	CMatrixAttribute(const char* name, core::matrix4 value) : CNumbersAttribute(name, value) { }
+	CMatrixAttribute(const char* name, const core::matrix4 &value) : CNumbersAttribute(name, value) { }
 
 	virtual E_ATTRIBUTE_TYPE getType() const
 	{
