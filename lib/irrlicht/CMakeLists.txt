@@ -228,7 +228,6 @@ include/IParticleAttractionAffector.h
 include/irrAllocator.h
 include/IDummyTransformationSceneNode.h
 include/SSkinMeshBuffer.h
-include/ISceneLoader.h
 include/IrrlichtDevice.h
 include/IMaterialRendererServices.h
 include/IXMLWriter.h

@@ -14,7 +14,6 @@
 #include "IMaterialRenderer.h"
 #include "IReadFile.h"
 #include "IWriteFile.h"
-#include "ISceneLoader.h"
 
 #include "os.h"
 
@@ -152,9 +151,6 @@ CSceneManager::~CSceneManager()
 	u32 i;
 	for (i=0; i<MeshLoaderList.size(); ++i)
 		MeshLoaderList[i]->drop();
-
-	for (i=0; i<SceneLoaderList.size(); ++i)
-		SceneLoaderList[i]->drop();
 
 	if (ActiveCamera)
 		ActiveCamera->drop();
@@ -1391,18 +1387,6 @@ IMeshLoader* CSceneManager::getMeshLoader(u32 index) const
 	else
 		return 0;
 }
-
-
-//! Adds an external scene loader.
-void CSceneManager::addExternalSceneLoader(ISceneLoader* externalLoader)
-{
-	if (!externalLoader)
-		return;
-
-	externalLoader->grab();
-	SceneLoaderList.push_back(externalLoader);
-}
-
 
 //! Returns the number of scene loaders
 u32 CSceneManager::getSceneLoaderCount() const

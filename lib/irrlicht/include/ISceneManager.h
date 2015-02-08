@@ -1117,15 +1117,6 @@ namespace scene
 		\return A pointer to the specified loader, 0 if the index is incorrect. */
 		virtual IMeshLoader* getMeshLoader(u32 index) const = 0;
 
-		//! Adds an external scene loader for extending the engine with new file formats.
-		/** If you want the engine to be extended with
-		file formats it currently is not able to load (e.g. .vrml), just implement
-		the ISceneLoader interface in your loading class and add it with this method.
-		Using this method it is also possible to override the built-in scene loaders
-		with newer or updated versions without the need to recompile the engine.
-		\param externalLoader: Implementation of a new mesh loader. */
-		virtual void addExternalSceneLoader(ISceneLoader* externalLoader) = 0;
-
 		//! Returns the number of scene loaders supported by Irrlicht at this time
 		virtual u32 getSceneLoaderCount() const = 0;
 
