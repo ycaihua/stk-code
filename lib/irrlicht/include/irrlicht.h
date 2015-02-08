@@ -129,7 +129,7 @@
 #include "ISceneNodeFactory.h"
 #include "ISceneUserDataSerializer.h"
 #include "IShaderConstantSetCallBack.h"
-#include "ISkinnedMesh.h"
+#include <Core/ISkinnedMesh.h>
 #include <SceneNodes/ITerrainSceneNode.h>
 #include <SceneNodes/ITextSceneNode.h>
 #include <Core/ITexture.h>
