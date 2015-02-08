@@ -241,7 +241,6 @@ include/IImageWriter.h
 include/EGUIElementTypes.h
 include/IParticleMeshEmitter.h
 include/CIndexBuffer.h
-include/IAnimatedMesh.h
 include/SMaterial.h
 include/EDriverFeatures.h
 include/IVideoModeList.h

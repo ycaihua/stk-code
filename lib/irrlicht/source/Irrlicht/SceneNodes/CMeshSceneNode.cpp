@@ -8,7 +8,7 @@
 #include <Core/S3DVertex.h>
 #include <SceneNodes/ICameraSceneNode.h>
 #include "IMeshCache.h"
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include "IMaterialRenderer.h"
 #include "IFileSystem.h"
 

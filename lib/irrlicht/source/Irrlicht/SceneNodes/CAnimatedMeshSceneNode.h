@@ -6,7 +6,7 @@
 #define __C_ANIMATED_MESH_SCENE_NODE_H_INCLUDED__
 
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 
 #include <Maths/matrix4.h>
 

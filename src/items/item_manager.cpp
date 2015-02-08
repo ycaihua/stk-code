@@ -36,7 +36,7 @@
 #include "utils/string_utils.hpp"
 
 #include <IMesh.h>
-#include <IAnimatedMesh.h>
+#include <Core/IAnimatedMesh.h>
 
 std::vector<scene::IMesh *> ItemManager::m_item_mesh;
 std::vector<scene::IMesh *> ItemManager::m_item_lowres_mesh;

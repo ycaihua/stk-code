@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CMeshCache.h"
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include "IMesh.h"
 
 namespace irr

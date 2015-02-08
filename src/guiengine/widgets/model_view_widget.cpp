@@ -23,7 +23,7 @@
 #include "graphics/post_processing.hpp"
 #include "graphics/rtts.hpp"
 #include <algorithm>
-#include <IAnimatedMesh.h>
+#include <Core/IAnimatedMesh.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <SceneNodes/ICameraSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>

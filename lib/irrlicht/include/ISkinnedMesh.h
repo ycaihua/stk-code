@@ -7,7 +7,7 @@
 
 #include "irrArray.h"
 #include <SceneNodes/IBoneSceneNode.h>
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include "SSkinMeshBuffer.h"
 
 namespace irr

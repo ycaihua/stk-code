@@ -8,7 +8,7 @@
 #include "IVideoDriver.h"
 #include <SceneNodes/ICameraSceneNode.h>
 #include "IMeshCache.h"
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include "IMaterialRenderer.h"
 #include "../os.h"
 
