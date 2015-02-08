@@ -104,12 +104,6 @@ public:
 	//! Get box from which the particles are emitted.
 	virtual const core::aabbox3df& getBox() const { return Box; }
 
-	//! Writes attributes of the object.
-	virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-	//! Reads attributes of the object.
-	virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 private:
 
 	core::array<SParticle> Particles;

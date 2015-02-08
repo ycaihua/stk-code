@@ -578,51 +578,6 @@ s32 CGUIStaticText::getTextWidth() const
 }
 
 
-//! Writes attributes of the element.
-//! Implement this to expose the attributes of your element for
-//! scripting languages, editors, debuggers or xml serialization purposes.
-void CGUIStaticText::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const
-{
-	IGUIStaticText::serializeAttributes(out,options);
-
-	out->addBool	("Border",              Border);
-	out->addBool	("OverrideColorEnabled",OverrideColorEnabled);
-	out->addBool	("OverrideBGColorEnabled",OverrideBGColorEnabled);
-	out->addBool	("WordWrap",		WordWrap);
-	out->addBool	("Background",          Background);
-	out->addBool	("RightToLeft",         RightToLeft);
-	out->addBool	("RestrainTextInside",  RestrainTextInside);
-	out->addColor	("OverrideColor",       OverrideColor);
-	out->addColor	("BGColor",       	BGColor);
-	out->addEnum	("HTextAlign",          HAlign, GUIAlignmentNames);
-	out->addEnum	("VTextAlign",          VAlign, GUIAlignmentNames);
-
-	// out->addFont ("OverrideFont",	OverrideFont);
-}
-
-
-//! Reads attributes of the element
-void CGUIStaticText::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0)
-{
-	IGUIStaticText::deserializeAttributes(in,options);
-
-	Border = in->getAttributeAsBool("Border");
-	enableOverrideColor(in->getAttributeAsBool("OverrideColorEnabled"));
-	OverrideBGColorEnabled = in->getAttributeAsBool("OverrideBGColorEnabled");
-	setWordWrap(in->getAttributeAsBool("WordWrap"));
-	Background = in->getAttributeAsBool("Background");
-	RightToLeft = in->getAttributeAsBool("RightToLeft");
-	RestrainTextInside = in->getAttributeAsBool("RestrainTextInside");
-	OverrideColor = in->getAttributeAsColor("OverrideColor");
-	BGColor = in->getAttributeAsColor("BGColor");
-
-	setTextAlignment( (EGUI_ALIGNMENT) in->getAttributeAsEnumeration("HTextAlign", GUIAlignmentNames),
-                      (EGUI_ALIGNMENT) in->getAttributeAsEnumeration("VTextAlign", GUIAlignmentNames));
-
-	// OverrideFont = in->getAttributeAsFont("OverrideFont");
-}
-
-
 } // end namespace gui
 } // end namespace irr
 

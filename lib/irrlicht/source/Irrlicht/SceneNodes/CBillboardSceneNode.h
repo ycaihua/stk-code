@@ -67,12 +67,6 @@ public:
 	virtual void getColor(video::SColor& topColor,
 			video::SColor& bottomColor) const;
 
-	//! Writes attributes of the scene node.
-	virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const;
-
-	//! Reads attributes of the scene node.
-	virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0);
-
 	//! Returns type of the scene node
 	virtual ESCENE_NODE_TYPE getType() const { return ESNT_BILLBOARD; }
 

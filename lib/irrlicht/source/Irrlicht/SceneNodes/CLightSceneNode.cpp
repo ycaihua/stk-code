@@ -201,55 +201,6 @@ void CLightSceneNode::doLightRecalc()
 	}
 }
 
-
-//! Writes attributes of the scene node.
-void CLightSceneNode::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-{
-	ILightSceneNode::serializeAttributes(out, options);
-
-	out->addColorf	("AmbientColor", LightData.AmbientColor);
-	out->addColorf	("DiffuseColor", LightData.DiffuseColor);
-	out->addColorf	("SpecularColor", LightData.SpecularColor);
-	out->addVector3d("Attenuation", LightData.Attenuation);
-	out->addFloat	("Radius", LightData.Radius);
-	out->addFloat	("OuterCone", LightData.OuterCone);
-	out->addFloat	("InnerCone", LightData.InnerCone);
-	out->addFloat	("Falloff", LightData.Falloff);
-	out->addBool	("CastShadows", LightData.CastShadows);
-	out->addEnum	("LightType", LightData.Type, video::LightTypeNames);
-}
-
-//! Reads attributes of the scene node.
-void CLightSceneNode::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-{
-	LightData.AmbientColor =	in->getAttributeAsColorf("AmbientColor");
-	LightData.DiffuseColor =	in->getAttributeAsColorf("DiffuseColor");
-	LightData.SpecularColor =	in->getAttributeAsColorf("SpecularColor");
-
-	//TODO: clearify Radius and Linear Attenuation
-#if 0
-	setRadius ( in->getAttributeAsFloat("Radius") );
-#else
-	LightData.Radius = in->getAttributeAsFloat("Radius");
-#endif
-
-	if (in->existsAttribute("Attenuation")) // might not exist in older files
-		LightData.Attenuation =	in->getAttributeAsVector3d("Attenuation");
-
-	if (in->existsAttribute("OuterCone")) // might not exist in older files
-		LightData.OuterCone =	in->getAttributeAsFloat("OuterCone");
-	if (in->existsAttribute("InnerCone")) // might not exist in older files
-		LightData.InnerCone =	in->getAttributeAsFloat("InnerCone");
-	if (in->existsAttribute("Falloff")) // might not exist in older files
-		LightData.Falloff =	in->getAttributeAsFloat("Falloff");
-	LightData.CastShadows =		in->getAttributeAsBool("CastShadows");
-	LightData.Type =		(video::E_LIGHT_TYPE)in->getAttributeAsEnumeration("LightType", video::LightTypeNames);
-
-	doLightRecalc ();
-
-	ILightSceneNode::deserializeAttributes(in, options);
-}
-
 //! Creates a clone of this scene node and its children.
 ISceneNode* CLightSceneNode::clone(ISceneNode* newParent, ISceneManager* newManager)
 {

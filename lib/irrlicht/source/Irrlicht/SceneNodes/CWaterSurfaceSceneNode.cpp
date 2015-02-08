@@ -86,45 +86,6 @@ void CWaterSurfaceSceneNode::setMesh(IMesh* mesh)
 //	Mesh->setHardwareMappingHint(scene::EHM_STREAM, scene::EBT_VERTEX);
 }
 
-
-//! Writes attributes of the scene node.
-void CWaterSurfaceSceneNode::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-{
-	out->addFloat("WaveLength", WaveLength);
-	out->addFloat("WaveSpeed",  WaveSpeed);
-	out->addFloat("WaveHeight", WaveHeight);
-
-	CMeshSceneNode::serializeAttributes(out, options);
-	// serialize original mesh
-	out->setAttribute("Mesh", SceneManager->getMeshCache()->getMeshName(OriginalMesh).getPath().c_str());
-}
-
-
-//! Reads attributes of the scene node.
-void CWaterSurfaceSceneNode::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-{
-	WaveLength = in->getAttributeAsFloat("WaveLength");
-	WaveSpeed  = in->getAttributeAsFloat("WaveSpeed");
-	WaveHeight = in->getAttributeAsFloat("WaveHeight");
-
-	if (Mesh)
-	{
-		Mesh->drop();
-		Mesh = OriginalMesh;
-		OriginalMesh = 0;
-	}
-	// deserialize original mesh
-	CMeshSceneNode::deserializeAttributes(in, options);
-
-	if (Mesh)
-	{
-		IMesh* clone = SceneManager->getMeshManipulator()->createMeshCopy(Mesh);
-		OriginalMesh = Mesh;
-		Mesh = clone;
-	}
-}
-
-
 f32 CWaterSurfaceSceneNode::addWave(const core::vector3df &source, f32 time) const
 {
 	return source.Y +

@@ -374,27 +374,6 @@ namespace scene
 		//! Returns a scene node animator factory by index
 		virtual ISceneNodeAnimatorFactory* getSceneNodeAnimatorFactory(u32 index);
 
-		//! Saves the current scene into a file.
-		virtual bool saveScene(const io::path& filename, ISceneUserDataSerializer* userDataSerializer=0, ISceneNode* node=0);
-
-		//! Saves the current scene into a file.
-		virtual bool saveScene(io::IWriteFile* file, ISceneUserDataSerializer* userDataSerializer=0, ISceneNode* node=0);
-
-		//! Saves the current scene into a file.
-		virtual bool saveScene(io::IXMLWriter* writer, const io::path& currentPath, ISceneUserDataSerializer* userDataSerializer=0, ISceneNode* node=0);
-
-		//! Loads a scene. Note that the current scene is not cleared before.
-		virtual bool loadScene(const io::path& filename, ISceneUserDataSerializer* userDataSerializer=0, ISceneNode* rootNode=0);
-
-		//! Loads a scene. Note that the current scene is not cleared before.
-		virtual bool loadScene(io::IReadFile* file, ISceneUserDataSerializer* userDataSerializer=0, ISceneNode* rootNode=0);
-
-		//! Writes attributes of the scene node.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const;
-
-		//! Reads attributes of the scene node.
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0);
-
 		//! Returns a mesh writer implementation if available
 		virtual IMeshWriter* createMeshWriter(EMESH_WRITER_TYPE type);
 
@@ -426,9 +405,6 @@ namespace scene
 
 		//! clears the deletion list
 		void clearDeletionList();
-
-		//! writes a scene node
-		void writeSceneNode(io::IXMLWriter* writer, ISceneNode* node, ISceneUserDataSerializer* userDataSerializer, const fschar_t* currentPath=0, bool init=false);
 
 		struct DefaultNodeEntry
 		{

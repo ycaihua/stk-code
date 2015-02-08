@@ -520,45 +520,6 @@ u32 COctreeSceneNode::getMaterialCount() const
 	return Materials.size();
 }
 
-
-//! Writes attributes of the scene node.
-void COctreeSceneNode::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-{
-	ISceneNode::serializeAttributes(out, options);
-
-	out->addInt("MinimalPolysPerNode", MinimalPolysPerNode);
-	out->addString("Mesh", MeshName.c_str());
-}
-
-
-//! Reads attributes of the scene node.
-void COctreeSceneNode::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-{
-	const s32 oldMinimal = MinimalPolysPerNode;
-
-	MinimalPolysPerNode = in->getAttributeAsInt("MinimalPolysPerNode");
-	io::path newMeshStr = in->getAttributeAsString("Mesh");
-
-	IMesh* newMesh = 0;
-
-	if (newMeshStr == "")
-		newMeshStr = MeshName;
-
-	IAnimatedMesh* newAnimatedMesh = SceneManager->getMesh(newMeshStr.c_str());
-
-	if (newAnimatedMesh)
-		newMesh = newAnimatedMesh->getMesh(0);
-
-	if (newMesh && ((MeshName != newMeshStr) || (MinimalPolysPerNode != oldMinimal)))
-	{
-		// recalculate tree
-		createTree(newMesh);
-	}
-
-	ISceneNode::deserializeAttributes(in, options);
-}
-
-
 void COctreeSceneNode::deleteTree()
 {
 	delete StdOctree;

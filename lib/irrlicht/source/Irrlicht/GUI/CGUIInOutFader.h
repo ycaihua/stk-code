@@ -42,12 +42,6 @@ namespace gui
 		//! Returns if the fade in or out process is done.
 		virtual bool isReady() const;
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 	private:
 
 		enum EFadeAction

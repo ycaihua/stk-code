@@ -46,12 +46,6 @@ namespace gui
 		//! Modals are infinite so every point is inside
 		virtual bool isPointInside(const core::position2d<s32>& point) const;
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
     protected:
         virtual bool canTakeFocus(IGUIElement* target) const;
 

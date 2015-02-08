@@ -299,27 +299,6 @@ const wchar_t* CGUISpinBox::getText() const
 }
 
 
-//! Writes attributes of the element.
-void CGUISpinBox::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-{
-	IGUIElement::serializeAttributes(out, options);
-	out->addFloat("Min", getMin());
-	out->addFloat("Max", getMax());
-	out->addFloat("Step", getStepSize());
-	out->addInt("DecimalPlaces", DecimalPlaces);
-}
-
-
-//! Reads attributes of the element
-void CGUISpinBox::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-{
-	IGUIElement::deserializeAttributes(in, options);
-	setRange(in->getAttributeAsFloat("Min"), in->getAttributeAsFloat("Max"));
-	setStepSize(in->getAttributeAsFloat("Step"));
-	setDecimalPlaces(in->getAttributeAsInt("DecimalPlaces"));
-}
-
-
 } // end namespace gui
 } // end namespace irr
 

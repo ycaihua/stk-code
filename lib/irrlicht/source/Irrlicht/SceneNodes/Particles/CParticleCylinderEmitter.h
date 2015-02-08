@@ -128,12 +128,6 @@ public:
 	//!	Maximal random derivation from the direction
 	virtual s32 getMaxAngleDegrees() const { return MaxAngleDegrees; }
 
-	//! Writes attributes of the object.
-	virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-	//! Reads attributes of the object.
-	virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 private:
 
 	core::array<SParticle> Particles;

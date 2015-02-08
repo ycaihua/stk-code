@@ -52,12 +52,6 @@ namespace gui
 		//! Returns true if the image is using the alpha channel, false if not
 		virtual bool isAlphaChannelUsed() const;
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 	private:
 		video::ITexture* Texture;
 		video::SColor Color;

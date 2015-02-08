@@ -220,36 +220,6 @@ public:
 	//! Adds a GUI Element by its name
 	virtual IGUIElement* addGUIElement(const c8* elementName, IGUIElement* parent=0);
 
-	//! Saves the current gui into a file.
-	/** \param filename: Name of the file.
-	\param start: The element to start saving from.
-	if not specified, the root element will be used */
-	virtual bool saveGUI( const io::path& filename, IGUIElement* start=0);
-
-	//! Saves the current gui into a file.
-	/** \param file: The file to save the GUI to.
-	\param start: The element to start saving from.
-	if not specified, the root element will be used */
-	virtual bool saveGUI(io::IWriteFile* file, IGUIElement* start=0);
-
-	//! Loads the gui. Note that the current gui is not cleared before.
-	/** \param filename: Name of the file.
-	\param parent: The parent of all loaded GUI elements,
-	if not specified, the root element will be used */
-	virtual bool loadGUI(const io::path& filename, IGUIElement* parent=0);
-
-	//! Loads the gui. Note that the current gui is not cleared before.
-	/** \param file: IReadFile to load the GUI from
-	\param parent: The parent of all loaded GUI elements,
-	if not specified, the root element will be used */
-	virtual bool loadGUI(io::IReadFile* file, IGUIElement* parent=0);
-
-	//! writes an element
-	virtual void writeGUIElement(io::IXMLWriter* writer, IGUIElement* node);
-
-	//! reads an element
-	virtual void readGUIElement(io::IXMLReader* reader, IGUIElement* node);
-
 private:
 
 	IGUIElement* getNextElement(bool reverse=false, bool group=false);

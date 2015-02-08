@@ -43,9 +43,6 @@ namespace gui
 		//! draws the element and its children
 		virtual void draw();
 
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const;
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0);
-
 	protected:
 
 		//! fills the listbox with files.

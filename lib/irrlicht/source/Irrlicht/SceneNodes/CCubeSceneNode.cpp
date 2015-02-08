@@ -152,30 +152,6 @@ u32 CCubeSceneNode::getMaterialCount() const
 }
 
 
-//! Writes attributes of the scene node.
-void CCubeSceneNode::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-{
-	ISceneNode::serializeAttributes(out, options);
-
-	out->addFloat("Size", Size);
-}
-
-
-//! Reads attributes of the scene node.
-void CCubeSceneNode::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-{
-	f32 newSize = in->getAttributeAsFloat("Size");
-	newSize = core::max_(newSize, 0.0001f);
-	if (newSize != Size)
-	{
-		Size = newSize;
-		setSize();
-	}
-
-	ISceneNode::deserializeAttributes(in, options);
-}
-
-
 //! Creates a clone of this scene node and its children.
 ISceneNode* CCubeSceneNode::clone(ISceneNode* newParent, ISceneManager* newManager)
 {
