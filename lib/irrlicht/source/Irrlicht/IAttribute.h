@@ -76,7 +76,7 @@ public:
 	virtual void setPosition(core::position2di v)	{};
 	virtual void setRect(core::rect<s32> v)		{};
 	virtual void setQuaternion(core::quaternion v) {};
-	virtual void setMatrix(core::matrix4 v) {};
+	virtual void setMatrix(const core::matrix4 &v) {};
 	virtual void setTriangle(core::triangle3df v) {};
 	virtual void setVector2d(core::vector2df v) {};
 	virtual void setVector2d(core::vector2di v) {};
