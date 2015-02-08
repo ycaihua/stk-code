@@ -106,7 +106,7 @@
 #include <Core/IMeshBuffer.h>
 #include "IMeshCache.h"
 #include "IMeshLoader.h"
-#include "IMeshManipulator.h"
+#include <Util/IMeshManipulator.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include "IMeshWriter.h"
 #include "IMetaTriangleSelector.h"

@@ -5,7 +5,7 @@
 #ifndef __C_MESH_MANIPULATOR_H_INCLUDED__
 #define __C_MESH_MANIPULATOR_H_INCLUDED__
 
-#include "IMeshManipulator.h"
+#include <Util/IMeshManipulator.h>
 
 namespace irr
 {

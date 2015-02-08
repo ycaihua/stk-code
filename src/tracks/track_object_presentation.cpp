@@ -47,7 +47,7 @@
 #include <SceneNodes/IBillboardSceneNode.h>
 #include <SceneNodes/IParticleSystemSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
-#include <IMeshManipulator.h>
+#include <Util/IMeshManipulator.h>
 
 // ----------------------------------------------------------------------------
 
