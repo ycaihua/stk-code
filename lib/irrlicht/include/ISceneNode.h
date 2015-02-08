@@ -603,64 +603,6 @@ namespace scene
 			return ESNT_UNKNOWN;
 		}
 
-
-		//! Writes attributes of the scene node.
-		/** Implement this to expose the attributes of your scene node
-		for scripting languages, editors, debuggers or xml
-		serialization purposes.
-		\param out The attribute container to write into.
-		\param options Additional options which might influence the
-		serialization. */
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const
-		{
-			if (!out)
-				return;
-			out->addString	("Name", Name.c_str());
-			out->addInt	("Id", ID );
-
-			out->addVector3d("Position", getPosition() );
-			out->addVector3d("Rotation", getRotation() );
-			out->addVector3d("Scale", getScale() );
-
-			out->addBool	("Visible", IsVisible );
-			out->addInt	("AutomaticCulling", AutomaticCullingState);
-			out->addInt	("DebugDataVisible", DebugDataVisible );
-			out->addBool	("IsDebugObject", IsDebugObject );
-		}
-
-
-		//! Reads attributes of the scene node.
-		/** Implement this to set the attributes of your scene node for
-		scripting languages, editors, debuggers or xml deserialization
-		purposes.
-		\param in The attribute container to read from.
-		\param options Additional options which might influence the
-		deserialization. */
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0)
-		{
-			if (!in)
-				return;
-			Name = in->getAttributeAsString("Name");
-			ID = in->getAttributeAsInt("Id");
-
-			setPosition(in->getAttributeAsVector3d("Position"));
-			setRotation(in->getAttributeAsVector3d("Rotation"));
-			setScale(in->getAttributeAsVector3d("Scale"));
-
-			IsVisible = in->getAttributeAsBool("Visible");
-			s32 tmpState = in->getAttributeAsEnumeration("AutomaticCulling",
-					scene::AutomaticCullingNames);
-			if (tmpState != -1)
-				AutomaticCullingState = (u32)tmpState;
-			else
-				AutomaticCullingState = in->getAttributeAsInt("AutomaticCulling");
-
-			DebugDataVisible = in->getAttributeAsInt("DebugDataVisible");
-			IsDebugObject = in->getAttributeAsBool("IsDebugObject");
-
-			updateAbsolutePosition();
-		}
-
 		//! Creates a clone of this scene node and its children.
 		/** \param newParent An optional new parent.
 		\param newManager An optional new scene manager.

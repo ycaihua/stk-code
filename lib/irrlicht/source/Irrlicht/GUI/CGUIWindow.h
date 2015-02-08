@@ -66,12 +66,6 @@ namespace gui
 		//! Returns the rectangle of the drawable area (without border and without titlebar)
 		virtual core::rect<s32> getClientRect() const;
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 	protected:
 
 		void updateClientRect();

@@ -119,12 +119,6 @@ namespace gui
 		//! Updates the absolute position, splits text if required
 		virtual void updateAbsolutePosition();
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 	protected:
 		//! Breaks the single text line.
 		void breakText();

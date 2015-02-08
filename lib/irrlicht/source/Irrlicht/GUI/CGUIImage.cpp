@@ -130,32 +130,6 @@ bool CGUIImage::isAlphaChannelUsed() const
 	return UseAlphaChannel;
 }
 
-
-//! Writes attributes of the element.
-void CGUIImage::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const
-{
-	IGUIImage::serializeAttributes(out,options);
-
-	out->addTexture	("Texture", Texture);
-	out->addBool	("UseAlphaChannel", UseAlphaChannel);
-	out->addColor	("Color", Color);
-	out->addBool	("ScaleImage", ScaleImage);
-
-}
-
-
-//! Reads attributes of the element
-void CGUIImage::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0)
-{
-	IGUIImage::deserializeAttributes(in,options);
-
-	setImage(in->getAttributeAsTexture("Texture"));
-	setUseAlphaChannel(in->getAttributeAsBool("UseAlphaChannel"));
-	setColor(in->getAttributeAsColor("Color"));
-	setScaleImage(in->getAttributeAsBool("ScaleImage"));
-}
-
-
 } // end namespace gui
 } // end namespace irr
 

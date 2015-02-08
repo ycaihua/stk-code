@@ -30,20 +30,6 @@ namespace irr
 		}
 
 
-		void CParticleScaleAffector::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-		{
-			out->addFloat("ScaleToWidth", ScaleTo.Width);
-			out->addFloat("ScaleToHeight", ScaleTo.Height);
-		}
-
-
-		void CParticleScaleAffector::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-		{
-			ScaleTo.Width = in->getAttributeAsFloat("ScaleToWidth");
-			ScaleTo.Height = in->getAttributeAsFloat("ScaleToHeight");
-		}
-
-
 		E_PARTICLE_AFFECTOR_TYPE CParticleScaleAffector::getType() const
 		{
 			return scene::EPAT_SCALE;

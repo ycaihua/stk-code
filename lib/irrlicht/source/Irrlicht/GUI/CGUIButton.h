@@ -99,12 +99,6 @@ namespace gui
 		//! Checks whether the button scales the used images
 		virtual bool isScalingImage() const;
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 	private:
 
 		struct ButtonSprite

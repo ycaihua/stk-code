@@ -151,27 +151,6 @@ void CGUIInOutFader::fadeOut(u32 time)
 }
 
 
-//! Writes attributes of the element.
-void CGUIInOutFader::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const
-{
-	IGUIInOutFader::serializeAttributes(out,options);
-
-	out->addColor	("FullColor",		FullColor);
-	out->addColor	("TransColor",		TransColor);
-
-}
-
-
-//! Reads attributes of the element
-void CGUIInOutFader::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0)
-{
-	IGUIInOutFader::deserializeAttributes(in,options);
-
-	FullColor  = in->getAttributeAsColor("FullColor");
-	TransColor = in->getAttributeAsColor("TransColor");
-}
-
-
 } // end namespace gui
 } // end namespace irr
 

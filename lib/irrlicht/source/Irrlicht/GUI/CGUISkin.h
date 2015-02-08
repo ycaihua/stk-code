@@ -214,16 +214,6 @@ namespace gui
 		//! get the type of this skin
 		virtual EGUI_SKIN_TYPE getType() const;
 
-		//! Writes attributes of the object.
-		//! Implement this to expose the attributes of your scene node animator for
-		//! scripting languages, editors, debuggers or xml serialization purposes.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const;
-
-		//! Reads attributes of the object.
-		//! Implement this to set the attributes of your scene node animator for
-		//! scripting languages, editors, debuggers or xml deserialization purposes.
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0);
-
         virtual void draw2DImage(const video::ITexture* texture, const core::rect<s32>& destRect,
             const core::rect<s32>& sourceRect, const core::rect<s32>* clipRect,
             const video::SColor* const colors, bool useAlphaChannelOfTexture);

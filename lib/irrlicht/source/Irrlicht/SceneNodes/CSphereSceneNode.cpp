@@ -103,45 +103,6 @@ u32 CSphereSceneNode::getMaterialCount() const
 	return 1;
 }
 
-
-//! Writes attributes of the scene node.
-void CSphereSceneNode::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-{
-	ISceneNode::serializeAttributes(out, options);
-
-	out->addFloat("Radius", Radius);
-	out->addInt("PolyCountX", PolyCountX);
-	out->addInt("PolyCountY", PolyCountY);
-}
-
-
-//! Reads attributes of the scene node.
-void CSphereSceneNode::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-{
-	f32 oldRadius = Radius;
-	u32 oldPolyCountX = PolyCountX;
-	u32 oldPolyCountY = PolyCountY;
-
-	Radius = in->getAttributeAsFloat("Radius");
-	PolyCountX = in->getAttributeAsInt("PolyCountX");
-	PolyCountY = in->getAttributeAsInt("PolyCountY");
-	// legacy values read for compatibility with older versions
-	u32 polyCount = in->getAttributeAsInt("PolyCount");
-	if (PolyCountX ==0 && PolyCountY == 0)
-		PolyCountX = PolyCountY = polyCount;
-
-	Radius = core::max_(Radius, 0.0001f);
-
-	if ( !core::equals(Radius, oldRadius) || PolyCountX != oldPolyCountX || PolyCountY != oldPolyCountY)
-	{
-		if (Mesh)
-			Mesh->drop();
-		Mesh = SceneManager->getGeometryCreator()->createSphereMesh(Radius, PolyCountX, PolyCountY);
-	}
-
-	ISceneNode::deserializeAttributes(in, options);
-}
-
 //! Creates a clone of this scene node and its children.
 ISceneNode* CSphereSceneNode::clone(ISceneNode* newParent, ISceneManager* newManager)
 {

@@ -88,12 +88,6 @@ namespace gui
 		//! Update the position and size of the listbox, and update the scrollbar
 		virtual void updateAbsolutePosition();
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 		//! set all item colors at given index to color
 		virtual void setItemOverrideColor(u32 index, video::SColor color);
 

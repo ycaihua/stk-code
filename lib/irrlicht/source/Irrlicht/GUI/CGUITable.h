@@ -143,16 +143,6 @@ namespace gui
 		//! Get the flags, as defined in EGUI_TABLE_DRAW_FLAGS, which influence the layout
 		virtual s32 getDrawFlags() const;
 
-		//! Writes attributes of the object.
-		//! Implement this to expose the attributes of your scene node animator for
-		//! scripting languages, editors, debuggers or xml serialization purposes.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const;
-
-		//! Reads attributes of the object.
-		//! Implement this to set the attributes of your scene node animator for
-		//! scripting languages, editors, debuggers or xml deserialization purposes.
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0);
-
 	protected:
 		virtual void refreshControls();
 		virtual void checkScrollbars();

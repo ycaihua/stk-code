@@ -1390,60 +1390,6 @@ namespace scene
 	}
 
 
-	//! Writes attributes of the scene node.
-	void CTerrainSceneNode::serializeAttributes(io::IAttributes* out,
-				io::SAttributeReadWriteOptions* options) const
-	{
-		ISceneNode::serializeAttributes(out, options);
-
-		out->addString("Heightmap", HeightmapFile.c_str());
-		out->addFloat("TextureScale1", TCoordScale1);
-		out->addFloat("TextureScale2", TCoordScale2);
-		out->addInt("SmoothFactor", SmoothFactor);
-	}
-
-
-	//! Reads attributes of the scene node.
-	void CTerrainSceneNode::deserializeAttributes(io::IAttributes* in,
-			io::SAttributeReadWriteOptions* options)
-	{
-		io::path newHeightmap = in->getAttributeAsString("Heightmap");
-		f32 tcoordScale1 = in->getAttributeAsFloat("TextureScale1");
-		f32 tcoordScale2 = in->getAttributeAsFloat("TextureScale2");
-		s32 smoothFactor = in->getAttributeAsInt("SmoothFactor");
-
-		// set possible new heightmap
-
-		if (newHeightmap.size() != 0 && newHeightmap != HeightmapFile)
-		{
-			io::IReadFile* file = FileSystem->createAndOpenFile(newHeightmap.c_str());
-			if (file)
-			{
-				loadHeightMap(file, video::SColor(255,255,255,255), smoothFactor);
-				file->drop();
-			}
-			else
-				os::Printer::log("could not open heightmap", newHeightmap.c_str());
-		}
-
-		// set possible new scale
-
-		if (core::equals(tcoordScale1, 0.f))
-			tcoordScale1 = 1.0f;
-
-		if (core::equals(tcoordScale2, 0.f))
-			tcoordScale2 = 1.0f;
-
-		if (!core::equals(tcoordScale1, TCoordScale1) ||
-			!core::equals(tcoordScale2, TCoordScale2))
-		{
-			scaleTexture(tcoordScale1, tcoordScale2);
-		}
-
-		ISceneNode::deserializeAttributes(in, options);
-	}
-
-
 	//! Creates a clone of this scene node and its children.
 	ISceneNode* CTerrainSceneNode::clone(ISceneNode* newParent, ISceneManager* newManager)
 	{

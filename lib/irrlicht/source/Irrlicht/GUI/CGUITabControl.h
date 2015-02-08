@@ -59,12 +59,6 @@ namespace gui
 
 		virtual video::SColor getTextColor() const;
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 		//! only for internal use by CGUITabControl
 		void refreshSkinColors();
 
@@ -133,13 +127,8 @@ namespace gui
 		//! Removes a child.
 		virtual void removeChild(IGUIElement* child);
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
 		//! Set the height of the tabs
 		virtual void setTabHeight( s32 height );
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
 
 		//! Get the height of the tabs
 		virtual s32 getTabHeight() const;

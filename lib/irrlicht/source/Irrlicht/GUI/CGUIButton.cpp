@@ -477,58 +477,6 @@ bool CGUIButton::isDrawingBorder() const
 }
 
 
-//! Writes attributes of the element.
-void CGUIButton::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const
-{
-	IGUIButton::serializeAttributes(out,options);
-
-	out->addBool	("PushButton",		IsPushButton );
-	if (IsPushButton)
-		out->addBool("Pressed",		Pressed);
-
-	out->addTexture ("Image",		Image);
-	out->addRect	("ImageRect",		ImageRect);
-	out->addTexture	("PressedImage",	PressedImage);
-	out->addRect	("PressedImageRect",	PressedImageRect);
-
-	out->addBool	("UseAlphaChannel",	isAlphaChannelUsed());
-	out->addBool	("Border",		isDrawingBorder());
-	out->addBool	("ScaleImage",		isScalingImage());
-
-	//   out->addString  ("OverrideFont",	OverrideFont);
-}
-
-
-//! Reads attributes of the element
-void CGUIButton::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0)
-{
-	IGUIButton::deserializeAttributes(in,options);
-
-	IsPushButton	= in->getAttributeAsBool("PushButton");
-	Pressed		= IsPushButton ? in->getAttributeAsBool("Pressed") : false;
-
-	core::rect<s32> rec = in->getAttributeAsRect("ImageRect");
-	if (rec.isValid())
-		setImage( in->getAttributeAsTexture("Image"), rec);
-	else
-		setImage( in->getAttributeAsTexture("Image") );
-
-	rec = in->getAttributeAsRect("PressedImageRect");
-	if (rec.isValid())
-		setPressedImage( in->getAttributeAsTexture("PressedImage"), rec);
-	else
-		setPressedImage( in->getAttributeAsTexture("PressedImage") );
-
-	setDrawBorder(in->getAttributeAsBool("Border"));
-	setUseAlphaChannel(in->getAttributeAsBool("UseAlphaChannel"));
-	setScaleImage(in->getAttributeAsBool("ScaleImage"));
-
-	//   setOverrideFont(in->getAttributeAsString("OverrideFont"));
-
-	updateAbsolutePosition();
-}
-
-
 } // end namespace gui
 } // end namespace irr
 

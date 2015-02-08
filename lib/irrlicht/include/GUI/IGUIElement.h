@@ -758,61 +758,6 @@ public:
 		Name = name;
 	}
 
-
-	//! Writes attributes of the scene node.
-	/** Implement this to expose the attributes of your scene node for
-	scripting languages, editors, debuggers or xml serialization purposes. */
-	virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options=0) const
-	{
-		out->addString("Name", Name.c_str());		
-		out->addInt("Id", ID );
-		out->addString("Caption", getText());
-		out->addRect("Rect", DesiredRect);
-		out->addPosition2d("MinSize", core::position2di(MinSize.Width, MinSize.Height));
-		out->addPosition2d("MaxSize", core::position2di(MaxSize.Width, MaxSize.Height));
-		out->addEnum("LeftAlign", AlignLeft, GUIAlignmentNames);
-		out->addEnum("RightAlign", AlignRight, GUIAlignmentNames);
-		out->addEnum("TopAlign", AlignTop, GUIAlignmentNames);
-		out->addEnum("BottomAlign", AlignBottom, GUIAlignmentNames);
-		out->addBool("Visible", IsVisible);
-		out->addBool("Enabled", IsEnabled);
-		out->addBool("TabStop", IsTabStop);
-		out->addBool("TabGroup", IsTabGroup);
-		out->addInt("TabOrder", TabOrder);
-		out->addBool("NoClip", NoClip);
-	}
-
-
-	//! Reads attributes of the scene node.
-	/** Implement this to set the attributes of your scene node for
-	scripting languages, editors, debuggers or xml deserialization purposes. */
-	virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options=0)
-	{
-		setName(in->getAttributeAsString("Name"));
-		setID(in->getAttributeAsInt("Id"));
-		setText(in->getAttributeAsStringW("Caption").c_str());
-		setVisible(in->getAttributeAsBool("Visible"));
-		setEnabled(in->getAttributeAsBool("Enabled"));
-		IsTabStop = in->getAttributeAsBool("TabStop");
-		IsTabGroup = in->getAttributeAsBool("TabGroup");
-		TabOrder = in->getAttributeAsInt("TabOrder");
-
-		core::position2di p = in->getAttributeAsPosition2d("MaxSize");
-		setMaxSize(core::dimension2du(p.X,p.Y));
-
-		p = in->getAttributeAsPosition2d("MinSize");
-		setMinSize(core::dimension2du(p.X,p.Y));
-
-		setAlignment((EGUI_ALIGNMENT) in->getAttributeAsEnumeration("LeftAlign", GUIAlignmentNames),
-			(EGUI_ALIGNMENT)in->getAttributeAsEnumeration("RightAlign", GUIAlignmentNames),
-			(EGUI_ALIGNMENT)in->getAttributeAsEnumeration("TopAlign", GUIAlignmentNames),
-			(EGUI_ALIGNMENT)in->getAttributeAsEnumeration("BottomAlign", GUIAlignmentNames));
-
-		setRelativePosition(in->getAttributeAsRect("Rect"));
-
-		setNotClipped(in->getAttributeAsBool("NoClip"));
-	}
-
 protected:
 	// not virtual because needed in constructor
 	void addChildToEnd(IGUIElement* child)

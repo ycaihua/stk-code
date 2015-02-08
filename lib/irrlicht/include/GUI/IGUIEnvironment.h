@@ -568,42 +568,6 @@ public:
 	\param parent Parent of the new element, if not 0.
 	\return New GUI element, or 0 if no such element exists. */
 	virtual IGUIElement* addGUIElement(const c8* elementName, IGUIElement* parent=0) = 0;
-
-	//! Saves the current gui into a file.
-	/** \param filename Name of the file.
-	\param start The GUIElement to start with. Root if 0.
-	\return True if saving succeeded, else false. */
-	virtual bool saveGUI(const io::path& filename, IGUIElement* start=0) = 0;
-
-	//! Saves the current gui into a file.
-	/** \param file The file to write to.
-	\param start The GUIElement to start with. Root if 0.
-	\return True if saving succeeded, else false. */
-	virtual bool saveGUI(io::IWriteFile* file, IGUIElement* start=0) = 0;
-
-	//! Loads the gui. Note that the current gui is not cleared before.
-	/** When a parent is set the elements will be added below the parent, the parent itself does not deserialize.
-	When the file contains skin-settings from the gui-environment those are always serialized into the 
-	guienvironment independent	of the parent setting.
-	\param filename Name of the file.
-	\param parent Parent for the loaded GUI, root if 0.
-	\return True if loading succeeded, else false. */
-	virtual bool loadGUI(const io::path& filename, IGUIElement* parent=0) = 0;
-
-	//! Loads the gui. Note that the current gui is not cleared before.
-	/** When a parent is set the elements will be added below the parent, the parent itself does not deserialize.
-	When the file contains skin-settings from the gui-environment those are always serialized into the 
-	guienvironment independent	of the parent setting.
-	\param file The file to load from.
-	\param parent Parent for the loaded GUI, root if 0.
-	\return True if loading succeeded, else false. */
-	virtual bool loadGUI(io::IReadFile* file, IGUIElement* parent=0) = 0;
-
-	//! writes an element
-	virtual void writeGUIElement(io::IXMLWriter* writer, IGUIElement* node) =0;
-
-	//! reads an element
-	virtual void readGUIElement(io::IXMLReader* reader, IGUIElement* node) =0;
 };
 
 

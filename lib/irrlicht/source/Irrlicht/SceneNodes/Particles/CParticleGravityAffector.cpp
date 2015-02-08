@@ -42,23 +42,6 @@ void CParticleGravityAffector::affect(u32 now, SParticle* particlearray, u32 cou
 	}
 }
 
-//! Writes attributes of the object.
-void CParticleGravityAffector::serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const
-{
-	out->addVector3d("Gravity", Gravity);
-	out->addFloat("TimeForceLost", TimeForceLost);
-}
-
-
-//! Reads attributes of the object.
-void CParticleGravityAffector::deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options)
-{
-	Gravity = in->getAttributeAsVector3d("Gravity");
-	TimeForceLost = in->getAttributeAsFloat("TimeForceLost");
-}
-
-
-
 } // end namespace scene
 } // end namespace irr
 

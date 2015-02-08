@@ -76,12 +76,6 @@ namespace gui
 		/** \param places: The number of decimal places to display, use -1 to reset */
 		virtual void setDecimalPlaces(s32 places);
 
-		//! Writes attributes of the element.
-		virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-		//! Reads attributes of the element
-		virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
 	protected:
 		virtual void verifyValueRange();
 		void refreshSprites();

@@ -109,12 +109,6 @@ using namespace gui;
         //! Updates the absolute position, splits text if required
         virtual void updateAbsolutePosition();
 
-        //! Writes attributes of the element.
-        virtual void serializeAttributes(io::IAttributes* out, io::SAttributeReadWriteOptions* options) const;
-
-        //! Reads attributes of the element
-        virtual void deserializeAttributes(io::IAttributes* in, io::SAttributeReadWriteOptions* options);
-
         virtual irr::gui::IGUIFont* getOverrideFont() const { return NULL; }
         virtual irr::gui::IGUIFont* getActiveFont() const { return NULL; }
         virtual void setDrawBackground(bool) { }
