@@ -79,16 +79,13 @@ source/Irrlicht/CZBuffer.cpp
 source/Irrlicht/CLimitReadFile.cpp
 source/Irrlicht/CVideoModeList.cpp
 source/Irrlicht/CDefaultGUIElementFactory.cpp
-source/Irrlicht/CTerrainTriangleSelector.cpp
 source/Irrlicht/CFileSystem.cpp
 source/Irrlicht/os.cpp
 source/Irrlicht/CFPSCounter.cpp
 source/Irrlicht/CZipReader.cpp
 source/Irrlicht/COpenGLSLMaterialRenderer.cpp
-source/Irrlicht/CTriangleBBSelector.cpp
 source/Irrlicht/COpenGLTexture.cpp
 source/Irrlicht/CAttributes.cpp
-source/Irrlicht/CTriangleSelector.cpp
 source/Irrlicht/CColorConverter.cpp
 source/Irrlicht/CMeshCache.cpp
 source/Irrlicht/CMemoryFile.cpp
@@ -100,7 +97,6 @@ source/Irrlicht/COpenGLParallaxMapRenderer.cpp
 source/Irrlicht/CLogger.cpp
 source/Irrlicht/CMeshManipulator.cpp
 source/Irrlicht/CWriteFile.cpp
-source/Irrlicht/COctreeTriangleSelector.cpp
 source/Irrlicht/CFileList.cpp
 source/Irrlicht/COSOperator.cpp
 source/Irrlicht/COpenGLExtensionHandler.cpp
@@ -116,7 +112,6 @@ source/Irrlicht/CDummyTransformationSceneNode.cpp
 source/Irrlicht/CGeometryCreator.cpp
 source/Irrlicht/CNullDriver.cpp
 source/Irrlicht/CReadFile.cpp
-source/Irrlicht/CMetaTriangleSelector.cpp
 source/Irrlicht/CDefaultSceneNodeFactory.cpp
 source/Irrlicht/glext.h
 source/Irrlicht/CMeshCache.h
@@ -125,12 +120,10 @@ source/Irrlicht/CMountPointReader.h
 source/Irrlicht/CSkinnedMesh.h
 source/Irrlicht/COpenGLParallaxMapRenderer.h
 source/Irrlicht/COpenGLShaderMaterialRenderer.h
-source/Irrlicht/COctreeTriangleSelector.h
 source/Irrlicht/COpenGLTexture.h
 source/Irrlicht/Octree.h
 source/Irrlicht/os.h
 source/Irrlicht/CDefaultGUIElementFactory.h
-source/Irrlicht/CTriangleBBSelector.h
 source/Irrlicht/S2DVertex.h
 source/Irrlicht/resource.h
 source/Irrlicht/SoftwareDriver2_helper.h
@@ -152,7 +145,6 @@ source/Irrlicht/COSOperator.h
 source/Irrlicht/CZBuffer.h
 source/Irrlicht/CImage.h
 source/Irrlicht/COpenGLExtensionHandler.h
-source/Irrlicht/CTriangleSelector.h
 source/Irrlicht/CDefaultSceneNodeFactory.h
 source/Irrlicht/CXMLReaderImpl.h
 source/Irrlicht/COpenGLMaterialRenderer.h
@@ -168,11 +160,9 @@ source/Irrlicht/IAttribute.h
 source/Irrlicht/CNullDriver.h
 source/Irrlicht/CWriteFile.h
 source/Irrlicht/glxext.h
-source/Irrlicht/CMetaTriangleSelector.h
 source/Irrlicht/CTarReader.h
 source/Irrlicht/CXMLWriter.h
 source/Irrlicht/ITriangleRenderer.h
-source/Irrlicht/CTerrainTriangleSelector.h
 source/Irrlicht/CAttributeImpl.h
 source/Irrlicht/CGeometryCreator.h
 source/Irrlicht/BuiltInFont.h
