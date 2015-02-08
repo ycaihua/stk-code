@@ -2,7 +2,7 @@
 #define STKANIMATEDMESH_HPP
 
 #include "../lib/irrlicht/source/Irrlicht/SceneNodes/CAnimatedMeshSceneNode.h"
-#include <IAnimatedMesh.h>
+#include <Core/IAnimatedMesh.h>
 #include <irrTypes.h>
 #include "graphics/stkmesh.hpp"
 #include "utils/ptr_vector.hpp"

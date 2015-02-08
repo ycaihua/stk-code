@@ -7,7 +7,7 @@
 
 #include <GUI/IGUIEnvironment.h>
 #include "IVideoDriver.h"
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include "IMesh.h"
 #include "../os.h"
 #include <GUI/IGUISkin.h>

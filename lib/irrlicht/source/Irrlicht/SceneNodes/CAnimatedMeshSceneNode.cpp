@@ -13,7 +13,7 @@
 #include "IMaterialRenderer.h"
 #include "IMesh.h"
 #include "IMeshCache.h"
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include <Maths/quaternion.h>
 #include "IFileSystem.h"
 

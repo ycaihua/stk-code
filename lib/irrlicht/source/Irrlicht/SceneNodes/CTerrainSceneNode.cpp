@@ -19,7 +19,7 @@
 #include "IFileSystem.h"
 #include "IReadFile.h"
 #include <SceneNodes/ITextSceneNode.h>
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include "SMesh.h"
 #include "CDynamicMeshBuffer.h"
 

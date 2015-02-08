@@ -5,7 +5,7 @@
 #ifndef __S_ANIMATED_MESH_H_INCLUDED__
 #define __S_ANIMATED_MESH_H_INCLUDED__
 
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include "IMesh.h"
 #include <Maths/aabbox3d.h>
 #include "irrArray.h"

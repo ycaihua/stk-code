@@ -9,7 +9,7 @@
 #include <Maths/vector3d.h>
 #include <Maths/aabbox3d.h>
 #include <Maths/matrix4.h>
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 #include <Core/IMeshBuffer.h>
 #include "SVertexManipulator.h"
 

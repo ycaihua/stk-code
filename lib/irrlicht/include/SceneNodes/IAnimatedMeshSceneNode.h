@@ -8,7 +8,7 @@
 #include <Core/ISceneNode.h>
 #include <SceneNodes/IBoneSceneNode.h>
 #include "IMesh.h"
-#include "IAnimatedMesh.h"
+#include <Core/IAnimatedMesh.h>
 
 namespace irr
 {
