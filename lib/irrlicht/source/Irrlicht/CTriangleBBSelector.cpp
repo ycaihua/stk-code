@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CTriangleBBSelector.h"
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 
 namespace irr
 {

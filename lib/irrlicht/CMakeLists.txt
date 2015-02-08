@@ -235,7 +235,6 @@ include/CDynamicMeshBuffer.h
 include/IFileArchive.h
 include/IVideoDriver.h
 include/irrMath.h
-include/ISceneNode.h
 include/irrpack.h
 include/IImageWriter.h
 include/EGUIElementTypes.h

@@ -21,7 +21,7 @@
 
 #include <Maths/aabbox3d.h>
 #include <Maths/matrix4.h>
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 #include <vector>
 #include <string>
 

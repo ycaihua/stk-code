@@ -5,7 +5,7 @@
 #ifndef __I_BILLBOARD_SCENE_NODE_H_INCLUDED__
 #define __I_BILLBOARD_SCENE_NODE_H_INCLUDED__
 
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 
 namespace irr
 {

@@ -11,7 +11,7 @@
 #define __I_TERRAIN_SCENE_NODE_H__
 
 #include "ETerrainElements.h"
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 #include "IDynamicMeshBuffer.h"
 #include "irrArray.h"
 

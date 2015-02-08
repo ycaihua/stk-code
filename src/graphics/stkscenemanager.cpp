@@ -17,7 +17,7 @@
 #include "utils/time.hpp"
 
 #include <Core/ISceneManager.h>
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 
 #include <unordered_map>
 #include <SViewFrustum.h>

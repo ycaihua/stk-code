@@ -26,7 +26,7 @@
 #include "modes/world.hpp"
 #include "tracks/track.hpp"
 
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 
 Moveable::Moveable()
 {
