@@ -27,16 +27,16 @@ namespace scene
 		virtual ~CWaterSurfaceSceneNode();
 
 		//! frame registration
-		virtual void OnRegisterSceneNode();
+		virtual void OnRegisterSceneNode() OVERRIDE;
 
 		//! animated update
-		virtual void OnAnimate(u32 timeMs);
+		virtual void OnAnimate(u32 timeMs) OVERRIDE;
 
 		//! Update mesh
-		virtual void setMesh(IMesh* mesh);
+		virtual void setMesh(IMesh* mesh) OVERRIDE;
 
 		//! Returns type of the scene node
-		virtual ESCENE_NODE_TYPE getType() const { return ESNT_WATER_SURFACE; }
+		virtual ESCENE_NODE_TYPE getType() const OVERRIDE { return ESNT_WATER_SURFACE; }
 
 	private:
 

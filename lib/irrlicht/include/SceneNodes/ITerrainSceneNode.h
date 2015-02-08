@@ -58,7 +58,7 @@ namespace scene
 
 		//! Get the bounding box of the terrain.
 		/** \return The bounding box of the entire terrain. */
-		virtual const core::aabbox3d<f32>& getBoundingBox() const =0;
+		virtual const core::aabbox3d<f32>& getBoundingBox() const OVERRIDE = 0;
 
 		//! Get the bounding box of a patch
 		/** \return The bounding box of the chosen patch. */

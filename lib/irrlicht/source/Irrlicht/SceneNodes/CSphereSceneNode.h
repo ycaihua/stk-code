@@ -25,48 +25,48 @@ namespace scene
 		//! destructor
 		virtual ~CSphereSceneNode();
 
-		virtual void OnRegisterSceneNode();
+		virtual void OnRegisterSceneNode() OVERRIDE;
 
 		//! renders the node.
-		virtual void render();
+		virtual void render() OVERRIDE;
 
 		//! returns the axis aligned bounding box of this node
-		virtual const core::aabbox3d<f32>& getBoundingBox() const;
+		virtual const core::aabbox3d<f32>& getBoundingBox() const OVERRIDE;
 
 		//! returns the material based on the zero based index i. To get the amount
 		//! of materials used by this scene node, use getMaterialCount().
 		//! This function is needed for inserting the node into the scene hirachy on a
 		//! optimal position for minimizing renderstate changes, but can also be used
 		//! to directly modify the material of a scene node.
-		virtual video::SMaterial& getMaterial(u32 i);
+		virtual video::SMaterial& getMaterial(u32 i) OVERRIDE;
 
 		//! returns amount of materials used by this scene node.
-		virtual u32 getMaterialCount() const;
+		virtual u32 getMaterialCount() const OVERRIDE;
 
 		//! Returns type of the scene node
-		virtual ESCENE_NODE_TYPE getType() const { return ESNT_SPHERE; }
+		virtual ESCENE_NODE_TYPE getType() const OVERRIDE { return ESNT_SPHERE; }
 
 		//! Creates a clone of this scene node and its children.
-		virtual ISceneNode* clone(ISceneNode* newParent=0, ISceneManager* newManager=0);
+		virtual ISceneNode* clone(ISceneNode* newParent = 0, ISceneManager* newManager = 0) OVERRIDE;
 
 		//! The mesh cannot be changed
-		virtual void setMesh(IMesh* mesh) {}
+		virtual void setMesh(IMesh* mesh) OVERRIDE {}
 
 		//! Returns the current mesh
-		virtual IMesh* getMesh() { return Mesh; }
+		virtual IMesh* getMesh() OVERRIDE { return Mesh; }
 
 		//! Sets if the scene node should not copy the materials of the mesh but use them in a read only style.
 		/* In this way it is possible to change the materials a mesh causing all mesh scene nodes 
 		referencing this mesh to change too. */
-		virtual void setReadOnlyMaterials(bool readonly) {}
+		virtual void setReadOnlyMaterials(bool readonly) OVERRIDE {}
 
 		//! Returns if the scene node should not copy the materials of the mesh but use them in a read only style
-		virtual bool isReadOnlyMaterials() const { return false; }
+		virtual bool isReadOnlyMaterials() const OVERRIDE { return false; }
 
 		//! Removes a child from this scene node.
 		//! Implemented here, to be able to remove the shadow properly, if there is one,
 		//! or to remove attached childs.
-		virtual bool removeChild(ISceneNode* child);
+		virtual bool removeChild(ISceneNode* child) OVERRIDE;
 
 	private:
 
