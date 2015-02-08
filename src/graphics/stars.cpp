@@ -25,7 +25,7 @@
 #include "graphics/material_manager.hpp"
 #include "utils/constants.hpp"
 
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 #include <SceneNodes/IBillboardSceneNode.h>
 
 const int STAR_AMOUNT = 7;

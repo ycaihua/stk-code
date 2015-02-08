@@ -45,7 +45,7 @@
 
 #include <Core/ISceneManager.h>
 #include <ICameraSceneNode.h>
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 
 #include <map>
 #include <vector>

@@ -3,7 +3,7 @@
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
 #include "CTriangleSelector.h"
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 #include <Core/IMeshBuffer.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 

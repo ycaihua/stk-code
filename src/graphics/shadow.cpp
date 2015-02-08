@@ -21,7 +21,7 @@
 
 #include <IMesh.h>
 #include <SceneNodes/IMeshSceneNode.h>
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 
 Shadow::Shadow(video::ITexture *texture, scene::ISceneNode *node,
                float scale = 1.0, float x_offset = 0.0, float y_offset = 0.0,

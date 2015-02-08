@@ -23,7 +23,7 @@
 #include "modes/world.hpp"
 
 #include <Core/ISceneManager.h>
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 #include <ICameraSceneNode.h>
 
 IrrDebugDrawer::IrrDebugDrawer()

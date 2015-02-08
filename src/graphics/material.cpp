@@ -42,7 +42,7 @@
 #include "utils/vs.hpp"
 
 #include <IMaterialRendererServices.h>
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 #include <IShaderConstantSetCallBack.h>
 
 using namespace irr::video;

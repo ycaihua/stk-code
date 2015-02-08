@@ -19,7 +19,7 @@
 #ifndef HEADER_LIGHT_HPP
 #define HEADER_LIGHT_HPP
 
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 #include <utils/cpp2011.hpp>
 #include <vector>
 

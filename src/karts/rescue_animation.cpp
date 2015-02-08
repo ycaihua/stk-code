@@ -28,7 +28,7 @@
 #include "modes/world.hpp"
 #include "physics/physics.hpp"
 
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 
 /** The constructor stores a pointer to the kart this object is animating,
  *  and initialised the timer.

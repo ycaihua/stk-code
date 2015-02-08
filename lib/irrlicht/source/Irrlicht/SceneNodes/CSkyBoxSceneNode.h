@@ -5,7 +5,7 @@
 #ifndef __C_SKY_BOX_SCENE_NODE_H_INCLUDED__
 #define __C_SKY_BOX_SCENE_NODE_H_INCLUDED__
 
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 #include <Core/S3DVertex.h>
 
 namespace irr

@@ -19,7 +19,7 @@
 #ifndef HEADER_REFEREE_HPP
 #define HEADER_REFEREE_HPP
 
-#include <ISceneNode.h>
+#include <Core/ISceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <Core/ISceneManager.h>
 #include <IMeshManipulator.h>

@@ -5,7 +5,7 @@
 #ifndef __I_PARTICLE_SYSTEM_SCENE_NODE_H_INCLUDED__
 #define __I_PARTICLE_SYSTEM_SCENE_NODE_H_INCLUDED__
 
-#include "ISceneNode.h"
+#include <Core/ISceneNode.h>
 #include "IParticleAnimatedMeshSceneNodeEmitter.h"
 #include "IParticleBoxEmitter.h"
 #include "IParticleCylinderEmitter.h"
