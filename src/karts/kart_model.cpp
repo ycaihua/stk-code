@@ -36,7 +36,7 @@
 #include "utils/constants.hpp"
 #include "utils/log.hpp"
 
-#include "IMeshManipulator.h"
+#include <Util/IMeshManipulator.h>
 
 #define SKELETON_DEBUG 0
 

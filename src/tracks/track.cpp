@@ -68,7 +68,7 @@
 #include <SceneNodes/IBillboardTextSceneNode.h>
 #include <SceneNodes/ILightSceneNode.h>
 #include <IMeshCache.h>
-#include <IMeshManipulator.h>
+#include <Util/IMeshManipulator.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include <Core/ISceneManager.h>
 

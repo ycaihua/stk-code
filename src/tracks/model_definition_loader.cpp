@@ -27,7 +27,7 @@ using namespace irr;
 
 #include <SceneNodes/IMeshSceneNode.h>
 #include <Core/ISceneManager.h>
-#include <IMeshManipulator.h>
+#include <Util/IMeshManipulator.h>
 #include <algorithm>
 
 ModelDefinitionLoader::ModelDefinitionLoader(Track* track)

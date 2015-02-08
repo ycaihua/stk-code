@@ -4,7 +4,7 @@
 
 #include "CWaterSurfaceSceneNode.h"
 #include <Core/ISceneManager.h>
-#include "IMeshManipulator.h"
+#include <Util/IMeshManipulator.h>
 #include "IMeshCache.h"
 #include <Core/S3DVertex.h>
 #include "SMesh.h"

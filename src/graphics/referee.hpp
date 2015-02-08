@@ -22,7 +22,7 @@
 #include <Core/ISceneNode.h>
 #include <SceneNodes/IAnimatedMeshSceneNode.h>
 #include <Core/ISceneManager.h>
-#include <IMeshManipulator.h>
+#include <Util/IMeshManipulator.h>
 using namespace irr;
 
 #include "utils/vec3.hpp"

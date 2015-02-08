@@ -52,6 +52,7 @@ file(GLOB IRR_MATHS_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/Maths/
 file(GLOB IRR_GUI_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/GUI/*.h")
 file(GLOB IRR_SCENENODES_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/SceneNodes/*.h")
 file(GLOB IRR_CORE_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/Core/*.h")
+file(GLOB IRR_UTIL_INCLUDE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "Include/Util/*.h")
 
 include(../../cmake/SourceGroupFunctions.cmake)
 source_group_hierarchy(IRR_DEVICES_SOURCES IRR_DEVICES_HEADERS)
@@ -65,6 +66,7 @@ source_group_hierarchy(IRR_MATHS_INCLUDE IRR_MATHS_INCLUDE)
 source_group_hierarchy(IRR_GUI_INCLUDE IRR_GUI_INCLUDE)
 source_group_hierarchy(IRR_SCENENODES_INCLUDE IRR_SCENENODES_INCLUDE)
 source_group_hierarchy(IRR_CORE_INCLUDE IRR_CORE_INCLUDE)
+source_group_hierarchy(IRR_UTIL_INCLUDE IRR_UTIL_INCLUDE)
 
 set(IRRLICHT_SOURCES
 ${IRR_DEVICES_SOURCES}
@@ -189,6 +191,7 @@ ${IRR_MATHS_INCLUDE}
 ${IRR_GUI_INCLUDE}
 ${IRR_SCENENODES_INCLUDE}
 ${IRR_CORE_INCLUDE}
+${IRR_UTIL_INCLUDE}
 include/IParticleGravityAffector.h
 include/IEventReceiver.h
 include/EMessageBoxFlags.h
@@ -269,7 +272,6 @@ include/IImageLoader.h
 include/IParticleBoxEmitter.h
 include/ICursorControl.h
 include/ICameraSceneNode.h
-include/IMeshManipulator.h
 include/CVertexBuffer.h
 include/SSharedMeshBuffer.h
 include/IMeshWriter.h

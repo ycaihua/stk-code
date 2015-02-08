@@ -23,7 +23,7 @@
 
 #include <math.h>
 
-#include <IMeshManipulator.h>
+#include <Util/IMeshManipulator.h>
 #include <SceneNodes/IMeshSceneNode.h>
 
 #include "graphics/explosion.hpp"
