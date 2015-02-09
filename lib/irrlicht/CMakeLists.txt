@@ -239,7 +239,6 @@ include/SKeyMap.h
 include/ECullingTypes.h
 include/coreutil.h
 include/SMeshBufferTangents.h
-include/ISceneCollisionManager.h
 include/heapsort.h
 include/Keycodes.h
 include/SParticle.h
