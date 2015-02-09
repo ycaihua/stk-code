@@ -202,7 +202,6 @@ include/ILightManager.h
 include/irrlicht.h
 include/ITimer.h
 include/path.h
-include/IMetaTriangleSelector.h
 include/ISceneUserDataSerializer.h
 include/irrArray.h
 include/irrString.h
@@ -238,7 +237,6 @@ include/IReferenceCounted.h
 include/irrXML.h
 include/SKeyMap.h
 include/ECullingTypes.h
-include/ITriangleSelector.h
 include/coreutil.h
 include/SMeshBufferTangents.h
 include/ISceneCollisionManager.h

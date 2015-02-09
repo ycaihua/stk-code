@@ -9,7 +9,6 @@
 #include "ESceneNodeTypes.h"
 #include "ECullingTypes.h"
 #include "EDebugSceneTypes.h"
-#include "ITriangleSelector.h"
 #include "SMaterial.h"
 #include "irrString.h"
 #include <Maths/aabbox3d.h>
@@ -30,6 +29,7 @@ namespace scene
 	class ISceneManager;
 
 	//! Typedef for list of scene nodes
+	class ISceneNode;
 	typedef std::list<ISceneNode*> ISceneNodeList;
 
 	//! Scene node interface.
@@ -50,7 +50,7 @@ namespace scene
 				const core::vector3df& rotation = core::vector3df(0,0,0),
 				const core::vector3df& scale = core::vector3df(1.0f, 1.0f, 1.0f))
 			: RelativeTranslation(position), RelativeRotation(rotation), RelativeScale(scale),
-				Parent(0), SceneManager(mgr), TriangleSelector(0), ID(id),
+				Parent(0), SceneManager(mgr), ID(id),
 				AutomaticCullingState(EAC_BOX), DebugDataVisible(EDS_OFF),
 				IsVisible(true), IsDebugObject(false)
 		{
@@ -66,9 +66,6 @@ namespace scene
 		{
 			// delete all children
 			removeAll();
-
-			if (TriangleSelector)
-				TriangleSelector->drop();
 		}
 
 
@@ -547,45 +544,6 @@ namespace scene
 		}
 
 
-		//! Returns the triangle selector attached to this scene node.
-		/** The Selector can be used by the engine for doing collision
-		detection. You can create a TriangleSelector with
-		ISceneManager::createTriangleSelector() or
-		ISceneManager::createOctreeTriangleSelector and set it with
-		ISceneNode::setTriangleSelector(). If a scene node got no triangle
-		selector, but collision tests should be done with it, a triangle
-		selector is created using the bounding box of the scene node.
-		\return A pointer to the TriangleSelector or 0, if there
-		is none. */
-		virtual ITriangleSelector* getTriangleSelector() const
-		{
-			return TriangleSelector;
-		}
-
-
-		//! Sets the triangle selector of the scene node.
-		/** The Selector can be used by the engine for doing collision
-		detection. You can create a TriangleSelector with
-		ISceneManager::createTriangleSelector() or
-		ISceneManager::createOctreeTriangleSelector(). Some nodes may
-		create their own selector by default, so it would be good to
-		check if there is already a selector in this node by calling
-		ISceneNode::getTriangleSelector().
-		\param selector New triangle selector for this scene node. */
-		virtual void setTriangleSelector(ITriangleSelector* selector)
-		{
-			if (TriangleSelector != selector)
-			{
-				if (TriangleSelector)
-					TriangleSelector->drop();
-
-				TriangleSelector = selector;
-				if (TriangleSelector)
-					TriangleSelector->grab();
-			}
-		}
-
-
 		//! Updates the absolute position based on the relative and the parents position
 		/** Note: This does not recursively update the parents absolute positions, so if you have a deeper
 			hierarchy you might want to update the parents first.*/
@@ -644,7 +602,6 @@ namespace scene
 			RelativeRotation = toCopyFrom->RelativeRotation;
 			RelativeScale = toCopyFrom->RelativeScale;
 			ID = toCopyFrom->ID;
-			setTriangleSelector(toCopyFrom->TriangleSelector);
 			AutomaticCullingState = toCopyFrom->AutomaticCullingState;
 			DebugDataVisible = toCopyFrom->DebugDataVisible;
 			IsVisible = toCopyFrom->IsVisible;
@@ -696,9 +653,6 @@ namespace scene
 
 		//! Pointer to the scene manager
 		ISceneManager* SceneManager;
-
-		//! Pointer to the triangle selector
-		ITriangleSelector* TriangleSelector;
 
 		//! ID of the node.
 		s32 ID;

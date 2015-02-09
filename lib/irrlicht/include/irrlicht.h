@@ -109,7 +109,6 @@
 #include <Util/IMeshManipulator.h>
 #include <SceneNodes/IMeshSceneNode.h>
 #include "IMeshWriter.h"
-#include "IMetaTriangleSelector.h"
 #include "IOSOperator.h"
 #include <SceneNodes/IParticleSystemSceneNode.h>
 #include "IReadFile.h"
@@ -134,7 +133,6 @@
 #include <SceneNodes/ITextSceneNode.h>
 #include <Core/ITexture.h>
 #include "ITimer.h"
-#include "ITriangleSelector.h"
 #include "IVertexBuffer.h"
 #include "IVideoDriver.h"
 #include "IVideoModeList.h"
