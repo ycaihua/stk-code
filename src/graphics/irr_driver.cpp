@@ -1947,14 +1947,14 @@ void IrrDriver::drawJoint(bool drawline, bool drawname,
         irr_driver->getVideoDriver()->setTransform(video::ETS_WORLD,
                                                    core::IdentityMatrix);
 
-        core::vector2di textpos =
+/*        core::vector2di textpos =
             irr_driver->getSceneManager()->getSceneCollisionManager()
             ->getScreenCoordinatesFrom3DPosition(jointpos);
 
         GUIEngine::getSmallFont()->draw( stringw(joint->Name.c_str()),
                                          core::rect<s32>(textpos,
                                                core::dimension2d<s32>(500,50)),
-                                         color, false, false );
+                                         color, false, false );*/
     }
 }
 #endif

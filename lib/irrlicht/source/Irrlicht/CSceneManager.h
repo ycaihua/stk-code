@@ -266,9 +266,6 @@ namespace scene
 		//! Retrieve the given scene loader
 		virtual ISceneLoader* getSceneLoader(u32 index) const OVERRIDE;
 
-		//! Returns a pointer to the scene collision manager.
-		virtual ISceneCollisionManager* getSceneCollisionManager() OVERRIDE;
-
 		//! Returns a pointer to the mesh manipulator.
 		virtual IMeshManipulator* getMeshManipulator() OVERRIDE;
 
@@ -458,9 +455,6 @@ namespace scene
 
 		//! cursor control
 		gui::ICursorControl* CursorControl;
-
-		//! collision manager
-		ISceneCollisionManager* CollisionManager;
 
 		//! render pass lists
 		core::array<ISceneNode*> CameraList;

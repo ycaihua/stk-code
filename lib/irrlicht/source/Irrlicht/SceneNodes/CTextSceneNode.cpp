@@ -19,11 +19,11 @@ namespace scene
 
 //! constructor
 CTextSceneNode::CTextSceneNode(ISceneNode* parent, ISceneManager* mgr, s32 id,
-			gui::IGUIFont* font, scene::ISceneCollisionManager* coll,
+			gui::IGUIFont* font,
 			const core::vector3df& position, const wchar_t* text,
 			video::SColor color)
 	: ITextSceneNode(parent, mgr, id, position), Text(text), Color(color),
-		Font(font), Coll(coll)
+		Font(font)
 
 {
 	#ifdef _DEBUG
@@ -54,14 +54,7 @@ void CTextSceneNode::OnRegisterSceneNode()
 //! renders the node.
 void CTextSceneNode::render()
 {
-	if (!Font || !Coll)
-		return;
 
-	core::position2d<s32> pos = Coll->getScreenCoordinatesFrom3DPosition(getAbsolutePosition(),
-		SceneManager->getActiveCamera());
-
-	core::rect<s32> r(pos, core::dimension2d<s32>(1,1));
-	Font->draw(Text.c_str(), r, Color, true, true);
 }
 
 

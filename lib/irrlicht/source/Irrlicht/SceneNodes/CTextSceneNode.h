@@ -24,7 +24,7 @@ namespace scene
 
 		//! constructor
 		CTextSceneNode(ISceneNode* parent, ISceneManager* mgr, s32 id,
-			gui::IGUIFont* font, scene::ISceneCollisionManager* coll,
+			gui::IGUIFont* font,
 			const core::vector3df& position = core::vector3df(0,0,0), const wchar_t* text=0,
 			video::SColor color=video::SColor(100,0,0,0));
 
@@ -53,7 +53,6 @@ namespace scene
 		core::stringw Text;
 		video::SColor Color;
 		gui::IGUIFont* Font;
-		scene::ISceneCollisionManager* Coll;
 		core::aabbox3d<f32> Box;
 	};
 

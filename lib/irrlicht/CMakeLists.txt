@@ -90,7 +90,6 @@ source/Irrlicht/CColorConverter.cpp
 source/Irrlicht/CMeshCache.cpp
 source/Irrlicht/CMemoryFile.cpp
 source/Irrlicht/CMountPointReader.cpp
-source/Irrlicht/CSceneCollisionManager.cpp
 source/Irrlicht/CImage.cpp
 source/Irrlicht/CTarReader.cpp
 source/Irrlicht/COpenGLParallaxMapRenderer.cpp
@@ -138,7 +137,6 @@ source/Irrlicht/MacOSX/CIrrDeviceMacOSX.h
 source/Irrlicht/MacOSX/OSXClipboard.h
 source/Irrlicht/CSceneManager.h
 source/Irrlicht/COpenGLDriver.h
-source/Irrlicht/CSceneCollisionManager.h
 source/Irrlicht/CDummyTransformationSceneNode.h
 source/Irrlicht/CReadFile.h
 source/Irrlicht/COSOperator.h
