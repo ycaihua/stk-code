@@ -9,7 +9,6 @@
 #include <SceneNodes/IBillboardTextSceneNode.h>
 #include <GUI/IGUIFont.h>
 #include <GUI/IGUIFontBitmap.h>
-#include "ISceneCollisionManager.h"
 #include "SMesh.h"
 
 namespace irr

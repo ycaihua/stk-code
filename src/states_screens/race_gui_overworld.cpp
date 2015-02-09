@@ -49,7 +49,6 @@
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 
-#include <ISceneCollisionManager.h>
 #include <Core/ISceneManager.h>
 using namespace irr;
 
