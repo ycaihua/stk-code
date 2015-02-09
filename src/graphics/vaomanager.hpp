@@ -136,6 +136,174 @@ struct GlowInstanceData
 #pragma pack(pop)
 #endif
 
+// Array_buffer for vertex data or instances
+template<typename Data>
+class ArrayBuffer
+{
+private:
+    GLuint buffer;
+    size_t realSize;
+    size_t advertisedSize;
+
+    Data *Pointer;
+public:
+    void append(irr::scene::IMeshBuffer *);
+
+    ArrayBuffer() : buffer(0), realSize(0), advertisedSize(0), Pointer(0) { }
+
+    ~ArrayBuffer()
+    {
+        if (buffer)
+            glDeleteBuffers(1, &buffer);
+    }
+
+    void resizeBufferIfNecessary(size_t requestedSize, GLenum type)
+    {
+        if (requestedSize >= realSize)
+        {
+            while (requestedSize >= realSize)
+                realSize = 2 * realSize + 1;
+            GLuint newVBO;
+            glGenBuffers(1, &newVBO);
+            glBindBuffer(type, newVBO);
+            if (CVS->supportsAsyncInstanceUpload())
+            {
+                glBufferStorage(type, realSize * sizeof(Data), 0, GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT);
+                Pointer = static_cast<Data *>(glMapBufferRange(type, 0, realSize * sizeof(Data), GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT));
+            }
+            else
+                glBufferData(type, realSize * sizeof(Data), 0, GL_DYNAMIC_DRAW);
+
+            if (buffer)
+            {
+                // Copy old data
+                GLuint oldVBO = buffer;
+                glBindBuffer(GL_COPY_WRITE_BUFFER, newVBO);
+                glBindBuffer(GL_COPY_READ_BUFFER, oldVBO);
+                glCopyBufferSubData(GL_COPY_READ_BUFFER, GL_COPY_WRITE_BUFFER, 0, 0, advertisedSize * sizeof(Data));
+                glDeleteBuffers(1, &oldVBO);
+            }
+            buffer = newVBO;
+        }
+        advertisedSize = requestedSize;
+    }
+
+    Data *getPointer()
+    {
+        return Pointer;
+    }
+
+    size_t getSize() const
+    {
+        return advertisedSize;
+    }
+
+    GLuint getBuffer()
+    {
+        return buffer;
+    }
+};
+
+template<typename VT>
+class VertexAttribBinder
+{
+public:
+    static void bind();
+};
+
+template<typename VT>
+class VertexArrayObject : public Singleton<VertexArrayObject<VT> >
+{
+private:
+    GLuint vao;
+    std::unordered_map<irr::scene::IMeshBuffer*, std::pair<GLuint, GLuint> > mappedBaseVertexBaseIndex;
+
+    void append(irr::scene::IMeshBuffer *mb)
+    {
+        size_t old_vtx_cnt = vbo.getSize();
+        vbo.resizeBufferIfNecessary(old_vtx_cnt + mb->getVertexCount(), GL_ARRAY_BUFFER);
+        size_t old_idx_cnt = ibo.getSize();
+        ibo.resizeBufferIfNecessary(old_idx_cnt + mb->getIndexCount(), GL_ELEMENT_ARRAY_BUFFER);
+
+        if (CVS->supportsAsyncInstanceUpload())
+        {
+            void *tmp = (char*)vbo.getPointer() + old_vtx_cnt * sizeof(VT);
+            memcpy(tmp, mb->getVertices(), mb->getVertexCount() * sizeof(VT));
+        }
+        else
+        {
+            glBindBuffer(GL_ARRAY_BUFFER, vbo.getBuffer());
+            glBufferSubData(GL_ARRAY_BUFFER, old_vtx_cnt * sizeof(VT), mb->getVertexCount() * sizeof(VT), mb->getVertices());
+        }
+        if (CVS->supportsAsyncInstanceUpload())
+        {
+            void *tmp = (char*)ibo.getPointer() + old_idx_cnt * sizeof(u16);
+            memcpy(tmp, mb->getIndices(), mb->getIndexCount() * sizeof(u16));
+        }
+        else
+        {
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo.getBuffer());
+            glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, old_idx_cnt * sizeof(u16), mb->getIndexCount() * sizeof(u16), mb->getIndices());
+        }
+
+        mappedBaseVertexBaseIndex[mb] = std::make_pair(old_vtx_cnt, old_idx_cnt * sizeof(u16));
+    }
+
+    void regenerateVAO()
+    {
+        glDeleteVertexArrays(1, &vao);
+        vao = getNewVAO();
+        glBindVertexArray(0);
+    }
+public:
+    bool dirty;
+
+    ArrayBuffer<VT> vbo;
+    ArrayBuffer<irr::u16> ibo;
+
+    VertexArrayObject() : dirty(true)
+    {
+        glGenVertexArrays(1, &vao);
+    }
+
+    ~VertexArrayObject()
+    {
+        glDeleteVertexArrays(1, &vao);
+    }
+
+    GLuint getNewVAO()
+    {
+        GLuint newvao;
+        glGenVertexArrays(1, &newvao);
+        glBindVertexArray(newvao);
+        glBindBuffer(GL_ARRAY_BUFFER, vbo.getBuffer());
+        VertexAttribBinder<VT>::bind();
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo.getBuffer());
+        return newvao;
+    }
+
+    std::pair<unsigned, unsigned> getBase(irr::scene::IMeshBuffer *mb)
+    {
+        if (mappedBaseVertexBaseIndex.find(mb) == mappedBaseVertexBaseIndex.end())
+        {
+            append(mb);
+            regenerateVAO();
+            dirty = true;
+        }
+        return mappedBaseVertexBaseIndex[mb];
+    }
+
+    bool isEmpty() const
+    {
+        return ibo.getSize() == 0;
+    }
+
+    GLuint getVAO()
+    {
+        return vao;
+    }
+};
+
 class VAOManager : public Singleton<VAOManager>
 {
     enum VTXTYPE { VTXTYPE_STANDARD, VTXTYPE_TCOORD, VTXTYPE_TANGENT, VTXTYPE_COUNT };
@@ -149,22 +317,19 @@ class VAOManager : public Singleton<VAOManager>
     std::map<std::pair<irr::video::E_VERTEX_TYPE, InstanceType>, GLuint> InstanceVAO;
 
     void cleanInstanceVAOs();
-    void regenerateBuffer(enum VTXTYPE, size_t, size_t);
-    void regenerateVAO(enum VTXTYPE);
     void regenerateInstancedVAO();
     size_t getVertexPitch(enum VTXTYPE) const;
     VTXTYPE getVTXTYPE(irr::video::E_VERTEX_TYPE type);
     irr::video::E_VERTEX_TYPE getVertexType(enum VTXTYPE tp);
-    void append(irr::scene::IMeshBuffer *, VTXTYPE tp);
 public:
     VAOManager();
     std::pair<unsigned, unsigned> getBase(irr::scene::IMeshBuffer *);
-    GLuint getInstanceBuffer(InstanceType it) { return instance_vbo[it]; }
-    void *getInstanceBufferPtr(InstanceType it) { return Ptr[it]; }
-    unsigned getVBO(irr::video::E_VERTEX_TYPE type) { return vbo[getVTXTYPE(type)]; }
-    void *getVBOPtr(irr::video::E_VERTEX_TYPE type) { return VBOPtr[getVTXTYPE(type)]; }
-    unsigned getVAO(irr::video::E_VERTEX_TYPE type) { return vao[getVTXTYPE(type)]; }
-    unsigned getInstanceVAO(irr::video::E_VERTEX_TYPE vt, enum InstanceType it) { return InstanceVAO[std::pair<irr::video::E_VERTEX_TYPE, InstanceType>(vt, it)]; }
+    GLuint getInstanceBuffer(InstanceType it);
+    void *getInstanceBufferPtr(InstanceType it);
+    unsigned getVBO(irr::video::E_VERTEX_TYPE type);
+    void *getVBOPtr(irr::video::E_VERTEX_TYPE type);
+    unsigned getVAO(irr::video::E_VERTEX_TYPE type);
+    unsigned getInstanceVAO(irr::video::E_VERTEX_TYPE vt, enum InstanceType it);
     ~VAOManager();
 };
 
