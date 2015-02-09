@@ -6,312 +6,249 @@
 
 VAOManager::VAOManager()
 {
-    for (unsigned i = 0; i < VTXTYPE_COUNT; i++)
-    {
-        vao[i] = 0;
-        vbo[i] = 0;
-        ibo[i] = 0;
-        last_vertex[i] = 0;
-        last_index[i] = 0;
-        RealVBOSize[i] = 0;
-        RealIBOSize[i] = 0;
-    }
+    // Init all instance buffer
+    InstanceBuffer<InstanceDataDualTex>::getInstance();
+    InstanceBuffer<InstanceDataThreeTex>::getInstance();
+    InstanceBuffer<InstanceDataShadow>::getInstance();
+    InstanceBuffer<InstanceDataRSM>::getInstance();
+    InstanceBuffer<GlowInstanceData>::getInstance();
 
-    for (unsigned i = 0; i < InstanceTypeCount; i++)
-    {
-        glGenBuffers(1, &instance_vbo[i]);
-        glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[i]);
-        if (CVS->supportsAsyncInstanceUpload())
-        {
-            glBufferStorage(GL_ARRAY_BUFFER, 10000 * sizeof(InstanceDataDualTex), 0, GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT);
-            Ptr[i] = glMapBufferRange(GL_ARRAY_BUFFER, 0, 10000 * sizeof(InstanceDataDualTex), GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT);
-        }
-        else
-        {
-            glBufferData(GL_ARRAY_BUFFER, 10000 * sizeof(InstanceDataDualTex), 0, GL_STREAM_DRAW);
-        }
-    }
-}
-
-void VAOManager::cleanInstanceVAOs()
-{
-    std::map<std::pair<video::E_VERTEX_TYPE, InstanceType>, GLuint>::iterator It = InstanceVAO.begin(), E = InstanceVAO.end();
-    for (; It != E; It++)
-        glDeleteVertexArrays(1, &(It->second));
-    InstanceVAO.clear();
 }
 
 VAOManager::~VAOManager()
 {
-    cleanInstanceVAOs();
-    for (unsigned i = 0; i < VTXTYPE_COUNT; i++)
-    {
-        if (vbo[i])
-            glDeleteBuffers(1, &vbo[i]);
-        if (ibo[i])
-            glDeleteBuffers(1, &ibo[i]);
-        if (vao[i])
-            glDeleteVertexArrays(1, &vao[i]);
-    }
-    for (unsigned i = 0; i < InstanceTypeCount; i++)
-    {
-        glDeleteBuffers(1, &instance_vbo[i]);
-    }
-
+    InstanceBuffer<InstanceDataDualTex>::getInstance()->kill();
+    InstanceBuffer<InstanceDataThreeTex>::getInstance()->kill();
+    InstanceBuffer<InstanceDataShadow>::getInstance()->kill();
+    InstanceBuffer<InstanceDataRSM>::getInstance()->kill();
+    InstanceBuffer<GlowInstanceData>::getInstance()->kill();
 }
 
-static void
-resizeBufferIfNecessary(size_t &lastIndex, size_t newLastIndex, size_t bufferSize, size_t stride, GLenum type, GLuint &id, void *&Pointer)
+template<>
+struct VertexAttribBinder<video::S3DVertex>
 {
-    if (newLastIndex * stride >= bufferSize)
+public:
+    static void bind()
     {
-        while (newLastIndex >= bufferSize)
-            bufferSize = 2 * bufferSize + 1;
-        GLuint newVBO;
-        glGenBuffers(1, &newVBO);
-        glBindBuffer(type, newVBO);
-        if (CVS->supportsAsyncInstanceUpload())
-        {
-            glBufferStorage(type, bufferSize *stride, 0, GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT);
-            Pointer = glMapBufferRange(type, 0, bufferSize * stride, GL_MAP_WRITE_BIT | GL_MAP_PERSISTENT_BIT);
-        }
-        else
-            glBufferData(type, bufferSize * stride, 0, GL_DYNAMIC_DRAW);
-
-        if (id)
-        {
-            // Copy old data
-            GLuint oldVBO = id;
-            glBindBuffer(GL_COPY_WRITE_BUFFER, newVBO);
-            glBindBuffer(GL_COPY_READ_BUFFER, oldVBO);
-            glCopyBufferSubData(GL_COPY_READ_BUFFER, GL_COPY_WRITE_BUFFER, 0, 0, lastIndex * stride);
-            glDeleteBuffers(1, &oldVBO);
-        }
-        id = newVBO;
+        // Position
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex), 0);
+        // Normal
+        glEnableVertexAttribArray(1);
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex), (GLvoid*)12);
+        // Color
+        glEnableVertexAttribArray(2);
+        glVertexAttribPointer(2, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(video::S3DVertex), (GLvoid*)24);
+        // Texcoord
+        glEnableVertexAttribArray(3);
+        glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex), (GLvoid*)28);
     }
-    lastIndex = newLastIndex;
-}
-
-void VAOManager::regenerateBuffer(enum VTXTYPE tp, size_t newlastvertex, size_t newlastindex)
-{
-    glBindVertexArray(0);
-    resizeBufferIfNecessary(last_vertex[tp], newlastvertex, RealVBOSize[tp], getVertexPitch(tp), GL_ARRAY_BUFFER, vbo[tp], VBOPtr[tp]);
-    resizeBufferIfNecessary(last_index[tp], newlastindex, RealIBOSize[tp], sizeof(u16), GL_ELEMENT_ARRAY_BUFFER, ibo[tp], IBOPtr[tp]);
-}
-
-void VAOManager::regenerateVAO(enum VTXTYPE tp)
-{
-    if (vao[tp])
-        glDeleteVertexArrays(1, &vao[tp]);
-    glGenVertexArrays(1, &vao[tp]);
-    glBindVertexArray(vao[tp]);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo[tp]);
-
-    VertexUtils::bindVertexArrayAttrib(getVertexType(tp));
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo[tp]);
-    glBindVertexArray(0);
-}
-
-template<typename T>
-struct VAOInstanceUtil
-{
-    static void SetVertexAttrib_impl()
-    {
-        glEnableVertexAttribArray(7);
-        glVertexAttribPointer(7, 3, GL_FLOAT, GL_FALSE, sizeof(T), 0);
-        glVertexAttribDivisorARB(7, 1);
-        glEnableVertexAttribArray(8);
-        glVertexAttribPointer(8, 3, GL_FLOAT, GL_FALSE, sizeof(T), (GLvoid*)(3 * sizeof(float)));
-        glVertexAttribDivisorARB(8, 1);
-        glEnableVertexAttribArray(9);
-        glVertexAttribPointer(9, 3, GL_FLOAT, GL_FALSE, sizeof(T), (GLvoid*)(6 * sizeof(float)));
-        glVertexAttribDivisorARB(9, 1);
-    }
-
-    static void SetVertexAttrib();
 };
 
 template<>
-void VAOInstanceUtil<InstanceDataSingleTex>::SetVertexAttrib()
+struct VertexAttribBinder<video::S3DVertex2TCoords>
 {
-    SetVertexAttrib_impl();
-    glEnableVertexAttribArray(10);
-    glVertexAttribIPointer(10, 2, GL_UNSIGNED_INT, sizeof(InstanceDataSingleTex), (GLvoid*)(9 * sizeof(float)));
-    glVertexAttribDivisorARB(10, 1);
-}
-
-template<>
-void VAOInstanceUtil<InstanceDataDualTex>::SetVertexAttrib()
-{
-    SetVertexAttrib_impl();
-    glEnableVertexAttribArray(10);
-    glVertexAttribIPointer(10, 2, GL_UNSIGNED_INT, sizeof(InstanceDataDualTex), (GLvoid*)(9 * sizeof(float)));
-    glVertexAttribDivisorARB(10, 1);
-    glEnableVertexAttribArray(11);
-    glVertexAttribIPointer(11, 2, GL_UNSIGNED_INT, sizeof(InstanceDataDualTex), (GLvoid*)(9 * sizeof(float) + 2 * sizeof(unsigned)));
-    glVertexAttribDivisorARB(11, 1);
-}
-
-template<>
-void VAOInstanceUtil<InstanceDataThreeTex>::SetVertexAttrib()
-{
-    SetVertexAttrib_impl();
-    glEnableVertexAttribArray(10);
-    glVertexAttribIPointer(10, 2, GL_UNSIGNED_INT, sizeof(InstanceDataThreeTex), (GLvoid*)(9 * sizeof(float)));
-    glVertexAttribDivisorARB(10, 1);
-    glEnableVertexAttribArray(11);
-    glVertexAttribIPointer(11, 2, GL_UNSIGNED_INT, sizeof(InstanceDataThreeTex), (GLvoid*)(9 * sizeof(float) + 2 * sizeof(unsigned)));
-    glVertexAttribDivisorARB(11, 1);
-    glEnableVertexAttribArray(13);
-    glVertexAttribIPointer(13, 2, GL_UNSIGNED_INT, sizeof(InstanceDataThreeTex), (GLvoid*)(9 * sizeof(float) + 4 * sizeof(unsigned)));
-    glVertexAttribDivisorARB(13, 1);
-}
-
-template<>
-void VAOInstanceUtil<GlowInstanceData>::SetVertexAttrib()
-{
-    SetVertexAttrib_impl();
-    glEnableVertexAttribArray(12);
-    glVertexAttribPointer(12, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(GlowInstanceData), (GLvoid*)(9 * sizeof(float)));
-    glVertexAttribDivisorARB(12, 1);
-}
-
-
-void VAOManager::regenerateInstancedVAO()
-{
-    cleanInstanceVAOs();
-
-    enum video::E_VERTEX_TYPE IrrVT[] = { video::EVT_STANDARD, video::EVT_2TCOORDS, video::EVT_TANGENTS };
-    for (unsigned i = 0; i < VTXTYPE_COUNT; i++)
+public:
+    static void bind()
     {
-        video::E_VERTEX_TYPE tp = IrrVT[i];
-        if (!vbo[tp] || !ibo[tp])
-            continue;
-        GLuint vao = createVAO(vbo[tp], ibo[tp], tp);
-        glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeDualTex]);
-        VAOInstanceUtil<InstanceDataDualTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeDualTex)] = vao;
-
-        vao = createVAO(vbo[tp], ibo[tp], tp);
-        glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeThreeTex]);
-        VAOInstanceUtil<InstanceDataThreeTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeThreeTex)] = vao;
-
-        vao = createVAO(vbo[tp], ibo[tp], tp);
-        glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeShadow]);
-        VAOInstanceUtil<InstanceDataSingleTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeShadow)] = vao;
-
-        vao = createVAO(vbo[tp], ibo[tp], tp);
-        glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeRSM]);
-        VAOInstanceUtil<InstanceDataSingleTex>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeRSM)] = vao;
-
-        vao = createVAO(vbo[tp], ibo[tp], tp);
-        glBindBuffer(GL_ARRAY_BUFFER, instance_vbo[InstanceTypeGlow]);
-        VAOInstanceUtil<GlowInstanceData>::SetVertexAttrib();
-        InstanceVAO[std::pair<video::E_VERTEX_TYPE, InstanceType>(tp, InstanceTypeGlow)] = vao;
-
-        glBindVertexArray(0);
+        // Position
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex2TCoords), 0);
+        // Normal
+        glEnableVertexAttribArray(1);
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex2TCoords), (GLvoid*)12);
+        // Color
+        glEnableVertexAttribArray(2);
+        glVertexAttribPointer(2, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(video::S3DVertex2TCoords), (GLvoid*)24);
+        // Texcoord
+        glEnableVertexAttribArray(3);
+        glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex2TCoords), (GLvoid*)28);
+        // SecondTexcoord
+        glEnableVertexAttribArray(4);
+        glVertexAttribPointer(4, 2, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertex2TCoords), (GLvoid*)36);
     }
+};
 
-
-
-}
-
-size_t VAOManager::getVertexPitch(enum VTXTYPE tp) const
+template<>
+struct VertexAttribBinder<video::S3DVertexTangents>
 {
-    switch (tp)
+public:
+    static void bind()
     {
-    case VTXTYPE_STANDARD:
-        return getVertexPitchFromType(video::EVT_STANDARD);
-    case VTXTYPE_TCOORD:
-        return getVertexPitchFromType(video::EVT_2TCOORDS);
-    case VTXTYPE_TANGENT:
-        return getVertexPitchFromType(video::EVT_TANGENTS);
+        // Position
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertexTangents), 0);
+        // Normal
+        glEnableVertexAttribArray(1);
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertexTangents), (GLvoid*)12);
+        // Color
+        glEnableVertexAttribArray(2);
+        glVertexAttribPointer(2, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(video::S3DVertexTangents), (GLvoid*)24);
+        // Texcoord
+        glEnableVertexAttribArray(3);
+        glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertexTangents), (GLvoid*)28);
+        // Tangent
+        glEnableVertexAttribArray(5);
+        glVertexAttribPointer(5, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertexTangents), (GLvoid*)36);
+        // Bitangent
+        glEnableVertexAttribArray(6);
+        glVertexAttribPointer(6, 3, GL_FLOAT, GL_FALSE, sizeof(video::S3DVertexTangents), (GLvoid*)48);
+    }
+};
+
+std::pair<unsigned, unsigned> VAOManager::getBase(scene::IMeshBuffer *mb)
+{
+    switch (mb->getVertexType())
+    {
     default:
-        assert(0 && "Wrong vtxtype");
-        return -1;
+        assert(0 && "Wrong type");
+    case video::EVT_STANDARD:
+        return VertexArrayObject<video::S3DVertex>::getInstance()->getBase(mb);
+    case video::EVT_2TCOORDS:
+        return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->getBase(mb);
+    case video::EVT_TANGENTS:
+        return VertexArrayObject<video::S3DVertexTangents>::getInstance()->getBase(mb);
     }
 }
 
-VAOManager::VTXTYPE VAOManager::getVTXTYPE(video::E_VERTEX_TYPE type)
+GLuint VAOManager::getInstanceBuffer(InstanceType it)
+{
+    switch (it)
+    {
+    default:
+        assert(0 && "wrong instance type");
+    case InstanceTypeDualTex:
+        return InstanceBuffer<InstanceDataDualTex>::getInstance()->getBuffer();
+    case InstanceTypeThreeTex:
+        return InstanceBuffer<InstanceDataThreeTex>::getInstance()->getBuffer();
+    case InstanceTypeShadow:
+        return InstanceBuffer<InstanceDataShadow>::getInstance()->getBuffer();
+    case InstanceTypeRSM:
+        return InstanceBuffer<InstanceDataRSM>::getInstance()->getBuffer();
+    case InstanceTypeGlow:
+        return InstanceBuffer<GlowInstanceData>::getInstance()->getBuffer();
+    }
+}
+
+void *VAOManager::getInstanceBufferPtr(InstanceType it)
+{
+    switch (it)
+    {
+    default:
+        assert(0 && "wrong instance type");
+    case InstanceTypeDualTex:
+        return InstanceBuffer<InstanceDataDualTex>::getInstance()->getPointer();
+    case InstanceTypeThreeTex:
+        return InstanceBuffer<InstanceDataThreeTex>::getInstance()->getPointer();
+    case InstanceTypeShadow:
+        return InstanceBuffer<InstanceDataShadow>::getInstance()->getPointer();
+    case InstanceTypeRSM:
+        return InstanceBuffer<InstanceDataRSM>::getInstance()->getPointer();
+    case InstanceTypeGlow:
+        return InstanceBuffer<GlowInstanceData>::getInstance()->getPointer();
+    }
+}
+
+unsigned VAOManager::getVBO(irr::video::E_VERTEX_TYPE type)
 {
     switch (type)
     {
     default:
-        assert(0 && "Wrong vtxtype");
+        assert(0 && "Wrong type");
     case video::EVT_STANDARD:
-        return VTXTYPE_STANDARD;
+        return VertexArrayObject<video::S3DVertex>::getInstance()->vbo.getBuffer();
     case video::EVT_2TCOORDS:
-        return VTXTYPE_TCOORD;
+        return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vbo.getBuffer();
     case video::EVT_TANGENTS:
-        return VTXTYPE_TANGENT;
+        return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vbo.getBuffer();
     }
-};
+}
 
-irr::video::E_VERTEX_TYPE VAOManager::getVertexType(enum VTXTYPE tp)
+void *VAOManager::getVBOPtr(irr::video::E_VERTEX_TYPE type)
 {
-    switch (tp)
+    switch (type)
     {
     default:
-    case VTXTYPE_STANDARD:
-        return video::EVT_STANDARD;
-    case VTXTYPE_TCOORD:
-        return video::EVT_2TCOORDS;
-    case VTXTYPE_TANGENT:
-        return video::EVT_TANGENTS;
+        assert(0 && "Wrong type");
+    case video::EVT_STANDARD:
+        return VertexArrayObject<video::S3DVertex>::getInstance()->vbo.getPointer();
+    case video::EVT_2TCOORDS:
+        return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vbo.getPointer();
+    case video::EVT_TANGENTS:
+        return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vbo.getPointer();
+    }
+}
+unsigned VAOManager::getVAO(irr::video::E_VERTEX_TYPE type)
+{
+    switch (type)
+    {
+    default:
+        assert(0 && "Wrong type");
+    case video::EVT_STANDARD:
+        return VertexArrayObject<video::S3DVertex>::getInstance()->getVAO();
+    case video::EVT_2TCOORDS:
+        return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->getVAO();
+    case video::EVT_TANGENTS:
+        return VertexArrayObject<video::S3DVertexTangents>::getInstance()->getVAO();
     }
 }
 
-void VAOManager::append(scene::IMeshBuffer *mb, VTXTYPE tp)
+unsigned VAOManager::getInstanceVAO(irr::video::E_VERTEX_TYPE vt, enum InstanceType it)
 {
-    size_t old_vtx_cnt = last_vertex[tp];
-    size_t old_idx_cnt = last_index[tp];
-
-    regenerateBuffer(tp, old_vtx_cnt + mb->getVertexCount(), old_idx_cnt + mb->getIndexCount());
-    if (CVS->supportsAsyncInstanceUpload())
+    switch (vt)
     {
-        void *tmp = (char*)VBOPtr[tp] + old_vtx_cnt * getVertexPitch(tp);
-        memcpy(tmp, mb->getVertices(), mb->getVertexCount() * getVertexPitch(tp));
+    default:
+        assert(0 && "Wrong type");
+    case video::EVT_STANDARD:
+        switch (it)
+        {
+        default:
+            assert(0 && "wrong instance type");
+        case InstanceTypeDualTex:
+            return VertexArrayObject<video::S3DVertex>::getInstance()->vao_instanceDualTex;
+        case InstanceTypeThreeTex:
+            return VertexArrayObject<video::S3DVertex>::getInstance()->vao_instanceThreeTex;
+        case InstanceTypeShadow:
+            return VertexArrayObject<video::S3DVertex>::getInstance()->vao_instanceShadow;
+        case InstanceTypeRSM:
+            return VertexArrayObject<video::S3DVertex>::getInstance()->vao_instanceRSM;
+        case InstanceTypeGlow:
+            return VertexArrayObject<video::S3DVertex>::getInstance()->vao_instanceGlowData;
+        }
+        break;
+    case video::EVT_2TCOORDS:
+        switch (it)
+        {
+        default:
+            assert(0 && "wrong instance type");
+        case InstanceTypeDualTex:
+            return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vao_instanceDualTex;
+        case InstanceTypeThreeTex:
+            return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vao_instanceThreeTex;
+        case InstanceTypeShadow:
+            return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vao_instanceShadow;
+        case InstanceTypeRSM:
+            return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vao_instanceRSM;
+        case InstanceTypeGlow:
+            return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vao_instanceGlowData;
+        }
+        break;
+    case video::EVT_TANGENTS:
+        switch (it)
+        {
+        default:
+            assert(0 && "wrong instance type");
+        case InstanceTypeDualTex:
+            return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vao_instanceDualTex;
+        case InstanceTypeThreeTex:
+            return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vao_instanceThreeTex;
+        case InstanceTypeShadow:
+            return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vao_instanceShadow;
+        case InstanceTypeRSM:
+            return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vao_instanceRSM;
+        case InstanceTypeGlow:
+            return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vao_instanceGlowData;
+        }
+        break;
     }
-    else
-    {
-        glBindBuffer(GL_ARRAY_BUFFER, vbo[tp]);
-        glBufferSubData(GL_ARRAY_BUFFER, old_vtx_cnt * getVertexPitch(tp), mb->getVertexCount() * getVertexPitch(tp), mb->getVertices());
-    }
-    if (CVS->supportsAsyncInstanceUpload())
-    {
-        void *tmp = (char*)IBOPtr[tp] + old_idx_cnt * sizeof(u16);
-        memcpy(tmp, mb->getIndices(), mb->getIndexCount() * sizeof(u16));
-    }
-    else
-    {
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo[tp]);
-        glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, old_idx_cnt * sizeof(u16), mb->getIndexCount() * sizeof(u16), mb->getIndices());
-    }
-
-    mappedBaseVertex[tp][mb] = old_vtx_cnt;
-    mappedBaseIndex[tp][mb] = old_idx_cnt * sizeof(u16);
-}
-
-std::pair<unsigned, unsigned> VAOManager::getBase(scene::IMeshBuffer *mb)
-{
-    VTXTYPE tp = getVTXTYPE(mb->getVertexType());
-    if (mappedBaseVertex[tp].find(mb) == mappedBaseVertex[tp].end())
-    {
-        assert(mappedBaseIndex[tp].find(mb) == mappedBaseIndex[tp].end());
-        append(mb, tp);
-        regenerateVAO(tp);
-        regenerateInstancedVAO();
-    }
-
-    std::unordered_map<scene::IMeshBuffer*, unsigned>::iterator It;
-    It = mappedBaseVertex[tp].find(mb);
-    assert(It != mappedBaseVertex[tp].end());
-    unsigned vtx = It->second;
-    It = mappedBaseIndex[tp].find(mb);
-    assert(It != mappedBaseIndex[tp].end());
-    return std::pair<unsigned, unsigned>(vtx, It->second);
 }

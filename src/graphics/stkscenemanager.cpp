@@ -29,7 +29,26 @@ struct InstanceFiller
 };
 
 template<>
-void InstanceFiller<InstanceDataSingleTex>::add(GLMesh *mesh, scene::ISceneNode *node, InstanceDataSingleTex &Instance)
+void InstanceFiller<InstanceDataShadow>::add(GLMesh *mesh, scene::ISceneNode *node, InstanceDataShadow &Instance)
+{
+    const core::matrix4 &mat = node->getAbsoluteTransformation();
+    const core::vector3df &Origin = mat.getTranslation();
+    const core::vector3df &Orientation = mat.getRotationDegrees();
+    const core::vector3df &Scale = mat.getScale();
+    Instance.Origin.X = Origin.X;
+    Instance.Origin.Y = Origin.Y;
+    Instance.Origin.Z = Origin.Z;
+    Instance.Orientation.X = Orientation.X;
+    Instance.Orientation.Y = Orientation.Y;
+    Instance.Orientation.Z = Orientation.Z;
+    Instance.Scale.X = Scale.X;
+    Instance.Scale.Y = Scale.Y;
+    Instance.Scale.Z = Scale.Z;
+    Instance.Texture = mesh->TextureHandles[0];
+}
+
+template<>
+void InstanceFiller<InstanceDataRSM>::add(GLMesh *mesh, scene::ISceneNode *node, InstanceDataRSM &Instance)
 {
     const core::matrix4 &mat = node->getAbsoluteTransformation();
     const core::vector3df &Origin = mat.getTranslation();
@@ -634,8 +653,8 @@ PROFILER_POP_CPU_MARKER();
 
     InstanceDataDualTex *InstanceBufferDualTex;
     InstanceDataThreeTex *InstanceBufferThreeTex;
-    InstanceDataSingleTex *ShadowInstanceBuffer;
-    InstanceDataSingleTex *RSMInstanceBuffer;
+    InstanceDataShadow *ShadowInstanceBuffer;
+    InstanceDataRSM *RSMInstanceBuffer;
     GlowInstanceData *GlowInstanceBuffer;
     DrawElementsIndirectCommand *CmdBuffer;
     DrawElementsIndirectCommand *ShadowCmdBuffer;
@@ -646,8 +665,8 @@ PROFILER_POP_CPU_MARKER();
     {
         InstanceBufferDualTex = (InstanceDataDualTex*)VAOManager::getInstance()->getInstanceBufferPtr(InstanceTypeDualTex);
         InstanceBufferThreeTex = (InstanceDataThreeTex*)VAOManager::getInstance()->getInstanceBufferPtr(InstanceTypeThreeTex);
-        ShadowInstanceBuffer = (InstanceDataSingleTex*)VAOManager::getInstance()->getInstanceBufferPtr(InstanceTypeShadow);
-        RSMInstanceBuffer = (InstanceDataSingleTex*)VAOManager::getInstance()->getInstanceBufferPtr(InstanceTypeRSM);
+        ShadowInstanceBuffer = (InstanceDataShadow*)VAOManager::getInstance()->getInstanceBufferPtr(InstanceTypeShadow);
+        RSMInstanceBuffer = (InstanceDataRSM*)VAOManager::getInstance()->getInstanceBufferPtr(InstanceTypeRSM);
         GlowInstanceBuffer = (GlowInstanceData*)VAOManager::getInstance()->getInstanceBufferPtr(InstanceTypeGlow);
         CmdBuffer = SolidPassCmd::getInstance()->Ptr;
         ShadowCmdBuffer = ShadowPassCmd::getInstance()->Ptr;
@@ -709,7 +728,7 @@ PROFILER_POP_CPU_MARKER();
             {
                 glUnmapBuffer(GL_ARRAY_BUFFER);
                 glBindBuffer(GL_ARRAY_BUFFER, VAOManager::getInstance()->getInstanceBuffer(InstanceTypeThreeTex));
-                InstanceBufferThreeTex = (InstanceDataThreeTex*)glMapBufferRange(GL_ARRAY_BUFFER, 0, 10000 * sizeof(InstanceDataSingleTex), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
+                InstanceBufferThreeTex = (InstanceDataThreeTex*)glMapBufferRange(GL_ARRAY_BUFFER, 0, 10000 * sizeof(InstanceDataThreeTex), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
 
             }
 
@@ -771,7 +790,7 @@ PROFILER_POP_CPU_MARKER();
             if (!CVS->supportsAsyncInstanceUpload())
             {
                 glBindBuffer(GL_ARRAY_BUFFER, VAOManager::getInstance()->getInstanceBuffer(InstanceTypeShadow));
-                ShadowInstanceBuffer = (InstanceDataSingleTex*)glMapBufferRange(GL_ARRAY_BUFFER, 0, 10000 * sizeof(InstanceDataDualTex), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
+                ShadowInstanceBuffer = (InstanceDataShadow*)glMapBufferRange(GL_ARRAY_BUFFER, 0, 10000 * sizeof(InstanceDataDualTex), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
                 glBindBuffer(GL_DRAW_INDIRECT_BUFFER, ShadowPassCmd::getInstance()->drawindirectcmd);
                 ShadowCmdBuffer = (DrawElementsIndirectCommand*)glMapBufferRange(GL_DRAW_INDIRECT_BUFFER, 0, 10000 * sizeof(DrawElementsIndirectCommand), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
             }
@@ -806,7 +825,7 @@ PROFILER_POP_CPU_MARKER();
             if (!CVS->supportsAsyncInstanceUpload())
             {
                 glBindBuffer(GL_ARRAY_BUFFER, VAOManager::getInstance()->getInstanceBuffer(InstanceTypeRSM));
-                RSMInstanceBuffer = (InstanceDataSingleTex*)glMapBufferRange(GL_ARRAY_BUFFER, 0, 10000 * sizeof(InstanceDataDualTex), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
+                RSMInstanceBuffer = (InstanceDataRSM*)glMapBufferRange(GL_ARRAY_BUFFER, 0, 10000 * sizeof(InstanceDataDualTex), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
                 glBindBuffer(GL_DRAW_INDIRECT_BUFFER, RSMPassCmd::getInstance()->drawindirectcmd);
                 RSMCmdBuffer = (DrawElementsIndirectCommand*)glMapBufferRange(GL_DRAW_INDIRECT_BUFFER, 0, 10000 * sizeof(DrawElementsIndirectCommand), GL_MAP_WRITE_BIT | GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
             }
