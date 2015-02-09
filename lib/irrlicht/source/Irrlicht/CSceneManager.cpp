@@ -45,8 +45,6 @@
 
 #include "CDefaultSceneNodeFactory.h"
 
-#include "CSceneCollisionManager.h"
-
 #include "CGeometryCreator.h"
 
 //! Enable debug features
@@ -62,7 +60,7 @@ CSceneManager::CSceneManager(video::IVideoDriver* driver, io::IFileSystem* fs,
 		gui::ICursorControl* cursorControl, IMeshCache* cache,
 		gui::IGUIEnvironment* gui)
 : ISceneNode(0, 0), Driver(driver), FileSystem(fs), GUIEnvironment(gui),
-	CursorControl(cursorControl), CollisionManager(0),
+	CursorControl(cursorControl),
 	ActiveCamera(0), ShadowColor(150,0,0,0), AmbientLight(0,0,0,0),
 	MeshCache(cache), CurrentRendertime(ESNRP_NONE), LightManager(0),
 	IRR_XML_FORMAT_SCENE(L"irr_scene"), IRR_XML_FORMAT_NODE(L"node"), IRR_XML_FORMAT_NODE_ATTR_TYPE(L"type")
@@ -97,9 +95,6 @@ CSceneManager::CSceneManager(video::IVideoDriver* driver, io::IFileSystem* fs,
 	else
 		MeshCache->grab();
 
-	// create collision manager
-	CollisionManager = new CSceneCollisionManager(this, Driver);
-
 	// create geometry creator
 	GeometryCreator = new CGeometryCreator();
 
@@ -133,9 +128,6 @@ CSceneManager::~CSceneManager()
 
 	if (CursorControl)
 		CursorControl->drop();
-
-	if (CollisionManager)
-		CollisionManager->drop();
 
 	if (GeometryCreator)
 		GeometryCreator->drop();
@@ -285,7 +277,7 @@ ITextSceneNode* CSceneManager::addTextSceneNode(gui::IGUIFont* font,
 		parent = this;
 
 	ITextSceneNode* t = new CTextSceneNode(parent, this, id, font,
-		getSceneCollisionManager(), position, text, color);
+		position, text, color);
 	t->drop();
 
 	return t;
@@ -1397,13 +1389,6 @@ ISceneLoader* CSceneManager::getSceneLoader(u32 index) const
 		return SceneLoaderList[index];
 	else
 		return 0;
-}
-
-
-//! Returns a pointer to the scene collision manager.
-ISceneCollisionManager* CSceneManager::getSceneCollisionManager()
-{
-	return CollisionManager;
 }
 
 

@@ -1032,11 +1032,6 @@ namespace scene
 		\return A pointer to the specified loader, 0 if the index is incorrect. */
 		virtual ISceneLoader* getSceneLoader(u32 index) const = 0;
 
-		//! Get pointer to the scene collision manager.
-		/** \return Pointer to the collision manager
-		This pointer should not be dropped. See IReferenceCounted::drop() for more information. */
-		virtual ISceneCollisionManager* getSceneCollisionManager() = 0;
-
 		//! Get pointer to the mesh manipulator.
 		/** \return Pointer to the mesh manipulator
 		This pointer should not be dropped. See IReferenceCounted::drop() for more information. */
