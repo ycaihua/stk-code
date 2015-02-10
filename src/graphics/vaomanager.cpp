@@ -6,17 +6,6 @@
 
 VAOManager::VAOManager()
 {
-    for (unsigned i = 0; i < VTXTYPE_COUNT; i++)
-    {
-        vao[i] = 0;
-        vbo[i] = 0;
-        ibo[i] = 0;
-        last_vertex[i] = 0;
-        last_index[i] = 0;
-        RealVBOSize[i] = 0;
-        RealIBOSize[i] = 0;
-    }
-
     for (unsigned i = 0; i < InstanceTypeCount; i++)
     {
         glGenBuffers(1, &instance_vbo[i]);
@@ -44,15 +33,6 @@ void VAOManager::cleanInstanceVAOs()
 VAOManager::~VAOManager()
 {
     cleanInstanceVAOs();
-    for (unsigned i = 0; i < VTXTYPE_COUNT; i++)
-    {
-        if (vbo[i])
-            glDeleteBuffers(1, &vbo[i]);
-        if (ibo[i])
-            glDeleteBuffers(1, &ibo[i]);
-        if (vao[i])
-            glDeleteVertexArrays(1, &vao[i]);
-    }
     for (unsigned i = 0; i < InstanceTypeCount; i++)
     {
         glDeleteBuffers(1, &instance_vbo[i]);
@@ -240,55 +220,9 @@ void VAOManager::regenerateInstancedVAO()
     regenerateInstanceVao<video::S3DVertexTangents>(video::EVT_TANGENTS, InstanceVAO, instance_vbo);
 }
 
-size_t VAOManager::getVertexPitch(enum VTXTYPE tp) const
-{
-    switch (tp)
-    {
-    case VTXTYPE_STANDARD:
-        return getVertexPitchFromType(video::EVT_STANDARD);
-    case VTXTYPE_TCOORD:
-        return getVertexPitchFromType(video::EVT_2TCOORDS);
-    case VTXTYPE_TANGENT:
-        return getVertexPitchFromType(video::EVT_TANGENTS);
-    default:
-        assert(0 && "Wrong vtxtype");
-        return -1;
-    }
-}
-
-VAOManager::VTXTYPE VAOManager::getVTXTYPE(video::E_VERTEX_TYPE type)
-{
-    switch (type)
-    {
-    default:
-        assert(0 && "Wrong vtxtype");
-    case video::EVT_STANDARD:
-        return VTXTYPE_STANDARD;
-    case video::EVT_2TCOORDS:
-        return VTXTYPE_TCOORD;
-    case video::EVT_TANGENTS:
-        return VTXTYPE_TANGENT;
-    }
-};
-
-irr::video::E_VERTEX_TYPE VAOManager::getVertexType(enum VTXTYPE tp)
-{
-    switch (tp)
-    {
-    default:
-    case VTXTYPE_STANDARD:
-        return video::EVT_STANDARD;
-    case VTXTYPE_TCOORD:
-        return video::EVT_2TCOORDS;
-    case VTXTYPE_TANGENT:
-        return video::EVT_TANGENTS;
-    }
-}
-
 std::pair<unsigned, unsigned> VAOManager::getBase(scene::IMeshBuffer *mb)
 {
-    VTXTYPE tp = getVTXTYPE(mb->getVertexType());
-    switch (tp)
+    switch (mb->getVertexType())
     {
     default:
         assert(0 && "Wrong type");

@@ -238,16 +238,16 @@ private:
         }
         if (CVS->supportsAsyncInstanceUpload())
         {
-            void *tmp = (char*)ibo.getPointer() + old_idx_cnt * sizeof(u16);
-            memcpy(tmp, mb->getIndices(), mb->getIndexCount() * sizeof(u16));
+            void *tmp = (char*)ibo.getPointer() + old_idx_cnt * sizeof(irr::u16);
+            memcpy(tmp, mb->getIndices(), mb->getIndexCount() * sizeof(irr::u16));
         }
         else
         {
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo.getBuffer());
-            glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, old_idx_cnt * sizeof(u16), mb->getIndexCount() * sizeof(u16), mb->getIndices());
+            glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, old_idx_cnt * sizeof(irr::u16), mb->getIndexCount() * sizeof(irr::u16), mb->getIndices());
         }
 
-        mappedBaseVertexBaseIndex[mb] = std::make_pair(old_vtx_cnt, old_idx_cnt * sizeof(u16));
+        mappedBaseVertexBaseIndex[mb] = std::make_pair(old_vtx_cnt, old_idx_cnt * sizeof(irr::u16));
     }
 
     void regenerateVAO()
@@ -308,19 +308,12 @@ public:
 class VAOManager : public Singleton<VAOManager>
 {
     enum VTXTYPE { VTXTYPE_STANDARD, VTXTYPE_TCOORD, VTXTYPE_TANGENT, VTXTYPE_COUNT };
-    GLuint vbo[VTXTYPE_COUNT], ibo[VTXTYPE_COUNT], vao[VTXTYPE_COUNT];
     GLuint instance_vbo[InstanceTypeCount];
     void *Ptr[InstanceTypeCount];
-    void *VBOPtr[VTXTYPE_COUNT], *IBOPtr[VTXTYPE_COUNT];
-    size_t RealVBOSize[VTXTYPE_COUNT], RealIBOSize[VTXTYPE_COUNT];
-    size_t last_vertex[VTXTYPE_COUNT], last_index[VTXTYPE_COUNT];
-    std::unordered_map<irr::scene::IMeshBuffer*, unsigned> mappedBaseVertex[VTXTYPE_COUNT], mappedBaseIndex[VTXTYPE_COUNT];
     std::map<std::pair<irr::video::E_VERTEX_TYPE, InstanceType>, GLuint> InstanceVAO;
 
     void cleanInstanceVAOs();
     void regenerateInstancedVAO();
-    size_t getVertexPitch(enum VTXTYPE) const;
-    VTXTYPE getVTXTYPE(irr::video::E_VERTEX_TYPE type);
     irr::video::E_VERTEX_TYPE getVertexType(enum VTXTYPE tp);
 public:
     VAOManager();
