@@ -54,14 +54,14 @@ const float *STKView::getViewFrustrumCascadeVertices(unsigned cascade) const
     return m_shadows_cam[cascade];
 }
 
-void STKView::addCascadeCamera(const scene::ICameraSceneNode *SunCamera, const core::matrix4 &ProjectionMatrix)
+void STKView::addCascadeCamera(const scene::ICameraSceneNode *SunCamera, const core::matrix4 &ProjectionMatrixForCulling, const core::matrix4 &TrueProjectionMatrix)
 {
     unsigned i = sun_ortho_matrix.size();
     m_shadow_camnodes[i] = (scene::ICameraSceneNode *) const_cast<scene::ICameraSceneNode *>(SunCamera)->clone();
 
-    m_shadow_camnodes[i]->setProjectionMatrix(ProjectionMatrix, true);
+    m_shadow_camnodes[i]->setProjectionMatrix(ProjectionMatrixForCulling, true);
     m_shadow_camnodes[i]->render();
-    sun_ortho_matrix.push_back(irr_driver->getVideoDriver()->getTransform(video::ETS_PROJECTION) * irr_driver->getVideoDriver()->getTransform(video::ETS_VIEW));
+    sun_ortho_matrix.push_back(TrueProjectionMatrix * m_shadow_camnodes[i]->getViewMatrix());
 }
 
 const scene::ICameraSceneNode *STKView::getCascadeCamera(unsigned cascade) const

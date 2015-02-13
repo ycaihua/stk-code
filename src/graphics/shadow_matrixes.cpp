@@ -368,7 +368,7 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
         // Shadow Matrixes and cameras
         for (unsigned i = 0; i < 4; i++)
         {
-            core::matrix4 tmp_matrix;
+            core::matrix4 orthogonalProjectionEnclosingMatrix, TrueProjectionMatrix;
             float h, v;
             if (!CVS->isSDSMEnabled())
             {
@@ -378,18 +378,19 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
 
                 getCurrentView().addViewFrustrumCascadeIntersection(camnode->getViewFrustum(), i);
 
+
+                std::vector<vector3df> vectors = getFrustrumVertex(*(camnode->getViewFrustum()));
+                orthogonalProjectionEnclosingMatrix = getTighestFitOrthoProj(SunCamViewMatrix, vectors, h, v);
                 if (CVS->isESMEnabled())
                 {
-                    std::vector<vector3df> vectors = getFrustrumVertex(*(camnode->getViewFrustum()));
-                    tmp_matrix = getTighestFitOrthoProj(SunCamViewMatrix, vectors, h, v);
+                    TrueProjectionMatrix = orthogonalProjectionEnclosingMatrix;
                 }
                 else
                 {
                     const core::matrix4 &LiSPM = getLightSpacePerspectiveMatrix(*camnode, LightVector);
-                    SunCamViewMatrix.getInverse(tmp_matrix);
-                    tmp_matrix = LiSPM * tmp_matrix;
+                    SunCamViewMatrix.getInverse(TrueProjectionMatrix);
+                    TrueProjectionMatrix = LiSPM * TrueProjectionMatrix;
                 }
-
             }
             else
             {
@@ -401,16 +402,17 @@ void IrrDriver::computeMatrixesAndCameras(scene::ICameraSceneNode * const camnod
                 // Prevent Matrix without extend
                 if (left != right && up != down)
                 {
-                    tmp_matrix.buildProjectionMatrixOrthoLH(left, right,
+                    orthogonalProjectionEnclosingMatrix.buildProjectionMatrixOrthoLH(left, right,
                         down, up,
                         float(CBB[currentCBB][i].zmin / 4 - 100),
                         float(CBB[currentCBB][i].zmax / 4 + 2));
                     h = right - left;
                     v = down - up;
                 }
+                TrueProjectionMatrix = orthogonalProjectionEnclosingMatrix;
             }
             getCurrentView().setCascadeRelativeScale(h, v, i);
-            getCurrentView().addCascadeCamera(m_suncam, tmp_matrix);
+            getCurrentView().addCascadeCamera(m_suncam, orthogonalProjectionEnclosingMatrix, TrueProjectionMatrix);
         }
 
         // Rsm Matrix and camera

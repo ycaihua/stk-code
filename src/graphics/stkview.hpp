@@ -31,7 +31,7 @@ public:
     void addViewFrustrumCascadeIntersection(const scene::SViewFrustum *frustrum, unsigned cascade);
     const float *getViewFrustrumCascadeVertices(unsigned cascade) const;
 
-    void addCascadeCamera(const scene::ICameraSceneNode *SunCamera, const core::matrix4 &ProjectionMatrix);
+    void addCascadeCamera(const scene::ICameraSceneNode *SunCamera, const core::matrix4 &ProjectionEnclosingMatrix, const core::matrix4 &TrueProjectionMatrix);
     const scene::ICameraSceneNode *getCascadeCamera(unsigned cascade) const;
 
     void setCascadeRelativeScale(float horizontal, float vertical, unsigned cascade);
