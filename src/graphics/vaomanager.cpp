@@ -170,39 +170,7 @@ void *VAOManager::getInstanceBufferPtr(InstanceType it)
     }
 }
 
-unsigned VAOManager::getVBO(irr::video::E_VERTEX_TYPE type, bool skinned)
-{
-    if (skinned)
-        return VTXTYPE_STANDARD_SKINNED;
-    switch (type)
-    {
-    default:
-        assert(0 && "Wrong type");
-    case video::EVT_STANDARD:
-        return VertexArrayObject<video::S3DVertex>::getInstance()->vbo.getBuffer();
-    case video::EVT_2TCOORDS:
-        return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vbo.getBuffer();
-    case video::EVT_TANGENTS:
-        return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vbo.getBuffer();
-    }
-}
-
-void *VAOManager::getVBOPtr(irr::video::E_VERTEX_TYPE type)
-{
-    switch (type)
-    {
-    default:
-        assert(0 && "Wrong type");
-    case video::EVT_STANDARD:
-        return VertexArrayObject<video::S3DVertex>::getInstance()->vbo.getPointer();
-    case video::EVT_2TCOORDS:
-        return VertexArrayObject<video::S3DVertex2TCoords>::getInstance()->vbo.getPointer();
-    case video::EVT_TANGENTS:
-        return VertexArrayObject<video::S3DVertexTangents>::getInstance()->vbo.getPointer();
-    }
-}
-
-unsigned VAOManager::getVAO(irr::video::E_VERTEX_TYPE type)
+unsigned VAOManager::getVAO(irr::video::E_VERTEX_TYPE type, bool skinned)
 {
     switch (type)
     {
@@ -217,7 +185,7 @@ unsigned VAOManager::getVAO(irr::video::E_VERTEX_TYPE type)
     }
 }
 
-unsigned VAOManager::getInstanceVAO(irr::video::E_VERTEX_TYPE vt, enum InstanceType it)
+unsigned VAOManager::getInstanceVAO(irr::video::E_VERTEX_TYPE vt, bool skinned, enum InstanceType it)
 {
     switch (vt)
     {

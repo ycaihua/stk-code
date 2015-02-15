@@ -491,8 +491,6 @@ public:
     std::pair<unsigned, unsigned> getBase(irr::scene::IMeshBuffer *, void * = nullptr);
     GLuint getInstanceBuffer(InstanceType it);
     void *getInstanceBufferPtr(InstanceType it);
-    unsigned getVBO(irr::video::E_VERTEX_TYPE type, bool skinned);
-    void *getVBOPtr(irr::video::E_VERTEX_TYPE type);
     unsigned getVAO(irr::video::E_VERTEX_TYPE type, bool skinned);
     unsigned getInstanceVAO(irr::video::E_VERTEX_TYPE vt, bool skinned, enum InstanceType it);
     ~VAOManager();
